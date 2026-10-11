@@ -1,0 +1,11 @@
+Host mlip-umt
+    HostName umt.imm.uran.ru
+    User u3129
+    Port 22
+    StrictHostKeyChecking yes
+    UserKnownHostsFile configs/known_hosts
+    UpdateHostKeys no
+    ForwardAgent no
+    ConnectTimeout 15
+    ServerAliveInterval 30
+    ServerAliveCountMax 3

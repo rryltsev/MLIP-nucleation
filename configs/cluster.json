@@ -1,0 +1,16 @@
+{
+  "host": "umt.imm.uran.ru",
+  "port": 22,
+  "user": "u3129",
+  "scheduler": "slurm",
+  "dft_engine": "vasp",
+  "reported_hardware": {"a100_count": 2, "k40m_count": "several dozen", "cpu_count_approx": 1000},
+  "verified": false,
+  "partition": null,
+  "account": null,
+  "remote_work_root": null,
+  "vasp_executable": null,
+  "environment_setup": null,
+  "walltime": null,
+  "allocation_budget": null
+}

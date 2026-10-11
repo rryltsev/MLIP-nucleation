@@ -1,0 +1,39 @@
+## Working title
+**Programming Crystal Nucleation through Interfacial Liquid Order in Metallic Alloys**
+
+## Project concept
+
+The project aims to uncover and experimentally validate atomic-scale mechanisms controlling heterogeneous crystal nucleation during solidification of metallic alloys. The central hypothesis is that nucleation potency and phase selection are governed not simply by lattice matching between a nucleant and the emerging crystal, but by **chemically and structurally ordered liquid layers formed at the liquid–substrate interface**.
+
+Modern machine-learning interatomic potentials (MLIPs) make it possible to simulate sufficiently large systems and long timescales to directly investigate liquid structure, interfacial segregation, formation of crystal-like precursors, and rare nucleation events. MLIP development itself is not the primary objective; MLIPs will be used as an enabling tool to discover new physical mechanisms and predictive design rules.
+
+The proposed causal picture is:
+
+**nucleant surface chemistry/structure → interfacial segregation → chemical and structural ordering of the liquid → formation of specific precursors → nucleation barrier → phase selection and solidification pathway.**
+
+A key objective is to determine whether this framework can explain cases where conventional lattice-matching arguments fail. In particular, a substrate with relatively poor crystallographic matching may potentially be a more effective nucleant if its surface chemistry induces liquid ordering compatible with the emerging crystalline phase.
+
+## Main research questions
+
+1. What atomic-scale structural and chemical features determine the nucleation potency of substrates in metallic melts?
+2. How do alloying elements and surface chemistry modify short-range order in the interfacial liquid?
+3. Is there a causal relationship between liquid short-range order, crystal-like precursor populations, nucleation barriers, and subsequent phase selection?
+4. Can a quantitative descriptor combining **structural templating** and **chemical templating** predict heterogeneous nucleation efficiency better than lattice mismatch?
+5. Can this mechanism be used prospectively to design a nucleant, alloying addition, or surface modification that produces an experimentally measurable change in undercooling, grain refinement, or phase selection?
+
+## Methodological strategy
+
+The computational component should combine foundation/universal MLIPs with targeted DFT validation and, where necessary, fine-tuning for selected alloy–nucleant interfaces. Large-scale molecular dynamics will be complemented by structural analysis of liquid short-range order, interface segregation, identification of precursors, free-energy calculations, enhanced sampling, and/or transition-path analysis of nucleation events.
+
+The project should be tightly integrated with experiment. Candidate systems should therefore involve technologically relevant metallic melts for which nucleation and solidification can be studied experimentally using thermal analysis, controlled solidification, XRD, SEM/EDS, EBSD and, where useful, TEM.
+
+Al-based alloys and TiB₂/TiC/AlB₂/Al₃Ti-type nucleants are natural starting candidates, particularly in the context of recycled Al alloys and control of Fe-rich intermetallic phases. However, the initial literature survey should compare these with other metallic systems and identify the combination offering the strongest balance of **fundamental novelty, computational feasibility, experimental accessibility, and technological relevance**.
+
+## Target breakthrough
+
+The desired outcome is not another accurate MLIP or reproduction of known nucleation behavior. The project should aim to establish and experimentally demonstrate a **general atomic-scale design principle for heterogeneous nucleation**.
+
+An ideal result would be a counterintuitive prospective prediction—for example, identifying a surface chemistry, alloying addition, or nucleant with unfavorable conventional lattice matching but exceptionally high nucleation potency because it creates the appropriate chemically ordered interfacial liquid. This prediction should then be tested experimentally.
+
+The strongest possible conclusion would be that **heterogeneous nucleation and phase selection in metallic alloys can be deliberately programmed by engineering interfacial liquid order**.
+
