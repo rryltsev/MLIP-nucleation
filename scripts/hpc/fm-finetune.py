@@ -52,21 +52,41 @@ def compare(before, loaded, after, backend):
             return {k:v.numpy() for k,v in d.items() if isinstance(v, torch.Tensor) and v.is_floating_point()}
     else:
         import tensorflow as tf
+        from tensorflow.core.protobuf import trackable_object_graph_pb2
         def tensors(p):
             r = tf.train.load_checkpoint(str(p))
-            return {k:r.get_tensor(k) for k,d in r.get_variable_to_dtype_map().items() if k.startswith("model/") and d.is_floating}
+            graph = trackable_object_graph_pb2.TrackableObjectGraph()
+            graph.ParseFromString(r.get_tensor("_CHECKPOINTABLE_OBJECT_GRAPH"))
+            model_id = next(c.node_id for c in graph.nodes[0].children if c.local_name == "model")
+            # Optimizer aliases can change canonical on-disk tensor keys. Walk
+            # the model subtree instead, then resolve each attribute's saved key.
+            queue = [(model_id,"model")]; seen = set(); values = {}
+            while queue:
+                node_id, name = queue.pop(0)
+                if node_id in seen: continue
+                seen.add(node_id); node = graph.nodes[node_id]
+                for a in node.attributes:
+                    dtype = r.get_variable_to_dtype_map().get(a.checkpoint_key)
+                    if dtype is not None and dtype.is_floating:
+                        values[name+"/"+a.name] = r.get_tensor(a.checkpoint_key)
+                queue.extend((c.node_id,name+"/"+c.local_name) for c in sorted(node.children,key=lambda c:c.local_name))
+            return values
     source, initial, final = map(tensors, [before, loaded, after])
     assert source and source.keys() == initial.keys() == final.keys(), "Model tensor keys differ"
     assert all(np.isfinite(a).all() for d in [source, initial, final] for a in d.values())
     equal = [k for k in source if np.array_equal(source[k], initial[k])]
     unequal = [k for k in source if k not in equal]
     # DeepMD adjusts the target energy bias from TRAIN data before fine-tuning.
-    allowed = backend == "dpa4" and all("bias" in k.lower() or "std" in k.lower() or "avg" in k.lower() for k in unequal)
+    allowed_keys = {"model.Default.atomic_model.out_bias", "model.Default.atomic_model.out_std", "model.Default.atomic_model.descriptor.version_tensor"}
+    allowed = backend == "dpa4" and set(unequal) <= allowed_keys
     assert not unequal or allowed, "Unexpected differences in loaded FM parameters: " + str(unequal)
     changed = [k for k in initial if not np.array_equal(initial[k], final[k])]
     learned = [k for k in changed if k in equal and initial[k].size > 1]
     assert learned, "No original pretrained parameter tensor changed during training"
     return {"source_float_tensors":len(source),"exactly_restored_tensors":len(equal),"initial_changed_keys":unequal,
+            "initial_adjustments":{k:{"max_abs_difference":float(np.max(np.abs(initial[k]-source[k]))),
+                                       "before":source[k].tolist() if source[k].size==1 else "array",
+                                       "after":initial[k].tolist() if initial[k].size==1 else "array"} for k in unequal},
             "updated_tensors":len(changed),"updated_original_tensors":len(learned),
             "max_abs_update":max(float(np.max(np.abs(final[k]-initial[k]))) for k in changed)}
 
