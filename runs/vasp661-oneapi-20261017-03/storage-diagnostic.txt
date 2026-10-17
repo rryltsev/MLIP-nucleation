@@ -1,0 +1,9 @@
+srun: job 20950120 queued and waiting for resources
+srun: job 20950120 has been allocated resources
+job_id=20950120
+node=apollo31
+drwx------ 9 u3129 users 4096 Oct  1 09:56 /home6/u3129
+write_exit=0
+Filesystem      Size  Used Avail Use% Mounted on
+stg06:/home6     28T   16T   11T  60% /misc/home6
+diagnostic_exit_code=0

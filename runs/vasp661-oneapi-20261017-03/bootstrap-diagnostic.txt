@@ -1,0 +1,8 @@
+srun: job 20950118 queued and waiting for resources
+srun: job 20950118 has been allocated resources
+cat: /tmp/u3129-vasp661-20950117.out: No such file or directory
+HOME=/home/u3129
+drwx------ 2 u3129 users 8192 Oct 17 20:40 /home/u3129/.local/opt/vasp/6.6.1-oneapi-2025/runs/vasp661-oneapi-20261017-03
+write_exit=1
+/usr/bin/bash: line 4: /home/u3129/.local/opt/vasp/6.6.1-oneapi-2025/runs/vasp661-oneapi-20261017-03/path-write-check.txt: Read-only file system
+diagnostic_exit_code=0
