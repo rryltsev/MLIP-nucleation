@@ -1,0 +1,145 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{booktabs,tabularx,array}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\title{UMT cluster inventory for MLIP nucleation research}
+\author{MLIP-nucleation project}
+\date{17 October 2026}
+\begin{document}
+\maketitle
+
+\section{Scope and evidence}
+Read-only SSH inspection was performed as \texttt{u3129} on
+\texttt{umtnew.imm.uran.ru} (connection alias \texttt{umt.imm.uran.ru}).
+The login node runs AlmaLinux 8.10 and Slurm 23.02.7.
+No compute jobs were submitted, no VASP calculation or ML training was run,
+and no installed environment was changed. Package versions below are installation
+metadata, not proof of successful imports or GPU execution.
+
+The versioned JSON observations record commands, timestamps in UTC, stdout,
+stderr and return codes. They are stored under
+\path{configs/observations/} with these suffixes after \texttt{2026-10-17-}:
+\texttt{login-inventory.json}, \texttt{software-details.json},
+\texttt{vasp-layout.json}, \texttt{user-software.json} and
+\texttt{environment-activation.json}.
+The collector is \path{scripts/inspect_cluster.py}.
+Individual shell diagnostics must be checked as well as the final return code:
+an earlier command in a compound probe can fail even if its final command succeeds.
+
+\section{Slurm resources and access}
+\begin{tabularx}{\linewidth}{@{}lrrXl@{}}
+\toprule
+Partition & Nodes & Slurm CPUs & Configured resources & Max time \\
+\midrule
+apollo & 36 & 1296 & 36 CPUs/node; memory 257000 or 385600 MB/node & 56 h \\
+tesla & 33 & 442 & Heterogeneous CPUs; 15 K40m and 62 M2090 GPUs & 56 h \\
+debug & 4 & 64 & Three CPU-only nodes and one node with 3 K40m GPUs & 90 min \\
+v100 & 1 & 48 & \texttt{tesla-a101}: 2 A100, memory 254000 MB & 56 h \\
+all & 33 & 442 & Same node set as \texttt{tesla}; default partition & 56 h \\
+nompi & 69 & 1738 & Union of \texttt{apollo} and \texttt{tesla} & 56 h \\
+\bottomrule
+\end{tabularx}
+
+Partition totals overlap and must not be added. Across unique reported nodes,
+Slurm lists 74 nodes and 1850 CPUs. These are scheduler CPU counts, not a count of
+physical cores. The A100 node has 2 threads/core, 24 physical cores and 48 Slurm CPUs.
+The \texttt{debug} partition contains another 3 K40m GPUs, giving 18 K40m devices
+across the unique nodes observed, plus 2 A100 and 62 M2090 devices configured in Slurm.
+Configured devices on down nodes are not usable capacity.
+
+At the snapshot, 11 \texttt{apollo} nodes, 8 \texttt{tesla} nodes and 3
+\texttt{debug} nodes were idle. One node in each of \texttt{tesla} and
+\texttt{debug} was down/unresponsive. The A100 node was mixed with 16 CPUs,
+96 GiB of memory and one full A100 allocated; another A100 was not reported
+allocated. It also advertises 12 GPU shards, which are sharing resources and
+must not be interpreted as 12 additional GPUs. Device memory, driver version,
+and practical whole-GPU versus shard scheduling remain unverified.
+Availability is a timestamped observation, not a reservation or a guarantee.
+
+The user belongs to groups \texttt{umt}, \texttt{umt9}, and \texttt{umtv100},
+matching the displayed partition group restrictions. The default account is
+\texttt{imet-2026-2}, with QoS \texttt{normal}. Its displayed per-user CPU limit
+is 1024 and maximum submitted jobs per user is 2048. Older project associations
+use QoS \texttt{restricted}, whose group CPU limit is zero.
+The association wall-time limit is 365 days, but the shorter partition maximum
+still applies. Displayed associations do not establish a remaining project
+allocation balance; no spend budget has been chosen for this study.
+
+Default memory is 1000 MB per allocated CPU and default wall time is 30 minutes.
+Memory should be requested explicitly for training. Slurm uses
+\texttt{select/cons\_tres}, \texttt{CR\_CORE\_MEMORY}, \texttt{task/cgroup},
+and accounting enforcement \texttt{associations,limits,qos,safe}.
+Partition billing weights make GPU requests materially more expensive than a CPU
+request; account membership alone does not authorize an arbitrary allocation.
+
+\section{VASP}
+VASP was not found in the current PATH or the available module list.
+\path{/opt/vasp} exists but is owned by \texttt{root:root} with mode 750;
+listing and searching it are denied to this user. This does not prove that no
+other installation exists. No usable VASP executable, version, MPI linkage or
+licensed pseudopotential location has yet been established.
+
+The next input needed is the path to an existing working VASP executable or
+the user's established Slurm submission script. An administrator may need to
+confirm access to the licensed installation. No POTCAR content was read or copied.
+
+\section{MLIP environments and supporting software}
+All environments below are under \path{/home/u3129/miniconda3/envs/}, resolving
+through the home symlink to \path{/misc/home4/u3129/miniconda3/envs/}.
+
+\begin{tabularx}{\linewidth}{@{}lX@{}}
+\toprule
+Environment & Observed package metadata \\
+\midrule
+\texttt{deepmd\_320\_a100} & Python 3.12.14; DeePMD-kit 3.2.0; PyTorch 2.12.0
+(CUDA 13.0 build); TensorFlow 2.21.0; Open MPI 5.0.10; dpdata 1.1.0; e3nn 0.6.0.
+Some CUDA toolkit components are 13.3; their presence does not establish driver compatibility. \\
+\texttt{deepmd\_229\_cpu} & Python 3.10.13; DeePMD-kit 2.2.9; TensorFlow 2.9.0
+(CPU); MPICH 4.3.2; LAMMPS 20230802.1. \\
+\texttt{deepmd\_2210\_k40} & Python 3.10.13; DeePMD-kit 2.2.10; TensorFlow 2.9.0;
+CUDA toolkit 10.2.89; cuDNN 7.6.5; MPICH 4.3.2. K40 runtime remains to be tested. \\
+\texttt{lammps\_deepmd\_dpa4} & Python 3.12.14; DeePMD-kit 3.2.0; PyTorch 2.11.0;
+ASE 3.29.0; LAMMPS 2025.7.22.2.0; MPICH 5.0.1.post1; CUDA 13 packages. \\
+\texttt{lammps\_deepmd\_tf\_dpa4} & Python 3.12.14; DeePMD-kit 3.2.0;
+TensorFlow 2.21.0; ASE 3.29.0; LAMMPS 2025.7.22.2.0; MPICH 5.0.2; CUDA 12 packages. \\
+\bottomrule
+\end{tabularx}
+
+Activation, \texttt{python --version}, and resolution of \texttt{dp} and
+\texttt{lmp} were verified for the first three environments. The last two were
+inspected through package metadata only. MACE and NequIP distributions were not
+found in the checked environments; installations elsewhere are not excluded.
+Names containing \texttt{dpa4} are environment labels and do not verify model
+architecture support, checkpoint availability, or successful model loading.
+
+The default system Python is 3.6.8; the user's base Miniconda metadata reports
+Python 3.14.7. Explicit activation or absolute environment paths are therefore
+necessary. CUDA modules include 10.2, 11.8, 12.4, 12.6, 12.8 and 13.0, with
+Open MPI 4.1.1 and Intel MPI/oneAPI 2025 modules also available. Module presence
+does not certify compatibility with an environment's bundled MPI or CUDA runtime.
+An older LAMMPS executable is on PATH at
+\path{/home/u3129/Keller/SOFT/lammps-23Jun2022/src/lmp_mpi}.
+
+\section{Storage and next checks}
+The home directory resolves to \path{/misc/home4/u3129}; its filesystem had
+about 24 TB free out of 40 TB at inspection. This is shared filesystem space,
+not a personal quota. \path{~/_scratch} points to \path{/home1/u3129} and
+\path{~/_scratch2} to \path{/home6/u3129}. The displayed quota for
+\texttt{stg06:/home6} was 100 GB with about 15.7 GB used; the quota for the
+current home filesystem was not established. Retention and backup policies
+for these paths remain unknown. A production work root has not been selected.
+
+Next steps are to locate accessible VASP and inspect its linkage, then run a
+bounded Slurm environment check with an explicitly agreed resource budget.
+For A100 this should record \texttt{nvidia-smi}, device memory and driver,
+library imports, CUDA device discovery, and a tiny GPU operation.
+K40 requires a separate check using its existing legacy environment.
+A scientific VASP validation additionally needs a licensed potential and
+a documented small input system. These runtime checks are not claimed complete.
+
+\end{document}

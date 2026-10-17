@@ -1,6 +1,6 @@
 {
   "updated_local_date": "2026-10-17",
-  "stage": "cluster_inventory_pending",
+  "stage": "login_inventory_complete_runtime_pending",
   "scientific_results": [],
   "system_selection": "open; compare Al-based alloy/nucleant candidates with alternatives",
   "github": "https://github.com/rryltsev/MLIP-nucleation",
@@ -10,9 +10,24 @@
   "candidate_host_key": {"algorithm": "ED25519", "fingerprint": "SHA256:sAMo6jV6KxAx0ntkLR5Gjm5wVWtb4QuRsDvGBhRB01k", "trusted": true, "verification": "user independently supplied matching fingerprint on 2026-10-11; key pinned in configs/known_hosts"},
   "ssh_observation": "user installed public key through an existing authenticated session; independent BatchMode login succeeded on 2026-10-17 from DESKTOP-J6E8U22; remote hostname umtnew.imm.uran.ru and user u3129; pinned host verification enabled",
   "local_key_fingerprint": "SHA256:jqLNBsyLJeE6thwpPCNI/6cPoCsmdypfllz/OFuCnC0",
-  "blocking_inputs": [],
+  "cluster_inventory": {
+    "date": "2026-10-17",
+    "report": "reports/cluster-inventory-2026-10-17.tex",
+    "evidence_directory": "configs/observations",
+    "account": "imet-2026-2",
+    "qos": "normal",
+    "a100_partition": "v100",
+    "cpu_partition_candidate": "apollo",
+    "activated_environments": ["deepmd_320_a100", "deepmd_229_cpu", "deepmd_2210_k40"],
+    "vasp": "not found in PATH/modules or inspected user software paths; /opt/vasp permission denied",
+    "runtime_tests": "not run; no Slurm allocation submitted",
+    "latex_preview": "compiler could not start due Windows sandbox access error 5; source preserved"
+  },
+  "blocking_inputs": ["accessible VASP executable or working submission-script path"],
   "next_actions": [
-    "inspect Slurm/VASP configuration after authenticated SSH login",
+    "locate accessible VASP and inspect MPI linkage",
+    "agree a bounded Slurm runtime-check budget for A100 and legacy K40 environments",
+    "choose storage root after confirming quota, retention and backup policy",
     "select pilot material and observable through comparative literature review",
     "choose artifact storage and durable workflow executor"
   ]

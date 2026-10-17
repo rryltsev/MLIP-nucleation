@@ -1,0 +1,15 @@
+{
+  "host": "umt.imm.uran.ru",
+  "user": "u3129",
+  "scope": "read-only login-node inspection; no job submission",
+  "probes": [
+    {
+      "name": "environment_activation",
+      "observed_utc": "2026-10-17T15:21:03.277803+00:00",
+      "script": "source \"$HOME/miniconda3/etc/profile.d/conda.sh\"; for env in deepmd_320_a100 deepmd_229_cpu deepmd_2210_k40; do conda activate \"$env\" || exit; printf 'ENV=%s\\n' \"$env\"; command -v python; python --version; command -v dp; command -v lmp; conda deactivate; done",
+      "returncode": 0,
+      "stdout": "ENV=deepmd_320_a100\n/home/u3129/miniconda3/envs/deepmd_320_a100/bin/python\nPython 3.12.14\n/home/u3129/miniconda3/envs/deepmd_320_a100/bin/dp\n/home/u3129/miniconda3/envs/deepmd_320_a100/bin/lmp\nENV=deepmd_229_cpu\n/home/u3129/miniconda3/envs/deepmd_229_cpu/bin/python\nPython 3.10.13\n/home/u3129/miniconda3/envs/deepmd_229_cpu/bin/dp\n/home/u3129/miniconda3/envs/deepmd_229_cpu/bin/lmp\nENV=deepmd_2210_k40\n/home/u3129/miniconda3/envs/deepmd_2210_k40/bin/python\nPython 3.10.13\n/home/u3129/miniconda3/envs/deepmd_2210_k40/bin/dp\n/home/u3129/miniconda3/envs/deepmd_2210_k40/bin/lmp\n",
+      "stderr": ""
+    }
+  ]
+}

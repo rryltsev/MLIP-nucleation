@@ -1,0 +1,15 @@
+{
+  "host": "umt.imm.uran.ru",
+  "user": "u3129",
+  "scope": "read-only login-node inspection; no job submission",
+  "probes": [
+    {
+      "name": "user_software",
+      "observed_utc": "2026-10-17T15:20:30.843462+00:00",
+      "script": "for path in \"$HOME/Keller\" \"$HOME/Sirenko\" \"$HOME/Submission\" \"$HOME/_scratch\" \"$HOME/_scratch2\"; do if [ -d \"$path\" ]; then ls -ld \"$path\"; ls -1 \"$path\" | head -40; fi; done; for path in /usr/local/bin /usr/bin \"$HOME/Keller/SOFT\"; do find \"$path\" -maxdepth 3 -type f -iname '*vasp*' -print 2>/dev/null; done; ls -l \"$HOME/miniconda3/envs/deepmd_320_a100/bin/python\" \"$HOME/miniconda3/envs/deepmd_320_a100/bin/dp\"; sshare -l -A imet-2026-2 -u \"$(id -un)\"",
+      "returncode": 0,
+      "stdout": "drwxr-xr-x 3 u3129 users 152 Nov  8  2022 /home/u3129/Keller\nSOFT\ndrwxr-xr-x 4 u3129 users 152 Dec 15  2023 /home/u3129/Sirenko\nC_0GPa\nC_0GPa.zip\nUSPEX_v10.5\ndrwxr-xr-x 2 u3129 users 8192 Nov 22  2022 /home/u3129/Submission\ncheckStatus_local.py\ncheckStatus_remote.py\nsubmitJob_local.py\nsubmitJob_remote.py\ntest_submission_scripts.py\nlrwxrwxrwx 1 root root 12 Apr  1  2022 /home/u3129/_scratch -> /home1/u3129\nhome 4\n_scratch2\nСиренко\nlrwxrwxrwx 1 root root 12 Apr  1  2022 /home/u3129/_scratch2 -> /home6/u3129\nAl_polycryst\nhome4\nLelyukh\n_scratch\nSFE_test\nstacking_faults\ntest_performance_Al2Cu\nUHTC-Eutectics\nСиренко А.О.\n-rwxr-xr-x 1 u3129 users 235 Oct  4 19:06 /home/u3129/miniconda3/envs/deepmd_320_a100/bin/dp\nlrwxrwxrwx 1 u3129 users  10 Oct  4 18:59 /home/u3129/miniconda3/envs/deepmd_320_a100/bin/python -> python3.12\nAccount                    User  RawShares  NormShares    RawUsage   NormUsage  EffectvUsage  FairShare                    GrpTRESMins                    TRESRunMins \n-------------------- ---------- ---------- ----------- ----------- ----------- ------------- ---------- ------------------------------ ------------------------------ \nimet-2026-2                              1    0.002611 65855599720    0.194217      0.194217   0.805783                                cpu=25858,mem=179471974,energ+ \n imet-2026-2              u3129          1    0.000522 15289655796    0.045091      0.074916   0.925084                                cpu=0,mem=0,energy=0,node=0,b+ \n",
+      "stderr": ""
+    }
+  ]
+}
