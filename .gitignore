@@ -20,6 +20,14 @@ vaspout.h5
 scratch/
 artifacts/
 
+# Licensed VASP distributions and local build trees
+vasp*.tgz
+vasp*.tar.gz
+vasp.*/
+vasp_std
+vasp_gam
+vasp_ncl
+
 # LaTeX build products (source, final figures and selected PDFs may be tracked)
 *.aux
 *.log
