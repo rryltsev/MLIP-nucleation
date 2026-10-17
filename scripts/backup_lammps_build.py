@@ -51,6 +51,7 @@ if not local.exists():
 with local.open('rb') as f:assert hashlib.file_digest(f,'sha256').hexdigest()==record['sha256']
 with tarfile.open(local) as tar:
     for n,r in record['members'].items():assert hashlib.sha256(tar.extractfile(n).read()).hexdigest()==r['sha256']
-record.update(local_archive=str(local),verified_retrieval=True,scope='private source and binaries; TensorFlow runtime rebuilt separately from existing exact environment lock')
+scope='private source and binaries; framework runtime and MPI are separate shared dependencies recorded in run metadata'
+record.update(local_archive=str(local),verified_retrieval=True,scope=scope)
 save(path/'artifact-backup.json',record)
 print(json.dumps({k:v for k,v in record.items() if k!='members'}))

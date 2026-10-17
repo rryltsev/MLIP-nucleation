@@ -76,7 +76,7 @@ root=Path(@ROOT@); records={}
 for p in root.rglob('*'):
  rel=p.relative_to(root)
  if not p.is_file() or 'cache' in rel.parts or 'loaded-initial' in rel.parts or p.name in ['manifest.json','job.id']: continue
- if p.suffix not in ['.json','.yaml','.txt','.log','.out','.csv','.extxyz']: continue
+ if p.suffix not in ['.json','.yaml','.txt','.log','.out','.csv','.extxyz','.data','.lammps','.dump']: continue
  b=p.read_bytes()
  if len(b)>2500000: continue
  records[rel.as_posix()]={'sha256':hashlib.sha256(b).hexdigest(),'text':b.decode()}

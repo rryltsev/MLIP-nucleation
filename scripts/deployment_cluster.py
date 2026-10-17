@@ -24,7 +24,7 @@ def submit(phase, attempt, backends='dpa4,grace'):
     elif phase=='diagnose':
         names=['lammps-diagnostic.sbatch'];cpus=1;mem=4;partition='apollo';wall='00:05:00'
     elif phase=='lammps':
-        names=['dpa4-lammps.sbatch','dpa4-lammps.py','fm-deployment.py'];cpus=4;mem=32;partition='v100';wall='00:05:00'
+        names=['dpa4-lammps.sbatch','dpa4-lammps.py','fm-deployment.py','deepmd-lammps-env.sh'];cpus=4;mem=32;partition='v100';wall='00:05:00'
     else:
         names=['fm-deployment.sbatch','fm-deployment.py','restart-child.py']; cpus=4; mem=32; partition='v100'; wall='00:20:00'
     payload={n:(ROOT/'scripts/hpc'/n).read_bytes().replace(b'\r\n',b'\n') for n in names}
