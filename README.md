@@ -36,7 +36,7 @@ tests/               scientifically meaningful verification
 
 ## Next milestones
 
-1. Complete interactive SSH authentication. The user confirmed the server fingerprint on 2026-10-11. Inspect Slurm partitions, quotas and VASP installation without launching calculations.
+1. SSH key authentication was verified on 2026-10-17 from DESKTOP-J6E8U22 as `u3129`, with remote hostname `umtnew.imm.uran.ru`. Next inspect Slurm partitions, quotas and VASP installation without launching calculations.
 2. On another computer clone the repository, configure its own credentials and read `project/state.json`.
 3. Compare candidate alloy/nucleant systems using literature novelty, experimental access, DFT feasibility and model chemical coverage. Choose one small pilot.
 4. Implement one executable path: structures → converged VASP labels → teacher fine-tuning → independent DFT validation → distillation → student validation → one observable → LaTeX report.
@@ -51,10 +51,10 @@ Commit source, configuration, skills, manifests, small curated results, LaTeX an
 `configs/ssh_config` is a portable configuration, not an installed user setting. Example from the repository root:
 
 ```powershell
-ssh -F configs/ssh_config mlip-umt hostname
+python scripts/cluster_ssh.py hostname
 ```
 
-Run this command from the repository root: the profile uses the relative path `configs/known_hosts` containing the public server key independently confirmed by the user. Its ED25519 fingerprint is `SHA256:sAMo6jV6KxAx0ntkLR5Gjm5wVWtb4QuRsDvGBhRB01k`. Authentication is machine-local; the current user logs in interactively by password. Do not put credentials in this repository. For unattended execution, set up a machine-local SSH key through an authenticated session, according to cluster policy.
+The helper resolves the profile and `configs/known_hosts` relative to its own location. The public server key was independently confirmed by the user; its ED25519 fingerprint is `SHA256:sAMo6jV6KxAx0ntkLR5Gjm5wVWtb4QuRsDvGBhRB01k`. Public-key-only noninteractive login is verified on DESKTOP-J6E8U22. Authentication is machine-local; do not put credentials in this repository.
 
 Run the offline configuration check with `python scripts/check_project.py`.
 
@@ -76,3 +76,5 @@ python scripts/cluster_ssh.py 'sinfo -o "%P %a %l %D %G"'
 ```
 
 The helper selects the local key explicitly and pins the verified server key. Setup status is stored in ignored `artifacts/ssh-setup.local.json` without passwords or private key content.
+
+On this computer the public key was installed through an existing authenticated cluster session after password attempts in the setup window were rejected. A separate noninteractive connection verified the installed key. The local key fingerprint is `SHA256:jqLNBsyLJeE6thwpPCNI/6cPoCsmdypfllz/OFuCnC0`.

@@ -80,7 +80,8 @@ def main():
     command = args.command or ["hostname"]
     if command and command[0] == "--":
         command = command[1:]
-    return subprocess.run(ssh_args() + ["-o", "BatchMode=yes", "mlip-umt", *command]).returncode
+    return subprocess.run(ssh_args() + ["-o", "BatchMode=yes", "-o",
+                          "PreferredAuthentications=publickey", "mlip-umt", *command]).returncode
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 {
   "updated_local_date": "2026-10-17",
-  "stage": "infrastructure_bootstrap",
+  "stage": "cluster_inventory_pending",
   "scientific_results": [],
   "system_selection": "open; compare Al-based alloy/nucleant candidates with alternatives",
   "github": "https://github.com/rryltsev/MLIP-nucleation",
@@ -8,11 +8,9 @@
   "git_author": {"name": "rryltsev", "email": "rrylcev@mail.ru"},
   "skills_observation": "three skills validated with quick_validate.py and installed in .agents/skills",
   "candidate_host_key": {"algorithm": "ED25519", "fingerprint": "SHA256:sAMo6jV6KxAx0ntkLR5Gjm5wVWtb4QuRsDvGBhRB01k", "trusted": true, "verification": "user independently supplied matching fingerprint on 2026-10-11; key pinned in configs/known_hosts"},
-  "ssh_observation": "latest user-requested retry completed on 2026-10-17; debug log confirms password authentication selected and two password submissions rejected by the server; host verification passes; public key installation and password-free login remain unverified; compare with user's working SSH client before another retry",
+  "ssh_observation": "user installed public key through an existing authenticated session; independent BatchMode login succeeded on 2026-10-17 from DESKTOP-J6E8U22; remote hostname umtnew.imm.uran.ru and user u3129; pinned host verification enabled",
   "local_key_fingerprint": "SHA256:jqLNBsyLJeE6thwpPCNI/6cPoCsmdypfllz/OFuCnC0",
-  "blocking_inputs": [
-    "successful password authentication for u3129@umt.imm.uran.ru or verification of the working SSH client's connection settings"
-  ],
+  "blocking_inputs": [],
   "next_actions": [
     "inspect Slurm/VASP configuration after authenticated SSH login",
     "select pilot material and observable through comparative literature review",
