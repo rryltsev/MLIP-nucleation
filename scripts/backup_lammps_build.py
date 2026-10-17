@@ -14,7 +14,7 @@ from vasp_potentials import save
 parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--run-id',default='grace-lammps-build-20261017-01')
 args=parser.parse_args()
-assert args.run_id in ['grace-lammps-build-20261017-01','deepmd-lammps-build-20261017-01']
+assert args.run_id in ['grace-lammps-build-20261017-01','deepmd-lammps-build-20261017-01','deepmd-mpi-lammps-build-20261017-01']
 path=ROOT/'runs'/args.run_id
 build=json.loads((path/'result.json').read_text())
 assert build['status']=='passed'

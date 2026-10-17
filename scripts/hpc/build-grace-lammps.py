@@ -21,8 +21,13 @@ try:
     archive = prefix/'source.tar.gz'
     repository='yury-lysogorskiy/lammps' if variant=='grace' else 'lammps/lammps'
     url = 'https://codeload.github.com/'+repository+'/tar.gz/'+REVISION
-    with urllib.request.urlopen(url,timeout=90) as inp, archive.open('wb') as out:
-        while b:=inp.read(1048576): out.write(b)
+    if variant=='deepmd-mpi':
+        import shutil
+        shutil.copyfile('/home6/u3129/mlip-research/software/lammps-deepmd-'+REVISION[:12]+'/source.tar.gz',archive)
+        assert hashlib.sha256(archive.read_bytes()).hexdigest()=='2f429b328ec40128957ab0e27a9fbb30ec8a3c398ca1a9ca5b4786edebabd6f7'
+    else:
+        with urllib.request.urlopen(url,timeout=90) as inp, archive.open('wb') as out:
+            while b:=inp.read(1048576): out.write(b)
     result.update(source_url=url,source_sha256=hashlib.sha256(archive.read_bytes()).hexdigest())
     (root/'result.json').write_text(json.dumps(result,indent=2)+'\n')
     with tarfile.open(archive) as bundle:
@@ -35,9 +40,10 @@ try:
         '-DTF_LIB_FILE='+str(tf/'libtensorflow_cc.so.2'),'-DTF_INCLUDE_PATH='+str(tf/'include'),
         '-DTF_PATH='+str(tf),'-DPACE_PYTHON_EXEC='+str(env/'bin/python'),
         '-DCMAKE_INSTALL_PREFIX='+str(prefix/'install')]
-    if variant=='deepmd':
+    if variant.startswith('deepmd'):
         command=command[:command.index('-DPKG_ML-PACE=ON')]+['-DPKG_PLUGIN=ON','-DDOWNLOAD_POTENTIALS=OFF',
             '-DCMAKE_CXX_COMPILER=/opt/rh/gcc-toolset-12/root/usr/bin/g++','-DCMAKE_C_COMPILER=/opt/rh/gcc-toolset-12/root/usr/bin/gcc']
+        if variant=='deepmd-mpi':command+=['-DBUILD_MPI=ON','-DMPI_CXX_COMPILER=/misc/umt_shared/opt/intel/oneapi/mpi/2021.17/bin/mpicxx','-DMPI_C_COMPILER=/misc/umt_shared/opt/intel/oneapi/mpi/2021.17/bin/mpicc']
     result['configure_command']=command
     for name, cmd, seconds in [('configure',command,600),
         ('build',['cmake','--build',str(prefix/'build'),'--parallel','8'],1800)]:
