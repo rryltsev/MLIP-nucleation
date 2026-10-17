@@ -135,7 +135,8 @@ def restore_check_pt(source,loaded):
         else: assert x==y,(path,x,y)
     equal(a['model'],b['model'],'model');equal(a['optimizer'],b['optimizer'],'optimizer')
     assert json.loads(loaded.with_suffix('.json').read_text())['step']==20
-    return {'exactly_restored_tensor_count':len(matched),'optimizer_tensor_count':sum(k.startswith('optimizer/') for k in matched),'restored_step':20,'scheduler_changes':scheduler_changes}
+    return {'exactly_restored_tensor_count':len(matched),'optimizer_tensor_count':sum(k.startswith('optimizer/') for k in matched),
+        'restored_step':20,'counter_metadata':json.loads(loaded.with_suffix('.json').read_text()),'scheduler_changes':scheduler_changes}
 
 
 def dpa4(structures,result):
@@ -150,7 +151,9 @@ def dpa4(structures,result):
     result['restart_process']=execute([sys.executable,str(TOOLS/'restart-child.py'),'dpa4','--pt','train','input.json','--restart',str(source)],'restart',env=env)
     result['restart_state']=restore_check_pt(source,ROOT/'restored/model.pt')
     final=ROOT/'model.ckpt-24.pt';state=torch.load(final,map_location='cpu',weights_only=False)
-    result['final_step']=state['model']['_extra_state']['train_infos']['step'];assert result['final_step']==24
+    result['final_internal_step']=state['model']['_extra_state']['train_infos']['step'];assert result['final_internal_step']==23
+    steps={int(v['step']) for v in state['optimizer']['state'].values() if 'step' in v};assert steps=={24},steps
+    result['final_step']=24
     assert any(not torch.equal(v,state['model'][k]) for k,v in torch.load(source,map_location='cpu',weights_only=False)['model'].items() if isinstance(v,torch.Tensor) and v.is_floating_point())
     engine=DeepPot(str(final));types=engine.get_type_map(); reference=[]
     for a in structures:

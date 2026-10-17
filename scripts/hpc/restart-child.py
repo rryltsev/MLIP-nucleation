@@ -12,8 +12,19 @@ if backend=='dpa4':
     original=Trainer.__init__
     def observed(self,*args,**kwargs):
         original(self,*args,**kwargs)
+        raw_step=self.start_step
+        completed={int(v['step']) for v in self.optimizer.state_dict()['state'].values() if 'step' in v}
+        assert len(completed)==1, 'Ambiguous Adam update counters'
+        completed=completed.pop()
+        assert completed in (raw_step,raw_step+1), (raw_step,completed)
+        # DeepMD 3.2.0 stores a zero-based completed-loop index but uses it
+        # directly as range(start, stop) on restart. Continue AFTER that update.
+        if completed==raw_step+1:
+            self.start_step=completed
+            self.scheduler=self._create_lr_scheduler(self.optimizer,self.lr_schedule,self.start_step)
         torch.save({'model':self.wrapper.state_dict(),'optimizer':self.optimizer.state_dict()},snapshot)
-        snapshot.with_suffix('.json').write_text(json.dumps({'step':self.start_step})+'\n')
+        snapshot.with_suffix('.json').write_text(json.dumps({'step':self.start_step,'raw_checkpoint_step':raw_step,
+            'optimizer_iterations':completed,'compatibility_step_adjustment':self.start_step-raw_step})+'\n')
     Trainer.__init__=observed
     from deepmd.main import main
 else:

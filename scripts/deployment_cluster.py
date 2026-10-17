@@ -13,7 +13,7 @@ from vasp_potentials import save
 from fm_cluster import collect
 
 
-def submit(phase, attempt):
+def submit(phase, attempt, backends='dpa4,grace'):
     run_id=('grace-lammps-build-' if phase=='build' else 'fm-deployment-')+'20261017-'+attempt
     path=ROOT/'runs'/run_id/'manifest.json'
     if path.exists(): raise FileExistsError('Recorded intent; reconcile scheduler before retry')
@@ -37,6 +37,7 @@ def submit(phase, attempt):
         'input_sha256':hashes,'input_hash':hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest(),
         'code_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
         'source_run':'runs/fm-finetune-20261017-01/assessment.json',
+        'requested_backends':backends.split(','),
         'grace_lammps_source_revision':'b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4'}
     save(path,manifest); q=shlex.quote(run_dir)
     remote('set -eu; umask 077; mkdir -p '+shlex.quote(run_dir.rsplit('/',1)[0])+'; mkdir '+q)
@@ -44,6 +45,7 @@ def submit(phase, attempt):
     manifest['stage']='submission_intent';save(path,manifest);write_remote(run_dir+'/manifest.json',path.read_bytes())
     flags=' --gres=gpu:a100:1' if phase!='build' else ''
     exports='ALL,DEPLOY_RUN_DIR='+run_dir
+    if phase!='build':exports+=',DEPLOY_BACKENDS='+backends.replace(',','_')
     reply=remote('set -euC; cd '+q+'; test ! -e job.id; sbatch --parsable --job-name='+run_id+
         ' --partition='+partition+' --account=imet-2026-2 --qos=normal --nodes=1 --ntasks=1 --cpus-per-task='+str(cpus)+
         ' --mem='+str(mem)+'G --time='+wall+flags+' --chdir='+q+' --output='+q+'/slurm-%j.out --export='+shlex.quote(exports)+' '+names[0]+' > job.id; cat job.id')
@@ -55,6 +57,6 @@ def submit(phase, attempt):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);sub=p.add_subparsers(dest='command',required=True)
-    s=sub.add_parser('submit');s.add_argument('phase',choices=['build','gpu']);s.add_argument('--attempt',required=True)
+    s=sub.add_parser('submit');s.add_argument('phase',choices=['build','gpu']);s.add_argument('--attempt',required=True);s.add_argument('--backends',choices=['dpa4','grace','dpa4,grace'],default='dpa4,grace')
     c=sub.add_parser('collect');c.add_argument('manifest',type=Path)
-    a=p.parse_args();submit(a.phase,a.attempt) if a.command=='submit' else collect(a.manifest)
+    a=p.parse_args();submit(a.phase,a.attempt,a.backends) if a.command=='submit' else collect(a.manifest)

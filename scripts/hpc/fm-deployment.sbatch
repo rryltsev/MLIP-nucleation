@@ -16,20 +16,27 @@ source /home/u3129/miniconda3/etc/profile.d/conda.sh
 conda activate lammps_deepmd_dpa4
 export LD_LIBRARY_PATH="$CONDA_PREFIX/lib:${LD_LIBRARY_PATH:-}"
 set +e
-(cd dpa4 && python ../fm-deployment.py dpa4) > dpa4-console.txt 2>&1
-dp_status=$?
+dp_status=0
+if [[ "$DEPLOY_BACKENDS" == *dpa4* ]]; then
+  (cd dpa4 && python ../fm-deployment.py dpa4) > dpa4-console.txt 2>&1
+  dp_status=$?
+fi
 set -e
 source /home6/u3129/mlip-research/envs/grace_ft_a100/activate-grace.sh
 export LD_LIBRARY_PATH="$CONDA_PREFIX/lib:$CONDA_PREFIX/lib/python3.11/site-packages/tensorflow:${LD_LIBRARY_PATH:-}"
 set +e
-(cd grace && python ../fm-deployment.py grace) > grace-console.txt 2>&1
-gr_status=$?
+gr_status=0
+if [[ "$DEPLOY_BACKENDS" == *grace* ]]; then
+  (cd grace && python ../fm-deployment.py grace) > grace-console.txt 2>&1
+  gr_status=$?
+fi
 set -e
 python - "$dp_status" "$gr_status" <<'PY'
-import json,sys
+import json,sys,os
 from pathlib import Path
 r={'status':'passed' if sys.argv[1:]==['0','0'] else 'failed','cases':{}}
 for name in ['dpa4','grace']:
+ if name not in os.environ['DEPLOY_BACKENDS']: continue
  p=Path(name)/'result.json'
  r['cases'][name]=json.loads(p.read_text()) if p.exists() else {'status':'missing_result'}
 Path('result.json').write_text(json.dumps(r,indent=2)+'\n')
