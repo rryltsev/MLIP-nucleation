@@ -33,7 +33,7 @@ def execute(command,name,seconds=180,env=None,cwd=None,check=True):
                 os.killpg(proc.pid,signal.SIGKILL);proc.wait();raise TimeoutError(name+' exceeded '+str(seconds)+' seconds')
             q=subprocess.run(['nvidia-smi','--query-compute-apps=pid,gpu_uuid,used_gpu_memory','--format=csv,noheader,nounits'],capture_output=True,text=True,timeout=10)
             samples.extend({'seconds':time.monotonic()-started,'process':s} for s in q.stdout.splitlines() if s.split(',')[0].strip()==str(proc.pid))
-            time.sleep(1)
+            time.sleep(0.2)
     record={'command':command,'exitcode':proc.returncode,'seconds':time.monotonic()-started,'pid':proc.pid,'gpu_samples':samples}
     save(ROOT/(name+'-process.json'),record)
     if check:assert proc.returncode==0,(ROOT/(name+'.log')).read_text(errors='replace')[-5000:]
@@ -104,6 +104,9 @@ run 0
 print "$(pe:%.17g) $(pxx:%.17g) $(pyy:%.17g) $(pzz:%.17g) $(pyz:%.17g) $(pxz:%.17g) $(pxy:%.17g)" file prediction.txt
 write_dump all custom forces.dump id type x y z fx fy fz modify sort id format float %.17g
 '''.replace('@PAIR@',pair).replace('@COEFF@',coeff)
+        # Keep the native process/context alive long enough to identify its PID
+        # in NVIDIA telemetry. No extra force evaluation or MD step is added.
+        if BACKEND=='dpa4':text+='shell sleep 2\n'
         (folder/'in.lammps').write_text(text)
         env=dict(os.environ,LAMMPS_PLUGIN_PATH='')
         record=execute([str(binary),'-in','in.lammps'], 'lammps-'+str(i),seconds=120,env=env,cwd=folder)
