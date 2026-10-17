@@ -70,9 +70,14 @@ def compare(before, loaded, after, backend):
                     if dtype is not None and dtype.is_floating:
                         values[name+"/"+a.name] = r.get_tensor(a.checkpoint_key)
                 queue.extend((c.node_id,name+"/"+c.local_name) for c in sorted(node.children,key=lambda c:c.local_name))
+            save(Path('tf-inventory-'+hashlib.sha256(str(p).encode()).hexdigest()[:8]+'.json'),
+                 {'checkpoint':str(p),'model_tensors':{k:{'shape':list(v.shape),'sha256':hashlib.sha256(v.tobytes()).hexdigest()} for k,v in values.items()},
+                  'attributes':[{'full_name':a.full_name,'checkpoint_key':a.checkpoint_key} for n in graph.nodes for a in n.attributes]})
             return values
     source, initial, final = map(tensors, [before, loaded, after])
-    assert source and source.keys() == initial.keys() == final.keys(), "Model tensor keys differ"
+    assert source and source.keys() == initial.keys() == final.keys(), str({
+        'source_only':sorted(source.keys()-initial.keys()),'initial_only':sorted(initial.keys()-source.keys()),
+        'final_only':sorted(final.keys()-initial.keys()),'final_missing':sorted(initial.keys()-final.keys())})
     assert all(np.isfinite(a).all() for d in [source, initial, final] for a in d.values())
     equal = [k for k in source if np.array_equal(source[k], initial[k])]
     unequal = [k for k in source if k not in equal]

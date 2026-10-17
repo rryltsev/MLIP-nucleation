@@ -35,7 +35,10 @@ with tarfile.open(archive) as tar:
  assert members.keys()==records.keys()
  for name,record in records.items():
   assert hashlib.sha256(tar.extractfile(members[name]).read()).hexdigest()==record['sha256']
-with archive.open('rb') as f: digest=hashlib.file_digest(f,'sha256').hexdigest()
+digest_state=hashlib.sha256()
+with archive.open('rb') as f:
+ for chunk in iter(lambda:f.read(1048576),b''): digest_state.update(chunk)
+digest=digest_state.hexdigest()
 print(json.dumps({'remote_archive':str(archive),'sha256':digest,'bytes':archive.stat().st_size,'members':records}))
 PY
 """.replace('@SOURCE@',repr(source)).replace('@DEST@',repr(destination))
