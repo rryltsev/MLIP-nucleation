@@ -12,16 +12,18 @@ from install_vasp import remote
 from vasp_potentials import save
 
 
-def main(path):
+def main(path, initialization=False):
     manifest=json.loads(path.read_text())
     if manifest['stage']!='collected': raise ValueError('Collect terminal scheduler state first')
     source=manifest['remote_run_dir']
-    destination='/home/u3129/.local/share/mlip-research/test-artifacts/'+manifest['run_id']+'.tar'
+    suffix='-initialization' if initialization else ''
+    destination='/home/u3129/.local/share/mlip-research/test-artifacts/'+manifest['run_id']+suffix+'.tar'
     script="""python3 - <<'PY'
 import hashlib,json,tarfile
 from pathlib import Path
 root=Path(@SOURCE@); archive=Path(@DEST@)
 patterns=['*.py','*.sbatch','*-checkpoint.json','result.json','*/input.json','*/input.yaml','*/result.json','*/data/**/*','dpa4/model.ckpt-*.pt','grace/seed/42/model.yaml','grace/seed/42/checkpoints/checkpoint.index','grace/seed/42/checkpoints/checkpoint.data-*']
+if @INITIALIZATION@: patterns=['*/loaded-initial/*']
 files=sorted({p for pat in patterns for p in root.glob(pat) if p.is_file()})
 records={p.relative_to(root).as_posix():{'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'bytes':p.stat().st_size} for p in files}
 archive.parent.mkdir(parents=True,exist_ok=True)
@@ -41,7 +43,7 @@ with archive.open('rb') as f:
 digest=digest_state.hexdigest()
 print(json.dumps({'remote_archive':str(archive),'sha256':digest,'bytes':archive.stat().st_size,'members':records}))
 PY
-""".replace('@SOURCE@',repr(source)).replace('@DEST@',repr(destination))
+""".replace('@SOURCE@',repr(source)).replace('@DEST@',repr(destination)).replace('@INITIALIZATION@',str(initialization))
     record=json.loads(remote(script,timeout=180))
     local=ROOT/'artifacts/fm-run-backups'/Path(destination).name; local.parent.mkdir(parents=True,exist_ok=True)
     if not local.exists():
@@ -56,9 +58,10 @@ PY
             assert hashlib.sha256(tar.extractfile(name).read()).hexdigest()==item['sha256']
     record.update(local_archive=str(local),verified_retrieval=True,
         policy='Actual private main-home archive and second workstation copy; no weights uploaded to GitHub; institutional backup/retention unconfirmed')
-    save(path.parent/'artifact-backup.json',record)
+    save(path.parent/('initialization-backup.json' if initialization else 'artifact-backup.json'),record)
     print(json.dumps({k:v for k,v in record.items() if k!='members'}))
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('manifest',type=Path);main(p.parse_args().manifest)
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('manifest',type=Path);p.add_argument('--initialization',action='store_true')
+    a=p.parse_args();main(a.manifest,a.initialization)

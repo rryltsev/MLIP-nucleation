@@ -1,0 +1,51 @@
+{
+  "status": "failed",
+  "cases": {
+    "dpa4": {
+      "backend": "dpa4",
+      "status": "passed",
+      "source_run": "/home6/u3129/mlip-research/runs/fm-finetune-20261017-01",
+      "job_id": "20950305",
+      "weight_checks": {
+        "source_float_tensors": 102,
+        "exactly_restored_tensors": 99,
+        "initial_changed_keys": [
+          "model.Default.atomic_model.out_bias",
+          "model.Default.atomic_model.out_std",
+          "model.Default.atomic_model.descriptor.version_tensor"
+        ],
+        "initial_adjustments": {
+          "model.Default.atomic_model.out_bias": {
+            "max_abs_difference": 2.2947096439195707,
+            "before": "array",
+            "after": "array"
+          },
+          "model.Default.atomic_model.out_std": {
+            "max_abs_difference": 19.836385079605428,
+            "before": "array",
+            "after": "array"
+          },
+          "model.Default.atomic_model.descriptor.version_tensor": {
+            "max_abs_difference": 0.09999999999999987,
+            "before": 1.1,
+            "after": 1.2
+          }
+        },
+        "updated_tensors": 88,
+        "updated_original_tensors": 83,
+        "max_abs_update": 3.4774060909077726
+      },
+      "optimizer_updates": 20,
+      "checkpoint_sha256": {
+        "model.ckpt-20.pt": "bc480fc7eb8cecc5adbd75713645403a35d533f410dd35962108c5cecb4d67d5"
+      }
+    },
+    "grace": {
+      "backend": "grace",
+      "status": "failed",
+      "source_run": "/home6/u3129/mlip-research/runs/fm-finetune-20261017-01",
+      "job_id": "20950305",
+      "error": "Traceback (most recent call last):\n  File \"/misc/home6/u3129/mlip-research/runs/fm-verify-20261017-02/fm-verify.py\", line 27, in <module>\n    result['weight_checks'] = helper.compare(source,root/backend/'loaded-initial/model',final,backend)\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/misc/home6/u3129/mlip-research/runs/fm-verify-20261017-02/fm-finetune.py\", line 78, in compare\n    assert source and source.keys() == initial.keys() == final.keys(), str({\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: {'source_only': ['model/instructions/RadialBasis/basis_function/rc/VARIABLE_VALUE'], 'initial_only': ['model/instructions/RadialBasis/rc/VARIABLE_VALUE'], 'final_only': ['model/_variables_to_train/0/VARIABLE_VALUE', 'model/_variables_to_train/1/VARIABLE_VALUE', 'model/_variables_to_train/10/VARIABLE_VALUE', 'model/_variables_to_train/11/VARIABLE_VALUE', 'model/_variables_to_train/12/VARIABLE_VALUE', 'model/_variables_to_train/13/VARIABLE_VALUE', 'model/_variables_to_train/14/VARIABLE_VALUE', 'model/_variables_to_train/15/VARIABLE_VALUE', 'model/_variables_to_train/16/VARIABLE_VALUE', 'model/_variables_to_train/17/VARIABLE_VALUE', 'model/_variables_to_train/2/VARIABLE_VALUE', 'model/_variables_to_train/3/VARIABLE_VALUE', 'model/_variables_to_train/4/VARIABLE_VALUE', 'model/_variables_to_train/5/VARIABLE_VALUE', 'model/_variables_to_train/6/VARIABLE_VALUE', 'model/_variables_to_train/7/VARIABLE_VALUE', 'model/_variables_to_train/8/VARIABLE_VALUE', 'model/_variables_to_train/9/VARIABLE_VALUE'], 'final_missing': ['model/instructions/A/lin_transform/w/VARIABLE_VALUE', 'model/instructions/A1/w_left/VARIABLE_VALUE', 'model/instructions/A1/w_right/VARIABLE_VALUE', 'model/instructions/AA1/w_left/VARIABLE_VALUE', 'model/instructions/AA1/w_right/VARIABLE_VALUE', 'model/instructions/AA2/w_left/VARIABLE_VALUE', 'model/instructions/AA2/w_right/VARIABLE_VALUE', 'model/instructions/MLPOut2ScalarTarget/mlp/layer0/w/VARIABLE_VALUE', 'model/instructions/MLPOut2ScalarTarget/mlp/layer1/w/VARIABLE_VALUE', 'model/instructions/MLPOut2ScalarTarget/scale/VARIABLE_VALUE', 'model/instructions/R/mlp/layer0/w/VARIABLE_VALUE', 'model/instructions/R/mlp/layer1/w/VARIABLE_VALUE', 'model/instructions/R/mlp/layer2/w/VARIABLE_VALUE', 'model/instructions/Z/w/VARIABLE_VALUE', 'model/instructions/rho/reducing_A/VARIABLE_VALUE', 'model/instructions/rho/reducing_AA/VARIABLE_VALUE', 'model/instructions/rho/reducing_AAA/VARIABLE_VALUE', 'model/instructions/rho/reducing_AAAA/VARIABLE_VALUE']}\n"
+    }
+  }
+}

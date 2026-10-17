@@ -157,5 +157,10 @@
     "Og"
   ],
   "chemical_coverage_note": "Parameter/type-map coverage only; not proof of accuracy for every element or phase",
-  "cutoff_angstrom": 6.0
+  "cutoff_angstrom": 6.0,
+  "software_validation": {
+    "status": "passed on A100, 20 optimizer updates, synthetic labels only",
+    "assessment": "runs/fm-finetune-20261017-01/assessment.json",
+    "scientific_teacher": false
+  }
 }

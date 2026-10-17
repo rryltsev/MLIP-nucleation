@@ -1,0 +1,60 @@
+{
+  "status": "failed",
+  "backend": "grace",
+  "job_id": "20950277",
+  "host": "tesla-a101",
+  "environment": "/home6/u3129/mlip-research/envs/grace_ft_a100",
+  "started_utc": "2026-10-17T17:51:46.489603+00:00",
+  "model_id": "grace-1l-omat",
+  "source_sha256": "ad76b7845df6bc8da5d9cea823f5b4ccca87f5efa58904644dd43fb923ed52ff",
+  "scope": "synthetic Al4 diagnostic, NOT DFT, not a scientific accuracy benchmark",
+  "training": {
+    "command": [
+      "/home6/u3129/mlip-research/envs/grace_ft_a100/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/fm-finetune-20261017-01/grace/../fm-child.py",
+      "grace",
+      "input.yaml"
+    ],
+    "exitcode": 0,
+    "seconds": 34.74022715911269,
+    "pid": 1473565,
+    "gpu_samples": 12
+  },
+  "metrics": {
+    "train": {
+      "total_loss/train": 5.458873678360912,
+      "mae/depa": 2.1202966257557154,
+      "mae/de": 8.481186503022862,
+      "rmse/depa": 2.1206700812491492,
+      "rmse/de": 8.482680324996597,
+      "mae/f_comp": 0.8267319461571209,
+      "rmse/f_comp": 0.9806284132410388,
+      "loss_component/energy/train": 2.248620796752637,
+      "loss_component/forces/train": 0.4808160424278187,
+      "total_time/train/per_atom": 0.001609882281627506,
+      "epoch": 5,
+      "step": 20,
+      "lr_epoch_begin": 1.5423680451931432e-05,
+      "lr_epoch_end": 9.999999747378752e-06
+    },
+    "test": {
+      "total_loss/test": 5.721661097394159,
+      "loss_component/energy/test": 2.3613698579393945,
+      "loss_component/forces/test": 0.49946069075768496,
+      "mae/depa": 2.1728662348861585,
+      "mae/de": 8.691464939544634,
+      "rmse/depa": 2.173186534993899,
+      "rmse/de": 8.692746139975595,
+      "mae/f_comp": 0.8370989042392387,
+      "rmse/f_comp": 0.9994605452519724,
+      "total_time/test/per_atom": 0.0008802508236840367,
+      "epoch": 5,
+      "step": 20,
+      "lr_epoch_begin": 1.5423680451931432e-05,
+      "lr_epoch_end": 9.999999747378752e-06
+    }
+  },
+  "optimizer_updates": 20,
+  "error": "Traceback (most recent call last):\n  File \"/misc/home6/u3129/mlip-research/runs/fm-finetune-20261017-01/grace/../fm-finetune.py\", line 129, in main\n    result[\"weight_checks\"] = compare(source/\"checkpoint\",root/\"loaded-initial/model\",root/\"seed/42/checkpoints/checkpoint\",backend)\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/misc/home6/u3129/mlip-research/runs/fm-finetune-20261017-01/grace/../fm-finetune.py\", line 59, in compare\n    assert source and source.keys() == initial.keys() == final.keys(), \"Model tensor keys differ\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Model tensor keys differ\n",
+  "finished_utc": "2026-10-17T17:52:24.549411+00:00"
+}

@@ -10,7 +10,7 @@ The source research brief is preserved in `project/brief.txt`. Scientific manusc
 - Cluster: `umt.imm.uran.ru:22`, user `u3129`, scheduler Slurm.
 - Observed Slurm configuration (2026-10-17): 74 unique nodes, 1850 Slurm CPUs, 2 A100, 18 K40m and 62 M2090 GPUs, including configured devices on unavailable nodes. Partition totals overlap. GPU runtime evidence below applies only to the tested allocations.
 - DFT engine: VASP 6.6.1 CPU/MPI installed in `/home/u3129/.local/opt/vasp/6.6.1-oneapi-2025`; `vasp_std`, `vasp_gam`, `vasp_ncl` passed four selected upstream cases on `apollo31`. See `reports/vasp-installation-2026-10-17.tex`.
-- A100 DPA4/DPA4c/GRACE-1L training and K40m legacy DeepMD training passed small synthetic Slurm checks. Production-size memory/performance and actual FM fine-tuning remain untested. See `reports/mlip-environment-2026-10-17.tex` and `reports/grace-installation-2026-10-17.tex`.
+- A100 DPA4/DPA4c/GRACE-1L training and K40m legacy DeepMD training passed small synthetic Slurm checks. Actual DPA4-Mini and GRACE-1L-OMAT foundation weights subsequently passed 20-update fine-tuning and parameter audits on A100. Production performance and scientific accuracy remain untested. See `reports/foundation-finetuning-2026-10-17.tex` and the earlier environment reports.
 
 ## Repository layout
 
@@ -36,7 +36,7 @@ tests/               scientifically meaningful verification
 
 ## Next milestones
 
-1. SSH, inventory, VASP/PAW setup and small DeepMD/GRACE GPU training checks completed on 2026-10-17. Select and test actual trainable foundation checkpoints next. See the reports below for evidence and limitations.
+1. SSH, inventory, VASP/PAW setup, small GPU training and actual foundation checkpoint fine-tuning checks completed on 2026-10-17. Next audit reference settings and choose the scientific pilot. See the reports below for evidence and limitations.
 2. On another computer clone the repository, configure its own credentials and read `project/state.json`.
 3. Compare candidate alloy/nucleant systems using literature novelty, experimental access, DFT feasibility and model chemical coverage. Choose one small pilot.
 4. Implement one executable path: structures → converged VASP labels → teacher fine-tuning → independent DFT validation → distillation → student validation → one observable → LaTeX report.
@@ -45,6 +45,8 @@ tests/               scientifically meaningful verification
 ## Storage
 
 Commit source, configuration, skills, manifests, small curated results, LaTeX and bibliography. Choose LFS or durable external storage before producing large datasets, checkpoints and trajectories. Keep immutable SHA-256 manifests and verify retrieval; cluster scratch is not an archive. VASP POTCAR files and credentials must not be uploaded.
+
+Diagnostic foundation and fine-tuned weights currently have actual private copies in cluster main home and on this workstation, with verified archive retrieval. Git tracks their hashes and locations. This provisional backend is recorded in `models/foundation/` and `runs/fm-finetune-20261017-01/*backup.json`; retention and a shared institutional archive remain unresolved.
 
 ## SSH
 
@@ -108,7 +110,17 @@ GRACE job `20950274` completed on `tesla-a101` in 38 seconds: a reduced-size one
 
 `environments/grace-a100.lock.json` records the accepted environment: explicit Conda package URLs/hashes and 82 exact pip wheels with SHA-256. To rebuild on Linux x86_64, create a new prefix from `grace-a100-conda-linux-64.lock.txt`, then install `grace-a100-pip-linux-64.lock.txt` with `python -m pip install --no-deps --require-hashes -r ...`. The activation helper is prefix-specific. The original `grace-a100.proposed.yml` is retained as proposal provenance. `scripts/continue_grace_setup.py` resumes recorded setup jobs and the latest recorded GPU check; it never blindly retries a training failure.
 
-The small accepted test checkpoint (about 100 kB) is backed up in `runs/grace-smoke-20261017-03/checkpoint/`, with the model definition and hashes alongside it. It is a software-test artifact. Select actual trainable FM checkpoints separately, record revisions/hashes and chemical coverage, then validate loading, fine-tuning, restart and export equivalence. No foundation checkpoint was downloaded by these checks.
+The small accepted from-scratch test checkpoint (about 100 kB) is backed up in `runs/grace-smoke-20261017-03/checkpoint/`, with the model definition and hashes alongside it. It is a software-test artifact. The subsequent foundation checks below used separately downloaded weights. Training restart and export equivalence remain to be validated.
+
+### Pinned foundation checkpoints and actual fine-tuning
+
+Diagnostic initializations are `DPA4-Mini-OMat24-v20260805` (655504 parameters, 118 types, CC-BY-NC-4.0) and `GRACE-1L-OMAT` (3447148 parameters, 89 types, Academic Software License). Both use a 6-Angstrom cutoff and OMat24 pretraining; type-map coverage is not an accuracy guarantee. Model metadata in `models/foundation/` pins source revisions, SHA-256, licences and private locations. Neither is yet a selected scientific teacher. Before real DFT use, audit pretraining electronic settings, energy references and overlap.
+
+`scripts/foundation_checkpoints.py` retrieves exact source revisions, checks upstream artifact hashes, retains actual workstation copies and transfers verified cluster copies. Weights are read from `/home/u3129/.local/share/mlip-research/foundation-checkpoints/`; this avoids compute-read-only-home cache writes and moving model aliases. No environment was modified for these checks.
+
+GPU job `20950277` ran both models sequentially on one A100 in 73 seconds. Each training child exited 0 and completed 20 optimizer updates using the same explicitly synthetic Al4 diagnostic labels. Original weights were observed immediately after loading; training PIDs were observed on GPU. The Slurm job itself is `FAILED` because its original verification code did not handle checkpoint serialization changes. That failure is preserved. Read-only CPU verification `20950306` subsequently passed both models without repeating training: DPA4 restored 99/102 float state tensors exactly (only output statistics and version buffer changed initially), then updated 83 original tensors; GRACE restored all 19 model tensors exactly, then updated 18. Earlier CPU checks and diagnoses are retained.
+
+Read `reports/foundation-finetuning-2026-10-17.tex`, `runs/fm-finetune-20261017-01/assessment.json` and `runs/fm-verify-20261017-03/result.json` for the accepted interpretation. Archives of final checkpoints/data and initial loaded snapshots are stored privately in cluster main home and have verified workstation copies. These checks establish loading and optimization only; they do not validate DFT accuracy, training restart, deployment equivalence, MD stability or performance comparisons. Do not use the synthetic fine-tuned checkpoints as scientific teachers.
 
 `configs/model_backends.json` keeps the candidate list extensible: DPA4, DPA4c, GRACE and a legacy DeepMD student path. It defines a future adapter contract; a common execution adapter is not yet implemented.
 

@@ -1,0 +1,22 @@
+{
+  "bytes": 30289920,
+  "local_archive": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\MLIP-research\\artifacts\\fm-run-backups\\fm-finetune-20261017-01-initialization.tar",
+  "members": {
+    "dpa4/loaded-initial/model": {
+      "bytes": 2691755,
+      "sha256": "41db90106c62952ca82faac42a1d12de1cb5b2ce64ee40b2bfaf210a6e745e15"
+    },
+    "grace/loaded-initial/model.data-00000-of-00001": {
+      "bytes": 27583718,
+      "sha256": "50ebb2b4a84af602dc65fb6008f98f89a5730ce3944cbacbb21cbca511eb8a6e"
+    },
+    "grace/loaded-initial/model.index": {
+      "bytes": 1559,
+      "sha256": "4ca37faa5d438bf3630c36482bb81e0f445eb5c58dd18c35e701becc91208795"
+    }
+  },
+  "policy": "Actual private main-home archive and second workstation copy; no weights uploaded to GitHub; institutional backup/retention unconfirmed",
+  "remote_archive": "/home/u3129/.local/share/mlip-research/test-artifacts/fm-finetune-20261017-01-initialization.tar",
+  "sha256": "01bf9f999552979012d3e6743e97fe4ccbb1c040d16cd78619581dc553124549",
+  "verified_retrieval": true
+}

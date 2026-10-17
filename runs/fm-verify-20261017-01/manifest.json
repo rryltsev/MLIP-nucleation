@@ -1,0 +1,36 @@
+{
+  "authorization": "read-only verification of existing user-requested fine-tuning checkpoints; no training",
+  "budget": {
+    "gpu_count": 0,
+    "maximum_cpu_seconds": 300
+  },
+  "code_commit": "3ea90ca67bab955bde93357a58e46a50f591edcf",
+  "created_utc": "2026-10-17T17:54:48.581889+00:00",
+  "host": "umt.imm.uran.ru",
+  "input_hash": "2db129cf31099518cd291d0db60208080d0a7876cfdf82e2e63a2034f806dce6",
+  "input_sha256": {
+    "fm-finetune.py": "798fbf1fe76d424832910f45fe019bdf83237f2971029401b2b2ea59e6f02944",
+    "fm-verify.py": "ad635b0b445a2056cbd6dc01c31dac4758220db6e0c37633ed29473314ea24a1",
+    "fm-verify.sbatch": "e68f43266014d236bd717f60bcb80cb1574ee13fa64a535a20416c492ae3f34d"
+  },
+  "job_id": "20950304",
+  "remote_run_dir": "/home6/u3129/mlip-research/runs/fm-verify-20261017-01",
+  "resources": {
+    "account": "imet-2026-2",
+    "cpus": 1,
+    "memory_gib": 8,
+    "nodes": 1,
+    "partition": "apollo",
+    "qos": "normal",
+    "tasks": 1,
+    "walltime": "00:05:00"
+  },
+  "run_id": "fm-verify-20261017-01",
+  "runtime_status": "failed",
+  "scheduler_observation": "20950304|FAILED|1:0|00:00:27|27|1|apollo30\n",
+  "source_job_id": "20950277",
+  "source_manifest": "runs/fm-finetune-20261017-01/manifest.json",
+  "source_manifest_sha256": "8e696c2bb0a2ae81a7e9e22312d8fce48ed93cb397a4e8e6467a675c9108d5ae",
+  "source_run": "/home6/u3129/mlip-research/runs/fm-finetune-20261017-01",
+  "stage": "collected"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "passed_software_finetuning_only",
+  "gpu_job_id": "20950277",
+  "raw_gpu_scheduler_status": "FAILED at original checker; both training children exited 0",
+  "gpu_seconds": 73,
+  "scientific_validation": false,
+  "accepted_verification": "runs/fm-verify-20261017-03/result.json",
+  "accepted_verification_job_id": "20950306",
+  "training_repeated": false,
+  "source_result_sha256": "b740e0b90a37842caca36daaa412162c83d8e5adc45e54ee84e0fb3aa28c1939",
+  "verification_result_sha256": "b8f4bc2e45d995a03db8254787bd9b0a3ceb18d633e7b108bc857300795d64bb",
+  "checkpoints_and_data_backup": "runs/fm-finetune-20261017-01/artifact-backup.json",
+  "loaded_weight_snapshots_backup": "runs/fm-finetune-20261017-01/initialization-backup.json",
+  "report": "reports/foundation-finetuning-2026-10-17.tex"
+}

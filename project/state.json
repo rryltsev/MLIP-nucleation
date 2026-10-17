@@ -1,6 +1,6 @@
 {
   "updated_local_date": "2026-10-17",
-  "stage": "foundation_checkpoints_downloaded_finetuning_prepared",
+  "stage": "foundation_checkpoints_finetuning_validated_on_synthetic_data",
   "scientific_results": [],
   "system_selection": "open; compare Al-based alloy/nucleant candidates with alternatives",
   "github": "https://github.com/rryltsev/MLIP-nucleation",
@@ -32,7 +32,7 @@
       "deepmd_2210_k40"
     ],
     "vasp": "VASP 6.6.1 CPU/MPI subsequently installed and validated; see vasp_installation",
-    "runtime_tests": "VASP four upstream cases; A100 DPA4/DPA4c/GRACE-1L and K40m legacy se_e2_a synthetic training passed; real FM checkpoint finetuning pending",
+    "runtime_tests": "VASP four upstream cases; small from-scratch DPA4/DPA4c/GRACE and legacy K40m; actual DPA4-Mini and GRACE-1L-OMAT 20-update synthetic fine-tuning validated",
     "latex_preview": "compiler could not start due Windows sandbox access error 5; source preserved"
   },
   "vasp_installation": {
@@ -54,10 +54,11 @@
   },
   "blocking_inputs": [],
   "next_actions": [
-    "select and hash trainable FM checkpoints for chosen chemistry; validate loading, actual finetuning, restart and deployment",
-    "choose storage root after confirming quota, retention and backup policy",
     "select pilot material and observable through comparative literature review",
-    "choose artifact storage and durable workflow executor"
+    "audit selected checkpoints pretraining DFT settings/energy reference and overlap; build converged grouped VASP pilot data",
+    "validate real DFT fine-tuning and physical observables before distillation",
+    "verify training restart and exported inference equivalence",
+    "choose shared durable artifact backend and confirm cluster retention/backup"
   ],
   "vasp_pseudopotentials": {
     "library_id": "vasp-paw-64-b3b00158ad69",
@@ -81,7 +82,7 @@
       "DPA4c",
       "GRACE"
     ],
-    "architecture_scope": "extensible; checkpoint and pilot chemistry remain unselected",
+    "architecture_scope": "extensible; two actual checkpoints selected only for diagnostic fine-tuning, scientific teacher and pilot remain open",
     "registry": "configs/model_backends.json",
     "runs": [
       "runs/mlip-smoke-20261017-a100-01/manifest.json",
@@ -109,8 +110,8 @@
       "GRACE small 1-layer model passed five epochs / 20 updates on A100; checkpoint archived in Git; no foundation weights downloaded"
     ],
     "not_validated": [
-      "selected foundation checkpoint loading and actual fine-tuning",
-      "save/restart and export/deployment equivalence",
+      "training restart and export/deployment equivalence",
+      "actual DFT target accuracy and physical observables",
       "multi-GPU execution and production-size memory/performance"
     ],
     "latex_preview": "built-in compiler startup failed: Windows CreateProcessAsUserW access denied (5); new report source preserved; existing VASP editor left unchanged",
@@ -156,7 +157,6 @@
       "minimal test input required explicit scheduler_params for TensorPotential 0.6.1"
     ],
     "not_validated": [
-      "selected foundation checkpoint loading/fine-tuning",
       "restart execution and exported prediction equivalence",
       "XLA-compiled training, multi-GPU training and production-size performance",
       "GRACE runtime on K40m"
@@ -164,13 +164,47 @@
     "latex_preview": "built-in compiler could not start: Windows CreateProcessAsUserW access denied (5); LaTeX source preserved; existing VASP editor unchanged"
   },
   "foundation_checkpoints": {
-    "status": "downloaded and SHA-256 verified on workstation and cluster main home; bounded Slurm check prepared",
+    "status": "DPA4-Mini and GRACE-1L-OMAT downloaded, hashed, actually fine-tuned and weights verified on A100",
     "models": [
       "models/foundation/dpa4-mini-omat24-20260805.json",
       "models/foundation/grace-1l-omat.json"
     ],
     "scientific_teacher_selection": "open",
     "planned_budget": "one A100, 4 CPUs, 32 GiB, 15 min maximum; sequential 20-update synthetic checks",
-    "storage": "private main-home cluster copies plus actual local copies under ignored artifacts/foundation-checkpoints; shared archival backend still open"
+    "storage": "private main-home cluster copies plus actual local copies under ignored artifacts/foundation-checkpoints; shared archival backend still open",
+    "gpu_run": "runs/fm-finetune-20261017-01/manifest.json",
+    "gpu_job_id": "20950277",
+    "gpu_seconds": 73,
+    "verification": "runs/fm-verify-20261017-03/manifest.json",
+    "verification_job_id": "20950306",
+    "training_steps_each": 20,
+    "artifact_backup": "runs/fm-finetune-20261017-01/artifact-backup.json",
+    "initialization_backup": "runs/fm-finetune-20261017-01/initialization-backup.json",
+    "report": "reports/foundation-finetuning-2026-10-17.tex",
+    "verification_failures": [
+      "runs/fm-verify-20261017-01/manifest.json",
+      "runs/fm-verify-20261017-02/manifest.json"
+    ],
+    "interpretation": "Both GPU training children exited 0; GPU job FAILED only at original strict parameter-path checker. Final read-only CPU verification passed. No training repeated.",
+    "weight_checks": {
+      "dpa4": {
+        "exact_source_tensors": 99,
+        "total_float_state_tensors": 102,
+        "updated_original_tensors": 83,
+        "initial_changes": "output statistics and descriptor version 1.1 -> 1.2"
+      },
+      "grace": {
+        "exact_source_tensors": 19,
+        "updated_original_tensors": 18
+      }
+    },
+    "limits": [
+      "synthetic labels only; no scientific teacher chosen",
+      "exact pretraining DFT references and target overlap remain to audit",
+      "training restart and exported prediction equivalence untested",
+      "production performance, multi-GPU and K40m untested"
+    ],
+    "assessment": "runs/fm-finetune-20261017-01/assessment.json",
+    "latex_preview": "built-in compiler startup failed with Windows CreateProcessAsUserW access denied (5); source retained; existing VASP editor unchanged"
   }
 }

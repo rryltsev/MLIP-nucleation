@@ -1,0 +1,39 @@
+{
+  "authorization": "user requested download and short actual DPA4 and GRACE fine-tuning on A100; synthetic software diagnostic",
+  "budget": {
+    "child_training_timeout_seconds": 360,
+    "gpu_count": 1,
+    "maximum_gpu_seconds": 900,
+    "steps_each": 20
+  },
+  "code_commit": "18157b9ec7f4ceb8e1e1c7543bba6aa6f234a598",
+  "created_utc": "2026-10-17T17:50:33.958729+00:00",
+  "host": "umt.imm.uran.ru",
+  "input_hash": "3c639c30333fa7eb40eb712b5b60c54f6bd3b27bc7cc20572dbdf851a69fa0be",
+  "input_sha256": {
+    "dpa4-checkpoint.json": "7c5e4ea37c75ae52f8836ee0da5f74ea926c112d2d384c4acc25f93f3e3749d6",
+    "fm-child.py": "0f4b2d13e7c262e546f637786e8c60d73466481406349b4c45ff334a32a48a4c",
+    "fm-finetune.py": "3741be536f4f94b57179a2e625c981286b201775a3e5ed98ce7e2832c1524c18",
+    "fm-finetune.sbatch": "a4e53faec414702cf28bdb86b4c5fc5cdbfdba9ff3476e62027f118f283d092d",
+    "grace-checkpoint.json": "db76fcc7c5cf083695ebbf1ac57a1b1845a87b7af4ed05ed783f4ba9438408e1",
+    "grace-smoke.py": "a0aa4682e805629bc33fcfb3cd548b6a4a40d245aca5d313b65cabd28ac55e88",
+    "mlip-smoke.py": "718a22ce4a1c457531f452df4eb3e458927b8ed0ad9a72fb5594a0d196cb9e60"
+  },
+  "job_id": "20950277",
+  "remote_run_dir": "/home6/u3129/mlip-research/runs/fm-finetune-20261017-01",
+  "resources": {
+    "account": "imet-2026-2",
+    "cpus": 4,
+    "gres": "gpu:a100:1",
+    "memory_gib": 32,
+    "nodes": 1,
+    "partition": "v100",
+    "qos": "normal",
+    "tasks": 1,
+    "walltime": "00:15:00"
+  },
+  "run_id": "fm-finetune-20261017-01",
+  "runtime_status": "failed",
+  "scheduler_observation": "20950277|FAILED|1:0|00:01:13|73|4|tesla-a101\n",
+  "stage": "collected"
+}

@@ -1,0 +1,134 @@
+To get the best performance, it is recommended to adjust the number of threads by setting the environment variables OMP_NUM_THREADS, DP_INTRA_OP_PARALLELISM_THREADS, and DP_INTER_OP_PARALLELISM_THREADS. See https://deepmd.rtfd.io/parallelism/ for more information.
+[2026-10-17 22:51:26,230] DEEPMD INFO    DeePMD version: 3.2.0
+[2026-10-17 22:51:26,231] DEEPMD INFO    Configuration path: input.json
+[2026-10-17 22:51:26,231] DEEPMD INFO     _____               _____   __  __  _____           _     _  _   
+[2026-10-17 22:51:26,231] DEEPMD INFO    |  __ \             |  __ \ |  \/  ||  __ \         | |   (_)| |  
+[2026-10-17 22:51:26,231] DEEPMD INFO    | |  | |  ___   ___ | |__) || \  / || |  | | ______ | | __ _ | |_ 
+[2026-10-17 22:51:26,231] DEEPMD INFO    | |  | | / _ \ / _ \|  ___/ | |\/| || |  | ||______|| |/ /| || __|
+[2026-10-17 22:51:26,231] DEEPMD INFO    | |__| ||  __/|  __/| |     | |  | || |__| |        |   < | || |_ 
+[2026-10-17 22:51:26,231] DEEPMD INFO    |_____/  \___| \___||_|     |_|  |_||_____/         |_|\_\|_| \__|
+[2026-10-17 22:51:26,231] DEEPMD INFO    Please read and cite:
+[2026-10-17 22:51:26,231] DEEPMD INFO    Wang, Zhang, Han and E, Comput.Phys.Comm. 228, 178-184 (2018)
+[2026-10-17 22:51:26,231] DEEPMD INFO    Zeng et al, J. Chem. Phys., 159, 054801 (2023)
+[2026-10-17 22:51:26,231] DEEPMD INFO    Zeng et al, J. Chem. Theory Comput., 21, 4375-4385 (2025)
+[2026-10-17 22:51:26,231] DEEPMD INFO    See https://deepmd.rtfd.io/credits/ for details.
+[2026-10-17 22:51:26,231] DEEPMD INFO    ---------------------------------------------------------------------------------------------------------------
+[2026-10-17 22:51:26,231] DEEPMD INFO    Installed to:         /home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/deepmd
+[2026-10-17 22:51:26,231] DEEPMD INFO    Source:               v3.2.0
+[2026-10-17 22:51:26,231] DEEPMD INFO    Source Branch:        HEAD
+[2026-10-17 22:51:26,231] DEEPMD INFO    Source Commit:        8cfd46e3
+[2026-10-17 22:51:26,231] DEEPMD INFO    Source Commit at:     2026-08-19 09:50:00 +0000
+[2026-10-17 22:51:26,231] DEEPMD INFO    Float Precision:      Double
+[2026-10-17 22:51:26,231] DEEPMD INFO    Build Variant:        CUDA
+[2026-10-17 22:51:26,231] DEEPMD INFO    Backend:              PyTorch
+[2026-10-17 22:51:26,231] DEEPMD INFO    PT Ver:               v2.11.0+cu130-g70d99e998b4
+[2026-10-17 22:51:26,231] DEEPMD INFO    Custom OP Enabled:    True
+[2026-10-17 22:51:26,231] DEEPMD INFO    Built with PT Ver:    2.11.0
+[2026-10-17 22:51:26,231] DEEPMD INFO    Built with PT Inc:    /tmp/build-env-vl3prgbs/lib/python3.11/site-packages/torch/include
+[2026-10-17 22:51:26,231] DEEPMD INFO                          /tmp/build-env-vl3prgbs/lib/python3.11/site-packages/torch/include/torch/csrc/api/include
+[2026-10-17 22:51:26,231] DEEPMD INFO    Built with PT Lib:    /tmp/build-env-vl3prgbs/lib/python3.11/site-packages/torch/lib
+[2026-10-17 22:51:26,231] DEEPMD INFO    Running on:           tesla-a101
+[2026-10-17 22:51:26,231] DEEPMD INFO    Computing Device:     CUDA:0
+[2026-10-17 22:51:26,231] DEEPMD INFO    Device Name:          NVIDIA A100-PCIE-40GB
+[2026-10-17 22:51:26,231] DEEPMD INFO    CUDA_VISIBLE_DEVICES: 0
+[2026-10-17 22:51:26,231] DEEPMD INFO    Visible GPU Count:    1
+[2026-10-17 22:51:26,231] DEEPMD INFO    Num Intra Threads:    0
+[2026-10-17 22:51:26,231] DEEPMD INFO    Num Inter Threads:    0
+[2026-10-17 22:51:26,231] DEEPMD INFO    ---------------------------------------------------------------------------------------------------------------
+[2026-10-17 22:51:26,476] DEEPMD INFO    Calculate neighbor statistics... (add --skip-neighbor-stat to skip this step)
+[2026-10-17 22:51:27,265] DEEPMD INFO    Neighbor statistics: training data with minimal neighbor distance: 2.477406
+[2026-10-17 22:51:27,265] DEEPMD INFO    Neighbor statistics: training data with maximum neighbor size: [3] (cutoff radius: 6.000000)
+[2026-10-17 22:51:27,275] DEEPMD INFO    Constructing DataLoaders from 1 systems
+[2026-10-17 22:51:27,281] DEEPMD INFO    Constructing DataLoaders from 1 systems
+[2026-10-17 22:51:27,635] DEEPMD INFO    ---Summary of DataSystem: Training     -----------------------------------------------
+[2026-10-17 22:51:27,636] DEEPMD INFO    Found 1 System(s):
+[2026-10-17 22:51:27,636] DEEPMD INFO                                        system  natoms  bch_sz  n_bch   prob       pbc
+[2026-10-17 22:51:27,636] DEEPMD INFO    -- fm-finetune-20261017-01/dpa4/data/train       4       1       8  1.000e+00    T
+[2026-10-17 22:51:27,636] DEEPMD INFO    --------------------------------------------------------------------------------------
+[2026-10-17 22:51:27,636] DEEPMD INFO    ---Summary of DataSystem: Validation   -----------------------------------------------
+[2026-10-17 22:51:27,636] DEEPMD INFO    Found 1 System(s):
+[2026-10-17 22:51:27,636] DEEPMD INFO                                        system  natoms  bch_sz  n_bch   prob       pbc
+[2026-10-17 22:51:27,636] DEEPMD INFO    -- netune-20261017-01/dpa4/data/validation       4       1       4  1.000e+00    T
+[2026-10-17 22:51:27,636] DEEPMD INFO    --------------------------------------------------------------------------------------
+[2026-10-17 22:51:27,636] DEEPMD INFO    Resuming from /home/u3129/.local/share/mlip-research/foundation-checkpoints/dpa4-mini-omat24-20260805-13edeea63448/DPA4-Mini-OMat24-v20260805.pt.
+[2026-10-17 22:51:27,866] DEEPMD INFO    Packing data for statistics from 1 systems
+[2026-10-17 22:51:30,914] DEEPMD INFO    RMSE of energy per atom after linear regression is: 0.0360611306632341 in the unit of energy.
+[2026-10-17 22:51:30,916] DEEPMD INFO    Change output bias of ['H', 'He', 'Li', 'Be', 'B', 'C', 'N', 'O', 'F', 'Ne', 'Na', 'Mg', 'Al', 'Si', 'P', 'S', 'Cl', 'Ar', 'K', 'Ca', 'Sc', 'Ti', 'V', 'Cr', 'Mn', 'Fe', 'Co', 'Ni', 'Cu', 'Zn', 'Ga', 'Ge', 'As', 'Se', 'Br', 'Kr', 'Rb', 'Sr', 'Y', 'Zr', 'Nb', 'Mo', 'Tc', 'Ru', 'Rh', 'Pd', 'Ag', 'Cd', 'In', 'Sn', 'Sb', 'Te', 'I', 'Xe', 'Cs', 'Ba', 'La', 'Ce', 'Pr', 'Nd', 'Pm', 'Sm', 'Eu', 'Gd', 'Tb', 'Dy', 'Ho', 'Er', 'Tm', 'Yb', 'Lu', 'Hf', 'Ta', 'W', 'Re', 'Os', 'Ir', 'Pt', 'Au', 'Hg', 'Tl', 'Pb', 'Bi', 'Po', 'At', 'Rn', 'Fr', 'Ra', 'Ac', 'Th', 'Pa', 'U', 'Np', 'Pu', 'Am', 'Cm', 'Bk', 'Cf', 'Es', 'Fm', 'Md', 'No', 'Lr', 'Rf', 'Db', 'Sg', 'Bh', 'Hs', 'Mt', 'Ds', 'Rg', 'Cn', 'Nh', 'Fl', 'Mc', 'Lv', 'Ts', 'Og'] from [-2.99807911e+00 -2.84217094e-14 -1.74119962e+00 -3.84029131e+00
+ -7.47726949e+00 -1.01146426e+01 -7.21807084e+00 -7.66918779e+00
+ -6.35739839e+00  1.33226763e-15 -8.13353641e-01 -1.64969870e+00
+ -4.28086072e+00 -5.66631533e+00 -7.67770100e+00 -4.87683252e+00
+ -2.79712747e+00  1.95399252e-14 -1.33593587e+00 -6.40224763e+00
+ -6.38773911e+00 -9.25498865e+00 -7.35172740e+00 -8.15518310e+00
+ -8.33585756e+00 -6.90756819e+00 -5.16534740e+00 -3.14844405e+00
+ -4.33060208e+00  1.12434082e+00 -3.39439131e+00 -4.77900583e+00
+ -4.70260224e+00 -3.64355571e+00 -2.24668703e+00  3.99680289e-14
+ -2.37368366e+00 -4.28365864e+00 -5.89656597e+00 -9.86814215e+00
+ -1.07745569e+01 -8.25442352e+00 -8.81616746e+00 -7.98084147e+00
+ -4.79971012e+00 -4.80937107e+00 -2.48228184e+00 -1.79916349e+00
+ -1.76880476e+00 -3.88146012e+00 -2.97382738e+00 -3.47905402e+00
+ -3.09148277e+00 -1.42108547e-14  3.02146748e-01 -3.38594059e+00
+ -7.65555100e+00 -7.98371105e+00 -5.49386086e+00 -6.96907095e+00
+ -6.73151666e+00 -8.29038123e+00 -1.80834474e+01 -1.49029269e+01
+ -8.05662718e+00 -5.90049302e+00 -6.96315024e+00 -7.54121892e+00
+ -4.52667006e+00 -5.98904395e+00 -9.19576780e+00 -1.25909439e+01
+ -1.34829661e+01 -1.05863315e+01 -1.16346892e+01 -9.54235643e+00
+ -8.95148970e+00 -7.07011884e+00 -3.26016363e+00  1.27826008e-01
+ -2.43195059e+00 -3.00375131e+00 -3.06984934e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+ -4.80185091e+00 -1.21303671e+01 -1.25348447e+01 -1.36046830e+01
+ -1.03294779e+01 -1.41388696e+01  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00] to [-2.99807911e+00 -2.84217094e-14 -1.74119962e+00 -3.84029131e+00
+ -7.47726949e+00 -1.01146426e+01 -7.21807084e+00 -7.66918779e+00
+ -6.35739839e+00  1.33226763e-15 -8.13353641e-01 -1.64969870e+00
+ -1.98615107e+00 -5.66631533e+00 -7.67770100e+00 -4.87683252e+00
+ -2.79712747e+00  1.95399252e-14 -1.33593587e+00 -6.40224763e+00
+ -6.38773911e+00 -9.25498865e+00 -7.35172740e+00 -8.15518310e+00
+ -8.33585756e+00 -6.90756819e+00 -5.16534740e+00 -3.14844405e+00
+ -4.33060208e+00  1.12434082e+00 -3.39439131e+00 -4.77900583e+00
+ -4.70260224e+00 -3.64355571e+00 -2.24668703e+00  3.99680289e-14
+ -2.37368366e+00 -4.28365864e+00 -5.89656597e+00 -9.86814215e+00
+ -1.07745569e+01 -8.25442352e+00 -8.81616746e+00 -7.98084147e+00
+ -4.79971012e+00 -4.80937107e+00 -2.48228184e+00 -1.79916349e+00
+ -1.76880476e+00 -3.88146012e+00 -2.97382738e+00 -3.47905402e+00
+ -3.09148277e+00 -1.42108547e-14  3.02146748e-01 -3.38594059e+00
+ -7.65555100e+00 -7.98371105e+00 -5.49386086e+00 -6.96907095e+00
+ -6.73151666e+00 -8.29038123e+00 -1.80834474e+01 -1.49029269e+01
+ -8.05662718e+00 -5.90049302e+00 -6.96315024e+00 -7.54121892e+00
+ -4.52667006e+00 -5.98904395e+00 -9.19576780e+00 -1.25909439e+01
+ -1.34829661e+01 -1.05863315e+01 -1.16346892e+01 -9.54235643e+00
+ -8.95148970e+00 -7.07011884e+00 -3.26016363e+00  1.27826008e-01
+ -2.43195059e+00 -3.00375131e+00 -3.06984934e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+ -4.80185091e+00 -1.21303671e+01 -1.25348447e+01 -1.36046830e+01
+ -1.03294779e+01 -1.41388696e+01  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00].
+[2026-10-17 22:51:30,918] DEEPMD INFO    Model Params:  0.655 M   (Trainable: 0.655 M)
+[2026-10-17 22:51:30,937] DEEPMD INFO    Start to train 20 steps.
+[2026-10-17 22:51:38,129] DEEPMD INFO    Batch       1: trn: rmse = 8.42e-01, rmse_e = 1.58e-02, rmse_f = 8.42e-01, lr = 1.00e-04
+[2026-10-17 22:51:38,130] DEEPMD INFO    Batch       1: val: rmse = 7.94e-01, rmse_e = 7.86e-02, rmse_f = 7.77e-01
+[2026-10-17 22:51:38,131] DEEPMD INFO    Batch       1: total wall time = 7.19 s
+[2026-10-17 22:51:38,745] DEEPMD INFO    Batch       5: trn: rmse = 3.05e-01, rmse_e = 4.25e-02, rmse_f = 2.93e-01, lr = 1.00e-04
+[2026-10-17 22:51:38,745] DEEPMD INFO    Batch       5: val: rmse = 3.18e-01, rmse_e = 1.63e-02, rmse_f = 3.14e-01
+[2026-10-17 22:51:38,746] DEEPMD INFO    Batch       5: total wall time = 0.61 s, eta = 0:00:02 at 2026-10-17 22:51
+[2026-10-17 22:51:39,456] DEEPMD INFO    Batch      10: trn: rmse = 2.24e-01, rmse_e = 4.64e-02, rmse_f = 2.04e-01, lr = 5.62e-05
+[2026-10-17 22:51:39,457] DEEPMD INFO    Batch      10: val: rmse = 2.06e-01, rmse_e = 4.78e-02, rmse_f = 1.81e-01
+[2026-10-17 22:51:39,457] DEEPMD INFO    Batch      10: total wall time = 0.71 s, eta = 0:00:01 at 2026-10-17 22:51
+[2026-10-17 22:51:40,168] DEEPMD INFO    Batch      15: trn: rmse = 1.90e-01, rmse_e = 8.77e-03, rmse_f = 1.89e-01, lr = 3.16e-05
+[2026-10-17 22:51:40,169] DEEPMD INFO    Batch      15: val: rmse = 1.73e-01, rmse_e = 4.76e-03, rmse_f = 1.73e-01
+[2026-10-17 22:51:40,169] DEEPMD INFO    Batch      15: total wall time = 0.71 s, eta = 0:00:00 at 2026-10-17 22:51
+[2026-10-17 22:51:41,063] DEEPMD INFO    Batch      20: trn: rmse = 1.68e-01, rmse_e = 2.41e-02, rmse_f = 1.61e-01, lr = 1.78e-05
+[2026-10-17 22:51:41,064] DEEPMD INFO    Batch      20: val: rmse = 2.27e-01, rmse_e = 1.96e-02, rmse_f = 2.23e-01
+[2026-10-17 22:51:41,065] DEEPMD INFO    Batch      20: total wall time = 0.90 s, eta = 0:00:00 at 2026-10-17 22:51
+[2026-10-17 22:51:41,113] DEEPMD INFO    Saved model to model.ckpt-20.pt
+[2026-10-17 22:51:41,117] DEEPMD INFO    average training time: 0.1546 s/batch (5 batches excluded)
+[2026-10-17 22:51:41,117] DEEPMD INFO    Trained model has been saved to: model.ckpt

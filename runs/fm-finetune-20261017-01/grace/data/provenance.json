@@ -1,0 +1,31 @@
+{
+  "label_source": "synthetic harmonic pairs, NOT DFT or teacher predictions",
+  "purpose": "software runtime check only; no scientific accuracy conclusions",
+  "seed": 20261017,
+  "energy_unit": "eV",
+  "force_unit": "eV/angstrom",
+  "virial_unit": "eV",
+  "virial_definition": "sum_i r_i tensor F_i; row-major xx xy xz yx yy yz zx zy zz",
+  "split": "independent random configurations; no held-out scientific test set used",
+  "input_sha256": {
+    "validation/type.raw": "6a33a504c8d16194914401f4f46532de96e1b63119fc5981341c6b65c6c27096",
+    "validation/type_map.raw": "caca9e1e8fb0757238c027c8bad3af35e724e3a84ae3acb5a3cd2db9a9966f95",
+    "validation/set.000/force.npy": "b637a8558f1d281b09b1e1ca8252b412e26b06af1ef98ae6317e97896cbdcd00",
+    "validation/set.000/virial.npy": "dcff29f72b5963b5a177a05c89d0de349fc1b36e53773eb23f633e8badf70e0e",
+    "validation/set.000/energy.npy": "ff974f6a2cd7fbfa9c7b09a071940a8b7c71d8c990bcf2fdc7ecb9e46e6ce08f",
+    "validation/set.000/box.npy": "50d59885445a2280f81c0167b605dbf523c5e3ad95edb5ffea263990008176c4",
+    "validation/set.000/coord.npy": "9e86b74bb4c9bd6a1bb852e7604d8012daa400ec009565934626d0f104d91cc4",
+    "train/type.raw": "6a33a504c8d16194914401f4f46532de96e1b63119fc5981341c6b65c6c27096",
+    "train/type_map.raw": "caca9e1e8fb0757238c027c8bad3af35e724e3a84ae3acb5a3cd2db9a9966f95",
+    "train/set.000/force.npy": "96f8eaef2f85b8ddd460e8f659f65ee559cf618fea00b55120908fe5fafa7387",
+    "train/set.000/virial.npy": "9b0332f6cbea06a302c05300908cf3e2c3c45264afebb380a2249889d2ff2523",
+    "train/set.000/energy.npy": "86b34ef91677e2ac328840ef59d5c43faaa4c1cebe76af16a465abe78918cafe",
+    "train/set.000/box.npy": "7a9591b6f60240bbc56ea39a256a3b3f345c2a5a9d97f1e0d85404f134ab61ab",
+    "train/set.000/coord.npy": "e806a44d9aa1a02a7ff1f463437aea4746d1eb0c03890bc1e2e70fc09062f548"
+  },
+  "extxyz_sha256": {
+    "train.extxyz": "7d5ca31075e5266aec4720159aa43caf9ccfca318dca5cfedd722e952a4e9de3",
+    "validation.extxyz": "d0453b6c11256c03c26e6b05d7fb0f4937989a5a7fee22e043e3aee211612e8b"
+  },
+  "ase_stress": "-virial/volume, eV/angstrom^3; Voigt xx yy zz yz xz xy; stress not fitted"
+}

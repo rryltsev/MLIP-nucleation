@@ -109,7 +109,13 @@ def main():
                      "limitations":"No institutional retention guarantee; local second copy is machine-local, not a shared archive. Source metadata and runs are in Git."},
             reference_settings="OMat24 reference; exact PAW/DFT/electronic and energy-reference compatibility must be audited before real DFT fine-tuning",
             overlap_audit="no scientific held-out DFT set exists; synthetic diagnostic labels only")
-        save(ROOT / "models/foundation" / (name + ".json"), record)
+        registry_path = ROOT / "models/foundation" / (name + ".json")
+        if registry_path.exists():
+            previous = json.loads(registry_path.read_text())
+            if previous['sha256'] != record['sha256']: raise ValueError('Registered checkpoint changed')
+            for key in ['software_validation','license_text','license_text_sha256']:
+                if key in previous: record[key] = previous[key]
+        save(registry_path, record)
         print(json.dumps({"model":name,"remote_root":target_root,"files":len(records)}), flush=True)
 
 

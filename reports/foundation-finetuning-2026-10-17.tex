@@ -1,0 +1,141 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,booktabs,tabularx,microtype}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\title{Pinned foundation checkpoints and A100 fine-tuning checks}
+\author{MLIP-nucleation project}
+\date{17 October 2026}
+\begin{document}
+\maketitle
+
+\section{Selected diagnostic initializations}
+Two compact training checkpoints were selected to test the installed backends.
+Both are pretrained on OMat24. This selection does not designate the scientific
+teacher or choose an alloy/nucleant system.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{@{}lrrlX@{}}
+\toprule
+Model & Parameters & Types & Precision & Weight licence \\
+\midrule
+DPA4-Mini & 655504 & 118 & float32 & CC-BY-NC-4.0 \\
+GRACE-1L-OMAT & 3447148 & 89 & float64 & Academic Software License v1.0 \\
+\bottomrule
+\end{tabularx}
+\end{center}
+Both use a 6~\AA\ cutoff and include Al, B, C and Ti in their type maps.
+Type-map coverage does not demonstrate accuracy for every element, phase or
+interface. DPA4 parameter count and recommended compact size follow the
+\href{https://huggingface.co/deepmodelingcommunity/DPA4-OMat24}{official release card};
+the GRACE parameter count is recorded by the training process.
+The \href{https://huggingface.co/AMS-ICAMS-RUB/grace-foundation-models}{GRACE release}
+provides a training checkpoint, distinct from its inference SavedModel.
+The licences have non-commercial restrictions; they are not permissions for
+commercial deployment. GRACE's exact licence text is retained under
+\path{models/foundation/licenses/} with its source revision and SHA-256.
+
+The downloaded DPA4 release is \texttt{v20260805}, repository revision
+\path{173bfd5a26f90a756ee891777270ef117078d9be}.
+The GRACE repository revision is
+\path{46ead61dc8a7f90c11b1e59b8489e8e9bf97b888};
+its checkpoint directory identifies the model as \texttt{GRACE-1L-OMAT-30Jan25}.
+The DPA4 artifact is 2701347 bytes; the GRACE archive is 26705627 bytes.
+Complete URLs, artifact hashes, extracted file hashes, type maps and private
+cluster locations are in \path{models/foundation/dpa4-mini-omat24-20260805.json}
+and \path{models/foundation/grace-1l-omat.json}.
+Training reads these verified local paths and does not resolve a moving branch.
+
+\section{Training protocol and evidence}
+GPU job \textbf{20950277} ran on \texttt{tesla-a101}, partition \texttt{v100},
+account \texttt{imet-2026-2}, QoS \texttt{normal}. Resources were one full A100,
+four CPUs and 32~GiB, with a 15-minute cap. The two backends ran sequentially.
+Total scheduler time was \textbf{73 seconds}, using 73 single-GPU seconds.
+
+The common diagnostic dataset consists of eight training and four validation
+configurations of four Al-labelled atoms, with deterministic harmonic-pair
+labels, seed 20261017. These are synthetic perturbations of one toy geometry,
+not independent scientific systems, DFT labels or teacher predictions. They
+cannot support a generalization claim. No held-out scientific DFT test set was
+used. Energies are in eV, forces in eV/\AA. Stored virials are
+$W=\sum_i\mathbf r_i\otimes\mathbf F_i$ in eV, row-major matrix order;
+ASE stress is $-W/V$, in eV/\AA$^3$, Voigt $xx,yy,zz,yz,xz,xy$.
+Stress was not fitted. Data provenance and input hashes accompany the run.
+
+DPA4 used the existing \texttt{lammps\_deepmd\_dpa4} environment (DeepMD 3.2.0,
+Torch 2.11.0+cu130), the released architecture and full type map. Graph compilation
+was disabled for this bounded check; model precision and AMP were retained.
+The CLI used \texttt{--finetune}; Adam completed 20 updates at learning rates
+starting at $10^{-4}$. DeepMD recalibrated output statistics from training data.
+The training child exited 0 after 26.65 seconds and was observed on GPU eight
+times. Its learning curve was finite through step 20.
+
+GRACE used the isolated TensorPotential 0.6.1 / TensorFlow 2.20.0 environment.
+The original model YAML and checkpoint were supplied explicitly, without element
+reduction. Adam completed five epochs, four batches per epoch, hence 20 updates.
+The initial learning rate was $10^{-4}$; training JIT was disabled. Optimizer and
+epoch counters were reset. No automatic energy shift was applied: the diagnostic
+does not establish compatibility with a DFT energy reference. The child exited 0
+after 34.74 seconds, was observed on GPU twelve times, and produced finite
+training and validation metrics, a checkpoint and its automatic SavedModel.
+
+\section{Initialization audit and retained failures}
+The training wrapper saved each model immediately after loading, before updates.
+Both training processes succeeded, but job 20950277 has Slurm state
+\texttt{FAILED}, exit 1, because the original verification code assumed unchanged
+checkpoint paths and buffers. The original result files and logs remain intact.
+No GPU training was repeated.
+
+Read-only CPU verification jobs 20950304 (27~s) and 20950305 (7~s) preserved the
+failed checks and identified the serialization differences. Final verification
+job \textbf{20950306} completed with exit 0 in \textbf{8 seconds} on
+\texttt{apollo30}; it requested one CPU, 8~GiB, no GPU, and at most five minutes.
+All three verification runs consumed 42 CPU-seconds of scheduler elapsed time.
+
+For DPA4, 99 of 102 floating-point state tensors were restored exactly.
+The only initial changes were \texttt{out\_bias}, \texttt{out\_std} and the
+descriptor version buffer (1.1 to 1.2). Installed source explicitly migrates the
+descriptor representation on load. After optimization, 83 tensors that exactly
+matched the pretrained state had changed; all inspected model values were finite.
+
+For GRACE, the audit resolves variables through the TensorFlow instruction object
+graph, excluding optimizer/list aliases. It explicitly normalizes the legacy
+fixed-cutoff location and verifies its value. All \textbf{19} floating-point model
+tensors matched the source exactly after loading; \textbf{18} changed during
+training. Maximum absolute parameter update was 0.0011254064549670595.
+The final model values were finite. Thus the test used actual foundation weights
+and updated them, rather than merely constructing the same architecture.
+
+\section{Traceability, storage and limits}
+The GPU inputs correspond to code commit \texttt{18157b9}; final verification
+inputs to \texttt{bfefe98}. Per-file hashes and submission intent preceded every
+submission. Records are in \path{runs/fm-finetune-20261017-01/} and
+\path{runs/fm-verify-20261017-01/}, \path{runs/fm-verify-20261017-02/},
+\path{runs/fm-verify-20261017-03/}. The final verification result is authoritative
+for the parameter audit; it does not overwrite the failed original checker.
+
+Actual source weights are stored privately under
+\path{/home/u3129/.local/share/mlip-research/foundation-checkpoints/}, with a
+verified workstation copy under ignored \path{artifacts/foundation-checkpoints/}.
+An uncompressed 90890240-byte archive of the final training checkpoints, model
+definitions, inputs and data is stored under
+\path{/home/u3129/.local/share/mlip-research/test-artifacts/} and was retrieved
+and verified on the workstation. Its SHA-256 and member checksums are in
+\path{runs/fm-finetune-20261017-01/artifact-backup.json}.
+Initialization snapshots have a separate archive and retrieval record.
+These are real copies, not only manifests. Home retention and institutional
+backup remain unconfirmed; a shared archival backend is still to be selected.
+Git stores source, metadata, curated logs, configuration and this report, without
+uploading foundation or derived weight binaries.
+
+These checks establish loading and short optimization on A100 only. They do not
+validate scientific accuracy, energy-reference alignment with project VASP labels,
+training restart, inference export equivalence, MD stability, production memory,
+multi-GPU operation or K40m support. Before a scientific pilot, audit exact
+pretraining DFT settings and overlap, create converged grouped DFT datasets,
+align reference energies using training data only, and validate against held-out
+DFT configurations and physical observables. Synthetic checkpoints are not
+scientific teachers and must not generate a production distillation corpus.
+\end{document}

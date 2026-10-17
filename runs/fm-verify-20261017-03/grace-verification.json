@@ -1,0 +1,22 @@
+{
+  "backend": "grace",
+  "status": "passed",
+  "source_run": "/home6/u3129/mlip-research/runs/fm-finetune-20261017-01",
+  "job_id": "20950306",
+  "weight_checks": {
+    "source_float_tensors": 19,
+    "exactly_restored_tensors": 19,
+    "initial_changed_keys": [],
+    "initial_adjustments": {},
+    "updated_tensors": 18,
+    "updated_original_tensors": 18,
+    "max_abs_update": 0.0011254064549670595
+  },
+  "optimizer_updates": 20,
+  "checkpoint_sha256": {
+    "checkpoint.best_test_loss.data-00000-of-00001": "1b90ab95d56958fe6850b223bfaba006a101057a3deca982838f8e4ce54d8a6c",
+    "checkpoint.index": "5d1d64ca68a571fe383db961554485035ec63c56ed26c7c8ff5b9598699585c0",
+    "checkpoint.best_test_loss.index": "5d1d64ca68a571fe383db961554485035ec63c56ed26c7c8ff5b9598699585c0",
+    "checkpoint.data-00000-of-00001": "1b90ab95d56958fe6850b223bfaba006a101057a3deca982838f8e4ce54d8a6c"
+  }
+}

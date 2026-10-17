@@ -6,3 +6,4 @@ scripts/hpc/*.sh text eol=lf
 scripts/hpc/*.sbatch text eol=lf
 environments/*.lock.txt text eol=lf
 environments/*.lock.json text eol=lf
+models/foundation/licenses/* -text

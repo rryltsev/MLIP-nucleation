@@ -1,0 +1,33 @@
+{
+  "status": "failed",
+  "backend": "dpa4",
+  "job_id": "20950277",
+  "host": "tesla-a101",
+  "environment": "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4",
+  "started_utc": "2026-10-17T17:51:17.382824+00:00",
+  "model_id": "dpa4-mini-omat24-20260805",
+  "source_sha256": "13edeea63448c0f8a0b38e08fd8ba196fb1e2fad5f12486b1cd23320829da268",
+  "scope": "synthetic Al4 diagnostic, NOT DFT, not a scientific accuracy benchmark",
+  "runtime_overrides": {
+    "model.use_compile": false
+  },
+  "training": {
+    "command": [
+      "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/fm-finetune-20261017-01/dpa4/../fm-child.py",
+      "dpa4",
+      "--pt",
+      "train",
+      "input.json",
+      "--finetune",
+      "/home/u3129/.local/share/mlip-research/foundation-checkpoints/dpa4-mini-omat24-20260805-13edeea63448/DPA4-Mini-OMat24-v20260805.pt"
+    ],
+    "exitcode": 0,
+    "seconds": 26.647577660158277,
+    "pid": 1471758,
+    "gpu_samples": 8
+  },
+  "optimizer_updates": 20,
+  "error": "Traceback (most recent call last):\n  File \"/misc/home6/u3129/mlip-research/runs/fm-finetune-20261017-01/dpa4/../fm-finetune.py\", line 105, in main\n    result[\"weight_checks\"] = compare(source,root/\"loaded-initial/model\",outputs[0],backend)\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/misc/home6/u3129/mlip-research/runs/fm-finetune-20261017-01/dpa4/../fm-finetune.py\", line 65, in compare\n    assert not unequal or allowed, \"Unexpected differences in loaded FM parameters: \" + str(unequal)\n           ^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Unexpected differences in loaded FM parameters: ['model.Default.atomic_model.out_bias', 'model.Default.atomic_model.out_std', 'model.Default.atomic_model.descriptor.version_tensor']\n",
+  "finished_utc": "2026-10-17T17:51:45.643523+00:00"
+}
