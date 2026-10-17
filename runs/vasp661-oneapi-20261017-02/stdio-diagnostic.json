@@ -1,0 +1,6 @@
+{
+  "purpose": "isolate Slurm stdout creation on apollo20 after repeated pre-launch signal 53",
+  "job_name": "vasp661-stdio-diagnostic",
+  "state": "submission_intent",
+  "resources": {"partition": "apollo", "account": "imet-2026-2", "node": "apollo20", "cpus": 1, "memory_mib": 512, "walltime": "00:02:00"}
+}

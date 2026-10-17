@@ -100,8 +100,9 @@ def submit(path):
     # No automatic resubmission after any uncertain outcome.
     result = remote("set -eu; cd " + shlex.quote(manifest["remote_run_dir"]) +
                     "; test ! -e job.id; sbatch --parsable --job-name=" +
-                    shlex.quote(manifest["run_id"]) + " --chdir=" + shlex.quote(manifest["remote_run_dir"]) +
-                    " --output=" + shlex.quote(manifest["remote_run_dir"] + "/slurm-%j.out") +
+                    shlex.quote(manifest["run_id"]) + " --chdir=/tmp" +
+                    " --output=/tmp/u3129-vasp661-%j.out --export=" +
+                    shlex.quote("ALL,VASP_BUILD_RUN_DIR=" + manifest["remote_run_dir"]) +
                     " build.sbatch > job.id; cat job.id")
     job = result.strip().split(";")[0]
     if not re.fullmatch(r"\d+", job):
@@ -149,7 +150,7 @@ def prepare_retry(previous_path, run_id, new_path):
     manifest.update(run_id=run_id, remote_run_dir=REMOTE_ROOT + "/runs/" + run_id,
                     previous_job_id=job_id, job_id=None, stage="staged",
                     created_utc=datetime.now(timezone.utc).isoformat(),
-                    retry_reason="explicit logical home paths for Slurm cwd/stdout after pre-launch I/O failure")
+                    retry_reason="node-local Slurm cwd/stdout bootstrap, followed by user-opened persistent logs, after pre-launch I/O failure")
     manifest.pop("scheduler_state", None)
     manifest.pop("scheduler_exit_code", None)
     remote("set -eu; umask 077; mkdir " + shlex.quote(manifest["remote_run_dir"]))

@@ -11,8 +11,9 @@
 set -eo pipefail
 umask 077
 INSTALL_ROOT="$HOME/.local/opt/vasp/6.6.1-oneapi-2025"
-RUN_DIR="$SLURM_SUBMIT_DIR"
+RUN_DIR="${VASP_BUILD_RUN_DIR:-$SLURM_SUBMIT_DIR}"
 SOURCE_DIR="$INSTALL_ROOT/src/vasp.6.6.1"
+exec > "$RUN_DIR/runtime.log" 2>&1
 trap 'rc=$?; printf "exit_code=%s\n" "$rc" >> "$RUN_DIR/status.txt"; exit "$rc"' EXIT
 printf 'phase=building\njob_id=%s\nnode=%s\n' "$SLURM_JOB_ID" "$(hostname)" > "$RUN_DIR/status.txt"
 source "$INSTALL_ROOT/env.sh"

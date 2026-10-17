@@ -1,0 +1,3 @@
+srun: job 20950115 queued and waiting for resources
+srun: job 20950115 has been allocated resources
+stdio_diagnostic_exit_code=0
