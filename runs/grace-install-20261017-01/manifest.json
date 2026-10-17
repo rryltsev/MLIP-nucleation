@@ -1,0 +1,30 @@
+{
+  "authorization": "user requested isolated GRACE installation and a short A100 Slurm training check",
+  "code_commit": "d1ebdec5434108ad2f17afbfd1fbac90d46e82a8",
+  "created_utc": "2026-10-17T16:48:18.364846+00:00",
+  "environment": "/home6/u3129/mlip-research/envs/grace_ft_a100",
+  "host": "umt.imm.uran.ru",
+  "input_hash": "c6b8606e9745d6ee6c4a7e3f7f7eb14da16aabfcde4e8cb7bb31dd6730145985",
+  "input_sha256": {
+    "environment-proposal.yml": "ae85f7a014f3abace7dfd4cb7382a17190a3e521b4d3330a1b7f87391fab97fd",
+    "install-grace.sbatch": "ecc91da92471d39eaa7ff4eaf8af35246ba8518736ddb513c3ec14e44e46bdd3"
+  },
+  "job_id": "20950196",
+  "phase": "install",
+  "remote_run_dir": "/home6/u3129/mlip-research/runs/grace-install-20261017-01",
+  "resources": {
+    "account": "imet-2026-2",
+    "cpus": 4,
+    "gres": null,
+    "memory_gib": 16,
+    "nodes": 1,
+    "partition": "apollo",
+    "qos": "normal",
+    "tasks": 1,
+    "walltime": "00:30:00"
+  },
+  "run_id": "grace-install-20261017-01",
+  "runtime_status": "missing_result",
+  "scheduler_observation": "20950196|FAILED|1:0|00:00:07|4|apollo19\n",
+  "stage": "collected"
+}

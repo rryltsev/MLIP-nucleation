@@ -1,0 +1,148 @@
+
+# >>>>>>>>>>>>>>>>>>>>>> ERROR REPORT <<<<<<<<<<<<<<<<<<<<<<
+
+    Traceback (most recent call last):
+      File "/home/u3129/miniconda3/lib/python3.14/site-packages/conda_anaconda_tos/remote.py", line 62, in get_endpoint
+        response.raise_for_status()
+        ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+      File "/home/u3129/miniconda3/lib/python3.14/site-packages/requests/models.py", line 1167, in raise_for_status
+        raise HTTPError(http_error_msg, response=self)
+    requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://conda.anaconda.org/conda-forge/terms.json
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "/home/u3129/miniconda3/lib/python3.14/site-packages/conda_anaconda_tos/remote.py", line 158, in get_remote_metadata
+        metadata = RemoteToSMetadata(**get_endpoint(channel).json())
+                                       ~~~~~~~~~~~~^^^^^^^^^
+      File "/home/u3129/miniconda3/lib/python3.14/site-packages/conda_anaconda_tos/remote.py", line 65, in get_endpoint
+        raise CondaToSMissingError(channel) from exc
+    conda_anaconda_tos.exceptions.CondaToSMissingError: No Terms of Service for https://conda.anaconda.org/conda-forge.
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/u3129/miniconda3/lib/python3.14/site-packages/conda/exception_handler.py", line 30, in __call__
+        return func(*args, **kwargs)
+      File "/home/u3129/miniconda3/lib/python3.14/site-packages/conda/cli/main.py", line 53, in main_subshell
+        exit_code = do_call(args, parser)
+      File "/home/u3129/miniconda3/lib/python3.14/site-packages/conda/cli/conda_argparse.py", line 206, in do_call
+        context.plugin_manager.invoke_pre_commands(command)
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+      File "/home/u3129/miniconda3/lib/python3.14/site-packages/conda/plugins/manager.py", line 533, in invoke_pre_commands
+        hook.action(command)
+        ~~~~~~~~~~~^^^^^^^^^
+      File "/home/u3129/miniconda3/lib/python3.14/site-packages/conda_anaconda_tos/plugin.py", line 340, in _pre_command_check_tos
+        render_interactive(
+        ~~~~~~~~~~~~~~~~~~^
+            *context.channels,
+            ^^^^^^^^^^^^^^^^^^
+        ...<6 lines>...
+            json_printer=noop_printer,  # no JSON output even if --json
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/home/u3129/miniconda3/lib/python3.14/site-packages/conda_anaconda_tos/console/render.py", line 82, in wrapper
+        return func(
+            *args,
+        ...<4 lines>...
+            json_printer=json_printer,
+        )
+      File "/home/u3129/miniconda3/lib/python3.14/site-packages/conda_anaconda_tos/console/render.py", line 408, in render_interactive
+        accepted, rejected, channel_pairs = _gather_tos(
+                                            ~~~~~~~~~~~^
+            *channels,
+            ^^^^^^^^^^
+            tos_root=tos_root,
+            ^^^^^^^^^^^^^^^^^^
+            cache_timeout=cache_timeout,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/home/u3129/miniconda3/lib/python3.14/site-packages/conda_anaconda_tos/console/render.py", line 289, in _gather_tos
+        pair = get_one_tos(channel, tos_root=tos_root, cache_timeout=cache_timeout)
+      File "/home/u3129/miniconda3/lib/python3.14/site-packages/conda_anaconda_tos/api.py", line 190, in get_one_tos
+        remote_metadata = get_remote_metadata(channel, cache_timeout=cache_timeout)
+      File "/home/u3129/miniconda3/lib/python3.14/site-packages/conda_anaconda_tos/remote.py", line 162, in get_remote_metadata
+        write_cached_endpoint(channel, None)
+        ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+      File "/home/u3129/miniconda3/lib/python3.14/site-packages/conda_anaconda_tos/remote.py", line 116, in write_cached_endpoint
+        path.touch()
+        ~~~~~~~~~~^^
+      File "/home/u3129/miniconda3/lib/python3.14/pathlib/__init__.py", line 1003, in touch
+        fd = os.open(self, flags, mode)
+    OSError: [Errno 30] Read-only file system: '/home/u3129/.cache/conda-anaconda-tos/c68585400b5a0afec0d1111178e1265c632eae38004c50ae49c883b88812fb88.cache'
+
+`$ /home/u3129/miniconda3/bin/conda create --yes --no-default-packages --override-channels --channel conda-forge --prefix /home6/u3129/mlip-research/envs/grace_ft_a100 python=3.11 pip`
+
+  environment variables:
+                 CIO_TEST=<not set>
+        CONDA_DEFAULT_ENV=base
+          CONDA_ENVS_PATH=/home6/u3129/mlip-research/envs
+                CONDA_EXE=/usr/bin/conda
+CONDA_NUMBER_CHANNEL_NOTICES=0
+          CONDA_PKGS_DIRS=/home6/u3129/mlip-research/package-cache/conda
+             CONDA_PREFIX=/usr
+    CONDA_PROMPT_MODIFIER=(base)
+         CONDA_PYTHON_EXE=/usr/bin/python3.6
+               CONDA_ROOT=/home/u3129/miniconda3
+              CONDA_SHLVL=1
+           CURL_CA_BUNDLE=<not set>
+               LD_PRELOAD=<not set>
+                  MANPATH=:/usr/share/man:/usr/man:/usr/local/share/man:/usr/local/man
+               MODULEPATH=/etc/scl/modulefiles:/usr/share/Modules/modulefiles:/etc/modulefiles:/
+                          usr/share/modulefiles
+                     PATH=/usr/bin:/misc/home4/u3129/Keller/SOFT/USPEX_v10.5/application/archive
+                          :/misc/home4/u3129/Keller/SOFT/USPEX_v10.5/application/archive:/usr/sh
+                          are/Modules/bin:/common/user/scripts:/usr/condabin:/usr/local/bin:/usr
+                          /bin:/usr/local/sbin:/usr/sbin:/home/u3129/.dotnet/tools:/opt/matlab-
+                          R2013a/bin:/home/u3129/Keller/SOFT/lammps-23Jun2022/src
+  PYTHONDONTWRITEBYTECODE=1
+       REQUESTS_CA_BUNDLE=<not set>
+            SSL_CERT_FILE=<not set>
+                USPEXPATH=/misc/home4/u3129/Keller/SOFT/USPEX_v10.5/application/archive/src
+
+     active environment : /usr
+    active env location : /usr
+            shell level : 1
+       user config file : /home/u3129/.condarc
+ populated config files : /home/u3129/miniconda3/.condarc
+                          /home/u3129/miniconda3/condarc.d/anaconda-auth.yml
+          conda version : 26.7.1
+    conda-build version : not installed
+         python version : 3.14.7.final.0
+                 solver : libmamba (default)
+       virtual packages : __archspec=1=cascadelake
+                          __conda=26.7.1=0
+                          __glibc=2.28=0
+                          __linux=4.18.0=0
+                          __unix=0=0
+       base environment : /home/u3129/miniconda3  (writable)
+      conda av data dir : /home/u3129/miniconda3/etc/conda
+  conda av metadata url : None
+           channel URLs : https://conda.anaconda.org/conda-forge/linux-64
+                          https://conda.anaconda.org/conda-forge/noarch
+          package cache : /home6/u3129/mlip-research/package-cache/conda
+          notices cache : /home/u3129/.cache/conda/notices
+       envs directories : /home6/u3129/mlip-research/envs
+                          /home/u3129/miniconda3/envs
+                          /home/u3129/.conda/envs
+    temporary directory : /tmp
+               platform : linux-64
+             user-agent : conda/26.7.1 requests/2.34.2 CPython/3.14.7 Linux/4.18.0-193.19.1.el8_2.centos.plus.x86_64 almalinux/8.9 glibc/2.28 solver/libmamba conda-libmamba-solver/26.7.0 libmambapy/2.3.2 aau/0.8.1 s/. e/.
+                UID:GID : 13129:100
+             netrc file : None
+           offline mode : False
+
+
+An unexpected error has occurred. Conda has prepared the above report.
+If you suspect this error is being caused by a malfunctioning plugin,
+consider using the --no-plugins option to turn off plugins.
+
+Example: conda --no-plugins install <package>
+
+Alternatively, you can set the CONDA_NO_PLUGINS environment variable on
+the command line to run the command without plugins enabled.
+
+Example: CONDA_NO_PLUGINS=true conda install <package>
+
