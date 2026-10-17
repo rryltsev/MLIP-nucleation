@@ -1,0 +1,70 @@
+2026-10-17 22:26:43,887 I - ========================================
+2026-10-17 22:26:43,887 I -             Start GRACEmaker
+2026-10-17 22:26:43,887 I - ========================================
+2026-10-17 22:26:43,887 I - GRACEmaker version: 0.6.1
+2026-10-17 22:26:43,887 I - Tensorflow version: 2.20.0
+2026-10-17 22:26:43,887 I - Loaded input.yaml... 
+2026-10-17 22:26:43,887 I - Set seed to 42
+2026-10-17 22:26:43,887 I - Data distribution strategy: Single GPU
+2026-10-17 22:26:43,887 I - Number of replicas: 1
+2026-10-17 22:26:43,887 I - Replica ID in sync group: 0
+2026-10-17 22:26:43,888 I - Global TRAIN batch size (= minibatch size * num GPUS): 2, num. GPUS: 1, minibatch size: 2
+2026-10-17 22:26:43,888 I - Global TEST batch size (= minibatch size * num GPUS): 2, num. GPUS: 1, minibatch size: 2
+2026-10-17 22:26:43,888 I - Loading training data from /misc/home6/u3129/mlip-research/runs/grace-smoke-20261017-01/data/train.extxyz
+2026-10-17 22:26:43,888 I - Search for dataset file(s): ['/misc/home6/u3129/mlip-research/runs/grace-smoke-20261017-01/data/train.extxyz']
+2026-10-17 22:26:43,888 I - #1/1: try to load /misc/home6/u3129/mlip-research/runs/grace-smoke-20261017-01/data/train.extxyz
+2026-10-17 22:26:43,888 I - Reading extxyz file: /misc/home6/u3129/mlip-research/runs/grace-smoke-20261017-01/data/train.extxyz (6.4KiB)
+2026-10-17 22:26:43,893 I - 8 structures read from /misc/home6/u3129/mlip-research/runs/grace-smoke-20261017-01/data/train.extxyz
+2026-10-17 22:26:43,893 I - Converting to dataframe
+2026-10-17 22:26:43,893 I - Extracting energy
+2026-10-17 22:26:43,895 I - Extracting forces
+2026-10-17 22:26:43,897 I - Trying to extract stresses
+2026-10-17 22:26:43,898 I - Extracting info
+2026-10-17 22:26:43,898 I -  8 structures found
+2026-10-17 22:26:43,899 I - Loaded dataset size: (8, 6)
+2026-10-17 22:26:43,899 I - Loading test data: /misc/home6/u3129/mlip-research/runs/grace-smoke-20261017-01/data/validation.extxyz
+2026-10-17 22:26:43,899 I - Search for dataset file(s): ['/misc/home6/u3129/mlip-research/runs/grace-smoke-20261017-01/data/validation.extxyz']
+2026-10-17 22:26:43,899 I - #1/1: try to load /misc/home6/u3129/mlip-research/runs/grace-smoke-20261017-01/data/validation.extxyz
+2026-10-17 22:26:43,899 I - Reading extxyz file: /misc/home6/u3129/mlip-research/runs/grace-smoke-20261017-01/data/validation.extxyz (3.2KiB)
+2026-10-17 22:26:43,900 I - 4 structures read from /misc/home6/u3129/mlip-research/runs/grace-smoke-20261017-01/data/validation.extxyz
+2026-10-17 22:26:43,901 I - Converting to dataframe
+2026-10-17 22:26:43,901 I - Extracting energy
+2026-10-17 22:26:43,901 I - Extracting forces
+2026-10-17 22:26:43,902 I - Trying to extract stresses
+2026-10-17 22:26:43,903 I - Extracting info
+2026-10-17 22:26:43,903 I -  4 structures found
+2026-10-17 22:26:43,904 I - Set 'energy_corrected' to 'energy', because reference_energy=0
+2026-10-17 22:26:43,905 I - input::fit::compute_convex_hull is False, convex hull and 'low energy' group will not be computed 
+2026-10-17 22:26:43,905 I - Train Dataset size: 8
+2026-10-17 22:26:43,905 I - Test Dataset size: 4
+2026-10-17 22:26:43,905 I - Extract elements from train and test datasets
+2026-10-17 22:26:43,905 I - Elements mapping: {'Al': 0}
+2026-10-17 22:26:43,905 I - TRAIN WEIGHTS: energy - False, forces - False 
+2026-10-17 22:26:43,905 I - TEST WEIGHTS: energy - False, forces - False 
+2026-10-17 22:26:43,905 I - Saving current training set to seed/42/training_set.pkl.gz
+2026-10-17 22:26:43,908 I - Saving current test set to seed/42/test_set.pkl.gz
+2026-10-17 22:26:43,910 I - Train set processing
+2026-10-17 22:26:43,910 I - Train buckets: 1
+2026-10-17 22:26:43,910 I - 1/4. Converting pd.DataFrame to batch data (parallel, max_workers=1)
+2026-10-17 22:26:43,910 I - Parallel data processing: max_workers=1, chunksize=2500
+2026-10-17 22:26:43,942 I - 2/4. Splitting batches into per-batch groups.
+2026-10-17 22:26:44,119 I - 3/4. Joining groups to batches
+2026-10-17 22:26:44,264 I - 4/4. Padding batches
+2026-10-17 22:26:44,264 I - [TRAIN] dataset stats: num. batches: 4 | num. real structures: 8 (+0.00%) | num. real atoms: 32 (+0.00%) | num. real neighbours: 96 (+0.00%) 
+2026-10-17 22:26:44,264 I - Average number of neighbors (computed): 3.0
+2026-10-17 22:26:44,264 I - Test set processing
+2026-10-17 22:26:44,264 I - Test buckets: 1
+2026-10-17 22:26:44,264 I - 1/4. Converting pd.DataFrame to batch data (parallel, max_workers=1)
+2026-10-17 22:26:44,264 I - Parallel data processing: max_workers=1, chunksize=2500
+2026-10-17 22:26:44,290 I - 2/4. Splitting batches into per-batch groups.
+2026-10-17 22:26:44,462 I - 3/4. Joining groups to batches
+2026-10-17 22:26:44,609 I - 4/4. Padding batches
+2026-10-17 22:26:44,610 I - [TEST] dataset stats: num. batches: 2 | num. real structures: 4 (+0.00%) | num. real atoms: 16 (+0.00%) | num. real neighbours: 48 (+0.00%) 
+2026-10-17 22:26:45,626 I - Train/test data distributions are plotted and saved to seed/42/plots
+2026-10-17 22:26:45,626 I - Model parameter dtype: float32
+2026-10-17 22:26:45,626 I - Constructing model from config
+2026-10-17 22:26:45,626 I - Model kwargs: {'lmax': 1, 'n_rad_base': 4, 'n_rad_max': 8, 'prod_func_n_max': 8, 'embedding_size': 8, 'n_mlp_dens': 4, 'dense_nbr': False}
+2026-10-17 22:26:45,982 I - Saving model config to seed/42/model.yaml
+2026-10-17 22:26:45,992 I - Loss function: Loss(1.0*WeightedSSEEnergyPerAtomLoss(energy) + 1.0*WeightedSSEForceLoss(forces))
+2026-10-17 22:26:45,992 I - JIT compilation: False
+2026-10-17 22:26:45,992 I - Optimization options: {'learning_rate': 0.001, 'use_ema': False}

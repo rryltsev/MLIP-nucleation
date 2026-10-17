@@ -25,5 +25,7 @@
   },
   "resume_private_prefix": true,
   "run_id": "grace-install-20261017-03",
-  "stage": "submitted"
+  "runtime_status": "installed",
+  "scheduler_observation": "20950266|COMPLETED|0:0|00:03:33|1|apollo31\n",
+  "stage": "collected"
 }

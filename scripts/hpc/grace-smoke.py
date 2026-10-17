@@ -62,6 +62,7 @@ def main():
     result = {"status":"running", "started_utc":datetime.now(timezone.utc).isoformat(),
               "job_id":os.environ.get("SLURM_JOB_ID"), "host":os.uname().nodename,
               "environment":sys.prefix, "cuda_visible_devices":os.environ.get("CUDA_VISIBLE_DEVICES"),
+              "xla_flags":os.environ.get("XLA_FLAGS"),
               "scope":"synthetic training from scratch only; no foundation weights or DFT labels"}
     try:
         import numpy as np
@@ -69,13 +70,15 @@ def main():
         import tensorpotential
         import tensorflow as tf
         result["versions"] = {p:md.version(p) for p in ["tensorpotential","tensorflow","tf-keras","numpy","ase","dpdata"]}
+        cuda_root = Path(os.environ['GRACE_CUDA_ROOT'])
+        result['cuda_compiler_sha256'] = {n:digest(cuda_root/n) for n in ['nvvm/libdevice/libdevice.10.bc','bin/ptxas']}
         devices = tf.config.list_physical_devices("GPU")
         assert len(devices) == 1, "Expected one Slurm-allocated visible GPU"
         for d in devices: tf.config.experimental.set_memory_growth(d, True)
         with tf.device("/GPU:0"):
             x = tf.Variable(tf.ones([32,32]))
             with tf.GradientTape() as tape:
-                loss = tf.reduce_mean(tf.square(tf.matmul(x,x)))
+                loss = tf.reduce_mean(tf.square(tf.matmul(x,x))) + tf.reduce_mean(tf.sqrt(x*x+1.))
             gradient = tape.gradient(loss,x)
             assert "GPU:0" in gradient.device and np.isfinite(gradient.numpy()).all()
         result["gpu_probe"] = {"devices":[str(d) for d in devices], "gradient_device":gradient.device,

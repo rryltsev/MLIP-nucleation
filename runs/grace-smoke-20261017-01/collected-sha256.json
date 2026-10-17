@@ -1,0 +1,15 @@
+{
+  "data/provenance.json": "4336cf379c81f4e504528036aa41e52838d19e68b9967d55c1cf38171673fffa",
+  "data/train.extxyz": "7d5ca31075e5266aec4720159aa43caf9ccfca318dca5cfedd722e952a4e9de3",
+  "data/validation.extxyz": "d0453b6c11256c03c26e6b05d7fb0f4937989a5a7fee22e043e3aee211612e8b",
+  "gpu-training-process.json": "0ab88ef60a4a369cf4e091d8d87bec75db1af0d4161d4c7764a24b849207fe5d",
+  "node.txt": "32898fd57d84a6100aeb52dcc0ada0d512ea9e2b841d00f0a974709aa07700fa",
+  "nvidia-smi.txt": "321923c554720af09e56431fa2be05e05c723b5025b14f305726fae2dbbb7c89",
+  "pip-freeze.txt": "7aaa2d4b79e3a2f271de5fd8c47a04e0b312b8fa5140b87e7ff37a3f6d3994df",
+  "result.json": "bb9f7e1cd99a13bfb488f79cc519b8ba47540390b798d1b58b701722ca34abf9",
+  "slurm-20950272.out": "b017db1d8beb75c42128cb3d4b1b779323925dcebd46fca9db43c8485b07bc24",
+  "train/input.yaml": "fbf918fe696ebe8102ceba3b095f0975c23fb2aca6944128b1bbacba94b55433",
+  "train/seed/42/log.txt": "9bc414ec99724f02865c2d5865a3458173f8c2fed34b8441d66be6e90e2e555f",
+  "train/seed/42/model.yaml": "0a9692c7b458a40dc7df476535012a4986828cc99d7c6f023f4c19991e3d9f14",
+  "train/train.log": "328089de434146eba0bc1a706813242c4695d710ee84e9dfb4699188e12bd993"
+}

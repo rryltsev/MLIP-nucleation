@@ -111,7 +111,7 @@
     "latex_preview": "built-in compiler startup failed: Windows CreateProcessAsUserW access denied (5); new report source preserved; existing VASP editor left unchanged"
   },
   "grace_installation": {
-    "status": "resuming cached installation after timeout during package extraction",
+    "status": "installed and dependency-checked; fixing XLA CUDA search path after initial GPU check",
     "run": "runs/grace-install-20261017-03/manifest.json",
     "failure": "Conda plugin tried writing ~/.cache on compute-read-only home4; next attempt will isolate HOME and caches on home6",
     "job_id": "20950266",
@@ -119,6 +119,10 @@
     "prior_attempt": "runs/grace-install-20261017-01/manifest.json",
     "time_limit": "one CPU, 60 minutes; A100 check remains one GPU, 10 minutes",
     "resume_policy": "if attempt 02 fails or times out, collect/reconcile then submit install --attempt 03 (one CPU, 60 minutes, reuse only private GRACE Python 3.11 prefix)",
-    "previous_run": "runs/grace-install-20261017-02/manifest.json"
+    "previous_run": "runs/grace-install-20261017-02/manifest.json",
+    "result": "runs/grace-install-20261017-03/result.json",
+    "lock": "environments/grace-a100.lock.json",
+    "prior_gpu_check": "runs/grace-smoke-20261017-01/manifest.json",
+    "gpu_check": "runs/grace-smoke-20261017-02/manifest.json"
   }
 }

@@ -36,6 +36,11 @@ def submit(phase, attempt):
                  "grace-smoke.py": ROOT / "scripts/hpc/grace-smoke.py",
                  "mlip-smoke.py": ROOT / "scripts/hpc/mlip-smoke.py"}
         batch, partition, walltime, gres = "grace-smoke.sbatch", "v100", "00:10:00", "gpu:a100:1"
+        if attempt == '02':
+            previous=json.loads((ROOT/'runs/grace-smoke-20261017-01/manifest.json').read_text())
+            if previous.get('stage') != 'collected' or previous.get('runtime_status') != 'failed':
+                raise RuntimeError('Reconcile the earlier GPU check before retrying')
+            walltime='00:05:00'
     payloads = {n:p.read_bytes().replace(b"\r\n",b"\n") for n,p in files.items()}
     hashes = {n:hashlib.sha256(b).hexdigest() for n,b in payloads.items()}
     manifest = {"run_id":run_id,"phase":phase,"host":"umt.imm.uran.ru","environment":ENV,

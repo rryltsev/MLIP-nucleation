@@ -1,0 +1,60 @@
+2026-10-17 22:26:30.322255: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-10-17 22:26:31.513349: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-10-17 22:26:33.953759: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:UserWarning: enabling the new type promotion must happen at the beginning of the program. Please ensure no TF APIs have been used yet.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792257998.190948 1397317 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38479 MB memory:  -> device: 0, name: NVIDIA A100-PCIE-40GB, pci bus id: 0000:af:00.0, compute capability: 8.0
+[tensorpotential] Info: tf.experimental.numpy behavior enabled.
+[tensorpotential] Info: TensorFloat-32 execution disabled.
+{
+  "status": "failed",
+  "started_utc": "2026-10-17T17:26:29.582536+00:00",
+  "job_id": "20950272",
+  "host": "tesla-a101",
+  "environment": "/home6/u3129/mlip-research/envs/grace_ft_a100",
+  "cuda_visible_devices": "0",
+  "scope": "synthetic training from scratch only; no foundation weights or DFT labels",
+  "versions": {
+    "tensorpotential": "0.6.1",
+    "tensorflow": "2.20.0",
+    "tf-keras": "2.20.1",
+    "numpy": "2.4.6",
+    "ase": "3.29.0",
+    "dpdata": "1.1.0"
+  },
+  "gpu_probe": {
+    "devices": [
+      "PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')"
+    ],
+    "gradient_device": "/job:localhost/replica:0/task:0/device:GPU:0",
+    "build": {
+      "cpu_compiler": "clang 18",
+      "cuda_compute_capabilities": [
+        "sm_60",
+        "sm_70",
+        "sm_80",
+        "sm_89",
+        "compute_90"
+      ],
+      "cuda_version": "12.5.1",
+      "cudnn_version": "9",
+      "is_cuda_build": true,
+      "is_rocm_build": false,
+      "is_tensorrt_build": false
+    }
+  },
+  "input_sha256": "fbf918fe696ebe8102ceba3b095f0975c23fb2aca6944128b1bbacba94b55433",
+  "train": {
+    "command": [
+      "/home6/u3129/mlip-research/envs/grace_ft_a100/bin/gracemaker",
+      "input.yaml"
+    ],
+    "returncode": 1,
+    "elapsed_seconds": 10.171815671026707,
+    "pid": 1397967,
+    "log_sha256": "328089de434146eba0bc1a706813242c4695d710ee84e9dfb4699188e12bd993"
+  },
+  "error": "Traceback (most recent call last):\n  File \"/misc/home6/u3129/mlip-research/runs/grace-smoke-20261017-01/grace-smoke.py\", line 115, in main\n    assert proc.returncode == 0, (train / \"train.log\").read_text(errors=\"replace\")[-3500:]\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError: ForceLoss(forces))\n2026/10/17 22:26:45 I - JIT compilation: False\n2026/10/17 22:26:45 I - Optimization options: {'learning_rate': 0.001, 'use_ema': False}\n2026-10-17 22:26:46.099252: W external/local_xla/xla/service/gpu/llvm_gpu_backend/nvptx_backend.cc:110] libdevice is required by this HLO module but was not found at /opt/cuda/nvvm/libdevice/libdevice.10.bc\nerror: libdevice not found at /opt/cuda/nvvm/libdevice/libdevice.10.bc\n2026-10-17 22:26:46.099468: E tensorflow/compiler/mlir/tools/kernel_gen/tf_framework_c_interface.cc:227] INTERNAL: Generating device code failed.\n2026-10-17 22:26:46.100044: W tensorflow/core/framework/op_kernel.cc:1842] UNKNOWN: JIT compilation failed.\n2026-10-17 22:26:46.100064: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: UNKNOWN: JIT compilation failed.\nTraceback (most recent call last):\n  File \"/home6/u3129/mlip-research/envs/grace_ft_a100/bin/gracemaker\", line 6, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"/home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorpotential/scripts/gracemaker.py\", line 141, in main\n    gracemaker_main(sys.argv[1:], strategy=strategy, strategy_desc=strategy_desc)\n  File \"/home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorpotential/cli/gracemaker.py\", line 617, in main\n    tp = TensorPotential(\n         ^^^^^^^^^^^^^^^^\n  File \"/home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorpotential/tensorpot.py\", line 103, in __init__\n    self.model.build(\n  File \"/home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorpotential/tpmodel.py\", line 836, in build\n    sm.build(param_dtype)\n  File \"/home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorflow/python/module/module.py\", line 311, in method_with_name_scope\n    return method(self, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorpotential/instructions/compute.py\", line 256, in build\n    self.sh.build(float_dtype)\n  File \"/home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorpotential/functions/spherical_harmonics.py\", line 39, in build\n    self.alm, self.blm = self.pre_compute()\n                         ^^^^^^^^^^^^^^^^^^\n  File \"/home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorpotential/functions/spherical_harmonics.py\", line 72, in pre_compute\n    a = tf.sqrt(l1 / (lsq - msq))\n        ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorflow/python/ops/weak_tensor_ops.py\", line 99, in wrapper\n    return op(**bound_kwargs)\n           ^^^^^^^^^^^^^^^^^^\n  File \"/home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorflow/python/util/traceback_utils.py\", line 153, in error_handler\n    raise e.with_traceback(filtered_tb) from None\n  File \"/home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorflow/python/framework/ops.py\", line 6027, in raise_from_not_ok_status\n    raise core._status_to_exception(e) from None  # pylint: disable=protected-access\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.UnknownError: {{function_node __wrapped__Sqrt_device_/job:localhost/replica:0/task:0/device:GPU:0}} JIT compilation failed. [Op:Sqrt] name: \n\n",
+  "finished_utc": "2026-10-17T17:26:49.125991+00:00"
+}

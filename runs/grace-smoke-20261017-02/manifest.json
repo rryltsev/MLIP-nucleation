@@ -1,0 +1,30 @@
+{
+  "authorization": "user requested isolated GRACE installation and a short A100 Slurm training check",
+  "code_commit": "dd9067f377c16683fd58b096b42d6c30416c99b1",
+  "created_utc": "2026-10-17T17:28:57.716142+00:00",
+  "environment": "/home6/u3129/mlip-research/envs/grace_ft_a100",
+  "host": "umt.imm.uran.ru",
+  "input_hash": "58066e0d5fe379a6a94fdaa02a09acc769975228fadd5511f4395de8f713dbe6",
+  "input_sha256": {
+    "grace-smoke.py": "cda52f2841c67e7fde93929e711243403abf78561965797806e8d2a02b6112d4",
+    "grace-smoke.sbatch": "225b7834cae8f9666b75d5db5a5ed7954d0cbc8e34a34512764c7577efa2b4e5",
+    "mlip-smoke.py": "718a22ce4a1c457531f452df4eb3e458927b8ed0ad9a72fb5594a0d196cb9e60"
+  },
+  "job_id": "20950273",
+  "phase": "smoke",
+  "remote_run_dir": "/home6/u3129/mlip-research/runs/grace-smoke-20261017-02",
+  "resources": {
+    "account": "imet-2026-2",
+    "cpus": 4,
+    "gres": "gpu:a100:1",
+    "memory_gib": 16,
+    "nodes": 1,
+    "partition": "v100",
+    "qos": "normal",
+    "tasks": 1,
+    "walltime": "00:05:00"
+  },
+  "resume_private_prefix": false,
+  "run_id": "grace-smoke-20261017-02",
+  "stage": "submitted"
+}
