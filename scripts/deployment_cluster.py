@@ -28,6 +28,16 @@ def submit(phase, attempt, backends='dpa4,grace'):
         build=json.loads((ROOT/'runs/grace-lammps-build-20261017-01/manifest.json').read_text())
         if build.get('stage')!='collected' or build.get('runtime_status')!='passed':raise ValueError('Collect successful GRACE LAMMPS build first')
         payload['grace-lammps-build.json']=(ROOT/'runs/grace-lammps-build-20261017-01/result.json').read_bytes().replace(b'\r\n',b'\n')
+        if phase=='export':
+            source_path=ROOT/'runs/fm-deployment-20261017-02/manifest.json'
+            source=json.loads(source_path.read_text())
+            if source.get('stage')!='collected':raise ValueError('Reconcile completed restart before export-only recovery')
+            result=json.loads((source_path.parent/'dpa4/result.json').read_text())
+            assert result['final_step']==24 and result['restart_state']['restored_step']==20
+            checkpoint=source['remote_run_dir']+'/dpa4/model.ckpt-24.pt'
+            sha=remote('sha256sum '+shlex.quote(checkpoint)).split()[0]
+            payload['reuse-source.json']=(json.dumps({'remote_run_dir':source['remote_run_dir'],'job_id':source['job_id'],
+                'checkpoint_sha256':sha,'result_sha256':hashlib.sha256((source_path.parent/'dpa4/result.json').read_bytes()).hexdigest()})+'\n').encode()
     hashes={n:hashlib.sha256(b).hexdigest() for n,b in payload.items()}
     manifest={'run_id':run_id,'host':'umt.imm.uran.ru','remote_run_dir':run_dir,'phase':phase,
         'created_utc':datetime.now(timezone.utc).isoformat(),'stage':'preparing','job_id':None,
@@ -57,6 +67,6 @@ def submit(phase, attempt, backends='dpa4,grace'):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);sub=p.add_subparsers(dest='command',required=True)
-    s=sub.add_parser('submit');s.add_argument('phase',choices=['build','gpu']);s.add_argument('--attempt',required=True);s.add_argument('--backends',choices=['dpa4','grace','dpa4,grace'],default='dpa4,grace')
+    s=sub.add_parser('submit');s.add_argument('phase',choices=['build','gpu','export']);s.add_argument('--attempt',required=True);s.add_argument('--backends',choices=['dpa4','grace','dpa4,grace'],default='dpa4,grace')
     c=sub.add_parser('collect');c.add_argument('manifest',type=Path)
     a=p.parse_args();submit(a.phase,a.attempt,a.backends) if a.command=='submit' else collect(a.manifest)

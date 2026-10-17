@@ -107,6 +107,7 @@ write_dump all custom forces.dump id type x y z fx fy fz modify sort id format f
         (folder/'in.lammps').write_text(text)
         env=dict(os.environ,LAMMPS_PLUGIN_PATH='')
         record=execute([str(binary),'-in','in.lammps'], 'lammps-'+str(i),seconds=120,env=env,cwd=folder)
+        assert record['gpu_samples'],'LAMMPS inference process not observed on GPU'
         output=np.loadtxt(folder/'prediction.txt',ndmin=1)
         dump=(folder/'forces.dump').read_text().splitlines();start=next(j for j,line in enumerate(dump) if line.startswith('ITEM: ATOMS'))
         forces=np.array([[float(v) for v in line.split()] for line in dump[start+1:]])[:,-3:]
@@ -144,13 +145,23 @@ def dpa4(structures,result):
     import torch
     from deepmd.infer import DeepPot
     from deepmd.calculator import DP
-    source=SOURCE/'dpa4/model.ckpt-20.pt'
-    config=json.loads((SOURCE/'dpa4/input.json').read_text());config['training'].update(numb_steps=24,save_freq=24,disp_freq=1)
-    save(ROOT/'input.json',config)
-    env=dict(os.environ,RESTART_SNAPSHOT=str(ROOT/'restored/model.pt'))
-    result['restart_process']=execute([sys.executable,str(TOOLS/'restart-child.py'),'dpa4','--pt','train','input.json','--restart',str(source)],'restart',env=env)
-    result['restart_state']=restore_check_pt(source,ROOT/'restored/model.pt')
-    final=ROOT/'model.ckpt-24.pt';state=torch.load(final,map_location='cpu',weights_only=False)
+    source=SOURCE/'dpa4/model.ckpt-20.pt';final=ROOT/'model.ckpt-24.pt'
+    if (TOOLS/'reuse-source.json').exists():
+        reuse=json.loads((TOOLS/'reuse-source.json').read_text());old=Path(reuse['remote_run_dir'])
+        assert digest(old/'dpa4/result.json')==reuse['result_sha256']
+        assert digest(old/'dpa4/model.ckpt-24.pt')==reuse['checkpoint_sha256']
+        previous=json.loads((old/'dpa4/result.json').read_text())
+        for key in ['restart_process','restart_state']:result[key]=previous[key]
+        result['reused_restart']=reuse
+        shutil.copyfile(old/'dpa4/model.ckpt-24.pt',final)
+        if (old/'cache').exists():shutil.copytree(old/'cache',TOOLS/'cache',dirs_exist_ok=True)
+    else:
+        config=json.loads((SOURCE/'dpa4/input.json').read_text());config['training'].update(numb_steps=24,save_freq=24,disp_freq=1)
+        save(ROOT/'input.json',config)
+        env=dict(os.environ,RESTART_SNAPSHOT=str(ROOT/'restored/model.pt'))
+        result['restart_process']=execute([sys.executable,str(TOOLS/'restart-child.py'),'dpa4','--pt','train','input.json','--restart',str(source)],'restart',env=env)
+        result['restart_state']=restore_check_pt(source,ROOT/'restored/model.pt')
+    state=torch.load(final,map_location='cpu',weights_only=False)
     result['final_internal_step']=state['model']['_extra_state']['train_infos']['step'];assert result['final_internal_step']==23
     steps={int(v['step']) for v in state['optimizer']['state'].values() if 'step' in v};assert steps=={24},steps
     result['final_step']=24

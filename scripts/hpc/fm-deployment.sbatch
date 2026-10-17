@@ -14,6 +14,11 @@ hostname > node.txt
 nvidia-smi > nvidia-smi.txt
 source /home/u3129/miniconda3/etc/profile.d/conda.sh
 conda activate lammps_deepmd_dpa4
+export CUDA_HOME=/opt/cuda-13.0
+export CXX=/opt/rh/gcc-toolset-12/root/usr/bin/g++
+export PATH="$CUDA_HOME/bin:$PATH"
+"$CXX" --version > cxx-version.txt
+"$CUDA_HOME/bin/nvcc" --version > cuda-version.txt
 export LD_LIBRARY_PATH="$CONDA_PREFIX/lib:${LD_LIBRARY_PATH:-}"
 set +e
 dp_status=0

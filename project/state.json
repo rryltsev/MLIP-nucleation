@@ -208,10 +208,20 @@
     "latex_preview": "built-in compiler startup failed with Windows CreateProcessAsUserW access denied (5); source retained; existing VASP editor unchanged"
   },
   "deployment_checks": {
-    "status": "preparing A100 restart/export equivalence; private GRACE LAMMPS built",
+    "status": "GRACE restart and ASE/LAMMPS equivalence passed; DPA4 restart passed with explicit Adam/index alignment, AOT export running",
     "build_manifest": "runs/grace-lammps-build-20261017-01/manifest.json",
     "build_job_id": "20950320",
     "planned_gpu_budget": "one A100, 4 CPUs, 32 GiB, maximum 20 min; four added optimizer updates per model; four comparison structures",
-    "scientific_results": false
+    "scientific_results": false,
+    "gpu_runs": [
+      "runs/fm-deployment-20261017-01/manifest.json",
+      "runs/fm-deployment-20261017-02/manifest.json"
+    ],
+    "gpu_job_ids": [
+      "20950321",
+      "20950322"
+    ],
+    "grace_result": "runs/fm-deployment-20261017-01/grace/result.json",
+    "deepmd_compatibility": "Native DeepMD 3.2 restart uses saved zero-based completed index 19 despite Adam count 20; checked helper advances to 20 and rebuilds LR scheduler, without changing source checkpoint or installed package"
   }
 }
