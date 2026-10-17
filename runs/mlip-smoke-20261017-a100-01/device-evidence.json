@@ -1,0 +1,38 @@
+{
+  "se_e2_a": {
+    "status": "passed",
+    "gpu_confirmed_by_log": true,
+    "lines": [
+      "[2026-10-17 21:36:49,980] DEEPMD INFO    Build Variant:        CUDA",
+      "[2026-10-17 21:36:49,980] DEEPMD INFO    Computing Device:     CUDA:0",
+      "[2026-10-17 21:36:49,980] DEEPMD INFO    Device Name:          NVIDIA A100-PCIE-40GB",
+      "[2026-10-17 21:36:49,981] DEEPMD INFO    Visible GPU Count:    1",
+      "[2026-10-17 21:37:00,030] DEEPMD INFO    Saved model to model.ckpt-20.pt"
+    ],
+    "source_log_sha256": "cb70c75c7562a07c7ab1af0a309710c526b44d5bba8d62383d4df9f2443a437b"
+  },
+  "dpa4": {
+    "status": "failed",
+    "gpu_confirmed_by_log": true,
+    "lines": [
+      "[2026-10-17 21:37:08,552] DEEPMD INFO    Build Variant:        CUDA",
+      "[2026-10-17 21:37:08,552] DEEPMD INFO    Computing Device:     CUDA:0",
+      "[2026-10-17 21:37:08,552] DEEPMD INFO    Device Name:          NVIDIA A100-PCIE-40GB",
+      "[2026-10-17 21:37:08,552] DEEPMD INFO    Visible GPU Count:    1",
+      "RuntimeError: SeZM neighbor-list construction requires either 'nvalchemiops' or 'vesin', but neither is importable."
+    ],
+    "source_log_sha256": "e7101bac409a553f6eac60eac63ade9dbfd8cdc9c4c3ac70fb22ebd5e76a2a76"
+  },
+  "dpa4c": {
+    "status": "passed",
+    "gpu_confirmed_by_log": true,
+    "lines": [
+      "[2026-10-17 21:37:19,229] DEEPMD INFO    Build Variant:        CUDA",
+      "[2026-10-17 21:37:19,229] DEEPMD INFO    Computing Device:     CUDA:0",
+      "[2026-10-17 21:37:19,229] DEEPMD INFO    Device Name:          NVIDIA A100-PCIE-40GB",
+      "[2026-10-17 21:37:19,229] DEEPMD INFO    Visible GPU Count:    1",
+      "[2026-10-17 21:37:23,880] DEEPMD INFO    Saved model to model.ckpt-20.pt"
+    ],
+    "source_log_sha256": "8dbe2c659697bd8b95766982f04828bb933aa789f7c063d1b0e2576d6f29af03"
+  }
+}

@@ -14,11 +14,15 @@ from vasp_potentials import save
 PROFILES = {
     "a100": {"partition": "v100", "gres": "gpu:a100:1", "environment": "deepmd_320_a100", "backend": "pt"},
     "k40m": {"partition": "debug", "gres": "gpu:k40m:1", "environment": "deepmd_2210_k40", "backend": "tf"},
+    "a100-vesin": {"partition": "v100", "gres": "gpu:a100:1", "environment": "lammps_deepmd_dpa4",
+                   "backend": "pt", "walltime": "00:05:00",
+                   "reason": "DPA4 first failed in deepmd_320_a100 without vesin-torch; this existing environment provides it"},
 }
 
 
 def submit(profile):
     cfg = PROFILES[profile]
+    walltime = cfg.get("walltime", "00:10:00")
     run_id = "mlip-smoke-20261017-" + profile + "-01"
     path = ROOT / "runs" / run_id / "manifest.json"
     if path.exists():
@@ -28,9 +32,9 @@ def submit(profile):
                 for n in ["mlip-smoke.py", "mlip-smoke.sbatch"]}
     manifest = {"run_id": run_id, "host": "umt.imm.uran.ru", "remote_run_dir": run_dir,
                 "created_utc": datetime.now(timezone.utc).isoformat(), "purpose": "user-requested small MLIP GPU training checks",
-                "authorization": "user requested small Slurm tests on A100 and K40m; initial cap two single-GPU jobs of ten minutes each",
+                "authorization": "user requested small Slurm tests on A100 and K40m; initial two jobs capped at ten minutes each; follow-up capped at five minutes after first jobs consumed 172 GPU-seconds total",
                 "profile": cfg, "resources": {"account": "imet-2026-2", "qos": "normal", "nodes": 1,
-                "tasks": 1, "cpus": 4, "memory_gib": 16, "walltime": "00:10:00", "gpus": 1},
+                "tasks": 1, "cpus": 4, "memory_gib": 16, "walltime": walltime, "gpus": 1},
                 "input_sha256": {n: hashlib.sha256(b).hexdigest() for n, b in payloads.items()},
                 "input_hash": hashlib.sha256(json.dumps({n: hashlib.sha256(b).hexdigest() for n,b in payloads.items()},sort_keys=True).encode()).hexdigest(),
                 "code_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
@@ -46,7 +50,7 @@ def submit(profile):
     exports = "ALL,MLIP_RUN_DIR=" + run_dir + ",MLIP_ENV=" + cfg["environment"] + ",MLIP_BACKEND=" + cfg["backend"]
     response = remote("set -euC; cd " + q + "; test ! -e job.id; sbatch --parsable --job-name=" + run_id +
                       " --partition=" + cfg["partition"] + " --gres=" + cfg["gres"] +
-                      " --account=imet-2026-2 --qos=normal --nodes=1 --ntasks=1 --cpus-per-task=4 --mem=16G --time=00:10:00" +
+                      " --account=imet-2026-2 --qos=normal --nodes=1 --ntasks=1 --cpus-per-task=4 --mem=16G --time=" + walltime +
                       " --chdir=" + q + " --output=" + q + "/slurm-%j.out --export=" + shlex.quote(exports) +
                       " mlip-smoke.sbatch > job.id; cat job.id")
     job = response.strip().split(";")[0]
@@ -67,6 +71,9 @@ def collect(path):
     save(path.parent / "scheduler.json", {"observed_utc": datetime.now(timezone.utc).isoformat(), "output": state})
     if any("|" + s in state for s in ["RUNNING", "PENDING", "CONFIGURING", "COMPLETING"]):
         print(state); return
+    terminal = ["COMPLETED", "FAILED", "CANCELLED", "TIMEOUT", "OUT_OF_MEMORY", "NODE_FAIL", "PREEMPTED", "BOOT_FAIL"]
+    if not any("|" + s in state for s in terminal):
+        raise RuntimeError("Scheduler state unknown; preserve the run and reconcile before collection/retry")
     root = shlex.quote(manifest["remote_run_dir"])
     # Retrieve only small records. Checkpoints stay on the cluster with hashes.
     script = """python3 - <<'REMOTE'
@@ -93,6 +100,17 @@ REMOTE
         target = path.parent / name; target.parent.mkdir(parents=True, exist_ok=True); target.write_bytes(data)
     save(path.parent / "collected-sha256.json", {n:r["sha256"] for n,r in records.items()})
     result = json.loads(records["result.json"]["text"]) if "result.json" in records else {"status":"missing_result"}
+    evidence = {}
+    for case in result.get("cases", []):
+        record = records.get(case["variant"] + "/train.log")
+        if not record:
+            continue
+        lines = [line for line in record["text"].splitlines() if any(s in line.lower() for s in
+                 ["computing device:", "build variant:", "device name:", "visible gpu", "saved model", "saved checkpoint", "requires either"])]
+        evidence[case["variant"]] = {"status": case["status"], "gpu_confirmed_by_log": any(
+            "cuda:0" in line.lower() or "gpu:0" in line.lower() for line in lines),
+            "lines": lines, "source_log_sha256": record["sha256"]}
+    save(path.parent / "device-evidence.json", evidence)
     manifest.update(stage="collected", runtime_status=result["status"], scheduler_observation=state)
     save(path, manifest)
     print(json.dumps({"run_id":manifest["run_id"],"scheduler":state,"runtime_status":result["status"]}))

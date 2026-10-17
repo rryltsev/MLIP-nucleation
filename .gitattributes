@@ -1,0 +1,6 @@
+# Preserve collected bytes for verification against remote checksums.
+runs/** -text
+configs/vasp/paw-64.json text eol=lf
+scripts/hpc/*.py text eol=lf
+scripts/hpc/*.sh text eol=lf
+scripts/hpc/*.sbatch text eol=lf

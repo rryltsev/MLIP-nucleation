@@ -1,6 +1,6 @@
 {
   "updated_local_date": "2026-10-17",
-  "stage": "vasp_installed_paw_library_configured",
+  "stage": "gpu_training_smoke_tests_complete_fm_preparation_pending",
   "scientific_results": [],
   "system_selection": "open; compare Al-based alloy/nucleant candidates with alternatives",
   "github": "https://github.com/rryltsev/MLIP-nucleation",
@@ -32,7 +32,7 @@
       "deepmd_2210_k40"
     ],
     "vasp": "VASP 6.6.1 CPU/MPI subsequently installed and validated; see vasp_installation",
-    "runtime_tests": "VASP four selected upstream cases passed; MLIP runtime checks remain pending",
+    "runtime_tests": "VASP four upstream cases; A100 DPA4/DPA4c/se_e2_a and K40m se_e2_a synthetic training passed; real FM finetuning and GRACE pending",
     "latex_preview": "compiler could not start due Windows sandbox access error 5; source preserved"
   },
   "vasp_installation": {
@@ -54,7 +54,8 @@
   },
   "blocking_inputs": [],
   "next_actions": [
-    "agree a bounded Slurm runtime-check budget for A100 and legacy K40 environments",
+    "resolve/install isolated GRACE environment from proposed specification and validate A100 training",
+    "select and hash trainable FM checkpoints for chosen chemistry; validate loading, actual finetuning, restart and deployment",
     "choose storage root after confirming quota, retention and backup policy",
     "select pilot material and observable through comparative literature review",
     "choose artifact storage and durable workflow executor"
@@ -74,11 +75,39 @@
     "scientific_validation": "no new DFT calculations; functional, variants and cutoffs remain study-specific choices"
   },
   "mlip_runtime_checks": {
-    "status": "initial tests collected; DPA4 dependency diagnosis continuing",
+    "status": "complete",
+    "report": "reports/mlip-environment-2026-10-17.tex",
+    "architecture_preferences": [
+      "DPA4",
+      "DPA4c",
+      "GRACE"
+    ],
+    "architecture_scope": "extensible; checkpoint and pilot chemistry remain unselected",
+    "registry": "configs/model_backends.json",
     "runs": [
       "runs/mlip-smoke-20261017-a100-01/manifest.json",
-      "runs/mlip-smoke-20261017-k40m-01/manifest.json"
+      "runs/mlip-smoke-20261017-k40m-01/manifest.json",
+      "runs/mlip-smoke-20261017-a100-vesin-01/manifest.json"
     ],
-    "observations": "A100 se_e2_a and DPA4c train 20 steps; DPA4 lacks vesin-torch/nvalchemiops; K40m legacy DeepMD train 20 steps; GRACE absent"
+    "job_ids": [
+      "20950192",
+      "20950193",
+      "20950195"
+    ],
+    "total_gpu_seconds": 241,
+    "preferred_a100_environment": "lammps_deepmd_dpa4",
+    "observations": [
+      "A100 se_e2_a, DPA4 and DPA4c each passed 20 synthetic training steps in lammps_deepmd_dpa4",
+      "DPA4 first failed in deepmd_320_a100 due missing vesin-torch/nvalchemiops; failure retained",
+      "K40m se_e2_a passed 20 steps with DeepMD 2.2.10 TF2.9 CUDA10.2 sm_35",
+      "No existing environment modified; GRACE absent; standard FM caches absent"
+    ],
+    "not_validated": [
+      "selected foundation checkpoint loading and actual fine-tuning",
+      "save/restart and export/deployment equivalence",
+      "multi-GPU execution and production-size memory/performance",
+      "GRACE runtime"
+    ],
+    "latex_preview": "built-in compiler startup failed: Windows CreateProcessAsUserW access denied (5); new report source preserved; existing VASP editor left unchanged"
   }
 }

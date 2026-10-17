@@ -10,7 +10,7 @@
     "cpu_count_approx": 1000
   },
   "verified": false,
-  "inventory_status": "login inventory complete; VASP CPU/MPI build and four upstream cases verified on apollo31; MLIP GPU runtime unverified",
+  "inventory_status": "VASP CPU/MPI verified; A100 DPA4/DPA4c and K40m legacy DeepMD small training tests passed; GRACE and production FM finetuning pending",
   "inventory_report": "reports/cluster-inventory-2026-10-17.tex",
   "candidate_partitions": {
     "cpu_dft": "apollo",
@@ -50,5 +50,40 @@
     "default_family": null,
     "default_variants": null,
     "selection_policy": "choose family and exact variants explicitly in POSCAR species order; preserve potcar-provenance.json per run"
+  },
+  "mlip_training": {
+    "architecture_registry": "configs/model_backends.json",
+    "report": "reports/mlip-environment-2026-10-17.tex",
+    "a100": {
+      "environment": "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4",
+      "partition": "v100",
+      "gres": "gpu:a100:1",
+      "validated_node": "tesla-a101",
+      "gpu": "NVIDIA A100-PCIE-40GB",
+      "torch": "2.11.0+cu130",
+      "deepmd": "3.2.0",
+      "validated_architectures": [
+        "se_e2_a",
+        "dpa4",
+        "dpa4c"
+      ],
+      "validation": "20-step synthetic training only"
+    },
+    "k40m": {
+      "environment": "/home/u3129/miniconda3/envs/deepmd_2210_k40",
+      "partition": "debug",
+      "gres": "gpu:k40m:1",
+      "validated_node": "tesla47",
+      "tensorflow": "2.9.0",
+      "cuda": "10.2",
+      "deepmd": "2.2.10",
+      "validated_architectures": [
+        "se_e2_a"
+      ],
+      "validation": "20-step synthetic legacy training; no modern FM support established"
+    },
+    "grace": "not installed; proposed isolated environment environments/grace-a100.proposed.yml",
+    "runtime_check_work_root": "/home6/u3129/mlip-research/runs",
+    "production_allocation_budget": null
   }
 }

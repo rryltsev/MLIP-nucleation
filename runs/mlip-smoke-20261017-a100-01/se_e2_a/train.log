@@ -1,0 +1,117 @@
+[2026-10-17 21:36:48,513] DEEPMD INFO    DeePMD version: 3.2.0
+[2026-10-17 21:36:48,513] DEEPMD INFO    Configuration path: input.json
+--------------------------------------------------------------------------
+WARNING: Open MPI will create a shared memory backing file in a
+directory that appears to be mounted on a network filesystem.
+Creating the shared memory backup file on a network file system, such
+as NFS or Lustre is not recommended -- it may cause excessive network
+traffic to your file servers and/or cause shared memory traffic in
+Open MPI to be much slower than expected.
+
+You may want to check what the typical temporary directory is on your
+node.  Possible sources of the location of this temporary directory
+include the $TEMPDIR, $TEMP, and $TMP environment variables.
+
+Note, too, that system administrators can set a list of filesystems
+where Open MPI is disallowed from creating temporary files by setting
+the MCA parameter "orte_no_session_dir".
+
+  Local host: tesla-a101
+  Filename:   /home6/u3129/mlip-research/runs/mlip-smoke-20261017-a100-01/tmp/ompi.tesla-a101.13129/jf.0/3913089024/shared_mem_cuda_pool.tesla-a101
+
+You can set the MCA parameter shmem_mmap_enable_nfs_warning to 0 to
+disable this message.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: Open MPI will create a shared memory backing file in a
+directory that appears to be mounted on a network filesystem.
+Creating the shared memory backup file on a network file system, such
+as NFS or Lustre is not recommended -- it may cause excessive network
+traffic to your file servers and/or cause shared memory traffic in
+Open MPI to be much slower than expected.
+
+You may want to check what the typical temporary directory is on your
+node.  Possible sources of the location of this temporary directory
+include the $TEMPDIR, $TEMP, and $TMP environment variables.
+
+Note, too, that system administrators can set a list of filesystems
+where Open MPI is disallowed from creating temporary files by setting
+the MCA parameter "orte_no_session_dir".
+
+  Local host: tesla-a101
+  Filename:   /home6/u3129/mlip-research/runs/mlip-smoke-20261017-a100-01/tmp/ompi.tesla-a101.13129/jf.0/3913089024/shared_mem_cuda_btl_module.tesla-a101
+
+You can set the MCA parameter shmem_mmap_enable_nfs_warning to 0 to
+disable this message.
+--------------------------------------------------------------------------
+[2026-10-17 21:36:49,980] DEEPMD INFO     _____               _____   __  __  _____           _     _  _   
+[2026-10-17 21:36:49,980] DEEPMD INFO    |  __ \             |  __ \ |  \/  ||  __ \         | |   (_)| |  
+[2026-10-17 21:36:49,980] DEEPMD INFO    | |  | |  ___   ___ | |__) || \  / || |  | | ______ | | __ _ | |_ 
+[2026-10-17 21:36:49,980] DEEPMD INFO    | |  | | / _ \ / _ \|  ___/ | |\/| || |  | ||______|| |/ /| || __|
+[2026-10-17 21:36:49,980] DEEPMD INFO    | |__| ||  __/|  __/| |     | |  | || |__| |        |   < | || |_ 
+[2026-10-17 21:36:49,980] DEEPMD INFO    |_____/  \___| \___||_|     |_|  |_||_____/         |_|\_\|_| \__|
+[2026-10-17 21:36:49,980] DEEPMD INFO    Please read and cite:
+[2026-10-17 21:36:49,980] DEEPMD INFO    Wang, Zhang, Han and E, Comput.Phys.Comm. 228, 178-184 (2018)
+[2026-10-17 21:36:49,980] DEEPMD INFO    Zeng et al, J. Chem. Phys., 159, 054801 (2023)
+[2026-10-17 21:36:49,980] DEEPMD INFO    Zeng et al, J. Chem. Theory Comput., 21, 4375-4385 (2025)
+[2026-10-17 21:36:49,980] DEEPMD INFO    See https://deepmd.rtfd.io/credits/ for details.
+[2026-10-17 21:36:49,980] DEEPMD INFO    -----------------------------------------------------------------------------------------------------------------------------------------------------
+[2026-10-17 21:36:49,980] DEEPMD INFO    Installed to:         /misc/home4/u3129/miniconda3/envs/deepmd_320_a100/lib/python3.12/site-packages/deepmd
+[2026-10-17 21:36:49,980] DEEPMD INFO    Source:               
+[2026-10-17 21:36:49,980] DEEPMD INFO    Source Branch:        main
+[2026-10-17 21:36:49,980] DEEPMD INFO    Source Commit:        d021382
+[2026-10-17 21:36:49,980] DEEPMD INFO    Source Commit at:     2026-08-22 13:59:05 +0200
+[2026-10-17 21:36:49,980] DEEPMD INFO    Float Precision:      Double
+[2026-10-17 21:36:49,980] DEEPMD INFO    Build Variant:        CUDA
+[2026-10-17 21:36:49,980] DEEPMD INFO    Backend:              PyTorch
+[2026-10-17 21:36:49,980] DEEPMD INFO    PT Ver:               v2.12.0-gUnknown
+[2026-10-17 21:36:49,980] DEEPMD INFO    Custom OP Enabled:    True
+[2026-10-17 21:36:49,980] DEEPMD INFO    Built with PT Ver:    2.12.0
+[2026-10-17 21:36:49,980] DEEPMD INFO    Built with PT Inc:    /misc/home4/u3129/miniconda3/envs/deepmd_320_a100/lib/python3.12/site-packages/torch/include
+[2026-10-17 21:36:49,980] DEEPMD INFO                          /misc/home4/u3129/miniconda3/envs/deepmd_320_a100/lib/python3.12/site-packages/torch/../../../../include/torch/csrc/api/include
+[2026-10-17 21:36:49,980] DEEPMD INFO    Built with PT Lib:    /misc/home4/u3129/miniconda3/envs/deepmd_320_a100/lib/python3.12/site-packages/torch/lib
+[2026-10-17 21:36:49,980] DEEPMD INFO    Running on:           tesla-a101
+[2026-10-17 21:36:49,980] DEEPMD INFO    Computing Device:     CUDA:0
+[2026-10-17 21:36:49,980] DEEPMD INFO    Device Name:          NVIDIA A100-PCIE-40GB
+[2026-10-17 21:36:49,980] DEEPMD INFO    CUDA_VISIBLE_DEVICES: 0
+[2026-10-17 21:36:49,981] DEEPMD INFO    Visible GPU Count:    1
+[2026-10-17 21:36:49,981] DEEPMD INFO    Num Intra Threads:    4
+[2026-10-17 21:36:49,981] DEEPMD INFO    Num Inter Threads:    1
+[2026-10-17 21:36:49,981] DEEPMD INFO    -----------------------------------------------------------------------------------------------------------------------------------------------------
+[2026-10-17 21:36:50,040] DEEPMD INFO    Calculate neighbor statistics... (add --skip-neighbor-stat to skip this step)
+[2026-10-17 21:36:52,267] DEEPMD INFO    Neighbor statistics: training data with minimal neighbor distance: 2.477406
+[2026-10-17 21:36:52,267] DEEPMD INFO    Neighbor statistics: training data with maximum neighbor size: [3] (cutoff radius: 5.000000)
+[2026-10-17 21:36:52,311] DEEPMD INFO    Constructing DataLoaders from 1 systems
+[2026-10-17 21:36:52,318] DEEPMD INFO    Constructing DataLoaders from 1 systems
+[2026-10-17 21:36:52,328] DEEPMD INFO    Packing data for statistics from 1 systems
+[2026-10-17 21:36:52,867] DEEPMD INFO    RMSE of energy per atom after linear regression is: 0.04277413713324904 in the unit of energy.
+[2026-10-17 21:36:58,447] DEEPMD INFO    ---Summary of DataSystem: Training     -----------------------------------------------
+[2026-10-17 21:36:58,447] DEEPMD INFO    Found 1 System(s):
+[2026-10-17 21:36:58,447] DEEPMD INFO                                        system  natoms  bch_sz  n_bch   prob       pbc
+[2026-10-17 21:36:58,447] DEEPMD INFO    -- /mlip-smoke-20261017-a100-01/data/train       4       1       8  1.000e+00    T
+[2026-10-17 21:36:58,447] DEEPMD INFO    --------------------------------------------------------------------------------------
+[2026-10-17 21:36:58,447] DEEPMD INFO    ---Summary of DataSystem: Validation   -----------------------------------------------
+[2026-10-17 21:36:58,447] DEEPMD INFO    Found 1 System(s):
+[2026-10-17 21:36:58,447] DEEPMD INFO                                        system  natoms  bch_sz  n_bch   prob       pbc
+[2026-10-17 21:36:58,447] DEEPMD INFO    -- -smoke-20261017-a100-01/data/validation       4       1       4  1.000e+00    T
+[2026-10-17 21:36:58,447] DEEPMD INFO    --------------------------------------------------------------------------------------
+[2026-10-17 21:36:58,448] DEEPMD INFO    Model Params:  0.000 M   (Trainable: 0.000 M)
+[2026-10-17 21:36:58,449] DEEPMD INFO    Start to train 20 steps.
+[2026-10-17 21:36:59,721] DEEPMD INFO    Batch       1: trn: rmse = 2.78e+00, rmse_e = 1.30e+00, rmse_f = 9.70e-01, lr = 1.00e-03
+[2026-10-17 21:36:59,721] DEEPMD INFO    Batch       1: val: rmse = 2.81e+00, rmse_e = 1.32e+00, rmse_f = 9.80e-01
+[2026-10-17 21:36:59,721] DEEPMD INFO    Batch       1: total wall time = 1.27 s
+[2026-10-17 21:36:59,784] DEEPMD INFO    Batch       5: trn: rmse = 2.85e+00, rmse_e = 1.32e+00, rmse_f = 1.07e+00, lr = 1.00e-03
+[2026-10-17 21:36:59,784] DEEPMD INFO    Batch       5: val: rmse = 2.92e+00, rmse_e = 1.34e+00, rmse_f = 1.14e+00
+[2026-10-17 21:36:59,784] DEEPMD INFO    Batch       5: total wall time = 0.06 s, eta = 0:00:00 at 2026-10-17 21:36
+[2026-10-17 21:36:59,854] DEEPMD INFO    Batch      10: trn: rmse = 2.56e+00, rmse_e = 1.19e+00, rmse_f = 9.50e-01, lr = 5.62e-04
+[2026-10-17 21:36:59,854] DEEPMD INFO    Batch      10: val: rmse = 2.88e+00, rmse_e = 1.33e+00, rmse_f = 1.13e+00
+[2026-10-17 21:36:59,854] DEEPMD INFO    Batch      10: total wall time = 0.07 s, eta = 0:00:00 at 2026-10-17 21:36
+[2026-10-17 21:36:59,925] DEEPMD INFO    Batch      15: trn: rmse = 2.56e+00, rmse_e = 1.18e+00, rmse_f = 1.02e+00, lr = 3.16e-04
+[2026-10-17 21:36:59,925] DEEPMD INFO    Batch      15: val: rmse = 2.72e+00, rmse_e = 1.25e+00, rmse_f = 1.10e+00
+[2026-10-17 21:36:59,925] DEEPMD INFO    Batch      15: total wall time = 0.07 s, eta = 0:00:00 at 2026-10-17 21:36
+[2026-10-17 21:36:59,996] DEEPMD INFO    Batch      20: trn: rmse = 2.70e+00, rmse_e = 1.23e+00, rmse_f = 1.09e+00, lr = 1.78e-04
+[2026-10-17 21:36:59,996] DEEPMD INFO    Batch      20: val: rmse = 2.79e+00, rmse_e = 1.27e+00, rmse_f = 1.16e+00
+[2026-10-17 21:36:59,996] DEEPMD INFO    Batch      20: total wall time = 0.07 s, eta = 0:00:00 at 2026-10-17 21:36
+[2026-10-17 21:37:00,030] DEEPMD INFO    Saved model to model.ckpt-20.pt
+[2026-10-17 21:37:00,032] DEEPMD INFO    average training time: 0.0141 s/batch (5 batches excluded)
+[2026-10-17 21:37:00,032] DEEPMD INFO    Trained model has been saved to: model.ckpt

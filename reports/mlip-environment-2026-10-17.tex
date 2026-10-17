@@ -1,0 +1,154 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,booktabs,tabularx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\title{MLIP training environments: GPU checks and foundation-model readiness}
+\author{MLIP-nucleation project}
+\date{17 October 2026}
+\begin{document}
+\maketitle
+
+\section{Operational conclusion}
+On the tested A100, the existing \texttt{lammps\_deepmd\_dpa4} conda environment
+successfully trained small DPA4 and DPA4c models. Its name does not limit it to
+LAMMPS: its DeePMD training executable was tested directly. The initial
+\texttt{deepmd\_320\_a100} environment trained DPA4c but failed on DPA4 because
+the Torch neighbor-list dependency was missing. No installed environment was modified.
+
+The existing \texttt{deepmd\_2210\_k40} environment trained a conventional
+\texttt{se\_e2\_a} model on K40m. This is a usable legacy software path;
+it does not establish modern foundation-model support on that GPU.
+GRACE/TensorPotential was not found in the inspected conda environments.
+
+\section{Slurm runs and acceptance criteria}
+All runs used account \texttt{imet-2026-2}, QoS \texttt{normal}, one GPU,
+four CPUs and 16 GiB RAM. The initial two jobs had ten-minute limits.
+After they finished in a combined 172 GPU-seconds, a five-minute follow-up
+tested a different existing environment with the missing dependency.
+The three jobs consumed 241 GPU-seconds in total (scheduler elapsed times,
+including startup), below the initial twenty GPU-minute envelope.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{@{}llllX@{}}
+\toprule
+Job & Partition/node & Elapsed & Outcome & Scope \\
+\midrule
+20950192 & v100/tesla-a101 & 1:27 & Partial & se\_e2\_a and DPA4c passed; DPA4 dependency failure \\
+20950193 & debug/tesla47 & 1:25 & Passed & legacy se\_e2\_a training \\
+20950195 & v100/tesla-a101 & 1:09 & Passed & se\_e2\_a, DPA4 and DPA4c training \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Each successful case completed 20 optimizer steps, produced a checkpoint,
+and had a finite training/validation learning curve. A separate GPU probe
+performed forward and gradient operations on an explicitly selected CUDA/GPU
+device; DeepMD logs independently identified the training device as CUDA:0 or GPU:0.
+Scheduler completion alone was not used as the acceptance criterion.
+
+The inputs are deliberately small synthetic harmonic-pair configurations:
+four Al-labelled atoms, eight training and four independently generated
+validation configurations, seed 20261017. Labels are analytic, not DFT and
+not foundation-model predictions. Units are eV and eV/angstrom; the saved
+virial convention is $\sum_i\mathbf r_i\otimes\mathbf F_i$, in eV and
+row-major tensor order. Virial loss was disabled in these training probes.
+This test neither selects Al as the research system nor measures scientific
+accuracy, production throughput, memory scaling or model suitability.
+Small-run timings across the two software stacks are not a GPU performance comparison.
+
+\section{Observed software and failure diagnosis}
+The A100 was an NVIDIA A100-PCIE-40GB with driver 580.126.20 and compute
+capability 8.0. Both tested A100 environments contain DeePMD 3.2.0.
+The first used PyTorch 2.12.0/CUDA 13.0; the successful follow-up used
+PyTorch 2.11.0+cu130. Their installed Torch architecture lists include
+\texttt{sm\_80}, but not K40m's \texttt{sm\_35}.
+
+In \texttt{deepmd\_320\_a100}, ordinary \texttt{vesin} 0.6.1 is present,
+but \texttt{vesin-torch} is absent. The DPA4 traceback reports that neither
+neighbor-list implementation is importable. Inspection of the installed
+selection function identifies \texttt{vesin-torch} or
+\texttt{nvalchemi-toolkit-ops} as the relevant alternatives.
+The follow-up environment already contains \texttt{vesin-torch} 0.6.1 and
+passes the identical DPA4 input. This supports using that existing environment
+for initial DPA4/DPA4c work. Adding \texttt{vesin-torch} to a separately
+versioned clone of the first environment is an alternative; an in-place
+upgrade was not performed. DPA4c used the available dense neighbor-graph
+fallback, so the optional NV acceleration path remains untested.
+
+The K40m exposed 11441 MiB of GPU memory and driver 440.33.01.
+Its environment contains DeePMD 2.2.10 and TensorFlow 2.9.0 built for
+CUDA 10.2/cuDNN 7, explicitly including \texttt{sm\_35}. Both its GPU
+gradient probe and DeepMD training passed. Preserve this environment for
+compatible legacy students; the modern A100 Torch binaries cannot be used
+on K40m. This is a software compatibility observation, not a claim that all
+possible older or custom builds have been evaluated.
+
+\section{What remains for foundation-model fine-tuning}
+\begin{enumerate}
+\item \textbf{GRACE installation.} Create a separate environment, initially
+Python 3.11, TensorPotential 0.6.1, TensorFlow 2.20 and matching legacy Keras.
+Published package metadata requires TensorFlow $\leq2.20$ on Linux,
+including CUDA dependencies. Existing DeepMD A100 TensorFlow is 2.21, so
+reusing it would introduce a dependency conflict.
+\path{environments/grace-a100.proposed.yml} is an installation proposal,
+not an installed or resolved lockfile. Resolve its dependencies, capture
+an explicit lock and verify actual GRACE training on A100 before use.
+
+\item \textbf{Trainable checkpoint selection.} No checkpoint was selected
+or downloaded by these tests, and standard DeepMD/GRACE cache directories
+were absent. Choose a checkpoint separately from the architecture, recording
+source revision, file hash, license, chemical coverage and pretraining label
+settings. GRACE fine-tuning needs checkpoint files and model definition,
+not only an inference SavedModel. DeepMD exposes a pretrained-model
+download command; inspect the installed version's model list rather than
+assuming every architecture preset is pretrained weights.
+
+\item \textbf{Real fine-tuning and deployment checks.} Test loading the
+chosen weights, energy-reference alignment, parameter updates, save/restart,
+and export/inference consistency. Those checks, LoRA, multi-GPU training,
+DPA4c compression and LAMMPS execution were not exercised here. Optional
+\texttt{nvalchemi-toolkit-ops} acceleration should be evaluated separately.
+Use the independently validated DFT protocol and grouped data splits for
+scientific work, preserving DFT and teacher labels separately.
+\end{enumerate}
+
+\section{Persistence and extension}
+The candidate architecture registry is \path{configs/model_backends.json}.
+It separates architecture, execution backend, candidate role and a future
+checkpoint record, and lists the operations required of a future shared
+adapter. Such an adapter has not yet been implemented. Additional architectures
+can be added without changing the research workflow or silently replacing
+the selected checkpoint.
+
+Run records are under \path{runs/mlip-smoke-20261017-a100-01/},
+\path{runs/mlip-smoke-20261017-k40m-01/} and
+\path{runs/mlip-smoke-20261017-a100-vesin-01/}.
+They retain submission intents, job IDs, input script hashes, generated-data
+hashes, exact training inputs, package snapshots, scheduler state, learning
+curves and checkpoint hashes. Collected records are checked against remote
+SHA-256 values. Test checkpoints remain in their remote run directories under
+\path{/home6/u3129/mlip-research/runs/}; they are not accepted scientific models
+or durable model releases. The runtime source is preserved by Git commit
+\texttt{6bfe80f}; individual manifest hashes identify the exact submitted bytes.
+
+\section{Primary sources consulted}
+Accessed 17 October 2026. Cluster observations above come from the saved run records.
+\begin{itemize}
+\item DPA4 backend and fine-tuning guidance:
+\url{https://docs.deepmodeling.com/projects/deepmd/en/stable/model/dpa4.html}.
+\item DPA4c backend and compression requirements:
+\url{https://docs.deepmodeling.com/projects/deepmd/en/stable/model/dpa4c.html}.
+\item GRACE installation and legacy Keras:
+\url{https://gracemaker.readthedocs.io/en/latest/gracemaker/install/}.
+\item Published TensorPotential 0.6.1 metadata:
+\url{https://pypi.org/pypi/tensorpotential/0.6.1/json}.
+\item GRACE checkpoint requirements:
+\url{https://gracemaker.readthedocs.io/en/latest/gracemaker/foundation/}.
+\item DeepMD pretrained-model selection:
+\url{https://docs.deepmodeling.com/projects/deepmd/en/stable/model/pretrained.html}.
+\end{itemize}
+\end{document}

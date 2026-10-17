@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "scope": "Extensible candidate registry; architecture support is distinct from a selected foundation checkpoint",
+  "checkpoint_contract": {
+    "required_before_scientific_finetuning": [
+      "source URL and exact revision",
+      "artifact SHA-256 and license",
+      "element/type-map coverage",
+      "pretraining label settings and reference energies",
+      "overlap check against held-out DFT systems",
+      "grouped target dataset and validation protocol"
+    ],
+    "required_adapter_operations": [
+      "environment_probe",
+      "load_checkpoint",
+      "predict_energy_force_stress",
+      "finetune",
+      "save_restart",
+      "export",
+      "validate_deployment",
+      "record_provenance"
+    ],
+    "note": "Adapter operations define a future integration contract; no common execution adapter is implemented yet"
+  },
+  "architectures": [
+    {
+      "id": "dpa4",
+      "framework": "deepmd-kit",
+      "backend": "pytorch",
+      "train_flag": "--pt",
+      "candidate_roles": [
+        "teacher",
+        "fine-tuned model"
+      ],
+      "preferred_hardware": "A100",
+      "checkpoint": null,
+      "environment_candidates": [
+        "lammps_deepmd_dpa4",
+        "deepmd_320_a100"
+      ],
+      "dependency_observation": "deepmd_320_a100 contains vesin 0.6.1 but lacks vesin-torch; DPA4 train fails; lammps_deepmd_dpa4 has vesin-torch 0.6.1",
+      "optional_acceleration": "nvalchemi-toolkit-ops; test compatibility and numerical equivalence before adopting",
+      "documentation": "https://docs.deepmodeling.com/projects/deepmd/en/stable/model/dpa4.html",
+      "runtime_evidence": [
+        "runs/mlip-smoke-20261017-a100-01/manifest.json",
+        "runs/mlip-smoke-20261017-a100-vesin-01/manifest.json"
+      ],
+      "preferred_environment": "lammps_deepmd_dpa4",
+      "runtime_observation": "20-step synthetic GPU training passes in lammps_deepmd_dpa4 on A100; checkpoint loading/finetuning and deployment remain untested"
+    },
+    {
+      "id": "dpa4c",
+      "framework": "deepmd-kit",
+      "backend": "pytorch_exportable",
+      "train_flag": "--pt-expt",
+      "candidate_roles": [
+        "student",
+        "fine-tuned model"
+      ],
+      "preferred_hardware": "A100",
+      "checkpoint": null,
+      "environment_candidates": [
+        "deepmd_320_a100",
+        "lammps_deepmd_dpa4"
+      ],
+      "runtime_observation": "20-step synthetic GPU training passes in lammps_deepmd_dpa4 on A100; checkpoint loading/finetuning and deployment remain untested",
+      "documentation": "https://docs.deepmodeling.com/projects/deepmd/en/stable/model/dpa4c.html",
+      "runtime_evidence": [
+        "runs/mlip-smoke-20261017-a100-01/manifest.json",
+        "runs/mlip-smoke-20261017-a100-vesin-01/manifest.json"
+      ],
+      "preferred_environment": "lammps_deepmd_dpa4"
+    },
+    {
+      "id": "grace",
+      "framework": "tensorpotential",
+      "backend": "tensorflow",
+      "candidate_roles": [
+        "teacher",
+        "student",
+        "fine-tuned model"
+      ],
+      "preferred_hardware": "A100",
+      "checkpoint": null,
+      "environment_candidates": [],
+      "runtime_observation": "not installed in inspected conda environments; not GPU-tested",
+      "proposed_environment": "environments/grace-a100.proposed.yml",
+      "dependency_observation": "published TensorPotential 0.6.1 requires TensorFlow <=2.20 and legacy tf_keras; existing DeepMD A100 TensorFlow is 2.21",
+      "checkpoint_requirement": "fine-tuning checkpoint with model.yaml and checkpoint files; inference-only SavedModel is insufficient",
+      "documentation": "https://gracemaker.readthedocs.io/en/latest/gracemaker/foundation/"
+    },
+    {
+      "id": "deepmd-se-e2-a-legacy",
+      "framework": "deepmd-kit",
+      "backend": "tensorflow",
+      "candidate_roles": [
+        "legacy student"
+      ],
+      "preferred_hardware": "K40m",
+      "checkpoint": null,
+      "environment_candidates": [
+        "deepmd_2210_k40"
+      ],
+      "runtime_observation": "20-step synthetic train passes with TF 2.9 CUDA 10.2 sm_35; does not establish DPA4/DPA4c/modern GRACE support",
+      "runtime_evidence": [
+        "runs/mlip-smoke-20261017-k40m-01/manifest.json"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "started_utc": "2026-10-17T16:39:44.536036+00:00",
+  "host": "tesla-a101",
+  "python": "3.12.14 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:46:43) [GCC 14.3.0]",
+  "prefix": "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4",
+  "backend": "pt",
+  "job_id": "20950195",
+  "cuda_visible_devices": "0",
+  "status": "passed",
+  "cases": [
+    {
+      "variant": "se_e2_a",
+      "backend_flag": [
+        "--pt"
+      ],
+      "input_sha256": "44cdbbb0cd06f42881050fd9ec87929b519858c9b67526d7b5964bb5c186c79f",
+      "train": {
+        "command": [
+          "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/dp",
+          "--pt",
+          "train",
+          "input.json"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 20.809509176760912,
+        "log": "/misc/home6/u3129/mlip-research/runs/mlip-smoke-20261017-a100-vesin-01/se_e2_a/train.log",
+        "log_sha256": "b522dfdf36858aa63f927f502a0c83a06395203f8b51a2e47f8c2bffe9c99836",
+        "tail": "PMD INFO    Packing data for statistics from 1 systems\n[2026-10-17 21:40:04,788] DEEPMD INFO    RMSE of energy per atom after linear regression is: 0.04277413713324901 in the unit of energy.\n[2026-10-17 21:40:07,301] DEEPMD INFO    ---Summary of DataSystem: Training     -----------------------------------------------\n[2026-10-17 21:40:07,301] DEEPMD INFO    Found 1 System(s):\n[2026-10-17 21:40:07,301] DEEPMD INFO                                        system  natoms  bch_sz  n_bch   prob       pbc\n[2026-10-17 21:40:07,301] DEEPMD INFO    -- smoke-20261017-a100-vesin-01/data/train       4       1       8  1.000e+00    T\n[2026-10-17 21:40:07,301] DEEPMD INFO    --------------------------------------------------------------------------------------\n[2026-10-17 21:40:07,301] DEEPMD INFO    ---Summary of DataSystem: Validation   -----------------------------------------------\n[2026-10-17 21:40:07,302] DEEPMD INFO    Found 1 System(s):\n[2026-10-17 21:40:07,302] DEEPMD INFO                                        system  natoms  bch_sz  n_bch   prob       pbc\n[2026-10-17 21:40:07,302] DEEPMD INFO    -- -20261017-a100-vesin-01/data/validation       4       1       4  1.000e+00    T\n[2026-10-17 21:40:07,302] DEEPMD INFO    --------------------------------------------------------------------------------------\n[2026-10-17 21:40:07,303] DEEPMD INFO    Model Params:  0.000 M   (Trainable: 0.000 M)\n[2026-10-17 21:40:07,303] DEEPMD INFO    Start to train 20 steps.\n[2026-10-17 21:40:08,458] DEEPMD INFO    Batch       1: trn: rmse = 2.78e+00, rmse_e = 1.30e+00, rmse_f = 9.70e-01, lr = 1.00e-03\n[2026-10-17 21:40:08,458] DEEPMD INFO    Batch       1: val: rmse = 2.81e+00, rmse_e = 1.32e+00, rmse_f = 9.80e-01\n[2026-10-17 21:40:08,458] DEEPMD INFO    Batch       1: total wall time = 1.15 s\n[2026-10-17 21:40:08,523] DEEPMD INFO    Batch       5: trn: rmse = 2.85e+00, rmse_e = 1.32e+00, rmse_f = 1.07e+00, lr = 1.00e-03\n[2026-10-17 21:40:08,523] DEEPMD INFO    Batch       5: val: rmse = 2.92e+00, rmse_e = 1.34e+00, rmse_f = 1.14e+00\n[2026-10-17 21:40:08,523] DEEPMD INFO    Batch       5: total wall time = 0.07 s, eta = 0:00:00 at 2026-10-17 21:40\n[2026-10-17 21:40:08,597] DEEPMD INFO    Batch      10: trn: rmse = 2.56e+00, rmse_e = 1.19e+00, rmse_f = 9.50e-01, lr = 5.62e-04\n[2026-10-17 21:40:08,597] DEEPMD INFO    Batch      10: val: rmse = 2.88e+00, rmse_e = 1.33e+00, rmse_f = 1.13e+00\n[2026-10-17 21:40:08,597] DEEPMD INFO    Batch      10: total wall time = 0.07 s, eta = 0:00:00 at 2026-10-17 21:40\n[2026-10-17 21:40:08,672] DEEPMD INFO    Batch      15: trn: rmse = 2.56e+00, rmse_e = 1.18e+00, rmse_f = 1.02e+00, lr = 3.16e-04\n[2026-10-17 21:40:08,673] DEEPMD INFO    Batch      15: val: rmse = 2.72e+00, rmse_e = 1.25e+00, rmse_f = 1.10e+00\n[2026-10-17 21:40:08,673] DEEPMD INFO    Batch      15: total wall time = 0.08 s, eta = 0:00:00 at 2026-10-17 21:40\n[2026-10-17 21:40:08,748] DEEPMD INFO    Batch      20: trn: rmse = 2.70e+00, rmse_e = 1.23e+00, rmse_f = 1.09e+00, lr = 1.78e-04\n[2026-10-17 21:40:08,749] DEEPMD INFO    Batch      20: val: rmse = 2.79e+00, rmse_e = 1.27e+00, rmse_f = 1.16e+00\n[2026-10-17 21:40:08,749] DEEPMD INFO    Batch      20: total wall time = 0.08 s, eta = 0:00:00 at 2026-10-17 21:40\n[2026-10-17 21:40:08,800] DEEPMD INFO    Saved model to model.ckpt-20.pt\n[2026-10-17 21:40:08,802] DEEPMD INFO    average training time: 0.0150 s/batch (5 batches excluded)\n[2026-10-17 21:40:08,802] DEEPMD INFO    Trained model has been saved to: model.ckpt\n"
+      },
+      "finite_learning_curve": true,
+      "last_step": 20,
+      "checkpoints": {
+        "model.ckpt-20.pt": "045626d6ceeb19a90c618d137b138faf61840193deaca9a4ab1761bc8f4db4cb",
+        "model.ckpt.pt": "045626d6ceeb19a90c618d137b138faf61840193deaca9a4ab1761bc8f4db4cb"
+      },
+      "status": "passed"
+    },
+    {
+      "variant": "dpa4",
+      "backend_flag": [
+        "--pt"
+      ],
+      "input_sha256": "27ec9c83a4017d3309e4061061ebffa1d065e9b887dd12f1d303f330fb66981a",
+      "train": {
+        "command": [
+          "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/dp",
+          "--pt",
+          "train",
+          "input.json"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 18.619517439976335,
+        "log": "/misc/home6/u3129/mlip-research/runs/mlip-smoke-20261017-a100-vesin-01/dpa4/train.log",
+        "log_sha256": "c9d7c54490bad79e286fe4b950ea478f6e47748e338e18d0160b444437d557a2",
+        "tail": "PMD INFO    Packing data for statistics from 1 systems\n[2026-10-17 21:40:16,924] DEEPMD INFO    RMSE of energy per atom after linear regression is: 0.04277413713324901 in the unit of energy.\n[2026-10-17 21:40:17,905] DEEPMD INFO    ---Summary of DataSystem: Training     -----------------------------------------------\n[2026-10-17 21:40:17,905] DEEPMD INFO    Found 1 System(s):\n[2026-10-17 21:40:17,905] DEEPMD INFO                                        system  natoms  bch_sz  n_bch   prob       pbc\n[2026-10-17 21:40:17,905] DEEPMD INFO    -- smoke-20261017-a100-vesin-01/data/train       4       1       8  1.000e+00    T\n[2026-10-17 21:40:17,905] DEEPMD INFO    --------------------------------------------------------------------------------------\n[2026-10-17 21:40:17,905] DEEPMD INFO    ---Summary of DataSystem: Validation   -----------------------------------------------\n[2026-10-17 21:40:17,905] DEEPMD INFO    Found 1 System(s):\n[2026-10-17 21:40:17,905] DEEPMD INFO                                        system  natoms  bch_sz  n_bch   prob       pbc\n[2026-10-17 21:40:17,905] DEEPMD INFO    -- -20261017-a100-vesin-01/data/validation       4       1       4  1.000e+00    T\n[2026-10-17 21:40:17,905] DEEPMD INFO    --------------------------------------------------------------------------------------\n[2026-10-17 21:40:17,907] DEEPMD INFO    Model Params:  0.012 M   (Trainable: 0.012 M)\n[2026-10-17 21:40:17,908] DEEPMD INFO    Start to train 20 steps.\n[2026-10-17 21:40:25,636] DEEPMD INFO    Batch       1: trn: rmse = 1.09e+00, rmse_e = 1.64e-01, rmse_f = 1.03e+00, lr = 1.00e-03\n[2026-10-17 21:40:25,636] DEEPMD INFO    Batch       1: val: rmse = 1.06e+00, rmse_e = 1.23e-01, rmse_f = 1.03e+00\n[2026-10-17 21:40:25,637] DEEPMD INFO    Batch       1: total wall time = 7.73 s\n[2026-10-17 21:40:25,883] DEEPMD INFO    Batch       5: trn: rmse = 1.07e+00, rmse_e = 3.13e-02, rmse_f = 1.07e+00, lr = 1.00e-03\n[2026-10-17 21:40:25,884] DEEPMD INFO    Batch       5: val: rmse = 1.12e+00, rmse_e = 1.38e-02, rmse_f = 1.11e+00\n[2026-10-17 21:40:25,884] DEEPMD INFO    Batch       5: total wall time = 0.25 s, eta = 0:00:00 at 2026-10-17 21:40\n[2026-10-17 21:40:26,180] DEEPMD INFO    Batch      10: trn: rmse = 8.85e-01, rmse_e = 4.39e-02, rmse_f = 8.81e-01, lr = 5.62e-04\n[2026-10-17 21:40:26,180] DEEPMD INFO    Batch      10: val: rmse = 1.03e+00, rmse_e = 9.97e-02, rmse_f = 1.01e+00\n[2026-10-17 21:40:26,181] DEEPMD INFO    Batch      10: total wall time = 0.30 s, eta = 0:00:00 at 2026-10-17 21:40\n[2026-10-17 21:40:26,477] DEEPMD INFO    Batch      15: trn: rmse = 8.21e-01, rmse_e = 1.49e-02, rmse_f = 8.21e-01, lr = 3.16e-04\n[2026-10-17 21:40:26,477] DEEPMD INFO    Batch      15: val: rmse = 9.12e-01, rmse_e = 5.88e-02, rmse_f = 9.05e-01\n[2026-10-17 21:40:26,477] DEEPMD INFO    Batch      15: total wall time = 0.30 s, eta = 0:00:00 at 2026-10-17 21:40\n[2026-10-17 21:40:26,775] DEEPMD INFO    Batch      20: trn: rmse = 9.35e-01, rmse_e = 7.67e-02, rmse_f = 9.22e-01, lr = 1.78e-04\n[2026-10-17 21:40:26,775] DEEPMD INFO    Batch      20: val: rmse = 9.83e-01, rmse_e = 7.41e-02, rmse_f = 9.71e-01\n[2026-10-17 21:40:26,775] DEEPMD INFO    Batch      20: total wall time = 0.30 s, eta = 0:00:00 at 2026-10-17 21:40\n[2026-10-17 21:40:26,793] DEEPMD INFO    Saved model to model.ckpt-20.pt\n[2026-10-17 21:40:26,795] DEEPMD INFO    average training time: 0.0594 s/batch (5 batches excluded)\n[2026-10-17 21:40:26,795] DEEPMD INFO    Trained model has been saved to: model.ckpt\n"
+      },
+      "finite_learning_curve": true,
+      "last_step": 20,
+      "checkpoints": {
+        "model.ckpt-20.pt": "85a15a65838abf30318fd77d3e9d69eeaff806b24f2f0e8ef3754fe97504baba",
+        "model.ckpt.pt": "85a15a65838abf30318fd77d3e9d69eeaff806b24f2f0e8ef3754fe97504baba"
+      },
+      "status": "passed"
+    },
+    {
+      "variant": "dpa4c",
+      "backend_flag": [
+        "--pt-expt"
+      ],
+      "input_sha256": "57387aeec4dc06dc57dd6bc09206736c09b628af306339e3974992d4b4167b1d",
+      "train": {
+        "command": [
+          "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/dp",
+          "--pt-expt",
+          "train",
+          "input.json"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 12.893841914832592,
+        "log": "/misc/home6/u3129/mlip-research/runs/mlip-smoke-20261017-a100-vesin-01/dpa4c/train.log",
+        "log_sha256": "890069afbdd00e56b4b2945160b88d39de6ee4f7d58a9bf1a8ec5e14a35fef75",
+        "tail": "PMD INFO    ---Summary of DataSystem: Training     -----------------------------------------------\n[2026-10-17 21:40:34,103] DEEPMD INFO    Found 1 System(s):\n[2026-10-17 21:40:34,103] DEEPMD INFO                                        system  natoms  bch_sz  n_bch   prob       pbc\n[2026-10-17 21:40:34,104] DEEPMD INFO    -- smoke-20261017-a100-vesin-01/data/train       4       1       8  1.000e+00    T\n[2026-10-17 21:40:34,104] DEEPMD INFO    --------------------------------------------------------------------------------------\n[2026-10-17 21:40:34,104] DEEPMD INFO    ---Summary of DataSystem: Validation   -----------------------------------------------\n[2026-10-17 21:40:34,104] DEEPMD INFO    Found 1 System(s):\n[2026-10-17 21:40:34,104] DEEPMD INFO                                        system  natoms  bch_sz  n_bch   prob       pbc\n[2026-10-17 21:40:34,104] DEEPMD INFO    -- -20261017-a100-vesin-01/data/validation       4       1       4  1.000e+00    T\n[2026-10-17 21:40:34,104] DEEPMD INFO    --------------------------------------------------------------------------------------\n[2026-10-17 21:40:34,291] DEEPMD INFO    Packing data for statistics from 1 systems\n[2026-10-17 21:40:35,206] DEEPMD INFO    RMSE of energy per atom after linear regression is: 0.04368376670813127 in the unit of energy.\n[2026-10-17 21:40:38,876] DEEPMD INFO    Model Params:  0.004 M   (Trainable: 0.004 M)\n[2026-10-17 21:40:38,877] DEEPMD INFO    Start to train 20 steps.\n[2026-10-17 21:40:39,383] DEEPMD INFO    Batch       1: trn: rmse = 1.73e+00, rmse_e = 5.60e-01, rmse_f = 1.32e+00, lr = 1.00e-03\n[2026-10-17 21:40:39,383] DEEPMD INFO    Batch       1: val: rmse = 1.65e+00, rmse_e = 5.21e-01, rmse_f = 1.28e+00\n[2026-10-17 21:40:39,383] DEEPMD INFO    Batch       1: total wall time = 0.50 s\n[2026-10-17 21:40:39,502] DEEPMD INFO    Batch       5: trn: rmse = 1.37e+00, rmse_e = 3.99e-01, rmse_f = 1.11e+00, lr = 1.00e-03\n[2026-10-17 21:40:39,502] DEEPMD INFO    Batch       5: val: rmse = 1.30e+00, rmse_e = 3.37e-01, rmse_f = 1.11e+00\n[2026-10-17 21:40:39,502] DEEPMD INFO    Batch       5: total wall time = 0.12 s, eta = 0:00:00 at 2026-10-17 21:40\n[2026-10-17 21:40:39,644] DEEPMD INFO    Batch      10: trn: rmse = 1.14e+00, rmse_e = 3.07e-01, rmse_f = 9.57e-01, lr = 5.62e-04\n[2026-10-17 21:40:39,644] DEEPMD INFO    Batch      10: val: rmse = 1.12e+00, rmse_e = 2.10e-01, rmse_f = 1.04e+00\n[2026-10-17 21:40:39,644] DEEPMD INFO    Batch      10: total wall time = 0.14 s, eta = 0:00:00 at 2026-10-17 21:40\n[2026-10-17 21:40:39,788] DEEPMD INFO    Batch      15: trn: rmse = 1.07e+00, rmse_e = 2.39e-01, rmse_f = 9.54e-01, lr = 3.16e-04\n[2026-10-17 21:40:39,788] DEEPMD INFO    Batch      15: val: rmse = 1.11e+00, rmse_e = 2.13e-01, rmse_f = 1.03e+00\n[2026-10-17 21:40:39,788] DEEPMD INFO    Batch      15: total wall time = 0.14 s, eta = 0:00:00 at 2026-10-17 21:40\n[2026-10-17 21:40:39,931] DEEPMD INFO    Batch      20: trn: rmse = 9.96e-01, rmse_e = 2.85e-01, rmse_f = 8.17e-01, lr = 1.78e-04\n[2026-10-17 21:40:39,931] DEEPMD INFO    Batch      20: val: rmse = 1.01e+00, rmse_e = 1.55e-01, rmse_f = 9.60e-01\n[2026-10-17 21:40:39,931] DEEPMD INFO    Batch      20: total wall time = 0.14 s, eta = 0:00:00 at 2026-10-17 21:40\n[2026-10-17 21:40:39,942] DEEPMD INFO    Saved model to model.ckpt-20.pt\n[2026-10-17 21:40:39,942] DEEPMD INFO    average training time: 0.0286 s/batch (5 batches excluded)\n[2026-10-17 21:40:39,943] DEEPMD INFO    Trained model has been saved to: model.ckpt\n"
+      },
+      "finite_learning_curve": true,
+      "last_step": 20,
+      "checkpoints": {
+        "model.ckpt-20.pt": "bf10473c6b18f6de40a6cb40e7a32257dd17771e394a553ea080c7621b08f534",
+        "model.ckpt.pt": "bf10473c6b18f6de40a6cb40e7a32257dd17771e394a553ea080c7621b08f534"
+      },
+      "status": "passed"
+    }
+  ],
+  "packages": {
+    "deepmd-kit": "3.2.0",
+    "numpy": "2.5.3"
+  },
+  "gpu": {
+    "backend": "pytorch",
+    "version": "2.11.0+cu130",
+    "cuda_build": "13.0",
+    "device": "NVIDIA A100-PCIE-40GB",
+    "capability": [
+      8,
+      0
+    ],
+    "compiled_arches": [
+      "sm_75",
+      "sm_80",
+      "sm_86",
+      "sm_90",
+      "sm_100",
+      "sm_120"
+    ],
+    "gradient_device": "cuda:0"
+  },
+  "finished_utc": "2026-10-17T16:40:41.576199+00:00"
+}

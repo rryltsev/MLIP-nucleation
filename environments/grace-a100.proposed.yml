@@ -1,0 +1,13 @@
+# Proposed installation input, not a resolved lockfile or a validated environment.
+# Keep separate from DeepMD; TensorPotential 0.6.1 requires TensorFlow <=2.20.
+name: grace_ft_a100
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - tensorpotential==0.6.1
+      - tensorflow[and-cuda]==2.20.0
+      - tf-keras~=2.20.0
+      - dpdata==1.1.0

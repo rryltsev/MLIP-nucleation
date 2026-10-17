@@ -8,9 +8,9 @@ The source research brief is preserved in `project/brief.txt`. Scientific manusc
 
 - Remote repository: https://github.com/rryltsev/MLIP-nucleation
 - Cluster: `umt.imm.uran.ru:22`, user `u3129`, scheduler Slurm.
-- Observed Slurm configuration (2026-10-17): 74 unique nodes, 1850 Slurm CPUs, 2 A100, 18 K40m and 62 M2090 GPUs, including configured devices on unavailable nodes. Partition totals overlap. GPU memory and runtime compatibility remain unverified.
+- Observed Slurm configuration (2026-10-17): 74 unique nodes, 1850 Slurm CPUs, 2 A100, 18 K40m and 62 M2090 GPUs, including configured devices on unavailable nodes. Partition totals overlap. GPU runtime evidence below applies only to the tested allocations.
 - DFT engine: VASP 6.6.1 CPU/MPI installed in `/home/u3129/.local/opt/vasp/6.6.1-oneapi-2025`; `vasp_std`, `vasp_gam`, `vasp_ncl` passed four selected upstream cases on `apollo31`. See `reports/vasp-installation-2026-10-17.tex`.
-- A100 is the initial candidate for training. K40m execution requires a separate compatibility and performance check; no modern CUDA/PyTorch compatibility is assumed.
+- A100 DPA4/DPA4c training and K40m legacy DeepMD training passed small synthetic Slurm checks. Production-size memory/performance and actual FM fine-tuning remain untested. See `reports/mlip-environment-2026-10-17.tex`.
 
 ## Repository layout
 
@@ -36,7 +36,7 @@ tests/               scientifically meaningful verification
 
 ## Next milestones
 
-1. SSH, inventory and VASP CPU/MPI installation completed on 2026-10-17. The private PAW 64 library is configured below. Agree a bounded Slurm runtime check for existing MLIP environments. See `reports/cluster-inventory-2026-10-17.tex` and `reports/vasp-installation-2026-10-17.tex` for the earlier installation snapshots.
+1. SSH, inventory, VASP/PAW setup and small DeepMD GPU training checks completed on 2026-10-17. Install and validate the separate GRACE environment, then select and test actual trainable foundation checkpoints. See the reports below for evidence and limitations.
 2. On another computer clone the repository, configure its own credentials and read `project/state.json`.
 3. Compare candidate alloy/nucleant systems using literature novelty, experimental access, DFT feasibility and model chemical coverage. Choose one small pilot.
 4. Implement one executable path: structures → converged VASP labels → teacher fine-tuning → independent DFT validation → distillation → student validation → one observable → LaTeX report.
@@ -87,7 +87,25 @@ python scripts/inspect_cluster.py --output artifacts/latest-cluster-inventory.js
 
 Each probe records its own command, UTC timestamp, output and errors and has remote/local time limits. No jobs are submitted. The committed snapshot is under `configs/observations/`; scheduler availability changes over time.
 
-The default account is `imet-2026-2` with QoS `normal`. Candidate partitions are `apollo` for CPU DFT and `v100` for A100 training. Existing `deepmd_320_a100`, `deepmd_229_cpu` and `deepmd_2210_k40` environments activate and resolve `python`, `dp` and `lmp`; package imports and compute-node execution have not been tested. Their metadata and two additional DPA-labelled environments are documented in the LaTeX report. No shared environment was modified.
+The default account is `imet-2026-2` with QoS `normal`. Candidate partitions are `apollo` for CPU DFT and `v100` for A100 training. Initial activation observations are documented in the cluster inventory report; subsequent compute-node training checks are described below. No existing environment was modified.
+
+### MLIP training environments
+
+The preferred existing A100 environment for initial DPA4/DPA4c work is `/home/u3129/miniconda3/envs/lammps_deepmd_dpa4` (DeePMD 3.2.0, Torch 2.11.0+cu130, vesin-torch 0.6.1). Despite its name it includes the training CLI. Inside a Slurm allocation, source `/home/u3129/miniconda3/etc/profile.d/conda.sh` and run `conda activate lammps_deepmd_dpa4`. DPA4 uses `dp --pt train`; DPA4c uses `dp --pt-expt train`. The earlier `deepmd_320_a100` passes DPA4c but its DPA4 training fails without the Torch neighbor-list dependency. That failure is preserved.
+
+K40m `deepmd_2210_k40` (DeepMD 2.2.10, TF 2.9, CUDA 10.2) passes a small `se_e2_a` GPU training check. This does not establish DPA4/DPA4c/modern GRACE compatibility on K40m.
+
+Jobs `20950192`, `20950193`, `20950195` consumed a combined 241 single-GPU seconds. Successful cases completed 20 optimizer steps, with finite curves, checkpoint hashes and training-device confirmation. Inputs are explicitly synthetic harmonic pairs, not DFT. Run records are in `runs/mlip-smoke-20261017-*/`; the full interpretation is in `reports/mlip-environment-2026-10-17.tex`. Tiny tests do not provide a production performance comparison.
+
+GRACE/TensorPotential is absent from inspected environments. Its published TensorFlow <=2.20 requirement conflicts with TF 2.21 in the existing DeepMD A100 environment. `environments/grace-a100.proposed.yml` describes a separate proposed installation; it is not installed or locked. Select actual trainable FM checkpoints separately, record revisions/hashes and chemical coverage, then validate loading, fine-tuning, restart and export. No checkpoint was downloaded by these checks.
+
+`configs/model_backends.json` keeps the candidate list extensible: DPA4, DPA4c, GRACE and a legacy DeepMD student path. It defines a future adapter contract; a common execution adapter is not yet implemented.
+
+`scripts/run_mlip_smoke.py` records input hashes and submission intent before `sbatch`, captures the job ID, and collects small records with checksum verification. Recorded run IDs cannot be submitted again silently. To refresh a run, for example:
+
+```powershell
+python scripts/run_mlip_smoke.py collect runs/mlip-smoke-20261017-a100-vesin-01/manifest.json
+```
 
 ### VASP installation
 

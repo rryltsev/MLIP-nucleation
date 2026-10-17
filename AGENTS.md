@@ -7,6 +7,7 @@ Read `README.md`, `project/state.json`, and `project/brief.txt` before continuin
 - Preserve DFT labels separately from teacher predictions. Record energy, force and stress units, stress sign/order, electronic settings and label provenance.
 - Split datasets by parent structure/trajectory/system before fitting. Never select models or tune sampling using the held-out DFT test set.
 - Validate teacher and student against DFT and relevant physical observables. Record failed runs and negative evidence.
+- Current architecture priorities are DPA4, DPA4c and GRACE, with extensions allowed. Use `configs/model_backends.json`; architecture availability is not checkpoint readiness. A100 synthetic DPA4/DPA4c training is verified in `lammps_deepmd_dpa4`; K40m verification covers only legacy `se_e2_a`. Keep GRACE separate from existing DeepMD environments because of its TensorFlow version constraint.
 - Every published number and figure must trace to input hashes, code commit, model hash, analysis settings and source runs. Never invent results or citations.
 
 ## Execution and persistence

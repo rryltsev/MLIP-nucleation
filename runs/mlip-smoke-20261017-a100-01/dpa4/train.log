@@ -1,0 +1,155 @@
+[2026-10-17 21:37:07,292] DEEPMD INFO    DeePMD version: 3.2.0
+[2026-10-17 21:37:07,292] DEEPMD INFO    Configuration path: input.json
+--------------------------------------------------------------------------
+WARNING: Open MPI will create a shared memory backing file in a
+directory that appears to be mounted on a network filesystem.
+Creating the shared memory backup file on a network file system, such
+as NFS or Lustre is not recommended -- it may cause excessive network
+traffic to your file servers and/or cause shared memory traffic in
+Open MPI to be much slower than expected.
+
+You may want to check what the typical temporary directory is on your
+node.  Possible sources of the location of this temporary directory
+include the $TEMPDIR, $TEMP, and $TMP environment variables.
+
+Note, too, that system administrators can set a list of filesystems
+where Open MPI is disallowed from creating temporary files by setting
+the MCA parameter "orte_no_session_dir".
+
+  Local host: tesla-a101
+  Filename:   /home6/u3129/mlip-research/runs/mlip-smoke-20261017-a100-01/tmp/ompi.tesla-a101.13129/jf.0/791478272/shared_mem_cuda_pool.tesla-a101
+
+You can set the MCA parameter shmem_mmap_enable_nfs_warning to 0 to
+disable this message.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: Open MPI will create a shared memory backing file in a
+directory that appears to be mounted on a network filesystem.
+Creating the shared memory backup file on a network file system, such
+as NFS or Lustre is not recommended -- it may cause excessive network
+traffic to your file servers and/or cause shared memory traffic in
+Open MPI to be much slower than expected.
+
+You may want to check what the typical temporary directory is on your
+node.  Possible sources of the location of this temporary directory
+include the $TEMPDIR, $TEMP, and $TMP environment variables.
+
+Note, too, that system administrators can set a list of filesystems
+where Open MPI is disallowed from creating temporary files by setting
+the MCA parameter "orte_no_session_dir".
+
+  Local host: tesla-a101
+  Filename:   /home6/u3129/mlip-research/runs/mlip-smoke-20261017-a100-01/tmp/ompi.tesla-a101.13129/jf.0/791478272/shared_mem_cuda_btl_module.tesla-a101
+
+You can set the MCA parameter shmem_mmap_enable_nfs_warning to 0 to
+disable this message.
+--------------------------------------------------------------------------
+[2026-10-17 21:37:08,552] DEEPMD INFO     _____               _____   __  __  _____           _     _  _   
+[2026-10-17 21:37:08,552] DEEPMD INFO    |  __ \             |  __ \ |  \/  ||  __ \         | |   (_)| |  
+[2026-10-17 21:37:08,552] DEEPMD INFO    | |  | |  ___   ___ | |__) || \  / || |  | | ______ | | __ _ | |_ 
+[2026-10-17 21:37:08,552] DEEPMD INFO    | |  | | / _ \ / _ \|  ___/ | |\/| || |  | ||______|| |/ /| || __|
+[2026-10-17 21:37:08,552] DEEPMD INFO    | |__| ||  __/|  __/| |     | |  | || |__| |        |   < | || |_ 
+[2026-10-17 21:37:08,552] DEEPMD INFO    |_____/  \___| \___||_|     |_|  |_||_____/         |_|\_\|_| \__|
+[2026-10-17 21:37:08,552] DEEPMD INFO    Please read and cite:
+[2026-10-17 21:37:08,552] DEEPMD INFO    Wang, Zhang, Han and E, Comput.Phys.Comm. 228, 178-184 (2018)
+[2026-10-17 21:37:08,552] DEEPMD INFO    Zeng et al, J. Chem. Phys., 159, 054801 (2023)
+[2026-10-17 21:37:08,552] DEEPMD INFO    Zeng et al, J. Chem. Theory Comput., 21, 4375-4385 (2025)
+[2026-10-17 21:37:08,552] DEEPMD INFO    See https://deepmd.rtfd.io/credits/ for details.
+[2026-10-17 21:37:08,552] DEEPMD INFO    -----------------------------------------------------------------------------------------------------------------------------------------------------
+[2026-10-17 21:37:08,552] DEEPMD INFO    Installed to:         /misc/home4/u3129/miniconda3/envs/deepmd_320_a100/lib/python3.12/site-packages/deepmd
+[2026-10-17 21:37:08,552] DEEPMD INFO    Source:               
+[2026-10-17 21:37:08,552] DEEPMD INFO    Source Branch:        main
+[2026-10-17 21:37:08,552] DEEPMD INFO    Source Commit:        d021382
+[2026-10-17 21:37:08,552] DEEPMD INFO    Source Commit at:     2026-08-22 13:59:05 +0200
+[2026-10-17 21:37:08,552] DEEPMD INFO    Float Precision:      Double
+[2026-10-17 21:37:08,552] DEEPMD INFO    Build Variant:        CUDA
+[2026-10-17 21:37:08,552] DEEPMD INFO    Backend:              PyTorch
+[2026-10-17 21:37:08,552] DEEPMD INFO    PT Ver:               v2.12.0-gUnknown
+[2026-10-17 21:37:08,552] DEEPMD INFO    Custom OP Enabled:    True
+[2026-10-17 21:37:08,552] DEEPMD INFO    Built with PT Ver:    2.12.0
+[2026-10-17 21:37:08,552] DEEPMD INFO    Built with PT Inc:    /misc/home4/u3129/miniconda3/envs/deepmd_320_a100/lib/python3.12/site-packages/torch/include
+[2026-10-17 21:37:08,552] DEEPMD INFO                          /misc/home4/u3129/miniconda3/envs/deepmd_320_a100/lib/python3.12/site-packages/torch/../../../../include/torch/csrc/api/include
+[2026-10-17 21:37:08,552] DEEPMD INFO    Built with PT Lib:    /misc/home4/u3129/miniconda3/envs/deepmd_320_a100/lib/python3.12/site-packages/torch/lib
+[2026-10-17 21:37:08,552] DEEPMD INFO    Running on:           tesla-a101
+[2026-10-17 21:37:08,552] DEEPMD INFO    Computing Device:     CUDA:0
+[2026-10-17 21:37:08,552] DEEPMD INFO    Device Name:          NVIDIA A100-PCIE-40GB
+[2026-10-17 21:37:08,552] DEEPMD INFO    CUDA_VISIBLE_DEVICES: 0
+[2026-10-17 21:37:08,552] DEEPMD INFO    Visible GPU Count:    1
+[2026-10-17 21:37:08,552] DEEPMD INFO    Num Intra Threads:    4
+[2026-10-17 21:37:08,552] DEEPMD INFO    Num Inter Threads:    1
+[2026-10-17 21:37:08,552] DEEPMD INFO    -----------------------------------------------------------------------------------------------------------------------------------------------------
+[2026-10-17 21:37:08,614] DEEPMD INFO    Calculate neighbor statistics... (add --skip-neighbor-stat to skip this step)
+[2026-10-17 21:37:09,074] DEEPMD INFO    Neighbor statistics: training data with minimal neighbor distance: 2.477406
+[2026-10-17 21:37:09,074] DEEPMD INFO    Neighbor statistics: training data with maximum neighbor size: [3] (cutoff radius: 5.000000)
+[2026-10-17 21:37:09,081] DEEPMD INFO    Constructing DataLoaders from 1 systems
+[2026-10-17 21:37:09,087] DEEPMD INFO    Constructing DataLoaders from 1 systems
+[2026-10-17 21:37:09,544] DEEPMD INFO    Packing data for statistics from 1 systems
+[2026-10-17 21:37:09,554] DEEPMD INFO    RMSE of energy per atom after linear regression is: 0.04277413713324904 in the unit of energy.
+[2026-10-17 21:37:10,790] DEEPMD INFO    ---Summary of DataSystem: Training     -----------------------------------------------
+[2026-10-17 21:37:10,790] DEEPMD INFO    Found 1 System(s):
+[2026-10-17 21:37:10,791] DEEPMD INFO                                        system  natoms  bch_sz  n_bch   prob       pbc
+[2026-10-17 21:37:10,791] DEEPMD INFO    -- /mlip-smoke-20261017-a100-01/data/train       4       1       8  1.000e+00    T
+[2026-10-17 21:37:10,791] DEEPMD INFO    --------------------------------------------------------------------------------------
+[2026-10-17 21:37:10,791] DEEPMD INFO    ---Summary of DataSystem: Validation   -----------------------------------------------
+[2026-10-17 21:37:10,791] DEEPMD INFO    Found 1 System(s):
+[2026-10-17 21:37:10,791] DEEPMD INFO                                        system  natoms  bch_sz  n_bch   prob       pbc
+[2026-10-17 21:37:10,791] DEEPMD INFO    -- -smoke-20261017-a100-01/data/validation       4       1       4  1.000e+00    T
+[2026-10-17 21:37:10,791] DEEPMD INFO    --------------------------------------------------------------------------------------
+[2026-10-17 21:37:10,793] DEEPMD INFO    Model Params:  0.012 M   (Trainable: 0.012 M)
+[2026-10-17 21:37:10,794] DEEPMD INFO    Start to train 20 steps.
+Traceback (most recent call last):
+  File "/home/u3129/miniconda3/envs/deepmd_320_a100/bin/dp", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/misc/home4/u3129/miniconda3/envs/deepmd_320_a100/lib/python3.12/site-packages/deepmd/main.py", line 1158, in main
+    deepmd_main(args)
+  File "/misc/home4/u3129/miniconda3/envs/deepmd_320_a100/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 367, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/misc/home4/u3129/miniconda3/envs/deepmd_320_a100/lib/python3.12/site-packages/deepmd/pt/entrypoints/main.py", line 672, in main
+    train(
+  File "/misc/home4/u3129/miniconda3/envs/deepmd_320_a100/lib/python3.12/site-packages/deepmd/pt/entrypoints/main.py", line 471, in train
+    trainer.run()
+  File "/misc/home4/u3129/miniconda3/envs/deepmd_320_a100/lib/python3.12/site-packages/deepmd/pt/train/training.py", line 1324, in run
+    self._run()
+  File "/misc/home4/u3129/miniconda3/envs/deepmd_320_a100/lib/python3.12/site-packages/deepmd/pt/train/training.py", line 1824, in _run
+    step(step_id)
+  File "/misc/home4/u3129/miniconda3/envs/deepmd_320_a100/lib/python3.12/site-packages/deepmd/pt/train/training.py", line 1386, in step
+    model_pred, loss, more_loss = self.wrapper(
+                                  ^^^^^^^^^^^^^
+  File "/misc/home4/u3129/miniconda3/envs/deepmd_320_a100/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/misc/home4/u3129/miniconda3/envs/deepmd_320_a100/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/misc/home4/u3129/miniconda3/envs/deepmd_320_a100/lib/python3.12/site-packages/deepmd/pt/train/wrapper.py", line 211, in forward
+    model_pred, loss, more_loss = self.loss[task_key](
+                                  ^^^^^^^^^^^^^^^^^^^^
+  File "/misc/home4/u3129/miniconda3/envs/deepmd_320_a100/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/misc/home4/u3129/miniconda3/envs/deepmd_320_a100/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/misc/home4/u3129/miniconda3/envs/deepmd_320_a100/lib/python3.12/site-packages/deepmd/pt/loss/ener.py", line 250, in forward
+    model_pred = self._inject_atom_mask(model(**input_dict), input_dict)
+                                        ^^^^^^^^^^^^^^^^^^^
+  File "/misc/home4/u3129/miniconda3/envs/deepmd_320_a100/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/misc/home4/u3129/miniconda3/envs/deepmd_320_a100/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/misc/home4/u3129/miniconda3/envs/deepmd_320_a100/lib/python3.12/site-packages/deepmd/pt/model/model/sezm_model.py", line 833, in forward
+    model_ret = self.forward_common(
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/misc/home4/u3129/miniconda3/envs/deepmd_320_a100/lib/python3.12/site-packages/deepmd/pt/model/model/sezm_model.py", line 1034, in forward_common
+    edge_schema = self.build_neighbor_list(cc, atype, bb)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/misc/home4/u3129/miniconda3/envs/deepmd_320_a100/lib/python3.12/site-packages/deepmd/pt/model/model/sezm_model.py", line 2771, in build_neighbor_list
+    return _select_neighbor_builder(nf, coord.device).build(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/misc/home4/u3129/miniconda3/envs/deepmd_320_a100/lib/python3.12/site-packages/deepmd/pt/model/model/sezm_model.py", line 563, in _select_neighbor_builder
+    raise RuntimeError(
+RuntimeError: SeZM neighbor-list construction requires either 'nvalchemiops' or 'vesin', but neither is importable.

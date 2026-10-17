@@ -1,0 +1,38 @@
+{
+  "dpa4": {
+    "gpu_confirmed_by_log": true,
+    "lines": [
+      "[2026-10-17 21:40:15,860] DEEPMD INFO    Build Variant:        CUDA",
+      "[2026-10-17 21:40:15,860] DEEPMD INFO    Computing Device:     CUDA:0",
+      "[2026-10-17 21:40:15,860] DEEPMD INFO    Device Name:          NVIDIA A100-PCIE-40GB",
+      "[2026-10-17 21:40:15,860] DEEPMD INFO    Visible GPU Count:    1",
+      "[2026-10-17 21:40:26,793] DEEPMD INFO    Saved model to model.ckpt-20.pt"
+    ],
+    "source_log_sha256": "c9d7c54490bad79e286fe4b950ea478f6e47748e338e18d0160b444437d557a2",
+    "status": "passed"
+  },
+  "dpa4c": {
+    "gpu_confirmed_by_log": true,
+    "lines": [
+      "[2026-10-17 21:40:34,099] DEEPMD INFO    Build Variant:        CUDA",
+      "[2026-10-17 21:40:34,099] DEEPMD INFO    Computing Device:     CUDA:0",
+      "[2026-10-17 21:40:34,099] DEEPMD INFO    Device Name:          NVIDIA A100-PCIE-40GB",
+      "[2026-10-17 21:40:34,099] DEEPMD INFO    Visible GPU Count:    1",
+      "[2026-10-17 21:40:39,942] DEEPMD INFO    Saved model to model.ckpt-20.pt"
+    ],
+    "source_log_sha256": "890069afbdd00e56b4b2945160b88d39de6ee4f7d58a9bf1a8ec5e14a35fef75",
+    "status": "passed"
+  },
+  "se_e2_a": {
+    "gpu_confirmed_by_log": true,
+    "lines": [
+      "[2026-10-17 21:40:02,267] DEEPMD INFO    Build Variant:        CUDA",
+      "[2026-10-17 21:40:02,267] DEEPMD INFO    Computing Device:     CUDA:0",
+      "[2026-10-17 21:40:02,268] DEEPMD INFO    Device Name:          NVIDIA A100-PCIE-40GB",
+      "[2026-10-17 21:40:02,268] DEEPMD INFO    Visible GPU Count:    1",
+      "[2026-10-17 21:40:08,800] DEEPMD INFO    Saved model to model.ckpt-20.pt"
+    ],
+    "source_log_sha256": "b522dfdf36858aa63f927f502a0c83a06395203f8b51a2e47f8c2bffe9c99836",
+    "status": "passed"
+  }
+}

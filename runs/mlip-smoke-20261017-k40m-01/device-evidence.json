@@ -1,0 +1,13 @@
+{
+  "se_e2_a": {
+    "status": "passed",
+    "gpu_confirmed_by_log": true,
+    "lines": [
+      "DEEPMD INFO    build variant:        cuda",
+      "DEEPMD INFO    computing device:     gpu:0",
+      "DEEPMD INFO    Count of visible GPU: 1",
+      "DEEPMD INFO    saved checkpoint model.ckpt"
+    ],
+    "source_log_sha256": "f574d644c35e04826c74e33e1835234646ceac31c233f42174b26788d94ac05d"
+  }
+}
