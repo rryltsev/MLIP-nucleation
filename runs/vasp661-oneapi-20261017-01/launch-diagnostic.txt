@@ -1,0 +1,7 @@
+job_id=20950113
+node=apollo18
+drwx------ 21 u3129 users 8192 Oct  4 20:29 /home/u3129
+drwx------ 21 u3129 users 8192 Oct  4 20:29 /home4/u3129
+drwx------ 21 u3129 users 8192 Oct  4 20:29 /misc/home4/u3129
+drwx------ 4 u3129 users 152 Oct 17 20:32 /home/u3129/.local/opt/vasp/6.6.1-oneapi-2025
+build_script_readable_exit=0

@@ -100,7 +100,9 @@ def submit(path):
     # No automatic resubmission after any uncertain outcome.
     result = remote("set -eu; cd " + shlex.quote(manifest["remote_run_dir"]) +
                     "; test ! -e job.id; sbatch --parsable --job-name=" +
-                    shlex.quote(manifest["run_id"]) + " --output=slurm-%j.out build.sbatch > job.id; cat job.id")
+                    shlex.quote(manifest["run_id"]) + " --chdir=" + shlex.quote(manifest["remote_run_dir"]) +
+                    " --output=" + shlex.quote(manifest["remote_run_dir"] + "/slurm-%j.out") +
+                    " build.sbatch > job.id; cat job.id")
     job = result.strip().split(";")[0]
     if not re.fullmatch(r"\d+", job):
         raise RuntimeError("Uncertain submission response; inspect remote job.id and scheduler before retrying")
@@ -130,6 +132,31 @@ def refresh(path):
     print("Staged configuration refreshed; no job submitted")
 
 
+def prepare_retry(previous_path, run_id, new_path):
+    previous = json.loads(previous_path.read_text(encoding="utf-8"))
+    job_id = previous.get("job_id")
+    if not job_id or not re.fullmatch(r"\d+", job_id):
+        raise ValueError("Previous job ID is unknown; reconcile first")
+    observation = remote("sacct -X -j " + job_id + " -nP --format=JobIDRaw,State,ExitCode")
+    row = next((line.split("|") for line in observation.splitlines() if line.startswith(job_id + "|")), None)
+    if not row or row[1] not in {"FAILED", "CANCELLED", "TIMEOUT", "NODE_FAIL"}:
+        raise RuntimeError("Previous job is not confirmed terminal/unsuccessful")
+    if new_path.exists():
+        raise FileExistsError("Retry manifest already exists")
+    previous.update(stage="failed", scheduler_state=row[1], scheduler_exit_code=row[2])
+    save(previous_path, previous)
+    manifest = dict(previous)
+    manifest.update(run_id=run_id, remote_run_dir=REMOTE_ROOT + "/runs/" + run_id,
+                    previous_job_id=job_id, job_id=None, stage="staged",
+                    created_utc=datetime.now(timezone.utc).isoformat(),
+                    retry_reason="explicit logical home paths for Slurm cwd/stdout after pre-launch I/O failure")
+    manifest.pop("scheduler_state", None)
+    manifest.pop("scheduler_exit_code", None)
+    remote("set -eu; umask 077; mkdir " + shlex.quote(manifest["remote_run_dir"]))
+    save(new_path, manifest)
+    refresh(new_path)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="action", required=True)
@@ -141,6 +168,10 @@ def main():
     p.add_argument("manifest", type=Path)
     p = sub.add_parser("refresh")
     p.add_argument("manifest", type=Path)
+    p = sub.add_parser("prepare-retry")
+    p.add_argument("previous", type=Path)
+    p.add_argument("--run-id", required=True)
+    p.add_argument("--manifest", required=True, type=Path)
     args = parser.parse_args()
     if args.action == "stage":
         if not re.fullmatch(r"[a-zA-Z0-9_-]+", args.run_id):
@@ -148,8 +179,12 @@ def main():
         stage(args.archive, args.run_id, args.manifest)
     elif args.action == "submit":
         submit(args.manifest)
-    else:
+    elif args.action == "refresh":
         refresh(args.manifest)
+    else:
+        if not re.fullmatch(r"[a-zA-Z0-9_-]+", args.run_id):
+            parser.error("Unsafe run ID")
+        prepare_retry(args.previous, args.run_id, args.manifest)
 
 
 if __name__ == "__main__":
