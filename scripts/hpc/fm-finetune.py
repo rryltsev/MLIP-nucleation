@@ -58,9 +58,10 @@ def compare(before, loaded, after, backend):
             graph = trackable_object_graph_pb2.TrackableObjectGraph()
             graph.ParseFromString(r.get_tensor("_CHECKPOINTABLE_OBJECT_GRAPH"))
             model_id = next(c.node_id for c in graph.nodes[0].children if c.local_name == "model")
-            # Optimizer aliases can change canonical on-disk tensor keys. Walk
-            # the model subtree instead, then resolve each attribute's saved key.
-            queue = [(model_id,"model")]; seen = set(); values = {}
+            instructions_id = next(c.node_id for c in graph.nodes[model_id].children if c.local_name == "instructions")
+            # The final model also tracks _variables_to_train aliases. Traverse
+            # only instructions so these shorter aliases never rename a weight.
+            queue = [(instructions_id,"model/instructions")]; seen = set(); values = {}
             while queue:
                 node_id, name = queue.pop(0)
                 if node_id in seen: continue
@@ -68,7 +69,11 @@ def compare(before, loaded, after, backend):
                 for a in node.attributes:
                     dtype = r.get_variable_to_dtype_map().get(a.checkpoint_key)
                     if dtype is not None and dtype.is_floating:
-                        values[name+"/"+a.name] = r.get_tensor(a.checkpoint_key)
+                        # Old model stored the same fixed 6-A cutoff in its
+                        # basis-function child; the new class owns it directly.
+                        key=(name+"/"+a.name).replace('RadialBasis/basis_function/rc/','RadialBasis/rc/')
+                        assert key not in values, 'Ambiguous TensorFlow parameter alias'
+                        values[key] = r.get_tensor(a.checkpoint_key)
                 queue.extend((c.node_id,name+"/"+c.local_name) for c in sorted(node.children,key=lambda c:c.local_name))
             save(Path('tf-inventory-'+hashlib.sha256(str(p).encode()).hexdigest()[:8]+'.json'),
                  {'checkpoint':str(p),'model_tensors':{k:{'shape':list(v.shape),'sha256':hashlib.sha256(v.tobytes()).hexdigest()} for k,v in values.items()},
