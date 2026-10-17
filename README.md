@@ -36,7 +36,7 @@ tests/               scientifically meaningful verification
 
 ## Next milestones
 
-1. SSH, inventory and VASP CPU/MPI installation completed on 2026-10-17. Configure production PAW potentials and agree a bounded Slurm runtime check for existing MLIP environments. See `reports/cluster-inventory-2026-10-17.tex` and `reports/vasp-installation-2026-10-17.tex`.
+1. SSH, inventory and VASP CPU/MPI installation completed on 2026-10-17. The private PAW 64 library is configured below. Agree a bounded Slurm runtime check for existing MLIP environments. See `reports/cluster-inventory-2026-10-17.tex` and `reports/vasp-installation-2026-10-17.tex` for the earlier installation snapshots.
 2. On another computer clone the repository, configure its own credentials and read `project/state.json`.
 3. Compare candidate alloy/nucleant systems using literature novelty, experimental access, DFT feasibility and model chemical coverage. Choose one small pilot.
 4. Implement one executable path: structures → converged VASP labels → teacher fine-tuning → independent DFT validation → distillation → student validation → one observable → LaTeX report.
@@ -101,6 +101,38 @@ mpirun -np "$SLURM_NTASKS" vasp_std
 
 The same environment provides `vasp_gam` and `vasp_ncl`. Use a writable calculation directory such as an explicitly prepared directory under `/home6/u3129`; main home was read-only on the tested compute node. The environment sources pinned shared Intel Compiler/MPI/MKL scripts directly because compute Lmod does not expose the login Intel module name.
 
-Installation provenance and hashes are in `runs/vasp661-oneapi-20261017-05/`. Job `20950123` completed on `apollo31` in 9 min 27 s with 8 allocated CPUs. Four upstream cases passed, including gamma-only, noncollinear SOC and nonlocal vdW; the full upstream suite was not run. No GPU, HDF5 or optional external interfaces were enabled. A full licensed production PAW dataset still needs configuration; bundled test potentials remain private and are for validation.
+Installation provenance and hashes are in `runs/vasp661-oneapi-20261017-05/`. Job `20950123` completed on `apollo31` in 9 min 27 s with 8 allocated CPUs. Four upstream cases passed, including gamma-only, noncollinear SOC and nonlocal vdW; the full upstream suite was not run. No GPU, HDF5 or optional external interfaces were enabled. Use the separately installed PAW library below for production input preparation; bundled test potentials remain private and are for validation.
 
 The licensed source archive, source tree, binaries, test potentials and raw build logs remain on the cluster, outside Git. `scripts/install_vasp.py` records input hashes before submission and guards deployment on successful scheduler state, test coverage, resolved libraries and matching binary checksums. Earlier failed launch attempts and their diagnosed filesystem/module causes are retained in `runs/`.
+
+### PAW pseudopotentials
+
+The user-provided `Pseudopotentials_v6.4.zip` is stored privately, together with its extracted files, under:
+
+```text
+/home/u3129/.local/share/vasp/pseudopotentials/64-b3b00158ad69/
+    Pseudopotentials_v6.4.zip
+    potpaw_PBE/       # 343 potentials
+    potpaw_LDA/       # 297 potentials
+    registry.json    # identification and checksums, no potential contents
+    env.sh
+    vasp_potentials.py
+```
+
+`configs/vasp/paw-64.json` records all POTCAR identifiers and SHA-256 hashes, the two nested archive hashes and aggregate hashes of all extracted files. Installation evidence is in `runs/paw64-20261017-01/`. The archive and extracted files remain outside Git. Copying this library does not establish DFT convergence or select a functional for the study.
+
+To prepare a calculation on the cluster, explicitly choose one family and exact variants in **POSCAR species order**. For example, the following is only an input-assembly example, not a selected scientific protocol:
+
+```bash
+source /home/u3129/.local/share/vasp/pseudopotentials/64-b3b00158ad69/env.sh
+# In a new calculation directory, for a POSCAR whose species order is Al Ti:
+vasp_potcar --family PBE --variants Al Ti_pv --output POTCAR
+```
+
+The helper checks each selected source hash, concatenates in the supplied order and writes `potcar-provenance.json` with family, variants, individual hashes and assembled POTCAR hash. It refuses existing outputs and unknown variants. Preserve that provenance in the run manifest; do not commit POTCAR itself. Keep family and variants consistent across a DFT dataset, and validate cutoffs and other settings for the chosen system. Source `env.sh` above separately from the VASP executable environment; VASP itself reads the calculation's local POTCAR.
+
+To recheck the whole installed library without running VASP:
+
+```bash
+python3 "$VASP_PAW_ROOT/vasp_potentials.py" verify "$VASP_PAW_REGISTRY"
+```

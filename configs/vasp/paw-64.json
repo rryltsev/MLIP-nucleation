@@ -1,0 +1,4511 @@
+{
+  "archive_bytes": 57612174,
+  "archive_name": "Pseudopotentials_v6.4.zip",
+  "archive_sha256": "b3b00158ad69862b1632947cc3377de110181e6f509ed408b0a6bfc30023f461",
+  "families": {
+    "LDA": {
+      "archive_member": "Pseudopotentials_v6.4/potpaw_LDA.64.tgz",
+      "archive_sha256": "0c812fa5d72697ffadca83aca8513bd7995c082b085b4ba864394734e21dd665",
+      "directory": "potpaw_LDA",
+      "file_count": 597,
+      "files_sha256": "74a3e3a959960983ee027583287f672ed1b2414c5c0088c9eb291e12a7778140",
+      "potential_count": 297,
+      "potentials": {
+        "Ac": {
+          "bytes": 271747,
+          "lexch": "CA",
+          "path": "Ac/POTCAR",
+          "sha256": "031423db8f9c8b84b01eeb6635af1cfc33faa2d4cf62f5d6b13b1ea75ac18d17",
+          "titel": "PAW Ac 12Apr2000"
+        },
+        "Ag": {
+          "bytes": 230653,
+          "lexch": "CA",
+          "path": "Ag/POTCAR",
+          "sha256": "e6af8002e9663b4a4e641a3a19a1a67f7d70f7ccc4b19d537a58173fd6550cab",
+          "titel": "PAW Ag 06Sep2000"
+        },
+        "Ag_GW": {
+          "bytes": 266667,
+          "lexch": "CA",
+          "path": "Ag_GW/POTCAR",
+          "sha256": "3d764c23a9260e14925ba2c64c2611fcf13e64818be2b7597519bbd76590f4fa",
+          "titel": "PAW Ag_GW 06Mar2008"
+        },
+        "Ag_pv": {
+          "bytes": 246887,
+          "lexch": "CA",
+          "path": "Ag_pv/POTCAR",
+          "sha256": "d0b13e53b4e6f740bfe258c5e1d58dd07ed14c781431fdc87ca7e638e618035a",
+          "titel": "PAW Ag_pv 09Dec2005"
+        },
+        "Ag_sv_GW": {
+          "bytes": 338808,
+          "lexch": "CA",
+          "path": "Ag_sv_GW/POTCAR",
+          "sha256": "d76cdc880cf3202c5a38642c24be1a691915469ff88e71d47947a111b09ba62b",
+          "titel": "PAW Ag_sv_GW 05Dec2013"
+        },
+        "Al": {
+          "bytes": 198571,
+          "lexch": "CA",
+          "path": "Al/POTCAR",
+          "sha256": "b60fccc92261e7afa862393803e760adab7a9525581fe39d9b16b2093df99616",
+          "titel": "PAW Al 17Apr2000"
+        },
+        "Al_GW": {
+          "bytes": 251536,
+          "lexch": "CA",
+          "path": "Al_GW/POTCAR",
+          "sha256": "a4036ba2d3de291095f265479732cea5ddd0e314dbb60865e14a67d3f21dcaec",
+          "titel": "PAW Al_GW 19Mar2012"
+        },
+        "Al_sv_GW": {
+          "bytes": 248923,
+          "lexch": "CA",
+          "path": "Al_sv_GW/POTCAR",
+          "sha256": "4ea73f436d0ca05e76126c03b0ded09dfe6d0be45360ae8432dc30d6362267e8",
+          "titel": "PAW Al_sv_GW 2Feb2008"
+        },
+        "Am": {
+          "bytes": 285087,
+          "lexch": "CA",
+          "path": "Am/POTCAR",
+          "sha256": "2bd04a383952ec44306de9f26fe059ce295a0ebb912ed310b3e6ab0382c74cf3",
+          "titel": "PAW Am 08May2007"
+        },
+        "Ar": {
+          "bytes": 183176,
+          "lexch": "CA",
+          "path": "Ar/POTCAR",
+          "sha256": "462e17f166865593a97356fa631ffb915090d1c856e41824aa2cacb05f720b1d",
+          "titel": "PAW Ar 07Sep2000"
+        },
+        "Ar_GW": {
+          "bytes": 255568,
+          "lexch": "CA",
+          "path": "Ar_GW/POTCAR",
+          "sha256": "96392ec67032e23499e477b25392778ea6ba67df259bd7aa8e53bd682dca55f0",
+          "titel": "PAW Ar_GW 21Aug2013"
+        },
+        "As": {
+          "bytes": 237643,
+          "lexch": "CA",
+          "path": "As/POTCAR",
+          "sha256": "96bce6c13de43ea2ece357ad1ef0eeafb760b69a55995dafcd552c654683c1a1",
+          "titel": "PAW As 15Mar2012"
+        },
+        "As_GW": {
+          "bytes": 237649,
+          "lexch": "CA",
+          "path": "As_GW/POTCAR",
+          "sha256": "6fd5e325ec16550ab218d9ac1e81e04d62acac830f4c0d54581eef4b0ce47411",
+          "titel": "PAW As_GW 12Mar2012"
+        },
+        "As_d": {
+          "bytes": 240237,
+          "lexch": "CA",
+          "path": "As_d/POTCAR",
+          "sha256": "3b39d4292214d5ddb679303638e6d83176f20db21cf4cfebe2facfd80ed4a7e7",
+          "titel": "PAW As_d 11Apr2003"
+        },
+        "As_sv_GW": {
+          "bytes": 352094,
+          "lexch": "CA",
+          "path": "As_sv_GW/POTCAR",
+          "sha256": "b7604b4cfbe0a751de346ff3a54d9188533fd5137adddd12dceea182e46a2d7b",
+          "titel": "PAW As_sv_GW 05Dec2013"
+        },
+        "At": {
+          "bytes": 216596,
+          "lexch": "CA",
+          "path": "At/POTCAR",
+          "sha256": "bb248180c63500445ebf7ac1f369a4110958e749b73a6ab02c99ade46a020093",
+          "titel": "PAW At 21May2007"
+        },
+        "At_d_GW": {
+          "bytes": 306492,
+          "lexch": "CA",
+          "path": "At_d_GW/POTCAR",
+          "sha256": "1aac5b26a076ba1c56a663983fda18a6190708ab111bdaa56a6fc03fdb73bb1c",
+          "titel": "PAW At_d_GW 14Apr2014"
+        },
+        "At_sv_GW": {
+          "bytes": 325151,
+          "lexch": "CA",
+          "path": "At_sv_GW/POTCAR",
+          "sha256": "7184771d4f329abac0c5ae6ed892386a09d846624fb5ff7e0946745eb18d94e1",
+          "titel": "PAW At_sv_GW 14Apr2014"
+        },
+        "Au": {
+          "bytes": 228391,
+          "lexch": "CA",
+          "path": "Au/POTCAR",
+          "sha256": "cfbe50be3ca038dd5212a53c3b798037325032b87192d20ff29e3340bf88c431",
+          "titel": "PAW Au 04Oct2007"
+        },
+        "Au_GW": {
+          "bytes": 246112,
+          "lexch": "CA",
+          "path": "Au_GW/POTCAR",
+          "sha256": "2cf3a80bcd47c0164bb02ac89afcfddedcee92496978f7d0c8f26265b30df35b",
+          "titel": "PAW Au_GW 23Mar2010"
+        },
+        "Au_sv_GW": {
+          "bytes": 281085,
+          "lexch": "CA",
+          "path": "Au_sv_GW/POTCAR",
+          "sha256": "4c1084c21167f8fa795ec0406a8adeafd3823b54114acd5d7ee74d745b4101cf",
+          "titel": "PAW Au_sv_GW 13Sep2013"
+        },
+        "B": {
+          "bytes": 212136,
+          "lexch": "CA",
+          "path": "B/POTCAR",
+          "sha256": "be6d7c541b41cb3aa6805fe48ae15e67b969cb41b483876af1052bb6a0311a20",
+          "titel": "PAW B 22Mar2012"
+        },
+        "B_GW": {
+          "bytes": 156322,
+          "lexch": "CA",
+          "path": "B_GW/POTCAR",
+          "sha256": "1fca70f638a1d9faf5e48dabbef1fc5677f1025890c34634015bd3637848e0b8",
+          "titel": "PAW B_GW 28Sep2005"
+        },
+        "B_GW_new": {
+          "bytes": 248282,
+          "lexch": "CA",
+          "path": "B_GW_new/POTCAR",
+          "sha256": "a4f371c98139297230627040cea3b8e7a2f297ef5adbb68ab25425a50157abf1",
+          "titel": "PAW B_GW_new 26Jul2017"
+        },
+        "B_h": {
+          "bytes": 195900,
+          "lexch": "CA",
+          "path": "B_h/POTCAR",
+          "sha256": "8b26dd0d8f1eedc394f7c80b480d468de482fb3dfad1f956ba0c401a8c9610a3",
+          "titel": "PAW B_h 06Feb2004"
+        },
+        "B_s": {
+          "bytes": 172522,
+          "lexch": "CA",
+          "path": "B_s/POTCAR",
+          "sha256": "937ee0311468e7c0105b975d671e3a289f5fc682bfc9cdb683c3335f4c266cf0",
+          "titel": "PAW B_s 21Dec2000"
+        },
+        "Ba_sv": {
+          "bytes": 237131,
+          "lexch": "CA",
+          "path": "Ba_sv/POTCAR",
+          "sha256": "45b82e95fb3ec5e6a861fdcd158ca90dbad90d7976e161e25e571fbd8f094e78",
+          "titel": "PAW Ba_sv 17Apr2000"
+        },
+        "Ba_sv_GW": {
+          "bytes": 275426,
+          "lexch": "CA",
+          "path": "Ba_sv_GW/POTCAR",
+          "sha256": "8742b492ad802ac00776cec59df86504262e56f52be114955269eec389a21d23",
+          "titel": "PAW Ba_sv_GW 23Mar2010"
+        },
+        "Be": {
+          "bytes": 199159,
+          "lexch": "CA",
+          "path": "Be/POTCAR",
+          "sha256": "7cc2d0c94a83da0f67e56d9b13017a007f3f083dd9d6e439c154ec71ca36257d",
+          "titel": "PAW Be 02Feb1998"
+        },
+        "Be_GW": {
+          "bytes": 217526,
+          "lexch": "CA",
+          "path": "Be_GW/POTCAR",
+          "sha256": "34ad41638ab20a503eabefcc36ca7e3f376429ca6504155a4bd2b26f845813ea",
+          "titel": "PAW Be_GW 04Mar2008"
+        },
+        "Be_sv": {
+          "bytes": 194026,
+          "lexch": "CA",
+          "path": "Be_sv/POTCAR",
+          "sha256": "6666d9225edb401fcb3133d2ecdd6135428f9b151aa14b6324c39faa4ec3060b",
+          "titel": "PAW Be_sv 26Mar2012"
+        },
+        "Be_sv_GW": {
+          "bytes": 212469,
+          "lexch": "CA",
+          "path": "Be_sv_GW/POTCAR",
+          "sha256": "f6672220819763bd38250b545b20f95a42a1798fabf9189e1a2f771dc51312a2",
+          "titel": "PAW Be_sv_GW 31Mar2010"
+        },
+        "Bi": {
+          "bytes": 218058,
+          "lexch": "CA",
+          "path": "Bi/POTCAR",
+          "sha256": "08b780c3d7916a28e67206c94b5fb4f212323d8174ed79dd07df02cb79b04a85",
+          "titel": "PAW Bi 03Oct2001"
+        },
+        "Bi_GW": {
+          "bytes": 271278,
+          "lexch": "CA",
+          "path": "Bi_GW/POTCAR",
+          "sha256": "4beb7f1328214f4774e31aab506b4d110e8e7146f1d2785567e123411b3a6140",
+          "titel": "PAW Bi_GW 07Mar2011"
+        },
+        "Bi_d": {
+          "bytes": 236469,
+          "lexch": "CA",
+          "path": "Bi_d/POTCAR",
+          "sha256": "91bef353ef5ff9a7770af26fb75a6fee52e4f5ed516aed1463ae94b3881c2d42",
+          "titel": "PAW Bi_d 09Feb1998"
+        },
+        "Bi_d_GW": {
+          "bytes": 327421,
+          "lexch": "CA",
+          "path": "Bi_d_GW/POTCAR",
+          "sha256": "6255f497e56851dd236c167adb3bde46566bde9d4fbe3f9f1a1b54ae069935fe",
+          "titel": "PAW Bi_d_GW 14Apr2014"
+        },
+        "Bi_sv_GW": {
+          "bytes": 346330,
+          "lexch": "CA",
+          "path": "Bi_sv_GW/POTCAR",
+          "sha256": "55b1663167d650043792b721773a34ab0ebaafd18258bf4eeda6aa477b147654",
+          "titel": "PAW Bi_sv_GW 14Apr2014"
+        },
+        "Br": {
+          "bytes": 219215,
+          "lexch": "CA",
+          "path": "Br/POTCAR",
+          "sha256": "2e6f1e68561cee36a689174886aa667d7e4137ac5c2271f5212f0b27ae3b8ade",
+          "titel": "PAW Br 03Mar1998"
+        },
+        "Br_GW": {
+          "bytes": 235456,
+          "lexch": "CA",
+          "path": "Br_GW/POTCAR",
+          "sha256": "f055a6a2a3d98f1e82839aa80c516b7521446d3b64f2daa5d39b15ad75ab26fe",
+          "titel": "PAW Br_GW 20Mar2012"
+        },
+        "Br_sv_GW": {
+          "bytes": 348434,
+          "lexch": "CA",
+          "path": "Br_sv_GW/POTCAR",
+          "sha256": "28646fbbf142f45b1bdfeda310a453c2b5c6d4bbbc14639a6b597713aa602cbb",
+          "titel": "PAW Br_sv_GW 21Nov2013"
+        },
+        "C": {
+          "bytes": 224404,
+          "lexch": "CA",
+          "path": "C/POTCAR",
+          "sha256": "c17cb2d9e374b6fd95a16b4053248eab477607b16c43c5727b746a6fef6d957d",
+          "titel": "PAW C 22Mar2012"
+        },
+        "C_GW": {
+          "bytes": 184052,
+          "lexch": "CA",
+          "path": "C_GW/POTCAR",
+          "sha256": "0c52bb7773b8c966fa897caf543933016c7f6a1aae27cf4a7b71fcb8f854a20a",
+          "titel": "PAW C_GW 28Sep2005"
+        },
+        "C_GW_new": {
+          "bytes": 303082,
+          "lexch": "CA",
+          "path": "C_GW_new/POTCAR",
+          "sha256": "17631472d503a2b85c3f4cce13eb84f4b2c758bf4a1a4c850a61c505cfab55dd",
+          "titel": "PAW C_GW_new 17Jan2021"
+        },
+        "C_h": {
+          "bytes": 224404,
+          "lexch": "CA",
+          "path": "C_h/POTCAR",
+          "sha256": "0046553dbc8223401ff411ba70bbc115deea149a6ef0de1cd21a093bb1e48a40",
+          "titel": "PAW C_h 20Jan2021"
+        },
+        "C_h_GW": {
+          "bytes": 303042,
+          "lexch": "CA",
+          "path": "C_h_GW/POTCAR",
+          "sha256": "c578c179f9a36875f5f10e6afc7eaea884c81581be80fdc4e5fc4194c0c87d39",
+          "titel": "PAW C_h_GW 23May2013"
+        },
+        "C_s": {
+          "bytes": 167791,
+          "lexch": "CA",
+          "path": "C_s/POTCAR",
+          "sha256": "9513a5b9f800c099a7781ee986008affb47403a8e2bc792da50bacfe4b256d82",
+          "titel": "PAW C_s 04May1998"
+        },
+        "C_s_GW": {
+          "bytes": 263617,
+          "lexch": "CA",
+          "path": "C_s_GW/POTCAR",
+          "sha256": "923e45270eec002a87103433bc69902231a44f02f1f691a6c5ad2a0cac40b750",
+          "titel": "PAW C_s_GW 11Dec2017"
+        },
+        "Ca_pv": {
+          "bytes": 239318,
+          "lexch": "CA",
+          "path": "Ca_pv/POTCAR",
+          "sha256": "fa4ffab4b4b06b46d290498553775659a1005e9eba0772036b5af2f4a13c0f03",
+          "titel": "PAW Ca_pv 05May1998"
+        },
+        "Ca_sv": {
+          "bytes": 239312,
+          "lexch": "CA",
+          "path": "Ca_sv/POTCAR",
+          "sha256": "2d58047823d75afcd8f9305dd62aee7c3ebc489b2a15d792f0cbe3ea39892087",
+          "titel": "PAW Ca_sv 17Apr2000"
+        },
+        "Ca_sv_GW": {
+          "bytes": 259066,
+          "lexch": "CA",
+          "path": "Ca_sv_GW/POTCAR",
+          "sha256": "662fb9cbf51ea1630fb50d16fd6b4805f6678779de45face0ce74f38031ba5a6",
+          "titel": "PAW Ca_sv_GW 31Mar2010"
+        },
+        "Cd": {
+          "bytes": 229802,
+          "lexch": "CA",
+          "path": "Cd/POTCAR",
+          "sha256": "a68a1717ed73f1ae6b6f7d5d3cdef68c7cc4793412de082c17d72f575a0b1a41",
+          "titel": "PAW Cd 03Mar1998"
+        },
+        "Cd_GW": {
+          "bytes": 281915,
+          "lexch": "CA",
+          "path": "Cd_GW/POTCAR",
+          "sha256": "d8ac194d2b869c9679a96c85922cc87abce66d5374840e65c02a9f69d3675dbd",
+          "titel": "PAW Cd_GW 18May2010"
+        },
+        "Cd_sv_GW": {
+          "bytes": 336397,
+          "lexch": "CA",
+          "path": "Cd_sv_GW/POTCAR",
+          "sha256": "e43c3a326a2666d5636cac3481ee345ff80ff0db44adb8abfbeb3fe45c96bf0a",
+          "titel": "PAW Cd_sv_GW 16Apr2014"
+        },
+        "Ce": {
+          "bytes": 272556,
+          "lexch": "CA",
+          "path": "Ce/POTCAR",
+          "sha256": "21764981e299e49b04430af4458a9448fc2d4b829f0dfbeb1e3e8b0c0c1dee1f",
+          "titel": "PAW Ce 26Mar2009"
+        },
+        "Ce_GW": {
+          "bytes": 288790,
+          "lexch": "CA",
+          "path": "Ce_GW/POTCAR",
+          "sha256": "7d052bc65a6698c77f200a993d10d1a925f81cdfaf24d4f709f973c36d7cbfd1",
+          "titel": "PAW Ce_GW 26Mar2009"
+        },
+        "Ce_h": {
+          "bytes": 272562,
+          "lexch": "CA",
+          "path": "Ce_h/POTCAR",
+          "sha256": "a202863d61c791e91fc11db9fcc37f474883a6a18b53ecc3e42eecc122600b07",
+          "titel": "PAW Ce_h 03Mar2005"
+        },
+        "Cl": {
+          "bytes": 203091,
+          "lexch": "CA",
+          "path": "Cl/POTCAR",
+          "sha256": "b25ddf541469d4020c01ef8540cac3527967a52358d051fe4f535b1eb6ba3d61",
+          "titel": "PAW Cl 26Mar2009"
+        },
+        "Cl_GW": {
+          "bytes": 257188,
+          "lexch": "CA",
+          "path": "Cl_GW/POTCAR",
+          "sha256": "44a0a72e70b098b89737fc23a5402576ad47cbdda9ff0193b2a53ea282df89bf",
+          "titel": "PAW Cl_GW 19Mar2012"
+        },
+        "Cl_h": {
+          "bytes": 219323,
+          "lexch": "CA",
+          "path": "Cl_h/POTCAR",
+          "sha256": "4644b8dde9d9dcd00fc2943bb3615ba91b1028f466e10018c0acf94e7d068bd6",
+          "titel": "PAW Cl_h 15Mar2012"
+        },
+        "Cm": {
+          "bytes": 285083,
+          "lexch": "CA",
+          "path": "Cm/POTCAR",
+          "sha256": "3a133f3abc0c8e129e0b0d7eca3da281cf411417afe41905a9c02d8f47420389",
+          "titel": "PAW Cm 17Jan2011"
+        },
+        "Co": {
+          "bytes": 232920,
+          "lexch": "CA",
+          "path": "Co/POTCAR",
+          "sha256": "db666fde16f26dbe313840b085c93fc868f85016867a9873427de5177cae5c0e",
+          "titel": "PAW Co 26Mar2009"
+        },
+        "Co_GW": {
+          "bytes": 251152,
+          "lexch": "CA",
+          "path": "Co_GW/POTCAR",
+          "sha256": "60d457516d9192267588b2b0cc946818f022567322bc533f4fb933ccd2c4893d",
+          "titel": "PAW Co_GW 31Mar2010"
+        },
+        "Co_pv": {
+          "bytes": 249149,
+          "lexch": "CA",
+          "path": "Co_pv/POTCAR",
+          "sha256": "c6058b09e2778796102524abf0fe0432ce750125f1a9ff83dc00cb5900b44c12",
+          "titel": "PAW Co_pv 15Mar2012"
+        },
+        "Co_sv": {
+          "bytes": 267390,
+          "lexch": "CA",
+          "path": "Co_sv/POTCAR",
+          "sha256": "7232d0149285e3d6671f0fbf14434279b33241db2b79dbd8b8e2f4cf4c4d4828",
+          "titel": "PAW Co_sv 23Jul2007"
+        },
+        "Co_sv_GW": {
+          "bytes": 341175,
+          "lexch": "CA",
+          "path": "Co_sv_GW/POTCAR",
+          "sha256": "cc47f9b82540f27588872db2802cbc7cca9877dc738531aeb2462039f195be16",
+          "titel": "PAW Co_sv_GW 05Dec2013"
+        },
+        "Cr": {
+          "bytes": 235345,
+          "lexch": "CA",
+          "path": "Cr/POTCAR",
+          "sha256": "abac25215e22bca5f7a0c912f8283b423ddbab0b445b0a719ae9ca920b7c2629",
+          "titel": "PAW Cr 03Mar1998"
+        },
+        "Cr_pv": {
+          "bytes": 235339,
+          "lexch": "CA",
+          "path": "Cr_pv/POTCAR",
+          "sha256": "7f489f2d37ce787cbe2b484d5750e3d76cda067f68172205d61f403bf5472ecb",
+          "titel": "PAW Cr_pv 02Aug2007"
+        },
+        "Cr_sv": {
+          "bytes": 270018,
+          "lexch": "CA",
+          "path": "Cr_sv/POTCAR",
+          "sha256": "cf3e3e30742dcce6204d86cafe29df60a7465077bb9794d06d07f741fc65f70c",
+          "titel": "PAW Cr_sv 23Jul2007"
+        },
+        "Cr_sv_GW": {
+          "bytes": 344811,
+          "lexch": "CA",
+          "path": "Cr_sv_GW/POTCAR",
+          "sha256": "6a8a90b4ff8818d5bc04f09f8dbd143e26c755b99922bfb602438819358ef0db",
+          "titel": "PAW Cr_sv_GW 05Dec2013"
+        },
+        "Cs_sv": {
+          "bytes": 220810,
+          "lexch": "CA",
+          "path": "Cs_sv/POTCAR",
+          "sha256": "34b1b83f600fd53c317baee05abbc896342ebc0d375e27fe75a7a06444654d21",
+          "titel": "PAW Cs_sv 07Sep2000"
+        },
+        "Cs_sv_GW": {
+          "bytes": 277374,
+          "lexch": "CA",
+          "path": "Cs_sv_GW/POTCAR",
+          "sha256": "94f704a1ea69e7ba613a5e2c7e8a84477dc51d8f412b0fabaa5bcd5de5b81693",
+          "titel": "PAW Cs_sv_GW 23Mar2010"
+        },
+        "Cu": {
+          "bytes": 231332,
+          "lexch": "CA",
+          "path": "Cu/POTCAR",
+          "sha256": "c2a5b8d274425016997c1bbe934c13c3d8a5b921c509a604705fcdfcc8a586b1",
+          "titel": "PAW Cu 22Jun2005"
+        },
+        "Cu_GW": {
+          "bytes": 249371,
+          "lexch": "CA",
+          "path": "Cu_GW/POTCAR",
+          "sha256": "613c7282b19baa350d949f1ce145f58e5037c6d25b9feb9a8bb0e7c9e7825df0",
+          "titel": "PAW Cu_GW 19May2006"
+        },
+        "Cu_pv": {
+          "bytes": 231263,
+          "lexch": "CA",
+          "path": "Cu_pv/POTCAR",
+          "sha256": "bb164e37ef5d9825784b45fb5c2e531d4a51c67ac3131b371018a908a7a3d06e",
+          "titel": "PAW Cu_pv 19Apr2000"
+        },
+        "Cu_sv_GW": {
+          "bytes": 338742,
+          "lexch": "CA",
+          "path": "Cu_sv_GW/POTCAR",
+          "sha256": "c8520e26210aef99c19363a2cf378a95ba069892bae40273e617bbb598654ef1",
+          "titel": "PAW Cu_sv_GW 10Dec2015"
+        },
+        "F": {
+          "bytes": 219236,
+          "lexch": "CA",
+          "path": "F/POTCAR",
+          "sha256": "c5fd06c9524329c77572702fcc6f86fd513170bc2c194738275b50860f0d3f46",
+          "titel": "PAW F 31May2000"
+        },
+        "F_GW": {
+          "bytes": 162971,
+          "lexch": "CA",
+          "path": "F_GW/POTCAR",
+          "sha256": "b5afe0170d49fcc57051eac7f9d4f031a471064ae8dd818b09749c5a9bfaeff9",
+          "titel": "PAW F_GW 21Dec2007"
+        },
+        "F_GW_new": {
+          "bytes": 295326,
+          "lexch": "CA",
+          "path": "F_GW_new/POTCAR",
+          "sha256": "8b942ac8826d1f530d853dea03bfd756741f5374abf59f41bdb1b572f7379078",
+          "titel": "PAW F_GW_new 16Dec2020"
+        },
+        "F_h": {
+          "bytes": 219232,
+          "lexch": "CA",
+          "path": "F_h/POTCAR",
+          "sha256": "bb33888921531ed283c8e6b08e6dfca6b81206c94fca7587331538dea0564de7",
+          "titel": "PAW F_h 19Jan2021"
+        },
+        "F_h_GW": {
+          "bytes": 276135,
+          "lexch": "CA",
+          "path": "F_h_GW/POTCAR",
+          "sha256": "097197ce84e451e4b277c3159e917d2f32b6aa6494cd0b4e387eba6b7a48086c",
+          "titel": "PAW F_h_GW 20May2014"
+        },
+        "F_s": {
+          "bytes": 162925,
+          "lexch": "CA",
+          "path": "F_s/POTCAR",
+          "sha256": "9cdc14fbdff3cd0f08affa1842e8e620ff1281aa20fdb882bec411833764fbfd",
+          "titel": "PAW F_s 04May1998"
+        },
+        "Fe": {
+          "bytes": 239381,
+          "lexch": "CA",
+          "path": "Fe/POTCAR",
+          "sha256": "28ce3022f00a8c522cf2dee0717ca25ba83c2374b96fca41de862316e2b2a345",
+          "titel": "PAW Fe 03Mar1998"
+        },
+        "Fe_GW": {
+          "bytes": 258259,
+          "lexch": "CA",
+          "path": "Fe_GW/POTCAR",
+          "sha256": "245569878838123c504b34e31d672def23e607b8126aea93a4112eeaedd4b4de",
+          "titel": "PAW Fe_GW 31Mar2010"
+        },
+        "Fe_pv": {
+          "bytes": 239378,
+          "lexch": "CA",
+          "path": "Fe_pv/POTCAR",
+          "sha256": "ab764defb8c2771752977f41b314c8af766ee00517503bb759840714b44dbdf4",
+          "titel": "PAW Fe_pv 02Aug2007"
+        },
+        "Fe_sv": {
+          "bytes": 258225,
+          "lexch": "CA",
+          "path": "Fe_sv/POTCAR",
+          "sha256": "ef3df002b42c7c717c9af4f83e724a7d4ec9c3f61b498c933ab53ef4b3367d92",
+          "titel": "PAW Fe_sv 23Jul2007"
+        },
+        "Fe_sv_GW": {
+          "bytes": 350866,
+          "lexch": "CA",
+          "path": "Fe_sv_GW/POTCAR",
+          "sha256": "065582e0ed39a6bb4e1a3f49ea033314febe5d5c585c57a3fb6f80947816d0b9",
+          "titel": "PAW Fe_sv_GW 05Dec2013"
+        },
+        "Fr_sv": {
+          "bytes": 268849,
+          "lexch": "CA",
+          "path": "Fr_sv/POTCAR",
+          "sha256": "2fb43cc5bfeaa9edc42e54ddcd3a763776ad888f2985e45f25d021c8965c6cef",
+          "titel": "PAW Fr_sv 29May2007"
+        },
+        "Ga": {
+          "bytes": 244675,
+          "lexch": "CA",
+          "path": "Ga/POTCAR",
+          "sha256": "6ae350b2c5ae8019f25d80c0406ed188aa151abd58721c2fdbeaf4720ff95dec",
+          "titel": "PAW Ga 03Oct2001"
+        },
+        "Ga_GW": {
+          "bytes": 282360,
+          "lexch": "CA",
+          "path": "Ga_GW/POTCAR",
+          "sha256": "37f8f9b537412b9d1b88d5e82ec296e75fc564f555c9778538f476474ab09b9d",
+          "titel": "PAW Ga_GW 22Mar2012"
+        },
+        "Ga_d": {
+          "bytes": 266074,
+          "lexch": "CA",
+          "path": "Ga_d/POTCAR",
+          "sha256": "ff1e6d999c2fb7ef6ddcc476c492b67cc12c203de22c8dac26931fc2ce2a55de",
+          "titel": "PAW Ga_d 06Jul2010"
+        },
+        "Ga_d_GW": {
+          "bytes": 303881,
+          "lexch": "CA",
+          "path": "Ga_d_GW/POTCAR",
+          "sha256": "c0a58d664b068009de4aa5a2fdf4b83c2c96ef60cb904e1a2288df46cbec030c",
+          "titel": "PAW Ga_d_GW 15Mar2013"
+        },
+        "Ga_h": {
+          "bytes": 266070,
+          "lexch": "CA",
+          "path": "Ga_h/POTCAR",
+          "sha256": "7fa5dfe6e27e7c3d6c998a51bd138544f2e8a733da814ea7e1febbad18ec0e4d",
+          "titel": "PAW Ga_h 21Jan2003"
+        },
+        "Ga_sv_GW": {
+          "bytes": 390850,
+          "lexch": "CA",
+          "path": "Ga_sv_GW/POTCAR",
+          "sha256": "de15d6cd6a54e50bdb16c8c7be96838bc313b6f9c1fffd16956bd81dfd39c2a0",
+          "titel": "PAW Ga_sv_GW 05Dec2013"
+        },
+        "Ge": {
+          "bytes": 242493,
+          "lexch": "CA",
+          "path": "Ge/POTCAR",
+          "sha256": "190a3a3466fae1ebabaca077ca3a945bc5dbc74d042f7cce9c28816e012e574d",
+          "titel": "PAW Ge 03Mar1998"
+        },
+        "Ge_GW": {
+          "bytes": 242502,
+          "lexch": "CA",
+          "path": "Ge_GW/POTCAR",
+          "sha256": "932297fd52c4fa69cfd65be5c6b27f11635b2697233c8421bb2026530349551a",
+          "titel": "PAW Ge_GW 04Okt2005"
+        },
+        "Ge_d": {
+          "bytes": 263656,
+          "lexch": "CA",
+          "path": "Ge_d/POTCAR",
+          "sha256": "6e134440e8bc95f324b6d110bf35dfeeaefe66cd25617a36d0680ba6dd5fa44a",
+          "titel": "PAW Ge_d 03Jul2007"
+        },
+        "Ge_d_GW": {
+          "bytes": 301221,
+          "lexch": "CA",
+          "path": "Ge_d_GW/POTCAR",
+          "sha256": "072ab62314a9067ac03b093d54b71addbd3b9b16726c422c9ec1d39f9b76d45f",
+          "titel": "PAW Ge_d_GW 19Mar2013"
+        },
+        "Ge_h": {
+          "bytes": 263652,
+          "lexch": "CA",
+          "path": "Ge_h/POTCAR",
+          "sha256": "467be970a1514f80ca30ea58701b16183d9543a295bca3c594e73f8cc561d751",
+          "titel": "PAW Ge_h 21Jan2003"
+        },
+        "Ge_sv_GW": {
+          "bytes": 387266,
+          "lexch": "CA",
+          "path": "Ge_sv_GW/POTCAR",
+          "sha256": "ba3468362f1f50664d43ee487bb148017a8d687fa214fc3962367e0f20bd64de",
+          "titel": "PAW Ge_sv_GW 26Apr2015"
+        },
+        "H": {
+          "bytes": 141444,
+          "lexch": "CA",
+          "path": "H/POTCAR",
+          "sha256": "11a5cb74c92e1e9cf1c00a36b503bea622e4bd405caf358ad303ac1aec8f5893",
+          "titel": "PAW H 06May1998"
+        },
+        "H.25": {
+          "bytes": 157697,
+          "lexch": "CA",
+          "path": "H.25/POTCAR",
+          "sha256": "7ba31448d574f5f227bdd815d5253f21a5574d38292ff38966d806e0f2c53d82",
+          "titel": "PAW H.25 05Aug2008"
+        },
+        "H.33": {
+          "bytes": 157697,
+          "lexch": "CA",
+          "path": "H.33/POTCAR",
+          "sha256": "979d0b6f1077fa14ea481969f521a637d54c80c8f65969a224305ce36f72d0ee",
+          "titel": "PAW H.33 22Sep2006"
+        },
+        "H.42": {
+          "bytes": 157725,
+          "lexch": "CA",
+          "path": "H.42/POTCAR",
+          "sha256": "8fd954c9916e20ad538d5f7ff808eb41b22e8b0d7a3b3306f9783dfad3e0e0b1",
+          "titel": "PAW H.42 19Jan2011"
+        },
+        "H.5": {
+          "bytes": 141482,
+          "lexch": "CA",
+          "path": "H.5/POTCAR",
+          "sha256": "cd8c228cd5efb7a20dee394a69cc722aa43e971976f43e5039238f1230929528",
+          "titel": "PAW H.5 07Sep2000"
+        },
+        "H.58": {
+          "bytes": 157713,
+          "lexch": "CA",
+          "path": "H.58/POTCAR",
+          "sha256": "54e9a75a7d864134d22c8832c67d8b7289bda82642f40375eb3214cd29c6b59a",
+          "titel": "PAW H.58 19Jan2011"
+        },
+        "H.66": {
+          "bytes": 157681,
+          "lexch": "CA",
+          "path": "H.66/POTCAR",
+          "sha256": "dbf9e9a55dd5a49584c8ef83a635ce1484f8277ef6a6863b850d84bb3bc23e42",
+          "titel": "PAW H.66 06Jun2006"
+        },
+        "H.75": {
+          "bytes": 141477,
+          "lexch": "CA",
+          "path": "H.75/POTCAR",
+          "sha256": "b13fab61c46b7887fd7e42f838466600409604000df2095ffaf1e32053e3a0a2",
+          "titel": "PAW H.75 07Sep2000"
+        },
+        "H1.25": {
+          "bytes": 141448,
+          "lexch": "CA",
+          "path": "H1.25/POTCAR",
+          "sha256": "bfb1cb4e2f79ad119b8adba90561205f1dd9ce53841bca180c67852b4ce74ed3",
+          "titel": "PAW H1.25 14Feb2000"
+        },
+        "H1.33": {
+          "bytes": 157675,
+          "lexch": "CA",
+          "path": "H1.33/POTCAR",
+          "sha256": "0ea349cf3da521236ff61b7f66d3cc36192b093b2232674372a0d0ddd3c40f5e",
+          "titel": "PAW H1.33 06Jun2006"
+        },
+        "H1.5": {
+          "bytes": 141464,
+          "lexch": "CA",
+          "path": "H1.5/POTCAR",
+          "sha256": "de45ba2507ffcd208f71b4916b410bd7844f8f478ed9145c95877f2b35046022",
+          "titel": "PAW H1.5 07Sep2000"
+        },
+        "H1.66": {
+          "bytes": 157698,
+          "lexch": "CA",
+          "path": "H1.66/POTCAR",
+          "sha256": "025d7c985c71fa00ccb621db04ee238e3028876e3ce031816020ef8b41da6494",
+          "titel": "PAW H1.66 22Sep2006"
+        },
+        "H1.75": {
+          "bytes": 157699,
+          "lexch": "CA",
+          "path": "H1.75/POTCAR",
+          "sha256": "7c2c700fb30b8e20f04ceb092d1585669663ba8fdfb8012f2ea93b983937bff6",
+          "titel": "PAW H1.75 05Aug2008"
+        },
+        "H_AE": {
+          "bytes": 19793,
+          "lexch": "CA",
+          "path": "H_AE/POTCAR",
+          "sha256": "22e8840041e3639e19c0b641ec83abe4c3fa01489f08f66e3e98fbfdffa40b08",
+          "titel": "AE H_AE"
+        },
+        "H_GW": {
+          "bytes": 178339,
+          "lexch": "CA",
+          "path": "H_GW/POTCAR",
+          "sha256": "7cc40a1b28a4993f23f2c95adced2070ce35cca7531d1dbcd9888d936c317929",
+          "titel": "PAW H_GW 21Apr2008"
+        },
+        "H_h": {
+          "bytes": 138818,
+          "lexch": "CA",
+          "path": "H_h/POTCAR",
+          "sha256": "674f7631ca9b300cfa2eb7546ca6710252e0f38dd659883bbd30f926acd0fc9f",
+          "titel": "PAW H_h 04May1998"
+        },
+        "H_h_GW": {
+          "bytes": 174905,
+          "lexch": "CA",
+          "path": "H_h_GW/POTCAR",
+          "sha256": "a584e16b5ea54ad86cacaf8ba84596208dcfba78325f6c77b95f50ca912c16f2",
+          "titel": "PAW H_h_GW 21Apr2008"
+        },
+        "H_s": {
+          "bytes": 159257,
+          "lexch": "CA",
+          "path": "H_s/POTCAR",
+          "sha256": "09a27aa0aa6e5fb849950c0479ea7d96971e735d7ab2a42558ed515e2086bd18",
+          "titel": "PAW H_s 15May2010"
+        },
+        "He": {
+          "bytes": 149829,
+          "lexch": "CA",
+          "path": "He/POTCAR",
+          "sha256": "3c39cff3799738b937b3c67837d1d5d9a2372c295803e9aeb6c5355502db728e",
+          "titel": "PAW He 07Sep2000"
+        },
+        "He_GW": {
+          "bytes": 245328,
+          "lexch": "CA",
+          "path": "He_GW/POTCAR",
+          "sha256": "4661c27bd4bb8e1e643257b93dc201f670d3a2eecef20733e431a31fa5290001",
+          "titel": "PAW He_GW 23Feb2016"
+        },
+        "Hf": {
+          "bytes": 233203,
+          "lexch": "CA",
+          "path": "Hf/POTCAR",
+          "sha256": "f84c91ce91b8580510daffdaaa855d864b7b6b9170d9e30cec8d9ba84313bf7a",
+          "titel": "PAW Hf 21Jan2003"
+        },
+        "Hf_pv": {
+          "bytes": 233171,
+          "lexch": "CA",
+          "path": "Hf_pv/POTCAR",
+          "sha256": "ea99a602af5195265787592085dd215d9d3ab911afeee2ea8c6d2bca7692b5a5",
+          "titel": "PAW Hf_pv 17Apr2000"
+        },
+        "Hf_sv": {
+          "bytes": 233210,
+          "lexch": "CA",
+          "path": "Hf_sv/POTCAR",
+          "sha256": "ae9e811c8eb5b8787ad00281e7d1e38069e74d835b850660c5c661dac01786bf",
+          "titel": "PAW Hf_sv 10Jan2008 GW suitable"
+        },
+        "Hf_sv_GW": {
+          "bytes": 267591,
+          "lexch": "CA",
+          "path": "Hf_sv_GW/POTCAR",
+          "sha256": "9a2a384f41e741f61db9af85702b62edc34ad27f3db6bccb5dd5ab40c4bb28ea",
+          "titel": "PAW Hf_sv_GW 12Jun2018"
+        },
+        "Hg": {
+          "bytes": 227515,
+          "lexch": "CA",
+          "path": "Hg/POTCAR",
+          "sha256": "b5dbec0a32e04b2f2e88bcc179d036274225c8e934e3c92179286f12a979ad18",
+          "titel": "PAW Hg 04Feb1998"
+        },
+        "Hg_sv_GW": {
+          "bytes": 332961,
+          "lexch": "CA",
+          "path": "Hg_sv_GW/POTCAR",
+          "sha256": "643dcb744fee815c263b88422bca156b947f838c9cb27fb904dc8aa31a0d4375",
+          "titel": "PAW Hg_sv_GW 16Apr2014"
+        },
+        "I": {
+          "bytes": 218613,
+          "lexch": "CA",
+          "path": "I/POTCAR",
+          "sha256": "010e24c92d0292b07535fac931e35dfe99b0affc786ca5c47017faa88bef61d4",
+          "titel": "PAW I 03Oct2001"
+        },
+        "I_GW": {
+          "bytes": 253390,
+          "lexch": "CA",
+          "path": "I_GW/POTCAR",
+          "sha256": "d664f44e0167d07cff079b46311b8ca47732c2ea22578ade544f35058bc41dc2",
+          "titel": "PAW I_GW 12Mar2012"
+        },
+        "I_sv_GW": {
+          "bytes": 347352,
+          "lexch": "CA",
+          "path": "I_sv_GW/POTCAR",
+          "sha256": "9de5d874a3deb8cd880c39e46e7116dfc53d312dc994166ed3eebe0bf0531059",
+          "titel": "PAW I_sv_GW 22Nov2013"
+        },
+        "In": {
+          "bytes": 217907,
+          "lexch": "CA",
+          "path": "In/POTCAR",
+          "sha256": "98da23330963ca7fdbe44e3187d1d2436427b2d1f2ffc91abf619761aaadb61e",
+          "titel": "PAW In 03Oct2001"
+        },
+        "In_d": {
+          "bytes": 236314,
+          "lexch": "CA",
+          "path": "In_d/POTCAR",
+          "sha256": "9dfde969adb7468ad4c68617db6bdccea12ea5c77219dea40c0fefea3ddb84a5",
+          "titel": "PAW In_d 11Feb1998"
+        },
+        "In_d_GW": {
+          "bytes": 308443,
+          "lexch": "CA",
+          "path": "In_d_GW/POTCAR",
+          "sha256": "f99e48f171213770933522c00336ba352b4b86e7b1ed7ebdab2d09a4720f46ca",
+          "titel": "PAW In_d_GW 15Mar2013"
+        },
+        "In_sv_GW": {
+          "bytes": 346150,
+          "lexch": "CA",
+          "path": "In_sv_GW/POTCAR",
+          "sha256": "df0fd9b2bb6a1441860c94d4611d5ccab4c139719feab40744a9655e9bf79c75",
+          "titel": "PAW In_sv_GW 22Nov2013"
+        },
+        "Ir": {
+          "bytes": 229163,
+          "lexch": "CA",
+          "path": "Ir/POTCAR",
+          "sha256": "1d681ee852bf5e61a0a68ef05f3b28bb9d1344c96f961e3be112cdabf4d029e3",
+          "titel": "PAW Ir 10Feb1998"
+        },
+        "Ir_sv_GW": {
+          "bytes": 265808,
+          "lexch": "CA",
+          "path": "Ir_sv_GW/POTCAR",
+          "sha256": "c56b96eaa0b85bb8ce15a110d02470cc73b43648735ff20e642906a9d986a1b6",
+          "titel": "PAW Ir_sv_GW 23Mar2010"
+        },
+        "K_pv": {
+          "bytes": 222708,
+          "lexch": "CA",
+          "path": "K_pv/POTCAR",
+          "sha256": "0b135e4c26ff027a127b152f3d95b886e2c97a4ab5cccb0c5b907ab2c57e6074",
+          "titel": "PAW K_pv 22Nov2003"
+        },
+        "K_sv": {
+          "bytes": 222708,
+          "lexch": "CA",
+          "path": "K_sv/POTCAR",
+          "sha256": "c5a2a613955d2f760b1f1ae6eaa237ba6131636b79341e0bb5eb85ab2226597d",
+          "titel": "PAW K_sv 22Nov2003"
+        },
+        "K_sv_GW": {
+          "bytes": 260821,
+          "lexch": "CA",
+          "path": "K_sv_GW/POTCAR",
+          "sha256": "8eda8486c71b5584f64274b2bdd9b96f0fe1ef07f97885f44e81edbd23b1ddad",
+          "titel": "PAW K_sv_GW 31Mar2010"
+        },
+        "Kr": {
+          "bytes": 181646,
+          "lexch": "CA",
+          "path": "Kr/POTCAR",
+          "sha256": "3269fdeec96053bbd50898bd68ac5ece4c4a33c0e46bccbadeadb9059662be53",
+          "titel": "PAW Kr 07Sep2000"
+        },
+        "Kr_GW": {
+          "bytes": 253268,
+          "lexch": "CA",
+          "path": "Kr_GW/POTCAR",
+          "sha256": "3a3b429a74e50633ea1ee5cde960bcd02d34e186bd9034b10563c4b40061b27d",
+          "titel": "PAW Kr_GW 21Aug2013"
+        },
+        "La": {
+          "bytes": 273544,
+          "lexch": "CA",
+          "path": "La/POTCAR",
+          "sha256": "eb903592ea5f3e0ada96a767b4bcef79ef3d31266fd39f07d19a0fd2c47563a2",
+          "titel": "PAW La 17Apr2000"
+        },
+        "La_GW": {
+          "bytes": 289778,
+          "lexch": "CA",
+          "path": "La_GW/POTCAR",
+          "sha256": "ceeed6efe555e169617e65c8dd10af885746920418940e10a9832c03d063af94",
+          "titel": "PAW La_GW 16May2012"
+        },
+        "La_s": {
+          "bytes": 273552,
+          "lexch": "CA",
+          "path": "La_s/POTCAR",
+          "sha256": "567757fc4f5325b581dd82cddd12c0cdebdf22c122eb3f1069e75139bb3dfddf",
+          "titel": "PAW La_s 17Apr2000"
+        },
+        "Li": {
+          "bytes": 201038,
+          "lexch": "CA",
+          "path": "Li/POTCAR",
+          "sha256": "e1af17f8663558e872f188d75a770230473b1452716a8e16e72fe05664950c9e",
+          "titel": "PAW Li 15Mar2012"
+        },
+        "Li_AE_GW": {
+          "bytes": 274445,
+          "lexch": "CA",
+          "path": "Li_AE_GW/POTCAR",
+          "sha256": "56368a888292709457382ab880092eaf7032598c71372291b64798612fd940f9",
+          "titel": "PAW Li_AE_GW 25Mar2010"
+        },
+        "Li_GW": {
+          "bytes": 184812,
+          "lexch": "CA",
+          "path": "Li_GW/POTCAR",
+          "sha256": "9aa131b1a5d5da766f1e51d492aace66a67cfd8d0e65f6840d9d350fdf3b0c9c",
+          "titel": "PAW Li_GW 11May2007"
+        },
+        "Li_sv": {
+          "bytes": 144696,
+          "lexch": "CA",
+          "path": "Li_sv/POTCAR",
+          "sha256": "b64d96d443a61d20692086bc49eae8d794d9a8bc6d18fb61fbddc2d88dd3f6f8",
+          "titel": "PAW Li_sv 10Sep2004"
+        },
+        "Li_sv_GW": {
+          "bytes": 217031,
+          "lexch": "CA",
+          "path": "Li_sv_GW/POTCAR",
+          "sha256": "d936a266b1b6ea917083311f0d4ef41ee30fdb52755fa810cefda1274049bc09",
+          "titel": "PAW Li_sv_GW 25Mar2010"
+        },
+        "Mg": {
+          "bytes": 219032,
+          "lexch": "CA",
+          "path": "Mg/POTCAR",
+          "sha256": "6b793795b7528794ba6204ec1e64ac7185c62e20dbe9b398093c2e206e603b95",
+          "titel": "PAW Mg 13Apr2007"
+        },
+        "Mg_GW": {
+          "bytes": 219038,
+          "lexch": "CA",
+          "path": "Mg_GW/POTCAR",
+          "sha256": "302a1bfdaebe359caccf058348e44e172221476455ce394a3ef8b40cccbde234",
+          "titel": "PAW Mg_GW 13Apr2007"
+        },
+        "Mg_pv": {
+          "bytes": 218982,
+          "lexch": "CA",
+          "path": "Mg_pv/POTCAR",
+          "sha256": "8a43dfe2ffc062f0c56d6f169a1d180121acd943c70810fd054108a4747887c8",
+          "titel": "PAW Mg_pv 13Apr2007"
+        },
+        "Mg_pv_GW": {
+          "bytes": 237655,
+          "lexch": "CA",
+          "path": "Mg_pv_GW/POTCAR",
+          "sha256": "076869d6ca7f4950b0ed908f9ba03e7527cbbe49968a48ac98a7b506dc48a1a3",
+          "titel": "PAW Mg_pv_GW 20Apr2010"
+        },
+        "Mg_sv": {
+          "bytes": 195316,
+          "lexch": "CA",
+          "path": "Mg_sv/POTCAR",
+          "sha256": "e8891628a8b5d38281a1c6049e3fc5c7385f0a6b1eb532ef14555e0068bc200f",
+          "titel": "PAW Mg_sv 15Mar2012"
+        },
+        "Mg_sv_GW": {
+          "bytes": 234364,
+          "lexch": "CA",
+          "path": "Mg_sv_GW/POTCAR",
+          "sha256": "59758cd1e1f1470308c696846263662f9ffae18b26c64c2a0289e466a01655d8",
+          "titel": "PAW Mg_sv_GW 20Apr2010"
+        },
+        "Mn": {
+          "bytes": 234540,
+          "lexch": "CA",
+          "path": "Mn/POTCAR",
+          "sha256": "b4550a8e3a6247d5c7fa41b7556d5d34cbbeb9928aa05bf93b71536d8017e0d4",
+          "titel": "PAW Mn 03Mar1998"
+        },
+        "Mn_GW": {
+          "bytes": 252938,
+          "lexch": "CA",
+          "path": "Mn_GW/POTCAR",
+          "sha256": "4d4c2678b1d506913fdf8d2c268621cdced0ae42b5c091452a7c6d15a79e3640",
+          "titel": "PAW Mn_GW 31Mar2010"
+        },
+        "Mn_pv": {
+          "bytes": 234538,
+          "lexch": "CA",
+          "path": "Mn_pv/POTCAR",
+          "sha256": "068431588f300a7c943231c84984e86dfe1ada69c52667454b82978bb5fe3c0c",
+          "titel": "PAW Mn_pv 02Aug2007"
+        },
+        "Mn_sv": {
+          "bytes": 269133,
+          "lexch": "CA",
+          "path": "Mn_sv/POTCAR",
+          "sha256": "70705a91df243505f5624b272682e9da58de97194450916c91cb7d71284f56b4",
+          "titel": "PAW Mn_sv 23Jul2007"
+        },
+        "Mn_sv_GW": {
+          "bytes": 343606,
+          "lexch": "CA",
+          "path": "Mn_sv_GW/POTCAR",
+          "sha256": "dde2443d150cf992ec5e3117d5cddc7cb5d564b73d9d1faac1760977b54524d8",
+          "titel": "PAW Mn_sv_GW 05Dec2013"
+        },
+        "Mo": {
+          "bytes": 233841,
+          "lexch": "CA",
+          "path": "Mo/POTCAR",
+          "sha256": "ddffc68e55ef8469deee1234a5a74744303683f9ca1e1db8bbed485adce9cecb",
+          "titel": "PAW Mo 08Apr2002"
+        },
+        "Mo_pv": {
+          "bytes": 233838,
+          "lexch": "CA",
+          "path": "Mo_pv/POTCAR",
+          "sha256": "aec4dad18207acb1282879c4ab4e80820d5e2cba8d0fb5f71ebc5cd03631b0e4",
+          "titel": "PAW Mo_pv 04Feb2005"
+        },
+        "Mo_sv": {
+          "bytes": 233838,
+          "lexch": "CA",
+          "path": "Mo_sv/POTCAR",
+          "sha256": "0321619be6c71d8071f8cf1a0118e9acb0df739120bee0427b74795910b6b35d",
+          "titel": "PAW Mo_sv 29Jan2005"
+        },
+        "Mo_sv_GW": {
+          "bytes": 343753,
+          "lexch": "CA",
+          "path": "Mo_sv_GW/POTCAR",
+          "sha256": "ad84924c3995994fc5f0929a84550a2067e1dd0b3f5d74905c2344c63efb1257",
+          "titel": "PAW Mo_sv_GW 05Dec2013"
+        },
+        "N": {
+          "bytes": 228292,
+          "lexch": "CA",
+          "path": "N/POTCAR",
+          "sha256": "4b78dd2616acacb904f2ddbac044e478d7087d5cd55f8eda96ccf61782721e0a",
+          "titel": "PAW N 21Mar2012"
+        },
+        "N_GW": {
+          "bytes": 171465,
+          "lexch": "CA",
+          "path": "N_GW/POTCAR",
+          "sha256": "baafd52c70c24a75524c5af099ff7696849ccbc38a9102e0f70e8b41e45931d5",
+          "titel": "PAW N_GW 10Apr2007"
+        },
+        "N_GW_new": {
+          "bytes": 308914,
+          "lexch": "CA",
+          "path": "N_GW_new/POTCAR",
+          "sha256": "904602168bfc9210ac8a0de49114296ddec6e3941e0d0b72d9872e71c3df4624",
+          "titel": "PAW N_GW_new 16Dec2020"
+        },
+        "N_h": {
+          "bytes": 228288,
+          "lexch": "CA",
+          "path": "N_h/POTCAR",
+          "sha256": "29c8f92ec9c9c31bc0e828d6dcaa751cd9ce71ddc8c2afb3749a6e371a505068",
+          "titel": "PAW N_h 19Jan2021"
+        },
+        "N_h_GW": {
+          "bytes": 308870,
+          "lexch": "CA",
+          "path": "N_h_GW/POTCAR",
+          "sha256": "8ca05bbfaf1272ce04dafe26b7ae2445b27018d7c742c91acac84837d65f1764",
+          "titel": "PAW N_h_GW 03Jul2013"
+        },
+        "N_s": {
+          "bytes": 171436,
+          "lexch": "CA",
+          "path": "N_s/POTCAR",
+          "sha256": "0b9de3b13b903043723afabab0aab91590a23a3fb033f9e9567399bbf2edfb4c",
+          "titel": "PAW N_s 04May1998"
+        },
+        "N_s_GW": {
+          "bytes": 268437,
+          "lexch": "CA",
+          "path": "N_s_GW/POTCAR",
+          "sha256": "e6b25d7bcbf22eb8614f8bc61c724fdb22f8409bf9eb80368854fa38bfd86622",
+          "titel": "PAW N_s_GW 11Dec2017"
+        },
+        "Na": {
+          "bytes": 184326,
+          "lexch": "CA",
+          "path": "Na/POTCAR",
+          "sha256": "a5531a6ee91658ba92eafcfa8ad661dde5624aab37b5d7e322bb4e045ae1fad8",
+          "titel": "PAW Na 24Mar1998"
+        },
+        "Na_pv": {
+          "bytes": 203057,
+          "lexch": "CA",
+          "path": "Na_pv/POTCAR",
+          "sha256": "1b250ecc1a487a03fdf18b5607506dd8d4ee9445e4d9371e3fb4ab87f91320bb",
+          "titel": "PAW Na_pv 19Dec2003"
+        },
+        "Na_sv": {
+          "bytes": 162958,
+          "lexch": "CA",
+          "path": "Na_sv/POTCAR",
+          "sha256": "00fb2561b17790eacf8cc6360c44f4e36ff3a83a1f0cae9716b570e8afed58ae",
+          "titel": "PAW Na_sv 28Sep2000"
+        },
+        "Na_sv_GW": {
+          "bytes": 275289,
+          "lexch": "CA",
+          "path": "Na_sv_GW/POTCAR",
+          "sha256": "1a128c904155b08ed27161160636856715567e6c78ed59920599a827867a7d09",
+          "titel": "PAW Na_sv_GW 11May2015"
+        },
+        "Nb_pv": {
+          "bytes": 234629,
+          "lexch": "CA",
+          "path": "Nb_pv/POTCAR",
+          "sha256": "8fbbe81b9a613869e49b11b0124029cf059c9b2f1fb0542c3b728838819bb84d",
+          "titel": "PAW Nb_pv 09Jan2002"
+        },
+        "Nb_sv": {
+          "bytes": 234656,
+          "lexch": "CA",
+          "path": "Nb_sv/POTCAR",
+          "sha256": "ffffca22744f17f605b06097f853eae946381d80a04f40178e3ae9088f5256d3",
+          "titel": "PAW Nb_sv 25May2007"
+        },
+        "Nb_sv_GW": {
+          "bytes": 326120,
+          "lexch": "CA",
+          "path": "Nb_sv_GW/POTCAR",
+          "sha256": "177ca94f3ebacd96eb1a45a79e884758422ac706b925e828668e28170fb8ebb8",
+          "titel": "PAW Nb_sv_GW 05Dec2013"
+        },
+        "Ne": {
+          "bytes": 201690,
+          "lexch": "CA",
+          "path": "Ne/POTCAR",
+          "sha256": "9c6326bee3fb574cb79f403141c2548666350ce95d75ad9b60b5a1aa2256c2d3",
+          "titel": "PAW Ne 07Sep2000"
+        },
+        "Ne_GW": {
+          "bytes": 293324,
+          "lexch": "CA",
+          "path": "Ne_GW/POTCAR",
+          "sha256": "38ff1b2106fda6cd064f478f9f311887dda2fc5e3c3f587741b1a897eace4f14",
+          "titel": "PAW Ne_GW 22Sep2014"
+        },
+        "Ne_s_GW": {
+          "bytes": 201702,
+          "lexch": "CA",
+          "path": "Ne_s_GW/POTCAR",
+          "sha256": "f07820f34b765a03a54e1d313a27d757d7f11f731851b3ef6bcfb63261eb3f42",
+          "titel": "PAW Ne_s_GW 02Oct2006"
+        },
+        "Ni": {
+          "bytes": 232114,
+          "lexch": "CA",
+          "path": "Ni/POTCAR",
+          "sha256": "5735d798d4b381ad89f866eb2c11fbe44ab97eed8b1c2c5eafb853e9ca0c5a86",
+          "titel": "PAW Ni 02Aug2007"
+        },
+        "Ni_GW": {
+          "bytes": 250266,
+          "lexch": "CA",
+          "path": "Ni_GW/POTCAR",
+          "sha256": "695a3e5e7d145848901a0b3f8c693d583a8779f5701d303bb220f6e054fd1185",
+          "titel": "PAW Ni_GW 31Mar2010"
+        },
+        "Ni_pv": {
+          "bytes": 232076,
+          "lexch": "CA",
+          "path": "Ni_pv/POTCAR",
+          "sha256": "3801e066196539a9eccea004815a455c9623d43ad123038189a8360c14d32fdf",
+          "titel": "PAW Ni_pv 19Apr2000"
+        },
+        "Ni_sv_GW": {
+          "bytes": 339929,
+          "lexch": "CA",
+          "path": "Ni_sv_GW/POTCAR",
+          "sha256": "1b6d01904640ec437c4c48b5cc2b3959007f486754639dcfffd261dba2fcaa1a",
+          "titel": "PAW Ni_sv_GW 05Dec2013"
+        },
+        "Np": {
+          "bytes": 269815,
+          "lexch": "CA",
+          "path": "Np/POTCAR",
+          "sha256": "a0ee31867888846b7b2977e1ed330b01f95c49d07737236ef00fab83a3910e42",
+          "titel": "PAW Np 17Apr2000"
+        },
+        "Np_s": {
+          "bytes": 269819,
+          "lexch": "CA",
+          "path": "Np_s/POTCAR",
+          "sha256": "e2c8957e0f241d71ea21f5ec05355df4e8a302ed591886bebe959a4a647daff3",
+          "titel": "PAW Np_s 04May2000"
+        },
+        "O": {
+          "bytes": 221172,
+          "lexch": "CA",
+          "path": "O/POTCAR",
+          "sha256": "4876a41be85c26da432563771a4dc6a360746c02adc2070dc1c2d90978a5062f",
+          "titel": "PAW O 22Mar2012"
+        },
+        "O_GW": {
+          "bytes": 164790,
+          "lexch": "CA",
+          "path": "O_GW/POTCAR",
+          "sha256": "4d2ad31fef761e78af57b1d1168e41029328be9004f2255695f11e33970ce93e",
+          "titel": "PAW O_GW 28Sep2005"
+        },
+        "O_GW_new": {
+          "bytes": 298234,
+          "lexch": "CA",
+          "path": "O_GW_new/POTCAR",
+          "sha256": "7e2a045fd7966a5a08dd8c65adcd967a4f793fabeccbcf0166b03fe7634cc1ae",
+          "titel": "PAW_PBE O_GW_new 16Dec2020"
+        },
+        "O_h": {
+          "bytes": 221168,
+          "lexch": "CA",
+          "path": "O_h/POTCAR",
+          "sha256": "d9690bcbdc0b7af1b90a768d2283df735ce7dcdce6398d209747d60dab14b785",
+          "titel": "PAW O_h 19Jan2021"
+        },
+        "O_h_GW": {
+          "bytes": 298192,
+          "lexch": "CA",
+          "path": "O_h_GW/POTCAR",
+          "sha256": "38a303423a3733172b6ef8943ca451469a1dbd79351d94bf545013b12c69baa6",
+          "titel": "PAW O_h_GW 22May2013"
+        },
+        "O_s": {
+          "bytes": 164740,
+          "lexch": "CA",
+          "path": "O_s/POTCAR",
+          "sha256": "0e26ca317cbedc60af03f2daaa433488bbafc5f7a3c58a14c2fae35b72468010",
+          "titel": "PAW O_s 06May1998"
+        },
+        "O_s_GW": {
+          "bytes": 183943,
+          "lexch": "CA",
+          "path": "O_s_GW/POTCAR",
+          "sha256": "5438e74cead25e7bab48e7559452301a915155cd7523cf013542264103eed1b9",
+          "titel": "PAW O_s_GW 10Jan2007"
+        },
+        "Os": {
+          "bytes": 229961,
+          "lexch": "CA",
+          "path": "Os/POTCAR",
+          "sha256": "3764e642e2d717d2ba28a83cb9937cf5c4f3f82690837603d65f85ac94e35502",
+          "titel": "PAW Os 21Jan2003"
+        },
+        "Os_pv": {
+          "bytes": 246159,
+          "lexch": "CA",
+          "path": "Os_pv/POTCAR",
+          "sha256": "ee870ee8463ed6489219f88e2ef20535f820675463168b22be631d904249aaf6",
+          "titel": "PAW Os_pv 28Mar2012"
+        },
+        "Os_sv_GW": {
+          "bytes": 265810,
+          "lexch": "CA",
+          "path": "Os_sv_GW/POTCAR",
+          "sha256": "9dbe02682f4af7cebf9f7079cc55097ba3373ac4eadd8aa5613377389606df82",
+          "titel": "PAW Os_sv_GW 23Mar2010"
+        },
+        "P": {
+          "bytes": 205685,
+          "lexch": "CA",
+          "path": "P/POTCAR",
+          "sha256": "ee1652779d68ec5ab2ef5b2b6a27eb9019c7e51901aaf757946313b53bd64a06",
+          "titel": "PAW P 26Mar2009"
+        },
+        "P_GW": {
+          "bytes": 260430,
+          "lexch": "CA",
+          "path": "P_GW/POTCAR",
+          "sha256": "ea2ba535c7f36230cd268b0526d13b3c522ed89ee653e9ce4b25c1621b15278c",
+          "titel": "PAW P_GW 19Mar2012"
+        },
+        "P_h": {
+          "bytes": 205689,
+          "lexch": "CA",
+          "path": "P_h/POTCAR",
+          "sha256": "4e7cf96f2f5b04aa444a389db11a597354b7007cf3b4d1f1fa96f8b651965036",
+          "titel": "PAW P_h 21Jan2003"
+        },
+        "Pa": {
+          "bytes": 270775,
+          "lexch": "CA",
+          "path": "Pa/POTCAR",
+          "sha256": "e6b5c0882d897cd9c00d73137da2d356b0277a18b8898a528335b2426305848b",
+          "titel": "PAW Pa 17Apr2000"
+        },
+        "Pa_s": {
+          "bytes": 270783,
+          "lexch": "CA",
+          "path": "Pa_s/POTCAR",
+          "sha256": "728467e50146d3555b95b5ae0d8d3a381fd936864ff6284ac0cb0a3bb0338cb8",
+          "titel": "PAW Pa_s 12Apr2000"
+        },
+        "Pb": {
+          "bytes": 215862,
+          "lexch": "CA",
+          "path": "Pb/POTCAR",
+          "sha256": "a190165dac1ac156b7856d8046b9b92cf66b2c101d657948a15bc7d103744b6e",
+          "titel": "PAW Pb 02Sep2001"
+        },
+        "Pb_d": {
+          "bytes": 234029,
+          "lexch": "CA",
+          "path": "Pb_d/POTCAR",
+          "sha256": "52fde216837fa5faecaec4f8d5d8b5230b6bedfadb6b2b048d0baa5019163097",
+          "titel": "PAW Pb_d 30Apr1998"
+        },
+        "Pb_d_GW": {
+          "bytes": 324049,
+          "lexch": "CA",
+          "path": "Pb_d_GW/POTCAR",
+          "sha256": "e70a932893f7e20f9cbf442944ee926f6aee1d4437430b5f97432ddf5a6506ad",
+          "titel": "PAW Pb_d_GW 14Apr2014"
+        },
+        "Pb_sv_GW": {
+          "bytes": 342670,
+          "lexch": "CA",
+          "path": "Pb_sv_GW/POTCAR",
+          "sha256": "bf1029450dec0170c6dd577474a2e63055f72b95e0825b06de12a6d591c523af",
+          "titel": "PAW Pb_sv_GW 04Apr2014"
+        },
+        "Pd": {
+          "bytes": 231452,
+          "lexch": "CA",
+          "path": "Pd/POTCAR",
+          "sha256": "2c157ddbddb87e56f1136150a81adfde52946a2ee689513b2dc53c9c501fcd2a",
+          "titel": "PAW Pd 04Jan2005"
+        },
+        "Pd_GW": {
+          "bytes": 267626,
+          "lexch": "CA",
+          "path": "Pd_GW/POTCAR",
+          "sha256": "f6fa4a373b4f11a8df48b6af4c390587a033f63683becafaee68113f59ffac89",
+          "titel": "PAW Pd_GW 06Mar2008"
+        },
+        "Pd_pv": {
+          "bytes": 231418,
+          "lexch": "CA",
+          "path": "Pd_pv/POTCAR",
+          "sha256": "7a15198878df2a066d213ff092400cea0b55b8e8d0577077bc44ed71dacc3f59",
+          "titel": "PAW Pd_pv 28Jan2005"
+        },
+        "Pd_sv_GW": {
+          "bytes": 338804,
+          "lexch": "CA",
+          "path": "Pd_sv_GW/POTCAR",
+          "sha256": "0ac7fbff205fe0f4ab6e2b6543fe41a45a395aaffd8afae3ef4783d2b79b5c40",
+          "titel": "PAW Pd_sv_GW 05Dec2013"
+        },
+        "Po": {
+          "bytes": 217316,
+          "lexch": "CA",
+          "path": "Po/POTCAR",
+          "sha256": "07baf70761b78382263daa8cbbfc2bc2fcc9b1f172c30fce613530c512111669",
+          "titel": "PAW Po 10Feb2004"
+        },
+        "Po_d": {
+          "bytes": 235649,
+          "lexch": "CA",
+          "path": "Po_d/POTCAR",
+          "sha256": "6bd54f09d7950a135e26722bfc9a7661b3ababf42c3e4aaa18c5b4c845db2c45",
+          "titel": "PAW Po_d 25May2007"
+        },
+        "Po_d_GW": {
+          "bytes": 326273,
+          "lexch": "CA",
+          "path": "Po_d_GW/POTCAR",
+          "sha256": "08f9ed52ec39f2697f750ad2970aa3ac3a2fab90be3867775f9fb7006d63427d",
+          "titel": "PAW Po_d_GW 14Apr2014"
+        },
+        "Po_sv_GW": {
+          "bytes": 345100,
+          "lexch": "CA",
+          "path": "Po_sv_GW/POTCAR",
+          "sha256": "d72a6894636ce054294616490becf652e16e8e4e72ce74a7efd7963f4b1b0fda",
+          "titel": "PAW Po_sv_GW 14Apr2014"
+        },
+        "Pt": {
+          "bytes": 229186,
+          "lexch": "CA",
+          "path": "Pt/POTCAR",
+          "sha256": "2a7d1d97dfc7cd2999b767ba17390b3850ac83a7f855fa97dfbf58a78a1d4a77",
+          "titel": "PAW Pt 15Nov2007"
+        },
+        "Pt_GW": {
+          "bytes": 246989,
+          "lexch": "CA",
+          "path": "Pt_GW/POTCAR",
+          "sha256": "8a2ef8455abf010a10492c47060fdc0e72cb571e9b0347ab27e6ad834d6dda14",
+          "titel": "PAW Pt_GW 10Mar2009"
+        },
+        "Pt_pv": {
+          "bytes": 245426,
+          "lexch": "CA",
+          "path": "Pt_pv/POTCAR",
+          "sha256": "c15b47bc49c9aceaa04f37a969ddad45f373e158ca2840843ebebcf15675c9da",
+          "titel": "PAW Pt_pv 12Dec2005"
+        },
+        "Pt_sv_GW": {
+          "bytes": 264848,
+          "lexch": "CA",
+          "path": "Pt_sv_GW/POTCAR",
+          "sha256": "423244155b49f88dbd2a7a0eac22cb71527ae900bed026b255e419cdf1876be2",
+          "titel": "PAW Pt_sv_GW 23Mar2010"
+        },
+        "Pu": {
+          "bytes": 269811,
+          "lexch": "CA",
+          "path": "Pu/POTCAR",
+          "sha256": "f8a4d94bd2a210de8612aeceb56c4395db51c8e686270e11897addf742b73875",
+          "titel": "PAW Pu 17Apr2000"
+        },
+        "Pu_s": {
+          "bytes": 269819,
+          "lexch": "CA",
+          "path": "Pu_s/POTCAR",
+          "sha256": "f319d7ca07d000a9972e41c840207d083428f51a66142e56cb363242f1602919",
+          "titel": "PAW Pu_s 04May2000"
+        },
+        "Ra_sv": {
+          "bytes": 273697,
+          "lexch": "CA",
+          "path": "Ra_sv/POTCAR",
+          "sha256": "884ac996ec75e04760c513b287277a798e7599ea3b82678b3a42433407017b24",
+          "titel": "PAW Ra_sv 29May2007"
+        },
+        "Rb_pv": {
+          "bytes": 220659,
+          "lexch": "CA",
+          "path": "Rb_pv/POTCAR",
+          "sha256": "ceb9249b5d3f1977b6528afe4434209c6529ae45c1ebe8f6d78ccfb7924aec6a",
+          "titel": "PAW Rb_pv 11Feb1998"
+        },
+        "Rb_sv": {
+          "bytes": 220650,
+          "lexch": "CA",
+          "path": "Rb_sv/POTCAR",
+          "sha256": "708e4b94dcf281f04e6ac7e06a36fdf585607d06c6ad2444ff3a5f2b2464a33e",
+          "titel": "PAW Rb_sv 10Feb1998"
+        },
+        "Rb_sv_GW": {
+          "bytes": 277298,
+          "lexch": "CA",
+          "path": "Rb_sv_GW/POTCAR",
+          "sha256": "d07ed4522b375a4623aa113cd619bc2e07836bcaa170d4a1e76eeb6706fc7001",
+          "titel": "PAW Rb_sv_GW 23Mar2010"
+        },
+        "Re": {
+          "bytes": 230779,
+          "lexch": "CA",
+          "path": "Re/POTCAR",
+          "sha256": "89d896393bdb56df07fe8c21db00390708090b66b9de2d46914bfe482a43672a",
+          "titel": "PAW Re 21Jan2003"
+        },
+        "Re_pv": {
+          "bytes": 230747,
+          "lexch": "CA",
+          "path": "Re_pv/POTCAR",
+          "sha256": "c6cffbd5f26d7a0ed99fab1958b10f12d9bf3e172ff84fd7994b4d5c3a370071",
+          "titel": "PAW Re_pv 11Feb1998"
+        },
+        "Re_sv_GW": {
+          "bytes": 266798,
+          "lexch": "CA",
+          "path": "Re_sv_GW/POTCAR",
+          "sha256": "878e8a7a303ea576772d525d9fc6895d3d270c64eab4633de02997840208cb90",
+          "titel": "PAW Re_sv_GW 23Mar2010"
+        },
+        "Rh": {
+          "bytes": 232271,
+          "lexch": "CA",
+          "path": "Rh/POTCAR",
+          "sha256": "d3f32fd1fe160846cb713f4f976c16bef5eb5ae872d49cb68f0e463c6295ed2d",
+          "titel": "PAW Rh 04Feb2005"
+        },
+        "Rh_GW": {
+          "bytes": 268609,
+          "lexch": "CA",
+          "path": "Rh_GW/POTCAR",
+          "sha256": "d9e77b3346efd7d2f6752554ac81339dd40209803a0065c0f39701179229de9c",
+          "titel": "PAW Rh_GW 06Mar2008"
+        },
+        "Rh_pv": {
+          "bytes": 232238,
+          "lexch": "CA",
+          "path": "Rh_pv/POTCAR",
+          "sha256": "6732814887e3f4978f82663bcc59908072867adcda65b714a087004ef90e3466",
+          "titel": "PAW Rh_pv 25Jan2005"
+        },
+        "Rh_sv_GW": {
+          "bytes": 340039,
+          "lexch": "CA",
+          "path": "Rh_sv_GW/POTCAR",
+          "sha256": "5d317763decd5d2eec7990b81cb53e9318b42213b28a1419e0d1a16cdf285eed",
+          "titel": "PAW Rh_sv_GW 05Dec2013"
+        },
+        "Rn": {
+          "bytes": 232090,
+          "lexch": "CA",
+          "path": "Rn/POTCAR",
+          "sha256": "1427342087048a9f17f5d86fbc7bd392506a88f6334642ab6912bf6e40aebf51",
+          "titel": "PAW Rn 12Aug2016"
+        },
+        "Rn_d_GW": {
+          "bytes": 305426,
+          "lexch": "CA",
+          "path": "Rn_d_GW/POTCAR",
+          "sha256": "a8dbf8e52a2bb8c81607cc74892852b97ebeeb1fb72d3446116cdd09525ab97a",
+          "titel": "PAW Rn_d_GW 12Aug2016"
+        },
+        "Rn_sv_GW": {
+          "bytes": 324003,
+          "lexch": "CA",
+          "path": "Rn_sv_GW/POTCAR",
+          "sha256": "901caba6d1d2dab06ab3c7a4a989adeb526db46d776cd889fcf72a09001b5835",
+          "titel": "PAW Rn_sv_GW 12Aug2016"
+        },
+        "Ru": {
+          "bytes": 233075,
+          "lexch": "CA",
+          "path": "Ru/POTCAR",
+          "sha256": "cc8445eb49440471a572084dcb89679a6f00039129e49a3348f05ab8c8a9b81c",
+          "titel": "PAW Ru 04Feb2005"
+        },
+        "Ru_pv": {
+          "bytes": 233038,
+          "lexch": "CA",
+          "path": "Ru_pv/POTCAR",
+          "sha256": "a2b9fc562e164781d13c7275c8863296027810292fec929b01ae51353c3fbbb2",
+          "titel": "PAW Ru_pv 28Jan2005"
+        },
+        "Ru_sv": {
+          "bytes": 233034,
+          "lexch": "CA",
+          "path": "Ru_sv/POTCAR",
+          "sha256": "77269f731df16a374db2d4e6b853505b365c8a4c90b1d94b6d41135c6e1b7160",
+          "titel": "PAW Ru_sv 28Jan2005"
+        },
+        "Ru_sv_GW": {
+          "bytes": 341319,
+          "lexch": "CA",
+          "path": "Ru_sv_GW/POTCAR",
+          "sha256": "eeafe48f179915314994b9a196bc3512c0e6cc1b3fa36353d953ffecaa0187ee",
+          "titel": "PAW Ru_sv_GW 05Dec2013"
+        },
+        "S": {
+          "bytes": 204385,
+          "lexch": "CA",
+          "path": "S/POTCAR",
+          "sha256": "cdf54d04dd20ec7797da7a34093ce10f06525b5db98def2a2bf6df0a825014b0",
+          "titel": "PAW S 27Mar2009"
+        },
+        "S_GW": {
+          "bytes": 258806,
+          "lexch": "CA",
+          "path": "S_GW/POTCAR",
+          "sha256": "d8a9141fbfd5731edf3923cf01bb6977acd2bdf0c876d891dd0ff2e388833f3f",
+          "titel": "PAW S_GW 19Mar2012"
+        },
+        "S_h": {
+          "bytes": 204389,
+          "lexch": "CA",
+          "path": "S_h/POTCAR",
+          "sha256": "bd1ce84f8819e5f83276cd1e6d942be67952a213ab2e89a2813d0146dddb07b1",
+          "titel": "PAW S_h 21Jan2003"
+        },
+        "Sb": {
+          "bytes": 214987,
+          "lexch": "CA",
+          "path": "Sb/POTCAR",
+          "sha256": "d00202147e53dd01ac9b35a56095402bf1a251b5ec41dc4247c6d7a985ebb992",
+          "titel": "PAW Sb 04Feb1998"
+        },
+        "Sb_GW": {
+          "bytes": 285854,
+          "lexch": "CA",
+          "path": "Sb_GW/POTCAR",
+          "sha256": "2a64b4a2b656b9c905da44eacd639eb4843344caa8a6b0b965b9b8f05c3abb91",
+          "titel": "PAW Sb_GW 21Mar2012"
+        },
+        "Sb_d_GW": {
+          "bytes": 304231,
+          "lexch": "CA",
+          "path": "Sb_d_GW/POTCAR",
+          "sha256": "81d789cf84bcfb8fe168faada70d4699e401f60c2eabaf48d35389d08b8b6498",
+          "titel": "PAW Sb_d_GW 15Mar2013"
+        },
+        "Sb_sv_GW": {
+          "bytes": 341294,
+          "lexch": "CA",
+          "path": "Sb_sv_GW/POTCAR",
+          "sha256": "b8047768fd88199eaab29dd29d14cf69e1d830cb373356b038759e334e983bee",
+          "titel": "PAW Sb_sv_GW 22Nov2013"
+        },
+        "Sc": {
+          "bytes": 236120,
+          "lexch": "CA",
+          "path": "Sc/POTCAR",
+          "sha256": "1d92ef32fde14f8febe9f33d91c2198ad117f000d429d7021704df73a409e602",
+          "titel": "PAW Sc 26Mar2012"
+        },
+        "Sc_sv": {
+          "bytes": 254760,
+          "lexch": "CA",
+          "path": "Sc_sv/POTCAR",
+          "sha256": "8f41f68acdce0ef015a3e971af365f30881b5bd74ad95af259a28b34b2663926",
+          "titel": "PAW Sc_sv 07Sep2000"
+        },
+        "Sc_sv_GW": {
+          "bytes": 349693,
+          "lexch": "CA",
+          "path": "Sc_sv_GW/POTCAR",
+          "sha256": "9d7734bfe1ec2a65af0c9b0db629caffba0c694c77b39271536cc7986e043c62",
+          "titel": "PAW Sc_sv_GW 05Dec2013"
+        },
+        "Se": {
+          "bytes": 219953,
+          "lexch": "CA",
+          "path": "Se/POTCAR",
+          "sha256": "7b678aea6f5cd9ccbdc5878ee29c5cc9cfb991eee64d5fbd1d42dbb1b6639fd6",
+          "titel": "PAW Se 03Mar1998"
+        },
+        "Se_GW": {
+          "bytes": 236191,
+          "lexch": "CA",
+          "path": "Se_GW/POTCAR",
+          "sha256": "0c076946650e48f14f9aa3b5a3c2d1d71d1f867dfd54b489bd33b5abf2cbf1d0",
+          "titel": "PAW Se_GW 21Mar2012"
+        },
+        "Se_sv_GW": {
+          "bytes": 349704,
+          "lexch": "CA",
+          "path": "Se_sv_GW/POTCAR",
+          "sha256": "cebc8d918e653a52d722daba1f9b41e824e26a543b5963542aa602d3ac444a2d",
+          "titel": "PAW Se_sv_GW 21Nov2013"
+        },
+        "Si": {
+          "bytes": 196635,
+          "lexch": "CA",
+          "path": "Si/POTCAR",
+          "sha256": "a2f128b200e755e348836f52b5882e923ae34bdbbd63c3177e29188e9c2b24b9",
+          "titel": "PAW Si 02Apr1999"
+        },
+        "Si_GW": {
+          "bytes": 249116,
+          "lexch": "CA",
+          "path": "Si_GW/POTCAR",
+          "sha256": "c50472806496f264c2a84b684b483ddb1bb0dda3f0e8e86a5529b38f82c3ca6d",
+          "titel": "PAW Si_GW 04May2012"
+        },
+        "Si_sv_GW": {
+          "bytes": 248269,
+          "lexch": "CA",
+          "path": "Si_sv_GW/POTCAR",
+          "sha256": "67cd688ed958a0a025063b7c7ffaa341e1a2edcd17513344df339c584d0923c7",
+          "titel": "PAW Si_sv_GW 29Sep2009"
+        },
+        "Sn": {
+          "bytes": 216445,
+          "lexch": "CA",
+          "path": "Sn/POTCAR",
+          "sha256": "eacb3a66dd3234c9bbcbbfe2d534dfbfb8d3b1d5a06c662fcfcef7315a642a22",
+          "titel": "PAW Sn 03Oct2001"
+        },
+        "Sn_d": {
+          "bytes": 234694,
+          "lexch": "CA",
+          "path": "Sn_d/POTCAR",
+          "sha256": "fe2be894c1bd38c6efafe252ead37bec107503186894c0c5f638a42c04c91dbb",
+          "titel": "PAW Sn_d 09Feb1998"
+        },
+        "Sn_d_GW": {
+          "bytes": 306337,
+          "lexch": "CA",
+          "path": "Sn_d_GW/POTCAR",
+          "sha256": "8b5d6560338d90be66e0a88a926ca6f369b501d23d582d2ad416a55c6de80680",
+          "titel": "PAW Sn_d_GW 15Mar2013"
+        },
+        "Sn_sv_GW": {
+          "bytes": 343724,
+          "lexch": "CA",
+          "path": "Sn_sv_GW/POTCAR",
+          "sha256": "6b31b06febe2c4d50223514bc77b26685d90ac2a5344a174020155346de71275",
+          "titel": "PAW Sn_sv_GW 22Nov2013"
+        },
+        "Sr_sv": {
+          "bytes": 237811,
+          "lexch": "CA",
+          "path": "Sr_sv/POTCAR",
+          "sha256": "88a66f4bbb7a1f0b62b5b4e53586d55817f80e765dc57edbf06471f8e18d08e6",
+          "titel": "PAW Sr_sv 10Feb1998"
+        },
+        "Sr_sv_GW": {
+          "bytes": 275354,
+          "lexch": "CA",
+          "path": "Sr_sv_GW/POTCAR",
+          "sha256": "571774e815218f12c07a886cd1cbc4d52504095be746b33ba2a5c8bee351d6c7",
+          "titel": "PAW Sr_sv_GW 23Mar2010"
+        },
+        "Ta": {
+          "bytes": 231585,
+          "lexch": "CA",
+          "path": "Ta/POTCAR",
+          "sha256": "78f57be87f5521fdae7700cfdda974264f4a1eef63dcdbcf44fbc5112e3930a4",
+          "titel": "PAW Ta 21Jan2003"
+        },
+        "Ta_pv": {
+          "bytes": 231547,
+          "lexch": "CA",
+          "path": "Ta_pv/POTCAR",
+          "sha256": "551bdb7ba72d36107b4be158679dfa800a82ff99b8dac81499e64793f07f7969",
+          "titel": "PAW Ta_pv 07Sep2000"
+        },
+        "Ta_sv_GW": {
+          "bytes": 268742,
+          "lexch": "CA",
+          "path": "Ta_sv_GW/POTCAR",
+          "sha256": "fe9b368cb62981cc40f3c887b559127e092e1af6fc3388649b3fb498d231a218",
+          "titel": "PAW Ta_sv_GW 23Mar2010"
+        },
+        "Tc": {
+          "bytes": 233072,
+          "lexch": "CA",
+          "path": "Tc/POTCAR",
+          "sha256": "dc72db4c24c70c72bef0bd0a3e24d2a9b68593c9bd3c1604542c1ee21823b85c",
+          "titel": "PAW Tc 04Feb2005"
+        },
+        "Tc_pv": {
+          "bytes": 233038,
+          "lexch": "CA",
+          "path": "Tc_pv/POTCAR",
+          "sha256": "0ea6f935f5ec525371025caa79eddedab5ad54bed22a0b61f9a6e78f4e192d88",
+          "titel": "PAW Tc_pv 04Feb2005"
+        },
+        "Tc_sv": {
+          "bytes": 233034,
+          "lexch": "CA",
+          "path": "Tc_sv/POTCAR",
+          "sha256": "474074c419ce0d976eed8c2342e114de7da642a5e2416b5a54d044c01f44d90d",
+          "titel": "PAW Tc_sv 23Mar2010"
+        },
+        "Tc_sv_GW": {
+          "bytes": 342523,
+          "lexch": "CA",
+          "path": "Tc_sv_GW/POTCAR",
+          "sha256": "f0ce8e3219ffb26ee1c827a49454a557abf0b32a6d0c3879ab6e5f4a63b3a88a",
+          "titel": "PAW Tc_sv_GW 05Dec2013"
+        },
+        "Te": {
+          "bytes": 219339,
+          "lexch": "CA",
+          "path": "Te/POTCAR",
+          "sha256": "7c0114fab9f5801471f7e2409bb4cedaa024a9ad458c9397a9bd0f21bed41f65",
+          "titel": "PAW Te 03Oct2001"
+        },
+        "Te_GW": {
+          "bytes": 254196,
+          "lexch": "CA",
+          "path": "Te_GW/POTCAR",
+          "sha256": "d61c7e4eb266822ae9f67b4505345d9e3918b009acc892087912e5b1e45dade6",
+          "titel": "PAW Te_GW 22Mar2012"
+        },
+        "Te_sv_GW": {
+          "bytes": 348557,
+          "lexch": "CA",
+          "path": "Te_sv_GW/POTCAR",
+          "sha256": "d3cd295cc64d87565e61b2b79dc9badae2761d00f05d091cd72cfbf1760c3901",
+          "titel": "PAW Te_sv_GW 22Nov2013"
+        },
+        "Th": {
+          "bytes": 271759,
+          "lexch": "CA",
+          "path": "Th/POTCAR",
+          "sha256": "af09ac8de1e1f92ddce0fd2a8f4fc0263c29b5b617c6656944953bf8018b4f17",
+          "titel": "PAW Th 17Apr2000"
+        },
+        "Th_s": {
+          "bytes": 271767,
+          "lexch": "CA",
+          "path": "Th_s/POTCAR",
+          "sha256": "d193bfd09474bb5eb636de32e95d5fe54e69503303f689a32eaaeb73839cd1c7",
+          "titel": "PAW Th_s 04May2000"
+        },
+        "Ti": {
+          "bytes": 218425,
+          "lexch": "CA",
+          "path": "Ti/POTCAR",
+          "sha256": "a4af17f6090aaee80abecc6c3da82266626c3c37294f3069e087a67c0aebb1da",
+          "titel": "PAW Ti 03Oct2001"
+        },
+        "Ti_pv": {
+          "bytes": 236926,
+          "lexch": "CA",
+          "path": "Ti_pv/POTCAR",
+          "sha256": "3b15d1639d49c9ca43420193a4729231a15b046ecc86fd1083a85d0b04f0c6c3",
+          "titel": "PAW Ti_pv 07Sep2000"
+        },
+        "Ti_sv": {
+          "bytes": 236939,
+          "lexch": "CA",
+          "path": "Ti_sv/POTCAR",
+          "sha256": "50e0b3fcb269862bb398fce6bc2c4e839f214c3b5394497c2a8860411bf000c9",
+          "titel": "PAW Ti_sv 26Sep2005"
+        },
+        "Ti_sv_GW": {
+          "bytes": 347242,
+          "lexch": "CA",
+          "path": "Ti_sv_GW/POTCAR",
+          "sha256": "d3cd9e160a2af5879a14e55ad9ba9be03093774e47704b1fe979533d7852e866",
+          "titel": "PAW Ti_sv_GW 05Dec2013"
+        },
+        "Tl": {
+          "bytes": 217324,
+          "lexch": "CA",
+          "path": "Tl/POTCAR",
+          "sha256": "873c0fbed5cc7e18e9e9fc76b1663b90da09185f992c412a8aed9f4e34044341",
+          "titel": "PAW Tl 03Oct2001"
+        },
+        "Tl_d": {
+          "bytes": 235649,
+          "lexch": "CA",
+          "path": "Tl_d/POTCAR",
+          "sha256": "d30c7f236162573dbe22bdb16ab9810b1cf291b4e12178a50d9c27d604a1e9e5",
+          "titel": "PAW Tl_d 11Feb1998"
+        },
+        "Tl_d_GW": {
+          "bytes": 326277,
+          "lexch": "CA",
+          "path": "Tl_d_GW/POTCAR",
+          "sha256": "f1e5d0b9114734f4a92618ca3385f06cdf486ee7e5cebc5dbdfe3ec6602e8ca4",
+          "titel": "PAW Tl_d_GW 14Apr2014"
+        },
+        "Tl_sv_GW": {
+          "bytes": 345100,
+          "lexch": "CA",
+          "path": "Tl_sv_GW/POTCAR",
+          "sha256": "f46edbb762cc0687efce626fd02da5f39713b5a8d1f5a43a5d7a373d36b70e95",
+          "titel": "PAW Tl_sv_GW 16Apr2014"
+        },
+        "U": {
+          "bytes": 269812,
+          "lexch": "CA",
+          "path": "U/POTCAR",
+          "sha256": "27f7dda54c145581057eb373e409a09d3a83bb267d8d87476e4619517b2b9578",
+          "titel": "PAW U 17Apr2000"
+        },
+        "U_s": {
+          "bytes": 269816,
+          "lexch": "CA",
+          "path": "U_s/POTCAR",
+          "sha256": "77690ac70af3bad1019b89114622591a74fb782c5f439db27fc5c507fc7c77bc",
+          "titel": "PAW U_s 04May2000"
+        },
+        "V": {
+          "bytes": 236161,
+          "lexch": "CA",
+          "path": "V/POTCAR",
+          "sha256": "3ab25a07eb04f93e0feaab6565291a6347634631e207520250d92043ce378fbb",
+          "titel": "PAW V 07Aug2001"
+        },
+        "V_pv": {
+          "bytes": 236126,
+          "lexch": "CA",
+          "path": "V_pv/POTCAR",
+          "sha256": "f1ac50e5dd95e23a4cf819afdef1548d3ba7cdc588252e2e8a20a18424648bc0",
+          "titel": "PAW V_pv 07Sep2000"
+        },
+        "V_sv": {
+          "bytes": 236136,
+          "lexch": "CA",
+          "path": "V_sv/POTCAR",
+          "sha256": "cf79f0829d5500fb16b26687cf7e47a9a78890b6ae5bd50612f39ef189d3d440",
+          "titel": "PAW V_sv 02Aug2007"
+        },
+        "V_sv_GW": {
+          "bytes": 346039,
+          "lexch": "CA",
+          "path": "V_sv_GW/POTCAR",
+          "sha256": "f1d25e20390da6dc64834d2f9b422a9d0da24160ba7dff8f03096688dbb95953",
+          "titel": "PAW V_sv_GW 05Dec2013"
+        },
+        "W": {
+          "bytes": 231578,
+          "lexch": "CA",
+          "path": "W/POTCAR",
+          "sha256": "af979ebdcc47c04d4e77f8a30ddfee96badd671b167a3c562e95f305549592f5",
+          "titel": "PAW W 19Jan2001"
+        },
+        "W_sv": {
+          "bytes": 247807,
+          "lexch": "CA",
+          "path": "W_sv/POTCAR",
+          "sha256": "00f8a6fdbaf48f2e046919cdf92535474a6917e8a1956ff684ad7200a5be0188",
+          "titel": "PAW W_sv 04Sep2015"
+        },
+        "W_sv_GW": {
+          "bytes": 267755,
+          "lexch": "CA",
+          "path": "W_sv_GW/POTCAR",
+          "sha256": "00da0d63dee98fc503cd2865fecda2065ab4011a552854da3549a377eafc147d",
+          "titel": "PAW W_sv_GW 23Mar2010"
+        },
+        "Xe": {
+          "bytes": 181206,
+          "lexch": "CA",
+          "path": "Xe/POTCAR",
+          "sha256": "053686383076d2fc42887fb65399a4b344865e8bf0caab11e74b9e0d4b32fc17",
+          "titel": "PAW Xe 07Sep2000"
+        },
+        "Xe_GW": {
+          "bytes": 273502,
+          "lexch": "CA",
+          "path": "Xe_GW/POTCAR",
+          "sha256": "5cb28667d07f626fb6d1b7894788b7cd021c899c46c19946f3c109e36abd4a2a",
+          "titel": "PAW Xe_GW 08Jan2009"
+        },
+        "Xe_sv_GW": {
+          "bytes": 346157,
+          "lexch": "CA",
+          "path": "Xe_sv_GW/POTCAR",
+          "sha256": "14c3cd278fa9a807300a6208a0afc2a86e95e7cb665d1ba01509e6101ef7147a",
+          "titel": "PAW Xe_sv_GW 17Apr2014"
+        },
+        "Y_sv": {
+          "bytes": 255684,
+          "lexch": "CA",
+          "path": "Y_sv/POTCAR",
+          "sha256": "5dd9488ea983de41f82a26bf8e94d4589891439934eb61a01f6fa1540e197f06",
+          "titel": "PAW Y_sv 25May2007"
+        },
+        "Y_sv_GW": {
+          "bytes": 328389,
+          "lexch": "CA",
+          "path": "Y_sv_GW/POTCAR",
+          "sha256": "fb3107086f4e5fe71df5f4b78274a59cda851fac223096258dc0465f303d5d77",
+          "titel": "PAW Y_sv_GW 05Dec2013"
+        },
+        "Zn": {
+          "bytes": 230501,
+          "lexch": "CA",
+          "path": "Zn/POTCAR",
+          "sha256": "31ef5f531894809d5708444770731de8e87110b5a2bae3f80ab81480c3a1ca8e",
+          "titel": "PAW Zn 03Mar1998"
+        },
+        "Zn_GW": {
+          "bytes": 248553,
+          "lexch": "CA",
+          "path": "Zn_GW/POTCAR",
+          "sha256": "2c47acdaf4d6615011a7483743dcc2b6243f79b5de9672b21f2dc8000cbd9b5f",
+          "titel": "PAW Zn_GW 09Oct2010"
+        },
+        "Zn_sv_GW": {
+          "bytes": 337546,
+          "lexch": "CA",
+          "path": "Zn_sv_GW/POTCAR",
+          "sha256": "49b97e254ab379ab59934cddf09766b3d2216c1215c8750305b6c553ab39b1d6",
+          "titel": "PAW Zn_sv_GW 05Dec2013"
+        },
+        "Zr_sv": {
+          "bytes": 235460,
+          "lexch": "CA",
+          "path": "Zr_sv/POTCAR",
+          "sha256": "fab702f762beb5fd49551999d5f36b3ff00081f41d9d13338667b1873d380362",
+          "titel": "PAW Zr_sv 04Jan2005"
+        },
+        "Zr_sv_GW": {
+          "bytes": 327272,
+          "lexch": "CA",
+          "path": "Zr_sv_GW/POTCAR",
+          "sha256": "ee049ca909d0e2a11026a212079f7e84bcd17d5106e290cfb51ac3b979b13691",
+          "titel": "PAW Zr_sv_GW 05Dec2013"
+        }
+      }
+    },
+    "PBE": {
+      "archive_member": "Pseudopotentials_v6.4/potpaw_PBE.64.tgz",
+      "archive_sha256": "16e2c03f20bec437d7e7c32f969901fa8264d74b2782c57617147c15147ec253",
+      "directory": "potpaw_PBE",
+      "file_count": 689,
+      "files_sha256": "27470bd31998aecfeaa18c80197988878d437c79216b458c1c593528e06a3aa6",
+      "potential_count": 343,
+      "potentials": {
+        "Ac": {
+          "bytes": 270814,
+          "lexch": "PE",
+          "path": "Ac/POTCAR",
+          "sha256": "8a1196116d1f7863026624ffaa8d5d1059621d4a176a281251b591e3ded8d5ac",
+          "titel": "PAW_PBE Ac 06Sep2000"
+        },
+        "Ag": {
+          "bytes": 229884,
+          "lexch": "PE",
+          "path": "Ag/POTCAR",
+          "sha256": "d2e399fa2a358bf13ab57d58824fd42a4ef5f6695a3a1eeeacbf07fc02dc5b5b",
+          "titel": "PAW_PBE Ag 02Apr2005"
+        },
+        "Ag_GW": {
+          "bytes": 281970,
+          "lexch": "PE",
+          "path": "Ag_GW/POTCAR",
+          "sha256": "779f883f6cba058dab105796a1ac66693136a826d4a82cc3983224c67287dd14",
+          "titel": "PAW_PBE Ag_GW 06Mar2008"
+        },
+        "Ag_pv": {
+          "bytes": 229886,
+          "lexch": "PE",
+          "path": "Ag_pv/POTCAR",
+          "sha256": "a355eadc7fc4ec0ffb286910613fe21f2b2f8ec0b247461baf754504f40af26e",
+          "titel": "PAW_PBE Ag_pv 09Dec2005"
+        },
+        "Ag_sv_GW": {
+          "bytes": 337642,
+          "lexch": "PE",
+          "path": "Ag_sv_GW/POTCAR",
+          "sha256": "05ca3a36b21bffaee88dc1fdb67c0521c0dfbfac9abf77b1cf87246b9cb70717",
+          "titel": "PAW_PBE Ag_sv_GW 05Dec2013"
+        },
+        "Al": {
+          "bytes": 197982,
+          "lexch": "PE",
+          "path": "Al/POTCAR",
+          "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315",
+          "titel": "PAW_PBE Al 04Jan2001"
+        },
+        "Al_GW": {
+          "bytes": 250791,
+          "lexch": "PE",
+          "path": "Al_GW/POTCAR",
+          "sha256": "845a9c2b9f812f68354db1105f34d5335e2c529eaf2e1843af08a735ea50b741",
+          "titel": "PAW_PBE Al_GW 19Mar2012"
+        },
+        "Al_sv_GW": {
+          "bytes": 248058,
+          "lexch": "PE",
+          "path": "Al_sv_GW/POTCAR",
+          "sha256": "0e782561b520e626fe2829a0c56f22c0984251e581e69fa161028588c965a061",
+          "titel": "PAW_PBE Al_sv_GW 2Feb2008"
+        },
+        "Am": {
+          "bytes": 267922,
+          "lexch": "PE",
+          "path": "Am/POTCAR",
+          "sha256": "a66b11fb1274c5aefe53916e702b1ddb151a4f12348b762560c2bb700c02743b",
+          "titel": "PAW_PBE Am 08May2007"
+        },
+        "Ar": {
+          "bytes": 182667,
+          "lexch": "PE",
+          "path": "Ar/POTCAR",
+          "sha256": "0e8a9eb0b327596448460cb41f8a8197d255e567865c5b1419c308fc07939c4e",
+          "titel": "PAW_PBE Ar 07Sep2000"
+        },
+        "Ar_GW": {
+          "bytes": 254819,
+          "lexch": "PE",
+          "path": "Ar_GW/POTCAR",
+          "sha256": "a5145038a8c32f28cb06d75943dccb30d3ac14e291d9250e026032cee9244afc",
+          "titel": "PAW_PBE Ar_GW 21Aug2013"
+        },
+        "As": {
+          "bytes": 220724,
+          "lexch": "PE",
+          "path": "As/POTCAR",
+          "sha256": "2e6d15be17a8728345ee1a67c31ae5820a4efbee2e6447da7ae9c8c8b077c941",
+          "titel": "PAW_PBE As 22Sep2009"
+        },
+        "As_GW": {
+          "bytes": 236945,
+          "lexch": "PE",
+          "path": "As_GW/POTCAR",
+          "sha256": "6095df6e7c3d2a253d235d24177cde2eb78d493c8396e2fd92e84274606b9d63",
+          "titel": "PAW_PBE As_GW 20Mar2012"
+        },
+        "As_d": {
+          "bytes": 239465,
+          "lexch": "PE",
+          "path": "As_d/POTCAR",
+          "sha256": "286fdcd1eef7623c08e30f9d46a1b0655720fca791491d2897ceb8ecaf7efd32",
+          "titel": "PAW_PBE As_d 11Apr2003"
+        },
+        "As_sv_GW": {
+          "bytes": 350915,
+          "lexch": "PE",
+          "path": "As_sv_GW/POTCAR",
+          "sha256": "d015842d7724e8604ec1b7b55d1c395946fce0f1691e7d91c974b1336e4ea27d",
+          "titel": "PAW_PBE As_sv_GW 05Dec2013"
+        },
+        "At": {
+          "bytes": 215913,
+          "lexch": "PE",
+          "path": "At/POTCAR",
+          "sha256": "dab761456cfd69ff0dcc6331382720f3ba9c0cfc3e35e2dd2ae29d498b51d4c3",
+          "titel": "PAW_PBE At 21May2007"
+        },
+        "At_d_GW": {
+          "bytes": 305477,
+          "lexch": "PE",
+          "path": "At_d_GW/POTCAR",
+          "sha256": "da55efb5add52e2d2dd8f3e2e26ee6a20d8fd8421e27cde37333d81846f3567e",
+          "titel": "PAW_PBE At_d_GW 14Apr2014"
+        },
+        "At_sv_GW": {
+          "bytes": 324054,
+          "lexch": "PE",
+          "path": "At_sv_GW/POTCAR",
+          "sha256": "e2149a3755750923dcfa7f9bc57f5dbc2ddc911e1997b345020ceccb51eff68a",
+          "titel": "PAW_PBE At_sv_GW 14Apr2014"
+        },
+        "Au": {
+          "bytes": 227622,
+          "lexch": "PE",
+          "path": "Au/POTCAR",
+          "sha256": "ec1ee5aca8475a9214c670a1c2127468662b62a6adf2550f15324cbe139af665",
+          "titel": "PAW_PBE Au 04Oct2007"
+        },
+        "Au_GW": {
+          "bytes": 261497,
+          "lexch": "PE",
+          "path": "Au_GW/POTCAR",
+          "sha256": "cd20c0713bb1e567afac72febae3ca010520587cc3cda3a24027abbde96cca12",
+          "titel": "PAW_PBE Au_GW 23Mar2010"
+        },
+        "Au_sv_GW": {
+          "bytes": 280180,
+          "lexch": "PE",
+          "path": "Au_sv_GW/POTCAR",
+          "sha256": "35cc836f0ae5ebedbe4f1576225a3a92444311246714f618f6de018d1be0f6b7",
+          "titel": "PAW_PBE Au_sv_GW 13Sep2013"
+        },
+        "B": {
+          "bytes": 195299,
+          "lexch": "PE",
+          "path": "B/POTCAR",
+          "sha256": "3c576d41d253782b61eacc6b38f22578b3e9d5f15e67b0b0b37215a332ce8a35",
+          "titel": "PAW_PBE B 06Sep2000"
+        },
+        "B_GW": {
+          "bytes": 171994,
+          "lexch": "PE",
+          "path": "B_GW/POTCAR",
+          "sha256": "6359f7ed200c55e6e2084d3c195a6ba83d39837962a6ceac31b9a459d6644d6e",
+          "titel": "PAW_PBE B_GW 28Sep2005"
+        },
+        "B_GW_new": {
+          "bytes": 247512,
+          "lexch": "PE",
+          "path": "B_GW_new/POTCAR",
+          "sha256": "6419a206c0cea3c84eed1b8139b841318a5632df2c7dcaaf32b29a0151129f4e",
+          "titel": "PAW_PBE B_GW_new 26Mar2016"
+        },
+        "B_h": {
+          "bytes": 195299,
+          "lexch": "PE",
+          "path": "B_h/POTCAR",
+          "sha256": "f935cf0ab5f2ae4301b8b0193f08986c72cad13cdda3c4b19a0ded8ae7670358",
+          "titel": "PAW_PBE B_h 06Feb2004"
+        },
+        "B_h_GW": {
+          "bytes": 247433,
+          "lexch": "PE",
+          "path": "B_h_GW/POTCAR",
+          "sha256": "53b64081751609abed034d02c13a1715c5bd768e90adc4c25342332b27207881",
+          "titel": "PAW_PBE B_h_GW 16Mar2016"
+        },
+        "B_s": {
+          "bytes": 155726,
+          "lexch": "PE",
+          "path": "B_s/POTCAR",
+          "sha256": "2ebfda6eca66fec3330a6ffe857ce8e7c0a1af645c0234a626ecb12a75973293",
+          "titel": "PAW_PBE B_s 22Jan2003"
+        },
+        "Ba_sv": {
+          "bytes": 236382,
+          "lexch": "PE",
+          "path": "Ba_sv/POTCAR",
+          "sha256": "80d83c46d456075aa25e15b2c9d175162fad19a89a231883c48a57ae42ad62ed",
+          "titel": "PAW_PBE Ba_sv 06Sep2000"
+        },
+        "Ba_sv_GW": {
+          "bytes": 290791,
+          "lexch": "PE",
+          "path": "Ba_sv_GW/POTCAR",
+          "sha256": "d0bb8ae78f43ecff535a994ebcc0c801544b9ab18df17f8252dd6c0f41e02d01",
+          "titel": "PAW_PBE Ba_sv_GW 30Nov2021"
+        },
+        "Be": {
+          "bytes": 198550,
+          "lexch": "PE",
+          "path": "Be/POTCAR",
+          "sha256": "6385cf56a3e7634e88774213e8c081cfbfa046b6a6eeb64c1e62fae86a8bfa64",
+          "titel": "PAW_PBE Be 06Sep2000"
+        },
+        "Be_GW": {
+          "bytes": 233075,
+          "lexch": "PE",
+          "path": "Be_GW/POTCAR",
+          "sha256": "e1507dcb959165ead9de2cf8d2e04c56b0d12df73bfed6205f144144a26f5518",
+          "titel": "PAW_PBE Be_GW 04Mar2008"
+        },
+        "Be_sv": {
+          "bytes": 193380,
+          "lexch": "PE",
+          "path": "Be_sv/POTCAR",
+          "sha256": "e0d72afd5454ae7ddef2016cc3ff5f57eb305e083e63af2f7dd3151cd293efe3",
+          "titel": "PAW_PBE Be_sv 06Sep2000"
+        },
+        "Be_sv_GW": {
+          "bytes": 211745,
+          "lexch": "PE",
+          "path": "Be_sv_GW/POTCAR",
+          "sha256": "b3377246acd3ee8162cd5f528a4a6de2d24c5755ac8879a6818eb0d2ca825a7b",
+          "titel": "PAW_PBE Be_sv_GW 31Mar2010"
+        },
+        "Bi": {
+          "bytes": 233603,
+          "lexch": "PE",
+          "path": "Bi/POTCAR",
+          "sha256": "c690121f28e9ed0062a7761a681f2bf9a266e50db7cf8363b4bd388758898cc7",
+          "titel": "PAW_PBE Bi 08Apr2002"
+        },
+        "Bi_GW": {
+          "bytes": 270431,
+          "lexch": "PE",
+          "path": "Bi_GW/POTCAR",
+          "sha256": "c2309a9b3609db4cfe74e8b02d3c95e148722561de5e710024a5becedb498009",
+          "titel": "PAW_PBE Bi_GW 07Mar2011"
+        },
+        "Bi_d": {
+          "bytes": 235700,
+          "lexch": "PE",
+          "path": "Bi_d/POTCAR",
+          "sha256": "19489cf8682d97931a837b8da7bd7bcbf0777766a05659c456a4a6d9be938548",
+          "titel": "PAW_PBE Bi_d 06Sep2000"
+        },
+        "Bi_d_GW": {
+          "bytes": 326324,
+          "lexch": "PE",
+          "path": "Bi_d_GW/POTCAR",
+          "sha256": "eb00cf06794196ef1cf3e0e03d080360aeff48b739adb77621a13b77b564a33c",
+          "titel": "PAW_PBE Bi_d_GW 14Apr2014"
+        },
+        "Bi_sv_GW": {
+          "bytes": 345151,
+          "lexch": "PE",
+          "path": "Bi_sv_GW/POTCAR",
+          "sha256": "09ab204f933677b99df19bfecc5ac9abc98be42fb7e64b5e300cc6e7b13c3498",
+          "titel": "PAW_PBE Bi_sv_GW 14Apr2014"
+        },
+        "Br": {
+          "bytes": 218546,
+          "lexch": "PE",
+          "path": "Br/POTCAR",
+          "sha256": "c76103971c04f7987d206b245752535bcac1f15e7af19a9e430848e1be2845b6",
+          "titel": "PAW_PBE Br 06Sep2000"
+        },
+        "Br_GW": {
+          "bytes": 234787,
+          "lexch": "PE",
+          "path": "Br_GW/POTCAR",
+          "sha256": "7a8acfca4904cf25aceb1116d6746517e0b6cd0220a3491b6c4a878130a910dd",
+          "titel": "PAW_PBE Br_GW 20Mar2012"
+        },
+        "Br_sv_GW": {
+          "bytes": 347285,
+          "lexch": "PE",
+          "path": "Br_sv_GW/POTCAR",
+          "sha256": "d618ca8e4f62a19065434dc7eef9ad80de89e5b0c171c81c7336fa8f02053b70",
+          "titel": "PAW_PBE Br_sv_GW 21Nov2013"
+        },
+        "C": {
+          "bytes": 207583,
+          "lexch": "PE",
+          "path": "C/POTCAR",
+          "sha256": "e324f39f282d3fd6b99a7bff390f4b2441edd3dd3eac607d1f1c01376f3d0dc0",
+          "titel": "PAW_PBE C 08Apr2002"
+        },
+        "C_GW": {
+          "bytes": 183507,
+          "lexch": "PE",
+          "path": "C_GW/POTCAR",
+          "sha256": "af9d3f65c61f4dece8ccf8ecefee494b8f7b33abe0cfc54ebdc2d1616e424409",
+          "titel": "PAW_PBE C_GW 28Sep2005"
+        },
+        "C_GW_new": {
+          "bytes": 302172,
+          "lexch": "PE",
+          "path": "C_GW_new/POTCAR",
+          "sha256": "4cddd94f8a6047ee73c34316a8e0b68a3bf8f4e64991102e0c52e7e3c1590d50",
+          "titel": "PAW_PBE C_GW_new 17Jan2021"
+        },
+        "C_h": {
+          "bytes": 223855,
+          "lexch": "PE",
+          "path": "C_h/POTCAR",
+          "sha256": "29b1edec50f6c4b3d610ca09c11816f5cccbd164bfbe9cd994c790d4d405c19d",
+          "titel": "PAW_PBE C_h 20Jan2021"
+        },
+        "C_h_GW": {
+          "bytes": 302137,
+          "lexch": "PE",
+          "path": "C_h_GW/POTCAR",
+          "sha256": "d5e9e8fbce245bf8e79a3905883681087097d60614d5e4cd128888c1fce51557",
+          "titel": "PAW_PBE C_h_GW 23May2013"
+        },
+        "C_s": {
+          "bytes": 167242,
+          "lexch": "PE",
+          "path": "C_s/POTCAR",
+          "sha256": "662d5c588b75b360f9de6e0445cfa09248d652e047b5ecbd702fa830b15a2e16",
+          "titel": "PAW_PBE C_s 06Sep2000"
+        },
+        "C_s_GW": {
+          "bytes": 262868,
+          "lexch": "PE",
+          "path": "C_s_GW/POTCAR",
+          "sha256": "98458c73bb497df6e9a3720fcb4e52dc2a95c9caee2f7ceba942b529ee3280fb",
+          "titel": "PAW_PBE C_s_GW 18Jun2016"
+        },
+        "Ca_pv": {
+          "bytes": 238569,
+          "lexch": "PE",
+          "path": "Ca_pv/POTCAR",
+          "sha256": "97031e337cc88b5eebac6332e4a2ed4870e1d3c66cb487f3f2d9ad75701e4caf",
+          "titel": "PAW_PBE Ca_pv 06Sep2000"
+        },
+        "Ca_sv": {
+          "bytes": 238537,
+          "lexch": "PE",
+          "path": "Ca_sv/POTCAR",
+          "sha256": "8dce80a24be8c5ff693fb75030bc75d0271b6445cad28579bb0950703fb52643",
+          "titel": "PAW_PBE Ca_sv 06Sep2000"
+        },
+        "Ca_sv_GW": {
+          "bytes": 274451,
+          "lexch": "PE",
+          "path": "Ca_sv_GW/POTCAR",
+          "sha256": "3312b6095dc143c3cdb84f9235ba3ad9d960f3398b45f5c68e39bad21e000528",
+          "titel": "PAW_PBE Ca_sv_GW 31Mar2010"
+        },
+        "Cd": {
+          "bytes": 229053,
+          "lexch": "PE",
+          "path": "Cd/POTCAR",
+          "sha256": "d05cfe5e86f68dd511f07cc24345a088413980016b98bb2c220619760f6fa17f",
+          "titel": "PAW_PBE Cd 06Sep2000"
+        },
+        "Cd_GW": {
+          "bytes": 281010,
+          "lexch": "PE",
+          "path": "Cd_GW/POTCAR",
+          "sha256": "adf2b50939d8adaa6d614c8494847d1691ac56baad098b6954429bd245b5209a",
+          "titel": "PAW_PBE Cd_GW 18May2010"
+        },
+        "Cd_sv_GW": {
+          "bytes": 335252,
+          "lexch": "PE",
+          "path": "Cd_sv_GW/POTCAR",
+          "sha256": "65ed531561c1aff13538c15ecb0d3e153555bb2f7a40aee54f86c6e9256e1b56",
+          "titel": "PAW_PBE Cd_sv_GW 16Apr2014"
+        },
+        "Ce": {
+          "bytes": 272611,
+          "lexch": "PE",
+          "path": "Ce/POTCAR",
+          "sha256": "817842ad853486869a007c396d7f657c30c8a1d064e47cd4848fa05613ad6d5f",
+          "titel": "PAW_PBE Ce 23Dec2003"
+        },
+        "Ce_3": {
+          "bytes": 238852,
+          "lexch": "PE",
+          "path": "Ce_3/POTCAR",
+          "sha256": "87f94bbf5a0bdf452e607125ee3c9aea5ff86c7b3617a395bdbf295fc54a1f39",
+          "titel": "PAW_PBE Ce_3 06Sep2000"
+        },
+        "Ce_GW": {
+          "bytes": 288845,
+          "lexch": "PE",
+          "path": "Ce_GW/POTCAR",
+          "sha256": "b6077a131d14dd2765b7d731012d7af2c42753f87836df3cd7ebf0c8f330a4b6",
+          "titel": "PAW_PBE Ce_GW 26Mar2009"
+        },
+        "Ce_h": {
+          "bytes": 272613,
+          "lexch": "PE",
+          "path": "Ce_h/POTCAR",
+          "sha256": "b02d348bdbc001c8a30ef75e297d462600e8eefbc56d2dc29b9feb0897c36622",
+          "titel": "PAW_PBE Ce_h 03Mar2005"
+        },
+        "Cf": {
+          "bytes": 284146,
+          "lexch": "PE",
+          "path": "Cf/POTCAR",
+          "sha256": "36436fcab4e631c9609cd5c1b55fa8bc3fcacb6c5f8d912517c815967de7ad2f",
+          "titel": "PAW_PBE Cf 17Oct2013"
+        },
+        "Cl": {
+          "bytes": 202502,
+          "lexch": "PE",
+          "path": "Cl/POTCAR",
+          "sha256": "5cf7cdbf0ea3349bae530d58a74234730aedbdd224243ec9cabf7aa5d236a794",
+          "titel": "PAW_PBE Cl 06Sep2000"
+        },
+        "Cl_GW": {
+          "bytes": 256443,
+          "lexch": "PE",
+          "path": "Cl_GW/POTCAR",
+          "sha256": "19e6d9bec16a35fa6ce74b0975c0626b05af72d76efbf73a7601d9b752d5f277",
+          "titel": "PAW_PBE Cl_GW 19Mar2012"
+        },
+        "Cl_h": {
+          "bytes": 202502,
+          "lexch": "PE",
+          "path": "Cl_h/POTCAR",
+          "sha256": "b79fa92393e7134dcfa44063c19ffee738a3360a16c8463ab5ff09237ad1a81a",
+          "titel": "PAW_PBE Cl_h 21Jan2003"
+        },
+        "Cm": {
+          "bytes": 284150,
+          "lexch": "PE",
+          "path": "Cm/POTCAR",
+          "sha256": "bd07c7bba76d4982bd4fefca8b1bdf34aafa16a21a33af9942ccefdc366e16b8",
+          "titel": "PAW_PBE Cm 17Jan2011"
+        },
+        "Co": {
+          "bytes": 232171,
+          "lexch": "PE",
+          "path": "Co/POTCAR",
+          "sha256": "3ae14252e5e27e2e5a5730c8d8131c6a7ea573dcc9d4d3d392959f07a3f519ee",
+          "titel": "PAW_PBE Co 02Aug2007"
+        },
+        "Co_GW": {
+          "bytes": 266559,
+          "lexch": "PE",
+          "path": "Co_GW/POTCAR",
+          "sha256": "d6501ff59f0e96de07311b06ed76c4f345ae8eda0300cfc4e99222ece19f1c89",
+          "titel": "PAW_PBE Co_GW 31Mar2010"
+        },
+        "Co_pv": {
+          "bytes": 232169,
+          "lexch": "PE",
+          "path": "Co_pv/POTCAR",
+          "sha256": "bb6cd0e09b76151a386fa1d59cf5b7f0bf2b7d9de470b65fc1e1b9431ab4e9bd",
+          "titel": "PAW_PBE Co_pv 23Apr2009"
+        },
+        "Co_sv": {
+          "bytes": 250329,
+          "lexch": "PE",
+          "path": "Co_sv/POTCAR",
+          "sha256": "bb58b36db5f86815c8b3f29392babddf8c1a66aff1b75e201b4f88e4feea4e65",
+          "titel": "PAW_PBE Co_sv 23Jul2007"
+        },
+        "Co_sv_GW": {
+          "bytes": 340030,
+          "lexch": "PE",
+          "path": "Co_sv_GW/POTCAR",
+          "sha256": "5418a65c08d84158d51fce6f24c09a060cb1f50e31b157bb830d4146fde46937",
+          "titel": "PAW_PBE Co_sv_GW 05Dec2013"
+        },
+        "Cr": {
+          "bytes": 234596,
+          "lexch": "PE",
+          "path": "Cr/POTCAR",
+          "sha256": "c74f85cba191c3177e6f69db845a7a9a2bd016798af9cea0dca980e3e3d8cb6b",
+          "titel": "PAW_PBE Cr 06Sep2000"
+        },
+        "Cr_pv": {
+          "bytes": 234590,
+          "lexch": "PE",
+          "path": "Cr_pv/POTCAR",
+          "sha256": "836672959fc86f3b167531577dbf63d7fb0b8d96aaf8b40fb3c4265879bd744b",
+          "titel": "PAW_PBE Cr_pv 02Aug2007"
+        },
+        "Cr_sv": {
+          "bytes": 252957,
+          "lexch": "PE",
+          "path": "Cr_sv/POTCAR",
+          "sha256": "7937e5d8ae0b74aca92e434381c8cc324b4932225449cffcd315af1badc0cb1c",
+          "titel": "PAW_PBE Cr_sv 23Jul2007"
+        },
+        "Cr_sv_GW": {
+          "bytes": 343662,
+          "lexch": "PE",
+          "path": "Cr_sv_GW/POTCAR",
+          "sha256": "1e1583163ab075b03afb594ff27c82ff02dbe56968976af5dbbc6f8b0f5c9d8b",
+          "titel": "PAW_PBE Cr_sv_GW 05Dec2013"
+        },
+        "Cs_sv": {
+          "bytes": 231959,
+          "lexch": "PE",
+          "path": "Cs_sv/POTCAR",
+          "sha256": "a0763b32b8abdfa4b151e9d47a8e87e03876004a4d68c7cc299c8be2579745ed",
+          "titel": "PAW_PBE Cs_sv 25Jan2019"
+        },
+        "Cs_sv_GW": {
+          "bytes": 292697,
+          "lexch": "PE",
+          "path": "Cs_sv_GW/POTCAR",
+          "sha256": "afc6ac57c8593a1b143429c2d82b5bdcadb05126b3f2ec19da8b12a45fca58c0",
+          "titel": "PAW_PBE Cs_sv_GW 25Jan2019"
+        },
+        "Cu": {
+          "bytes": 230583,
+          "lexch": "PE",
+          "path": "Cu/POTCAR",
+          "sha256": "b64dae53834dc113c0e23e6a6d919c9f23446fffbe5b6a1a7c48410998f6f67d",
+          "titel": "PAW_PBE Cu 22Jun2005"
+        },
+        "Cu_GW": {
+          "bytes": 264778,
+          "lexch": "PE",
+          "path": "Cu_GW/POTCAR",
+          "sha256": "259a5d3b8cfc6bbadd8254e4b0e1b4b917801893714b49326c06e3755da25478",
+          "titel": "PAW_PBE Cu_GW 19May2006"
+        },
+        "Cu_pv": {
+          "bytes": 230514,
+          "lexch": "PE",
+          "path": "Cu_pv/POTCAR",
+          "sha256": "5e6725955bb98bfe67701373410d2d9928f9ef4096b10423e32537494246358c",
+          "titel": "PAW_PBE Cu_pv 06Sep2000"
+        },
+        "Cu_sv_GW": {
+          "bytes": 337593,
+          "lexch": "PE",
+          "path": "Cu_sv_GW/POTCAR",
+          "sha256": "423b7c225503bb07f0cc75bcae68a9bc98145936c19cb549dea82ee58eb69740",
+          "titel": "PAW_PBE Cu_sv_GW 10Dec2015"
+        },
+        "Dy": {
+          "bytes": 304359,
+          "lexch": "PE",
+          "path": "Dy/POTCAR",
+          "sha256": "0f8e4f8a9aa4da7032421da932bd6a493062308c47ed1734fb0d4781d608e2f7",
+          "titel": "PAW_PBE Dy 25May2022"
+        },
+        "Dy_3": {
+          "bytes": 236429,
+          "lexch": "PE",
+          "path": "Dy_3/POTCAR",
+          "sha256": "8475f43f8453e647291f4cbee750b02c355a3e2ec1e7800bcc5bc1b2701ca7fe",
+          "titel": "PAW_PBE Dy_3 06Sep2000"
+        },
+        "Dy_h": {
+          "bytes": 285930,
+          "lexch": "PE",
+          "path": "Dy_h/POTCAR",
+          "sha256": "8f2bba3775f8dd5e1a711d95dfc539186d91abfc7209f9d16614f228cd5292cd",
+          "titel": "PAW_PBE Dy_h 30May2022"
+        },
+        "Er": {
+          "bytes": 304362,
+          "lexch": "PE",
+          "path": "Er/POTCAR",
+          "sha256": "56762d8b96a61712ec1d23b84bd5317060c52751fba772c5a69f058647dee335",
+          "titel": "PAW_PBE Er 25May2022"
+        },
+        "Er_2": {
+          "bytes": 241269,
+          "lexch": "PE",
+          "path": "Er_2/POTCAR",
+          "sha256": "b03067b16d4ac8d6bece21143dfa5c63394d7854add9995d249a41405b1bdbd2",
+          "titel": "PAW_PBE Er_2 17Jan2003"
+        },
+        "Er_3": {
+          "bytes": 236429,
+          "lexch": "PE",
+          "path": "Er_3/POTCAR",
+          "sha256": "c2226db2b88c6dd3b908d257c4993195f4cb5ce1094c6239be67bab43976b89a",
+          "titel": "PAW_PBE Er_3 06Sep2000"
+        },
+        "Er_h": {
+          "bytes": 304362,
+          "lexch": "PE",
+          "path": "Er_h/POTCAR",
+          "sha256": "e51dbea223021dbe2860b352ee83b3bb2bd97cdcf0cfd0ba8f21522dec3bb6c3",
+          "titel": "PAW_PBE Er_h 29Jun2022"
+        },
+        "Eu": {
+          "bytes": 305400,
+          "lexch": "PE",
+          "path": "Eu/POTCAR",
+          "sha256": "573c6f9b8f15b5d5d6f1e772098ae6c5d73bcfc30686310fd449527353679797",
+          "titel": "PAW_PBE Eu 25May2022"
+        },
+        "Eu_2": {
+          "bytes": 242894,
+          "lexch": "PE",
+          "path": "Eu_2/POTCAR",
+          "sha256": "5403633fc75b48f37e7f5e794e1aa9318cdd856e737260b5016677e5b91075ea",
+          "titel": "PAW_PBE Eu_2 06Sep2000"
+        },
+        "Eu_3": {
+          "bytes": 237230,
+          "lexch": "PE",
+          "path": "Eu_3/POTCAR",
+          "sha256": "8f9acce5cf2eea96cd33fe80ce4b3e92a0a181fe47cc29067738eb860a8acdd3",
+          "titel": "PAW_PBE Eu_3 20Oct2008"
+        },
+        "Eu_h": {
+          "bytes": 286891,
+          "lexch": "PE",
+          "path": "Eu_h/POTCAR",
+          "sha256": "83b77408d3456acbf7d6faab2efeae5f1bd8d3147d174803df6a514a602f4543",
+          "titel": "PAW_PBE Eu_h 30May2022"
+        },
+        "F": {
+          "bytes": 202394,
+          "lexch": "PE",
+          "path": "F/POTCAR",
+          "sha256": "ec55d2d2ba9b66dab8054d479e8aa803f576915d541bf26f5d1ecce77f4e501c",
+          "titel": "PAW_PBE F 08Apr2002"
+        },
+        "F_GW": {
+          "bytes": 178658,
+          "lexch": "PE",
+          "path": "F_GW/POTCAR",
+          "sha256": "75a0702d12db7ea7bf4e6384a8be2f5c2004df6ecfbe045184223ad7b1ebab78",
+          "titel": "PAW_PBE F_GW 21Dec2007"
+        },
+        "F_GW_new": {
+          "bytes": 294396,
+          "lexch": "PE",
+          "path": "F_GW_new/POTCAR",
+          "sha256": "b247c6cb8914171445cf157a66abeec4674e60402b9ab5d1002c34306ab3afff",
+          "titel": "PAW_PBE F_GW_new 16Dec2020"
+        },
+        "F_h": {
+          "bytes": 218643,
+          "lexch": "PE",
+          "path": "F_h/POTCAR",
+          "sha256": "31cf51b7b469daad4efc37844ebb567b71db6ae779115d7307ad780e96025580",
+          "titel": "PAW_PBE F_h 19Jan2021"
+        },
+        "F_h_GW": {
+          "bytes": 275306,
+          "lexch": "PE",
+          "path": "F_h_GW/POTCAR",
+          "sha256": "5a3e6b1e65e82c9e4a3363d747044a66fc2c0ee3410eb3cbb10ddf810dfa0e52",
+          "titel": "PAW_PBE F_h_GW 20May2014"
+        },
+        "F_s": {
+          "bytes": 162376,
+          "lexch": "PE",
+          "path": "F_s/POTCAR",
+          "sha256": "cc5330d49eeee2ffb0873c668bbf232adedb76a8e38ed927d1c255191a6a788f",
+          "titel": "PAW_PBE F_s 06Sep2000"
+        },
+        "Fe": {
+          "bytes": 238632,
+          "lexch": "PE",
+          "path": "Fe/POTCAR",
+          "sha256": "519ad496e3627c9885028da91cc038103aabe65859ad2bde1964f223ccb49c0f",
+          "titel": "PAW_PBE Fe 06Sep2000"
+        },
+        "Fe_GW": {
+          "bytes": 273666,
+          "lexch": "PE",
+          "path": "Fe_GW/POTCAR",
+          "sha256": "cf9c79ea5ff18288aa00822093c20e4424554d509748cf229a58f7f4b06fe40f",
+          "titel": "PAW_PBE Fe_GW 31Mar2010"
+        },
+        "Fe_pv": {
+          "bytes": 238630,
+          "lexch": "PE",
+          "path": "Fe_pv/POTCAR",
+          "sha256": "e96179f13e87664e48aed485c2113db4b894f4702180a1840e8206974d0cd1f5",
+          "titel": "PAW_PBE Fe_pv 02Aug2007"
+        },
+        "Fe_sv": {
+          "bytes": 257396,
+          "lexch": "PE",
+          "path": "Fe_sv/POTCAR",
+          "sha256": "4c56e8e7cac7e1ff2e932c2db4ff8c356d12cd8ee0bb2cf758af0959d4723c00",
+          "titel": "PAW_PBE Fe_sv 23Jul2007"
+        },
+        "Fe_sv_GW": {
+          "bytes": 349721,
+          "lexch": "PE",
+          "path": "Fe_sv_GW/POTCAR",
+          "sha256": "642df3e0cb4461133348d75027f8cbaaae535bec081f85e3cafa98c2693a3fee",
+          "titel": "PAW_PBE Fe_sv_GW 05Dec2013"
+        },
+        "Fr_sv": {
+          "bytes": 267916,
+          "lexch": "PE",
+          "path": "Fr_sv/POTCAR",
+          "sha256": "6356e82dd944949c754e70d0a414dba35b6e73b8f6d70b52d9617a1fa9b3142d",
+          "titel": "PAW_PBE Fr_sv 29May2007"
+        },
+        "Ga": {
+          "bytes": 244726,
+          "lexch": "PE",
+          "path": "Ga/POTCAR",
+          "sha256": "9d4721f1a647d8b8e6f494f996ecffbd5d6cdd4819b7b2917ee319531eae10db",
+          "titel": "PAW_PBE Ga 08Apr2002"
+        },
+        "Ga_GW": {
+          "bytes": 282415,
+          "lexch": "PE",
+          "path": "Ga_GW/POTCAR",
+          "sha256": "1eefa4f52aebe5745cc8c827bda7c49383a3ce04093e0ce910503ee0ab4c64dc",
+          "titel": "PAW_PBE Ga_GW 22Mar2012"
+        },
+        "Ga_d": {
+          "bytes": 266125,
+          "lexch": "PE",
+          "path": "Ga_d/POTCAR",
+          "sha256": "af4c9f6ed9866f396fed214e4aff301d3900c7d6017cdaf0ba000e0ee72d8943",
+          "titel": "PAW_PBE Ga_d 06Jul2010"
+        },
+        "Ga_d_GW": {
+          "bytes": 303936,
+          "lexch": "PE",
+          "path": "Ga_d_GW/POTCAR",
+          "sha256": "443456d144da4f9fa7d4b1addade877a5e2bd024aaab6f84e87e26933ee6e5e8",
+          "titel": "PAW_PBE Ga_d_GW 15Mar2013"
+        },
+        "Ga_h": {
+          "bytes": 266121,
+          "lexch": "PE",
+          "path": "Ga_h/POTCAR",
+          "sha256": "16645536d4b17614bee2c881a9ae79f48f019399a9addf27f69196fcc42697e9",
+          "titel": "PAW_PBE Ga_h 09Apr2002"
+        },
+        "Ga_sv_GW": {
+          "bytes": 390905,
+          "lexch": "PE",
+          "path": "Ga_sv_GW/POTCAR",
+          "sha256": "34363fb8ab4dbfaabf560bb542aee748364d165eff19e22d2fbc875b33cd7838",
+          "titel": "PAW_PBE Ga_sv_GW 05Dec2013"
+        },
+        "Gd": {
+          "bytes": 305399,
+          "lexch": "PE",
+          "path": "Gd/POTCAR",
+          "sha256": "ea98812248c3d096948e31de8b9bed51cb836b3d0abf7773dc3883de61037bdc",
+          "titel": "PAW_PBE Gd 25May2022"
+        },
+        "Gd_3": {
+          "bytes": 237229,
+          "lexch": "PE",
+          "path": "Gd_3/POTCAR",
+          "sha256": "8c9f902bc9748a9f8948897fe7b8e3b9ccac89acd6059085e494613b64a5cec1",
+          "titel": "PAW_PBE Gd_3 06Sep2000"
+        },
+        "Gd_h": {
+          "bytes": 286890,
+          "lexch": "PE",
+          "path": "Gd_h/POTCAR",
+          "sha256": "45146ed14f560e019759da7e68f51bfc266166b838f7676f4a83ff4bd23c5205",
+          "titel": "PAW_PBE Gd_h 30May2022"
+        },
+        "Ge": {
+          "bytes": 241824,
+          "lexch": "PE",
+          "path": "Ge/POTCAR",
+          "sha256": "fd83126ce2b2557ab7a0e13c4d7d5f3b845d60c5c18d02b35b4e8f864f359dc0",
+          "titel": "PAW_PBE Ge 05Jan2001"
+        },
+        "Ge_GW": {
+          "bytes": 258069,
+          "lexch": "PE",
+          "path": "Ge_GW/POTCAR",
+          "sha256": "77d2fc02a45ebeffdcb2b239c28d4cb5745e7200876a9352cd8decba740ee01a",
+          "titel": "PAW_PBE Ge_GW 04Okt2005"
+        },
+        "Ge_d": {
+          "bytes": 262907,
+          "lexch": "PE",
+          "path": "Ge_d/POTCAR",
+          "sha256": "65e7bb492cbd552640d962a3020d969879f40de8b67d4756532e26336e2a2cb1",
+          "titel": "PAW_PBE Ge_d 03Jul2007"
+        },
+        "Ge_d_GW": {
+          "bytes": 300396,
+          "lexch": "PE",
+          "path": "Ge_d_GW/POTCAR",
+          "sha256": "b14fd87820f2a8a1013fad7699d2ed4b4173784a6f052a2f597b6f61b33e201c",
+          "titel": "PAW_PBE Ge_d_GW 19Mar2013"
+        },
+        "Ge_h": {
+          "bytes": 262903,
+          "lexch": "PE",
+          "path": "Ge_h/POTCAR",
+          "sha256": "ce8d3656cdfd464b7ab543468d717c7307d216273f735c8c193837ee7889fab7",
+          "titel": "PAW_PBE Ge_h 09Apr2002"
+        },
+        "Ge_sv_GW": {
+          "bytes": 386117,
+          "lexch": "PE",
+          "path": "Ge_sv_GW/POTCAR",
+          "sha256": "947408aae8c144b51c5bc832fd8d6599bfc3251a4fa75a3cad375b03ac32156c",
+          "titel": "PAW_PBE Ge_sv_GW 26Apr2015"
+        },
+        "H": {
+          "bytes": 141495,
+          "lexch": "PE",
+          "path": "H/POTCAR",
+          "sha256": "c7c1440066f80b3689496d8a45f8df6af183c40e59b514734edddfaa6840a3be",
+          "titel": "PAW_PBE H 15Jun2001"
+        },
+        "H.25": {
+          "bytes": 157752,
+          "lexch": "PE",
+          "path": "H.25/POTCAR",
+          "sha256": "f1f5cbddf22b073a0dc018b8a5e081021d4c15350f9d7ebbaa2a2df6e5d15755",
+          "titel": "PAW_PBE H.25 05Aug2008"
+        },
+        "H.33": {
+          "bytes": 157752,
+          "lexch": "PE",
+          "path": "H.33/POTCAR",
+          "sha256": "400ce323bea31e6664aad82506658e77a28320ff9c74480d6105f82b09248471",
+          "titel": "PAW_PBE H.33 22Sep2006"
+        },
+        "H.42": {
+          "bytes": 157776,
+          "lexch": "PE",
+          "path": "H.42/POTCAR",
+          "sha256": "1278b1be70263206087c1e99f4a516869e5346dd8c3c530fa4d8d0e12809a9a9",
+          "titel": "PAW_PBE H.42 19Jan2011"
+        },
+        "H.5": {
+          "bytes": 141533,
+          "lexch": "PE",
+          "path": "H.5/POTCAR",
+          "sha256": "8cf5815503a5f74d9f8c838f0df6bf035bdea3b5525dec7a93a5c45a1aa100cf",
+          "titel": "PAW_PBE H.5 07Sep2000"
+        },
+        "H.58": {
+          "bytes": 157768,
+          "lexch": "PE",
+          "path": "H.58/POTCAR",
+          "sha256": "9c5b105483af8d4fc25c39ef2dfbb15dc127f449e34f85d22d1afb82a21edcfb",
+          "titel": "PAW_PBE H.58 19Jan2011"
+        },
+        "H.66": {
+          "bytes": 157736,
+          "lexch": "PE",
+          "path": "H.66/POTCAR",
+          "sha256": "cc3e49a435a4e9510240f5b6df3435be8e463029ee706876f61eff900d0541c9",
+          "titel": "PAW_PBE H.66 06Jun2006"
+        },
+        "H.75": {
+          "bytes": 141528,
+          "lexch": "PE",
+          "path": "H.75/POTCAR",
+          "sha256": "f48f3b7839f9ec7e70a7f181c53cde4d02f0740f7860e18e094de336a0bdfe9b",
+          "titel": "PAW_PBE H.75 07Sep2000"
+        },
+        "H1.25": {
+          "bytes": 157731,
+          "lexch": "PE",
+          "path": "H1.25/POTCAR",
+          "sha256": "839506b8d35df05820fedbda0a5a15e75623e54f6379916c6a1f63fe927fedff",
+          "titel": "PAW_PBE H1.25 07Sep2000"
+        },
+        "H1.33": {
+          "bytes": 157730,
+          "lexch": "PE",
+          "path": "H1.33/POTCAR",
+          "sha256": "a7313eeae625d4c255b08d794139816e804cf56c10a8858cbe648ea73d7e554c",
+          "titel": "PAW_PBE H1.33 06Jun2006"
+        },
+        "H1.5": {
+          "bytes": 141515,
+          "lexch": "PE",
+          "path": "H1.5/POTCAR",
+          "sha256": "4dae2bc9e3819e9ad051d669e5b7e1f98b62dfd9dc88918fb1ffa9e4afb1625f",
+          "titel": "PAW_PBE H1.5 07Sep2000"
+        },
+        "H1.66": {
+          "bytes": 157753,
+          "lexch": "PE",
+          "path": "H1.66/POTCAR",
+          "sha256": "fccf1a38f7bfbec850505cad3e1750a0a62ffb2dc7b0605aeb22c0f1c9cc1230",
+          "titel": "PAW_PBE H1.66 22Sep2006"
+        },
+        "H1.75": {
+          "bytes": 157754,
+          "lexch": "PE",
+          "path": "H1.75/POTCAR",
+          "sha256": "1d0a415e06506d87bf8af4d790afe3855fa08b60e0f5113291092d8c7573003a",
+          "titel": "PAW_PBE H1.75 05Aug2008"
+        },
+        "H_AE": {
+          "bytes": 19794,
+          "lexch": "PE",
+          "path": "H_AE/POTCAR",
+          "sha256": "ad4fcf5bcc14e77092368bec54eb67a3cdd84d2971a9143baa516c7ffcd395a7",
+          "titel": "AE H_AE"
+        },
+        "H_GW": {
+          "bytes": 194626,
+          "lexch": "PE",
+          "path": "H_GW/POTCAR",
+          "sha256": "4ff133e138dbfb4226f773bfd5d647e92d529c923a0b332a3e58bdef3c145ea9",
+          "titel": "PAW_PBE H_GW 21Apr2008"
+        },
+        "H_GW_new": {
+          "bytes": 193950,
+          "lexch": "PE",
+          "path": "H_GW_new/POTCAR",
+          "sha256": "ea690b554bcdf475996256e4206c526dce385335506b6f2a64bae070cb58b28f",
+          "titel": "PAW_PBE H_GW_new 27Aug2021"
+        },
+        "H_h": {
+          "bytes": 138869,
+          "lexch": "PE",
+          "path": "H_h/POTCAR",
+          "sha256": "a18569b1c5eb7967a2f58b5f8ddc14262904e23cfb80eea5b67fcbc792663596",
+          "titel": "PAW_PBE H_h 06Feb2004"
+        },
+        "H_h_GW": {
+          "bytes": 191192,
+          "lexch": "PE",
+          "path": "H_h_GW/POTCAR",
+          "sha256": "6125282f65ecfd364e8414748e4df847f2b10ef88325fe3cef79dcc8058d3b64",
+          "titel": "PAW_PBE H_h_GW 21Apr2008"
+        },
+        "H_s": {
+          "bytes": 143076,
+          "lexch": "PE",
+          "path": "H_s/POTCAR",
+          "sha256": "58d741140a2a3ea00fa3df19ef75097fc3397eea2f04f7df4a9928e947f50ca8",
+          "titel": "PAW_PBE H_s 15May2010"
+        },
+        "He": {
+          "bytes": 149880,
+          "lexch": "PE",
+          "path": "He/POTCAR",
+          "sha256": "d0ee36bc0d37f064eb65b43685fcfa1d5e214b983132fa15d74f0fb26077fd60",
+          "titel": "PAW_PBE He 05Jan2001"
+        },
+        "He_AE": {
+          "bytes": 146518,
+          "lexch": "PE",
+          "path": "He_AE/POTCAR",
+          "sha256": "d7bba1fcb37228195712591b2309e880a71b1af4e25987a37cd8853e134a1f0d",
+          "titel": "PAW_PBE He_AE 05Jan2001"
+        },
+        "He_GW": {
+          "bytes": 245379,
+          "lexch": "PE",
+          "path": "He_GW/POTCAR",
+          "sha256": "29d947da9cd894b7f08da3a52062025241d700922b36c35c456bea85f33720a7",
+          "titel": "PAW_PBE He_GW 23Feb2015"
+        },
+        "Hf": {
+          "bytes": 233254,
+          "lexch": "PE",
+          "path": "Hf/POTCAR",
+          "sha256": "da56486b81eeed7973c70e2b83b1f6bc5ac389a39eee55c38d771692094b9573",
+          "titel": "PAW_PBE Hf 20Jan2003"
+        },
+        "Hf_pv": {
+          "bytes": 233222,
+          "lexch": "PE",
+          "path": "Hf_pv/POTCAR",
+          "sha256": "db42cd3e4a48e81eaff18895282e2f5a37f2c8c6a4b9ac45e357affc13c83b84",
+          "titel": "PAW_PBE Hf_pv 06Sep2000"
+        },
+        "Hf_sv": {
+          "bytes": 234063,
+          "lexch": "PE",
+          "path": "Hf_sv/POTCAR",
+          "sha256": "e7863858ca5d6bbb144204932e3dcf8c2b16df6086b0a370e4203b81c38a4186",
+          "titel": "PAW_PBE Hf_sv 10Jan2008 GW suitable"
+        },
+        "Hf_sv_GW": {
+          "bytes": 268522,
+          "lexch": "PE",
+          "path": "Hf_sv_GW/POTCAR",
+          "sha256": "0be98f6f3d27447ccc088e3fbab207874dee1ae9af5745e02757151c5e5b065c",
+          "titel": "PAW_PBE Hf_sv_GW 12Jun2018"
+        },
+        "Hg": {
+          "bytes": 227566,
+          "lexch": "PE",
+          "path": "Hg/POTCAR",
+          "sha256": "726081bc86f013dfd23974a771aa41b66373d637793263002c402c025ad3193f",
+          "titel": "PAW_PBE Hg 06Sep2000"
+        },
+        "Hg_sv_GW": {
+          "bytes": 333012,
+          "lexch": "PE",
+          "path": "Hg_sv_GW/POTCAR",
+          "sha256": "680854da4c0d089443bbf075b29bff3e40481346754917256cf7ffd86d26d345",
+          "titel": "PAW_PBE Hg_sv_GW 16Apr2014"
+        },
+        "Ho": {
+          "bytes": 304359,
+          "lexch": "PE",
+          "path": "Ho/POTCAR",
+          "sha256": "d7a335a3335b68ca30255eff2d6e165fb4393f53ecbfb9c3f66238582413c794",
+          "titel": "PAW_PBE Ho 25May2022"
+        },
+        "Ho_3": {
+          "bytes": 236429,
+          "lexch": "PE",
+          "path": "Ho_3/POTCAR",
+          "sha256": "9c7e3ae970eced36ee1bb2810eb0a0d6f8de913fbbc0680b875ff0de6f592353",
+          "titel": "PAW_PBE Ho_3 06Sep2000"
+        },
+        "Ho_h": {
+          "bytes": 304355,
+          "lexch": "PE",
+          "path": "Ho_h/POTCAR",
+          "sha256": "3cbad1237504107289110b18a6543eef82e86f0c59f25080352cd4d00bcf3cdc",
+          "titel": "PAW_PBE Ho_h 29Jun2022"
+        },
+        "I": {
+          "bytes": 217944,
+          "lexch": "PE",
+          "path": "I/POTCAR",
+          "sha256": "021ab15943696b4a3bfdbd280c80ea30fde7cdaf21511abc7275380a49b7e3dc",
+          "titel": "PAW_PBE I 08Apr2002"
+        },
+        "I_GW": {
+          "bytes": 252641,
+          "lexch": "PE",
+          "path": "I_GW/POTCAR",
+          "sha256": "95d04067e84095ab0b831b976aed653a2adb554a3025870b052e170dd3a30fcb",
+          "titel": "PAW_PBE I_GW 12Mar2012"
+        },
+        "I_sv_GW": {
+          "bytes": 346203,
+          "lexch": "PE",
+          "path": "I_sv_GW/POTCAR",
+          "sha256": "9dd507df228d27268392e8e1ceefee407ef478edcf825cf8ea454f9bed773309",
+          "titel": "PAW_PBE I_sv_GW 22Nov2013"
+        },
+        "In": {
+          "bytes": 217958,
+          "lexch": "PE",
+          "path": "In/POTCAR",
+          "sha256": "ac59ef95e5b43e0dc324f9f1745776c2efc68d43c0fc41fd4f046fbcb249e844",
+          "titel": "PAW_PBE In 08Apr2002"
+        },
+        "In_d": {
+          "bytes": 236365,
+          "lexch": "PE",
+          "path": "In_d/POTCAR",
+          "sha256": "7304ac38b021ab26045db53715877cd85c6b9953df21a324a138bfc34372a92f",
+          "titel": "PAW_PBE In_d 06Sep2000"
+        },
+        "In_d_GW": {
+          "bytes": 308498,
+          "lexch": "PE",
+          "path": "In_d_GW/POTCAR",
+          "sha256": "7f3f235f491e0e47c1346b5cd38b49437ded02944cef88b78aca13d86a7b191a",
+          "titel": "PAW_PBE In_d_GW 15Mar2013"
+        },
+        "In_sv_GW": {
+          "bytes": 346205,
+          "lexch": "PE",
+          "path": "In_sv_GW/POTCAR",
+          "sha256": "6f51b54ebf61b7ea4c0cdd0e0237a5f1e3c497b24a0656b6292aa2eb16f4dcab",
+          "titel": "PAW_PBE In_sv_GW 22Nov2013"
+        },
+        "Ir": {
+          "bytes": 229214,
+          "lexch": "PE",
+          "path": "Ir/POTCAR",
+          "sha256": "1a22da3672b114729b5f9ec8e36b09719dc19d22e27d40a296255630dd42b2d2",
+          "titel": "PAW_PBE Ir 06Sep2000"
+        },
+        "Ir_sv_GW": {
+          "bytes": 281135,
+          "lexch": "PE",
+          "path": "Ir_sv_GW/POTCAR",
+          "sha256": "45793f7f7c7f2cade5c834ccb0a7f4dca48cc15169c71b31bc4f9c61780f1065",
+          "titel": "PAW_PBE Ir_sv_GW 23Mar2010"
+        },
+        "K_pv": {
+          "bytes": 222039,
+          "lexch": "PE",
+          "path": "K_pv/POTCAR",
+          "sha256": "c4f070e51a55b1c26b892c8d469e956e5d1b12387e52f7e404c485a0027ed6d8",
+          "titel": "PAW_PBE K_pv 17Jan2003"
+        },
+        "K_sv": {
+          "bytes": 222037,
+          "lexch": "PE",
+          "path": "K_sv/POTCAR",
+          "sha256": "85540f86ce902109258423bbdc4c8e85482cbb179763cbce115045d4e1f51784",
+          "titel": "PAW_PBE K_sv 06Sep2000"
+        },
+        "K_sv_GW": {
+          "bytes": 276228,
+          "lexch": "PE",
+          "path": "K_sv_GW/POTCAR",
+          "sha256": "9e5dda213038712049227aa6fc1ff6e4c61fdaa3c05cb6632e74f9ea111a68c5",
+          "titel": "PAW_PBE K_sv_GW 31Mar2010"
+        },
+        "Kr": {
+          "bytes": 197369,
+          "lexch": "PE",
+          "path": "Kr/POTCAR",
+          "sha256": "2cc417d1ec034a21d0c33278e5b4654e1f44927f811c0c359d2f5d3fb56ca72d",
+          "titel": "PAW_PBE Kr 07Sep2000"
+        },
+        "Kr_GW": {
+          "bytes": 252519,
+          "lexch": "PE",
+          "path": "Kr_GW/POTCAR",
+          "sha256": "443d579f18f2e025e5166c0a2d4488dfe6a8b049c46c11abde37b4e6ccb667ad",
+          "titel": "PAW_PBE Kr_GW 21Aug2013"
+        },
+        "La": {
+          "bytes": 272611,
+          "lexch": "PE",
+          "path": "La/POTCAR",
+          "sha256": "b82fe40c2975cc8fdcc799a4214d30348f6c2eddf64d656f5a30654915296211",
+          "titel": "PAW_PBE La 06Sep2000"
+        },
+        "La_GW": {
+          "bytes": 288845,
+          "lexch": "PE",
+          "path": "La_GW/POTCAR",
+          "sha256": "fae318a2ed419ae8b66b25cc417f973dc8a4bc111794b049203b376c59193928",
+          "titel": "PAW_PBE La_GW 16May2012"
+        },
+        "La_s": {
+          "bytes": 272616,
+          "lexch": "PE",
+          "path": "La_s/POTCAR",
+          "sha256": "007ba3682098ecfe93249ba4ec0f6ea570b5dc9a92ea57d23a796769dd4b025d",
+          "titel": "PAW_PBE La_s 06Sep2000"
+        },
+        "Li": {
+          "bytes": 184297,
+          "lexch": "PE",
+          "path": "Li/POTCAR",
+          "sha256": "12da2066d530f5d960dcc4f9a2a61f463fe6a7234feb761e5af612f2acf66d78",
+          "titel": "PAW_PBE Li 17Jan2003"
+        },
+        "Li_AE_GW": {
+          "bytes": 274500,
+          "lexch": "PE",
+          "path": "Li_AE_GW/POTCAR",
+          "sha256": "5856512bda08811033695d855c269ec1072c288d46da789d48fa1ba9900e6fe4",
+          "titel": "PAW_PBE Li_AE_GW 25Mar2010"
+        },
+        "Li_GW": {
+          "bytes": 238161,
+          "lexch": "PE",
+          "path": "Li_GW/POTCAR",
+          "sha256": "bf3ca4264ceb9189143b9d13b7093120ecefb7fe661c6fb0090c1fafbe27c9eb",
+          "titel": "PAW_PBE Li_GW 23Jun2021"
+        },
+        "Li_sv": {
+          "bytes": 144229,
+          "lexch": "PE",
+          "path": "Li_sv/POTCAR",
+          "sha256": "201875120238865c2f235e24081bce20639c4ae21bc4e97e31f9e3b7cc8fb95b",
+          "titel": "PAW_PBE Li_sv 10Sep2004"
+        },
+        "Li_sv_GW": {
+          "bytes": 217086,
+          "lexch": "PE",
+          "path": "Li_sv_GW/POTCAR",
+          "sha256": "4c6b52990df77182f5bb92a359b6681e51dcc107557beac8b17c7f70b09f3c1b",
+          "titel": "PAW_PBE Li_sv_GW 25Mar2010"
+        },
+        "Lu": {
+          "bytes": 268742,
+          "lexch": "PE",
+          "path": "Lu/POTCAR",
+          "sha256": "1be407fa384d82907410f5f2246aea86292b76ac83faa201dc2c22ba270b0513",
+          "titel": "PAW_PBE Lu 23Dec2003"
+        },
+        "Lu_3": {
+          "bytes": 235609,
+          "lexch": "PE",
+          "path": "Lu_3/POTCAR",
+          "sha256": "65b4c03c660bc60819cc02ebab529e9fe6e5db067a195fa4e22631132c880afd",
+          "titel": "PAW_PBE Lu_3 06Sep2000"
+        },
+        "Mg": {
+          "bytes": 218363,
+          "lexch": "PE",
+          "path": "Mg/POTCAR",
+          "sha256": "91e560d99171f01a757253583d9a257ca7aab8911d7fa28ebabfbf3e6356a096",
+          "titel": "PAW_PBE Mg 13Apr2007"
+        },
+        "Mg_GW": {
+          "bytes": 234605,
+          "lexch": "PE",
+          "path": "Mg_GW/POTCAR",
+          "sha256": "7659f8f8145567dd3b5957c2b37fbdcd1ff7965337ccec7a95ea48cc7da1b2a6",
+          "titel": "PAW_PBE Mg_GW 13Apr2007"
+        },
+        "Mg_pv": {
+          "bytes": 218313,
+          "lexch": "PE",
+          "path": "Mg_pv/POTCAR",
+          "sha256": "9c1ab7b832a2e0c6a472613699d255f5c01190d69448d45cb2d6283bcfff58ac",
+          "titel": "PAW_PBE Mg_pv 13Apr2007"
+        },
+        "Mg_pv_GW": {
+          "bytes": 253142,
+          "lexch": "PE",
+          "path": "Mg_pv_GW/POTCAR",
+          "sha256": "f6e691994fcd5c8b9b15e4018ef07ead3725a8aa0054d9598aace9fc20963318",
+          "titel": "PAW_PBE Mg_pv_GW 20Apr2010"
+        },
+        "Mg_sv": {
+          "bytes": 178455,
+          "lexch": "PE",
+          "path": "Mg_sv/POTCAR",
+          "sha256": "d2aee909de34c41a979fb99d023e928070e2a037755dc932368ec764d394588d",
+          "titel": "PAW_PBE Mg_sv 12Apr2007"
+        },
+        "Mg_sv_GW": {
+          "bytes": 289521,
+          "lexch": "PE",
+          "path": "Mg_sv_GW/POTCAR",
+          "sha256": "d7edf61f88c952dc81f2705ca2c72bf0ced2560bc6eccc5d53b5bd7dc6cb10ee",
+          "titel": "PAW_PBE Mg_sv_GW 20Apr2010"
+        },
+        "Mn": {
+          "bytes": 233771,
+          "lexch": "PE",
+          "path": "Mn/POTCAR",
+          "sha256": "29c99dd23e43f0a3d2eed12dd55948ee28a9dfa8fc9b483ff6530556d53bd409",
+          "titel": "PAW_PBE Mn 06Sep2000"
+        },
+        "Mn_GW": {
+          "bytes": 268323,
+          "lexch": "PE",
+          "path": "Mn_GW/POTCAR",
+          "sha256": "f2e643c4d133ed41ad7ffa6bdffc3408768c83bf9a520737f2312380d1925a90",
+          "titel": "PAW_PBE Mn_GW 31Mar2010"
+        },
+        "Mn_pv": {
+          "bytes": 233769,
+          "lexch": "PE",
+          "path": "Mn_pv/POTCAR",
+          "sha256": "5da6f925d338804d4244b231b43927f3fccb021320fc01db0f865b4eda5a756d",
+          "titel": "PAW_PBE Mn_pv 02Aug2007"
+        },
+        "Mn_sv": {
+          "bytes": 252050,
+          "lexch": "PE",
+          "path": "Mn_sv/POTCAR",
+          "sha256": "cfcc9806e61f367c743f078243d56f52849483f19b788310a82db46a7301c5e2",
+          "titel": "PAW_PBE Mn_sv 23Jul2007"
+        },
+        "Mn_sv_GW": {
+          "bytes": 342431,
+          "lexch": "PE",
+          "path": "Mn_sv_GW/POTCAR",
+          "sha256": "d8f8fea49527cb7f6079ab75545fad8f633b134bde0a93be78c2e8dd6f1bf4d9",
+          "titel": "PAW_PBE Mn_sv_GW 05Dec2013"
+        },
+        "Mo": {
+          "bytes": 233092,
+          "lexch": "PE",
+          "path": "Mo/POTCAR",
+          "sha256": "d24adb7a5f293b50f9cc63dcbdfe042f439c448027fd201958de2093964a6cf7",
+          "titel": "PAW_PBE Mo 08Apr2002"
+        },
+        "Mo_pv": {
+          "bytes": 233089,
+          "lexch": "PE",
+          "path": "Mo_pv/POTCAR",
+          "sha256": "58bd9a91067c7debbbe0998aa4f061c16bcd88e23c3dfbf3beaa0862475a9462",
+          "titel": "PAW_PBE Mo_pv 04Feb2005"
+        },
+        "Mo_sv": {
+          "bytes": 233089,
+          "lexch": "PE",
+          "path": "Mo_sv/POTCAR",
+          "sha256": "29a65a182647334604f816a41535c21ad09ebfbafcc6075db2a442480e908bc9",
+          "titel": "PAW_PBE Mo_sv 02Feb2006"
+        },
+        "Mo_sv_GW": {
+          "bytes": 342578,
+          "lexch": "PE",
+          "path": "Mo_sv_GW/POTCAR",
+          "sha256": "7d21d2c73897b62032e2311f4c9b3b0a23e02696d450a3c5d5a346d8e87af3bb",
+          "titel": "PAW_PBE Mo_sv_GW 05Dec2013"
+        },
+        "N": {
+          "bytes": 211455,
+          "lexch": "PE",
+          "path": "N/POTCAR",
+          "sha256": "c3b51ab8258f836d3c8d29beefa95be51fc95b5d0ab7aca6cba204207a69162a",
+          "titel": "PAW_PBE N 08Apr2002"
+        },
+        "N_GW": {
+          "bytes": 187137,
+          "lexch": "PE",
+          "path": "N_GW/POTCAR",
+          "sha256": "58404805df7e2f3b62dcd41ba93d5c9651cd082c4c58cd39cd02300496e03f8f",
+          "titel": "PAW_PBE N_GW 10Apr2007"
+        },
+        "N_GW_new": {
+          "bytes": 307980,
+          "lexch": "PE",
+          "path": "N_GW_new/POTCAR",
+          "sha256": "580f70dfc86c3033a69ff8c75dbcfdc31e6e862ce3c1aee5d849b81513428991",
+          "titel": "PAW_PBE N_GW_new 16Dec2020"
+        },
+        "N_h": {
+          "bytes": 227683,
+          "lexch": "PE",
+          "path": "N_h/POTCAR",
+          "sha256": "c08d63d28ef8e90ad26800ac3d0bfc0203c4f57d8d436283eda7efe341cd9e6f",
+          "titel": "PAW_PBE N_h 19Jan2021"
+        },
+        "N_h_GW": {
+          "bytes": 307937,
+          "lexch": "PE",
+          "path": "N_h_GW/POTCAR",
+          "sha256": "0197774128471b2c6383d171a134201be080d9c05fad4bf654777bd15c8ecca0",
+          "titel": "PAW_PBE N_h_GW 03Jul2013"
+        },
+        "N_s": {
+          "bytes": 170872,
+          "lexch": "PE",
+          "path": "N_s/POTCAR",
+          "sha256": "817cc2ef1c622a8cda6464d42b3159ba9a5d935405a78459e8a71c928d6e62a6",
+          "titel": "PAW_PBE N_s 07Sep2000"
+        },
+        "N_s_GW": {
+          "bytes": 267708,
+          "lexch": "PE",
+          "path": "N_s_GW/POTCAR",
+          "sha256": "f1cd2728f2414cde66c0a468cea903316e1b0eb05400d957d378b3a9c06e37a0",
+          "titel": "PAW_PBE N_s_GW 18Jun2016"
+        },
+        "Na": {
+          "bytes": 183817,
+          "lexch": "PE",
+          "path": "Na/POTCAR",
+          "sha256": "55bcdbec341d01d2545a5e3c323f176e2e8946cfa979ad5ae670df22c48b175b",
+          "titel": "PAW_PBE Na 08Apr2002"
+        },
+        "Na_pv": {
+          "bytes": 202468,
+          "lexch": "PE",
+          "path": "Na_pv/POTCAR",
+          "sha256": "2b32d860c36ba9efd322064e6ef91f9ebc70c2d6cae24ff69702d8368748bb32",
+          "titel": "PAW_PBE Na_pv 19Sep2006"
+        },
+        "Na_sv": {
+          "bytes": 162409,
+          "lexch": "PE",
+          "path": "Na_sv/POTCAR",
+          "sha256": "0bbc204795b34e846d47a99bb89f6e39ffcbd5034e63ca7e4d5a6e1b6b700539",
+          "titel": "PAW_PBE Na_sv 28Sep2000"
+        },
+        "Na_sv_GW": {
+          "bytes": 274438,
+          "lexch": "PE",
+          "path": "Na_sv_GW/POTCAR",
+          "sha256": "89047453e8a86e7b7fe845799a80b4194d180a8ec7d099e98921a707597d46bb",
+          "titel": "PAW_PBE Na_sv_GW 11May2015"
+        },
+        "Nb_pv": {
+          "bytes": 233862,
+          "lexch": "PE",
+          "path": "Nb_pv/POTCAR",
+          "sha256": "086061c276946e9fc55bb7633d9ce78b32a420dec762592491c07c1c47ded114",
+          "titel": "PAW_PBE Nb_pv 08Apr2002"
+        },
+        "Nb_sv": {
+          "bytes": 233889,
+          "lexch": "PE",
+          "path": "Nb_sv/POTCAR",
+          "sha256": "6bc08b216e11c48e1663f63de7bbb5c7f96f184a6467d89e3bbffbc0a9d365ac",
+          "titel": "PAW_PBE Nb_sv 25May2007"
+        },
+        "Nb_sv_GW": {
+          "bytes": 325055,
+          "lexch": "PE",
+          "path": "Nb_sv_GW/POTCAR",
+          "sha256": "05cfef65f07031e9af5eae2c70ea3af36b8abfd4ba9c57578ad9d32d24da6fac",
+          "titel": "PAW_PBE Nb_sv_GW 05Dec2013"
+        },
+        "Nd": {
+          "bytes": 287878,
+          "lexch": "PE",
+          "path": "Nd/POTCAR",
+          "sha256": "3dd647ce040cda5c02d90dbfc21450b2c30072855aa34755220f263553937b21",
+          "titel": "PAW_PBE Nd 25May2002"
+        },
+        "Nd_3": {
+          "bytes": 238025,
+          "lexch": "PE",
+          "path": "Nd_3/POTCAR",
+          "sha256": "9407aea2e1dd5556e9d2ae88f0758a027db3ddc44a083bd4b2d5e4b90c614e0e",
+          "titel": "PAW_PBE Nd_3 06Sep2000"
+        },
+        "Nd_h": {
+          "bytes": 287874,
+          "lexch": "PE",
+          "path": "Nd_h/POTCAR",
+          "sha256": "679383835b29f9080f72485e216410fc260f17fc8e14e6d909e9d570dc45aff5",
+          "titel": "PAW_PBE Nd_h 01Jun2022"
+        },
+        "Ne": {
+          "bytes": 201101,
+          "lexch": "PE",
+          "path": "Ne/POTCAR",
+          "sha256": "4f74c8044087750ac02d8534ea880918cbe070c8d1ad98d1c33a6d6b1ad523d5",
+          "titel": "PAW_PBE Ne 05Jan2001"
+        },
+        "Ne_GW": {
+          "bytes": 292415,
+          "lexch": "PE",
+          "path": "Ne_GW/POTCAR",
+          "sha256": "7676542e5397decaa91ef5274e5fec20e016c7e1be6d0b397de5981435f6ce33",
+          "titel": "PAW_PBE Ne_GW 22Sep2014"
+        },
+        "Ne_s_GW": {
+          "bytes": 217349,
+          "lexch": "PE",
+          "path": "Ne_s_GW/POTCAR",
+          "sha256": "f436001b899760d72d100c5684028f30e4460a777cf10339de3e925e3360a704",
+          "titel": "PAW_PBE Ne_s_GW 02Oct2006"
+        },
+        "Ni": {
+          "bytes": 231345,
+          "lexch": "PE",
+          "path": "Ni/POTCAR",
+          "sha256": "bde0b7a69dbbe5155e6aeef3a1bec4c2f1dadf9dd7abd715899ab051906b2808",
+          "titel": "PAW_PBE Ni 02Aug2007"
+        },
+        "Ni_GW": {
+          "bytes": 265651,
+          "lexch": "PE",
+          "path": "Ni_GW/POTCAR",
+          "sha256": "38de1996e44a97be01eb8f24f24d67155cad1c1642379d9dc7b3086db6229f64",
+          "titel": "PAW_PBE Ni_GW 31Mar2010"
+        },
+        "Ni_pv": {
+          "bytes": 231307,
+          "lexch": "PE",
+          "path": "Ni_pv/POTCAR",
+          "sha256": "298ae0c75c9017ac7c19a9201530db0621deb288a6cb951496859d69da6505eb",
+          "titel": "PAW_PBE Ni_pv 06Sep2000"
+        },
+        "Ni_sv_GW": {
+          "bytes": 338754,
+          "lexch": "PE",
+          "path": "Ni_sv_GW/POTCAR",
+          "sha256": "7be3c0f83b694006dcd47331d1a2a5e420e557627ddeadbff503d0b28bb190e2",
+          "titel": "PAW_PBE Ni_sv_GW 05Dec2013"
+        },
+        "Np": {
+          "bytes": 268906,
+          "lexch": "PE",
+          "path": "Np/POTCAR",
+          "sha256": "a89562f28961494d231809956848429cf086170c196c30e882f08a61bd7147a0",
+          "titel": "PAW_PBE Np 06Sep2000"
+        },
+        "Np_s": {
+          "bytes": 268910,
+          "lexch": "PE",
+          "path": "Np_s/POTCAR",
+          "sha256": "c95b8a63562a8505808ed3089352e9334cb0a4ae06763a2e6854a730d7f106c4",
+          "titel": "PAW_PBE Np_s 06Sep2000"
+        },
+        "O": {
+          "bytes": 220583,
+          "lexch": "PE",
+          "path": "O/POTCAR",
+          "sha256": "8a74b9a1f5fdb3d0c3e0183c7873177abdbef07d407b310b7edcd9ed0a3eea64",
+          "titel": "PAW_PBE O 08Apr2002"
+        },
+        "O_GW": {
+          "bytes": 180477,
+          "lexch": "PE",
+          "path": "O_GW/POTCAR",
+          "sha256": "16276ffbf1e9b5ba1c19364f12637f700de414f4963234121b77ce975bb11994",
+          "titel": "PAW_PBE O_GW 28Sep2005"
+        },
+        "O_GW_new": {
+          "bytes": 297320,
+          "lexch": "PE",
+          "path": "O_GW_new/POTCAR",
+          "sha256": "708f40a0fbffe3c137e0fab6c60eb32c4ee1bed8c2a889df381dca7946428cce",
+          "titel": "PAW_PBE O_GW_new 16Dec2020"
+        },
+        "O_h": {
+          "bytes": 220579,
+          "lexch": "PE",
+          "path": "O_h/POTCAR",
+          "sha256": "7a36b172f62fa90b08bea2212b9dc3daf274e045d9c21ca4f271af665e656513",
+          "titel": "PAW_PBE O_h 19Jan2021"
+        },
+        "O_h_GW": {
+          "bytes": 297281,
+          "lexch": "PE",
+          "path": "O_h_GW/POTCAR",
+          "sha256": "b860e8e38a31ecbd4e84ca650ba35a4961f98db0afa47d38a9912c66fea3004a",
+          "titel": "PAW_PBE O_h_GW 22May2013"
+        },
+        "O_s": {
+          "bytes": 164191,
+          "lexch": "PE",
+          "path": "O_s/POTCAR",
+          "sha256": "94fe26abe09a48e41def71fc9d85bae7c4ba729ec333f3b797098416de7f91e3",
+          "titel": "PAW_PBE O_s 07Sep2000"
+        },
+        "O_s_GW": {
+          "bytes": 199550,
+          "lexch": "PE",
+          "path": "O_s_GW/POTCAR",
+          "sha256": "50e2b6dc4d6d0eaefcd4ff79c5f53b47b766c007509484cd0cc27e11db23b485",
+          "titel": "PAW_PBE O_s_GW 10Jan2007"
+        },
+        "Os": {
+          "bytes": 229210,
+          "lexch": "PE",
+          "path": "Os/POTCAR",
+          "sha256": "d5a7b6c7c0b5eb76a38468d07bc5954c294ec12965d1142489ca184b787dbef7",
+          "titel": "PAW_PBE Os 17Jan2003"
+        },
+        "Os_pv": {
+          "bytes": 229178,
+          "lexch": "PE",
+          "path": "Os_pv/POTCAR",
+          "sha256": "d0c4fec9b1ff634f2efb276144d9b456e81e5d83766851c6ebec8290d1c83d98",
+          "titel": "PAW_PBE Os_pv 20Jan2003"
+        },
+        "Os_sv_GW": {
+          "bytes": 281137,
+          "lexch": "PE",
+          "path": "Os_sv_GW/POTCAR",
+          "sha256": "cbd149b47c67a0bd236d4c1cb011495b6c55a5bb9b4b86a839a0305b9eb63d11",
+          "titel": "PAW_PBE Os_sv_GW 23Mar2010"
+        },
+        "P": {
+          "bytes": 205080,
+          "lexch": "PE",
+          "path": "P/POTCAR",
+          "sha256": "ff56d25c245497eab82fbf156c8a80195e6c8278b657680eda7251824aa36cf8",
+          "titel": "PAW_PBE P 06Sep2000"
+        },
+        "P_GW": {
+          "bytes": 259665,
+          "lexch": "PE",
+          "path": "P_GW/POTCAR",
+          "sha256": "238e494462cad9cb909759b58a4a96c6c120f9290660a7761c23ca51580c64eb",
+          "titel": "PAW_PBE P_GW 19Mar2012"
+        },
+        "P_h": {
+          "bytes": 205084,
+          "lexch": "PE",
+          "path": "P_h/POTCAR",
+          "sha256": "e546091edc68f533474703ff328251237a1b26b2949550248826f59cee061cc8",
+          "titel": "PAW_PBE P_h 08Apr2002"
+        },
+        "Pa": {
+          "bytes": 269866,
+          "lexch": "PE",
+          "path": "Pa/POTCAR",
+          "sha256": "dd8f0ee287931bdc6afb69466a1b37790e3c13b8de97ef4b4b869f81c51c0433",
+          "titel": "PAW_PBE Pa 07Sep2000"
+        },
+        "Pa_s": {
+          "bytes": 269874,
+          "lexch": "PE",
+          "path": "Pa_s/POTCAR",
+          "sha256": "e4c95da4ce39ef7b30be4b7afc58d14dedd24fcff52e1d339c915e29e4f474b7",
+          "titel": "PAW_PBE Pa_s 07Sep2000"
+        },
+        "Pb": {
+          "bytes": 215193,
+          "lexch": "PE",
+          "path": "Pb/POTCAR",
+          "sha256": "ffc695d3099e073fc86b044278c96a0951d80f96b28ce0c397b5bae2ccae101c",
+          "titel": "PAW_PBE Pb 08Apr2002"
+        },
+        "Pb_d": {
+          "bytes": 233280,
+          "lexch": "PE",
+          "path": "Pb_d/POTCAR",
+          "sha256": "201fc0b9ddd0f4b7ba3d6bdcc3d91c12b2e6df746dfd6f9ca673ec9e6d15f80b",
+          "titel": "PAW_PBE Pb_d 06Sep2000"
+        },
+        "Pb_d_GW": {
+          "bytes": 322980,
+          "lexch": "PE",
+          "path": "Pb_d_GW/POTCAR",
+          "sha256": "966e440e8db774da4afcdcedb5e8201b0d7eb0b214b0d7c12dd0e6f07ca32cfb",
+          "titel": "PAW_PBE Pb_d_GW 14Apr2014"
+        },
+        "Pb_sv_GW": {
+          "bytes": 341521,
+          "lexch": "PE",
+          "path": "Pb_sv_GW/POTCAR",
+          "sha256": "6e0b010361dbbfbbe2545157f889c045cc2afc4111b1e9a013edec856b741699",
+          "titel": "PAW_PBE Pb_sv_GW 04Apr2014"
+        },
+        "Pd": {
+          "bytes": 230703,
+          "lexch": "PE",
+          "path": "Pd/POTCAR",
+          "sha256": "511b1d219e8296389751f0b51dbb97c1dafa933aa13acda49a4f60f5357a04ff",
+          "titel": "PAW_PBE Pd 04Jan2005"
+        },
+        "Pd_GW": {
+          "bytes": 282953,
+          "lexch": "PE",
+          "path": "Pd_GW/POTCAR",
+          "sha256": "9f6213d737df3e34df4cd31c1d7ffd2a9e35048ddb8e4ab2c32b61050e6f0b33",
+          "titel": "PAW_PBE Pd_GW 06Mar2008"
+        },
+        "Pd_pv": {
+          "bytes": 230669,
+          "lexch": "PE",
+          "path": "Pd_pv/POTCAR",
+          "sha256": "7649b5d85ef86333e386f70c4bb8e91de2212d3485d3141b30952edf5b419c7c",
+          "titel": "PAW_PBE Pd_pv 28Jan2005"
+        },
+        "Pd_sv_GW": {
+          "bytes": 337659,
+          "lexch": "PE",
+          "path": "Pd_sv_GW/POTCAR",
+          "sha256": "469d9d47e8a69309e905a6f27cb880ea02c4d305e46b0301d32dd465dccd60f7",
+          "titel": "PAW_PBE Pd_sv_GW 05Dec2013"
+        },
+        "Pm": {
+          "bytes": 287878,
+          "lexch": "PE",
+          "path": "Pm/POTCAR",
+          "sha256": "5f96444f0857e08002fbdba69b7acd9b142a5d62061ad8e70db963620694eed9",
+          "titel": "PAW_PBE Pm 25May2022"
+        },
+        "Pm_3": {
+          "bytes": 238025,
+          "lexch": "PE",
+          "path": "Pm_3/POTCAR",
+          "sha256": "51bea17cc222fae9a280a073432e6e00db412bfccd227a6f0eb00cfe93490804",
+          "titel": "PAW_PBE Pm_3 07Sep2000"
+        },
+        "Pm_h": {
+          "bytes": 287874,
+          "lexch": "PE",
+          "path": "Pm_h/POTCAR",
+          "sha256": "2b1e117bf52c2be3d99278dd585f4ba88be266d302455b00bdd6e093be983f23",
+          "titel": "PAW_PBE Pm_h 01Jun2022"
+        },
+        "Po": {
+          "bytes": 216647,
+          "lexch": "PE",
+          "path": "Po/POTCAR",
+          "sha256": "281d67b4ec341c20d8330c1645da17f274b68ca3a0d82da4a1c11c6b8e9f70d8",
+          "titel": "PAW_PBE Po 10Feb2004"
+        },
+        "Po_d": {
+          "bytes": 234900,
+          "lexch": "PE",
+          "path": "Po_d/POTCAR",
+          "sha256": "0283c8d2d3fe73bb4045b5a3005197c7bacd9f691beb44ae40aa58124e0605cc",
+          "titel": "PAW_PBE Po_d 25May2007"
+        },
+        "Po_d_GW": {
+          "bytes": 325204,
+          "lexch": "PE",
+          "path": "Po_d_GW/POTCAR",
+          "sha256": "44a8fbc7859bb502e21001b3d9c1dffb0de5f70dae310f28e0b91e1a52065619",
+          "titel": "PAW_PBE Po_d_GW 14Apr2014"
+        },
+        "Po_sv_GW": {
+          "bytes": 343951,
+          "lexch": "PE",
+          "path": "Po_sv_GW/POTCAR",
+          "sha256": "082a9eb2bca27b55bd26708f19c2c5e20102a3e2c18cc3b82e26e6ec03af8bf8",
+          "titel": "PAW_PBE Po_sv_GW 14Apr2014"
+        },
+        "Pr": {
+          "bytes": 288838,
+          "lexch": "PE",
+          "path": "Pr/POTCAR",
+          "sha256": "2dd4a4ae241b29c567e4ea39710aa4a9051d7e5f5442b150a2a46c1e83a896ec",
+          "titel": "PAW_PBE Pr 25May2022"
+        },
+        "Pr_3": {
+          "bytes": 238845,
+          "lexch": "PE",
+          "path": "Pr_3/POTCAR",
+          "sha256": "deaca04e9e3ea551af36196ff9d4b223fe3e7090fa96438dd5c0f06f71c478f0",
+          "titel": "PAW_PBE Pr_3 07Sep2000"
+        },
+        "Pr_h": {
+          "bytes": 288834,
+          "lexch": "PE",
+          "path": "Pr_h/POTCAR",
+          "sha256": "e8bd3f68279988970498716e6db2388419333a4be233354d225ae0d36d49eff5",
+          "titel": "PAW_PBE Pr_h 01Jun2022"
+        },
+        "Pt": {
+          "bytes": 228441,
+          "lexch": "PE",
+          "path": "Pt/POTCAR",
+          "sha256": "5107ae6ecfb7f3f49d57bb32293bfd41b371cf552993149a4f048670dd5c1cbf",
+          "titel": "PAW_PBE Pt 04Feb2005"
+        },
+        "Pt_GW": {
+          "bytes": 262398,
+          "lexch": "PE",
+          "path": "Pt_GW/POTCAR",
+          "sha256": "e923a1aa76bd8220fe8ec8bf875fbdd82b56cce0c47fb8de8535a55f44575bb6",
+          "titel": "PAW_PBE Pt_GW 10Mar2009"
+        },
+        "Pt_pv": {
+          "bytes": 228445,
+          "lexch": "PE",
+          "path": "Pt_pv/POTCAR",
+          "sha256": "865a8effdb30c929ab026521c6c5f313ca463b8d526718e0e62acac4a95bbccd",
+          "titel": "PAW_PBE Pt_pv 12Dec2005"
+        },
+        "Pt_sv_GW": {
+          "bytes": 280175,
+          "lexch": "PE",
+          "path": "Pt_sv_GW/POTCAR",
+          "sha256": "eb6e96cbbc3d36ec2fc136b255c861e1e8cb4599cea778bfbe5e780947c6bb01",
+          "titel": "PAW_PBE Pt_sv_GW 23Mar2010"
+        },
+        "Pu": {
+          "bytes": 268906,
+          "lexch": "PE",
+          "path": "Pu/POTCAR",
+          "sha256": "81009dad48fa1768308aa6211e401060528db63dadedbb866fe806676ce1757f",
+          "titel": "PAW_PBE Pu 06Sep2000"
+        },
+        "Pu_s": {
+          "bytes": 268910,
+          "lexch": "PE",
+          "path": "Pu_s/POTCAR",
+          "sha256": "ea465a3b19a30834857b12b1e23cf0085eaef04f6584375133129dec9d576e3c",
+          "titel": "PAW_PBE Pu_s 06Sep2000"
+        },
+        "Ra_sv": {
+          "bytes": 272764,
+          "lexch": "PE",
+          "path": "Ra_sv/POTCAR",
+          "sha256": "96627eb31b8b9613f5e082228402da8cafe1e6462b7990d580b7cc6598882554",
+          "titel": "PAW_PBE Ra_sv 29May2007"
+        },
+        "Rb_pv": {
+          "bytes": 219987,
+          "lexch": "PE",
+          "path": "Rb_pv/POTCAR",
+          "sha256": "102bdfd45ec8daa79e19d668b307589de8212dae5e750ffd3d5a9395825bcc10",
+          "titel": "PAW_PBE Rb_pv 06Sep2000"
+        },
+        "Rb_sv": {
+          "bytes": 219981,
+          "lexch": "PE",
+          "path": "Rb_sv/POTCAR",
+          "sha256": "7249d2a79a581c2bfd7017f7656ada90cca6554b17132962532b903131311cf8",
+          "titel": "PAW_PBE Rb_sv 06Sep2000"
+        },
+        "Rb_sv_GW": {
+          "bytes": 292625,
+          "lexch": "PE",
+          "path": "Rb_sv_GW/POTCAR",
+          "sha256": "4552c7d554aee7098d499bf70d5893c308e73478a8914961d8f703d58974a357",
+          "titel": "PAW_PBE Rb_sv_GW 23Mar2010"
+        },
+        "Re": {
+          "bytes": 246244,
+          "lexch": "PE",
+          "path": "Re/POTCAR",
+          "sha256": "7f338a3a7130fe1819439b555c78c6f7bd6f771c973740d03049155a74a464c8",
+          "titel": "PAW_PBE Re 17Jan2003"
+        },
+        "Re_pv": {
+          "bytes": 229978,
+          "lexch": "PE",
+          "path": "Re_pv/POTCAR",
+          "sha256": "7a1a1c3d05b7ac0b728ce2ae4ce7d0270ce8977fc920b25ef20f960fc46f952c",
+          "titel": "PAW_PBE Re_pv 06Sep2000"
+        },
+        "Re_sv_GW": {
+          "bytes": 282101,
+          "lexch": "PE",
+          "path": "Re_sv_GW/POTCAR",
+          "sha256": "f89f1839ea72589d92dd163224143ebb023bf5ac4acae0632595e9c1c876029d",
+          "titel": "PAW_PBE Re_sv_GW 23Mar2010"
+        },
+        "Rh": {
+          "bytes": 231502,
+          "lexch": "PE",
+          "path": "Rh/POTCAR",
+          "sha256": "7e26a6c5f4bbb11f6d546708200d6aa3efbce224d7a794489bde4440a0d6e9c2",
+          "titel": "PAW_PBE Rh 04Feb2005"
+        },
+        "Rh_GW": {
+          "bytes": 283912,
+          "lexch": "PE",
+          "path": "Rh_GW/POTCAR",
+          "sha256": "f341ad87d8da366332fcb09a08968a804217ecfd6a513846fea6b47d7c722d8f",
+          "titel": "PAW_PBE Rh_GW 06Mar2008"
+        },
+        "Rh_pv": {
+          "bytes": 231469,
+          "lexch": "PE",
+          "path": "Rh_pv/POTCAR",
+          "sha256": "6509dff522a291f7a1796886a03a6db8c034544705d9e0f2bff513d8972fb05a",
+          "titel": "PAW_PBE Rh_pv 25Jan2005"
+        },
+        "Rh_sv_GW": {
+          "bytes": 338864,
+          "lexch": "PE",
+          "path": "Rh_sv_GW/POTCAR",
+          "sha256": "e24266e26556cac5f0059694c4218c203678189b30e7805059510573ad61a1a0",
+          "titel": "PAW_PBE Rh_sv_GW 05Dec2013"
+        },
+        "Rn": {
+          "bytes": 231421,
+          "lexch": "PE",
+          "path": "Rn/POTCAR",
+          "sha256": "05f9c2fe4a262eb88c5c67bbbdff2bde9702e4636d0ce2ad17637927c33d358f",
+          "titel": "PAW_PBE Rn 12Aug2016"
+        },
+        "Rn_d_GW": {
+          "bytes": 304437,
+          "lexch": "PE",
+          "path": "Rn_d_GW/POTCAR",
+          "sha256": "52ce3aee1c32a26c5ca39afb7203a24178a4e63fda64d2b938e65666ab08c654",
+          "titel": "PAW_PBE Rn_d_GW 12Aug2016"
+        },
+        "Rn_sv_GW": {
+          "bytes": 322934,
+          "lexch": "PE",
+          "path": "Rn_sv_GW/POTCAR",
+          "sha256": "b80d532291a798cb1291ab2b93c1334e6de7c11595e7409613f1369918414bee",
+          "titel": "PAW_PBE Rn_sv_GW 12Aug2016"
+        },
+        "Ru": {
+          "bytes": 232326,
+          "lexch": "PE",
+          "path": "Ru/POTCAR",
+          "sha256": "6a49424eeffec132c190b3ab1bc94c665c7be20644db60d2d41253177075e9f1",
+          "titel": "PAW_PBE Ru 04Feb2005"
+        },
+        "Ru_pv": {
+          "bytes": 232289,
+          "lexch": "PE",
+          "path": "Ru_pv/POTCAR",
+          "sha256": "b667ae3aa3a39e2897514c34081f8d68837fc98f63f959e2149ad09ee85d7a12",
+          "titel": "PAW_PBE Ru_pv 28Jan2005"
+        },
+        "Ru_sv": {
+          "bytes": 232285,
+          "lexch": "PE",
+          "path": "Ru_sv/POTCAR",
+          "sha256": "0094d78bb54eac29b15c41b4cbc5d63bdf89897ac1942ad7c7ced61789b15d73",
+          "titel": "PAW_PBE Ru_sv 28Jan2005"
+        },
+        "Ru_sv_GW": {
+          "bytes": 340174,
+          "lexch": "PE",
+          "path": "Ru_sv_GW/POTCAR",
+          "sha256": "4c447059634519157e10509fdc155c6a0af80de8e057856174e6f453f23d8d5f",
+          "titel": "PAW_PBE Ru_sv_GW 05Dec2013"
+        },
+        "S": {
+          "bytes": 203780,
+          "lexch": "PE",
+          "path": "S/POTCAR",
+          "sha256": "a0db583a5582a6ea7248e439ca0fc308947aa01f78aa2c9fae40f93d335218de",
+          "titel": "PAW_PBE S 06Sep2000"
+        },
+        "S_GW": {
+          "bytes": 258041,
+          "lexch": "PE",
+          "path": "S_GW/POTCAR",
+          "sha256": "1d5c0c14dc8038fb15320509a538e45593fe28f66ec9ea6168f9246fac9e1771",
+          "titel": "PAW_PBE S_GW 19Mar2012"
+        },
+        "S_h": {
+          "bytes": 203784,
+          "lexch": "PE",
+          "path": "S_h/POTCAR",
+          "sha256": "c2297ba42dc0ce1af95a95e8c385e79eef3acc4e0d8eacb78c0bfd03d1f2f84f",
+          "titel": "PAW_PBE S_h 08Apr2002"
+        },
+        "Sb": {
+          "bytes": 214318,
+          "lexch": "PE",
+          "path": "Sb/POTCAR",
+          "sha256": "d650db5f43c3c9453af0aae40a430728a5e3c7ab639239aa3eae4da1ee93019b",
+          "titel": "PAW_PBE Sb 06Sep2000"
+        },
+        "Sb_GW": {
+          "bytes": 284949,
+          "lexch": "PE",
+          "path": "Sb_GW/POTCAR",
+          "sha256": "b30aa2690657d3cb68ed665dcab3590a2e7dd3867f902e2a530a9480e3499b2f",
+          "titel": "PAW_PBE Sb_GW 21Mar2012"
+        },
+        "Sb_d_GW": {
+          "bytes": 303246,
+          "lexch": "PE",
+          "path": "Sb_d_GW/POTCAR",
+          "sha256": "0f11c9e50c55ca5207cfb7cab0c55b1fa6ca7ebf1c61928ce46cce9c62475ef1",
+          "titel": "PAW_PBE Sb_d_GW 15Mar2013"
+        },
+        "Sb_sv_GW": {
+          "bytes": 340145,
+          "lexch": "PE",
+          "path": "Sb_sv_GW/POTCAR",
+          "sha256": "6fa62e18da8ae09b4357813b01592228fd9b92b258ec32c2a407a609037c6768",
+          "titel": "PAW_PBE Sb_sv_GW 22Nov2013"
+        },
+        "Sc": {
+          "bytes": 219201,
+          "lexch": "PE",
+          "path": "Sc/POTCAR",
+          "sha256": "ad3e36291b7ee9df47d362cbbfe3b933226b38afdb0144062cd7331e60a03cde",
+          "titel": "PAW_PBE Sc 04Feb2005"
+        },
+        "Sc_sv": {
+          "bytes": 237757,
+          "lexch": "PE",
+          "path": "Sc_sv/POTCAR",
+          "sha256": "4526ab123855eb4efa39903becc1e4720ee9ba6169544b04c3558e0796b4c38f",
+          "titel": "PAW_PBE Sc_sv 07Sep2000"
+        },
+        "Sc_sv_GW": {
+          "bytes": 348518,
+          "lexch": "PE",
+          "path": "Sc_sv_GW/POTCAR",
+          "sha256": "7a2d10426539ac78e8891d76d3b11b16ae3ece358734a8c61f707c5aa1e71f6a",
+          "titel": "PAW_PBE Sc_sv_GW 05Dec2013"
+        },
+        "Se": {
+          "bytes": 220004,
+          "lexch": "PE",
+          "path": "Se/POTCAR",
+          "sha256": "a05c46eb38f572c2de1fee7a555d4b6220baa57b41bdf4f82cef84f7b0e114c1",
+          "titel": "PAW_PBE Se 06Sep2000"
+        },
+        "Se_GW": {
+          "bytes": 236246,
+          "lexch": "PE",
+          "path": "Se_GW/POTCAR",
+          "sha256": "8a06f72891dcadb8ddcd2834ccd87ca4d3ef661d6044838aea3b64f71f5b3bad",
+          "titel": "PAW_PBE Se_GW 20Mar2012"
+        },
+        "Se_sv_GW": {
+          "bytes": 349755,
+          "lexch": "PE",
+          "path": "Se_sv_GW/POTCAR",
+          "sha256": "04c6bb073b05912203205e5a4c69a03109b89d39afc3c828f62e75e8fd7049db",
+          "titel": "PAW_PBE Se_sv_GW 21Nov2013"
+        },
+        "Si": {
+          "bytes": 196046,
+          "lexch": "PE",
+          "path": "Si/POTCAR",
+          "sha256": "2a6df1c19701e5d97aaa59e5470b14653ddbd76935b76dacdd8792eb2eba252c",
+          "titel": "PAW_PBE Si 05Jan2001"
+        },
+        "Si_GW": {
+          "bytes": 248371,
+          "lexch": "PE",
+          "path": "Si_GW/POTCAR",
+          "sha256": "0954530af4d004c21c773eaa93249da6dff263bbb136475a56b12fcb37816051",
+          "titel": "PAW_PBE Si_GW 04May2012"
+        },
+        "Si_sv_GW": {
+          "bytes": 263552,
+          "lexch": "PE",
+          "path": "Si_sv_GW/POTCAR",
+          "sha256": "e88e0867a28495121cc5add1497b836bfbce435f85a29b4506ba9583c7e311d3",
+          "titel": "PAW_PBE Si_sv_GW 29Sep2009"
+        },
+        "Sm": {
+          "bytes": 306465,
+          "lexch": "PE",
+          "path": "Sm/POTCAR",
+          "sha256": "e85fef83ae74be0f393bc73874276c0a927c292fb036e1c0663d2fe7142ac0fa",
+          "titel": "PAW_PBE Sm 25May2022"
+        },
+        "Sm_3": {
+          "bytes": 237225,
+          "lexch": "PE",
+          "path": "Sm_3/POTCAR",
+          "sha256": "89de4335b9387b7c4d27a255bbf036bd3bea26ba9d4e266ce528ebddbb138b2c",
+          "titel": "PAW_PBE Sm_3 07Sep2000"
+        },
+        "Sm_h": {
+          "bytes": 287878,
+          "lexch": "PE",
+          "path": "Sm_h/POTCAR",
+          "sha256": "62e41da6bfbd42a2f978893d6891bdd6f93026b0e1706b3e58d227117a4d6a5c",
+          "titel": "PAW_PBE Sm_h 30May2022"
+        },
+        "Sn": {
+          "bytes": 215758,
+          "lexch": "PE",
+          "path": "Sn/POTCAR",
+          "sha256": "265fcae004187d970af98361daec6261774c02898005f90506573305bd7fe578",
+          "titel": "PAW_PBE Sn 08Apr2002"
+        },
+        "Sn_d": {
+          "bytes": 233925,
+          "lexch": "PE",
+          "path": "Sn_d/POTCAR",
+          "sha256": "6d289e176be4e6a602e9ff50df7281005ccf93cf49e4a9d11c5ea717e0b974ee",
+          "titel": "PAW_PBE Sn_d 06Sep2000"
+        },
+        "Sn_d_GW": {
+          "bytes": 305322,
+          "lexch": "PE",
+          "path": "Sn_d_GW/POTCAR",
+          "sha256": "deceae437ed859dbdf8156af28069962666fd600d689716bd29739cbdf3ff512",
+          "titel": "PAW_PBE Sn_d_GW 15Mar2013"
+        },
+        "Sn_sv_GW": {
+          "bytes": 342545,
+          "lexch": "PE",
+          "path": "Sn_sv_GW/POTCAR",
+          "sha256": "5966dc8532b82364f1148e8d4e55b55ee1d98a46705341671d0b27d256a960d2",
+          "titel": "PAW_PBE Sn_sv_GW 22Nov2013"
+        },
+        "Sr_sv": {
+          "bytes": 237062,
+          "lexch": "PE",
+          "path": "Sr_sv/POTCAR",
+          "sha256": "26957a1630f71512c13dcfcbb74950a3188e7890abd628900a2aa06246dbe8f4",
+          "titel": "PAW_PBE Sr_sv 07Sep2000"
+        },
+        "Sr_sv_GW": {
+          "bytes": 290682,
+          "lexch": "PE",
+          "path": "Sr_sv_GW/POTCAR",
+          "sha256": "c1a212cfcd1de5a54c0e00ce704a586f3b22d6e039aeb9198b1a3349b801a789",
+          "titel": "PAW_PBE Sr_sv_GW 23Mar2010"
+        },
+        "Ta": {
+          "bytes": 231635,
+          "lexch": "PE",
+          "path": "Ta/POTCAR",
+          "sha256": "75c5a08bd44bb348e7da4ead769cdc9edbc7cc8f8aefe4bb662c56e29b0eb2ec",
+          "titel": "PAW_PBE Ta 17Jan2003"
+        },
+        "Ta_pv": {
+          "bytes": 231599,
+          "lexch": "PE",
+          "path": "Ta_pv/POTCAR",
+          "sha256": "ffb05e92ac3f68ca84c26af10a80f2fbb0cf79e16fcc96fcae98089455bbbaaa",
+          "titel": "PAW_PBE Ta_pv 07Sep2000"
+        },
+        "Ta_sv_GW": {
+          "bytes": 284045,
+          "lexch": "PE",
+          "path": "Ta_sv_GW/POTCAR",
+          "sha256": "35c969a528d397f4ad9b33cd29256fedf49bd1a22c8b5ce793c4a5f5b9d2d53e",
+          "titel": "PAW_PBE Ta_sv_GW 23Mar2010"
+        },
+        "Tb": {
+          "bytes": 305399,
+          "lexch": "PE",
+          "path": "Tb/POTCAR",
+          "sha256": "aaafe56ffc7e8618bda43d67f14cede8e4020adfb237a64aa455422d51a33ea7",
+          "titel": "PAW_PBE Tb 25May2022"
+        },
+        "Tb_3": {
+          "bytes": 236429,
+          "lexch": "PE",
+          "path": "Tb_3/POTCAR",
+          "sha256": "9ab571792f1abf4a7e63390bca09e6a8c34d81c78fdd81e0761d7a08853255c2",
+          "titel": "PAW_PBE Tb_3 06Sep2000"
+        },
+        "Tb_h": {
+          "bytes": 286890,
+          "lexch": "PE",
+          "path": "Tb_h/POTCAR",
+          "sha256": "a17a1d46d484fb7e5f9b92fb47ee7831a42ab1dc3176ba783691c6890b7563a3",
+          "titel": "PAW_PBE Tb_h 30May2022"
+        },
+        "Tc": {
+          "bytes": 232323,
+          "lexch": "PE",
+          "path": "Tc/POTCAR",
+          "sha256": "e11ee46a6653e4df528e10a02485b705aaf8035fe1b0426574f6584c67564fa0",
+          "titel": "PAW_PBE Tc 04Feb2005"
+        },
+        "Tc_pv": {
+          "bytes": 232289,
+          "lexch": "PE",
+          "path": "Tc_pv/POTCAR",
+          "sha256": "778a7e9e6b12c2e1833d90112be68f532852d1b3ee3d342beb13c80183cccac7",
+          "titel": "PAW_PBE Tc_pv 04Feb2005"
+        },
+        "Tc_sv": {
+          "bytes": 232285,
+          "lexch": "PE",
+          "path": "Tc_sv/POTCAR",
+          "sha256": "75d1e3301f2ab59cef6d624c5aebf385ec36c6be07645f72ff641766919b5234",
+          "titel": "PAW_PBE Tc_sv 23Mar2010"
+        },
+        "Tc_sv_GW": {
+          "bytes": 341378,
+          "lexch": "PE",
+          "path": "Tc_sv_GW/POTCAR",
+          "sha256": "337469ad4e7dcddbeeb9a3b5fc2e3327ebae1017bd3bf7b789b5d5c3c2a0f4e9",
+          "titel": "PAW_PBE Tc_sv_GW 05Dec2013"
+        },
+        "Te": {
+          "bytes": 218670,
+          "lexch": "PE",
+          "path": "Te/POTCAR",
+          "sha256": "420e8b7fcf5a5d19a78e04e0a5e018a05054b0d224e312acd94c67083917fab3",
+          "titel": "PAW_PBE Te 08Apr2002"
+        },
+        "Te_GW": {
+          "bytes": 253451,
+          "lexch": "PE",
+          "path": "Te_GW/POTCAR",
+          "sha256": "326963ae793ae8e73f27220a90c1b6eb74f5639f0726e36450835ac9e3e01cb9",
+          "titel": "PAW_PBE Te_GW 22Mar2012"
+        },
+        "Te_sv_GW": {
+          "bytes": 347408,
+          "lexch": "PE",
+          "path": "Te_sv_GW/POTCAR",
+          "sha256": "9d14353e977ac1af317470fb4582aa5c2adb98b6761819a39ee725b0018b6b65",
+          "titel": "PAW_PBE Te_sv_GW 22Nov2013"
+        },
+        "Th": {
+          "bytes": 270826,
+          "lexch": "PE",
+          "path": "Th/POTCAR",
+          "sha256": "8419f9267a3418d0b54b6c542ba87f9f18933056be559ae14aeed0333ea85ef0",
+          "titel": "PAW_PBE Th 07Sep2000"
+        },
+        "Th_s": {
+          "bytes": 270834,
+          "lexch": "PE",
+          "path": "Th_s/POTCAR",
+          "sha256": "c42e80b0d1b0dd46c490b9fb34672ef1de4e8a7e4d4393d0a2dcca1514710b9d",
+          "titel": "PAW_PBE Th_s 06Sep2000"
+        },
+        "Ti": {
+          "bytes": 217756,
+          "lexch": "PE",
+          "path": "Ti/POTCAR",
+          "sha256": "25f970c4a3fb3651fd88a874985f9a77728d97c413bdcd4eb3fb818f6258cefe",
+          "titel": "PAW_PBE Ti 08Apr2002"
+        },
+        "Ti_pv": {
+          "bytes": 236177,
+          "lexch": "PE",
+          "path": "Ti_pv/POTCAR",
+          "sha256": "1a7a8efddf2a5b6c8861aa48543d0531abc8e9b6e54500458b415b06354c25ba",
+          "titel": "PAW_PBE Ti_pv 07Sep2000"
+        },
+        "Ti_sv": {
+          "bytes": 236188,
+          "lexch": "PE",
+          "path": "Ti_sv/POTCAR",
+          "sha256": "f934456615deae22f39efb60fbfa2b95e0d80c3d5b4e8c19ee764aca0a62aa01",
+          "titel": "PAW_PBE Ti_sv 26Sep2005"
+        },
+        "Ti_sv_GW": {
+          "bytes": 346097,
+          "lexch": "PE",
+          "path": "Ti_sv_GW/POTCAR",
+          "sha256": "faa88480ee016abb7bc6937d370323d7f29f6df347b9131ebf19cbeb3d9f5fd9",
+          "titel": "PAW_PBE Ti_sv_GW 05Dec2013"
+        },
+        "Tl": {
+          "bytes": 216655,
+          "lexch": "PE",
+          "path": "Tl/POTCAR",
+          "sha256": "0f129ce8236857185e78fe456a2a5c5cfba41c43ca22a0bd091714e15295d842",
+          "titel": "PAW_PBE Tl 08Apr2002"
+        },
+        "Tl_d": {
+          "bytes": 234900,
+          "lexch": "PE",
+          "path": "Tl_d/POTCAR",
+          "sha256": "b03ea1528b3be1b00dfcb6a513b14a03a4af5644963e75d9dcb75e3f421363c2",
+          "titel": "PAW_PBE Tl_d 06Sep2000"
+        },
+        "Tl_d_GW": {
+          "bytes": 325208,
+          "lexch": "PE",
+          "path": "Tl_d_GW/POTCAR",
+          "sha256": "2ba9dc3258e42c7553344723f29b0f18e4e6ea52e3020da09fbde5d013b97373",
+          "titel": "PAW_PBE Tl_d_GW 14Apr2014"
+        },
+        "Tl_sv_GW": {
+          "bytes": 343951,
+          "lexch": "PE",
+          "path": "Tl_sv_GW/POTCAR",
+          "sha256": "87bce8ecbab598fff0566011b1438bc955fa2442ddac2a0f58f86ff74f9567f0",
+          "titel": "PAW_PBE Tl_sv_GW 16Apr2014"
+        },
+        "Tm": {
+          "bytes": 304359,
+          "lexch": "PE",
+          "path": "Tm/POTCAR",
+          "sha256": "090587c42370ff36f7961ed6b88df8524f8a63d608d9778b7d8265a9694cb15d",
+          "titel": "PAW_PBE Tm 25May2022"
+        },
+        "Tm_3": {
+          "bytes": 236429,
+          "lexch": "PE",
+          "path": "Tm_3/POTCAR",
+          "sha256": "9571f13b37450b29f8f5cf9492d65b02d2e730df50adc3905f2625ee6bc8896c",
+          "titel": "PAW_PBE Tm_3 20Jan2003"
+        },
+        "Tm_h": {
+          "bytes": 304359,
+          "lexch": "PE",
+          "path": "Tm_h/POTCAR",
+          "sha256": "0938c15c4ebd696fced2356a8886131eff8a8076411494316822bbf8fc4d3f21",
+          "titel": "PAW_PBE Tm_h 29Jun2022"
+        },
+        "U": {
+          "bytes": 268903,
+          "lexch": "PE",
+          "path": "U/POTCAR",
+          "sha256": "863853eab8d65b6672e84488288ea6005d3b6d0f27c3471d8ef93be17d3a66c4",
+          "titel": "PAW_PBE U 06Sep2000"
+        },
+        "U_s": {
+          "bytes": 268907,
+          "lexch": "PE",
+          "path": "U_s/POTCAR",
+          "sha256": "ab841b4d1a90328d8d52853fe45f76077c9ff99d825a4f34c74b8eb8bb710aeb",
+          "titel": "PAW_PBE U_s 06Sep2000"
+        },
+        "V": {
+          "bytes": 235395,
+          "lexch": "PE",
+          "path": "V/POTCAR",
+          "sha256": "60faff83d90b4e7aca1549098b15f106ddbaafdf91f2ab6a20f376d6910f4a2e",
+          "titel": "PAW_PBE V 08Apr2002"
+        },
+        "V_pv": {
+          "bytes": 235357,
+          "lexch": "PE",
+          "path": "V_pv/POTCAR",
+          "sha256": "7e6e3948baf479b1e61e3653bf3429049e07351b243ece4a7a45499cd5dea1a0",
+          "titel": "PAW_PBE V_pv 07Sep2000"
+        },
+        "V_sv": {
+          "bytes": 235367,
+          "lexch": "PE",
+          "path": "V_sv/POTCAR",
+          "sha256": "68ef807e4dea74b50e20b47ff97f0e1ccef33e1a620ed15957beb3c31f1159e8",
+          "titel": "PAW_PBE V_sv 02Aug2007"
+        },
+        "V_sv_GW": {
+          "bytes": 344864,
+          "lexch": "PE",
+          "path": "V_sv_GW/POTCAR",
+          "sha256": "42df649b5f27003eaad6c8d070e88b8a83305c281feaa998c307a71123b750e6",
+          "titel": "PAW_PBE V_sv_GW 05Dec2013"
+        },
+        "W": {
+          "bytes": 230828,
+          "lexch": "PE",
+          "path": "W/POTCAR",
+          "sha256": "48c6d4bde5b0c3f7de7fe76a535852300c7192477ab749b014aa60c5f8bd0709",
+          "titel": "PAW_PBE W 08Apr2002"
+        },
+        "W_sv": {
+          "bytes": 247059,
+          "lexch": "PE",
+          "path": "W_sv/POTCAR",
+          "sha256": "018702d3778391c47ac506bb892e4722fbea8196c12f53aec686e9cef2cd5311",
+          "titel": "PAW_PBE W_sv 04Sep2015"
+        },
+        "W_sv_GW": {
+          "bytes": 283082,
+          "lexch": "PE",
+          "path": "W_sv_GW/POTCAR",
+          "sha256": "b63ec39225dbd12701e3047fb72cbf2a49048f87ae8776fc6484b0c30271d0f6",
+          "titel": "PAW_PBE W_sv_GW 23Mar2010"
+        },
+        "Xe": {
+          "bytes": 180683,
+          "lexch": "PE",
+          "path": "Xe/POTCAR",
+          "sha256": "d48d51acafd24a42768be29441f2d56ebcac0b76a20671f33dc1594c89f2b884",
+          "titel": "PAW_PBE Xe 07Sep2000"
+        },
+        "Xe_GW": {
+          "bytes": 288805,
+          "lexch": "PE",
+          "path": "Xe_GW/POTCAR",
+          "sha256": "379aab0199b5558cb6a78779e02690ce1c9ee8bcba8b7bda8eadd92f18affbae",
+          "titel": "PAW_PBE Xe_GW 08Jan2009"
+        },
+        "Xe_sv_GW": {
+          "bytes": 344978,
+          "lexch": "PE",
+          "path": "Xe_sv_GW/POTCAR",
+          "sha256": "e6b62f0cc9fb98da113208ca251adf11e3dcc08cc4b33a4107e31df8cc3ba4b0",
+          "titel": "PAW_PBE Xe_sv_GW 17Apr2014"
+        },
+        "Y_sv": {
+          "bytes": 254855,
+          "lexch": "PE",
+          "path": "Y_sv/POTCAR",
+          "sha256": "81f1f2340ed9ea0669478dabe2649395ba9a4585f0436f993c30afebce522a2a",
+          "titel": "PAW_PBE Y_sv 25May2007"
+        },
+        "Y_sv_GW": {
+          "bytes": 327324,
+          "lexch": "PE",
+          "path": "Y_sv_GW/POTCAR",
+          "sha256": "91c5c158da15e9ea2d8bd792c7e5a634fd3fbd5038adca58a6854e1792470a67",
+          "titel": "PAW_PBE Y_sv_GW 05Dec2013"
+        },
+        "Yb": {
+          "bytes": 303319,
+          "lexch": "PE",
+          "path": "Yb/POTCAR",
+          "sha256": "cbc4220d774ae87a2346c08917d189a8827da119fa4b3c97ad1462e93e4f7435",
+          "titel": "PAW_PBE Yb 25May2022"
+        },
+        "Yb_2": {
+          "bytes": 241269,
+          "lexch": "PE",
+          "path": "Yb_2/POTCAR",
+          "sha256": "46c2db685cc6df053ac84c22194f5496732fa139d369ed88ec60932978fc910b",
+          "titel": "PAW_PBE Yb_2 06Sep2000"
+        },
+        "Yb_3": {
+          "bytes": 251837,
+          "lexch": "PE",
+          "path": "Yb_3/POTCAR",
+          "sha256": "f4d8e39c06b569bdcda1f6ab454e850f07659281aa3ab9eca3ecf1d8ebe5e914",
+          "titel": "PAW_PBE Yb_3 08Jul2013"
+        },
+        "Yb_h": {
+          "bytes": 303319,
+          "lexch": "PE",
+          "path": "Yb_h/POTCAR",
+          "sha256": "02c63b7c035236b2a168753103f7900e7c725d689d557b9be815cea3415be8cc",
+          "titel": "PAW_PBE Yb_h 29Jun2022"
+        },
+        "Zn": {
+          "bytes": 229732,
+          "lexch": "PE",
+          "path": "Zn/POTCAR",
+          "sha256": "a9e75569c74432b6efe4f522da7317143f7ca230c1076b8adbff8e3ef9494c0b",
+          "titel": "PAW_PBE Zn 06Sep2000"
+        },
+        "Zn_GW": {
+          "bytes": 263938,
+          "lexch": "PE",
+          "path": "Zn_GW/POTCAR",
+          "sha256": "b440e060ea78d95ae5f896bd3b0e514cfe37409c6b8defe83c7d46b77a03feae",
+          "titel": "PAW_PBE Zn_GW 09Oct2010"
+        },
+        "Zn_sv_GW": {
+          "bytes": 336371,
+          "lexch": "PE",
+          "path": "Zn_sv_GW/POTCAR",
+          "sha256": "bbdd1aba398baf89a12b15a663641e54e7bfa60cdc2f023773ad5dad054e7662",
+          "titel": "PAW_PBE Zn_sv_GW 05Dec2013"
+        },
+        "Zr_sv": {
+          "bytes": 234711,
+          "lexch": "PE",
+          "path": "Zr_sv/POTCAR",
+          "sha256": "e3d75732e64ed47e733ef12202d7082321f6b043dd450e16fe03b686b180cdc0",
+          "titel": "PAW_PBE Zr_sv 04Jan2005"
+        },
+        "Zr_sv_GW": {
+          "bytes": 326179,
+          "lexch": "PE",
+          "path": "Zr_sv_GW/POTCAR",
+          "sha256": "a56ccca3ec5bbbdc1e25d25fd9e4d538a12f207f72fb24c6857b2fccf1dd0fea",
+          "titel": "PAW_PBE Zr_sv_GW 05Dec2013"
+        }
+      }
+    }
+  },
+  "installed_utc": "2026-10-17T16:14:05.570147+00:00",
+  "library_id": "vasp-paw-64-b3b00158ad69",
+  "remote_root": "/home/u3129/.local/share/vasp/pseudopotentials/64-b3b00158ad69",
+  "schema_version": 1
+}

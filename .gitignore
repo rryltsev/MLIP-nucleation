@@ -14,6 +14,8 @@ __pycache__/
 
 # Licensed VASP material and large runtime outputs
 POTCAR*
+!potcar-provenance.json
+PSCTR*
 WAVECAR*
 CHGCAR*
 vaspout.h5
@@ -27,6 +29,11 @@ vasp.*/
 vasp_std
 vasp_gam
 vasp_ncl
+Pseudopotentials*.zip
+Pseudopotentials*/
+potpaw*.tgz
+potpaw*.tar.gz
+potpaw*/
 
 # LaTeX build products (source, final figures and selected PDFs may be tracked)
 *.aux

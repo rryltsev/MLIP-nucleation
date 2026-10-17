@@ -16,6 +16,7 @@ Read `README.md`, `project/state.json`, and `project/brief.txt` before continuin
 - Before submission, resolve partition, account, resources, walltime, software and user-authorized allocation budget. Do not infer available capacity from total installed hardware.
 - Persist a run identifier and input hash before submission; record scheduler job ID immediately. If submission outcome is uncertain, reconcile scheduler state before retrying.
 - Never disable SSH host verification. Credentials, private keys, tokens and licensed VASP pseudopotential files stay outside Git.
+- For VASP inputs use the private PAW library registered in `configs/vasp/paw-64.json` and the hash-checking assembly helper documented in README. Choose PBE or LDA and exact variants explicitly in POSCAR species order; preserve `potcar-provenance.json` in each run's records. Do not mix potential families/variants silently or substitute bundled test potentials.
 - Commit coherent code/configuration/result changes; push to the configured GitHub remote when authentication and Git identity are available. Do not fabricate commit author identity.
 - Store large artifacts through an explicitly chosen backend with checksums; manifests alone are not backups. No destructive synchronization.
 - Update `project/state.json` after meaningful progress so another computer can resume. Do not commit mutable live scheduler databases.

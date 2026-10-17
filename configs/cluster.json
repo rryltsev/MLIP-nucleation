@@ -4,20 +4,51 @@
   "user": "u3129",
   "scheduler": "slurm",
   "dft_engine": "vasp",
-  "reported_hardware": {"a100_count": 2, "k40m_count": "several dozen", "cpu_count_approx": 1000},
+  "reported_hardware": {
+    "a100_count": 2,
+    "k40m_count": "several dozen",
+    "cpu_count_approx": 1000
+  },
   "verified": false,
   "inventory_status": "login inventory complete; VASP CPU/MPI build and four upstream cases verified on apollo31; MLIP GPU runtime unverified",
   "inventory_report": "reports/cluster-inventory-2026-10-17.tex",
-  "candidate_partitions": {"cpu_dft": "apollo", "a100_training": "v100", "legacy_gpu": "tesla", "short_checks": "debug"},
+  "candidate_partitions": {
+    "cpu_dft": "apollo",
+    "a100_training": "v100",
+    "legacy_gpu": "tesla",
+    "short_checks": "debug"
+  },
   "partition": null,
   "account": "imet-2026-2",
   "qos": "normal",
   "remote_work_root": null,
-  "storage_observations": {"main_home": "/home/u3129", "main_home_compute_access": "read-only observed on apollo20", "writable_build_storage": "/home6/u3129", "writable_verified_node": "apollo31", "home6_quota_gib_reported": 100},
+  "storage_observations": {
+    "main_home": "/home/u3129",
+    "main_home_compute_access": "read-only observed on apollo20",
+    "writable_build_storage": "/home6/u3129",
+    "writable_verified_node": "apollo31",
+    "home6_quota_gib_reported": 100
+  },
   "vasp_executable": "/home/u3129/.local/opt/vasp/6.6.1-oneapi-2025/src/vasp.6.6.1/bin/vasp_std",
   "environment_setup": "/home/u3129/.local/opt/vasp/6.6.1-oneapi-2025/env.sh",
-  "vasp_variants": ["vasp_std", "vasp_gam", "vasp_ncl"],
+  "vasp_variants": [
+    "vasp_std",
+    "vasp_gam",
+    "vasp_ncl"
+  ],
   "vasp_validation": "runs/vasp661-oneapi-20261017-05/result.json",
   "walltime": null,
-  "allocation_budget": null
+  "allocation_budget": null,
+  "vasp_pseudopotentials": {
+    "registry": "configs/vasp/paw-64.json",
+    "remote_root": "/home/u3129/.local/share/vasp/pseudopotentials/64-b3b00158ad69",
+    "environment_setup": "/home/u3129/.local/share/vasp/pseudopotentials/64-b3b00158ad69/env.sh",
+    "families": {
+      "PBE": 343,
+      "LDA": 297
+    },
+    "default_family": null,
+    "default_variants": null,
+    "selection_policy": "choose family and exact variants explicitly in POSCAR species order; preserve potcar-provenance.json per run"
+  }
 }

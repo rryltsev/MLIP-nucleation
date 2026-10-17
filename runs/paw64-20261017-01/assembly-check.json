@@ -1,0 +1,31 @@
+{
+  "checks": [
+    {
+      "bytes": 434159,
+      "family": "PBE",
+      "ordered_concatenation_verified": true,
+      "potcar_sha256": "e9ea1718630c80d25d4376c0c5e3c18e6f0779cfa704e5bd3386abe24cb914c5",
+      "variants": [
+        "Al",
+        "Ti_pv"
+      ]
+    },
+    {
+      "bytes": 198571,
+      "family": "LDA",
+      "ordered_concatenation_verified": true,
+      "potcar_sha256": "b60fccc92261e7afa862393803e760adab7a9525581fe39d9b16b2093df99616",
+      "variants": [
+        "Al"
+      ]
+    }
+  ],
+  "permissions": "0o700",
+  "prior_check_attempt": {
+    "cause": "local check template replaced ROOT inside environment variable name; fixed placeholder; library unchanged",
+    "status": "failed before assembly"
+  },
+  "registry_sha256": "682a27af5778084e99f5cea9eabe3e6668e1fd319a5b0e38b99b6c8321d80d8c",
+  "scope": "file integrity and input assembly only; no DFT calculation",
+  "status": "passed"
+}

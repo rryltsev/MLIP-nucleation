@@ -1,0 +1,27 @@
+{
+  "archive_bytes": 57612174,
+  "archive_sha256": "b3b00158ad69862b1632947cc3377de110181e6f509ed408b0a6bfc30023f461",
+  "code_commit": "fd8685490a6ef9b826998c88ea2cc69ee145772f",
+  "completed_utc": "2026-10-17T16:14:12.964545+00:00",
+  "created_utc": "2026-10-17T16:12:29.309086+00:00",
+  "execution": "login-node file transfer, extraction and checksum verification only",
+  "family_counts": {
+    "LDA": 297,
+    "PBE": 343
+  },
+  "host": "umt.imm.uran.ru",
+  "input_sha256": {
+    "env.sh": "58381f4763dc8206c87ee9c73f7d42bbd1ef68ff05238720d87db29059811531",
+    "vasp_potentials.py": "69a235355dc99722020a6daa3bd7e260aadca2a0a0469c1859b9139a4cc356b2"
+  },
+  "installer_sha256": "55da168837a8e5bfdcd4b7ee628c796c30ef935dabb3c3b379ad7a8356808676",
+  "purpose": "user-requested private PAW library installation",
+  "registry": "configs/vasp/paw-64.json",
+  "registry_sha256": "682a27af5778084e99f5cea9eabe3e6668e1fd319a5b0e38b99b6c8321d80d8c",
+  "remote_root": "/home/u3129/.local/share/vasp/pseudopotentials/64-b3b00158ad69",
+  "run_id": "paw64-20261017-01",
+  "scheduler_job_id": null,
+  "stage": "installed_verified",
+  "user": "u3129",
+  "verification": "ZIP SHA-256, nested archive SHA-256, all extracted file hashes and local/remote inventory match"
+}
