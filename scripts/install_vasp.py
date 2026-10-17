@@ -150,10 +150,10 @@ def prepare_retry(previous_path, run_id, new_path):
     previous.update(stage="failed", scheduler_state=row[1], scheduler_exit_code=row[2])
     save(previous_path, previous)
     manifest = dict(previous)
-    manifest.update(run_id=run_id, remote_run_dir=REMOTE_ROOT + "/runs/" + run_id,
+    manifest.update(run_id=run_id, remote_run_dir=previous["remote_install_root"] + "/runs/" + run_id,
                     previous_job_id=job_id, job_id=None, stage="staged",
                     created_utc=datetime.now(timezone.utc).isoformat(),
-                    retry_reason="node-local Slurm cwd/stdout bootstrap, followed by user-opened persistent logs, after pre-launch I/O failure")
+                    retry_reason="configuration repaired after recorded terminal failure; see input hashes and code commit")
     manifest.pop("scheduler_state", None)
     manifest.pop("scheduler_exit_code", None)
     remote("set -eu; umask 077; mkdir " + shlex.quote(manifest["remote_run_dir"]))

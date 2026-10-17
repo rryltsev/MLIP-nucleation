@@ -23,6 +23,8 @@
     "memory_gib": 16,
     "walltime": "01:00:00"
   },
-  "stage": "submitted",
-  "job_id": "20950112"
+  "stage": "failed",
+  "job_id": "20950112",
+  "scheduler_state": "FAILED",
+  "scheduler_exit_code": "0:53"
 }
