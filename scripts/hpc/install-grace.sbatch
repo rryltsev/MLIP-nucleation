@@ -13,13 +13,20 @@ export CONDA_PKGS_DIRS=/home6/u3129/mlip-research/package-cache/conda
 export PIP_CACHE_DIR=/home6/u3129/mlip-research/package-cache/pip
 export CONDA_ENVS_PATH=/home6/u3129/mlip-research/envs
 export CONDA_NUMBER_CHANNEL_NOTICES=0
-export OMP_NUM_THREADS=4
-export OPENBLAS_NUM_THREADS=4
+export OMP_NUM_THREADS="${SLURM_CPUS_PER_TASK:-1}"
+export OPENBLAS_NUM_THREADS="$OMP_NUM_THREADS"
 mkdir -p "$CONDA_PKGS_DIRS" "$PIP_CACHE_DIR"
-test ! -e "$GRACE_ENV"
 hostname > node.txt
-/home/u3129/miniconda3/bin/conda create --yes --no-default-packages --override-channels \
-    --channel conda-forge --prefix "$GRACE_ENV" python=3.11 pip > conda-create.log 2>&1
+if [ "${GRACE_RESUME:-0}" = 1 ]; then
+    # Resume only this private installation prefix after a reconciled failed job.
+    test ! -e "$GRACE_ENV/INSTALLATION.json"
+    test -r "$GRACE_ENV/conda-meta/history"
+    "$GRACE_ENV/bin/python" -c 'import sys; assert sys.version_info[:2] == (3,11)'
+else
+    test ! -e "$GRACE_ENV"
+    /home/u3129/miniconda3/bin/conda create --yes --no-default-packages --override-channels \
+        --channel conda-forge --prefix "$GRACE_ENV" python=3.11 pip > conda-create.log 2>&1
+fi
 "$GRACE_ENV/bin/python" -m pip install --only-binary=:all: --report pip-install-report.json \
     'tensorpotential==0.6.1' 'tensorflow[and-cuda]==2.20.0' 'tf-keras~=2.20.0' 'dpdata==1.1.0' \
     > pip-install.log 2>&1

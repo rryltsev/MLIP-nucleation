@@ -1,0 +1,9 @@
+{
+  "name": "download_progress_in_existing_allocation",
+  "observed_utc": "2026-10-17T17:00:26.141288+00:00",
+  "script": "srun --jobid=20950197 --overlap --nodes=1 --ntasks=1 --cpus-per-task=1 --mem=128M --time=00:01:00 bash -c 'df -h /tmp; find /tmp -maxdepth 3 -user u3129 -type f -name \"*.whl\" -printf \"%s %f\\n\"'",
+  "returncode": 1,
+  "timed_out": false,
+  "stdout": "Filesystem      Size  Used Avail Use% Mounted on\n/dev/sda4       174G  3.9G  170G   3% /tmp\n498218 tensorpotential-0.6.1-py3-none-any.whl\n620570129 tensorflow-2.20.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl\n223587 dpdata-1.1.0-py3-none-any.whl\n1694335 tf_keras-2.20.1-py3-none-any.whl\n7187959 grpcio-1.84.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl\n412043 ml_dtypes-0.6.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl\n16918164 numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl\n551813120 nvidia_cublas_cu12-12.9.2.10-py3-none-manylinux_2_27_x86_64.whl\n",
+  "stderr": "srun: error: apollo19: task 0: Exited with exit code 1\nfind: \u2018/tmp/systemd-private-873bfe014bc04d0e8518d7ddbf51ed79-chronyd.service-B9SbJj\u2019: Permission denied\nfind: \u2018/tmp/ompi.apollo19.13156\u2019: Permission denied\nfind: \u2018/tmp/openmpi-sessions-u2691@apollo19_0\u2019: Permission denied\n"
+}

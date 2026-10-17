@@ -13,6 +13,7 @@ Read `README.md`, `project/state.json`, and `project/brief.txt` before continuin
 ## Execution and persistence
 - VASP and production simulations run on Slurm compute nodes. Login-node work is limited to lightweight inspection and transfers.
 - The main home filesystem was read-only on compute node apollo20. Place build trees, simulation working directories and Slurm logs on a compute-writable filesystem; write access to `/home6/u3129` was verified through Slurm. Keep durable copies of accepted software/results in main home or the chosen archive.
+- For compute-node environment installation, isolate installer HOME and caches on writable storage. Overriding only `CONDA_PKGS_DIRS` is insufficient: Conda plugins can still try writing to the read-only main home. Preserve the existing environments.
 - Compute-node Lmod does not expose the login node's `intelmpi/intel64_2025` module. Use the pinned environment setup in `scripts/hpc/vasp-env.sh` for this VASP build.
 - Before submission, resolve partition, account, resources, walltime, software and user-authorized allocation budget. Do not infer available capacity from total installed hardware.
 - Persist a run identifier and input hash before submission; record scheduler job ID immediately. If submission outcome is uncertain, reconcile scheduler state before retrying.

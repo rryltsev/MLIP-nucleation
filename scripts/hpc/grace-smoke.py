@@ -132,7 +132,7 @@ def main():
             if dtype.is_floating:
                 assert np.isfinite(reader.get_tensor(name)).all(), "Nonfinite checkpoint tensor: " + name
         result["output_sha256"] = {p.relative_to(train).as_posix():digest(p) for p in output.rglob("*")
-                                  if p.is_file() and (p.name.startswith("checkpoint") or p.suffix in [".yaml",".pb"])}
+                                  if p.is_file() and (p.name.startswith("checkpoint") or p.suffix in [".yaml",".pb"] or "final_model" in p.parts)}
         assert (output / "final_model/saved_model.pb").exists()
         result["status"] = "passed"
     except Exception:

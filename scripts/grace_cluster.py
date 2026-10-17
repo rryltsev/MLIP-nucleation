@@ -20,10 +20,16 @@ def submit(phase, attempt):
     if path.exists():
         raise FileExistsError("Run already recorded; reconcile job.id/scheduler before retrying")
     run_dir = "/home6/u3129/mlip-research/runs/" + run_id
+    cpus, resume = 4, False
     if phase == "install":
         files = {"install-grace.sbatch": ROOT / "scripts/hpc/install-grace.sbatch",
                  "environment-proposal.yml": ROOT / "environments/grace-a100.proposed.yml"}
         batch, partition, walltime, gres = "install-grace.sbatch", "apollo", "00:30:00", None
+        if attempt == '03':
+            previous = json.loads((ROOT/'runs/grace-install-20261017-02/manifest.json').read_text())
+            if previous.get('stage') != 'collected' or previous.get('runtime_status') == 'installed':
+                raise RuntimeError('Reconcile the earlier installation before resuming')
+            cpus, walltime, resume = 1, '01:00:00', True
     else:
         remote("test -r " + ENV + "/INSTALLATION.json")
         files = {"grace-smoke.sbatch": ROOT / "scripts/hpc/grace-smoke.sbatch",
@@ -36,7 +42,8 @@ def submit(phase, attempt):
         "remote_run_dir":run_dir,"created_utc":datetime.now(timezone.utc).isoformat(),
         "authorization":"user requested isolated GRACE installation and a short A100 Slurm training check",
         "resources":{"partition":partition,"account":"imet-2026-2","qos":"normal","nodes":1,
-                     "tasks":1,"cpus":4,"memory_gib":16,"walltime":walltime,"gres":gres},
+                     "tasks":1,"cpus":cpus,"memory_gib":16,"walltime":walltime,"gres":gres},
+        "resume_private_prefix":resume,
         "code_commit":subprocess.check_output(["git","rev-parse","HEAD"],cwd=ROOT,text=True).strip(),
         "input_sha256":hashes,"input_hash":hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest(),
         "stage":"preparing","job_id":None}
@@ -48,8 +55,9 @@ def submit(phase, attempt):
     write_remote(run_dir+"/manifest.json",path.read_bytes())
     flags=" --gres="+gres if gres else ""
     exports="ALL,GRACE_RUN_DIR="+run_dir+",GRACE_ENV="+ENV
+    exports+=",GRACE_RESUME="+str(int(resume))
     answer=remote("set -euC; cd "+q+"; test ! -e job.id; sbatch --parsable --job-name="+run_id+
-        " --partition="+partition+" --account=imet-2026-2 --qos=normal --nodes=1 --ntasks=1 --cpus-per-task=4 --mem=16G --time="+
+        " --partition="+partition+" --account=imet-2026-2 --qos=normal --nodes=1 --ntasks=1 --cpus-per-task="+str(cpus)+" --mem=16G --time="+
         walltime+flags+" --chdir="+q+" --output="+q+"/slurm-%j.out --export="+shlex.quote(exports)+" "+batch+" > job.id; cat job.id")
     job=answer.strip().split(';')[0]
     if not job.isdigit(): raise RuntimeError('Uncertain submission; reconcile before retrying')

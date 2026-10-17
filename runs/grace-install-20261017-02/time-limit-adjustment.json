@@ -1,0 +1,17 @@
+{
+  "stage": "observed",
+  "job_id": "20950197",
+  "initial_walltime": "00:30:00",
+  "requested_walltime": "01:00:00",
+  "resources_unchanged": "4 CPU, 16 GiB, no GPU",
+  "reason": "Measured CUDA wheel download at about 0.9 MB/s; prevent timeout of user-authorized environment installation; GPU training cap remains ten minutes",
+  "observation": {
+    "name": "extend_own_installation_job_time_limit",
+    "observed_utc": "2026-10-17T17:02:14.912464+00:00",
+    "script": "scontrol update JobId=20950197 TimeLimit=01:00:00; scontrol show job 20950197 -o",
+    "returncode": 0,
+    "timed_out": false,
+    "stdout": "JobId=20950197 JobName=grace-install-20261017-02 UserId=u3129(13129) GroupId=users(100) MCS_label=N/A Priority=925 Nice=0 Account=imet-2026-2 QOS=normal JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:11:52 TimeLimit=00:30:00 TimeMin=N/A SubmitTime=2026-10-17T21:50:24 EligibleTime=2026-10-17T21:50:24 AccrueTime=2026-10-17T21:50:24 StartTime=2026-10-17T21:50:24 EndTime=2026-10-17T22:20:24 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-17T21:50:24 Scheduler=Main Partition=apollo AllocNode:Sid=umt:3093962 ReqNodeList=(null) ExcNodeList=(null) NodeList=apollo19 BatchHost=apollo19 NumNodes=1 NumCPUs=4 NumTasks=1 CPUs/Task=4 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=4,mem=16G,node=1,billing=704 AllocTRES=cpu=4,mem=16G,node=1,billing=704 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=4 MinMemoryNode=16G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/home6/u3129/mlip-research/runs/grace-install-20261017-02/install-grace.sbatch WorkDir=/home6/u3129/mlip-research/runs/grace-install-20261017-02 StdErr=/home6/u3129/mlip-research/runs/grace-install-20261017-02/slurm-20950197.out StdIn=/dev/null StdOut=/home6/u3129/mlip-research/runs/grace-install-20261017-02/slurm-20950197.out Power= \n",
+    "stderr": "Access/permission denied for job 20950197\n"
+  }
+}
