@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "upstream_git_commit": "b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4",
+  "prefix": "/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e",
+  "job_id": "20950320",
+  "started_utc": "2026-10-17T18:33:47.958558+00:00",
+  "source_url": "https://codeload.github.com/yury-lysogorskiy/lammps/tar.gz/b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4",
+  "source_sha256": "abbab4f343f664cb935875f10a58497da6c3c6931594205eebc13b52d2f77d01",
+  "configure_command": [
+    "cmake",
+    "-S",
+    "/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/cmake",
+    "-B",
+    "/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/build",
+    "-DCMAKE_BUILD_TYPE=Release",
+    "-DBUILD_MPI=OFF",
+    "-DBUILD_OMP=ON",
+    "-DBUILD_SHARED_LIBS=ON",
+    "-DPKG_ML-PACE=ON",
+    "-DPKG_PLUGIN=ON",
+    "-DDOWNLOAD_POTENTIALS=OFF",
+    "-DTF_LIB_FILE=/home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorflow/libtensorflow_cc.so.2",
+    "-DTF_INCLUDE_PATH=/home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorflow/include",
+    "-DTF_PATH=/home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorflow",
+    "-DPACE_PYTHON_EXEC=/home6/u3129/mlip-research/envs/grace_ft_a100/bin/python",
+    "-DCMAKE_INSTALL_PREFIX=/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/install"
+  ],
+  "binary": "/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/build/lmp",
+  "binary_sha256": "24e14a24f82e93fdb8501924ef7f35c20cf07e5ab758b327ad9bcd27cf14b44d",
+  "shared_library_sha256": {
+    "liblammps.so.0": "ea5952b061ad4e99092234edcd733a31219ec72be8c75a65ffe0a46fa4a87564"
+  },
+  "finished_utc": "2026-10-17T18:36:02.157262+00:00"
+}

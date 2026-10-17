@@ -1,0 +1,26 @@
+{
+  "bytes": 162703360,
+  "local_archive": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\MLIP-research\\artifacts\\fm-run-backups\\lammps-deepmd-mpi-a33449868448.tar",
+  "members": {
+    "build/CMakeCache.txt": {
+      "bytes": 34477,
+      "sha256": "3085e9877892d9c65b495601f21e93f8d17a8af2b67fbcab904a76c339d25b04"
+    },
+    "build/liblammps.so.0": {
+      "bytes": 10009272,
+      "sha256": "dd7cf2ab1e3eef5d21917fd39aec1a20990eb25c3683d2201e0f2e623a6fb067"
+    },
+    "build/lmp": {
+      "bytes": 32040,
+      "sha256": "b8b0eef6af935a094235a21c1d098008052f3167183561eb60cfe9c9a866b28a"
+    },
+    "source.tar.gz": {
+      "bytes": 152619127,
+      "sha256": "2f429b328ec40128957ab0e27a9fbb30ec8a3c398ca1a9ca5b4786edebabd6f7"
+    }
+  },
+  "remote_archive": "/home/u3129/.local/share/mlip-research/test-artifacts/lammps-deepmd-mpi-a33449868448.tar",
+  "scope": "private source and binaries; framework runtime and MPI are separate shared dependencies recorded in run metadata",
+  "sha256": "c15b19556f05fbe7b33211990784005a330b8393c94dd98540a57fdb75fdc2a3",
+  "verified_retrieval": true
+}

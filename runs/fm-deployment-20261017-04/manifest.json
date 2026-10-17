@@ -1,0 +1,44 @@
+{
+  "authorization": "user requested true checkpoint restart and export equivalence for ASE/LAMMPS on A100; bounded private prerequisite build if needed",
+  "budget": {
+    "maximum_cpu_allocation_seconds": 1200,
+    "maximum_gpu_seconds": 300
+  },
+  "code_commit": "c3c9242e6864538d3fae8cfbd8ec6d02ea39b3ef",
+  "created_utc": "2026-10-17T19:02:09.272572+00:00",
+  "deepmd_lammps_source_revision": "a33449868448baf3c73d8eacdb2d329b13361696",
+  "grace_lammps_source_revision": "b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4",
+  "host": "umt.imm.uran.ru",
+  "input_hash": "5b80458e396ee4eafdfea358f06b6dd70bb2e5ad23e4dc197b4ae80da07a9fb3",
+  "input_sha256": {
+    "deepmd-lammps-build.json": "de7c40a45d9c525fc8522275790e3fb7360fb94ef60b967c4765cf6c48149978",
+    "dpa4-lammps.py": "15b7b79fabcf5ccd66657991281efeb472b7a2afb9c2f7fdc69507efc4cc74d8",
+    "dpa4-lammps.sbatch": "9156851d2941077870c17b9a54bd58f78cc633a59c022fca1b595c9f779d3e5b",
+    "fm-deployment.py": "8015faa214bcc06b0588266defc3c3f0563d34531a1794728a03375c738bd999",
+    "grace-lammps-build.json": "cebc532daedb85d66e924a959725276c66473af89a9022744e049fc74ee8ffe1",
+    "reuse-export.json": "1f7796c131e4877902ea9ff1d4b161128b3aac5dcf9504f3e631c88602ef7516",
+    "source-backup.json": "1c2872447a6fd5a0877d1f61b883a2817fbc0c2a9e19b1bd3661bec581a74601"
+  },
+  "job_id": "20950332",
+  "phase": "lammps",
+  "remote_run_dir": "/home6/u3129/mlip-research/runs/fm-deployment-20261017-04",
+  "requested_backends": [
+    "dpa4"
+  ],
+  "resources": {
+    "account": "imet-2026-2",
+    "cpus": 4,
+    "gpus": 1,
+    "memory_gib": 32,
+    "nodes": 1,
+    "partition": "v100",
+    "qos": "normal",
+    "tasks": 1,
+    "walltime": "00:05:00"
+  },
+  "run_id": "fm-deployment-20261017-04",
+  "runtime_status": "failed",
+  "scheduler_observation": "20950332|FAILED|1:0|00:00:07|7|4|tesla-a101\n",
+  "source_run": "runs/fm-finetune-20261017-01/assessment.json",
+  "stage": "collected"
+}

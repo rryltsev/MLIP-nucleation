@@ -1,6 +1,6 @@
 {
-  "updated_local_date": "2026-10-17",
-  "stage": "foundation_checkpoints_finetuning_validated_on_synthetic_data",
+  "updated_local_date": "2026-10-18",
+  "stage": "restart_and_a100_ase_lammps_export_validated_on_synthetic_data",
   "scientific_results": [],
   "system_selection": "open; compare Al-based alloy/nucleant candidates with alternatives",
   "github": "https://github.com/rryltsev/MLIP-nucleation",
@@ -57,7 +57,7 @@
     "select pilot material and observable through comparative literature review",
     "audit selected checkpoints pretraining DFT settings/energy reference and overlap; build converged grouped VASP pilot data",
     "validate real DFT fine-tuning and physical observables before distillation",
-    "verify training restart and exported inference equivalence",
+    "validate DFT physical observables and MD stability; revisit graph-schema export before upgrading DeepMD or deployment hardware",
     "choose shared durable artifact backend and confirm cluster retention/backup"
   ],
   "vasp_pseudopotentials": {
@@ -110,9 +110,9 @@
       "GRACE small 1-layer model passed five epochs / 20 updates on A100; checkpoint archived in Git; no foundation weights downloaded"
     ],
     "not_validated": [
-      "training restart and export/deployment equivalence",
-      "actual DFT target accuracy and physical observables",
-      "multi-GPU execution and production-size memory/performance"
+      "real DFT target accuracy and physical observables",
+      "MD stability, production performance, multi-rank execution",
+      "bitwise uninterrupted training equivalence and general export coverage beyond tested models/A100"
     ],
     "latex_preview": "built-in compiler startup failed: Windows CreateProcessAsUserW access denied (5); new report source preserved; existing VASP editor left unchanged",
     "grace_report": "reports/grace-installation-2026-10-17.tex",
@@ -157,7 +157,6 @@
       "minimal test input required explicit scheduler_params for TensorPotential 0.6.1"
     ],
     "not_validated": [
-      "restart execution and exported prediction equivalence",
       "XLA-compiled training, multi-GPU training and production-size performance",
       "GRACE runtime on K40m"
     ],
@@ -201,27 +200,66 @@
     "limits": [
       "synthetic labels only; no scientific teacher chosen",
       "exact pretraining DFT references and target overlap remain to audit",
-      "training restart and exported prediction equivalence untested",
-      "production performance, multi-GPU and K40m untested"
+      "production performance, multi-GPU and K40m untested",
+      "bitwise uninterrupted training, long MD and other export schemas/hardware untested"
     ],
     "assessment": "runs/fm-finetune-20261017-01/assessment.json",
-    "latex_preview": "built-in compiler startup failed with Windows CreateProcessAsUserW access denied (5); source retained; existing VASP editor unchanged"
+    "latex_preview": "built-in compiler startup failed with Windows CreateProcessAsUserW access denied (5); source retained; existing VASP editor unchanged",
+    "deployment_assessment": "runs/fm-deployment-20261017-07/assessment.json"
   },
   "deployment_checks": {
-    "status": "GRACE restart and ASE/LAMMPS equivalence passed; DPA4 restart passed with explicit Adam/index alignment, AOT export running",
+    "status": "passed; DPA4 and GRACE restart20->24 and ASE/LAMMPS equivalence; four synthetic configurations",
     "build_manifest": "runs/grace-lammps-build-20261017-01/manifest.json",
     "build_job_id": "20950320",
     "planned_gpu_budget": "one A100, 4 CPUs, 32 GiB, maximum 20 min; four added optimizer updates per model; four comparison structures",
     "scientific_results": false,
     "gpu_runs": [
       "runs/fm-deployment-20261017-01/manifest.json",
-      "runs/fm-deployment-20261017-02/manifest.json"
+      "runs/fm-deployment-20261017-02/manifest.json",
+      "runs/fm-deployment-20261017-03/manifest.json",
+      "runs/fm-deployment-20261017-04/manifest.json",
+      "runs/fm-deployment-20261017-05/manifest.json",
+      "runs/fm-deployment-20261017-06/manifest.json",
+      "runs/fm-deployment-20261017-07/manifest.json"
     ],
     "gpu_job_ids": [
       "20950321",
-      "20950322"
+      "20950322",
+      "20950326",
+      "20950332",
+      "20950335",
+      "20950336",
+      "20950337"
     ],
     "grace_result": "runs/fm-deployment-20261017-01/grace/result.json",
-    "deepmd_compatibility": "Native DeepMD 3.2 restart uses saved zero-based completed index 19 despite Adam count 20; checked helper advances to 20 and rebuilds LR scheduler, without changing source checkpoint or installed package"
-  }
+    "deepmd_compatibility": "Native DeepMD 3.2 restart uses saved zero-based completed index 19 despite Adam count 20; checked helper advances to 20 and rebuilds LR scheduler, without changing source checkpoint or installed package",
+    "assessment": "runs/fm-deployment-20261017-07/assessment.json",
+    "report": "reports/restart-export-validation-2026-10-17.tex",
+    "accepted_dpa4_restart": "runs/fm-deployment-20261017-02/dpa4/result.json",
+    "accepted_dpa4_ase": "runs/fm-deployment-20261017-03/dpa4/result.json",
+    "accepted_dpa4_lammps": "runs/fm-deployment-20261017-07/dpa4/result.json",
+    "accepted_grace": "runs/fm-deployment-20261017-01/grace/result.json",
+    "gpu_seconds": 606,
+    "cpu_allocation_seconds": 2934,
+    "backups": [
+      "runs/fm-deployment-20261017-01/artifact-backup.json",
+      "runs/fm-deployment-20261017-01/initialization-backup.json",
+      "runs/fm-deployment-20261017-02/artifact-backup.json",
+      "runs/fm-deployment-20261017-02/initialization-backup.json",
+      "runs/fm-deployment-20261017-03/artifact-backup.json",
+      "runs/fm-deployment-20261017-07/artifact-backup.json",
+      "runs/grace-lammps-build-20261017-01/artifact-backup.json",
+      "runs/deepmd-lammps-build-20261017-01/artifact-backup.json",
+      "runs/deepmd-mpi-lammps-build-20261017-01/artifact-backup.json"
+    ],
+    "latex_preview": "built-in compiler startup failed with Windows error5 Access denied; source retained; VASP editor unchanged",
+    "runtime_helpers": "configs/observations/2026-10-18-lammps-runtime-helpers.json",
+    "limits": [
+      "No DFT accuracy or scientific teacher validated",
+      "No bitwise uninterrupted-training equivalence or RNG continuity check",
+      "No MD stability, production performance or multi-rank validation",
+      "DPA4 PT edge_vec export schema is deprecated by installed backend; future graph migration needs retesting"
+    ]
+  },
+  "infrastructure_gpu_total_seconds": 1007
 }

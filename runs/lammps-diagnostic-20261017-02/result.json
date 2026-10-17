@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "scope": "diagnostic execution only, not model validation",
+  "job_id": "20950330",
+  "backtrace": "backtrace.txt",
+  "intel_mpi_help_exitcode": 139
+}

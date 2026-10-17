@@ -1,0 +1,39 @@
+{
+  "authorization": "user requested true checkpoint restart and export equivalence for ASE/LAMMPS on A100; bounded private prerequisite build if needed",
+  "budget": {
+    "maximum_cpu_allocation_seconds": 21600,
+    "maximum_gpu_seconds": 0
+  },
+  "code_commit": "cfa994fa96dee1c287a856e10d90411c10f1812d",
+  "created_utc": "2026-10-17T19:04:08.423072+00:00",
+  "deepmd_lammps_source_revision": "a33449868448baf3c73d8eacdb2d329b13361696",
+  "grace_lammps_source_revision": "b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4",
+  "host": "umt.imm.uran.ru",
+  "input_hash": "de6ab55cad63d553cf13c88826c1b3d3ec02f47390d73b54430808e752b1c2fd",
+  "input_sha256": {
+    "build-grace-lammps.py": "882cb536e5b7a6d7682c7d4fbbec46b298a5cfbecd7fc0417ecdf73bea79a608",
+    "build-grace-lammps.sbatch": "76b0cf6b31c2300d22220886c86d8e28234f573b6d48b035ba1d74ff1d33979b"
+  },
+  "job_id": "20950333",
+  "phase": "build-deepmd-mpi",
+  "remote_run_dir": "/home6/u3129/mlip-research/runs/deepmd-mpi-lammps-build-20261017-01",
+  "requested_backends": [
+    "dpa4"
+  ],
+  "resources": {
+    "account": "imet-2026-2",
+    "cpus": 8,
+    "gpus": 0,
+    "memory_gib": 32,
+    "nodes": 1,
+    "partition": "apollo",
+    "qos": "normal",
+    "tasks": 1,
+    "walltime": "00:45:00"
+  },
+  "run_id": "deepmd-mpi-lammps-build-20261017-01",
+  "runtime_status": "passed",
+  "scheduler_observation": "20950333|COMPLETED|0:0|00:01:46|106|8|apollo23\n",
+  "source_run": "runs/fm-finetune-20261017-01/assessment.json",
+  "stage": "collected"
+}

@@ -1,0 +1,11 @@
+{
+  "command": [
+    "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/lammps/lmp",
+    "-in",
+    "in.lammps"
+  ],
+  "exitcode": -11,
+  "seconds": 0.003017617389559746,
+  "pid": 1655061,
+  "gpu_samples": []
+}

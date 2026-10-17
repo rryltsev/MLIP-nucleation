@@ -1,0 +1,35 @@
+{
+  "authorization": "user requested true checkpoint restart and export equivalence for ASE/LAMMPS on A100; bounded private prerequisite build if needed",
+  "budget": {
+    "maximum_cpu_allocation_seconds": 21600,
+    "maximum_gpu_seconds": 0
+  },
+  "code_commit": "5a137185dad63752a1880a7e50221d1d0dcb9efd",
+  "created_utc": "2026-10-17T18:33:34.694415+00:00",
+  "grace_lammps_source_revision": "b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4",
+  "host": "umt.imm.uran.ru",
+  "input_hash": "335f84902b2a287063eace56b36a2bbc9ba1f05fed267889644e2b87ac80970d",
+  "input_sha256": {
+    "build-grace-lammps.py": "761af9b25373c32bdf53408c18fe4a47ee7cdad8602fa9e734d34f58097ced2e",
+    "build-grace-lammps.sbatch": "6bf881e708824693e93a87b4ca7742ce7312d9f550252f61e1aff459b7970f46"
+  },
+  "job_id": "20950320",
+  "phase": "build",
+  "remote_run_dir": "/home6/u3129/mlip-research/runs/grace-lammps-build-20261017-01",
+  "resources": {
+    "account": "imet-2026-2",
+    "cpus": 8,
+    "gpus": 0,
+    "memory_gib": 32,
+    "nodes": 1,
+    "partition": "apollo",
+    "qos": "normal",
+    "tasks": 1,
+    "walltime": "00:45:00"
+  },
+  "run_id": "grace-lammps-build-20261017-01",
+  "runtime_status": "passed",
+  "scheduler_observation": "20950320|COMPLETED|0:0|00:02:17|137|8|apollo23\n",
+  "source_run": "runs/fm-finetune-20261017-01/assessment.json",
+  "stage": "collected"
+}

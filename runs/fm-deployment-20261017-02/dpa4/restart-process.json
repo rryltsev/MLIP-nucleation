@@ -1,0 +1,49 @@
+{
+  "command": [
+    "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/python",
+    "/misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-02/dpa4/../restart-child.py",
+    "dpa4",
+    "--pt",
+    "train",
+    "input.json",
+    "--restart",
+    "/home6/u3129/mlip-research/runs/fm-finetune-20261017-01/dpa4/model.ckpt-20.pt"
+  ],
+  "exitcode": 0,
+  "seconds": 15.237989716231823,
+  "pid": 1619317,
+  "gpu_samples": [
+    {
+      "seconds": 6.973087364807725,
+      "process": "1619317, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 524"
+    },
+    {
+      "seconds": 8.033906247466803,
+      "process": "1619317, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 526"
+    },
+    {
+      "seconds": 9.065868129953742,
+      "process": "1619317, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 566"
+    },
+    {
+      "seconds": 10.09347783215344,
+      "process": "1619317, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 546"
+    },
+    {
+      "seconds": 11.127087268978357,
+      "process": "1619317, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 554"
+    },
+    {
+      "seconds": 12.159870216622949,
+      "process": "1619317, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 580"
+    },
+    {
+      "seconds": 13.193266216665506,
+      "process": "1619317, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 580"
+    },
+    {
+      "seconds": 14.237772496417165,
+      "process": "1619317, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 568"
+    }
+  ]
+}

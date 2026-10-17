@@ -1,0 +1,1 @@
+/tmp/slurmd/job20950330/slurm_script: line 22: 1041193 Segmentation fault      timeout 60 "$binary" -h > help-intel-mpi.txt 2>&1

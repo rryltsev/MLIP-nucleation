@@ -1,0 +1,98 @@
+{
+  "command": [
+    "/home6/u3129/mlip-research/envs/grace_ft_a100/bin/python",
+    "/misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-01/grace/../restart-child.py",
+    "grace",
+    "input.yaml",
+    "-rl"
+  ],
+  "exitcode": 0,
+  "seconds": 33.57331677339971,
+  "pid": 1611197,
+  "gpu_samples": [
+    {
+      "seconds": 8.551258923485875,
+      "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 544"
+    },
+    {
+      "seconds": 9.583447955548763,
+      "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 672"
+    },
+    {
+      "seconds": 10.615271812304854,
+      "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 672"
+    },
+    {
+      "seconds": 11.64828285947442,
+      "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 672"
+    },
+    {
+      "seconds": 12.680704336613417,
+      "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 672"
+    },
+    {
+      "seconds": 13.705256747081876,
+      "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 672"
+    },
+    {
+      "seconds": 14.735221896320581,
+      "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 682"
+    },
+    {
+      "seconds": 15.76514158397913,
+      "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 682"
+    },
+    {
+      "seconds": 16.797394244000316,
+      "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 682"
+    },
+    {
+      "seconds": 17.829792853444815,
+      "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 682"
+    },
+    {
+      "seconds": 18.862617637962103,
+      "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 682"
+    },
+    {
+      "seconds": 19.89393931813538,
+      "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 682"
+    },
+    {
+      "seconds": 20.926288083195686,
+      "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 682"
+    },
+    {
+      "seconds": 21.958195827901363,
+      "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 682"
+    },
+    {
+      "seconds": 22.99322446063161,
+      "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 686"
+    },
+    {
+      "seconds": 24.02354229427874,
+      "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 686"
+    },
+    {
+      "seconds": 25.054246874526143,
+      "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 686"
+    },
+    {
+      "seconds": 26.084299571812153,
+      "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 686"
+    },
+    {
+      "seconds": 27.114976529031992,
+      "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 686"
+    },
+    {
+      "seconds": 28.1456547845155,
+      "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 686"
+    },
+    {
+      "seconds": 29.176234675571322,
+      "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 686"
+    }
+  ]
+}

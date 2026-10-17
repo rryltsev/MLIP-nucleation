@@ -1,0 +1,182 @@
+{
+  "bytes": 119367680,
+  "local_archive": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\MLIP-research\\artifacts\\fm-run-backups\\fm-deployment-20261017-01.tar",
+  "members": {
+    "dpa4/comparison.extxyz": {
+      "bytes": 1514,
+      "sha256": "f87ae9dfcc850d10d6326f36ce8687b966c27e84bc1288761c853a30d0321452"
+    },
+    "dpa4/input.json": {
+      "bytes": 3197,
+      "sha256": "f467a23bab70b5fa22e416ce8a677dcad0203de24e5163010c462f73a2f125ef"
+    },
+    "dpa4/model.ckpt-24.pt": {
+      "bytes": 8017047,
+      "sha256": "d768683f83583f5b9fe88a0d7ad2b7c2739d179b9edc6556afc0c6711e87ae15"
+    },
+    "dpa4/result.json": {
+      "bytes": 4728,
+      "sha256": "e9da0b52632967206b62d5fda110098cf931e8b3ea8cf412cf811fb195959132"
+    },
+    "fm-deployment.py": {
+      "bytes": 13857,
+      "sha256": "930a03d995bdd2c364b617f94645633ee985f4c6da5d549e30d945b27875bfa5"
+    },
+    "fm-deployment.sbatch": {
+      "bytes": 1507,
+      "sha256": "95f655064f0026f99ff659b3b65712107474b0e7bbcd69330e7d572e138da8ed"
+    },
+    "grace-lammps-build.json": {
+      "bytes": 1788,
+      "sha256": "cebc532daedb85d66e924a959725276c66473af89a9022744e049fc74ee8ffe1"
+    },
+    "grace/comparison.extxyz": {
+      "bytes": 1514,
+      "sha256": "f87ae9dfcc850d10d6326f36ce8687b966c27e84bc1288761c853a30d0321452"
+    },
+    "grace/input.yaml": {
+      "bytes": 910,
+      "sha256": "7f40bd19d562b0a751042c4c094e55a3703d00e7d1c42556993bc20c1e408c54"
+    },
+    "grace/lammps-0/atoms.data": {
+      "bytes": 500,
+      "sha256": "ea9748e5860d007adfbaef6f235ad95e564cdaabae557daba50c7daff6009725"
+    },
+    "grace/lammps-0/forces.dump": {
+      "bytes": 729,
+      "sha256": "ae55197fb6d362553ab76332dc69e0430dc65978beaa1e697efec84b0c50cc5d"
+    },
+    "grace/lammps-0/in.lammps": {
+      "bytes": 594,
+      "sha256": "bb9c23ea89257081d9412990555b3ecf884729eb858fb86b8809e1d409be9b13"
+    },
+    "grace/lammps-0/log.lammps": {
+      "bytes": 3415,
+      "sha256": "3ae381b5235601e568bd818e9f64b866ff2584f7ed63a3dafb970498879bb78b"
+    },
+    "grace/lammps-0/prediction.txt": {
+      "bytes": 137,
+      "sha256": "d343274e31b4b8ca2bbd46879a3832c91911f5b111fc941e03f2a53baee08cb6"
+    },
+    "grace/lammps-1/atoms.data": {
+      "bytes": 500,
+      "sha256": "16b93222e96d72581d31913f413f7c8636bdc34a57fc2fcad1948b6f07ac8d5e"
+    },
+    "grace/lammps-1/forces.dump": {
+      "bytes": 714,
+      "sha256": "9ef743c0debbb1f08cfda377e3c117caa3ef3316de4202d76352c0c8ad410303"
+    },
+    "grace/lammps-1/in.lammps": {
+      "bytes": 594,
+      "sha256": "bb9c23ea89257081d9412990555b3ecf884729eb858fb86b8809e1d409be9b13"
+    },
+    "grace/lammps-1/log.lammps": {
+      "bytes": 3415,
+      "sha256": "dcdbf23126a09b93c6b8ab46150ec4cdb71542e9e23052e9d3bad264f2f5614f"
+    },
+    "grace/lammps-1/prediction.txt": {
+      "bytes": 137,
+      "sha256": "84259aabd2fdaf8530bcf754d37dda0487a658ec3e68ec756c9c45d2907a3038"
+    },
+    "grace/lammps-2/atoms.data": {
+      "bytes": 582,
+      "sha256": "b206295fce740f65fdc7c9f818b6f0c43f905769a2556f52640cb4d7053452ed"
+    },
+    "grace/lammps-2/forces.dump": {
+      "bytes": 807,
+      "sha256": "dddceb29588b0b36efb4330344081596b1e802b6aae7e1fd06fc67b45560692d"
+    },
+    "grace/lammps-2/in.lammps": {
+      "bytes": 594,
+      "sha256": "bb9c23ea89257081d9412990555b3ecf884729eb858fb86b8809e1d409be9b13"
+    },
+    "grace/lammps-2/log.lammps": {
+      "bytes": 3441,
+      "sha256": "3db425df231e39639b90eeff95431da1cf416e179a602003335a214acd0d6154"
+    },
+    "grace/lammps-2/prediction.txt": {
+      "bytes": 136,
+      "sha256": "0730ef16d06aab1bec288c04f50f1334aca20dc705540468e91fa865a4be7a74"
+    },
+    "grace/lammps-3/atoms.data": {
+      "bytes": 500,
+      "sha256": "919fa68d7ff0c64d37255eb9abe105e551b4e7bc0ecb1a7d3eb5774c236aaca8"
+    },
+    "grace/lammps-3/forces.dump": {
+      "bytes": 729,
+      "sha256": "722c97839b86dc586fea5e06862e6ecb4dcfb49297c533bd7613dbebe9e3bab6"
+    },
+    "grace/lammps-3/in.lammps": {
+      "bytes": 594,
+      "sha256": "bb9c23ea89257081d9412990555b3ecf884729eb858fb86b8809e1d409be9b13"
+    },
+    "grace/lammps-3/log.lammps": {
+      "bytes": 3417,
+      "sha256": "39038f59deabca34c5a405356cd50db6a0f166ffac74f2315af316a71c5d983c"
+    },
+    "grace/lammps-3/prediction.txt": {
+      "bytes": 136,
+      "sha256": "6ba55b1c56edf35c47a087a958a3a4d6eb9529d4bbc3533f12e7a62ecd548378"
+    },
+    "grace/result.json": {
+      "bytes": 8852,
+      "sha256": "2977a0110ce760b8bb144b7d8140809560f6fca6f5e13d9ecded6bc87c2bc8a8"
+    },
+    "grace/seed/42/checkpoints/checkpoint.data-00000-of-00001": {
+      "bytes": 82742928,
+      "sha256": "5c50c2fca0828cb8a9c15cc9b9a2d17f22fbe8a7d0d2368a52c3e926fa32a9f8"
+    },
+    "grace/seed/42/checkpoints/checkpoint.index": {
+      "bytes": 3970,
+      "sha256": "398be93658cc5faa43daae4d0ae90d056bdee1bf7fa7ed7a03999eefd2bc12e7"
+    },
+    "grace/seed/42/model.yaml": {
+      "bytes": 7733,
+      "sha256": "5f8b2c090b81c4291970543258b6f46a62ed5eacc08504ed7cf73f4c0ff233fa"
+    },
+    "grace/seed/42/saved_model/fingerprint.pb": {
+      "bytes": 96,
+      "sha256": "d8cc3c9bb8070a7900b9cc45a8274e9244674c0961106ec3ac535a30cba66385"
+    },
+    "grace/seed/42/saved_model/metadata.json": {
+      "bytes": 1285,
+      "sha256": "87befee53206847b37bd4d092a3d0deb1ce9d3fd5e8f8d46972cd7356c89ae67"
+    },
+    "grace/seed/42/saved_model/metadata.yaml": {
+      "bytes": 461,
+      "sha256": "4f5f4d3adf228da543fd58ea0a63441258526d3cf3d0c65e57fd844c1bd10336"
+    },
+    "grace/seed/42/saved_model/saved_model.pb": {
+      "bytes": 882109,
+      "sha256": "320e152160b86e9edb1ec4c5aad89d988759568a1fb14e24a81c9ae062a1aa06"
+    },
+    "grace/seed/42/saved_model/variables/variables.data-00000-of-00001": {
+      "bytes": 27588323,
+      "sha256": "942e723f5676d7311e378ccd97ccb2f1d04a48c9440f7c7949334f01caad3a2b"
+    },
+    "grace/seed/42/saved_model/variables/variables.index": {
+      "bytes": 1457,
+      "sha256": "2491c3cc507f7d19a31f1354a748f30f115f94d32baac40d15373c1304e0f898"
+    },
+    "manifest.json": {
+      "bytes": 1514,
+      "sha256": "155cf6d133ace0de2662dbde79be936e9e4575b3a0f795296021cf1ae7bd4ce8"
+    },
+    "restart-child.py": {
+      "bytes": 1423,
+      "sha256": "efd698416024f14e485627942bfacdadda8dc5fcb06bfceea8d59cbd78a4ee5b"
+    },
+    "result.json": {
+      "bytes": 14929,
+      "sha256": "ffd2cd4395dffb2320dda90efa42b9be0705861296da3d44f070269b01c17949"
+    },
+    "source-backup.json": {
+      "bytes": 7701,
+      "sha256": "1c2872447a6fd5a0877d1f61b883a2817fbc0c2a9e19b1bd3661bec581a74601"
+    }
+  },
+  "policy": "Actual private main-home archive and second workstation copy; no weights uploaded to GitHub; institutional backup/retention unconfirmed",
+  "remote_archive": "/home/u3129/.local/share/mlip-research/test-artifacts/fm-deployment-20261017-01.tar",
+  "sha256": "252a545e94890469f9ed397c51b03c863d6864d93849a7336120e51495c7c739",
+  "verified_retrieval": true
+}

@@ -1,0 +1,4 @@
+/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/libmpi_abi.so -> 
+/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/libmpi.so -> 
+/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/libmpi.so.12 -> 
+/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/libmpi_abi.so.1 -> 

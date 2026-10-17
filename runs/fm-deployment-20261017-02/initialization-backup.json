@@ -1,0 +1,18 @@
+{
+  "bytes": 8007680,
+  "local_archive": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\MLIP-research\\artifacts\\fm-run-backups\\fm-deployment-20261017-02-initialization.tar",
+  "members": {
+    "dpa4/restored/model.json": {
+      "bytes": 104,
+      "sha256": "5b1019227b663aeac2cb42e67bec55acf4d106fe699d0c2346f669eb7ab2ca71"
+    },
+    "dpa4/restored/model.pt": {
+      "bytes": 7997375,
+      "sha256": "871bbaa83c71edca301c8911464437f1a31d83dd07d8b294c62e5b20c07968ee"
+    }
+  },
+  "policy": "Actual private main-home archive and second workstation copy; no weights uploaded to GitHub; institutional backup/retention unconfirmed",
+  "remote_archive": "/home/u3129/.local/share/mlip-research/test-artifacts/fm-deployment-20261017-02-initialization.tar",
+  "sha256": "fc062a9315b7824458a10b4c65ead46a09105214ed8a0d4ef228a74ccb399e03",
+  "verified_retrieval": true
+}

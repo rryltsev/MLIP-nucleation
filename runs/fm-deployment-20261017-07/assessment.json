@@ -1,0 +1,172 @@
+{
+  "status": "passed_software_checks_only",
+  "scientific_validation": false,
+  "comparison_structures": 4,
+  "scope": "synthetic Al4; true Adam restart and same-checkpoint export equivalence; one A100, one MPI rank for DPA4; no MD steps",
+  "components": {
+    "dpa4_restart": {
+      "path": "runs/fm-deployment-20261017-02/dpa4/result.json",
+      "sha256": "eedbaf3bf126174c016db2637077fb44294f5a1d0317571c74016a85d97b880f",
+      "raw_status": "failed",
+      "accepted_checks": {
+        "restart_state": {
+          "exactly_restored_tensor_count": 413,
+          "optimizer_tensor_count": 267,
+          "restored_step": 20,
+          "counter_metadata": {
+            "step": 20,
+            "raw_checkpoint_step": 19,
+            "optimizer_iterations": 20,
+            "compatibility_step_adjustment": 1
+          },
+          "scheduler_changes": [
+            {
+              "field": "optimizer/param_groups/0/lr",
+              "checkpoint": 1e-05,
+              "restart": 1.4677992676220697e-05,
+              "reason": "LR scheduler recomputed for the extended stopping target"
+            }
+          ]
+        },
+        "final_step": 24,
+        "final_internal_step": 23
+      }
+    },
+    "dpa4_ase_export": {
+      "path": "runs/fm-deployment-20261017-03/dpa4/result.json",
+      "sha256": "c3c6d2e9970f98b304efaa0c2a817e14180f6b72e1c3ccaa1ab27f002242418b",
+      "raw_status": "failed",
+      "accepted_checks": {
+        "energy": {
+          "max_abs": 9.5367431640625e-07,
+          "atol": 0.0001,
+          "rtol": 0.0001,
+          "passed": true
+        },
+        "forces": {
+          "max_abs": 5.628913640975952e-06,
+          "atol": 0.0001,
+          "rtol": 0.0001,
+          "passed": true
+        },
+        "stress": {
+          "max_abs": 2.315969607584456e-08,
+          "atol": 1e-06,
+          "rtol": 0.0001,
+          "passed": true
+        }
+      }
+    },
+    "dpa4_lammps_export": {
+      "path": "runs/fm-deployment-20261017-07/dpa4/result.json",
+      "sha256": "b3c2225ad852312c79a06f7192d709f59521192706dda5b67b102b3b4963ac15",
+      "raw_status": "passed",
+      "accepted_checks": {
+        "energy": {
+          "max_abs": 1.1920928955078125e-06,
+          "atol": 0.0001,
+          "rtol": 0.0001,
+          "passed": true
+        },
+        "forces": {
+          "max_abs": 1.130625605583191e-05,
+          "atol": 0.0001,
+          "rtol": 0.0001,
+          "passed": true
+        },
+        "stress": {
+          "max_abs": 2.039939679676639e-08,
+          "atol": 1e-06,
+          "rtol": 0.0001,
+          "passed": true
+        }
+      }
+    },
+    "grace_restart_ase_lammps": {
+      "path": "runs/fm-deployment-20261017-01/grace/result.json",
+      "sha256": "2977a0110ce760b8bb144b7d8140809560f6fca6f5e13d9ecded6bc87c2bc8a8",
+      "raw_status": "passed",
+      "accepted_checks": {
+        "restart_state": {
+          "step": 20,
+          "epoch": 5,
+          "optimizer_iterations": 20,
+          "exactly_restored_tensor_count": 62,
+          "optimizer_tensor_count": 38
+        },
+        "final_step": 24,
+        "ase_equivalence": {
+          "energy": {
+            "max_abs": 2.6645352591003757e-15,
+            "atol": 1e-07,
+            "rtol": 1e-07,
+            "passed": true
+          },
+          "forces": {
+            "max_abs": 7.41073868937292e-15,
+            "atol": 1e-07,
+            "rtol": 1e-07,
+            "passed": true
+          },
+          "stress": {
+            "max_abs": 5.312590645178972e-17,
+            "atol": 1e-09,
+            "rtol": 1e-07,
+            "passed": true
+          }
+        },
+        "lammps_equivalence": {
+          "energy": {
+            "max_abs": 1.3322676295501878e-14,
+            "atol": 1e-07,
+            "rtol": 1e-07,
+            "passed": true
+          },
+          "forces": {
+            "max_abs": 1.099120794378905e-14,
+            "atol": 1e-07,
+            "rtol": 1e-07,
+            "passed": true
+          },
+          "stress": {
+            "max_abs": 8.831456781155378e-10,
+            "atol": 1e-09,
+            "rtol": 1e-07,
+            "passed": true
+          }
+        }
+      }
+    }
+  },
+  "restart_updates": {
+    "dpa4": [
+      20,
+      24
+    ],
+    "grace": [
+      20,
+      24
+    ]
+  },
+  "gpu_seconds_all_attempts": 606,
+  "cpu_allocation_seconds_builds_and_diagnostics": 2934,
+  "limitations": [
+    "No DFT accuracy or scientific teacher validated",
+    "No bitwise uninterrupted-training equivalence or RNG continuity check",
+    "No MD stability, production performance or multi-rank validation",
+    "DPA4 PT edge_vec export schema is deprecated by installed backend; future graph migration needs retesting"
+  ],
+  "report": "reports/restart-export-validation-2026-10-17.tex",
+  "backups": [
+    "runs/fm-deployment-20261017-01/artifact-backup.json",
+    "runs/fm-deployment-20261017-01/initialization-backup.json",
+    "runs/fm-deployment-20261017-02/artifact-backup.json",
+    "runs/fm-deployment-20261017-02/initialization-backup.json",
+    "runs/fm-deployment-20261017-03/artifact-backup.json",
+    "runs/fm-deployment-20261017-07/artifact-backup.json",
+    "runs/grace-lammps-build-20261017-01/artifact-backup.json",
+    "runs/deepmd-lammps-build-20261017-01/artifact-backup.json",
+    "runs/deepmd-mpi-lammps-build-20261017-01/artifact-backup.json"
+  ],
+  "dpa4_export_sha256": "772b5398c4edaf67859d354ca652868c5a941d3b94973ed70ad47ec684d81988"
+}

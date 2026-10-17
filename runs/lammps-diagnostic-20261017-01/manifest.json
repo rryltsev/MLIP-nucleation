@@ -1,0 +1,37 @@
+{
+  "authorization": "user requested true checkpoint restart and export equivalence for ASE/LAMMPS on A100; bounded private prerequisite build if needed",
+  "budget": {
+    "maximum_cpu_allocation_seconds": 300,
+    "maximum_gpu_seconds": 0
+  },
+  "code_commit": "5d732eeb9a023154cdf59313a83008176d2a08b3",
+  "created_utc": "2026-10-17T18:53:29.266405+00:00",
+  "grace_lammps_source_revision": "b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4",
+  "host": "umt.imm.uran.ru",
+  "input_hash": "99787f727953b894304d6bd1d7f68aab4667548e4dc7ffccf17434452f273cdd",
+  "input_sha256": {
+    "lammps-diagnostic.sbatch": "b3db6a5a0a9debf8489b30cea8c6bb93defcbddf1eeefa270f76f81ecaaa72d5"
+  },
+  "job_id": "20950328",
+  "phase": "diagnose",
+  "remote_run_dir": "/home6/u3129/mlip-research/runs/lammps-diagnostic-20261017-01",
+  "requested_backends": [
+    "dpa4"
+  ],
+  "resources": {
+    "account": "imet-2026-2",
+    "cpus": 1,
+    "gpus": 0,
+    "memory_gib": 4,
+    "nodes": 1,
+    "partition": "apollo",
+    "qos": "normal",
+    "tasks": 1,
+    "walltime": "00:05:00"
+  },
+  "run_id": "lammps-diagnostic-20261017-01",
+  "runtime_status": "passed",
+  "scheduler_observation": "20950328|COMPLETED|0:0|00:00:03|3|1|apollo19\n",
+  "source_run": "runs/fm-finetune-20261017-01/assessment.json",
+  "stage": "collected"
+}

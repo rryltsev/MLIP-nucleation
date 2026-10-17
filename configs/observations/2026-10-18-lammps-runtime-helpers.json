@@ -1,0 +1,12 @@
+{
+  "deepmd-lammps-env.sh": {
+    "remote_path": "/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/activate-lammps.sh",
+    "sha256": "bb477e6b1cf01d8fd19aba42d2a6ee628ec5470fd8622d3563a32b83614cf923",
+    "source": "scripts/hpc/deepmd-lammps-env.sh"
+  },
+  "grace-lammps-env.sh": {
+    "remote_path": "/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/activate-lammps.sh",
+    "sha256": "393f8e8b02b05fce5d7d8dbb07f7ecc59c882057fb203f46722463ac72c4ef0a",
+    "source": "scripts/hpc/grace-lammps-env.sh"
+  }
+}

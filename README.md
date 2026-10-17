@@ -2,7 +2,7 @@
 
 Research infrastructure for **Programming Crystal Nucleation through Interfacial Liquid Order in Metallic Alloys**.
 
-The source research brief is preserved in `project/brief.txt`. Scientific manuscripts and reports will be written in LaTeX. This repository currently contains configuration and operational skills, not a working simulation pipeline or scientific results.
+The source research brief is preserved in `project/brief.txt`. Scientific manuscripts and reports use LaTeX. This repository contains infrastructure, operational skills and synthetic workflow checks; a production research pipeline and scientific results remain to be developed.
 
 ## Infrastructure
 
@@ -10,7 +10,7 @@ The source research brief is preserved in `project/brief.txt`. Scientific manusc
 - Cluster: `umt.imm.uran.ru:22`, user `u3129`, scheduler Slurm.
 - Observed Slurm configuration (2026-10-17): 74 unique nodes, 1850 Slurm CPUs, 2 A100, 18 K40m and 62 M2090 GPUs, including configured devices on unavailable nodes. Partition totals overlap. GPU runtime evidence below applies only to the tested allocations.
 - DFT engine: VASP 6.6.1 CPU/MPI installed in `/home/u3129/.local/opt/vasp/6.6.1-oneapi-2025`; `vasp_std`, `vasp_gam`, `vasp_ncl` passed four selected upstream cases on `apollo31`. See `reports/vasp-installation-2026-10-17.tex`.
-- A100 DPA4/DPA4c/GRACE-1L training and K40m legacy DeepMD training passed small synthetic Slurm checks. Actual DPA4-Mini and GRACE-1L-OMAT foundation weights subsequently passed 20-update fine-tuning and parameter audits on A100. Production performance and scientific accuracy remain untested. See `reports/foundation-finetuning-2026-10-17.tex` and the earlier environment reports.
+- A100 DPA4/DPA4c/GRACE-1L training and K40m legacy DeepMD training passed small synthetic Slurm checks. Actual DPA4-Mini and GRACE-1L-OMAT weights passed fine-tuning, Adam restart to update24 and ASE/native-LAMMPS export comparisons on A100. Production performance and scientific accuracy remain untested. See `reports/restart-export-validation-2026-10-17.tex` and the earlier reports.
 
 ## Repository layout
 
@@ -110,7 +110,7 @@ GRACE job `20950274` completed on `tesla-a101` in 38 seconds: a reduced-size one
 
 `environments/grace-a100.lock.json` records the accepted environment: explicit Conda package URLs/hashes and 82 exact pip wheels with SHA-256. To rebuild on Linux x86_64, create a new prefix from `grace-a100-conda-linux-64.lock.txt`, then install `grace-a100-pip-linux-64.lock.txt` with `python -m pip install --no-deps --require-hashes -r ...`. The activation helper is prefix-specific. The original `grace-a100.proposed.yml` is retained as proposal provenance. `scripts/continue_grace_setup.py` resumes recorded setup jobs and the latest recorded GPU check; it never blindly retries a training failure.
 
-The small accepted from-scratch test checkpoint (about 100 kB) is backed up in `runs/grace-smoke-20261017-03/checkpoint/`, with the model definition and hashes alongside it. It is a software-test artifact. The subsequent foundation checks below used separately downloaded weights. Training restart and export equivalence remain to be validated.
+The small accepted from-scratch test checkpoint (about 100 kB) is backed up in `runs/grace-smoke-20261017-03/checkpoint/`, with the model definition and hashes alongside it. It is a software-test artifact. Subsequent foundation fine-tuning, restart and export checks below used separately downloaded weights.
 
 ### Pinned foundation checkpoints and actual fine-tuning
 
@@ -120,7 +120,31 @@ Diagnostic initializations are `DPA4-Mini-OMat24-v20260805` (655504 parameters, 
 
 GPU job `20950277` ran both models sequentially on one A100 in 73 seconds. Each training child exited 0 and completed 20 optimizer updates using the same explicitly synthetic Al4 diagnostic labels. Original weights were observed immediately after loading; training PIDs were observed on GPU. The Slurm job itself is `FAILED` because its original verification code did not handle checkpoint serialization changes. That failure is preserved. Read-only CPU verification `20950306` subsequently passed both models without repeating training: DPA4 restored 99/102 float state tensors exactly (only output statistics and version buffer changed initially), then updated 83 original tensors; GRACE restored all 19 model tensors exactly, then updated 18. Earlier CPU checks and diagnoses are retained.
 
-Read `reports/foundation-finetuning-2026-10-17.tex`, `runs/fm-finetune-20261017-01/assessment.json` and `runs/fm-verify-20261017-03/result.json` for the accepted interpretation. Archives of final checkpoints/data and initial loaded snapshots are stored privately in cluster main home and have verified workstation copies. These checks establish loading and optimization only; they do not validate DFT accuracy, training restart, deployment equivalence, MD stability or performance comparisons. Do not use the synthetic fine-tuned checkpoints as scientific teachers.
+Read `reports/foundation-finetuning-2026-10-17.tex`, `runs/fm-finetune-20261017-01/assessment.json` and `runs/fm-verify-20261017-03/result.json` for the original fine-tuning evidence. Archives of final checkpoints/data and initial loaded snapshots are stored privately in cluster main home and have verified workstation copies. The later restart/export checks below do not establish DFT accuracy, MD stability or performance comparisons. Do not use the synthetic fine-tuned checkpoints as scientific teachers.
+
+### Restart and ASE/LAMMPS deployment checks
+
+Both models restored weights and Adam state and continued from update20 to update24. DPA4 restored 413 state tensors (267 optimizer tensors); GRACE restored 62 (38 optimizer tensors). DeepMD 3.2.0's native restart reuses completed loop index19 despite Adam count20. The tested `scripts/hpc/restart-child.py` guards this exact discrepancy, advances the next loop start to20 and rebuilds the extended LR schedule. It does not change the installed package or source checkpoint. Use this checked path for the tested Adam setup; bitwise equivalence to uninterrupted training was not tested.
+
+Export comparisons used the same checkpoint24 in memory, through ASE and through actual native LAMMPS on one A100. Four synthetic geometries cover orthogonal/triclinic cells and periodic images. Energies, forces and tensile stresses passed tolerances fixed before submission. Maximum force differences were 5.63e-6 eV/Angstrom for DPA4 ASE, 1.13e-5 for DPA4 LAMMPS, 7.41e-15 for GRACE ASE and 1.10e-14 for GRACE LAMMPS. These are serialization/runtime comparisons, not errors against DFT.
+
+The accepted mapping is `runs/fm-deployment-20261017-07/assessment.json`; read `reports/restart-export-validation-2026-10-17.tex` for units, tolerances, failed attempts and exact source hashes. Accepted jobs are `20950321` for GRACE, `20950322` for corrected DPA4 restart, `20950326` for DPA4 export/ASE, and `20950337` for DPA4 LAMMPS. Failed aggregate statuses are preserved. All seven GPU attempts consumed 606 GPU-seconds, including compilation and GPU-observation holds; no throughput claim is made.
+
+Use the private native runtimes inside suitable Slurm allocations:
+
+```bash
+# DPA4: official LAMMPS 22Jul2025 Update2 + PLUGIN + Intel MPI 2021.17
+source /home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/activate-lammps.sh
+lmp -in in.lammps
+
+# GRACE: LAMMPS grace branch + ML-PACE + TensorFlow; serial host, GPU evaluation
+source /home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/activate-lammps.sh
+lmp -in in.lammps
+```
+
+For DPA4 the input must explicitly load the plugin before `pair_style deepmd`; see the retained `dpa4/lammps-*/in.lammps` inputs. The tested helper supplies `libtorch`, Torch's CUDA13 libraries and the real CUDA12 runtime required by the native DeepMD wheel. The old bundled pip LAMMPS binary crashes before input parsing and is not the validated executable. The PT `edge_vec` .pt2 schema is deprecated by the installed backend; validate a graph-schema migration before adopting it. Multi-rank/MPI scaling and long MD remain untested.
+
+Source archives, compiled native libraries, checkpoint24, exports and restoration snapshots have actual private cluster-main-home and workstation backups. Their SHA-256 and member manifests are in the corresponding `artifact-backup.json` and `initialization-backup.json` records. Compiler/preview startup for the LaTeX report remains blocked by Windows access error5; the source is preserved and the existing VASP editor was not changed.
 
 `configs/model_backends.json` keeps the candidate list extensible: DPA4, DPA4c, GRACE and a legacy DeepMD student path. It defines a future adapter contract; a common execution adapter is not yet implemented.
 

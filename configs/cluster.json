@@ -10,7 +10,7 @@
     "cpu_count_approx": 1000
   },
   "verified": false,
-  "inventory_status": "VASP verified; small A100 DPA4/DPA4c/GRACE-1L and K40m legacy DeepMD training passed; real FM finetuning/production validation pending",
+  "inventory_status": "VASP and small MLIP checks verified; actual DPA4/GRACE finetuning, Adam restart and single-A100 ASE/LAMMPS export equivalence passed on synthetic data; scientific/production validation pending",
   "inventory_report": "reports/cluster-inventory-2026-10-17.tex",
   "candidate_partitions": {
     "cpu_dft": "apollo",
@@ -67,7 +67,15 @@
         "dpa4",
         "dpa4c"
       ],
-      "validation": "20-step synthetic training only"
+      "validation": "20-step synthetic training only",
+      "deployment": {
+        "lammps_binary": "/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/build/lmp",
+        "environment_setup": "/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/activate-lammps.sh",
+        "mpi": "Intel MPI2021.17; one rank tested",
+        "native_cuda_runtime": "12.8",
+        "torch_cuda_runtime": "13.0",
+        "assessment": "runs/fm-deployment-20261017-07/assessment.json"
+      }
     },
     "k40m": {
       "environment": "/home/u3129/miniconda3/envs/deepmd_2210_k40",
@@ -99,7 +107,13 @@
       "lock": "environments/grace-a100.lock.json",
       "validation": "GRACE_1LAYER_latest reduced-size model; five epochs, 20 synthetic updates; finite metrics/checkpoint; actual GPU process observed; training jit_compile false",
       "validation_run": "runs/grace-smoke-20261017-03/manifest.json",
-      "report": "reports/grace-installation-2026-10-17.tex"
+      "report": "reports/grace-installation-2026-10-17.tex",
+      "deployment": {
+        "lammps_binary": "/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/build/lmp",
+        "environment_setup": "/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/activate-lammps.sh",
+        "mpi": "serial host; TensorFlow GPU",
+        "assessment": "runs/fm-deployment-20261017-07/assessment.json"
+      }
     },
     "runtime_check_work_root": "/home6/u3129/mlip-research/runs",
     "production_allocation_budget": null

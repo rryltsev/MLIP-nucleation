@@ -1,0 +1,28 @@
+{
+  "command": [
+    "/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/build/lmp",
+    "-in",
+    "in.lammps"
+  ],
+  "exitcode": 0,
+  "seconds": 5.148592177778482,
+  "pid": 1614975,
+  "gpu_samples": [
+    {
+      "seconds": 1.0528909675776958,
+      "process": "1614975, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 482"
+    },
+    {
+      "seconds": 2.0859765224158764,
+      "process": "1614975, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 482"
+    },
+    {
+      "seconds": 3.1184297669678926,
+      "process": "1614975, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 488"
+    },
+    {
+      "seconds": 4.148364041000605,
+      "process": "1614975, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 488"
+    }
+  ]
+}

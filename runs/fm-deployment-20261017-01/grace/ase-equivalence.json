@@ -1,0 +1,20 @@
+{
+  "energy": {
+    "max_abs": 2.6645352591003757e-15,
+    "atol": 1e-07,
+    "rtol": 1e-07,
+    "passed": true
+  },
+  "forces": {
+    "max_abs": 7.41073868937292e-15,
+    "atol": 1e-07,
+    "rtol": 1e-07,
+    "passed": true
+  },
+  "stress": {
+    "max_abs": 5.312590645178972e-17,
+    "atol": 1e-09,
+    "rtol": 1e-07,
+    "passed": true
+  }
+}

@@ -1,0 +1,12 @@
+LAMMPS (22 Jul 2025 - Update 2)
+  using 4 OpenMP thread(s) per MPI task
+Loaded 0 plugins from 
+Open of file /home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/deepmd/lib/libdeepmd_lmpplugin.so failed: /home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/deepmd/lib/libdeepmd_lmpplugin.so: undefined symbol: MPI_Allgather
+Reading data file ...
+  orthogonal box = (0 0 0) to (12 12 12)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  4 atoms
+  read_data CPU = 0.001 seconds
+ERROR: Unrecognized pair style 'deepmd' (src/force.cpp:275)
+Last input line: pair_style deepmd /home6/u3129/mlip-research/runs/fm-deployment-20261017-03/dpa4/exported.pt2

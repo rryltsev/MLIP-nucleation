@@ -1,0 +1,13 @@
+{
+  "status": "failed",
+  "cases": {
+    "dpa4": {
+      "status": "failed",
+      "backend": "dpa4",
+      "job_id": "20950336",
+      "scope": "LAMMPS consume-only test; no training or export",
+      "mpi_root": "/misc/umt_shared/opt/intel/oneapi/mpi/2021.17",
+      "error": "Traceback (most recent call last):\n  File \"/misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-06/dpa4/../dpa4-lammps.py\", line 27, in <module>\n    prediction=helper.lammps_predictions(binary,model,structures,plugin)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-06/dpa4/../fm-deployment.py\", line 110, in lammps_predictions\n    assert record['gpu_samples'],'LAMMPS inference process not observed on GPU'\n           ~~~~~~^^^^^^^^^^^^^^^\nAssertionError: LAMMPS inference process not observed on GPU\n"
+    }
+  }
+}

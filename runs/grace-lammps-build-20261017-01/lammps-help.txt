@@ -1,0 +1,181 @@
+2026-10-17 23:36:01.677576: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+
+Large-scale Atomic/Molecular Massively Parallel Simulator - 30 Mar 2026
+
+Usage example: /home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/build/lmp -var t 300 -echo screen -in in.alloy
+
+List of command-line options supported by this LAMMPS executable:
+
+-echo none/screen/log/both  : echoing of input script (-e)
+-help                       : print this help message (-h)
+-in none/filename           : read input from file or stdin (default) (-i)
+-kokkos on/off ...          : turn KOKKOS mode on or off (-k)
+-log none/filename          : where to send log output (-l)
+-mdi '<mdi flags>'          : pass flags to the MolSSI Driver Interface
+-mpicolor color             : which exe in a multi-exe mpirun cmd (-m)
+-cite                       : select citation reminder style (-c)
+-nocite                     : disable citation reminder (-nc)
+-nonbuf                     : disable screen/logfile buffering (-nb)
+-package style ...          : invoke package command (-pk)
+-partition size1 size2 ...  : assign partition sizes (-p)
+-plog basename              : basename for partition logs (-pl)
+-pscreen basename           : basename for partition screens (-ps)
+-restart2data rfile dfile ... : convert restart to data file (-r2data)
+-restart2dump rfile dgroup dstyle dfile ... 
+                            : convert restart to dump file (-r2dump)
+-restart2info rfile         : print info about restart rfile (-r2info)
+-reorder topology-specs     : processor reordering (-r)
+-screen none/filename       : where to send screen output (-sc)
+-skiprun                    : skip loops in run and minimize (-sr)
+-suffix gpu/intel/kk/opt/omp: style suffix to apply (-sf)
+-var varname value          : set index style variable (-v)
+
+OS: Linux "AlmaLinux 8.9 (Midnight Oncilla)" 4.18.0-193.19.1.el8_2.centos.plus.x86_64 x86_64
+
+Compiler: GNU C++ 8.5.0 20210514 (Red Hat 8.5.0-10) with OpenMP 4.5
+C++ standard: C++17
+Embedded fmt library version: 10.2.0
+Embedded JSON class version: 3.12.0
+
+MPI v1.0: LAMMPS MPI STUBS for LAMMPS version 30 Mar 2026
+
+Accelerator configuration:
+
+
+FFT information:
+
+FFT precision  = double
+FFT engine  = mpiFFT
+FFT library = KISS
+
+Active compile time flags:
+
+-DLAMMPS_GZIP
+-DLAMMPS_SMALLBIG
+sizeof(smallint): 32-bit
+sizeof(imageint): 32-bit
+sizeof(tagint):   32-bit
+sizeof(bigint):   64-bit
+
+Available compression formats:
+
+Extension: .gz     Command: gzip
+Extension: .bz2    Command: bzip2
+Extension: .zst    Command: zstd
+Extension: .xz     Command: xz
+Extension: .lzma   Command: xz
+Extension: .br     Command: brotli
+
+
+Installed packages:
+
+ML-PACE PLUGIN 
+
+List of individual style options included in this LAMMPS executable
+
+* Atom styles:
+
+atomic          body            charge          ellipsoid       hybrid          
+line            sphere          tri             
+
+* Integrate styles:
+
+respa           verlet          
+
+* Minimize styles:
+
+cg              fire/old        fire            hftn            quickmin        
+sd              
+
+* Pair styles:
+
+born            buck            buck/coul/cut   coul/cut        coul/debye      
+coul/dsf        coul/wolf       meam/c          reax            reax/c          
+mesont/tpm      awpmd/cut       grace           grace/1layer/chunk              
+grace/2layer/chunk              grace/2layer/parallel           grace/fs        
+hybrid          hybrid/omp      hybrid/molecular                
+hybrid/molecular/omp            hybrid/overlay  hybrid/overlay/omp              
+hybrid/scaled   hybrid/scaled/omp               lj/cut          lj/cut/coul/cut 
+lj/expand       morse           pace            pace/extrapolation              
+soft            table           yukawa          zbl             zero            
+
+* Bond styles:
+
+hybrid          zero            
+
+* Angle styles:
+
+hybrid          zero            
+
+* Dihedral styles:
+
+hybrid          zero            
+
+* Improper styles:
+
+hybrid          zero            
+
+* KSpace styles:
+
+zero            
+
+* Fix styles
+
+adapt           addforce        ave/atom        ave/chunk       ave/correlate   
+ave/grid        ave/histo       ave/histo/weight                ave/time        
+aveforce        balance         box/relax       deform          deposit         
+atc             ave/spatial     ave/spatial/sphere              lb/pc           
+lb/rigid/pc/sphere              nve/awpmd       poems           reax/c/bonds    
+reax/c/species  dt/reset        efield          enforce2d       evaporate       
+external        gravity         halt            heat            indent          
+langevin        lineforce       momentum        move            nph             
+nph/sphere      npt             npt/sphere      nve             nve/limit       
+nve/noforce     nve/sphere      nvt             nvt/sllod       nvt/sphere      
+pair            planeforce      press/berendsen press/langevin  print           
+property/atom   recenter        restrain        set             setforce        
+spring          spring/chunk    spring/self     store/force     store/state     
+temp/berendsen  temp/rescale    thermal/conductivity            vector          
+viscous         wall/harmonic   wall/harmonic/outside           
+wall/harmonic/returned          wall/lj1043     wall/lj126      wall/lj93       
+wall/morse      wall/reflect    wall/region     wall/table      
+
+* Compute styles:
+
+aggregate/atom  angle           angle/local     angmom/chunk    bond            
+bond/local      centro/atom     centroid/stress/atom            chunk/atom      
+chunk/spread/atom               cluster/atom    cna/atom        com             
+com/chunk       coord/atom      count/type      mesont          dihedral        
+dihedral/local  dipole          dipole/chunk    displace/atom   erotate/sphere  
+erotate/sphere/atom             fragment/atom   global/atom     group/group     
+gyration        gyration/chunk  heat/flux       improper        improper/local  
+inertia/chunk   ke              ke/atom         msd             msd/chunk       
+omega/chunk     orientorder/atom                pace            pair            
+pair/local      pe              pe/atom         pressure        property/atom   
+property/chunk  property/grid   property/local  rdf             reduce          
+reduce/chunk    reduce/region   slice           stress/atom     temp            
+temp/chunk      temp/com        temp/deform     temp/partial    temp/profile    
+temp/ramp       temp/region     temp/sphere     torque/chunk    vacf            
+vacf/chunk      vcm/chunk       
+
+* Region styles:
+
+block           cone            cylinder        ellipsoid       intersect       
+plane           prism           sphere          union           
+
+* Dump styles:
+
+atom            cfg             custom          atom/mpiio      cfg/mpiio       
+custom/mpiio    xyz/mpiio       grid            grid/vtk        local           
+xyz             
+
+* Command styles
+
+angle_write     balance         change_box      create_atoms    create_bonds    
+create_box      delete_atoms    delete_bonds    box             kim_init        
+kim_interactions                kim_param       kim_property    kim_query       
+reset_ids       reset_atom_ids  reset_mol_ids   message         server          
+dihedral_write  displace_atoms  info            minimize        plugin          
+read_data       read_dump       read_restart    replicate       rerun           
+run             set             velocity        write_coeff     write_data      
+write_dump      write_molecule  write_restart   
+

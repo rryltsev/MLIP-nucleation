@@ -1,0 +1,41 @@
+[2026-10-17 23:47:19,132] DEEPMD INFO    DeePMD version: 3.2.0
+[2026-10-17 23:47:19,154] DEEPMD INFO    Set DP_TRITON_INFER to the desired level (0-3) before freezing; the selected Triton inference kernels are baked into the .pt2 archive.
+[2026-10-17 23:47:19,736] DEEPMD INFO    Tracing the lower graph on CPU (make_fx)...
+[2026-10-17 23:47:29,298] DEEPMD INFO    Exporting the traced graph (torch.export)...
+[2026-10-17 23:47:44,619] DEEPMD INFO    Compiling the AOTInductor package for cuda:0 (the slowest freeze stage; typically several minutes)...
+/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/copyreg.py:99: FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+  return cls.__new__(cls, *args)
+/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:322: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/torch/_inductor/lowering.py:7836: UserWarning: 
+Online softmax is disabled on the fly since Inductor decides to
+split the reduction. Cut an issue to PyTorch if this is an
+important use case and you want to speed it up with online
+softmax.
+
+  warnings.warn(
+[2026-10-17 23:49:18,825] DEEPMD INFO    Compiling the parallel with-comm artifact (second AOTInductor compilation)...
+/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/copyreg.py:99: FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+  return cls.__new__(cls, *args)
+/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/torch/_inductor/lowering.py:7836: UserWarning: 
+Online softmax is disabled on the fly since Inductor decides to
+split the reduction. Cut an issue to PyTorch if this is an
+important use case and you want to speed it up with online
+softmax.
+
+  warnings.warn(
+[2026-10-17 23:51:10,899] DEEPMD INFO    Saved SeZM .pt2 to /misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-03/dpa4/exported.pt2 (device=cuda:0, output_keys=['energy', 'energy_redu', 'energy_derv_r', 'energy_derv_c', 'energy_derv_c_redu', 'mask'])
+[2026-10-17 23:51:10,900] DEEPMD INFO    Thank you for using the DPA4/SeZM model! If it benefits your research, please cite the DPA4 paper (https://arxiv.org/abs/2606.02419):
+[2026-10-17 23:51:10,900] DEEPMD INFO    
+@article{li2026dpa4,
+  title = {{DPA4}: Pushing the Accuracy-Cost Frontier of Interatomic Potentials with {EMFA} {SO(2)} Convolution},
+  author = {Li, Tiancheng and Li, Wentao and Peng, Anyang and Xue, Jianming and Zhang, Linfeng and Zhang, Duo and Wang, Han},
+  journal = {arXiv preprint arXiv:2606.02419},
+  year = {2026},
+  eprint = {2606.02419},
+  archivePrefix = {arXiv},
+  primaryClass = {physics.chem-ph},
+  doi = {10.48550/arXiv.2606.02419},
+  url = {https://arxiv.org/abs/2606.02419}
+}
+[2026-10-17 23:51:10,903] DEEPMD INFO    Detected DPA4 / SeZM checkpoint '/misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-03/dpa4/model.ckpt-24.pt'; saved AOTInductor archive to /misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-03/dpa4/exported.pt2

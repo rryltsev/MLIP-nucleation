@@ -1,0 +1,327 @@
+{
+  "status": "failed",
+  "cases": {
+    "dpa4": {
+      "status": "failed",
+      "backend": "dpa4",
+      "job_id": "20950321",
+      "host": "tesla-a101",
+      "environment": "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4",
+      "started_utc": "2026-10-17T18:37:28.924903+00:00",
+      "scope": "synthetic software restart/deployment check only",
+      "tolerances": {
+        "energy": 0.0001,
+        "forces": 0.0001,
+        "stress": 1e-06,
+        "rtol": 0.0001
+      },
+      "source_input_sha256": {
+        "dpa4/data/provenance.json": "f154feae5e5684beeb51520cde1d6be8d1999854d0fc5f027b54fd184c16160c",
+        "dpa4/data/train/set.000/box.npy": "7a9591b6f60240bbc56ea39a256a3b3f345c2a5a9d97f1e0d85404f134ab61ab",
+        "dpa4/data/train/set.000/coord.npy": "e806a44d9aa1a02a7ff1f463437aea4746d1eb0c03890bc1e2e70fc09062f548",
+        "dpa4/data/train/set.000/energy.npy": "86b34ef91677e2ac328840ef59d5c43faaa4c1cebe76af16a465abe78918cafe",
+        "dpa4/data/train/set.000/force.npy": "96f8eaef2f85b8ddd460e8f659f65ee559cf618fea00b55120908fe5fafa7387",
+        "dpa4/data/train/set.000/virial.npy": "9b0332f6cbea06a302c05300908cf3e2c3c45264afebb380a2249889d2ff2523",
+        "dpa4/data/train/type.raw": "6a33a504c8d16194914401f4f46532de96e1b63119fc5981341c6b65c6c27096",
+        "dpa4/data/train/type_map.raw": "caca9e1e8fb0757238c027c8bad3af35e724e3a84ae3acb5a3cd2db9a9966f95",
+        "dpa4/data/validation/set.000/box.npy": "50d59885445a2280f81c0167b605dbf523c5e3ad95edb5ffea263990008176c4",
+        "dpa4/data/validation/set.000/coord.npy": "9e86b74bb4c9bd6a1bb852e7604d8012daa400ec009565934626d0f104d91cc4",
+        "dpa4/data/validation/set.000/energy.npy": "ff974f6a2cd7fbfa9c7b09a071940a8b7c71d8c990bcf2fdc7ecb9e46e6ce08f",
+        "dpa4/data/validation/set.000/force.npy": "b637a8558f1d281b09b1e1ca8252b412e26b06af1ef98ae6317e97896cbdcd00",
+        "dpa4/data/validation/set.000/virial.npy": "dcff29f72b5963b5a177a05c89d0de349fc1b36e53773eb23f633e8badf70e0e",
+        "dpa4/data/validation/type.raw": "6a33a504c8d16194914401f4f46532de96e1b63119fc5981341c6b65c6c27096",
+        "dpa4/data/validation/type_map.raw": "caca9e1e8fb0757238c027c8bad3af35e724e3a84ae3acb5a3cd2db9a9966f95",
+        "dpa4/input.json": "56ddef612adb5033ea7d3360ae72516d19f22fc224ca601a16ccd816c0209e04",
+        "dpa4/model.ckpt-20.pt": "bc480fc7eb8cecc5adbd75713645403a35d533f410dd35962108c5cecb4d67d5",
+        "dpa4/result.json": "7945bc45b75bd66a71e9ed7f4b8bbdd0db7205a946aef8558a3820c2d3b7cebb"
+      },
+      "restart_process": {
+        "command": [
+          "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/python",
+          "/misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-01/dpa4/../restart-child.py",
+          "dpa4",
+          "--pt",
+          "train",
+          "input.json",
+          "--restart",
+          "/home6/u3129/mlip-research/runs/fm-finetune-20261017-01/dpa4/model.ckpt-20.pt"
+        ],
+        "exitcode": 0,
+        "seconds": 18.555447971448302,
+        "pid": 1609739,
+        "gpu_samples": [
+          {
+            "seconds": 10.32316092774272,
+            "process": "1609739, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 524"
+          },
+          {
+            "seconds": 11.356121595948935,
+            "process": "1609739, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 528"
+          },
+          {
+            "seconds": 12.388267321512103,
+            "process": "1609739, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 566"
+          },
+          {
+            "seconds": 13.421076383441687,
+            "process": "1609739, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 546"
+          },
+          {
+            "seconds": 14.455803902819753,
+            "process": "1609739, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 556"
+          },
+          {
+            "seconds": 15.48972899094224,
+            "process": "1609739, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 580"
+          },
+          {
+            "seconds": 16.522497188299894,
+            "process": "1609739, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 580"
+          },
+          {
+            "seconds": 17.555258641019464,
+            "process": "1609739, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 580"
+          }
+        ]
+      },
+      "error": "Traceback (most recent call last):\n  File \"/misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-01/dpa4/../fm-deployment.py\", line 225, in main\n    (dpa4 if BACKEND=='dpa4' else grace)(structures,result)\n  File \"/misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-01/dpa4/../fm-deployment.py\", line 151, in dpa4\n    result['restart_state']=restore_check_pt(source,ROOT/'restored/model.pt')\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-01/dpa4/../fm-deployment.py\", line 137, in restore_check_pt\n    assert json.loads(loaded.with_suffix('.json').read_text())['step']==20\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+      "finished_utc": "2026-10-17T18:37:50.289517+00:00"
+    },
+    "grace": {
+      "status": "passed",
+      "backend": "grace",
+      "job_id": "20950321",
+      "host": "tesla-a101",
+      "environment": "/home6/u3129/mlip-research/envs/grace_ft_a100",
+      "started_utc": "2026-10-17T18:37:51.330781+00:00",
+      "scope": "synthetic software restart/deployment check only",
+      "tolerances": {
+        "energy": 1e-07,
+        "forces": 1e-07,
+        "stress": 1e-09,
+        "rtol": 1e-07
+      },
+      "source_input_sha256": {
+        "grace/data/provenance.json": "4336cf379c81f4e504528036aa41e52838d19e68b9967d55c1cf38171673fffa",
+        "grace/data/train.extxyz": "7d5ca31075e5266aec4720159aa43caf9ccfca318dca5cfedd722e952a4e9de3",
+        "grace/data/train/set.000/box.npy": "7a9591b6f60240bbc56ea39a256a3b3f345c2a5a9d97f1e0d85404f134ab61ab",
+        "grace/data/train/set.000/coord.npy": "e806a44d9aa1a02a7ff1f463437aea4746d1eb0c03890bc1e2e70fc09062f548",
+        "grace/data/train/set.000/energy.npy": "86b34ef91677e2ac328840ef59d5c43faaa4c1cebe76af16a465abe78918cafe",
+        "grace/data/train/set.000/force.npy": "96f8eaef2f85b8ddd460e8f659f65ee559cf618fea00b55120908fe5fafa7387",
+        "grace/data/train/set.000/virial.npy": "9b0332f6cbea06a302c05300908cf3e2c3c45264afebb380a2249889d2ff2523",
+        "grace/data/train/type.raw": "6a33a504c8d16194914401f4f46532de96e1b63119fc5981341c6b65c6c27096",
+        "grace/data/train/type_map.raw": "caca9e1e8fb0757238c027c8bad3af35e724e3a84ae3acb5a3cd2db9a9966f95",
+        "grace/data/validation.extxyz": "d0453b6c11256c03c26e6b05d7fb0f4937989a5a7fee22e043e3aee211612e8b",
+        "grace/data/validation/set.000/box.npy": "50d59885445a2280f81c0167b605dbf523c5e3ad95edb5ffea263990008176c4",
+        "grace/data/validation/set.000/coord.npy": "9e86b74bb4c9bd6a1bb852e7604d8012daa400ec009565934626d0f104d91cc4",
+        "grace/data/validation/set.000/energy.npy": "ff974f6a2cd7fbfa9c7b09a071940a8b7c71d8c990bcf2fdc7ecb9e46e6ce08f",
+        "grace/data/validation/set.000/force.npy": "b637a8558f1d281b09b1e1ca8252b412e26b06af1ef98ae6317e97896cbdcd00",
+        "grace/data/validation/set.000/virial.npy": "dcff29f72b5963b5a177a05c89d0de349fc1b36e53773eb23f633e8badf70e0e",
+        "grace/data/validation/type.raw": "6a33a504c8d16194914401f4f46532de96e1b63119fc5981341c6b65c6c27096",
+        "grace/data/validation/type_map.raw": "caca9e1e8fb0757238c027c8bad3af35e724e3a84ae3acb5a3cd2db9a9966f95",
+        "grace/input.yaml": "e9af012370b824b2c2ff654163e9faa238db5e364b2b81a3bdd229ff7119f1bd",
+        "grace/result.json": "e0b4d1b904c25ccd69ad850b4c155437c04fe8e7b057546928e46b212297734e",
+        "grace/seed/42/checkpoints/checkpoint.data-00000-of-00001": "1b90ab95d56958fe6850b223bfaba006a101057a3deca982838f8e4ce54d8a6c",
+        "grace/seed/42/checkpoints/checkpoint.index": "5d1d64ca68a571fe383db961554485035ec63c56ed26c7c8ff5b9598699585c0",
+        "grace/seed/42/model.yaml": "5ff9d4e9db61dab14a9e6b924c33bedc651d17c24e1635d8906fe7fed993ee73"
+      },
+      "restart_process": {
+        "command": [
+          "/home6/u3129/mlip-research/envs/grace_ft_a100/bin/python",
+          "/misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-01/grace/../restart-child.py",
+          "grace",
+          "input.yaml",
+          "-rl"
+        ],
+        "exitcode": 0,
+        "seconds": 33.57331677339971,
+        "pid": 1611197,
+        "gpu_samples": [
+          {
+            "seconds": 8.551258923485875,
+            "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 544"
+          },
+          {
+            "seconds": 9.583447955548763,
+            "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 672"
+          },
+          {
+            "seconds": 10.615271812304854,
+            "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 672"
+          },
+          {
+            "seconds": 11.64828285947442,
+            "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 672"
+          },
+          {
+            "seconds": 12.680704336613417,
+            "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 672"
+          },
+          {
+            "seconds": 13.705256747081876,
+            "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 672"
+          },
+          {
+            "seconds": 14.735221896320581,
+            "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 682"
+          },
+          {
+            "seconds": 15.76514158397913,
+            "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 682"
+          },
+          {
+            "seconds": 16.797394244000316,
+            "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 682"
+          },
+          {
+            "seconds": 17.829792853444815,
+            "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 682"
+          },
+          {
+            "seconds": 18.862617637962103,
+            "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 682"
+          },
+          {
+            "seconds": 19.89393931813538,
+            "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 682"
+          },
+          {
+            "seconds": 20.926288083195686,
+            "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 682"
+          },
+          {
+            "seconds": 21.958195827901363,
+            "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 682"
+          },
+          {
+            "seconds": 22.99322446063161,
+            "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 686"
+          },
+          {
+            "seconds": 24.02354229427874,
+            "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 686"
+          },
+          {
+            "seconds": 25.054246874526143,
+            "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 686"
+          },
+          {
+            "seconds": 26.084299571812153,
+            "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 686"
+          },
+          {
+            "seconds": 27.114976529031992,
+            "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 686"
+          },
+          {
+            "seconds": 28.1456547845155,
+            "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 686"
+          },
+          {
+            "seconds": 29.176234675571322,
+            "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 686"
+          }
+        ]
+      },
+      "restart_state": {
+        "step": 20,
+        "epoch": 5,
+        "optimizer_iterations": 20,
+        "exactly_restored_tensor_count": 62,
+        "optimizer_tensor_count": 38
+      },
+      "final_step": 24,
+      "export_process": {
+        "command": [
+          "/home6/u3129/mlip-research/envs/grace_ft_a100/bin/gracemaker",
+          "input.yaml",
+          "-rl",
+          "-s"
+        ],
+        "exitcode": 0,
+        "seconds": 12.413329979404807,
+        "pid": 1613368,
+        "gpu_samples": [
+          {
+            "seconds": 4.1465200167149305,
+            "process": "1613368, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 418"
+          },
+          {
+            "seconds": 5.1801531333476305,
+            "process": "1613368, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 544"
+          },
+          {
+            "seconds": 6.210404893383384,
+            "process": "1613368, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 544"
+          },
+          {
+            "seconds": 7.2408491615206,
+            "process": "1613368, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 544"
+          },
+          {
+            "seconds": 8.269887203350663,
+            "process": "1613368, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 544"
+          },
+          {
+            "seconds": 9.301635382696986,
+            "process": "1613368, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 544"
+          },
+          {
+            "seconds": 10.332393700256944,
+            "process": "1613368, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 544"
+          }
+        ]
+      },
+      "ase_equivalence": {
+        "energy": {
+          "max_abs": 2.6645352591003757e-15,
+          "atol": 1e-07,
+          "rtol": 1e-07,
+          "passed": true
+        },
+        "forces": {
+          "max_abs": 7.41073868937292e-15,
+          "atol": 1e-07,
+          "rtol": 1e-07,
+          "passed": true
+        },
+        "stress": {
+          "max_abs": 5.312590645178972e-17,
+          "atol": 1e-09,
+          "rtol": 1e-07,
+          "passed": true
+        }
+      },
+      "lammps_binary_sha256": "24e14a24f82e93fdb8501924ef7f35c20cf07e5ab758b327ad9bcd27cf14b44d",
+      "lammps_equivalence": {
+        "energy": {
+          "max_abs": 1.3322676295501878e-14,
+          "atol": 1e-07,
+          "rtol": 1e-07,
+          "passed": true
+        },
+        "forces": {
+          "max_abs": 1.099120794378905e-14,
+          "atol": 1e-07,
+          "rtol": 1e-07,
+          "passed": true
+        },
+        "stress": {
+          "max_abs": 8.831456781155378e-10,
+          "atol": 1e-09,
+          "rtol": 1e-07,
+          "passed": true
+        }
+      },
+      "export_sha256": {
+        "metadata.json": "87befee53206847b37bd4d092a3d0deb1ce9d3fd5e8f8d46972cd7356c89ae67",
+        "metadata.yaml": "4f5f4d3adf228da543fd58ea0a63441258526d3cf3d0c65e57fd844c1bd10336",
+        "saved_model.pb": "320e152160b86e9edb1ec4c5aad89d988759568a1fb14e24a81c9ae062a1aa06",
+        "fingerprint.pb": "d8cc3c9bb8070a7900b9cc45a8274e9244674c0961106ec3ac535a30cba66385",
+        "variables/variables.data-00000-of-00001": "942e723f5676d7311e378ccd97ccb2f1d04a48c9440f7c7949334f01caad3a2b",
+        "variables/variables.index": "2491c3cc507f7d19a31f1354a748f30f115f94d32baac40d15373c1304e0f898"
+      },
+      "finished_utc": "2026-10-17T18:39:16.724028+00:00"
+    }
+  }
+}

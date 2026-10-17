@@ -48,9 +48,11 @@
         "runs/fm-verify-20261017-03/manifest.json"
       ],
       "preferred_environment": "lammps_deepmd_dpa4",
-      "runtime_observation": "Actual pinned foundation weights loaded and fine-tuned for 20 steps on A100 synthetic labels; original model parameters verified before and after training; production accuracy/restart/export remain untested",
+      "runtime_observation": "Pinned FM synthetic finetuning, exact model/Adam restoration, continuation20->24, ASE and native LAMMPS energy/force/stress equivalence passed on one A100; no scientific accuracy or MD stability claim",
       "checkpoint_role": "software diagnostic only; scientific teacher selection open",
-      "finetuning_report": "reports/foundation-finetuning-2026-10-17.tex"
+      "finetuning_report": "reports/foundation-finetuning-2026-10-17.tex",
+      "deployment_assessment": "runs/fm-deployment-20261017-07/assessment.json",
+      "restart_export_report": "reports/restart-export-validation-2026-10-17.tex"
     },
     {
       "id": "dpa4c",
@@ -89,7 +91,7 @@
       "environment_candidates": [
         "/home6/u3129/mlip-research/envs/grace_ft_a100"
       ],
-      "runtime_observation": "Actual pinned foundation weights loaded and fine-tuned for 20 steps on A100 synthetic labels; original model parameters verified before and after training; production accuracy/restart/export remain untested",
+      "runtime_observation": "Pinned FM synthetic finetuning, exact model/Adam restoration, continuation20->24, ASE and native LAMMPS energy/force/stress equivalence passed on one A100; no scientific accuracy or MD stability claim",
       "dependency_observation": "isolated environment; packaged CUDA nvvm/libdevice and ptxas configured by activation helper; no existing DeepMD environment modified",
       "checkpoint_requirement": "fine-tuning checkpoint with model.yaml and checkpoint files; inference-only SavedModel is insufficient",
       "documentation": "https://gracemaker.readthedocs.io/en/latest/gracemaker/foundation/",
@@ -104,7 +106,9 @@
       "report": "reports/grace-installation-2026-10-17.tex",
       "original_specification": "environments/grace-a100.proposed.yml",
       "checkpoint_role": "software diagnostic only; scientific teacher selection open",
-      "finetuning_report": "reports/foundation-finetuning-2026-10-17.tex"
+      "finetuning_report": "reports/foundation-finetuning-2026-10-17.tex",
+      "deployment_assessment": "runs/fm-deployment-20261017-07/assessment.json",
+      "restart_export_report": "reports/restart-export-validation-2026-10-17.tex"
     },
     {
       "id": "deepmd-se-e2-a-legacy",

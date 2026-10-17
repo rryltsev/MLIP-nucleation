@@ -1,0 +1,11 @@
+{
+  "command": [
+    "/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/build/lmp",
+    "-in",
+    "in.lammps"
+  ],
+  "exitcode": 1,
+  "seconds": 3.1875930931419134,
+  "pid": 1702657,
+  "gpu_samples": []
+}

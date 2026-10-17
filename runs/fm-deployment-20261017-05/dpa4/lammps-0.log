@@ -1,0 +1,52 @@
+LAMMPS (22 Jul 2025 - Update 2)
+  using 4 OpenMP thread(s) per MPI task
+Loaded 0 plugins from 
+DeePMD-kit: Cannot find libcudart.so.12
+DeePMD-kit: Error message: libcudart.so.12: cannot open shared object file: No such file or directory
+implib-gen: libcudart.so.12: failed to load library 'libcudart.so.12' via callback 'DP_cudart_dlopen'
+implib-gen: libcudart.so.12: failed to resolve symbol '__cudaRegisterFatBinary', library failed to load
+implib-gen: libcudart.so.12: failed to load library 'libcudart.so.12' via callback 'DP_cudart_dlopen'
+implib-gen: libcudart.so.12: failed to resolve symbol '__cudaRegisterFunction', library failed to load
+implib-gen: libcudart.so.12: failed to load library 'libcudart.so.12' via callback 'DP_cudart_dlopen'
+implib-gen: libcudart.so.12: failed to resolve symbol '__cudaRegisterFatBinaryEnd', library failed to load
+implib-gen: libcudart.so.12: failed to load library 'libcudart.so.12' via callback 'DP_cudart_dlopen'
+implib-gen: libcudart.so.12: failed to resolve symbol '__cudaRegisterVar', library failed to load
+Loading plugin: deepmd pair style v3.2.0 by Han Wang
+Loading plugin: deepspin pair style v3.2.0 by Duo Zhang
+Loading plugin: compute deeptensor/atom v3.2.0 by Han Wang
+Loading plugin: compute deepmd/fparam/dedn v3.2.0 by Li Fu
+Loading plugin: fix dplr v3.2.0 by Han Wang
+Loading plugin: kspace pppm/dplr v3.2.0 by Han Wang
+Reading data file ...
+  orthogonal box = (0 0 0) to (12 12 12)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  4 atoms
+  read_data CPU = 0.001 seconds
+DeePMD-kit WARNING: Environmental variable DP_INTRA_OP_PARALLELISM_THREADS is not set. Tune DP_INTRA_OP_PARALLELISM_THREADS for the best performance. See https://deepmd.rtfd.io/parallelism/ for more information.
+DeePMD-kit WARNING: Environmental variable DP_INTER_OP_PARALLELISM_THREADS is not set. Tune DP_INTER_OP_PARALLELISM_THREADS for the best performance. See https://deepmd.rtfd.io/parallelism/ for more information.
+Summary of lammps deepmd module ...
+  >>> Info of deepmd-kit:
+  installed to:       /tmp/tmp5ljxgvlu/wheel/platlib
+  source:             v3.2.0
+  source branch:      HEAD
+  source commit:      8cfd46e3
+  source commit at:   2026-08-19 09:50:00 +0000
+  support model ver.: 1.1 
+  build variant:      cuda
+  set tf intra_op_parallelism_threads: 0
+  set tf inter_op_parallelism_threads: 0
+  >>> Info of lammps module:
+  use deepmd-kit at:  /tmp/tmp5ljxgvlu/wheel/platlib
+  source:             v3.2.0
+  source branch:      HEAD
+  source commit:      8cfd46e3
+  source commit at:   2026-08-19 09:50:00 +0000
+  build with inc:     /tmp/build-env-vl3prgbs/lib/python3.11/site-packages/torch/include;/tmp/build-env-vl3prgbs/lib/python3.11/site-packages/torch/include/torch/csrc/api/include
+  build with lib:     /tmp/build-env-vl3prgbs/lib/python3.11/site-packages/tensorflow;/tmp/build-env-vl3prgbs/lib/python3.11/site-packages/torch/lib
+ERROR on proc 0: DeePMD-kit C API Error: DeePMD-kit Error: Unable to load PyTorch Exportable backend plugin (libdeepmd_backend_ptexpt.so). Set DP_BACKEND_PLUGIN_PATH or install the plugin next to libdeepmd_cc. Tried:
+  /home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/deepmd/lib/libdeepmd_backend_ptexpt.so: libtorch.so: cannot open shared object file: No such file or directory
+  libdeepmd_backend_ptexpt.so: libtorch.so: cannot open shared object file: No such file or directory (/project/source/lmp/pair_deepmd.cpp:670)
+implib-gen: libcudart.so.12: failed to load library 'libcudart.so.12' via callback 'DP_cudart_dlopen'
+implib-gen: libcudart.so.12: failed to resolve symbol '__cudaUnregisterFatBinary', library failed to load
+Abort(1) on node 0 (rank 0 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 0

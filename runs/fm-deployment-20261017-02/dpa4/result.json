@@ -1,0 +1,107 @@
+{
+  "status": "failed",
+  "backend": "dpa4",
+  "job_id": "20950322",
+  "host": "tesla-a101",
+  "environment": "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4",
+  "started_utc": "2026-10-17T18:40:17.463106+00:00",
+  "scope": "synthetic software restart/deployment check only",
+  "tolerances": {
+    "energy": 0.0001,
+    "forces": 0.0001,
+    "stress": 1e-06,
+    "rtol": 0.0001
+  },
+  "source_input_sha256": {
+    "dpa4/data/provenance.json": "f154feae5e5684beeb51520cde1d6be8d1999854d0fc5f027b54fd184c16160c",
+    "dpa4/data/train/set.000/box.npy": "7a9591b6f60240bbc56ea39a256a3b3f345c2a5a9d97f1e0d85404f134ab61ab",
+    "dpa4/data/train/set.000/coord.npy": "e806a44d9aa1a02a7ff1f463437aea4746d1eb0c03890bc1e2e70fc09062f548",
+    "dpa4/data/train/set.000/energy.npy": "86b34ef91677e2ac328840ef59d5c43faaa4c1cebe76af16a465abe78918cafe",
+    "dpa4/data/train/set.000/force.npy": "96f8eaef2f85b8ddd460e8f659f65ee559cf618fea00b55120908fe5fafa7387",
+    "dpa4/data/train/set.000/virial.npy": "9b0332f6cbea06a302c05300908cf3e2c3c45264afebb380a2249889d2ff2523",
+    "dpa4/data/train/type.raw": "6a33a504c8d16194914401f4f46532de96e1b63119fc5981341c6b65c6c27096",
+    "dpa4/data/train/type_map.raw": "caca9e1e8fb0757238c027c8bad3af35e724e3a84ae3acb5a3cd2db9a9966f95",
+    "dpa4/data/validation/set.000/box.npy": "50d59885445a2280f81c0167b605dbf523c5e3ad95edb5ffea263990008176c4",
+    "dpa4/data/validation/set.000/coord.npy": "9e86b74bb4c9bd6a1bb852e7604d8012daa400ec009565934626d0f104d91cc4",
+    "dpa4/data/validation/set.000/energy.npy": "ff974f6a2cd7fbfa9c7b09a071940a8b7c71d8c990bcf2fdc7ecb9e46e6ce08f",
+    "dpa4/data/validation/set.000/force.npy": "b637a8558f1d281b09b1e1ca8252b412e26b06af1ef98ae6317e97896cbdcd00",
+    "dpa4/data/validation/set.000/virial.npy": "dcff29f72b5963b5a177a05c89d0de349fc1b36e53773eb23f633e8badf70e0e",
+    "dpa4/data/validation/type.raw": "6a33a504c8d16194914401f4f46532de96e1b63119fc5981341c6b65c6c27096",
+    "dpa4/data/validation/type_map.raw": "caca9e1e8fb0757238c027c8bad3af35e724e3a84ae3acb5a3cd2db9a9966f95",
+    "dpa4/input.json": "56ddef612adb5033ea7d3360ae72516d19f22fc224ca601a16ccd816c0209e04",
+    "dpa4/model.ckpt-20.pt": "bc480fc7eb8cecc5adbd75713645403a35d533f410dd35962108c5cecb4d67d5",
+    "dpa4/result.json": "7945bc45b75bd66a71e9ed7f4b8bbdd0db7205a946aef8558a3820c2d3b7cebb"
+  },
+  "restart_process": {
+    "command": [
+      "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-02/dpa4/../restart-child.py",
+      "dpa4",
+      "--pt",
+      "train",
+      "input.json",
+      "--restart",
+      "/home6/u3129/mlip-research/runs/fm-finetune-20261017-01/dpa4/model.ckpt-20.pt"
+    ],
+    "exitcode": 0,
+    "seconds": 15.237989716231823,
+    "pid": 1619317,
+    "gpu_samples": [
+      {
+        "seconds": 6.973087364807725,
+        "process": "1619317, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 524"
+      },
+      {
+        "seconds": 8.033906247466803,
+        "process": "1619317, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 526"
+      },
+      {
+        "seconds": 9.065868129953742,
+        "process": "1619317, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 566"
+      },
+      {
+        "seconds": 10.09347783215344,
+        "process": "1619317, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 546"
+      },
+      {
+        "seconds": 11.127087268978357,
+        "process": "1619317, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 554"
+      },
+      {
+        "seconds": 12.159870216622949,
+        "process": "1619317, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 580"
+      },
+      {
+        "seconds": 13.193266216665506,
+        "process": "1619317, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 580"
+      },
+      {
+        "seconds": 14.237772496417165,
+        "process": "1619317, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 568"
+      }
+    ]
+  },
+  "restart_state": {
+    "exactly_restored_tensor_count": 413,
+    "optimizer_tensor_count": 267,
+    "restored_step": 20,
+    "counter_metadata": {
+      "step": 20,
+      "raw_checkpoint_step": 19,
+      "optimizer_iterations": 20,
+      "compatibility_step_adjustment": 1
+    },
+    "scheduler_changes": [
+      {
+        "field": "optimizer/param_groups/0/lr",
+        "checkpoint": 1e-05,
+        "restart": 1.4677992676220697e-05,
+        "reason": "LR scheduler recomputed for the extended stopping target"
+      }
+    ]
+  },
+  "final_internal_step": 23,
+  "final_step": 24,
+  "error": "Traceback (most recent call last):\n  File \"/misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-02/dpa4/../fm-deployment.py\", line 228, in main\n    (dpa4 if BACKEND=='dpa4' else grace)(structures,result)\n  File \"/misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-02/dpa4/../fm-deployment.py\", line 164, in dpa4\n    result['export_process']=execute([str(Path(sys.prefix)/'bin/dp'),'--pt','freeze','-c',str(final),'-o',str(ROOT/'exported')],'export',seconds=900)\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-02/dpa4/../fm-deployment.py\", line 39, in execute\n    if check:assert proc.returncode==0,(ROOT/(name+'.log')).read_text(errors='replace')[-5000:]\n                    ^^^^^^^^^^^^^^^^^^\nAssertionError: ^^\n  File \"/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/torch/_inductor/__init__.py\", line 310, in aot_compile\n    return compile_fx_aot(\n           ^^^^^^^^^^^^^^^\n  File \"/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/torch/_inductor/compile_fx.py\", line 2048, in compile_fx_aot\n    compiled_artifacts = compile_fx(\n                         ^^^^^^^^^^^\n  File \"/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/torch/_inductor/compile_fx.py\", line 2527, in compile_fx\n    return compile_fx(\n           ^^^^^^^^^^^\n  File \"/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/torch/_inductor/compile_fx.py\", line 2566, in compile_fx\n    return _maybe_wrap_and_compile_fx_main(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/torch/_inductor/compile_fx.py\", line 2655, in _maybe_wrap_and_compile_fx_main\n    return _compile_fx_main(\n           ^^^^^^^^^^^^^^^^^\n  File \"/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/torch/_inductor/compile_fx.py\", line 2838, in _compile_fx_main\n    return inference_compiler(unlifted_gm, example_inputs_)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/torch/_functorch/_aot_autograd/schemas.py\", line 1394, in __call__\n    output_code = self.compiler_fn(gm, example_inputs)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/torch/_inductor/compile_fx.py\", line 2719, in fw_compiler_base\n    return compile_fx_forward(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/torch/_inductor/compile_fx.py\", line 2390, in compile_fx_forward\n    return inner_compile(\n           ^^^^^^^^^^^^^^\n  File \"/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/contextlib.py\", line 81, in inner\n    return func(*args, **kwds)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/torch/_inductor/compile_fx.py\", line 826, in compile_fx_inner\n    return wrap_compiler_debug(_compile_fx_inner, compiler_name=\"inductor\")(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/torch/_dynamo/repro/after_aot.py\", line 273, in debug_wrapper\n    inner_compiled_fn = compiler_fn(gm, example_inputs)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/torch/_inductor/compile_fx.py\", line 1026, in _compile_fx_inner\n    raise InductorError(e, currentframe()).with_traceback(\n  File \"/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/torch/_inductor/compile_fx.py\", line 1022, in _compile_fx_inner\n    mb_compiled_graph = fx_codegen_and_compile(\n                        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/torch/_inductor/compile_fx.py\", line 1798, in fx_codegen_and_compile\n    return scheme.codegen_and_compile(gm, example_inputs, inputs_to_check, graph_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/torch/_inductor/compile_fx.py\", line 1552, in codegen_and_compile\n    compiled_fn = AotCodeCompiler.compile(\n                  ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/torch/_inductor/codecache.py\", line 1840, in compile\n    BuildOption=CppTorchDeviceOptions(\n                ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/torch/_inductor/cpp_builder.py\", line 1815, in __init__\n    ) = get_cpp_torch_device_options(\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/torch/_inductor/cpp_builder.py\", line 1679, in get_cpp_torch_device_options\n    include_dirs = cpp_extension.include_paths(\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/torch/utils/cpp_extension.py\", line 1633, in include_paths\n    cuda_home_include = _join_cuda_home('include')\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/torch/utils/cpp_extension.py\", line 3182, in _join_cuda_home\n    raise OSError('CUDA_HOME environment variable is not set. '\ntorch._inductor.exc.InductorError: OSError: CUDA_HOME environment variable is not set. Please set it to your CUDA install root.\n\n",
+  "finished_utc": "2026-10-17T18:42:53.523738+00:00"
+}

@@ -1,0 +1,41 @@
+{
+  "command": [
+    "/home6/u3129/mlip-research/envs/grace_ft_a100/bin/gracemaker",
+    "input.yaml",
+    "-rl",
+    "-s"
+  ],
+  "exitcode": 0,
+  "seconds": 12.413329979404807,
+  "pid": 1613368,
+  "gpu_samples": [
+    {
+      "seconds": 4.1465200167149305,
+      "process": "1613368, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 418"
+    },
+    {
+      "seconds": 5.1801531333476305,
+      "process": "1613368, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 544"
+    },
+    {
+      "seconds": 6.210404893383384,
+      "process": "1613368, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 544"
+    },
+    {
+      "seconds": 7.2408491615206,
+      "process": "1613368, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 544"
+    },
+    {
+      "seconds": 8.269887203350663,
+      "process": "1613368, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 544"
+    },
+    {
+      "seconds": 9.301635382696986,
+      "process": "1613368, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 544"
+    },
+    {
+      "seconds": 10.332393700256944,
+      "process": "1613368, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 544"
+    }
+  ]
+}

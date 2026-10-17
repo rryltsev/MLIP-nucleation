@@ -161,6 +161,7 @@
   "software_validation": {
     "status": "passed on A100, 20 optimizer updates, synthetic labels only",
     "assessment": "runs/fm-finetune-20261017-01/assessment.json",
-    "scientific_teacher": false
+    "scientific_teacher": false,
+    "restart_export_assessment": "runs/fm-deployment-20261017-07/assessment.json"
   }
 }

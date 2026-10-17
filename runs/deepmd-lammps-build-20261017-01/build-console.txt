@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "upstream_git_commit": "a33449868448baf3c73d8eacdb2d329b13361696",
+  "prefix": "/home6/u3129/mlip-research/software/lammps-deepmd-a33449868448",
+  "job_id": "20950331",
+  "started_utc": "2026-10-17T18:58:44.915459+00:00",
+  "source_url": "https://codeload.github.com/lammps/lammps/tar.gz/a33449868448baf3c73d8eacdb2d329b13361696",
+  "source_sha256": "2f429b328ec40128957ab0e27a9fbb30ec8a3c398ca1a9ca5b4786edebabd6f7",
+  "configure_command": [
+    "cmake",
+    "-S",
+    "/home6/u3129/mlip-research/software/lammps-deepmd-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/cmake",
+    "-B",
+    "/home6/u3129/mlip-research/software/lammps-deepmd-a33449868448/build",
+    "-DCMAKE_BUILD_TYPE=Release",
+    "-DBUILD_MPI=OFF",
+    "-DBUILD_OMP=ON",
+    "-DBUILD_SHARED_LIBS=ON",
+    "-DPKG_PLUGIN=ON",
+    "-DDOWNLOAD_POTENTIALS=OFF",
+    "-DCMAKE_CXX_COMPILER=/opt/rh/gcc-toolset-12/root/usr/bin/g++",
+    "-DCMAKE_C_COMPILER=/opt/rh/gcc-toolset-12/root/usr/bin/gcc"
+  ],
+  "binary": "/home6/u3129/mlip-research/software/lammps-deepmd-a33449868448/build/lmp",
+  "binary_sha256": "249acca6e6403faa722d8f944d48e95f02656978e2b46cb669bd65fe6c3bc03c",
+  "shared_library_sha256": {
+    "liblammps.so.0": "413bbf4c7dc3d6f17bdeb6cfb067fedf0b35c0603075d61731ed5b4ad020295f"
+  },
+  "finished_utc": "2026-10-17T19:00:45.224752+00:00"
+}

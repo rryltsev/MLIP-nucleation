@@ -1,0 +1,70 @@
+To get the best performance, it is recommended to adjust the number of threads by setting the environment variables OMP_NUM_THREADS, DP_INTRA_OP_PARALLELISM_THREADS, and DP_INTER_OP_PARALLELISM_THREADS. See https://deepmd.rtfd.io/parallelism/ for more information.
+[2026-10-17 23:40:26,748] DEEPMD INFO    DeePMD version: 3.2.0
+[2026-10-17 23:40:26,748] DEEPMD INFO    Configuration path: input.json
+[2026-10-17 23:40:26,748] DEEPMD INFO     _____               _____   __  __  _____           _     _  _   
+[2026-10-17 23:40:26,748] DEEPMD INFO    |  __ \             |  __ \ |  \/  ||  __ \         | |   (_)| |  
+[2026-10-17 23:40:26,748] DEEPMD INFO    | |  | |  ___   ___ | |__) || \  / || |  | | ______ | | __ _ | |_ 
+[2026-10-17 23:40:26,748] DEEPMD INFO    | |  | | / _ \ / _ \|  ___/ | |\/| || |  | ||______|| |/ /| || __|
+[2026-10-17 23:40:26,748] DEEPMD INFO    | |__| ||  __/|  __/| |     | |  | || |__| |        |   < | || |_ 
+[2026-10-17 23:40:26,748] DEEPMD INFO    |_____/  \___| \___||_|     |_|  |_||_____/         |_|\_\|_| \__|
+[2026-10-17 23:40:26,748] DEEPMD INFO    Please read and cite:
+[2026-10-17 23:40:26,748] DEEPMD INFO    Wang, Zhang, Han and E, Comput.Phys.Comm. 228, 178-184 (2018)
+[2026-10-17 23:40:26,748] DEEPMD INFO    Zeng et al, J. Chem. Phys., 159, 054801 (2023)
+[2026-10-17 23:40:26,748] DEEPMD INFO    Zeng et al, J. Chem. Theory Comput., 21, 4375-4385 (2025)
+[2026-10-17 23:40:26,748] DEEPMD INFO    See https://deepmd.rtfd.io/credits/ for details.
+[2026-10-17 23:40:26,748] DEEPMD INFO    ---------------------------------------------------------------------------------------------------------------
+[2026-10-17 23:40:26,748] DEEPMD INFO    Installed to:         /home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/deepmd
+[2026-10-17 23:40:26,749] DEEPMD INFO    Source:               v3.2.0
+[2026-10-17 23:40:26,749] DEEPMD INFO    Source Branch:        HEAD
+[2026-10-17 23:40:26,749] DEEPMD INFO    Source Commit:        8cfd46e3
+[2026-10-17 23:40:26,749] DEEPMD INFO    Source Commit at:     2026-08-19 09:50:00 +0000
+[2026-10-17 23:40:26,749] DEEPMD INFO    Float Precision:      Double
+[2026-10-17 23:40:26,749] DEEPMD INFO    Build Variant:        CUDA
+[2026-10-17 23:40:26,749] DEEPMD INFO    Backend:              PyTorch
+[2026-10-17 23:40:26,749] DEEPMD INFO    PT Ver:               v2.11.0+cu130-g70d99e998b4
+[2026-10-17 23:40:26,749] DEEPMD INFO    Custom OP Enabled:    True
+[2026-10-17 23:40:26,749] DEEPMD INFO    Built with PT Ver:    2.11.0
+[2026-10-17 23:40:26,749] DEEPMD INFO    Built with PT Inc:    /tmp/build-env-vl3prgbs/lib/python3.11/site-packages/torch/include
+[2026-10-17 23:40:26,749] DEEPMD INFO                          /tmp/build-env-vl3prgbs/lib/python3.11/site-packages/torch/include/torch/csrc/api/include
+[2026-10-17 23:40:26,749] DEEPMD INFO    Built with PT Lib:    /tmp/build-env-vl3prgbs/lib/python3.11/site-packages/torch/lib
+[2026-10-17 23:40:26,749] DEEPMD INFO    Running on:           tesla-a101
+[2026-10-17 23:40:26,749] DEEPMD INFO    Computing Device:     CUDA:0
+[2026-10-17 23:40:26,749] DEEPMD INFO    Device Name:          NVIDIA A100-PCIE-40GB
+[2026-10-17 23:40:26,749] DEEPMD INFO    CUDA_VISIBLE_DEVICES: 0
+[2026-10-17 23:40:26,749] DEEPMD INFO    Visible GPU Count:    1
+[2026-10-17 23:40:26,749] DEEPMD INFO    Num Intra Threads:    0
+[2026-10-17 23:40:26,749] DEEPMD INFO    Num Inter Threads:    0
+[2026-10-17 23:40:26,749] DEEPMD INFO    ---------------------------------------------------------------------------------------------------------------
+[2026-10-17 23:40:26,808] DEEPMD INFO    Calculate neighbor statistics... (add --skip-neighbor-stat to skip this step)
+[2026-10-17 23:40:27,759] DEEPMD INFO    Neighbor statistics: training data with minimal neighbor distance: 2.477406
+[2026-10-17 23:40:27,760] DEEPMD INFO    Neighbor statistics: training data with maximum neighbor size: [3] (cutoff radius: 6.000000)
+[2026-10-17 23:40:27,768] DEEPMD INFO    Constructing DataLoaders from 1 systems
+[2026-10-17 23:40:27,773] DEEPMD INFO    Constructing DataLoaders from 1 systems
+[2026-10-17 23:40:28,131] DEEPMD INFO    ---Summary of DataSystem: Training     -----------------------------------------------
+[2026-10-17 23:40:28,132] DEEPMD INFO    Found 1 System(s):
+[2026-10-17 23:40:28,132] DEEPMD INFO                                        system  natoms  bch_sz  n_bch   prob       pbc
+[2026-10-17 23:40:28,132] DEEPMD INFO    -- fm-finetune-20261017-01/dpa4/data/train       4       1       8  1.000e+00    T
+[2026-10-17 23:40:28,132] DEEPMD INFO    --------------------------------------------------------------------------------------
+[2026-10-17 23:40:28,132] DEEPMD INFO    ---Summary of DataSystem: Validation   -----------------------------------------------
+[2026-10-17 23:40:28,132] DEEPMD INFO    Found 1 System(s):
+[2026-10-17 23:40:28,132] DEEPMD INFO                                        system  natoms  bch_sz  n_bch   prob       pbc
+[2026-10-17 23:40:28,132] DEEPMD INFO    -- netune-20261017-01/dpa4/data/validation       4       1       4  1.000e+00    T
+[2026-10-17 23:40:28,132] DEEPMD INFO    --------------------------------------------------------------------------------------
+[2026-10-17 23:40:28,132] DEEPMD INFO    Resuming from /home6/u3129/mlip-research/runs/fm-finetune-20261017-01/dpa4/model.ckpt-20.pt.
+[2026-10-17 23:40:28,204] DEEPMD INFO    Model Params:  0.655 M   (Trainable: 0.655 M)
+[2026-10-17 23:40:28,251] DEEPMD INFO    Start to train 24 steps.
+[2026-10-17 23:40:31,743] DEEPMD INFO    Batch      21: trn: rmse = 1.38e-01, rmse_e = 1.84e-02, rmse_f = 1.33e-01, lr = 1.47e-05
+[2026-10-17 23:40:31,744] DEEPMD INFO    Batch      21: val: rmse = 1.71e-01, rmse_e = 1.83e-02, rmse_f = 1.67e-01
+[2026-10-17 23:40:31,744] DEEPMD INFO    Batch      21: total wall time = 3.49 s
+[2026-10-17 23:40:32,052] DEEPMD INFO    Batch      22: trn: rmse = 1.53e-01, rmse_e = 1.93e-02, rmse_f = 1.48e-01, lr = 1.47e-05
+[2026-10-17 23:40:32,053] DEEPMD INFO    Batch      22: val: rmse = 2.33e-01, rmse_e = 2.30e-02, rmse_f = 2.28e-01
+[2026-10-17 23:40:32,054] DEEPMD INFO    Batch      22: total wall time = 0.31 s, eta = 0:00:00 at 2026-10-17 23:40
+[2026-10-17 23:40:32,355] DEEPMD INFO    Batch      23: trn: rmse = 1.20e-01, rmse_e = 2.01e-02, rmse_f = 1.13e-01, lr = 1.47e-05
+[2026-10-17 23:40:32,356] DEEPMD INFO    Batch      23: val: rmse = 2.07e-01, rmse_e = 1.71e-02, rmse_f = 2.04e-01
+[2026-10-17 23:40:32,356] DEEPMD INFO    Batch      23: total wall time = 0.30 s, eta = 0:00:00 at 2026-10-17 23:40
+[2026-10-17 23:40:32,647] DEEPMD INFO    Batch      24: trn: rmse = 1.37e-01, rmse_e = 2.21e-02, rmse_f = 1.30e-01, lr = 1.47e-05
+[2026-10-17 23:40:32,647] DEEPMD INFO    Batch      24: val: rmse = 2.23e-01, rmse_e = 1.25e-02, rmse_f = 2.21e-01
+[2026-10-17 23:40:32,648] DEEPMD INFO    Batch      24: total wall time = 0.29 s, eta = 0:00:00 at 2026-10-17 23:40
+[2026-10-17 23:40:32,695] DEEPMD INFO    Saved model to model.ckpt-24.pt
+[2026-10-17 23:40:32,700] DEEPMD INFO    average training time: 0.3012 s/batch (1 batches excluded)
+[2026-10-17 23:40:32,700] DEEPMD INFO    Trained model has been saved to: model.ckpt

@@ -1,0 +1,26 @@
+{
+  "bytes": 174080000,
+  "local_archive": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\MLIP-research\\artifacts\\fm-run-backups\\lammps-grace-b1f4a6c8cc4e.tar",
+  "members": {
+    "build/CMakeCache.txt": {
+      "bytes": 35203,
+      "sha256": "9562b16ef5d7458cbd0c9ea31ec25e3377c42b589bea4c8514dfa2bb2b0237ac"
+    },
+    "build/liblammps.so.0": {
+      "bytes": 12293216,
+      "sha256": "ea5952b061ad4e99092234edcd733a31219ec72be8c75a65ffe0a46fa4a87564"
+    },
+    "build/lmp": {
+      "bytes": 24672,
+      "sha256": "24e14a24f82e93fdb8501924ef7f35c20cf07e5ab758b327ad9bcd27cf14b44d"
+    },
+    "source.tar.gz": {
+      "bytes": 161722413,
+      "sha256": "abbab4f343f664cb935875f10a58497da6c3c6931594205eebc13b52d2f77d01"
+    }
+  },
+  "remote_archive": "/home/u3129/.local/share/mlip-research/test-artifacts/lammps-grace-b1f4a6c8cc4e.tar",
+  "scope": "private source and binaries; TensorFlow runtime rebuilt separately from existing exact environment lock",
+  "sha256": "d47a4ab3e720293a7eb7b142d65be53ed053884508b41ebdc383b01cdeb27cc0",
+  "verified_retrieval": true
+}

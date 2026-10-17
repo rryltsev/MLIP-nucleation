@@ -1,0 +1,516 @@
+[  0%] Generating includes/lammps/dihedral.h
+[  0%] Generating includes/lammps/nlohmann/json_fwd.hpp
+[  0%] Generating includes/lammps/command.h
+[  0%] Generating includes/lammps/domain.h
+[  0%] Generating includes/lammps/improper.h
+[  0%] Building CXX object build-pace/build-yaml-cpp/CMakeFiles/yaml-cpp-pace.dir/src/binary.cpp.o
+[  0%] Generating includes/lammps/pointers.h
+[  0%] Generating includes/lammps/fmt/core.h
+[  0%] Built target json_json_fwd.hpp
+[  0%] Built target dihedral.h
+[  0%] Built target command.h
+[  0%] Built target domain.h
+[  0%] Built target improper.h
+[  0%] Built target pointers.h
+[  1%] Building CXX object build-pace/build-yaml-cpp/CMakeFiles/yaml-cpp-pace.dir/src/convert.cpp.o
+[  1%] Building CXX object build-pace/build-yaml-cpp/CMakeFiles/yaml-cpp-pace.dir/src/depthguard.cpp.o
+[  1%] Building CXX object build-pace/build-yaml-cpp/CMakeFiles/yaml-cpp-pace.dir/src/directives.cpp.o
+[  1%] Building CXX object build-pace/build-yaml-cpp/CMakeFiles/yaml-cpp-pace.dir/src/emit.cpp.o
+[  1%] Built target fmt_core.h
+[  1%] Generating includes/lammps/neigh_list.h
+[  1%] Generating includes/lammps/citeme.h
+[  1%] Built target neigh_list.h
+[  2%] Building CXX object build-pace/build-yaml-cpp/CMakeFiles/yaml-cpp-pace.dir/src/emitfromevents.cpp.o
+[  2%] Generating includes/lammps/platform.h
+[  2%] Built target citeme.h
+[  3%] Building CXX object build-pace/build-yaml-cpp/CMakeFiles/yaml-cpp-pace.dir/src/emitter.cpp.o
+[  3%] Built target platform.h
+[  3%] Generating includes/lammps/bond.h
+[  3%] Built target bond.h
+[  3%] Generating includes/lammps/exceptions.h
+[  3%] Built target exceptions.h
+[  3%] Generating includes/lammps/atom.h
+[  3%] Built target atom.h
+[  3%] Building CXX object build-pace/build-yaml-cpp/CMakeFiles/yaml-cpp-pace.dir/src/emitterstate.cpp.o
+[  3%] Building CXX object build-pace/build-yaml-cpp/CMakeFiles/yaml-cpp-pace.dir/src/emitterutils.cpp.o
+[  4%] Generating includes/lammps/universe.h
+[  4%] Building CXX object build-pace/build-yaml-cpp/CMakeFiles/yaml-cpp-pace.dir/src/exceptions.cpp.o
+[  4%] Built target universe.h
+[  4%] Building CXX object build-pace/build-yaml-cpp/CMakeFiles/yaml-cpp-pace.dir/src/exp.cpp.o
+[  5%] Building CXX object build-pace/build-yaml-cpp/CMakeFiles/yaml-cpp-pace.dir/src/memory.cpp.o
+[  5%] Building CXX object build-pace/build-yaml-cpp/CMakeFiles/yaml-cpp-pace.dir/src/node.cpp.o
+[  5%] Building CXX object build-pace/build-yaml-cpp/CMakeFiles/yaml-cpp-pace.dir/src/node_data.cpp.o
+[  5%] Building CXX object build-pace/build-yaml-cpp/CMakeFiles/yaml-cpp-pace.dir/src/nodebuilder.cpp.o
+[  5%] Generating includes/lammps/compute.h
+[  6%] Building CXX object build-pace/build-yaml-cpp/CMakeFiles/yaml-cpp-pace.dir/src/nodeevents.cpp.o
+[  6%] Built target compute.h
+[  6%] Building CXX object build-pace/build-yaml-cpp/CMakeFiles/yaml-cpp-pace.dir/src/null.cpp.o
+[  6%] Building CXX object build-pace/build-yaml-cpp/CMakeFiles/yaml-cpp-pace.dir/src/ostream_wrapper.cpp.o
+[  6%] Building CXX object build-pace/build-yaml-cpp/CMakeFiles/yaml-cpp-pace.dir/src/parse.cpp.o
+[  6%] Building CXX object build-pace/build-yaml-cpp/CMakeFiles/yaml-cpp-pace.dir/src/parser.cpp.o
+[  7%] Building CXX object build-pace/build-yaml-cpp/CMakeFiles/yaml-cpp-pace.dir/src/regex_yaml.cpp.o
+[  7%] Building CXX object build-pace/build-yaml-cpp/CMakeFiles/yaml-cpp-pace.dir/src/scanner.cpp.o
+[  7%] Building CXX object build-pace/build-yaml-cpp/CMakeFiles/yaml-cpp-pace.dir/src/scanscalar.cpp.o
+[  7%] Building CXX object build-pace/build-yaml-cpp/CMakeFiles/yaml-cpp-pace.dir/src/scantag.cpp.o
+[  7%] Generating includes/lammps/update.h
+[  7%] Built target update.h
+[  7%] Building CXX object build-pace/build-yaml-cpp/CMakeFiles/yaml-cpp-pace.dir/src/scantoken.cpp.o
+[  7%] Generating includes/lammps/region.h
+[  7%] Built target region.h
+[  8%] Building CXX object build-pace/build-yaml-cpp/CMakeFiles/yaml-cpp-pace.dir/src/simplekey.cpp.o
+[  8%] Building CXX object build-pace/build-yaml-cpp/CMakeFiles/yaml-cpp-pace.dir/src/singledocparser.cpp.o
+[  8%] Building CXX object build-pace/build-yaml-cpp/CMakeFiles/yaml-cpp-pace.dir/src/stream.cpp.o
+[  8%] Building CXX object build-pace/build-yaml-cpp/CMakeFiles/yaml-cpp-pace.dir/src/tag.cpp.o
+[  9%] Generating includes/lammps/error.h
+[  9%] Built target error.h
+[  9%] Generating includes/lammps/modify.h
+[  9%] Generating includes/lammps/angle.h
+[  9%] Built target modify.h
+[  9%] Built target angle.h
+[  9%] Generating includes/lammps/nlohmann/json.hpp
+[  9%] Generating includes/lammps/variable.h
+[  9%] Built target json_json.hpp
+[  9%] Built target variable.h
+[  9%] Generating includes/lammps/force.h
+[  9%] Built target force.h
+-- Git Directory: /home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/.git
+-- Generating lmpgitversion.h...
+[ 10%] Generating includes/lammps/group.h
+[ 10%] Built target gitversion
+[ 11%] Generating includes/lammps/comm.h
+[ 11%] Built target group.h
+[ 11%] Generating includes/lammps/input.h
+[ 12%] Generating includes/lammps/json.h
+[ 12%] Generating includes/lammps/neighbor.h
+[ 12%] Built target comm.h
+[ 12%] Built target input.h
+[ 12%] Built target json.h
+[ 12%] Built target neighbor.h
+[ 12%] Generating includes/lammps/json_fwd.h
+[ 12%] Generating includes/lammps/kspace.h
+[ 12%] Generating includes/lammps/timer.h
+[ 12%] Generating includes/lammps/lammps.h
+[ 12%] Built target json_fwd.h
+[ 12%] Built target timer.h
+[ 12%] Built target kspace.h
+[ 12%] Built target lammps.h
+[ 12%] Generating includes/lammps/info.h
+[ 13%] Generating includes/lammps/lattice.h
+[ 13%] Generating includes/lammps/library.h
+[ 13%] Built target info.h
+[ 13%] Generating includes/lammps/fix.h
+[ 13%] Built target lattice.h
+[ 13%] Built target library.h
+[ 13%] Built target fix.h
+[ 13%] Generating includes/lammps/memory.h
+[ 13%] Generating includes/lammps/utils.h
+[ 13%] Generating includes/lammps/pair.h
+[ 13%] Built target memory.h
+[ 13%] Generating includes/lammps/lmppython.h
+[ 13%] Built target utils.h
+[ 13%] Built target pair.h
+[ 13%] Built target lmppython.h
+[ 13%] Generating includes/lammps/fmt/format.h
+[ 14%] Generating includes/lammps/lmptype.h
+[ 15%] Building CXX object build-pace/CMakeFiles/cnpy-static.dir/cnpy/cnpy.cpp.o
+[ 15%] Generating includes/lammps/output.h
+[ 15%] Built target fmt_format.h
+[ 15%] Built target lmptype.h
+[ 15%] Built target output.h
+[ 16%] Linking CXX static library libyaml-cpp-pace.a
+[ 16%] Built target yaml-cpp-pace
+[ 16%] Linking CXX static library libcnpy.a
+[ 16%] Built target cnpy-static
+[ 16%] Building CXX object build-pace/CMakeFiles/pace.dir/ML-PACE/ace-evaluator/ace_abstract_basis.cpp.o
+[ 16%] Building CXX object build-pace/CMakeFiles/pace.dir/ML-PACE/ace-evaluator/ace_c_basis.cpp.o
+[ 16%] Building CXX object build-pace/CMakeFiles/pace.dir/ML-PACE/ace-evaluator/ace_flatten_basis.cpp.o
+[ 17%] Building CXX object build-pace/CMakeFiles/pace.dir/ML-PACE/ace-evaluator/ace_spherical_cart.cpp.o
+[ 17%] Building CXX object build-pace/CMakeFiles/pace.dir/ML-PACE/ace-evaluator/ace_recursive.cpp.o
+[ 17%] Building CXX object build-pace/CMakeFiles/pace.dir/ML-PACE/ace-evaluator/ace_evaluator.cpp.o
+[ 17%] Building CXX object build-pace/CMakeFiles/pace.dir/ML-PACE/ace-evaluator/ace_radial.cpp.o
+[ 17%] Building CXX object build-pace/CMakeFiles/pace.dir/ML-PACE/ace-evaluator/ships_radial.cpp.o
+[ 18%] Building CXX object build-pace/CMakeFiles/pace.dir/ML-PACE/ace/ace_b_basis.cpp.o
+[ 18%] Building CXX object build-pace/CMakeFiles/pace.dir/ML-PACE/ace/ace_b_basisfunction.cpp.o
+[ 18%] Building CXX object build-pace/CMakeFiles/pace.dir/ML-PACE/ace/ace_b_evaluator.cpp.o
+[ 18%] Building CXX object build-pace/CMakeFiles/pace.dir/ML-PACE/ace/ace_clebsch_gordan.cpp.o
+[ 18%] Building CXX object build-pace/CMakeFiles/pace.dir/ML-PACE/ace/ace_couplings.cpp.o
+[ 19%] Building CXX object build-pace/CMakeFiles/pace.dir/ML-PACE/ace/ace_spherical_polar.cpp.o
+[ 19%] Building CXX object build-pace/CMakeFiles/pace.dir/ML-PACE/ace/ace_yaml_input.cpp.o
+[ 19%] Building CXX object build-pace/CMakeFiles/pace.dir/ML-PACE/ace/grace_fs_evaluator.cpp.o
+[ 19%] Linking CXX static library liblammps_pace.a
+[ 19%] Built target pace
+[ 20%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/angle_deprecated.cpp.o
+[ 20%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/angle_hybrid.cpp.o
+[ 20%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/angle_write.cpp.o
+[ 21%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/arg_info.cpp.o
+[ 21%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/atom.cpp.o
+[ 21%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/angle.cpp.o
+[ 21%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/angle_zero.cpp.o
+[ 21%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/atom_map.cpp.o
+[ 21%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/atom_vec.cpp.o
+[ 22%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/atom_vec_atomic.cpp.o
+[ 22%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/atom_vec_body.cpp.o
+[ 22%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/atom_vec_charge.cpp.o
+[ 22%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/atom_vec_ellipsoid.cpp.o
+[ 22%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/atom_vec_hybrid.cpp.o
+[ 23%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/atom_vec_line.cpp.o
+[ 23%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/atom_vec_sphere.cpp.o
+[ 23%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/atom_vec_tri.cpp.o
+[ 23%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/balance.cpp.o
+[ 24%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/body.cpp.o
+[ 24%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/bond.cpp.o
+[ 24%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/bond_deprecated.cpp.o
+[ 24%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/bond_hybrid.cpp.o
+[ 24%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/bond_zero.cpp.o
+[ 25%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/change_box.cpp.o
+[ 25%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/citeme.cpp.o
+[ 25%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/comm.cpp.o
+[ 25%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/comm_brick.cpp.o
+[ 25%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/comm_tiled.cpp.o
+[ 26%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute.cpp.o
+[ 26%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_aggregate_atom.cpp.o
+[ 26%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_angle.cpp.o
+[ 26%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_angle_local.cpp.o
+[ 26%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_angmom_chunk.cpp.o
+[ 27%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_bond.cpp.o
+[ 27%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_bond_local.cpp.o
+[ 27%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_centro_atom.cpp.o
+[ 27%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_centroid_stress_atom.cpp.o
+[ 28%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_chunk.cpp.o
+[ 28%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_chunk_atom.cpp.o
+[ 28%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_chunk_spread_atom.cpp.o
+[ 28%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_cluster_atom.cpp.o
+[ 28%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_cna_atom.cpp.o
+[ 29%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_com.cpp.o
+[ 29%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_com_chunk.cpp.o
+[ 29%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_coord_atom.cpp.o
+[ 29%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_count_type.cpp.o
+[ 29%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_deprecated.cpp.o
+[ 30%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_dihedral.cpp.o
+[ 30%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_dihedral_local.cpp.o
+[ 30%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_dipole.cpp.o
+[ 30%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_dipole_chunk.cpp.o
+[ 31%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_displace_atom.cpp.o
+[ 31%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_erotate_sphere.cpp.o
+[ 31%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_erotate_sphere_atom.cpp.o
+[ 31%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_fragment_atom.cpp.o
+[ 31%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_global_atom.cpp.o
+[ 32%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_group_group.cpp.o
+[ 32%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_gyration.cpp.o
+[ 32%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_gyration_chunk.cpp.o
+[ 32%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_heat_flux.cpp.o
+[ 32%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_improper.cpp.o
+[ 33%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_improper_local.cpp.o
+[ 33%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_inertia_chunk.cpp.o
+[ 33%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_ke.cpp.o
+[ 33%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_ke_atom.cpp.o
+[ 33%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_msd.cpp.o
+[ 34%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_msd_chunk.cpp.o
+[ 34%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_omega_chunk.cpp.o
+[ 34%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_orientorder_atom.cpp.o
+[ 34%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_pair.cpp.o
+[ 35%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_pair_local.cpp.o
+[ 35%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_pe.cpp.o
+[ 35%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_pe_atom.cpp.o
+[ 35%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_pressure.cpp.o
+[ 35%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_property_atom.cpp.o
+[ 36%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_property_chunk.cpp.o
+[ 36%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_property_grid.cpp.o
+[ 36%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_property_local.cpp.o
+[ 36%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_rdf.cpp.o
+[ 36%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_reduce.cpp.o
+[ 37%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_reduce_chunk.cpp.o
+[ 37%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_reduce_region.cpp.o
+[ 37%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_slice.cpp.o
+[ 37%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_stress_atom.cpp.o
+[ 38%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_temp.cpp.o
+[ 38%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_temp_chunk.cpp.o
+[ 38%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_temp_com.cpp.o
+[ 38%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_temp_deform.cpp.o
+[ 38%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_temp_partial.cpp.o
+[ 39%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_temp_profile.cpp.o
+[ 39%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_temp_ramp.cpp.o
+[ 39%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_temp_region.cpp.o
+[ 39%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_temp_sphere.cpp.o
+[ 39%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_torque_chunk.cpp.o
+[ 40%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_vacf.cpp.o
+[ 40%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_vacf_chunk.cpp.o
+[ 40%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/compute_vcm_chunk.cpp.o
+[ 40%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/create_atoms.cpp.o
+[ 40%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/create_bonds.cpp.o
+[ 41%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/create_box.cpp.o
+[ 41%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/delete_atoms.cpp.o
+[ 41%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/delete_bonds.cpp.o
+[ 41%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/deprecated.cpp.o
+[ 42%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/dihedral.cpp.o
+[ 42%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/dihedral_deprecated.cpp.o
+[ 42%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/dihedral_hybrid.cpp.o
+[ 42%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/dihedral_write.cpp.o
+[ 42%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/dihedral_zero.cpp.o
+[ 43%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/displace_atoms.cpp.o
+[ 43%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/domain.cpp.o
+[ 43%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/dump.cpp.o
+[ 43%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/dump_atom.cpp.o
+[ 43%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/dump_cfg.cpp.o
+[ 44%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/dump_custom.cpp.o
+[ 44%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/dump_deprecated.cpp.o
+[ 44%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/dump_grid.cpp.o
+[ 44%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/dump_grid_vtk.cpp.o
+[ 44%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/dump_local.cpp.o
+[ 45%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/dump_xyz.cpp.o
+[ 45%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/error.cpp.o
+[ 45%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/finish.cpp.o
+[ 45%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix.cpp.o
+[ 46%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_adapt.cpp.o
+[ 46%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_addforce.cpp.o
+[ 46%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_ave_atom.cpp.o
+[ 46%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_ave_chunk.cpp.o
+[ 46%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_ave_correlate.cpp.o
+[ 47%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_ave_grid.cpp.o
+[ 47%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_ave_histo.cpp.o
+[ 47%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_ave_histo_weight.cpp.o
+[ 47%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_ave_time.cpp.o
+[ 47%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_aveforce.cpp.o
+[ 48%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_balance.cpp.o
+[ 48%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_bond_history.cpp.o
+[ 48%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_box_relax.cpp.o
+[ 48%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_deform.cpp.o
+[ 50%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_deposit.cpp.o
+[ 50%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_deprecated.cpp.o
+[ 50%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_dt_reset.cpp.o
+[ 50%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_dummy.cpp.o
+[ 50%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_efield.cpp.o
+[ 51%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_enforce2d.cpp.o
+[ 51%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_evaporate.cpp.o
+[ 51%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_external.cpp.o
+[ 51%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_gravity.cpp.o
+[ 51%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_group.cpp.o
+[ 52%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_halt.cpp.o
+[ 52%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_heat.cpp.o
+[ 52%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_indent.cpp.o
+[ 52%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_langevin.cpp.o
+[ 52%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_lineforce.cpp.o
+[ 53%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_minimize.cpp.o
+[ 53%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_momentum.cpp.o
+[ 53%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_move.cpp.o
+[ 53%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_neigh_history.cpp.o
+[ 54%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_nh.cpp.o
+[ 54%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_nh_sphere.cpp.o
+[ 54%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_nph.cpp.o
+[ 54%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_nph_sphere.cpp.o
+[ 54%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_npt.cpp.o
+[ 55%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_npt_sphere.cpp.o
+[ 55%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_nve.cpp.o
+[ 55%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_nve_limit.cpp.o
+[ 55%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_nve_noforce.cpp.o
+[ 55%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_nve_sphere.cpp.o
+[ 56%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_nvt.cpp.o
+[ 56%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_nvt_sllod.cpp.o
+[ 56%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_nvt_sphere.cpp.o
+[ 56%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_pair.cpp.o
+[ 57%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_planeforce.cpp.o
+[ 57%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_press_berendsen.cpp.o
+[ 57%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_press_langevin.cpp.o
+[ 57%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_print.cpp.o
+[ 57%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_property_atom.cpp.o
+[ 58%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_read_restart.cpp.o
+[ 58%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_recenter.cpp.o
+[ 58%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_respa.cpp.o
+[ 58%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_restrain.cpp.o
+[ 58%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_set.cpp.o
+[ 59%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_setforce.cpp.o
+[ 59%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_spring.cpp.o
+[ 59%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_spring_chunk.cpp.o
+[ 59%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_spring_self.cpp.o
+[ 59%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_store_atom.cpp.o
+[ 60%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_store_force.cpp.o
+[ 60%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_store_global.cpp.o
+[ 60%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_store_local.cpp.o
+[ 60%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_store_state.cpp.o
+[ 61%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_temp_berendsen.cpp.o
+[ 61%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_temp_rescale.cpp.o
+[ 61%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_thermal_conductivity.cpp.o
+[ 61%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_vector.cpp.o
+[ 61%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_viscous.cpp.o
+[ 62%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_wall.cpp.o
+[ 62%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_wall_harmonic.cpp.o
+[ 62%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_wall_harmonic_outside.cpp.o
+[ 62%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_wall_lj1043.cpp.o
+[ 62%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_wall_lj126.cpp.o
+[ 63%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_wall_lj93.cpp.o
+[ 63%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_wall_morse.cpp.o
+[ 63%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_wall_reflect.cpp.o
+[ 63%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_wall_region.cpp.o
+[ 64%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fix_wall_table.cpp.o
+[ 64%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fmtlib_format.cpp.o
+[ 64%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/fmtlib_os.cpp.o
+[ 64%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/force.cpp.o
+[ 64%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/grid2d.cpp.o
+[ 65%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/grid3d.cpp.o
+[ 65%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/group.cpp.o
+[ 65%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/imbalance.cpp.o
+[ 65%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/imbalance_group.cpp.o
+[ 65%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/imbalance_neigh.cpp.o
+[ 66%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/imbalance_store.cpp.o
+[ 66%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/imbalance_time.cpp.o
+[ 66%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/imbalance_var.cpp.o
+[ 66%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/improper.cpp.o
+[ 66%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/improper_deprecated.cpp.o
+[ 67%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/improper_hybrid.cpp.o
+[ 67%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/improper_zero.cpp.o
+[ 67%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/info.cpp.o
+[ 67%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/input.cpp.o
+[ 68%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/integrate.cpp.o
+[ 68%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/irregular.cpp.o
+[ 68%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/kspace.cpp.o
+[ 68%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/kspace_deprecated.cpp.o
+[ 68%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/kspace_zero.cpp.o
+[ 69%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/label_map.cpp.o
+[ 69%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/lammps.cpp.o
+[ 69%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/lattice.cpp.o
+[ 69%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/library.cpp.o
+[ 69%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/lmppython.cpp.o
+[ 70%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/math_eigen.cpp.o
+[ 70%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/math_extra.cpp.o
+[ 70%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/math_special.cpp.o
+[ 70%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/memory.cpp.o
+[ 70%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/min.cpp.o
+[ 71%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/min_cg.cpp.o
+[ 71%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/min_deprecated.cpp.o
+[ 71%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/min_fire.cpp.o
+[ 71%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/min_hftn.cpp.o
+[ 72%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/min_linesearch.cpp.o
+[ 72%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/min_quickmin.cpp.o
+[ 72%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/min_sd.cpp.o
+[ 72%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/minimize.cpp.o
+[ 72%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/modify.cpp.o
+[ 73%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/molecule.cpp.o
+[ 73%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/my_page.cpp.o
+[ 73%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/my_pool_chunk.cpp.o
+[ 73%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/nbin.cpp.o
+[ 73%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/nbin_multi.cpp.o
+[ 74%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/nbin_standard.cpp.o
+[ 74%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/neigh_list.cpp.o
+[ 74%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/neigh_request.cpp.o
+[ 74%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/neighbor.cpp.o
+[ 75%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/npair.cpp.o
+[ 75%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/npair_bin.cpp.o
+[ 75%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/npair_bin_ghost.cpp.o
+[ 75%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/npair_copy.cpp.o
+[ 75%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/npair_halffull.cpp.o
+[ 76%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/npair_multi.cpp.o
+[ 76%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/npair_nsq.cpp.o
+[ 76%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/npair_nsq_ghost.cpp.o
+[ 76%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/npair_respa_bin.cpp.o
+[ 76%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/npair_respa_nsq.cpp.o
+[ 77%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/npair_skip.cpp.o
+[ 77%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/npair_skip_respa.cpp.o
+[ 77%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/npair_skip_size_off2on.cpp.o
+[ 77%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/npair_skip_size_off2on_oneside.cpp.o
+[ 77%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/npair_trim.cpp.o
+[ 78%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/nstencil.cpp.o
+[ 78%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/nstencil_bin.cpp.o
+[ 78%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/nstencil_ghost_bin.cpp.o
+[ 78%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/nstencil_multi.cpp.o
+[ 79%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/ntopo.cpp.o
+[ 79%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/ntopo_angle_all.cpp.o
+[ 79%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/ntopo_angle_partial.cpp.o
+[ 79%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/ntopo_angle_template.cpp.o
+[ 79%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/ntopo_bond_all.cpp.o
+[ 80%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/ntopo_bond_partial.cpp.o
+[ 80%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/ntopo_bond_template.cpp.o
+[ 80%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/ntopo_dihedral_all.cpp.o
+[ 80%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/ntopo_dihedral_partial.cpp.o
+[ 80%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/ntopo_dihedral_template.cpp.o
+[ 81%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/ntopo_improper_all.cpp.o
+[ 81%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/ntopo_improper_partial.cpp.o
+[ 81%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/ntopo_improper_template.cpp.o
+[ 81%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/output.cpp.o
+[ 82%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/pair.cpp.o
+[ 82%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/pair_born.cpp.o
+[ 82%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/pair_buck.cpp.o
+[ 82%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/pair_buck_coul_cut.cpp.o
+[ 82%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/pair_coul_cut.cpp.o
+[ 83%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/pair_coul_debye.cpp.o
+[ 83%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/pair_coul_dsf.cpp.o
+[ 83%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/pair_coul_wolf.cpp.o
+[ 83%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/pair_deprecated.cpp.o
+[ 83%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/pair_hybrid.cpp.o
+[ 84%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/pair_hybrid_molecular.cpp.o
+[ 84%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/pair_hybrid_overlay.cpp.o
+[ 84%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/pair_hybrid_scaled.cpp.o
+[ 84%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/pair_lj_cut.cpp.o
+[ 84%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/pair_lj_cut_coul_cut.cpp.o
+[ 85%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/pair_lj_expand.cpp.o
+[ 85%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/pair_morse.cpp.o
+[ 85%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/pair_soft.cpp.o
+[ 85%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/pair_table.cpp.o
+[ 86%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/pair_yukawa.cpp.o
+[ 86%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/pair_zbl.cpp.o
+[ 86%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/pair_zero.cpp.o
+[ 86%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/platform.cpp.o
+[ 86%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/potential_file_reader.cpp.o
+[ 87%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/procmap.cpp.o
+[ 87%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/random_mars.cpp.o
+[ 87%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/random_park.cpp.o
+[ 87%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/rcb.cpp.o
+[ 87%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/read_data.cpp.o
+[ 88%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/read_dump.cpp.o
+[ 88%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/read_restart.cpp.o
+[ 88%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/reader.cpp.o
+[ 88%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/reader_native.cpp.o
+[ 89%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/reader_xyz.cpp.o
+[ 89%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/region.cpp.o
+[ 89%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/region_block.cpp.o
+[ 89%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/region_cone.cpp.o
+[ 89%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/region_cylinder.cpp.o
+[ 90%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/region_deprecated.cpp.o
+[ 90%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/region_ellipsoid.cpp.o
+[ 90%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/region_intersect.cpp.o
+[ 90%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/region_plane.cpp.o
+[ 90%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/region_prism.cpp.o
+[ 91%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/region_sphere.cpp.o
+[ 91%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/region_union.cpp.o
+[ 91%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/replicate.cpp.o
+[ 91%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/rerun.cpp.o
+[ 91%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/reset_atoms_id.cpp.o
+[ 92%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/reset_atoms_image.cpp.o
+[ 92%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/reset_atoms_mol.cpp.o
+[ 92%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/respa.cpp.o
+[ 92%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/run.cpp.o
+[ 93%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/safe_pointers.cpp.o
+[ 93%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/set.cpp.o
+[ 93%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/special.cpp.o
+[ 93%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/table_file_reader.cpp.o
+[ 93%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/tabular_function.cpp.o
+[ 94%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/text_file_reader.cpp.o
+[ 94%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/thermo.cpp.o
+[ 94%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/timer.cpp.o
+[ 94%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/tokenizer.cpp.o
+[ 94%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/universe.cpp.o
+[ 95%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/update.cpp.o
+[ 95%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/utils.cpp.o
+[ 95%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/variable.cpp.o
+[ 95%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/velocity.cpp.o
+[ 95%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/verlet.cpp.o
+[ 96%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/write_coeff.cpp.o
+[ 96%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/write_data.cpp.o
+[ 96%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/write_dump.cpp.o
+[ 96%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/write_molecule.cpp.o
+[ 97%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/write_restart.cpp.o
+[ 97%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/STUBS/mpi.cpp.o
+[ 97%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/ML-PACE/compute_pace.cpp.o
+[ 97%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/ML-PACE/pair_grace.cpp.o
+[ 97%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/ML-PACE/pair_grace_1layer_chunk.cpp.o
+[ 98%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/ML-PACE/pair_grace_2layer_chunk.cpp.o
+[ 98%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/ML-PACE/pair_grace_2layer_parallel.cpp.o
+[ 98%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/ML-PACE/pair_grace_fs.cpp.o
+[ 98%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/ML-PACE/pair_pace.cpp.o
+[ 98%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/ML-PACE/pair_pace_extrapolation.cpp.o
+[100%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/ML-PACE/utils_grace.cpp.o
+[100%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/PLUGIN/plugin.cpp.o
+[100%] Linking CXX shared library liblammps.so
+[100%] Built target lammps
+[100%] Building CXX object CMakeFiles/lmp.dir/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/lammps-b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4/src/main.cpp.o
+[100%] Linking CXX executable lmp
+[100%] Built target lmp

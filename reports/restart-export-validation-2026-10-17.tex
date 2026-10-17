@@ -1,0 +1,185 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,booktabs,tabularx,microtype}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\title{Restart and ASE/LAMMPS export validation on A100}
+\author{MLIP-nucleation project}
+\date{17--18 October 2026}
+\begin{document}
+\maketitle
+
+\section{Scope and protocol}
+These are software checks of the previously fine-tuned DPA4-Mini-OMat24-v20260805
+and GRACE-1L-OMAT models. Inputs and labels remain synthetic, not DFT; the
+checkpoints are not scientific teachers. The source run is
+\path{runs/fm-finetune-20261017-01/assessment.json}.
+Each model continues from its checkpoint after 20 optimizer updates.
+Original files and installed training environments are not modified.
+
+The restart audit snapshots the state after loading and before the next update,
+compares model parameters and Adam tensors with the source checkpoint, and checks
+the counters. Accepted continuations reach Adam update 24. The stopping target
+is extended, so the learning-rate schedule is evaluated for the extended budget;
+this is not a claim of bitwise equivalence to an uninterrupted training run.
+
+Export comparisons use the \emph{same final checkpoint24} on both sides, not
+the model before versus after optimization. Four periodic Al4 structures are
+used: two original synthetic validation geometries, a sheared/scaled triclinic
+cell, and a smaller cell with periodic-image neighbours. The geometry and its
+SHA-256 are retained with predictions. Energies are total eV, forces eV/\AA,
+and tensile stresses eV/\AA$^3$, Voigt $xx,yy,zz,yz,xz,xy$.
+LAMMPS uses \texttt{units metal}; zero velocities remove kinetic pressure.
+Stress is minus its pressure tensor converted from bar using ASE's unit constant.
+Small differences in legacy pressure conversion constants can therefore remain.
+
+Each comparison requires
+$|y_{\rm export}-y_{\rm checkpoint}|\leq a+r|y_{\rm checkpoint}|$.
+The tolerances were fixed in source before submitting the first GPU job:
+\begin{center}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Model & $a_E$ (eV) & $a_F$ (eV/\AA) & $a_\sigma$ (eV/\AA$^3$) & $r$ \\
+\midrule
+DPA4 & $10^{-4}$ & $10^{-4}$ & $10^{-6}$ & $10^{-4}$ \\
+GRACE & $10^{-7}$ & $10^{-7}$ & $10^{-9}$ & $10^{-7}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+No tolerances were relaxed after observing results. Comparisons check finite
+values and shapes as well as numerical agreement. LAMMPS performs \texttt{run 0}
+and writes atom-ID-sorted forces; this is not an MD stability or speed benchmark.
+
+\section{GRACE result}
+GRACE passed in job \textbf{20950321} on \texttt{tesla-a101}. The checkpoint at
+epoch 5 / step 20 restored exactly: 62 checkpoint tensors, including 38 optimizer
+tensors, plus Adam iteration 20. The sixth epoch added four updates, reaching
+iteration/step 24. Reset flags were disabled. In-memory checkpoint evaluation
+used float64 and an uncompiled \texttt{TPModel}; the explicitly exported latest
+checkpoint was loaded through ASE \texttt{TPCalculator} and LAMMPS
+\texttt{pair\_style grace}. The training, export and all four LAMMPS processes
+were independently observed on the allocated GPU.
+
+Maximum absolute differences over all four structures were:
+\begin{center}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+GRACE consumer & Energy (eV) & Force (eV/\AA) & Stress (eV/\AA$^3$) \\
+\midrule
+ASE SavedModel & $2.66\,10^{-15}$ & $7.41\,10^{-15}$ & $5.31\,10^{-17}$ \\
+LAMMPS SavedModel & $1.33\,10^{-14}$ & $1.10\,10^{-14}$ & $8.83\,10^{-10}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+All preset tolerances passed. Full precision values and predictions are in
+\path{runs/fm-deployment-20261017-01/grace/}.
+
+\section{DPA4 restart and export}
+The native DeepMD 3.2.0 restart was first tested in job 20950321. Its source
+checkpoint has Adam iteration 20 but stores a zero-based completed loop index 19.
+The installed trainer uses that value directly as the next loop start, causing
+the last displayed batch number to repeat. The first check rejected that counter
+behaviour and retained the run, rather than accepting a false step-20 assertion.
+
+Job \textbf{20950322} used a guarded compatibility adapter in
+\path{scripts/hpc/restart-child.py}. If all restored Adam iteration counters agree
+and exceed the saved loop index by exactly one, it advances the next loop start
+to the Adam count and rebuilds the scheduler. It accepts no other discrepancy.
+The installed DeepMD package and source checkpoint are unchanged. Exact model
+and optimizer restoration was verified (413 tensors, including 267 Adam tensors);
+the continuation performed four updates
+and ended at Adam iteration 24 / internal completed index 23. The changed
+scheduler learning rate is recorded explicitly. This adapter is validated for
+the tested DeepMD 3.2.0 Adam setup, not every backend or optimizer.
+
+The first AOTInductor export then failed because \texttt{CUDA\_HOME} was unset.
+Job \textbf{20950326} reuses the hashed checkpoint24 and cache from job 20950322;
+it does not train again. Its toolchain explicitly selects
+\path{/opt/cuda-13.0} and GCC toolset 12. Export uses the target A100 and float32
+with inference TF32, AMP and optional custom Triton approximations disabled.
+The upstream
+\href{https://docs.deepmodeling.com/projects/deepmd/en/stable/model/dpa4.html}{DPA4 export documentation}
+specifies the AOTInductor \texttt{.pt2} format for ASE and LAMMPS.
+The export and ASE checks passed in job 20950326. Maximum differences were
+$9.54\,10^{-7}$~eV in energy, $5.63\,10^{-6}$~eV/\AA\ in force and
+$2.32\,10^{-8}$~eV/\AA$^3$ in stress, within the preset tolerances.
+The bundled pip LAMMPS binary then exited with SIGSEGV before reading its input.
+CPU diagnostic jobs 20950328 and 20950330 reproduced a pre-main startup crash,
+including with an alternative Intel MPI runtime. The precise underlying binary
+failure was not established; this is not evidence of an exported-model error.
+An official LAMMPS 22Jul2025 Update2 build was prepared from commit
+\path{a33449868448baf3c73d8eacdb2d329b13361696} with GCC 12. Its serial variant
+started normally but could not load the installed DeepMD plugin, which requires
+\texttt{MPI\_Allgather}. A separate Intel MPI 2021.17 build resolved that
+requirement. Both source and binary variants are retained; installed pip files
+were not replaced. CPU build jobs 20950331 and 20950333 took 123 and 106 seconds
+respectively, with eight CPUs each.
+
+Native loading also required explicit paths to \texttt{torch/lib} and the
+Torch CUDA 13 libraries, plus the real CUDA 12.8 runtime required by DeepMD's
+native CUDA operations. CUDA major versions were not aliased or substituted.
+The accepted activation recipe is \path{scripts/hpc/deepmd-lammps-env.sh}.
+Failed consume-only jobs 20950332 (missing MPI symbol), 20950335 (runtime library
+paths) and 20950336 (GPU observation interval too coarse) are retained.
+
+Final consume-only job \textbf{20950337} completed in \textbf{32 seconds}, using
+one MPI rank and one A100. It did not train or export again. All four native
+LAMMPS processes were observed on GPU, with 12 NVIDIA samples each. A two-second
+hold after each evaluation made context observation reliable; it adds no force
+evaluation or MD step. Reported validation walltimes are not performance data.
+
+\begin{center}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+DPA4 consumer & Energy (eV) & Force (eV/\AA) & Stress (eV/\AA$^3$) \\
+\midrule
+ASE .pt2 & $9.54\,10^{-7}$ & $5.63\,10^{-6}$ & $2.32\,10^{-8}$ \\
+LAMMPS .pt2 & $1.19\,10^{-6}$ & $1.13\,10^{-5}$ & $2.04\,10^{-8}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+Both consumers passed every preset tolerance. Full precision results are in
+\path{runs/fm-deployment-20261017-03/dpa4/ase-equivalence.json} and
+\path{runs/fm-deployment-20261017-07/dpa4/lammps-equivalence.json}.
+The installed backend warns that this PT \texttt{edge\_vec} schema is deprecated;
+it remains accepted by the tested version. A future graph-schema migration
+requires its own comparison, rather than assuming equivalence.
+
+\section{LAMMPS software, resources and persistence}
+A private GRACE-enabled LAMMPS was compiled from upstream revision
+\path{b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4}, following the
+\href{https://gracemaker.readthedocs.io/en/latest/gracemaker/install/}{GRACE installation instructions}.
+CPU job 20950320 completed on \texttt{apollo23} in 137 seconds using eight CPUs,
+32~GiB and a 45-minute cap. The build uses GCC 8.5, ML-PACE, OpenMP, TensorFlow
+2.20.0 from the locked GRACE environment, and no MPI. LAMMPS reports 30 March 2026.
+The serial host process offloads GRACE evaluations to GPU through TensorFlow;
+Kokkos and multi-rank operation were not tested.
+
+The private prefix is
+\path{/home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e}.
+Its pinned source archive, compiled executable and shared libraries have an
+actual archive in main home and a verified workstation copy; member hashes are
+in \path{runs/grace-lammps-build-20261017-01/artifact-backup.json}.
+
+All GPU jobs use partition \texttt{v100}, account \texttt{imet-2026-2}, QoS
+\texttt{normal}, one full A100, four CPUs, 32~GiB and a 20-minute cap each.
+Every submission records input hashes, source code commit and scheduler ID.
+Per-job durations, accepted assessment and export hashes accompany the run
+records under \path{runs/fm-deployment-20261017-*/}.
+All seven GPU attempts consumed \textbf{606 single-GPU seconds} in total,
+including failed attempts, compilation and observation holds. The three CPU
+builds plus two diagnostic allocations consumed 2934 allocated CPU-seconds.
+Models, exports, restoration snapshots and raw LAMMPS inputs/outputs are backed
+up privately in cluster main home and on the workstation, with verified member
+checksums. Git stores scripts, configuration, small curated text records and
+this source report. Institutional retention and a shared archive remain open.
+The accepted component-to-run mapping is
+\path{runs/fm-deployment-20261017-07/assessment.json}; earlier failed aggregate
+job statuses are not overwritten by this assessment.
+
+The tests do not establish DFT accuracy, physical transferability, long-trajectory
+stability, multi-GPU correctness or production performance. The AOTInductor
+artifact is tied to its tested hardware/toolchain; revalidate on another target.
+\end{document}

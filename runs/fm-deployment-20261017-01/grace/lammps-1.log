@@ -1,0 +1,84 @@
+2026-10-17 23:39:00.366946: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+LAMMPS (30 Mar 2026)
+2026-10-17 23:39:00.427026: I tensorflow/cc/saved_model/reader.cc:83] Reading SavedModel from: /misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-01/grace/seed/42/saved_model
+2026-10-17 23:39:00.435360: I tensorflow/cc/saved_model/reader.cc:52] Reading meta graph with tags { serve }
+2026-10-17 23:39:00.435372: I tensorflow/cc/saved_model/reader.cc:147] Reading SavedModel debug info (if present) from: /misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-01/grace/seed/42/saved_model
+2026-10-17 23:39:00.435409: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-10-17 23:39:00.695253: W tensorflow/core/common_runtime/gpu/gpu_bfc_allocator.cc:47] Overriding orig_value setting because the TF_FORCE_GPU_ALLOW_GROWTH environment variable is set. Original config value was 0.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792262340.696323 1614773 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 37913 MB memory:  -> device: 0, name: NVIDIA A100-PCIE-40GB, pci bus id: 0000:af:00.0, compute capability: 8.0
+I0000 00:00:1792262340.795586 1614773 mlir_graph_optimization_pass.cc:437] MLIR V1 optimization pass is not enabled
+2026-10-17 23:39:00.804784: I tensorflow/cc/saved_model/loader.cc:236] Restoring SavedModel bundle.
+2026-10-17 23:39:01.025764: I tensorflow/cc/saved_model/loader.cc:220] Running initialization op on SavedModel bundle at path: /misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-01/grace/seed/42/saved_model
+2026-10-17 23:39:01.179858: I tensorflow/cc/saved_model/loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 752834 microseconds.
+2026-10-17 23:39:02.327349: I external/local_xla/xla/service/service.cc:163] XLA service 0x14947401e3c0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2026-10-17 23:39:02.327373: I external/local_xla/xla/service/service.cc:171]   StreamExecutor device (0): NVIDIA A100-PCIE-40GB, Compute Capability 8.0
+2026-10-17 23:39:02.386425: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2026-10-17 23:39:02.593871: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:473] Loaded cuDNN version 92700
+I0000 00:00:1792262344.970595 1614805 device_compiler.h:196] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+  using 4 OpenMP thread(s) per MPI task
+Loaded 0 plugins from 
+Reading data file ...
+  orthogonal box = (0 0 0) to (12 12 12)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  4 atoms
+  read_data CPU = 0.001 seconds
+[GRACE] TF version: 2.20.0
+[GRACE] Neighbour padding is ON, padding fraction: 0.01, max padding fraction before reduction: 0.2, max number of reduction(s): 10
+[GRACE] Loading /misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-01/grace/seed/42/saved_model
+[GRACE] Model loaded
+[GRACE] Mapping LAMMPS atom type #1(Al) -> ACE species type #2
+[GRACE] Compute energy only function is available
+WARNING: No fixes with time integration, atoms won't move
+For more information see https://docs.lammps.org/err0028 (src/verlet.cpp:60)
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7
+  ghost atom cutoff = 7
+  binsize = 3.5, bins = 4 4 4
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair grace, perpetual
+      attributes: full, newton on
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 5.708 | 5.708 | 5.708 Mbytes
+   Step         PotEng          Pxx            Pyy            Pzz            Pyz            Pxz            Pxy      
+         0  -6.2962578534089149 -842.43984655244731 -1148.0865385267275 -1358.2975180314913 215.10784419246684 242.16864921249334 248.29582476929772
+Loop time of 1.985e-06 on 4 procs for 0 steps with 4 atoms
+
+100.8% CPU use with 1 MPI tasks x 4 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0          | 0          | 0          |   0.0 |  0.00
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0          | 0          | 0          |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 1.985e-06  |            |       |100.00
+
+Nlocal:              4 ave           4 max           4 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:             40 ave          40 max          40 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:              0 ave           0 max           0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:           12 ave          12 max          12 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 12
+Ave neighs/atom = 3
+Neighbor list builds = 0
+Dangerous builds = 0
+-6.2962578534089149 -842.43984655244731 -1148.0865385267275 -1358.2975180314913 215.10784419246684 242.16864921249334 248.29582476929772
+[grace] Not enough statistics
+Total wall time: 0:00:04

@@ -1,0 +1,69 @@
+-- The CXX compiler identification is GNU 8.5.0
+-- The C compiler identification is GNU 8.5.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found Git: /usr/bin/git (found version "2.31.1") 
+-- Running check for auto-generated files from make-based build system
+CMake Warning at CMakeLists.txt:183 (message):
+  Using the GNU compilers version 8.5.0 with C++17 or later is not
+  recommended.  Please use GNU compilers version 9.3 or later
+
+
+-- Looking for C++ include omp.h
+-- Looking for C++ include omp.h - found
+-- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+-- Found OpenMP: TRUE (found version "4.5") found components: CXX 
+-- Found GZIP: /usr/bin/gzip  
+-- Downloading https://github.com/ICAMS/lammps-user-pace/archive/refs/tags/v.2025.12.4.p1.tar.gz
+-- User-defined TF_LIB_FILE: /home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorflow/libtensorflow_cc.so.2
+-- TensorFlow library found at /home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorflow/libtensorflow_cc.so.2
+-- TensorFlow framework library found at /home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorflow/libtensorflow_framework.so.2
+-- TensorFlow framework library is FOUND at /home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorflow/libtensorflow_framework.so.2
+-- Downloading cppflow from https://github.com/ACEworksGmbH/cppflow/archive/refs/tags/v2.0.4aw.tar.gz
+-- Found OpenMP_C: -fopenmp (found version "4.5") 
+-- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+-- Found OpenMP: TRUE (found version "4.5")  
+-- Generating style headers...
+-- Generating package headers...
+-- Generating lmpinstalledpkgs.h...
+-- Found Python: /home6/u3129/mlip-research/envs/grace_ft_a100/bin/python3.1 (found version "3.11.17") found components: Interpreter 
+-- Found Python3: /home6/u3129/mlip-research/envs/grace_ft_a100/bin/python3.1 (found version "3.11.17") found components: Interpreter 
+-- The following tools and libraries have been found and configured:
+ * Git
+ * OpenMP
+ * Python
+ * Python3
+
+-- <<< Build configuration >>>
+   LAMMPS Version:   2026.3.30.0 
+   Operating System: Linux AlmaLinux" 8.9
+   CMake Version:    3.20.2
+   Build type:       Release
+   Install path:     /home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/install
+   Generator:        Unix Makefiles using /usr/bin/gmake
+-- Enabled packages: ML-PACE;PLUGIN
+-- <<< Compilers and Flags: >>>
+-- C++ Compiler:     /usr/bin/c++
+      Type:          GNU
+      Version:       8.5.0
+      C++ Standard:  17
+      C++ Flags:     -O3 -DNDEBUG
+      Defines:       LAMMPS_SMALLBIG;LAMMPS_MEMALIGN=64;LAMMPS_OMP_COMPAT=3;LAMMPS_GZIP;PACE_TP;LMP_PLUGIN
+-- C compiler:       /usr/bin/cc
+      Type:          GNU
+      Version:       8.5.0
+      C Flags:       -O3 -DNDEBUG
+-- <<< Linker flags: >>>
+-- Executable name:  lmp
+-- Shared library flags:    
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home6/u3129/mlip-research/software/lammps-grace-b1f4a6c8cc4e/build

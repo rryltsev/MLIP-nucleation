@@ -1,0 +1,17 @@
+plugin load /home/u3129/miniconda3/envs/lammps_deepmd_dpa4/lib/python3.12/site-packages/deepmd/lib/libdeepmd_lmpplugin.so
+units metal
+atom_style atomic
+atom_modify map yes
+boundary p p p
+read_data atoms.data
+mass 1 26.9815385
+newton on
+pair_style deepmd /home6/u3129/mlip-research/runs/fm-deployment-20261017-03/dpa4/exported.pt2
+pair_coeff * * Al
+neighbor 1.0 bin
+neigh_modify every 1 delay 0 check yes
+thermo_style custom step pe pxx pyy pzz pyz pxz pxy
+thermo_modify format float %.17g
+run 0
+print "$(pe:%.17g) $(pxx:%.17g) $(pyy:%.17g) $(pzz:%.17g) $(pyz:%.17g) $(pxz:%.17g) $(pxy:%.17g)" file prediction.txt
+write_dump all custom forces.dump id type x y z fx fy fz modify sort id format float %.17g

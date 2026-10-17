@@ -1,0 +1,62 @@
+-- The CXX compiler identification is GNU 12.2.1
+-- The C compiler identification is GNU 12.2.1
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /opt/rh/gcc-toolset-12/root/usr/bin/g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /opt/rh/gcc-toolset-12/root/usr/bin/gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found Git: /usr/bin/git (found version "2.31.1") 
+-- Running check for auto-generated files from make-based build system
+-- Looking for C++ include omp.h
+-- Looking for C++ include omp.h - found
+-- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+-- Found OpenMP: TRUE (found version "4.5") found components: CXX 
+-- Found PNG: /usr/lib64/libpng.so (found version "1.6.34") 
+-- Found ZLIB: /usr/lib64/libz.so (found version "1.2.11") 
+-- Found GZIP: /usr/bin/gzip  
+-- Could NOT find FFMPEG (missing: FFMPEG_EXECUTABLE) 
+-- Looking for C++ include cmath
+-- Looking for C++ include cmath - found
+-- Generating style headers...
+-- Generating package headers...
+-- Generating lmpinstalledpkgs.h...
+-- Found Python: /home6/u3129/mlip-research/envs/grace_ft_a100/bin/python3.1 (found version "3.11.17") found components: Interpreter 
+-- Found Python3: /home6/u3129/mlip-research/envs/grace_ft_a100/bin/python3.1 (found version "3.11.17") found components: Interpreter 
+-- The following tools and libraries have been found and configured:
+ * Git
+ * OpenMP
+ * PNG
+ * ZLIB
+ * Python
+ * Python3
+
+-- <<< Build configuration >>>
+   LAMMPS Version:   2025.7.22.2 
+   Operating System: Linux AlmaLinux" 8.9
+   CMake Version:    3.20.2
+   Build type:       Release
+   Install path:     /home/u3129/.local
+   Generator:        Unix Makefiles using /usr/bin/gmake
+-- Enabled packages: PLUGIN
+-- <<< Compilers and Flags: >>>
+-- C++ Compiler:     /opt/rh/gcc-toolset-12/root/usr/bin/g++
+      Type:          GNU
+      Version:       12.2.1
+      C++ Standard:  17
+      C++ Flags:     -O3 -DNDEBUG
+      Defines:       LAMMPS_SMALLBIG;LAMMPS_MEMALIGN=64;LAMMPS_OMP_COMPAT=4;LAMMPS_PNG;LAMMPS_GZIP;LMP_PLUGIN
+-- C compiler:       /opt/rh/gcc-toolset-12/root/usr/bin/gcc
+      Type:          GNU
+      Version:       12.2.1
+      C Flags:       -O3 -DNDEBUG
+-- <<< Linker flags: >>>
+-- Executable name:  lmp
+-- Shared library flags:    
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home6/u3129/mlip-research/software/lammps-deepmd-a33449868448/build

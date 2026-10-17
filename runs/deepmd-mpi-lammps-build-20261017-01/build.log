@@ -1,0 +1,449 @@
+[  0%] Generating includes/lammps/fix.h
+[  0%] Generating includes/lammps/lmppython.h
+[  0%] Generating includes/lammps/memory.h
+[  0%] Generating includes/lammps/utils.h
+[  0%] Generating includes/lammps/lmptype.h
+[  0%] Generating includes/lammps/neighbor.h
+[  0%] Generating includes/lammps/fmt/format.h
+[  1%] Generating includes/lammps/pair.h
+[  1%] Built target memory.h
+[  1%] Built target utils.h
+[  1%] Built target neighbor.h
+[  1%] Built target fix.h
+[  1%] Built target lmppython.h
+[  1%] Built target lmptype.h
+[  1%] Built target fmt_format.h
+[  1%] Built target pair.h
+[  1%] Generating includes/lammps/exceptions.h
+[  1%] Generating includes/lammps/bond.h
+[  1%] Generating includes/lammps/platform.h
+[  1%] Generating includes/lammps/output.h
+[  1%] Generating includes/lammps/fmt/core.h
+[  2%] Generating includes/lammps/force.h
+[  3%] Generating includes/lammps/variable.h
+[  3%] Generating includes/lammps/dihedral.h
+[  3%] Built target exceptions.h
+[  3%] Built target platform.h
+[  3%] Built target output.h
+[  3%] Built target bond.h
+[  3%] Built target fmt_core.h
+[  3%] Built target variable.h
+[  3%] Built target force.h
+[  3%] Built target dihedral.h
+[  4%] Generating includes/lammps/domain.h
+[  4%] Generating includes/lammps/neigh_list.h
+[  4%] Generating includes/lammps/improper.h
+[  4%] Generating includes/lammps/command.h
+[  4%] Generating includes/lammps/citeme.h
+[  4%] Generating includes/lammps/region.h
+[  5%] Generating includes/lammps/universe.h
+[  5%] Built target neigh_list.h
+[  5%] Generating includes/lammps/error.h
+[  5%] Built target domain.h
+[  5%] Built target command.h
+[  5%] Built target improper.h
+[  5%] Built target citeme.h
+[  5%] Built target universe.h
+[  5%] Built target region.h
+[  5%] Built target error.h
+[  5%] Generating includes/lammps/angle.h
+[  5%] Generating includes/lammps/update.h
+[  6%] Generating includes/lammps/modify.h
+[  6%] Generating includes/lammps/compute.h
+[  6%] Generating includes/lammps/atom.h
+[  6%] Generating includes/lammps/pointers.h
+-- Git Directory: /home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/.git
+-- Generating lmpgitversion.h...
+[  6%] Built target update.h
+[  6%] Built target angle.h
+[  6%] Built target compute.h
+[  6%] Built target modify.h
+[  6%] Generating includes/lammps/group.h
+[  6%] Built target atom.h
+[  6%] Built target pointers.h
+[  6%] Built target gitversion
+[  7%] Generating includes/lammps/info.h
+[  7%] Built target group.h
+[  7%] Generating includes/lammps/comm.h
+[  7%] Generating includes/lammps/lammps.h
+[  8%] Generating includes/lammps/input.h
+[  8%] Generating includes/lammps/lattice.h
+[  8%] Generating includes/lammps/kspace.h
+[  9%] Built target info.h
+[  9%] Generating includes/lammps/timer.h
+[  9%] Built target comm.h
+[  9%] Built target lammps.h
+[  9%] Generating includes/lammps/library.h
+[  9%] Built target kspace.h
+[  9%] Built target input.h
+[  9%] Built target lattice.h
+[  9%] Built target timer.h
+[  9%] Built target library.h
+[ 10%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/angle_hybrid.cpp.o
+[ 10%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/angle.cpp.o
+[ 10%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/angle_write.cpp.o
+[ 10%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/angle_zero.cpp.o
+[ 10%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/angle_deprecated.cpp.o
+[ 11%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/atom.cpp.o
+[ 11%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/arg_info.cpp.o
+[ 11%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/atom_map.cpp.o
+[ 11%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/atom_vec.cpp.o
+[ 11%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/atom_vec_atomic.cpp.o
+[ 12%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/atom_vec_body.cpp.o
+[ 12%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/atom_vec_charge.cpp.o
+[ 12%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/atom_vec_ellipsoid.cpp.o
+[ 12%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/atom_vec_hybrid.cpp.o
+[ 13%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/atom_vec_line.cpp.o
+[ 13%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/atom_vec_sphere.cpp.o
+[ 13%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/atom_vec_tri.cpp.o
+[ 13%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/balance.cpp.o
+[ 14%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/body.cpp.o
+[ 14%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/bond.cpp.o
+[ 14%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/bond_deprecated.cpp.o
+[ 14%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/bond_hybrid.cpp.o
+[ 15%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/bond_zero.cpp.o
+[ 15%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/change_box.cpp.o
+[ 15%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/citeme.cpp.o
+[ 15%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/comm.cpp.o
+[ 16%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/comm_brick.cpp.o
+[ 16%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/comm_tiled.cpp.o
+[ 16%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute.cpp.o
+[ 16%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_aggregate_atom.cpp.o
+[ 17%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_angle.cpp.o
+[ 17%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_angle_local.cpp.o
+[ 17%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_angmom_chunk.cpp.o
+[ 17%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_bond.cpp.o
+[ 18%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_bond_local.cpp.o
+[ 18%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_centro_atom.cpp.o
+[ 18%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_centroid_stress_atom.cpp.o
+[ 18%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_chunk.cpp.o
+[ 19%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_chunk_atom.cpp.o
+[ 19%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_chunk_spread_atom.cpp.o
+[ 19%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_cluster_atom.cpp.o
+[ 19%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_cna_atom.cpp.o
+[ 19%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_com.cpp.o
+[ 20%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_com_chunk.cpp.o
+[ 20%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_coord_atom.cpp.o
+[ 20%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_count_type.cpp.o
+[ 20%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_deprecated.cpp.o
+[ 21%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_dihedral.cpp.o
+[ 21%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_dihedral_local.cpp.o
+[ 21%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_dipole.cpp.o
+[ 21%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_dipole_chunk.cpp.o
+[ 22%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_displace_atom.cpp.o
+[ 22%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_erotate_sphere.cpp.o
+[ 22%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_erotate_sphere_atom.cpp.o
+[ 22%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_fragment_atom.cpp.o
+[ 23%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_global_atom.cpp.o
+[ 23%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_group_group.cpp.o
+[ 23%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_gyration.cpp.o
+[ 23%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_gyration_chunk.cpp.o
+[ 24%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_heat_flux.cpp.o
+[ 24%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_improper.cpp.o
+[ 24%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_improper_local.cpp.o
+[ 24%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_inertia_chunk.cpp.o
+[ 25%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_ke.cpp.o
+[ 25%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_ke_atom.cpp.o
+[ 25%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_msd.cpp.o
+[ 25%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_msd_chunk.cpp.o
+[ 26%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_omega_chunk.cpp.o
+[ 26%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_orientorder_atom.cpp.o
+[ 26%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_pair.cpp.o
+[ 26%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_pair_local.cpp.o
+[ 27%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_pe.cpp.o
+[ 27%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_pe_atom.cpp.o
+[ 27%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_pressure.cpp.o
+[ 27%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_property_atom.cpp.o
+[ 28%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_property_chunk.cpp.o
+[ 28%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_property_grid.cpp.o
+[ 28%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_property_local.cpp.o
+[ 28%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_rdf.cpp.o
+[ 28%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_reduce.cpp.o
+[ 29%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_reduce_chunk.cpp.o
+[ 29%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_reduce_region.cpp.o
+[ 29%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_slice.cpp.o
+[ 29%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_stress_atom.cpp.o
+[ 30%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_temp.cpp.o
+[ 30%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_temp_chunk.cpp.o
+[ 30%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_temp_com.cpp.o
+[ 30%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_temp_deform.cpp.o
+[ 31%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_temp_partial.cpp.o
+[ 31%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_temp_profile.cpp.o
+[ 31%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_temp_ramp.cpp.o
+[ 31%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_temp_region.cpp.o
+[ 32%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_temp_sphere.cpp.o
+[ 32%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_torque_chunk.cpp.o
+[ 32%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_vacf.cpp.o
+[ 32%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_vacf_chunk.cpp.o
+[ 33%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/compute_vcm_chunk.cpp.o
+[ 33%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/create_atoms.cpp.o
+[ 33%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/create_bonds.cpp.o
+[ 33%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/create_box.cpp.o
+[ 34%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/delete_atoms.cpp.o
+[ 34%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/delete_bonds.cpp.o
+[ 34%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/deprecated.cpp.o
+[ 34%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/dihedral.cpp.o
+[ 35%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/dihedral_deprecated.cpp.o
+[ 35%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/dihedral_hybrid.cpp.o
+[ 35%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/dihedral_write.cpp.o
+[ 35%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/dihedral_zero.cpp.o
+[ 36%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/displace_atoms.cpp.o
+[ 36%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/domain.cpp.o
+[ 36%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/dump.cpp.o
+[ 36%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/dump_atom.cpp.o
+[ 36%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/dump_cfg.cpp.o
+[ 37%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/dump_custom.cpp.o
+[ 37%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/dump_deprecated.cpp.o
+[ 37%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/dump_grid.cpp.o
+[ 37%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/dump_grid_vtk.cpp.o
+[ 38%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/dump_image.cpp.o
+[ 38%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/dump_local.cpp.o
+[ 38%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/dump_movie.cpp.o
+[ 38%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/dump_xyz.cpp.o
+[ 39%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/error.cpp.o
+[ 39%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/finish.cpp.o
+[ 39%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix.cpp.o
+[ 39%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_adapt.cpp.o
+[ 40%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_addforce.cpp.o
+[ 40%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_ave_atom.cpp.o
+[ 40%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_ave_chunk.cpp.o
+[ 40%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_ave_correlate.cpp.o
+[ 41%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_ave_grid.cpp.o
+[ 41%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_ave_histo.cpp.o
+[ 41%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_ave_histo_weight.cpp.o
+[ 41%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_ave_time.cpp.o
+[ 42%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_aveforce.cpp.o
+[ 42%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_balance.cpp.o
+[ 42%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_bond_history.cpp.o
+[ 42%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_box_relax.cpp.o
+[ 43%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_deform.cpp.o
+[ 43%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_deposit.cpp.o
+[ 43%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_deprecated.cpp.o
+[ 43%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_dt_reset.cpp.o
+[ 44%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_dummy.cpp.o
+[ 44%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_efield.cpp.o
+[ 44%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_enforce2d.cpp.o
+[ 44%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_evaporate.cpp.o
+[ 44%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_external.cpp.o
+[ 45%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_gravity.cpp.o
+[ 45%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_group.cpp.o
+[ 45%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_halt.cpp.o
+[ 45%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_heat.cpp.o
+[ 46%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_indent.cpp.o
+[ 46%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_langevin.cpp.o
+[ 46%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_lineforce.cpp.o
+[ 46%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_minimize.cpp.o
+[ 47%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_momentum.cpp.o
+[ 47%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_move.cpp.o
+[ 47%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_neigh_history.cpp.o
+[ 47%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_nh.cpp.o
+[ 48%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_nh_sphere.cpp.o
+[ 48%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_nph.cpp.o
+[ 48%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_nph_sphere.cpp.o
+[ 48%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_npt.cpp.o
+[ 50%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_npt_sphere.cpp.o
+[ 50%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_nve.cpp.o
+[ 50%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_nve_limit.cpp.o
+[ 50%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_nve_noforce.cpp.o
+[ 51%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_nve_sphere.cpp.o
+[ 51%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_nvt.cpp.o
+[ 51%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_nvt_sllod.cpp.o
+[ 51%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_nvt_sphere.cpp.o
+[ 52%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_pair.cpp.o
+[ 52%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_planeforce.cpp.o
+[ 52%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_press_berendsen.cpp.o
+[ 52%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_press_langevin.cpp.o
+[ 53%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_print.cpp.o
+[ 53%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_property_atom.cpp.o
+[ 53%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_read_restart.cpp.o
+[ 53%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_recenter.cpp.o
+[ 54%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_respa.cpp.o
+[ 54%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_restrain.cpp.o
+[ 54%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_set.cpp.o
+[ 54%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_setforce.cpp.o
+[ 54%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_spring.cpp.o
+[ 55%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_spring_chunk.cpp.o
+[ 55%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_spring_self.cpp.o
+[ 55%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_store_atom.cpp.o
+[ 55%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_store_force.cpp.o
+[ 56%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_store_global.cpp.o
+[ 56%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_store_local.cpp.o
+[ 56%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_store_state.cpp.o
+[ 56%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_temp_berendsen.cpp.o
+[ 57%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_temp_rescale.cpp.o
+[ 57%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_thermal_conductivity.cpp.o
+[ 57%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_vector.cpp.o
+[ 57%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_viscous.cpp.o
+[ 58%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_wall.cpp.o
+[ 58%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_wall_harmonic.cpp.o
+[ 58%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_wall_lj1043.cpp.o
+[ 58%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_wall_lj126.cpp.o
+[ 59%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_wall_lj93.cpp.o
+[ 59%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_wall_morse.cpp.o
+[ 59%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_wall_reflect.cpp.o
+[ 59%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_wall_region.cpp.o
+[ 60%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fix_wall_table.cpp.o
+[ 60%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fmtlib_format.cpp.o
+[ 60%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/fmtlib_os.cpp.o
+[ 60%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/force.cpp.o
+[ 61%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/grid2d.cpp.o
+[ 61%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/grid3d.cpp.o
+[ 61%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/group.cpp.o
+[ 61%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/hashlittle.cpp.o
+[ 62%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/image.cpp.o
+[ 62%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/imbalance.cpp.o
+[ 62%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/imbalance_group.cpp.o
+[ 62%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/imbalance_neigh.cpp.o
+[ 62%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/imbalance_store.cpp.o
+[ 63%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/imbalance_time.cpp.o
+[ 63%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/imbalance_var.cpp.o
+[ 63%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/improper.cpp.o
+[ 63%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/improper_deprecated.cpp.o
+[ 64%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/improper_hybrid.cpp.o
+[ 64%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/improper_zero.cpp.o
+[ 64%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/info.cpp.o
+[ 64%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/input.cpp.o
+[ 65%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/integrate.cpp.o
+[ 65%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/irregular.cpp.o
+[ 65%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/kspace.cpp.o
+[ 65%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/kspace_deprecated.cpp.o
+[ 66%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/kspace_zero.cpp.o
+[ 66%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/label_map.cpp.o
+[ 66%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/lammps.cpp.o
+[ 66%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/lattice.cpp.o
+[ 67%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/library.cpp.o
+[ 67%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/lmppython.cpp.o
+[ 67%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/math_eigen.cpp.o
+[ 67%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/math_extra.cpp.o
+[ 68%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/math_special.cpp.o
+[ 68%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/memory.cpp.o
+[ 68%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/min.cpp.o
+[ 68%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/min_cg.cpp.o
+[ 69%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/min_deprecated.cpp.o
+[ 69%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/min_fire.cpp.o
+[ 69%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/min_hftn.cpp.o
+[ 69%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/min_linesearch.cpp.o
+[ 70%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/min_quickmin.cpp.o
+[ 70%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/min_sd.cpp.o
+[ 70%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/minimize.cpp.o
+[ 70%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/modify.cpp.o
+[ 70%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/molecule.cpp.o
+[ 71%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/my_page.cpp.o
+[ 71%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/my_pool_chunk.cpp.o
+[ 71%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/nbin.cpp.o
+[ 71%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/nbin_multi.cpp.o
+[ 72%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/nbin_standard.cpp.o
+[ 72%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/neigh_list.cpp.o
+[ 72%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/neigh_request.cpp.o
+[ 72%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/neighbor.cpp.o
+[ 73%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/npair.cpp.o
+[ 73%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/npair_bin.cpp.o
+[ 73%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/npair_bin_ghost.cpp.o
+[ 73%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/npair_copy.cpp.o
+[ 74%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/npair_halffull.cpp.o
+[ 74%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/npair_multi.cpp.o
+[ 74%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/npair_multi_old.cpp.o
+[ 74%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/npair_nsq.cpp.o
+[ 75%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/npair_nsq_ghost.cpp.o
+[ 75%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/npair_respa_bin.cpp.o
+[ 75%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/npair_respa_nsq.cpp.o
+[ 75%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/npair_skip.cpp.o
+[ 76%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/npair_skip_respa.cpp.o
+[ 76%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/npair_skip_size_off2on.cpp.o
+[ 76%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/npair_skip_size_off2on_oneside.cpp.o
+[ 76%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/npair_trim.cpp.o
+[ 77%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/nstencil.cpp.o
+[ 77%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/nstencil_bin.cpp.o
+[ 77%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/nstencil_ghost_bin.cpp.o
+[ 77%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/nstencil_multi.cpp.o
+[ 78%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/nstencil_multi_old.cpp.o
+[ 78%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/ntopo.cpp.o
+[ 78%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/ntopo_angle_all.cpp.o
+[ 79%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/ntopo_angle_partial.cpp.o
+[ 79%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/ntopo_angle_template.cpp.o
+[ 79%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/ntopo_bond_all.cpp.o
+[ 79%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/ntopo_bond_partial.cpp.o
+[ 79%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/ntopo_bond_template.cpp.o
+[ 79%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/ntopo_dihedral_all.cpp.o
+[ 80%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/ntopo_dihedral_partial.cpp.o
+[ 80%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/ntopo_dihedral_template.cpp.o
+[ 80%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/ntopo_improper_all.cpp.o
+[ 80%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/ntopo_improper_partial.cpp.o
+[ 81%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/ntopo_improper_template.cpp.o
+[ 81%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/output.cpp.o
+[ 81%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/pair.cpp.o
+[ 81%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/pair_born.cpp.o
+[ 82%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/pair_buck.cpp.o
+[ 82%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/pair_buck_coul_cut.cpp.o
+[ 82%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/pair_coul_cut.cpp.o
+[ 82%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/pair_coul_debye.cpp.o
+[ 83%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/pair_coul_dsf.cpp.o
+[ 83%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/pair_coul_wolf.cpp.o
+[ 83%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/pair_deprecated.cpp.o
+[ 83%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/pair_hybrid.cpp.o
+[ 84%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/pair_hybrid_molecular.cpp.o
+[ 84%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/pair_hybrid_overlay.cpp.o
+[ 84%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/pair_hybrid_scaled.cpp.o
+[ 84%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/pair_lj_cut.cpp.o
+[ 85%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/pair_lj_cut_coul_cut.cpp.o
+[ 85%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/pair_lj_expand.cpp.o
+[ 85%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/pair_morse.cpp.o
+[ 85%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/pair_soft.cpp.o
+[ 86%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/pair_table.cpp.o
+[ 86%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/pair_yukawa.cpp.o
+[ 86%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/pair_zero.cpp.o
+[ 86%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/pair_zbl.cpp.o
+[ 87%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/platform.cpp.o
+[ 87%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/potential_file_reader.cpp.o
+[ 87%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/procmap.cpp.o
+[ 87%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/random_mars.cpp.o
+[ 87%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/random_park.cpp.o
+[ 88%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/rcb.cpp.o
+[ 88%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/read_data.cpp.o
+[ 88%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/read_dump.cpp.o
+[ 88%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/read_restart.cpp.o
+[ 89%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/reader_native.cpp.o
+[ 89%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/reader.cpp.o
+[ 89%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/reader_xyz.cpp.o
+[ 89%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/region.cpp.o
+[ 90%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/region_block.cpp.o
+[ 90%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/region_cone.cpp.o
+[ 90%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/region_cylinder.cpp.o
+[ 90%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/region_deprecated.cpp.o
+[ 91%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/region_ellipsoid.cpp.o
+[ 91%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/region_intersect.cpp.o
+[ 91%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/region_plane.cpp.o
+[ 91%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/region_prism.cpp.o
+[ 92%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/region_sphere.cpp.o
+[ 92%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/region_union.cpp.o
+[ 92%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/replicate.cpp.o
+[ 92%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/rerun.cpp.o
+[ 93%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/reset_atoms_id.cpp.o
+[ 93%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/reset_atoms_image.cpp.o
+[ 93%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/reset_atoms_mol.cpp.o
+[ 93%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/respa.cpp.o
+[ 94%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/run.cpp.o
+[ 94%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/set.cpp.o
+[ 94%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/special.cpp.o
+[ 94%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/table_file_reader.cpp.o
+[ 95%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/tabular_function.cpp.o
+[ 95%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/text_file_reader.cpp.o
+[ 95%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/thermo.cpp.o
+[ 95%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/timer.cpp.o
+[ 95%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/tokenizer.cpp.o
+[ 96%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/universe.cpp.o
+[ 96%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/update.cpp.o
+[ 96%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/utils.cpp.o
+[ 96%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/variable.cpp.o
+[ 97%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/velocity.cpp.o
+[ 97%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/verlet.cpp.o
+[ 97%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/write_coeff.cpp.o
+[ 97%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/write_data.cpp.o
+[ 98%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/write_dump.cpp.o
+[ 98%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/write_restart.cpp.o
+[ 98%] Building CXX object CMakeFiles/lammps.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/PLUGIN/plugin.cpp.o
+[ 98%] Linking CXX shared library liblammps.so
+[ 98%] Built target lammps
+[ 98%] Building CXX object CMakeFiles/lmp.dir/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/lammps-a33449868448baf3c73d8eacdb2d329b13361696/src/main.cpp.o
+[100%] Linking CXX executable lmp
+[100%] Built target lmp

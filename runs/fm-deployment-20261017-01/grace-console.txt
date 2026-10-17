@@ -1,0 +1,257 @@
+2026-10-17 23:37:52.485382: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-10-17 23:37:52.536789: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-10-17 23:37:54.077539: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:UserWarning: enabling the new type promotion must happen at the beginning of the program. Please ensure no TF APIs have been used yet.
+2026-10-17 23:38:31.165248: W tensorflow/core/common_runtime/gpu/gpu_bfc_allocator.cc:47] Overriding orig_value setting because the TF_FORCE_GPU_ALLOW_GROWTH environment variable is set. Original config value was 0.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792262311.166140 1611059 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38479 MB memory:  -> device: 0, name: NVIDIA A100-PCIE-40GB, pci bus id: 0000:af:00.0, compute capability: 8.0
+WARNING:tensorflow:From /home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorflow/python/util/dispatch.py:1264: calling expand_dims (from tensorflow.python.ops.array_ops) with dim is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the `axis` argument instead
+WARNING:tensorflow:From /home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorflow/python/util/dispatch.py:1264: calling expand_dims (from tensorflow.python.ops.array_ops) with dim is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the `axis` argument instead
+2026-10-17 23:38:52.075613: I external/local_xla/xla/service/service.cc:163] XLA service 0x559711a9b040 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2026-10-17 23:38:52.075644: I external/local_xla/xla/service/service.cc:171]   StreamExecutor device (0): NVIDIA A100-PCIE-40GB, Compute Capability 8.0
+2026-10-17 23:38:52.210638: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2026-10-17 23:38:52.430159: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:473] Loaded cuDNN version 92700
+I0000 00:00:1792262334.936421 1611059 device_compiler.h:196] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+[tensorpotential] Info: tf.experimental.numpy behavior enabled.
+[tensorpotential] Info: TensorFloat-32 execution disabled.
+{
+  "status": "passed",
+  "backend": "grace",
+  "job_id": "20950321",
+  "host": "tesla-a101",
+  "environment": "/home6/u3129/mlip-research/envs/grace_ft_a100",
+  "started_utc": "2026-10-17T18:37:51.330781+00:00",
+  "scope": "synthetic software restart/deployment check only",
+  "tolerances": {
+    "energy": 1e-07,
+    "forces": 1e-07,
+    "stress": 1e-09,
+    "rtol": 1e-07
+  },
+  "source_input_sha256": {
+    "grace/data/provenance.json": "4336cf379c81f4e504528036aa41e52838d19e68b9967d55c1cf38171673fffa",
+    "grace/data/train.extxyz": "7d5ca31075e5266aec4720159aa43caf9ccfca318dca5cfedd722e952a4e9de3",
+    "grace/data/train/set.000/box.npy": "7a9591b6f60240bbc56ea39a256a3b3f345c2a5a9d97f1e0d85404f134ab61ab",
+    "grace/data/train/set.000/coord.npy": "e806a44d9aa1a02a7ff1f463437aea4746d1eb0c03890bc1e2e70fc09062f548",
+    "grace/data/train/set.000/energy.npy": "86b34ef91677e2ac328840ef59d5c43faaa4c1cebe76af16a465abe78918cafe",
+    "grace/data/train/set.000/force.npy": "96f8eaef2f85b8ddd460e8f659f65ee559cf618fea00b55120908fe5fafa7387",
+    "grace/data/train/set.000/virial.npy": "9b0332f6cbea06a302c05300908cf3e2c3c45264afebb380a2249889d2ff2523",
+    "grace/data/train/type.raw": "6a33a504c8d16194914401f4f46532de96e1b63119fc5981341c6b65c6c27096",
+    "grace/data/train/type_map.raw": "caca9e1e8fb0757238c027c8bad3af35e724e3a84ae3acb5a3cd2db9a9966f95",
+    "grace/data/validation.extxyz": "d0453b6c11256c03c26e6b05d7fb0f4937989a5a7fee22e043e3aee211612e8b",
+    "grace/data/validation/set.000/box.npy": "50d59885445a2280f81c0167b605dbf523c5e3ad95edb5ffea263990008176c4",
+    "grace/data/validation/set.000/coord.npy": "9e86b74bb4c9bd6a1bb852e7604d8012daa400ec009565934626d0f104d91cc4",
+    "grace/data/validation/set.000/energy.npy": "ff974f6a2cd7fbfa9c7b09a071940a8b7c71d8c990bcf2fdc7ecb9e46e6ce08f",
+    "grace/data/validation/set.000/force.npy": "b637a8558f1d281b09b1e1ca8252b412e26b06af1ef98ae6317e97896cbdcd00",
+    "grace/data/validation/set.000/virial.npy": "dcff29f72b5963b5a177a05c89d0de349fc1b36e53773eb23f633e8badf70e0e",
+    "grace/data/validation/type.raw": "6a33a504c8d16194914401f4f46532de96e1b63119fc5981341c6b65c6c27096",
+    "grace/data/validation/type_map.raw": "caca9e1e8fb0757238c027c8bad3af35e724e3a84ae3acb5a3cd2db9a9966f95",
+    "grace/input.yaml": "e9af012370b824b2c2ff654163e9faa238db5e364b2b81a3bdd229ff7119f1bd",
+    "grace/result.json": "e0b4d1b904c25ccd69ad850b4c155437c04fe8e7b057546928e46b212297734e",
+    "grace/seed/42/checkpoints/checkpoint.data-00000-of-00001": "1b90ab95d56958fe6850b223bfaba006a101057a3deca982838f8e4ce54d8a6c",
+    "grace/seed/42/checkpoints/checkpoint.index": "5d1d64ca68a571fe383db961554485035ec63c56ed26c7c8ff5b9598699585c0",
+    "grace/seed/42/model.yaml": "5ff9d4e9db61dab14a9e6b924c33bedc651d17c24e1635d8906fe7fed993ee73"
+  },
+  "restart_process": {
+    "command": [
+      "/home6/u3129/mlip-research/envs/grace_ft_a100/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-01/grace/../restart-child.py",
+      "grace",
+      "input.yaml",
+      "-rl"
+    ],
+    "exitcode": 0,
+    "seconds": 33.57331677339971,
+    "pid": 1611197,
+    "gpu_samples": [
+      {
+        "seconds": 8.551258923485875,
+        "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 544"
+      },
+      {
+        "seconds": 9.583447955548763,
+        "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 672"
+      },
+      {
+        "seconds": 10.615271812304854,
+        "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 672"
+      },
+      {
+        "seconds": 11.64828285947442,
+        "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 672"
+      },
+      {
+        "seconds": 12.680704336613417,
+        "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 672"
+      },
+      {
+        "seconds": 13.705256747081876,
+        "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 672"
+      },
+      {
+        "seconds": 14.735221896320581,
+        "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 682"
+      },
+      {
+        "seconds": 15.76514158397913,
+        "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 682"
+      },
+      {
+        "seconds": 16.797394244000316,
+        "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 682"
+      },
+      {
+        "seconds": 17.829792853444815,
+        "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 682"
+      },
+      {
+        "seconds": 18.862617637962103,
+        "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 682"
+      },
+      {
+        "seconds": 19.89393931813538,
+        "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 682"
+      },
+      {
+        "seconds": 20.926288083195686,
+        "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 682"
+      },
+      {
+        "seconds": 21.958195827901363,
+        "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 682"
+      },
+      {
+        "seconds": 22.99322446063161,
+        "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 686"
+      },
+      {
+        "seconds": 24.02354229427874,
+        "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 686"
+      },
+      {
+        "seconds": 25.054246874526143,
+        "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 686"
+      },
+      {
+        "seconds": 26.084299571812153,
+        "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 686"
+      },
+      {
+        "seconds": 27.114976529031992,
+        "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 686"
+      },
+      {
+        "seconds": 28.1456547845155,
+        "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 686"
+      },
+      {
+        "seconds": 29.176234675571322,
+        "process": "1611197, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 686"
+      }
+    ]
+  },
+  "restart_state": {
+    "step": 20,
+    "epoch": 5,
+    "optimizer_iterations": 20,
+    "exactly_restored_tensor_count": 62,
+    "optimizer_tensor_count": 38
+  },
+  "final_step": 24,
+  "export_process": {
+    "command": [
+      "/home6/u3129/mlip-research/envs/grace_ft_a100/bin/gracemaker",
+      "input.yaml",
+      "-rl",
+      "-s"
+    ],
+    "exitcode": 0,
+    "seconds": 12.413329979404807,
+    "pid": 1613368,
+    "gpu_samples": [
+      {
+        "seconds": 4.1465200167149305,
+        "process": "1613368, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 418"
+      },
+      {
+        "seconds": 5.1801531333476305,
+        "process": "1613368, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 544"
+      },
+      {
+        "seconds": 6.210404893383384,
+        "process": "1613368, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 544"
+      },
+      {
+        "seconds": 7.2408491615206,
+        "process": "1613368, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 544"
+      },
+      {
+        "seconds": 8.269887203350663,
+        "process": "1613368, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 544"
+      },
+      {
+        "seconds": 9.301635382696986,
+        "process": "1613368, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 544"
+      },
+      {
+        "seconds": 10.332393700256944,
+        "process": "1613368, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 544"
+      }
+    ]
+  },
+  "ase_equivalence": {
+    "energy": {
+      "max_abs": 2.6645352591003757e-15,
+      "atol": 1e-07,
+      "rtol": 1e-07,
+      "passed": true
+    },
+    "forces": {
+      "max_abs": 7.41073868937292e-15,
+      "atol": 1e-07,
+      "rtol": 1e-07,
+      "passed": true
+    },
+    "stress": {
+      "max_abs": 5.312590645178972e-17,
+      "atol": 1e-09,
+      "rtol": 1e-07,
+      "passed": true
+    }
+  },
+  "lammps_binary_sha256": "24e14a24f82e93fdb8501924ef7f35c20cf07e5ab758b327ad9bcd27cf14b44d",
+  "lammps_equivalence": {
+    "energy": {
+      "max_abs": 1.3322676295501878e-14,
+      "atol": 1e-07,
+      "rtol": 1e-07,
+      "passed": true
+    },
+    "forces": {
+      "max_abs": 1.099120794378905e-14,
+      "atol": 1e-07,
+      "rtol": 1e-07,
+      "passed": true
+    },
+    "stress": {
+      "max_abs": 8.831456781155378e-10,
+      "atol": 1e-09,
+      "rtol": 1e-07,
+      "passed": true
+    }
+  },
+  "export_sha256": {
+    "metadata.json": "87befee53206847b37bd4d092a3d0deb1ce9d3fd5e8f8d46972cd7356c89ae67",
+    "metadata.yaml": "4f5f4d3adf228da543fd58ea0a63441258526d3cf3d0c65e57fd844c1bd10336",
+    "saved_model.pb": "320e152160b86e9edb1ec4c5aad89d988759568a1fb14e24a81c9ae062a1aa06",
+    "fingerprint.pb": "d8cc3c9bb8070a7900b9cc45a8274e9244674c0961106ec3ac535a30cba66385",
+    "variables/variables.data-00000-of-00001": "942e723f5676d7311e378ccd97ccb2f1d04a48c9440f7c7949334f01caad3a2b",
+    "variables/variables.index": "2491c3cc507f7d19a31f1354a748f30f115f94d32baac40d15373c1304e0f898"
+  },
+  "finished_utc": "2026-10-17T18:39:16.724028+00:00"
+}

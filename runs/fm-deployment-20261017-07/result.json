@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "cases": {
+    "dpa4": {
+      "status": "passed",
+      "backend": "dpa4",
+      "job_id": "20950337",
+      "scope": "LAMMPS consume-only test; no training or export",
+      "mpi_root": "/misc/umt_shared/opt/intel/oneapi/mpi/2021.17",
+      "lammps_equivalence": {
+        "energy": {
+          "max_abs": 1.1920928955078125e-06,
+          "atol": 0.0001,
+          "rtol": 0.0001,
+          "passed": true
+        },
+        "forces": {
+          "max_abs": 1.130625605583191e-05,
+          "atol": 0.0001,
+          "rtol": 0.0001,
+          "passed": true
+        },
+        "stress": {
+          "max_abs": 2.039939679676639e-08,
+          "atol": 1e-06,
+          "rtol": 0.0001,
+          "passed": true
+        }
+      },
+      "consumed_source": {
+        "remote_run_dir": "/home6/u3129/mlip-research/runs/fm-deployment-20261017-03",
+        "job_id": "20950326",
+        "files": {
+          "exported.pt2": "772b5398c4edaf67859d354ca652868c5a941d3b94973ed70ad47ec684d81988",
+          "checkpoint-predictions.json": "8b9d3eca8a12630a6292a15f39b783958730add2380d7378b51d50ee27838da1",
+          "comparison.extxyz": "f87ae9dfcc850d10d6326f36ce8687b966c27e84bc1288761c853a30d0321452",
+          "result.json": "c3c6d2e9970f98b304efaa0c2a817e14180f6b72e1c3ccaa1ab27f002242418b"
+        }
+      },
+      "lammps_binary_sha256": "b8b0eef6af935a094235a21c1d098008052f3167183561eb60cfe9c9a866b28a",
+      "plugin_sha256": "b324bc09ad8bbc4b52ea7c885c9ac7b6ed0236d44e7302207d657b9c7d9beec8"
+    }
+  }
+}

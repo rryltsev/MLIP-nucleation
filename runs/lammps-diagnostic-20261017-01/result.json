@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "scope": "diagnostic execution only, not LAMMPS validation",
+  "job_id": "20950328",
+  "backtrace": "backtrace.txt"
+}

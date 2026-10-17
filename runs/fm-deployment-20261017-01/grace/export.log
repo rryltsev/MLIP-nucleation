@@ -1,0 +1,36 @@
+2026-10-17 23:38:38.015358: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-10-17 23:38:38.061682: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-10-17 23:38:39.641910: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:UserWarning: enabling the new type promotion must happen at the beginning of the program. Please ensure no TF APIs have been used yet.
+2026/10/17 23:38:41 I - Redirecting log into file seed/42/log.txt
+2026/10/17 23:38:41 I - ========================================
+2026/10/17 23:38:41 I -             Start GRACEmaker
+2026/10/17 23:38:41 I - ========================================
+2026/10/17 23:38:41 I - GRACEmaker version: 0.6.1
+2026/10/17 23:38:41 I - Tensorflow version: 2.20.0
+2026/10/17 23:38:41 I - Loaded input.yaml... 
+2026/10/17 23:38:41 I - Set seed to 42
+2026/10/17 23:38:41 I - Data distribution strategy: Single GPU
+2026/10/17 23:38:41 I - Number of replicas: 1
+2026/10/17 23:38:41 I - Replica ID in sync group: 0
+2026/10/17 23:38:41 I - Model YAML file is provided, try to adjust input
+2026/10/17 23:38:41 I - Loading model config from `/misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-01/grace/seed/42/model.yaml`
+2026/10/17 23:38:41 I - Setting data::cutoff to 6.0
+2026/10/17 23:38:41 I - Setting potential::elements to {'Ac': 0, 'Ag': 1, 'Al': 2, 'Ar': 3, 'As': 4, 'Au': 5, 'B': 6, 'Ba': 7, 'Be': 8, 'Bi': 9, 'Br': 10, 'C': 11, 'Ca': 12, 'Cd': 13, 'Ce': 14, 'Cl': 15, 'Co': 16, 'Cr': 17, 'Cs': 18, 'Cu': 19, 'Dy': 20, 'Er': 21, 'Eu': 22, 'F': 23, 'Fe': 24, 'Ga': 25, 'Gd': 26, 'Ge': 27, 'H': 28, 'He': 29, 'Hf': 30, 'Hg': 31, 'Ho': 32, 'I': 33, 'In': 34, 'Ir': 35, 'K': 36, 'Kr': 37, 'La': 38, 'Li': 39, 'Lu': 40, 'Mg': 41, 'Mn': 42, 'Mo': 43, 'N': 44, 'Na': 45, 'Nb': 46, 'Nd': 47, 'Ne': 48, 'Ni': 49, 'Np': 50, 'O': 51, 'Os': 52, 'P': 53, 'Pa': 54, 'Pb': 55, 'Pd': 56, 'Pm': 57, 'Pr': 58, 'Pt': 59, 'Pu': 60, 'Rb': 61, 'Re': 62, 'Rh': 63, 'Ru': 64, 'S': 65, 'Sb': 66, 'Sc': 67, 'Se': 68, 'Si': 69, 'Sm': 70, 'Sn': 71, 'Sr': 72, 'Ta': 73, 'Tb': 74, 'Tc': 75, 'Te': 76, 'Th': 77, 'Ti': 78, 'Tl': 79, 'Tm': 80, 'U': 81, 'V': 82, 'W': 83, 'Xe': 84, 'Y': 85, 'Yb': 86, 'Zn': 87, 'Zr': 88}
+2026/10/17 23:38:41 I - Setting potential::avg_n_neigh to 39.773345702648434
+2026/10/17 23:38:41 I - Setting potential::scale to 1.892985414710868
+2026/10/17 23:38:41 I - param_dtype=float64 inferred from model.yaml metadata
+2026/10/17 23:38:41 I - Loading model config from `/misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-01/grace/seed/42/model.yaml`
+2026-10-17 23:38:41.770486: W tensorflow/core/common_runtime/gpu/gpu_bfc_allocator.cc:47] Overriding orig_value setting because the TF_FORCE_GPU_ALLOW_GROWTH environment variable is set. Original config value was 0.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792262321.771568 1613368 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 37919 MB memory:  -> device: 0, name: NVIDIA A100-PCIE-40GB, pci bus id: 0000:af:00.0, compute capability: 8.0
+2026/10/17 23:38:42 I - Saving model config to seed/42/model.yaml
+2026/10/17 23:38:42 I - Setting checkpoint with trackable objects: dict_keys(['model', 'step', 'epoch', 'intra_epoch_save', 'optimizer'])
+2026/10/17 23:38:42 I - Trying to load latest regular checkpoint
+2026/10/17 23:38:42 I - Loaded checkpoint from seed/42/checkpoints/checkpoint
+2026/10/17 23:38:42 I - Saving model to `saved_model` and exit.
+2026/10/17 23:38:46 I - Function `compute` contains input name(s) resource, indices, y, segment_ids, tensor with unsupported characters which will be renamed to mlpout2scalartarget_mlp_layer1_readvariableop_resource, aaaa_gatherv2_1_indices, aaaa_mul_1_y, aaaa_unsortedsegmentsum_segment_ids, aa2_reshape_tensor in the SavedModel.
+2026/10/17 23:38:47 I - Function `compute_energy` contains input name(s) resource, indices, y, segment_ids, tensor with unsupported characters which will be renamed to mlpout2scalartarget_mlp_layer1_readvariableop_resource, aaaa_gatherv2_1_indices, aaaa_mul_1_y, aaaa_unsortedsegmentsum_segment_ids, aa2_reshape_tensor in the SavedModel.
+[tensorpotential] Info: tf.experimental.numpy behavior enabled.
+[tensorpotential] Info: TensorFloat-32 execution disabled.

@@ -1,0 +1,26 @@
+{
+  "bytes": 162713600,
+  "local_archive": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\MLIP-research\\artifacts\\fm-run-backups\\lammps-deepmd-a33449868448.tar",
+  "members": {
+    "build/CMakeCache.txt": {
+      "bytes": 32403,
+      "sha256": "2848e70dc7afeffff6fff117dec27f90c76ffadcf2b1d11f32fb00c47f29155a"
+    },
+    "build/liblammps.so.0": {
+      "bytes": 10019360,
+      "sha256": "413bbf4c7dc3d6f17bdeb6cfb067fedf0b35c0603075d61731ed5b4ad020295f"
+    },
+    "build/lmp": {
+      "bytes": 32064,
+      "sha256": "249acca6e6403faa722d8f944d48e95f02656978e2b46cb669bd65fe6c3bc03c"
+    },
+    "source.tar.gz": {
+      "bytes": 152619127,
+      "sha256": "2f429b328ec40128957ab0e27a9fbb30ec8a3c398ca1a9ca5b4786edebabd6f7"
+    }
+  },
+  "remote_archive": "/home/u3129/.local/share/mlip-research/test-artifacts/lammps-deepmd-a33449868448.tar",
+  "scope": "private source and binaries; TensorFlow runtime rebuilt separately from existing exact environment lock",
+  "sha256": "21034ef2ca626c589611ba576d6e35a441361d128d7329b3b8dce66d1f493c99",
+  "verified_retrieval": true
+}

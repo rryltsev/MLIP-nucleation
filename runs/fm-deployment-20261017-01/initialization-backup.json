@@ -1,0 +1,30 @@
+{
+  "bytes": 90757120,
+  "local_archive": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\MLIP-research\\artifacts\\fm-run-backups\\fm-deployment-20261017-01-initialization.tar",
+  "members": {
+    "dpa4/restored/model.json": {
+      "bytes": 13,
+      "sha256": "622a4b4ec1f94f216596abfffce8634c2dccec12a0ca1a45b43e5829c3820ee3"
+    },
+    "dpa4/restored/model.pt": {
+      "bytes": 7997375,
+      "sha256": "58b60f88b81f88e033b9f091fd65f1e9bc9312a102b1fb099317a8af04e699f9"
+    },
+    "grace/restored/model.data-00000-of-00001": {
+      "bytes": 82742928,
+      "sha256": "e15af54c718fd7d5c9dbb7ce68c9ff7cdc32cd1b521d10f4f8e91e258cdde185"
+    },
+    "grace/restored/model.index": {
+      "bytes": 3970,
+      "sha256": "1b797cf84af5a3db15468cb1e5d25fb4e73cc861c5e1652b3c9d877892aa890c"
+    },
+    "grace/restored/model.json": {
+      "bytes": 53,
+      "sha256": "72657fc523bd0394d4071dfc3ab5f51b4a4c9929ffcd4cc492ff81fa5f6eac6d"
+    }
+  },
+  "policy": "Actual private main-home archive and second workstation copy; no weights uploaded to GitHub; institutional backup/retention unconfirmed",
+  "remote_archive": "/home/u3129/.local/share/mlip-research/test-artifacts/fm-deployment-20261017-01-initialization.tar",
+  "sha256": "2e73a518370cad2dc71ddd0c073828410ca1c065fc0ac947a78dce998bbfa677",
+  "verified_retrieval": true
+}

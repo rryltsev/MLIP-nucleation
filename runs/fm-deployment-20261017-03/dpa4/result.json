@@ -1,0 +1,1071 @@
+{
+  "status": "failed",
+  "backend": "dpa4",
+  "job_id": "20950326",
+  "host": "tesla-a101",
+  "environment": "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4",
+  "started_utc": "2026-10-17T18:46:55.732300+00:00",
+  "scope": "synthetic software restart/deployment check only",
+  "tolerances": {
+    "energy": 0.0001,
+    "forces": 0.0001,
+    "stress": 1e-06,
+    "rtol": 0.0001
+  },
+  "source_input_sha256": {
+    "dpa4/data/provenance.json": "f154feae5e5684beeb51520cde1d6be8d1999854d0fc5f027b54fd184c16160c",
+    "dpa4/data/train/set.000/box.npy": "7a9591b6f60240bbc56ea39a256a3b3f345c2a5a9d97f1e0d85404f134ab61ab",
+    "dpa4/data/train/set.000/coord.npy": "e806a44d9aa1a02a7ff1f463437aea4746d1eb0c03890bc1e2e70fc09062f548",
+    "dpa4/data/train/set.000/energy.npy": "86b34ef91677e2ac328840ef59d5c43faaa4c1cebe76af16a465abe78918cafe",
+    "dpa4/data/train/set.000/force.npy": "96f8eaef2f85b8ddd460e8f659f65ee559cf618fea00b55120908fe5fafa7387",
+    "dpa4/data/train/set.000/virial.npy": "9b0332f6cbea06a302c05300908cf3e2c3c45264afebb380a2249889d2ff2523",
+    "dpa4/data/train/type.raw": "6a33a504c8d16194914401f4f46532de96e1b63119fc5981341c6b65c6c27096",
+    "dpa4/data/train/type_map.raw": "caca9e1e8fb0757238c027c8bad3af35e724e3a84ae3acb5a3cd2db9a9966f95",
+    "dpa4/data/validation/set.000/box.npy": "50d59885445a2280f81c0167b605dbf523c5e3ad95edb5ffea263990008176c4",
+    "dpa4/data/validation/set.000/coord.npy": "9e86b74bb4c9bd6a1bb852e7604d8012daa400ec009565934626d0f104d91cc4",
+    "dpa4/data/validation/set.000/energy.npy": "ff974f6a2cd7fbfa9c7b09a071940a8b7c71d8c990bcf2fdc7ecb9e46e6ce08f",
+    "dpa4/data/validation/set.000/force.npy": "b637a8558f1d281b09b1e1ca8252b412e26b06af1ef98ae6317e97896cbdcd00",
+    "dpa4/data/validation/set.000/virial.npy": "dcff29f72b5963b5a177a05c89d0de349fc1b36e53773eb23f633e8badf70e0e",
+    "dpa4/data/validation/type.raw": "6a33a504c8d16194914401f4f46532de96e1b63119fc5981341c6b65c6c27096",
+    "dpa4/data/validation/type_map.raw": "caca9e1e8fb0757238c027c8bad3af35e724e3a84ae3acb5a3cd2db9a9966f95",
+    "dpa4/input.json": "56ddef612adb5033ea7d3360ae72516d19f22fc224ca601a16ccd816c0209e04",
+    "dpa4/model.ckpt-20.pt": "bc480fc7eb8cecc5adbd75713645403a35d533f410dd35962108c5cecb4d67d5",
+    "dpa4/result.json": "7945bc45b75bd66a71e9ed7f4b8bbdd0db7205a946aef8558a3820c2d3b7cebb"
+  },
+  "restart_process": {
+    "command": [
+      "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-02/dpa4/../restart-child.py",
+      "dpa4",
+      "--pt",
+      "train",
+      "input.json",
+      "--restart",
+      "/home6/u3129/mlip-research/runs/fm-finetune-20261017-01/dpa4/model.ckpt-20.pt"
+    ],
+    "exitcode": 0,
+    "seconds": 15.237989716231823,
+    "pid": 1619317,
+    "gpu_samples": [
+      {
+        "seconds": 6.973087364807725,
+        "process": "1619317, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 524"
+      },
+      {
+        "seconds": 8.033906247466803,
+        "process": "1619317, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 526"
+      },
+      {
+        "seconds": 9.065868129953742,
+        "process": "1619317, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 566"
+      },
+      {
+        "seconds": 10.09347783215344,
+        "process": "1619317, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 546"
+      },
+      {
+        "seconds": 11.127087268978357,
+        "process": "1619317, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 554"
+      },
+      {
+        "seconds": 12.159870216622949,
+        "process": "1619317, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 580"
+      },
+      {
+        "seconds": 13.193266216665506,
+        "process": "1619317, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 580"
+      },
+      {
+        "seconds": 14.237772496417165,
+        "process": "1619317, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 568"
+      }
+    ]
+  },
+  "restart_state": {
+    "exactly_restored_tensor_count": 413,
+    "optimizer_tensor_count": 267,
+    "restored_step": 20,
+    "counter_metadata": {
+      "step": 20,
+      "raw_checkpoint_step": 19,
+      "optimizer_iterations": 20,
+      "compatibility_step_adjustment": 1
+    },
+    "scheduler_changes": [
+      {
+        "field": "optimizer/param_groups/0/lr",
+        "checkpoint": 1e-05,
+        "restart": 1.4677992676220697e-05,
+        "reason": "LR scheduler recomputed for the extended stopping target"
+      }
+    ]
+  },
+  "reused_restart": {
+    "remote_run_dir": "/home6/u3129/mlip-research/runs/fm-deployment-20261017-02",
+    "job_id": "20950322",
+    "checkpoint_sha256": "a5f2dee2ec3ccec39dd91f1abe83759f837be4a54334e4bc127dbbb5cbc0db78",
+    "result_sha256": "eedbaf3bf126174c016db2637077fb44294f5a1d0317571c74016a85d97b880f"
+  },
+  "final_internal_step": 23,
+  "final_step": 24,
+  "export_process": {
+    "command": [
+      "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/dp",
+      "--pt",
+      "freeze",
+      "-c",
+      "/misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-03/dpa4/model.ckpt-24.pt",
+      "-o",
+      "/misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-03/dpa4/exported"
+    ],
+    "exitcode": 0,
+    "seconds": 242.1202177107334,
+    "pid": 1641702,
+    "gpu_samples": [
+      {
+        "seconds": 5.133395230397582,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 494"
+      },
+      {
+        "seconds": 6.164069816470146,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 7.192965775728226,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 8.222635550424457,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 9.252887329086661,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 10.281887296587229,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 11.312471959739923,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 12.341822003945708,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 13.372469257563353,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 14.401679176837206,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 15.43232387304306,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 16.449850792065263,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 17.479962455108762,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 18.50886539183557,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 19.53932356275618,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 20.56933913938701,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 21.599745189771056,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 22.62969239242375,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 23.658728156238794,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 24.68937206454575,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 25.719532078132033,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 26.748901011422276,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 27.777741143479943,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 28.80700263567269,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 29.836415791884065,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 30.866861011832952,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 31.89722696505487,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 32.92685140483081,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 33.95724320970476,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 34.98930730111897,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 36.00497729703784,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 37.036664959043264,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 38.066725965589285,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 39.09668720699847,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 40.126777958124876,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 41.15675825998187,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 42.18738036789,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 43.21674274839461,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 44.24790749698877,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 45.277702126652,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 46.295110527426004,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 47.32392487116158,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 48.3535608202219,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 49.38283086754382,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 50.412360675632954,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 51.44308054447174,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 52.47221028059721,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 53.50197482481599,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 54.53095732815564,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 55.55992526002228,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 56.58879800513387,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 57.61788259446621,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 58.64792036451399,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 59.6776454038918,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 60.70692287199199,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 61.73701118119061,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 62.76579298824072,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 63.79541924037039,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 64.82588381320238,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 65.85535565204918,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 66.8855684120208,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 67.91637301258743,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 68.94565238431096,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 69.96201045438647,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 70.99086076021194,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 72.01995286345482,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 73.04901500791311,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 74.07871710881591,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 75.10786257870495,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 76.12458563968539,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 77.15383158624172,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 78.18304130807519,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 79.21356375701725,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 80.2428183965385,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 81.27169025689363,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 82.30081925168633,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 83.32983729243279,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 84.35877431184053,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 85.38784717954695,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 86.41845521703362,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 87.44778871908784,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 88.47730395570397,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 89.50685204006732,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 90.53572250343859,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 91.56486492976546,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 92.59487195312977,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 93.62484084442258,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 94.65483504347503,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 496"
+      },
+      {
+        "seconds": 95.68443460762501,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 96.71405003592372,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 97.74564207158983,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 98.77481300197542,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 99.79136342741549,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 100.82077366486192,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 101.83729999698699,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 102.86831329204142,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 103.89879593998194,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 104.9198052957654,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 105.93937521800399,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 106.96986722759902,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 108.02316598594189,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 109.05634462460876,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 110.08732628636062,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 111.11575635708869,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 112.14493083581328,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 113.17402736842632,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 114.20352904871106,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 115.23298327997327,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 116.26246595941484,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 117.29179400764406,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 118.32083090767264,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 119.34998227842152,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 120.37945576384664,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 121.40844267047942,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 122.43882612511516,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 123.46788567118347,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 124.49781123176217,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 125.52776521630585,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 126.55670128017664,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 127.5860583037138,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 128.61491792462766,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 129.64387205429375,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 130.672737846151,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 131.7025603801012,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 132.73188310489058,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 133.7615740671754,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 134.79086485505104,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 135.80981710366905,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 136.8400001320988,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 137.86945659667253,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 138.89936603419483,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 139.92949811555445,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 140.9589121080935,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 141.98800667002797,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 143.01708994805813,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 144.04614835232496,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 145.07549078017473,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 146.10506659001112,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 147.13386917300522,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 148.1628658194095,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 149.1932597141713,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 150.2243763562292,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 151.25479917228222,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 152.28403880260885,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 153.3138111885637,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 154.34375127591193,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 155.37355590052903,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 156.40378594398499,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 157.4392700586468,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 158.46886779367924,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 159.49835317581892,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 160.52842503599823,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 161.55851973965764,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 162.58804731443524,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 163.61785613372922,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 164.64751244336367,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 165.66874282434583,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 166.69802318885922,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 167.7269477043301,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 168.75787814892828,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 169.78699831292033,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 170.8175234645605,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 171.8468650355935,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 172.8758805245161,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 173.90497298911214,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 174.9344237986952,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 175.96394009888172,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 176.99305733293295,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 178.02183377556503,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 179.05092374421656,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 180.07988793589175,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 181.10886801220477,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 182.13791783712804,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 183.16779896989465,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 184.19810870476067,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 185.22692195884883,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 186.25574422441423,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 187.2848383449018,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 188.31391033157706,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 189.34529536031187,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 190.37510702759027,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 191.40396268293262,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 192.43294087052345,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 193.4645686056465,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 194.49542263150215,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 195.52591712400317,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 196.54264386743307,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 197.57224658876657,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 198.60234608501196,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 199.632938221097,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 200.66178203374147,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 201.69095121137798,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 202.7208450678736,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 203.75189866870642,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 204.80169530771673,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 205.838622700423,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 206.91142893210053,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 207.95130601339042,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 209.00293860398233,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 210.04186564311385,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 211.08758033812046,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 212.1556424368173,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 213.20896205678582,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 214.25114022940397,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 215.3087662924081,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 216.3712276816368,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 217.43171286396682,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 218.47621355205774,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 219.5060576442629,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 220.53561032004654,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 522"
+      },
+      {
+        "seconds": 221.565319404006,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 562"
+      },
+      {
+        "seconds": 222.59538424946368,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 602"
+      },
+      {
+        "seconds": 223.62537513673306,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 606"
+      },
+      {
+        "seconds": 224.65614406391978,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 606"
+      },
+      {
+        "seconds": 225.67522676102817,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 606"
+      },
+      {
+        "seconds": 226.7048465386033,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 606"
+      },
+      {
+        "seconds": 227.73411574587226,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 606"
+      },
+      {
+        "seconds": 228.7643072437495,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 606"
+      },
+      {
+        "seconds": 229.79462717287242,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 606"
+      },
+      {
+        "seconds": 230.82460100762546,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 606"
+      },
+      {
+        "seconds": 231.85400510020554,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 606"
+      },
+      {
+        "seconds": 232.88306963257492,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 606"
+      },
+      {
+        "seconds": 233.91210876777768,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 606"
+      },
+      {
+        "seconds": 234.9409939646721,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 606"
+      },
+      {
+        "seconds": 235.97022050619125,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 606"
+      },
+      {
+        "seconds": 237.00007903948426,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 606"
+      },
+      {
+        "seconds": 238.02971846424043,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 606"
+      },
+      {
+        "seconds": 239.05976217240095,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 606"
+      },
+      {
+        "seconds": 240.09048626944423,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 606"
+      },
+      {
+        "seconds": 241.1200034637004,
+        "process": "1641702, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 606"
+      }
+    ]
+  },
+  "ase_equivalence": {
+    "energy": {
+      "max_abs": 9.5367431640625e-07,
+      "atol": 0.0001,
+      "rtol": 0.0001,
+      "passed": true
+    },
+    "forces": {
+      "max_abs": 5.628913640975952e-06,
+      "atol": 0.0001,
+      "rtol": 0.0001,
+      "passed": true
+    },
+    "stress": {
+      "max_abs": 2.315969607584456e-08,
+      "atol": 1e-06,
+      "rtol": 0.0001,
+      "passed": true
+    }
+  },
+  "lammps_binary_sha256": "2636c5b16dd1e0b30b6681b733dfa1d21fb7ab896290102040c58b9dfe558a48",
+  "lammps_plugin_sha256": "b324bc09ad8bbc4b52ea7c885c9ac7b6ed0236d44e7302207d657b9c7d9beec8",
+  "error": "Traceback (most recent call last):\n  File \"/misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-03/dpa4/../fm-deployment.py\", line 239, in main\n    (dpa4 if BACKEND=='dpa4' else grace)(structures,result)\n  File \"/misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-03/dpa4/../fm-deployment.py\", line 182, in dpa4\n    after=lammps_predictions(binary,exported,structures,plugin);save(ROOT/'lammps-export-predictions.json',after)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-03/dpa4/../fm-deployment.py\", line 109, in lammps_predictions\n    record=execute([str(binary),'-in','in.lammps'], 'lammps-'+str(i),seconds=120,env=env,cwd=folder)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-03/dpa4/../fm-deployment.py\", line 39, in execute\n    if check:assert proc.returncode==0,(ROOT/(name+'.log')).read_text(errors='replace')[-5000:]\n                    ^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "finished_utc": "2026-10-17T18:51:20.148254+00:00"
+}

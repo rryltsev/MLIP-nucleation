@@ -1,0 +1,21 @@
+{
+  "label_source": "geometry-only synthetic export diagnostic; NOT DFT",
+  "frames": [
+    "validation-0",
+    "validation-1",
+    "validation-0 sheared/scaled cell",
+    "validation-1 periodic images"
+  ],
+  "sha256": "f87ae9dfcc850d10d6326f36ce8687b966c27e84bc1288761c853a30d0321452",
+  "units": {
+    "energy": "eV total",
+    "forces": "eV/angstrom",
+    "stress": "eV/angstrom^3 tensile, Voigt xx yy zz yz xz xy"
+  },
+  "tolerances_fixed_before_submission": {
+    "energy": 1e-07,
+    "forces": 1e-07,
+    "stress": 1e-09,
+    "rtol": 1e-07
+  }
+}

@@ -1,0 +1,36 @@
+seed: 42
+cutoff: 6.0
+data:
+  filename: /misc/home6/u3129/mlip-research/runs/fm-finetune-20261017-01/grace/data/train.extxyz
+  test_filename: /misc/home6/u3129/mlip-research/runs/fm-finetune-20261017-01/grace/data/validation.extxyz
+  reference_energy: 0
+  max_workers: 1
+potential:
+  filename: /misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-01/grace/seed/42/model.yaml
+  shift: false
+  reduce_elements: false
+fit:
+  maxiter: 6
+  optimizer: Adam
+  opt_params:
+    learning_rate: 0.0001
+    use_ema: false
+  reset_epoch_and_step: false
+  reset_optimizer: false
+  eval_init_stats: true
+  scheduler: cosine_decay
+  scheduler_params:
+    minimum_learning_rate: 1.0e-05
+  loss:
+    energy:
+      type: square
+      weight: 1.0
+    forces:
+      type: square
+      weight: 1.0
+  batch_size: 2
+  test_batch_size: 2
+  jit_compile: false
+  checkpoint_freq: 1
+  train_max_n_buckets: 1
+  test_max_n_buckets: 1

@@ -1,0 +1,24 @@
+4
+Lattice="12.0 0.0 0.0 0.0 12.0 0.0 0.0 0.0 12.0" Properties=species:S:1:pos:R:3 label_source=synthetic_harmonic_pairs_NOT_DFT parent_id=validation-0 pbc="T T T"
+Al       3.00966210       2.93847311       3.03788821
+Al       5.65314331       2.90223880       2.91551081
+Al       3.05946684       5.66353818       3.08391507
+Al       3.04444685       2.96674137       5.57164271
+4
+Lattice="12.0 0.0 0.0 0.0 12.0 0.0 0.0 0.0 12.0" Properties=species:S:1:pos:R:3 label_source=synthetic_harmonic_pairs_NOT_DFT parent_id=validation-1 pbc="T T T"
+Al       2.95984345       2.95771856       2.86793669
+Al       5.60360088       2.94022854       2.91422631
+Al       3.05037545       5.66464552       2.97893349
+Al       3.05594622       2.96207096       5.65544882
+4
+Lattice="12.0 0.0 0.0 0.4 11.7 0.0 0.1 -0.2 12.3" Properties=species:S:1:pos:R:3 label_source=synthetic_harmonic_pairs_NOT_DFT parent_id=validation-0 pbc="T T T"
+Al       3.13292694       2.81437981       3.11383542
+Al       5.77418053       2.78109098       2.98839858
+Al       3.27395074       5.47055114       3.16101295
+Al       3.18976858       2.79971212       5.71093378
+4
+Lattice="7.2 0.0 0.0 0.0 7.4 0.0 0.0 0.0 7.6" Properties=species:S:1:pos:R:3 label_source=synthetic_harmonic_pairs_NOT_DFT parent_id=validation-1 pbc="T T T"
+Al       0.20000000       0.30000000       0.40000000
+Al       5.60360088       2.94022854       2.91422631
+Al       3.05037545       5.66464552       2.97893349
+Al       3.05594622       2.96207096       5.65544882

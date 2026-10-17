@@ -1,0 +1,60 @@
+{
+  "command": [
+    "/home6/u3129/mlip-research/software/lammps-deepmd-mpi-a33449868448/build/lmp",
+    "-in",
+    "in.lammps"
+  ],
+  "exitcode": 0,
+  "seconds": 7.372240232303739,
+  "pid": 1717565,
+  "gpu_samples": [
+    {
+      "seconds": 1.9380488526076078,
+      "process": "1717565, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 416"
+    },
+    {
+      "seconds": 2.160063225775957,
+      "process": "1717565, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 532"
+    },
+    {
+      "seconds": 2.3785530775785446,
+      "process": "1717565, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 538"
+    },
+    {
+      "seconds": 2.593135990202427,
+      "process": "1717565, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 538"
+    },
+    {
+      "seconds": 2.8080078531056643,
+      "process": "1717565, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 538"
+    },
+    {
+      "seconds": 3.021854717284441,
+      "process": "1717565, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 538"
+    },
+    {
+      "seconds": 3.235769357532263,
+      "process": "1717565, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 538"
+    },
+    {
+      "seconds": 3.449693826958537,
+      "process": "1717565, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 538"
+    },
+    {
+      "seconds": 3.6642395183444023,
+      "process": "1717565, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 538"
+    },
+    {
+      "seconds": 3.878706542775035,
+      "process": "1717565, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 538"
+    },
+    {
+      "seconds": 4.093504069373012,
+      "process": "1717565, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 538"
+    },
+    {
+      "seconds": 4.314040143042803,
+      "process": "1717565, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 530"
+    }
+  ]
+}
