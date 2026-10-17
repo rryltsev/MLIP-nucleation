@@ -11,6 +11,7 @@ from datetime import datetime, timezone
 ROOT = Path(__file__).resolve().parents[1]
 KEY = Path(os.environ.get("USERPROFILE", str(Path.home()))) / ".ssh" / "id_ed25519_mlip_umt"
 STATUS = ROOT / "artifacts" / "ssh-setup.local.json"
+DEBUG_LOG = ROOT / "artifacts" / "ssh-setup-debug.local.log"
 
 
 def status(phase, **extra):
@@ -55,11 +56,19 @@ def main():
             "printf '\\n%s\\n' \"$key\" >> ~/.ssh/authorized_keys; fi; "
             "printf 'Public key installed.\\n'"
         )
-        print("Enter your CLUSTER password at the SSH prompt. Input is hidden.", flush=True)
+        print("Password login: u3129@umt.imm.uran.ru:22", flush=True)
+        print("Check keyboard layout and Caps Lock. Enter your CLUSTER password; input is hidden.", flush=True)
         status("awaiting_password", fingerprint=fingerprint)
-        subprocess.run(ssh_args() + ["-o", "PubkeyAuthentication=no", "-o",
+        installation = subprocess.run(ssh_args() + ["-v", "-E", str(DEBUG_LOG),
+                       "-o", "BatchMode=no", "-o", "PasswordAuthentication=yes",
+                       "-o", "PubkeyAuthentication=no", "-o",
                        "PreferredAuthentications=password,keyboard-interactive", "-o",
-                       "NumberOfPasswordPrompts=1", "mlip-umt", remote], check=True)
+                       "NumberOfPasswordPrompts=2", "mlip-umt", remote])
+        if installation.returncode:
+            status("password_login_failed", fingerprint=fingerprint,
+                   exit_code=installation.returncode, debug_log=str(DEBUG_LOG))
+            print("Password login/key installation failed. Check " + str(DEBUG_LOG), file=sys.stderr)
+            return installation.returncode
         result = subprocess.run(ssh_args() + ["-o", "BatchMode=yes", "-o",
                                 "PreferredAuthentications=publickey", "mlip-umt", "hostname"],
                                 check=True, capture_output=True, text=True)
