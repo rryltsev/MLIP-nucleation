@@ -1,0 +1,9 @@
+{
+  "name": "mlip_checkpoint_cache_and_device_selection",
+  "observed_utc": "2026-10-17T16:36:47.452533+00:00",
+  "script": "python3 - <<'PY'\nfrom pathlib import Path\nimport json\nfor folder in ['/home/u3129/.cache/deepmd','/home/u3129/.cache/grace']:\n p=Path(folder)\n print(json.dumps({'cache':folder,'exists':p.exists(),'model_files':[str(x.relative_to(p)) for x in p.glob('**/*') if x.is_file() and x.suffix in ['.pt','.pt2','.pth','.yaml','.index']][:100]}))\nb=Path('/home/u3129/miniconda3/envs/deepmd_320_a100/lib/python3.12/site-packages/deepmd')\nfor rel in ['pt/utils/env.py','pt_expt/utils/env.py']:\n p=b/rel\n if p.is_file():\n  print('FILE',rel)\n  print('\\n'.join(s for s in p.read_text().splitlines() if 'DEVICE' in s or 'cuda' in s or 'LOCAL_RANK' in s))\nPY\n",
+  "returncode": 0,
+  "timed_out": false,
+  "stdout": "{\"cache\": \"/home/u3129/.cache/deepmd\", \"exists\": false, \"model_files\": []}\n{\"cache\": \"/home/u3129/.cache/grace\", \"exists\": false, \"model_files\": []}\nFILE pt/utils/env.py\nLOCAL_RANK = os.environ.get(\"LOCAL_RANK\")\nLOCAL_RANK = int(0 if LOCAL_RANK is None else LOCAL_RANK)\nif os.environ.get(\"DEVICE\") == \"cpu\" or torch.cuda.is_available() is False:\n    DEVICE = torch.device(\"cpu\")\n    DEVICE = torch.device(f\"cuda:{LOCAL_RANK}\")\n    \"DEVICE\",\n    \"LOCAL_RANK\",\nFILE pt_expt/utils/env.py\nLOCAL_RANK = os.environ.get(\"LOCAL_RANK\")\nLOCAL_RANK = int(0 if LOCAL_RANK is None else LOCAL_RANK)\nif os.environ.get(\"DEVICE\") == \"cpu\" or torch.cuda.is_available() is False:\n    DEVICE = torch.device(\"cpu\")\n    DEVICE = torch.device(f\"cuda:{LOCAL_RANK}\")\n    \"DEVICE\",\n    \"LOCAL_RANK\",\n",
+  "stderr": ""
+}

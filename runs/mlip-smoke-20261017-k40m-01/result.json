@@ -1,0 +1,71 @@
+{
+  "started_utc": "2026-10-17T16:36:28.424559+00:00",
+  "host": "tesla47",
+  "python": "3.10.13 (main, Sep 11 2023, 13:21:10) [GCC 11.2.0]",
+  "prefix": "/home/u3129/miniconda3/envs/deepmd_2210_k40",
+  "backend": "tf",
+  "job_id": "20950193",
+  "cuda_visible_devices": "0",
+  "status": "passed",
+  "cases": [
+    {
+      "variant": "se_e2_a",
+      "backend_flag": [],
+      "input_sha256": "1980fda31b48760c8fd0042c9ab4610350ec76eec20d9d6f0b802a41ad6e2f18",
+      "train": {
+        "command": [
+          "/home/u3129/miniconda3/envs/deepmd_2210_k40/bin/dp",
+          "train",
+          "input.json"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 26.537225091829896,
+        "log": "/misc/home6/u3129/mlip-research/runs/mlip-smoke-20261017-k40m-01/se_e2_a/train.log",
+        "log_sha256": "f574d644c35e04826c74e33e1835234646ceac31c233f42174b26788d94ac05d",
+        "tail": "t to \"socket\".\nOMP: Info #288: KMP_AFFINITY: topology layer \"LL cache\" is equivalent to \"socket\".\nOMP: Info #288: KMP_AFFINITY: topology layer \"L3 cache\" is equivalent to \"socket\".\nOMP: Info #288: KMP_AFFINITY: topology layer \"L2 cache\" is equivalent to \"core\".\nOMP: Info #288: KMP_AFFINITY: topology layer \"L1 cache\" is equivalent to \"core\".\nOMP: Info #192: KMP_AFFINITY: 2 sockets x 2 cores/socket x 1 thread/core (4 total cores)\nOMP: Info #219: KMP_AFFINITY: OS proc to physical thread map:\nOMP: Info #172: KMP_AFFINITY: OS proc 0 maps to socket 0 core 0 thread 0 \nOMP: Info #172: KMP_AFFINITY: OS proc 1 maps to socket 0 core 1 thread 1 \nOMP: Info #172: KMP_AFFINITY: OS proc 8 maps to socket 1 core 2 thread 2 \nOMP: Info #172: KMP_AFFINITY: OS proc 9 maps to socket 1 core 3 thread 3 \nOMP: Info #255: KMP_AFFINITY: pid 1003795 tid 1003795 thread 0 bound to OS proc set 0\nDEEPMD INFO    built lr\nDEEPMD INFO    built network\nDEEPMD INFO    built training\nDEEPMD INFO    initialize model from scratch\nDEEPMD INFO    start training at lr 1.00e-03 (== 1.00e-03), decay_step 5, decay_rate 0.562341, final lr will be 1.00e-04\nWARNING:tensorflow:From /home/u3129/miniconda3/envs/deepmd_2210_k40/lib/python3.10/site-packages/deepmd/train/trainer.py:1194: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.\nInstructions for updating:\ntf.py_func is deprecated in TF V2. Instead, there are two\n    options available in V2.\n    - tf.py_function takes a python function which manipulates tf eager\n    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to\n    an ndarray (just call tensor.numpy()) but having access to eager tensors\n    means `tf.py_function`s can use accelerators such as GPUs as well as\n    being differentiable using a gradient tape.\n    - tf.numpy_function maintains the semantics of the deprecated tf.py_func\n    (it is not differentiable, and manipulates numpy arrays). It drops the\n    stateful argument making all functions stateful.\n    \nWARNING:tensorflow:From /home/u3129/miniconda3/envs/deepmd_2210_k40/lib/python3.10/site-packages/deepmd/train/trainer.py:1194: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.\nInstructions for updating:\ntf.py_func is deprecated in TF V2. Instead, there are two\n    options available in V2.\n    - tf.py_function takes a python function which manipulates tf eager\n    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to\n    an ndarray (just call tensor.numpy()) but having access to eager tensors\n    means `tf.py_function`s can use accelerators such as GPUs as well as\n    being differentiable using a gradient tape.\n    - tf.numpy_function maintains the semantics of the deprecated tf.py_func\n    (it is not differentiable, and manipulates numpy arrays). It drops the\n    stateful argument making all functions stateful.\n    \nDEEPMD INFO    batch       5 training time 0.48 s, testing time 0.01 s, total wall time 0.85 s\nDEEPMD INFO    batch      10 training time 0.05 s, testing time 0.01 s, total wall time 0.06 s\nDEEPMD INFO    batch      15 training time 0.04 s, testing time 0.01 s, total wall time 0.05 s\nDEEPMD INFO    batch      20 training time 0.04 s, testing time 0.01 s, total wall time 0.05 s\nDEEPMD INFO    saved checkpoint model.ckpt\nDEEPMD INFO    average training time: 0.0084 s/batch (exclude first 5 batches)\nDEEPMD INFO    finished training\nDEEPMD INFO    wall time: 1.543 s\n"
+      },
+      "finite_learning_curve": true,
+      "last_step": 20,
+      "checkpoints": {
+        "model.ckpt.meta": "b9a805b5093a8339c86bb1fcfcd2497ed72223e79bf603b628f393f6f5cb8453",
+        "model.ckpt-20.meta": "b9a805b5093a8339c86bb1fcfcd2497ed72223e79bf603b628f393f6f5cb8453",
+        "model.ckpt.index": "f4f0683ba238d8827af84474de70e7e47b9cda62b8fea249c5815c68f9efbdd6",
+        "model.ckpt-20.index": "f4f0683ba238d8827af84474de70e7e47b9cda62b8fea249c5815c68f9efbdd6",
+        "model.ckpt-20.data-00000-of-00001": "ccc6168778a3f08dbf662808112556b4f2d4c8198512b6bfa4b2909fab032037",
+        "model.ckpt.data-00000-of-00001": "ccc6168778a3f08dbf662808112556b4f2d4c8198512b6bfa4b2909fab032037"
+      },
+      "status": "passed"
+    }
+  ],
+  "packages": {
+    "deepmd-kit": "2.2.10",
+    "numpy": "1.26.4"
+  },
+  "gpu": {
+    "backend": "tensorflow",
+    "version": "2.9.0",
+    "build": {
+      "cpu_compiler": "/home/conda/feedstock_root/build_artifacts/tensorflow-split_1653090656346/_build_env/bin/x86_64-conda-linux-gnu-gcc",
+      "cuda_compute_capabilities": [
+        "sm_35",
+        "sm_50",
+        "sm_60",
+        "sm_62",
+        "sm_70",
+        "sm_72",
+        "sm_75",
+        "compute_75"
+      ],
+      "cuda_version": "10.2",
+      "cudnn_version": "7",
+      "is_cuda_build": true,
+      "is_rocm_build": false,
+      "is_tensorrt_build": false
+    },
+    "devices": [
+      "PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')"
+    ],
+    "gradient_device": "/job:localhost/replica:0/task:0/device:GPU:0"
+  },
+  "finished_utc": "2026-10-17T16:37:40.666580+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "data/provenance.json": "05962c20ba742efeb08743d1b6d10a7547b1fec3cd66a09a559af5421640a4cf",
+  "dpa4/input.json": "de3a777359eeedf06cefb0322b2332df44f08a7a889c12a447a1e776dbb74c82",
+  "dpa4/lcurve.out": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "dpa4/train.log": "e7101bac409a553f6eac60eac63ade9dbfd8cdc9c4c3ac70fb22ebd5e76a2a76",
+  "dpa4c/input.json": "fdfa4c0e5e3dee00945e40714bc7bc5504b474e67a994cb4e435f919c51e8ee8",
+  "dpa4c/lcurve.out": "2c8c4256510bed5a302af55bfcdf148af86e6ac9557939c2645681a2b1d4288c",
+  "dpa4c/train.log": "8dbe2c659697bd8b95766982f04828bb933aa789f7c063d1b0e2576d6f29af03",
+  "gpu.csv": "08b3d4e8827ed804e1248ef6613dea7247ca19bc54bffd9554a5dafda3e4af92",
+  "node.txt": "32898fd57d84a6100aeb52dcc0ada0d512ea9e2b841d00f0a974709aa07700fa",
+  "nvidia-smi.txt": "9c1d7d489bf8d93086782345e6f8f10df1349dce70182975be69ef7673d33372",
+  "pip-freeze.txt": "83a6345ced8c17bbcb2e7ed8bc5c09472a846cb3f7b958366089a5015efeb5cf",
+  "result.json": "46ec2c4cdc305c1a5f0745ccf0a32ee15387cf66748b24a11bff0560ed8d44dd",
+  "se_e2_a/input.json": "57aba0e7ac8016bbdad77555377418735c749e3038259fe9425401afa6ded073",
+  "se_e2_a/lcurve.out": "9e8c14146daee7389aea5b45233285f50d3de65f10f829ed05173fe60b15794d",
+  "se_e2_a/train.log": "cb70c75c7562a07c7ab1af0a309710c526b44d5bba8d62383d4df9f2443a437b",
+  "slurm-20950192.out": "46ec2c4cdc305c1a5f0745ccf0a32ee15387cf66748b24a11bff0560ed8d44dd"
+}

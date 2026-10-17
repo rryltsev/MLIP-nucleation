@@ -1,0 +1,35 @@
+{
+  "authorization": "user requested small Slurm tests on A100 and K40m; initial cap two single-GPU jobs of ten minutes each",
+  "code_commit": "6ed4ee7a6b5cb10f3928d713cb5d84743fdac31e",
+  "created_utc": "2026-10-17T16:35:45.993923+00:00",
+  "host": "umt.imm.uran.ru",
+  "input_hash": "1eb1e14d50eee3a967604e180ecfeca26a78c10ca3d2d7c48d3484abee7794b1",
+  "input_sha256": {
+    "mlip-smoke.py": "718a22ce4a1c457531f452df4eb3e458927b8ed0ad9a72fb5594a0d196cb9e60",
+    "mlip-smoke.sbatch": "2945b5e032b7dc4f45786655bf879935c0ac3aa6acecc7d5b4acf29e99978dfc"
+  },
+  "job_id": "20950192",
+  "label_policy": "synthetic harmonic pairs only; no DFT labels or FM predictions",
+  "profile": {
+    "backend": "pt",
+    "environment": "deepmd_320_a100",
+    "gres": "gpu:a100:1",
+    "partition": "v100"
+  },
+  "purpose": "user-requested small MLIP GPU training checks",
+  "remote_run_dir": "/home6/u3129/mlip-research/runs/mlip-smoke-20261017-a100-01",
+  "resources": {
+    "account": "imet-2026-2",
+    "cpus": 4,
+    "gpus": 1,
+    "memory_gib": 16,
+    "nodes": 1,
+    "qos": "normal",
+    "tasks": 1,
+    "walltime": "00:10:00"
+  },
+  "run_id": "mlip-smoke-20261017-a100-01",
+  "runtime_status": "partial_or_failed",
+  "scheduler_observation": "20950192|FAILED|1:0|00:01:27|4|tesla-a101\n",
+  "stage": "collected"
+}

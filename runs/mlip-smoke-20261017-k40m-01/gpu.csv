@@ -1,0 +1,2 @@
+name, uuid, driver_version, memory.total [MiB]
+Tesla K40m, GPU-5e3de024-bb84-2cad-772b-4be725987278, 440.33.01, 11441 MiB

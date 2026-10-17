@@ -1,0 +1,26 @@
+{
+  "label_source": "synthetic harmonic pairs, NOT DFT or teacher predictions",
+  "purpose": "software runtime check only; no scientific accuracy conclusions",
+  "seed": 20261017,
+  "energy_unit": "eV",
+  "force_unit": "eV/angstrom",
+  "virial_unit": "eV",
+  "virial_definition": "sum_i r_i tensor F_i; row-major xx xy xz yx yy yz zx zy zz",
+  "split": "independent random configurations; no held-out scientific test set used",
+  "input_sha256": {
+    "validation/type.raw": "6a33a504c8d16194914401f4f46532de96e1b63119fc5981341c6b65c6c27096",
+    "validation/type_map.raw": "caca9e1e8fb0757238c027c8bad3af35e724e3a84ae3acb5a3cd2db9a9966f95",
+    "validation/set.000/force.npy": "a32204d51ba32c53f18bfac4760649a8cf10a29534978acc9cdf6abe0e317dfd",
+    "validation/set.000/virial.npy": "31d73cf42b39a639553f93a2bef68a0986cb537c3dad1be0fd34ab7b4132f29d",
+    "validation/set.000/energy.npy": "797997f8a283368231f8b1f1160304e96a5d5c24595dfd1dea85612c49b0fe15",
+    "validation/set.000/box.npy": "50d59885445a2280f81c0167b605dbf523c5e3ad95edb5ffea263990008176c4",
+    "validation/set.000/coord.npy": "9e86b74bb4c9bd6a1bb852e7604d8012daa400ec009565934626d0f104d91cc4",
+    "train/type.raw": "6a33a504c8d16194914401f4f46532de96e1b63119fc5981341c6b65c6c27096",
+    "train/type_map.raw": "caca9e1e8fb0757238c027c8bad3af35e724e3a84ae3acb5a3cd2db9a9966f95",
+    "train/set.000/force.npy": "e8cbf70b710ede1bae021f852d48cbecdc2f207ad64f54d940e6d49c5f8e858f",
+    "train/set.000/virial.npy": "f72222920082946e8d7371ac70418d509da2cfd2e762f232a1b4065ba7e05ec3",
+    "train/set.000/energy.npy": "30242cc3d1fd6ace9f1303ec49b55da60463f98f76adfc4ee53c1ed1646d5cc0",
+    "train/set.000/box.npy": "7a9591b6f60240bbc56ea39a256a3b3f345c2a5a9d97f1e0d85404f134ab61ab",
+    "train/set.000/coord.npy": "e806a44d9aa1a02a7ff1f463437aea4746d1eb0c03890bc1e2e70fc09062f548"
+  }
+}

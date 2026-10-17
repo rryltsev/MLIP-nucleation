@@ -1,0 +1,64 @@
+{
+  "model": {
+    "type": "dpa4",
+    "type_map": [
+      "Al"
+    ],
+    "descriptor": {
+      "sel": 16,
+      "rcut": 5.0,
+      "channels": 8,
+      "n_radial": 8,
+      "lmax": 2,
+      "mmax": 1,
+      "n_blocks": 1,
+      "mixing_layers": 1,
+      "use_amp": false,
+      "precision": "float32",
+      "seed": 42
+    },
+    "fitting_net": {
+      "neuron": [
+        8
+      ],
+      "precision": "float32",
+      "seed": 42
+    }
+  },
+  "learning_rate": {
+    "type": "exp",
+    "start_lr": 0.001,
+    "stop_lr": 0.0001,
+    "decay_steps": 5
+  },
+  "loss": {
+    "type": "ener",
+    "start_pref_e": 1.0,
+    "limit_pref_e": 1.0,
+    "start_pref_f": 1.0,
+    "limit_pref_f": 1.0,
+    "start_pref_v": 0.0,
+    "limit_pref_v": 0.0
+  },
+  "training": {
+    "training_data": {
+      "systems": [
+        "/misc/home6/u3129/mlip-research/runs/mlip-smoke-20261017-a100-01/data/train"
+      ],
+      "batch_size": 1
+    },
+    "validation_data": {
+      "systems": [
+        "/misc/home6/u3129/mlip-research/runs/mlip-smoke-20261017-a100-01/data/validation"
+      ],
+      "batch_size": 1,
+      "numb_btch": 1
+    },
+    "numb_steps": 20,
+    "seed": 42,
+    "disp_freq": 5,
+    "save_freq": 20,
+    "disp_file": "lcurve.out",
+    "save_ckpt": "model.ckpt"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "source": "https://pypi.org/pypi/tensorpotential/0.6.1/json",
+  "version": "0.6.1",
+  "requires_python": ">=3.9",
+  "requires_dist": [
+    "tensorflow<=2.20; sys_platform == \"win32\" or sys_platform == \"darwin\"",
+    "tensorflow[and-cuda]<=2.20; sys_platform == \"linux\"",
+    "tf_keras",
+    "scipy",
+    "matscipy",
+    "numpy<3.0.0",
+    "sympy",
+    "pandas<3.0.0",
+    "ase",
+    "pyyaml>=6.0.2",
+    "tqdm",
+    "requests",
+    "questionary>=2.0",
+    "rich>=13.0",
+    "scikit-learn>=1.1"
+  ],
+  "files": [
+    {
+      "filename": "tensorpotential-0.6.1-py3-none-any.whl",
+      "sha256": "30252f47322564c19237e6d8d64150a9d6c4d21d49edf9a5bb07e6ba71a0916f"
+    },
+    {
+      "filename": "tensorpotential-0.6.1.tar.gz",
+      "sha256": "bf6c4c915729b0dbb5b1da99888c3db6898716dd01dcbf20d638b6cc144a4154"
+    }
+  ]
+}

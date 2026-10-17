@@ -72,5 +72,13 @@
     "status": "installed privately; archive and all 1286 extracted files verified; PBE and LDA input assembly passed",
     "policy": "use this library for future VASP inputs; select family and variants explicitly, record ordered hashes per run; licensed contents never enter Git",
     "scientific_validation": "no new DFT calculations; functional, variants and cutoffs remain study-specific choices"
+  },
+  "mlip_runtime_checks": {
+    "status": "initial tests collected; DPA4 dependency diagnosis continuing",
+    "runs": [
+      "runs/mlip-smoke-20261017-a100-01/manifest.json",
+      "runs/mlip-smoke-20261017-k40m-01/manifest.json"
+    ],
+    "observations": "A100 se_e2_a and DPA4c train 20 steps; DPA4 lacks vesin-torch/nvalchemiops; K40m legacy DeepMD train 20 steps; GRACE absent"
   }
 }
