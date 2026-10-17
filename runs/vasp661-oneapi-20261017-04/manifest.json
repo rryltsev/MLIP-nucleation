@@ -23,8 +23,10 @@
     "memory_gib": 16,
     "walltime": "01:00:00"
   },
-  "stage": "submitted",
+  "stage": "failed",
   "job_id": "20950122",
   "previous_job_id": "20950117",
-  "retry_reason": "build and validate on compute-writable home6, then deploy binaries to read-only home4 from login node"
+  "retry_reason": "build and validate on compute-writable home6, then deploy binaries to read-only home4 from login node",
+  "scheduler_state": "FAILED",
+  "scheduler_exit_code": "1:0"
 }

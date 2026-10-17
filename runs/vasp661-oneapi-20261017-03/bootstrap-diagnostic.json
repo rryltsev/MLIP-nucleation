@@ -1,5 +1,14 @@
 {
   "purpose": "read node-local stdout from failed job 20950117 and test shared-path writes",
-  "state": "submission_intent",
-  "resources": {"node": "apollo20", "partition": "apollo", "account": "imet-2026-2", "cpus": 1, "memory_mib": 512, "walltime": "00:02:00"}
+  "state": "completed",
+  "resources": {
+    "node": "apollo20",
+    "partition": "apollo",
+    "account": "imet-2026-2",
+    "cpus": 1,
+    "memory_mib": 512,
+    "walltime": "00:02:00"
+  },
+  "job_id": "20950118",
+  "finding": "compute-node write to home4 failed: Read-only file system"
 }

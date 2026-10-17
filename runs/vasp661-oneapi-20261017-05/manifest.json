@@ -1,0 +1,30 @@
+{
+  "run_id": "vasp661-oneapi-20261017-05",
+  "created_utc": "2026-10-17T15:46:18.707097+00:00",
+  "purpose": "user-requested installation and selected upstream validation tests",
+  "host": "umt.imm.uran.ru",
+  "user": "u3129",
+  "remote_install_root": "/home6/u3129/.local/opt/vasp/6.6.1-oneapi-2025",
+  "remote_run_dir": "/home6/u3129/.local/opt/vasp/6.6.1-oneapi-2025/runs/vasp661-oneapi-20261017-05",
+  "archive_sha256": "261f9c1fd730468106191afeb185821d67cb7a58c982f6e063824dd5432106b0",
+  "archive_size": 85036103,
+  "input_sha256": {
+    "build.sbatch": "fabcaa70aa455c181b31e22f4b91f6f84d527113261e142b0fac2b29772aa7b0",
+    "overrides.mk": "088846cd65453b7311e0dda3544fced18ca1daad7643595f4e883aa1b2e5cb31",
+    "env.sh": "7a6d4ac66df1137f93cb599a41831281cf5543eeeb3f51b08a12725910b31150"
+  },
+  "code_commit": "a7ca246cabac704fa35c81e7d800bfc70fa54418",
+  "resources": {
+    "partition": "apollo",
+    "account": "imet-2026-2",
+    "qos": "normal",
+    "nodes": 1,
+    "cpus": 8,
+    "memory_gib": 16,
+    "walltime": "01:00:00"
+  },
+  "stage": "submitted",
+  "job_id": "20950123",
+  "previous_job_id": "20950122",
+  "retry_reason": "configuration repaired after recorded terminal failure; see input hashes and code commit"
+}

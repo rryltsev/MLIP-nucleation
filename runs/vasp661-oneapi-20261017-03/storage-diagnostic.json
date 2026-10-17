@@ -1,5 +1,13 @@
 {
   "purpose": "verify compute-node write access to home6 after home4 read-only failure",
-  "state": "submission_intent",
-  "resources": {"partition": "apollo", "account": "imet-2026-2", "cpus": 1, "memory_mib": 512, "walltime": "00:02:00"}
+  "state": "completed",
+  "resources": {
+    "partition": "apollo",
+    "account": "imet-2026-2",
+    "cpus": 1,
+    "memory_mib": 512,
+    "walltime": "00:02:00"
+  },
+  "job_id": "20950120",
+  "finding": "write to home6 succeeded on apollo31"
 }

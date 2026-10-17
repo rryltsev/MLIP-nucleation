@@ -1,6 +1,6 @@
 {
   "updated_local_date": "2026-10-17",
-  "stage": "vasp_build_submitted",
+  "stage": "vasp_compiling",
   "scientific_results": [],
   "system_selection": "open; compare Al-based alloy/nucleant candidates with alternatives",
   "github": "https://github.com/rryltsev/MLIP-nucleation",
@@ -25,15 +25,17 @@
   },
   "vasp_installation": {
     "version": "6.6.1",
-    "manifest": "runs/vasp661-oneapi-20261017-01/manifest.json",
-    "remote_root": "/home/u3129/.local/opt/vasp/6.6.1-oneapi-2025",
-    "job_id": "20950112",
-    "status": "submitted; do not resubmit without reconciling scheduler and remote job.id",
+    "manifest": "runs/vasp661-oneapi-20261017-05/manifest.json",
+    "remote_build_root": "/home6/u3129/.local/opt/vasp/6.6.1-oneapi-2025",
+    "planned_install_root": "/home/u3129/.local/opt/vasp/6.6.1-oneapi-2025",
+    "job_id": "20950123",
+    "status": "compiling std on apollo31; gam, ncl and four upstream tests follow in same allocation",
+    "diagnostic_findings": ["home4 is read-only from compute node apollo20", "home6 write access verified on apollo31", "compute-node Lmod lacks login-only Intel module; directly source pinned oneAPI environment scripts"],
     "source_policy": "licensed archive, source, binaries and bundled POTCAR files remain private on cluster; only scripts and manifests enter Git"
   },
   "blocking_inputs": [],
   "next_actions": [
-    "monitor VASP build job 20950112, inspect linkage and four selected upstream validation cases",
+    "monitor VASP build job 20950123, inspect linkage and four selected upstream validation cases, then deploy verified binaries to home4",
     "agree a bounded Slurm runtime-check budget for A100 and legacy K40 environments",
     "choose storage root after confirming quota, retention and backup policy",
     "select pilot material and observable through comparative literature review",
