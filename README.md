@@ -57,3 +57,22 @@ ssh -F configs/ssh_config mlip-umt hostname
 Run this command from the repository root: the profile uses the relative path `configs/known_hosts` containing the public server key independently confirmed by the user. Its ED25519 fingerprint is `SHA256:sAMo6jV6KxAx0ntkLR5Gjm5wVWtb4QuRsDvGBhRB01k`. Authentication is machine-local; the current user logs in interactively by password. Do not put credentials in this repository. For unattended execution, set up a machine-local SSH key through an authenticated session, according to cluster policy.
 
 Run the offline configuration check with `python scripts/check_project.py`.
+
+### Machine-local SSH key
+
+One-time setup in an interactive terminal (enter the cluster password only at the SSH prompt):
+
+```powershell
+python scripts/cluster_ssh.py --setup-key
+```
+
+The script creates an ED25519 key without a passphrase for unattended jobs at `%USERPROFILE%/.ssh/id_ed25519_mlip_umt` on Windows, or `~/.ssh/id_ed25519_mlip_umt` otherwise. It preserves existing keys and authorized-key entries, installs the public key through password authentication, then verifies a separate public-key-only connection. The private key stays outside Git. Use a separate key on each computer.
+
+After setup, commands can run from any working directory:
+
+```powershell
+python scripts/cluster_ssh.py hostname
+python scripts/cluster_ssh.py 'sinfo -o "%P %a %l %D %G"'
+```
+
+The helper selects the local key explicitly and pins the verified server key. Setup status is stored in ignored `artifacts/ssh-setup.local.json` without passwords or private key content.

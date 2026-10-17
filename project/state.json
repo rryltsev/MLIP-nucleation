@@ -1,5 +1,5 @@
 {
-  "updated_local_date": "2026-10-11",
+  "updated_local_date": "2026-10-17",
   "stage": "infrastructure_bootstrap",
   "scientific_results": [],
   "system_selection": "open; compare Al-based alloy/nucleant candidates with alternatives",
@@ -8,9 +8,10 @@
   "git_author": {"name": "rryltsev", "email": "rrylcev@mail.ru"},
   "skills_observation": "three skills validated with quick_validate.py and installed in .agents/skills",
   "candidate_host_key": {"algorithm": "ED25519", "fingerprint": "SHA256:sAMo6jV6KxAx0ntkLR5Gjm5wVWtb4QuRsDvGBhRB01k", "trusted": true, "verification": "user independently supplied matching fingerprint on 2026-10-11; key pinned in configs/known_hosts"},
-  "ssh_observation": "pinned host key verification passed; BatchMode login found no usable noninteractive credentials; user uses password authentication; cluster inspection pending",
+  "ssh_observation": "machine-local ED25519 key generated on DESKTOP-J6E8U22; pinned host verification passes; interactive public-key installation exited SSH 255; awaiting terminal error details; password-free login not verified",
+  "local_key_fingerprint": "SHA256:jqLNBsyLJeE6thwpPCNI/6cPoCsmdypfllz/OFuCnC0",
   "blocking_inputs": [
-    "interactive SSH login or setup of machine-local SSH key authentication"
+    "terminal error details for failed password authentication/key installation"
   ],
   "next_actions": [
     "inspect Slurm/VASP configuration after authenticated SSH login",
