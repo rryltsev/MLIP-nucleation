@@ -206,5 +206,12 @@
     ],
     "assessment": "runs/fm-finetune-20261017-01/assessment.json",
     "latex_preview": "built-in compiler startup failed with Windows CreateProcessAsUserW access denied (5); source retained; existing VASP editor unchanged"
+  },
+  "deployment_checks": {
+    "status": "preparing A100 restart/export equivalence; private GRACE LAMMPS built",
+    "build_manifest": "runs/grace-lammps-build-20261017-01/manifest.json",
+    "build_job_id": "20950320",
+    "planned_gpu_budget": "one A100, 4 CPUs, 32 GiB, maximum 20 min; four added optimizer updates per model; four comparison structures",
+    "scientific_results": false
   }
 }

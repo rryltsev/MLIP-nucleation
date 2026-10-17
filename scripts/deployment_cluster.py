@@ -25,6 +25,9 @@ def submit(phase, attempt):
     payload={n:(ROOT/'scripts/hpc'/n).read_bytes().replace(b'\r\n',b'\n') for n in names}
     if phase!='build':
         payload['source-backup.json']=(ROOT/'runs/fm-finetune-20261017-01/artifact-backup.json').read_bytes().replace(b'\r\n',b'\n')
+        build=json.loads((ROOT/'runs/grace-lammps-build-20261017-01/manifest.json').read_text())
+        if build.get('stage')!='collected' or build.get('runtime_status')!='passed':raise ValueError('Collect successful GRACE LAMMPS build first')
+        payload['grace-lammps-build.json']=(ROOT/'runs/grace-lammps-build-20261017-01/result.json').read_bytes().replace(b'\r\n',b'\n')
     hashes={n:hashlib.sha256(b).hexdigest() for n,b in payload.items()}
     manifest={'run_id':run_id,'host':'umt.imm.uran.ru','remote_run_dir':run_dir,'phase':phase,
         'created_utc':datetime.now(timezone.utc).isoformat(),'stage':'preparing','job_id':None,

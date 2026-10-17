@@ -1,0 +1,32 @@
+"""Observe fully restored training state before the next optimizer update."""
+import json
+import os
+from pathlib import Path
+import sys
+
+backend=sys.argv.pop(1)
+snapshot=Path(os.environ['RESTART_SNAPSHOT']);snapshot.parent.mkdir(parents=True,exist_ok=True)
+if backend=='dpa4':
+    import torch
+    from deepmd.pt.train.training import Trainer
+    original=Trainer.__init__
+    def observed(self,*args,**kwargs):
+        original(self,*args,**kwargs)
+        torch.save({'model':self.wrapper.state_dict(),'optimizer':self.optimizer.state_dict()},snapshot)
+        snapshot.with_suffix('.json').write_text(json.dumps({'step':self.start_step})+'\n')
+    Trainer.__init__=observed
+    from deepmd.main import main
+else:
+    from tensorpotential.tensorpot import TensorPotential
+    original=TensorPotential.load_checkpoint
+    def observed(self,*args,**kwargs):
+        original(self,*args,**kwargs)
+        if not Path(str(snapshot)+'.index').exists():
+            self.model.get_flat_trainable_variables()
+            self.optimizer.build(self.model.variables_to_train)
+            self.checkpoint.write(str(snapshot))
+            snapshot.with_suffix('.json').write_text(json.dumps({'step':self.step,'epoch':self.epoch,
+                'optimizer_iterations':int(self.optimizer.iterations.numpy())})+'\n')
+    TensorPotential.load_checkpoint=observed
+    from tensorpotential.scripts.gracemaker import main
+sys.exit(main())
