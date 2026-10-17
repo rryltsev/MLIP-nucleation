@@ -8,7 +8,7 @@
   "git_author": {"name": "rryltsev", "email": "rrylcev@mail.ru"},
   "skills_observation": "three skills validated with quick_validate.py and installed in .agents/skills",
   "candidate_host_key": {"algorithm": "ED25519", "fingerprint": "SHA256:sAMo6jV6KxAx0ntkLR5Gjm5wVWtb4QuRsDvGBhRB01k", "trusted": true, "verification": "user independently supplied matching fingerprint on 2026-10-11; key pinned in configs/known_hosts"},
-  "ssh_observation": "user confirmed entering password before Permission denied; host key verification passes; a bounded manual retry with SSH debug logging is pending; public key installation and password-free login not yet verified",
+  "ssh_observation": "latest user-requested retry completed on 2026-10-17; debug log confirms password authentication selected and two password submissions rejected by the server; host verification passes; public key installation and password-free login remain unverified; compare with user's working SSH client before another retry",
   "local_key_fingerprint": "SHA256:jqLNBsyLJeE6thwpPCNI/6cPoCsmdypfllz/OFuCnC0",
   "blocking_inputs": [
     "successful password authentication for u3129@umt.imm.uran.ru or verification of the working SSH client's connection settings"
