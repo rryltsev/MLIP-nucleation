@@ -1,4 +1,4 @@
-"""Build a private pinned serial LAMMPS with the TensorFlow GRACE pair style."""
+"""Build a private pinned serial LAMMPS, optionally with TensorFlow GRACE."""
 from datetime import datetime, timezone
 import hashlib
 import json

@@ -1,5 +1,6 @@
 """Back up pinned LAMMPS source and compiled libraries; verify actual retrieval."""
 import hashlib
+import argparse
 import json
 from pathlib import Path
 import shlex
@@ -10,10 +11,14 @@ from cluster_ssh import ROOT, ssh_args
 from install_vasp import remote
 from vasp_potentials import save
 
-path=ROOT/'runs/grace-lammps-build-20261017-01'
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--run-id',default='grace-lammps-build-20261017-01')
+args=parser.parse_args()
+assert args.run_id in ['grace-lammps-build-20261017-01','deepmd-lammps-build-20261017-01']
+path=ROOT/'runs'/args.run_id
 build=json.loads((path/'result.json').read_text())
 assert build['status']=='passed'
-destination='/home/u3129/.local/share/mlip-research/test-artifacts/lammps-grace-'+build['upstream_git_commit'][:12]+'.tar'
+destination='/home/u3129/.local/share/mlip-research/test-artifacts/'+Path(build['prefix']).name+'.tar'
 script="""python3 - <<'PY'
 from pathlib import Path
 import hashlib,json,tarfile

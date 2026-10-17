@@ -63,6 +63,8 @@ def submit(phase, attempt, backends='dpa4,grace'):
         'source_run':'runs/fm-finetune-20261017-01/assessment.json',
         'requested_backends':backends.split(','),
         'grace_lammps_source_revision':'b1f4a6c8cc4e0d0fc93d2dec3a1fcc83558062d4'}
+    if phase in ['build-deepmd','lammps']:
+        manifest['deepmd_lammps_source_revision']='a33449868448baf3c73d8eacdb2d329b13361696'
     save(path,manifest); q=shlex.quote(run_dir)
     remote('set -eu; umask 077; mkdir -p '+shlex.quote(run_dir.rsplit('/',1)[0])+'; mkdir '+q)
     for n,b in payload.items():write_remote(run_dir+'/'+n,b)
