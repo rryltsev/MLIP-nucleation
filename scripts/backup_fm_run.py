@@ -25,7 +25,7 @@ root=Path(@SOURCE@); archive=Path(@DEST@)
 patterns=['*.py','*.sbatch','*.json','*/input.json','*/input.yaml','*/result.json','*/data/**/*','dpa4/model.ckpt-*.pt','grace/seed/42/model.yaml','grace/seed/42/checkpoints/checkpoint.index','grace/seed/42/checkpoints/checkpoint.data-*']
 if @INITIALIZATION@: patterns=['*/loaded-initial/*','*/restored/*']
 else: patterns+=['*/exported.pt2','grace/seed/42/saved_model/**/*','*/comparison.extxyz','*/lammps-*/*']
-files=sorted({p for pat in patterns for p in root.glob(pat) if p.is_file()})
+files=sorted({p for pat in patterns for p in root.glob(pat) if p.is_file() and p.name!='core' and not p.name.startswith('core.')})
 records={p.relative_to(root).as_posix():{'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'bytes':p.stat().st_size} for p in files}
 archive.parent.mkdir(parents=True,exist_ok=True)
 if not archive.exists():

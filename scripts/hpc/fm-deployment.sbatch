@@ -1,6 +1,7 @@
 #!/bin/bash
 set -eo pipefail
 umask 077
+ulimit -c 0
 cd "$DEPLOY_RUN_DIR"
 mkdir dpa4 grace cache
 export XDG_CACHE_HOME="$PWD/cache"
