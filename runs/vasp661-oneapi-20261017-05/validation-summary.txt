@@ -1,0 +1,536 @@
+Checking for h5py python module...
+python h5py module found, we can run the tests from the HDF5 category.
+Checking for yaml python module...
+python yaml module found, we can run the tests from the ELPHON category.
+Checking for phelel command...
+phelel command not found, skipping PHELEL tests.
+Checking for reference files for tests...
+Reference files not found, skipping tests that require reference files.
+==================================================================
+fatal: not a git repository (or any parent up to mount point /misc)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+VASP TESTSUITE SHA:
+
+Reference files have been generated with 4 MPI ranks.
+Note that tests might fail if an other number of ranks is used!
+
+Executables and additional INCAR tags used for this test:
+
+VASP_TESTSUITE_EXE_STD="mpirun -np 4 /home6/u3129/.local/opt/vasp/6.6.1-oneapi-2025/src/vasp.6.6.1/bin/vasp_std"
+VASP_TESTSUITE_EXE_NCL="mpirun -np 4 /home6/u3129/.local/opt/vasp/6.6.1-oneapi-2025/src/vasp.6.6.1/bin/vasp_ncl"
+VASP_TESTSUITE_EXE_GAM="mpirun -np 4 /home6/u3129/.local/opt/vasp/6.6.1-oneapi-2025/src/vasp.6.6.1/bin/vasp_gam"
+VASP_TESTSUITE_INCAR_PREPEND=""
+VASP_TESTSUITE_REFERENCE=""
+VASP_TESTSUITE_SKIP_ACFDT=""
+VASP_TESTSUITE_SKIP_BSE=""
+VASP_TESTSUITE_SKIP_CRPA=""
+VASP_TESTSUITE_SKIP_DIEL=""
+VASP_TESTSUITE_SKIP_EFOR=""
+VASP_TESTSUITE_SKIP_ELPHON=""
+VASP_TESTSUITE_SKIP_FAST=""
+VASP_TESTSUITE_SKIP_GAMMA=""
+VASP_TESTSUITE_SKIP_GW=""
+VASP_TESTSUITE_SKIP_HDF5=""
+VASP_TESTSUITE_SKIP_HYB=""
+VASP_TESTSUITE_SKIP_IVDW=""
+VASP_TESTSUITE_SKIP_KOPT=""
+VASP_TESTSUITE_SKIP_LIBXC=""
+VASP_TESTSUITE_SKIP_LREAL=""
+VASP_TESTSUITE_SKIP_LRESP=""
+VASP_TESTSUITE_SKIP_LTMP2=""
+VASP_TESTSUITE_SKIP_MD=""
+VASP_TESTSUITE_SKIP_ML=""
+VASP_TESTSUITE_SKIP_NCL=""
+VASP_TESTSUITE_SKIP_NCORE1=""
+VASP_TESTSUITE_SKIP_NOSYM=""
+VASP_TESTSUITE_SKIP_OPTIC=""
+VASP_TESTSUITE_SKIP_PEAD=""
+VASP_TESTSUITE_SKIP_PHELEL="Y"
+VASP_TESTSUITE_SKIP_PYTHON="Y"
+VASP_TESTSUITE_SKIP_RPA=""
+VASP_TESTSUITE_SKIP_SOC=""
+VASP_TESTSUITE_SKIP_TBMD=""
+VASP_TESTSUITE_SKIP_TDDFT=""
+VASP_TESTSUITE_SKIP_VASP6=""
+VASP_TESTSUITE_SKIP_WAN90=""
+VASP_TESTSUITE_SKIP_LFS="Y"
+VASP_TESTSUITE_RUN_ACFDT=""
+VASP_TESTSUITE_RUN_BSE=""
+VASP_TESTSUITE_RUN_CRPA=""
+VASP_TESTSUITE_RUN_DIEL=""
+VASP_TESTSUITE_RUN_EFOR=""
+VASP_TESTSUITE_RUN_ELPHON=""
+VASP_TESTSUITE_RUN_FAST=""
+VASP_TESTSUITE_RUN_GAMMA=""
+VASP_TESTSUITE_RUN_GW=""
+VASP_TESTSUITE_RUN_HDF5=""
+VASP_TESTSUITE_RUN_HYB=""
+VASP_TESTSUITE_RUN_IVDW=""
+VASP_TESTSUITE_RUN_KOPT=""
+VASP_TESTSUITE_RUN_LIBXC=""
+VASP_TESTSUITE_RUN_LREAL=""
+VASP_TESTSUITE_RUN_LRESP=""
+VASP_TESTSUITE_RUN_LTMP2=""
+VASP_TESTSUITE_RUN_MD=""
+VASP_TESTSUITE_RUN_ML=""
+VASP_TESTSUITE_RUN_NCL=""
+VASP_TESTSUITE_RUN_NCORE1=""
+VASP_TESTSUITE_RUN_NOSYM=""
+VASP_TESTSUITE_RUN_OPTIC=""
+VASP_TESTSUITE_RUN_PEAD=""
+VASP_TESTSUITE_RUN_PHELEL=""
+VASP_TESTSUITE_RUN_PYTHON=""
+VASP_TESTSUITE_RUN_RPA=""
+VASP_TESTSUITE_RUN_SOC=""
+VASP_TESTSUITE_RUN_TBMD=""
+VASP_TESTSUITE_RUN_TDDFT=""
+VASP_TESTSUITE_RUN_VASP6=""
+VASP_TESTSUITE_RUN_WAN90=""
+VASP_TESTSUITE_RUN_LFS=""
+
+Executed at: 20_55_10/17/26
+==================================================================
+Total number of tests: 4
+
+------------------------------------------------------------------
+
+Following tests have been explicitly selected:
+VASP_TESTSUITE_TESTS=bulk_AlPAW H2Ostretch_efor Fe_r2SCAN_ncl_soc bulk_BN_vdW-DF3-opt1
+Running test 1 of 4
+CASE: bulk_AlPAW
+------------------------------------------------------------------
+CASE: bulk_AlPAW
+entering run_recipe bulk_AlPAW
+bulk_AlPAW step STD
+------------------------------------------------------------------
+bulk_AlPAW step STD
+entering run_vasp
+ running    4 mpi-ranks, on    1 nodes
+ distrk:  each k-point on    2 cores,    2 groups
+ distr:  one band on    1 cores,    2 groups
+ vasp.6.6.1 17Jul2026 (build Oct 17 2026 20:46:57) complex                      
+  
+ POSCAR found :  2 types and       4 ions
+ scaLAPACK will be used
+ LDA part: xc-table for (Slater(with rela. corr.)+CA(PZ))
+ , standard interpolation
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ... GRIDC
+ FFT: planning ... GRID_SOFT
+ FFT: planning ... GRID
+ WAVECAR not read
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.338336147479E+01   -0.33834E+01   -0.27183E+03   192   0.407E+02
+DAV:   2    -0.163429985854E+02   -0.12960E+02   -0.12319E+02   240   0.637E+01
+DAV:   3    -0.167589520701E+02   -0.41595E+00   -0.40232E+00   236   0.935E+00
+DAV:   4    -0.167607292953E+02   -0.17772E-02   -0.17755E-02   228   0.826E-01
+DAV:   5    -0.167607380162E+02   -0.87208E-05   -0.87217E-05   228   0.490E-02    0.187E+00
+DAV:   6    -0.166900046459E+02    0.70733E-01   -0.10383E-02   232   0.525E-01    0.115E+00
+DAV:   7    -0.166444452239E+02    0.45559E-01   -0.26185E-02   200   0.828E-01    0.553E-02
+DAV:   8    -0.166443564795E+02    0.88744E-04   -0.33465E-04   256   0.117E-01    0.113E-02
+DAV:   9    -0.166443551261E+02    0.13534E-05   -0.69511E-06   208   0.156E-02    0.567E-03
+DAV:  10    -0.166443548279E+02    0.29820E-06   -0.66779E-07   256   0.398E-03    0.416E-04
+DAV:  11    -0.166443548213E+02    0.66187E-08   -0.35822E-08   160   0.111E-03
+   1 F= -.16644355E+02 E0= -.16537058E+02  d E =-.214594E+00
+ writing wavefunctions
+exiting run_vasp
+
+exiting run_recipe bulk_AlPAW
+the energies are:
+        -16.64435482
+        -16.53705780
+the energies are correct, run successful
+the forces are:
+  -0.10547   -0.00000   -0.00000
+  -0.10547    0.00000   -0.00000
+   0.10547   -0.00000    0.00000
+   0.10547   -0.00000    0.00000
+the forces are correct, run successful
+the stress tensor is:
+    -30.32     -33.60     -31.73       0.00       0.00       0.00
+the tensor is correct, run successful
+
+Running test 2 of 4
+CASE: bulk_BN_vdW-DF3-opt1
+------------------------------------------------------------------
+CASE: bulk_BN_vdW-DF3-opt1
+entering run_recipe bulk_BN_vdW-DF3-opt1
+bulk_BN_vdW-DF3-opt1 step STD
+------------------------------------------------------------------
+bulk_BN_vdW-DF3-opt1 step STD
+entering run_vasp
+ running    4 mpi-ranks, on    1 nodes
+ distrk:  each k-point on    2 cores,    2 groups
+ distr:  one band on    1 cores,    2 groups
+ vasp.6.6.1 17Jul2026 (build Oct 17 2026 20:46:57) complex                      
+  
+ POSCAR found :  2 types and       2 ions
+ scaLAPACK will be used
+ -----------------------------------------------------------------------------
+|                                                                             |
+|               ----> ADVICE to this user running VASP <----                  |
+|                                                                             |
+|     You have switched on vdW-DFT.                                           |
+|     This routine was written and supplied by Jiri Klimes. We recommend      |
+|     that you carefully read and cite the following publications:            |
+|       J. Klimes, D.R. Bowler, A. Michelides                                 |
+|          J. Phys.: Cond Matt. 22 022201 (2010)                              |
+|       J. Klimes, D.R. Bowler, A. Michelides                                 |
+|          Phys. Rev. B. 83, 195131 (2011)                                    |
+|     and references therein.                                                 |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+ -----------------------------------------------------------------------------
+|                                                                             |
+|               ----> ADVICE to this user running VASP <----                  |
+|                                                                             |
+|     You enforced a specific xc type in the INCAR file but a different       |
+|     type was found in the POTCAR file.                                      |
+|     I HOPE YOU KNOW WHAT YOU ARE DOING!                                     |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+ LDA part: xc-table for (Slater+PW92), standard interpolation
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ... GRIDC
+ FFT: planning ... GRID_SOFT
+ FFT: planning ... GRID
+ WAVECAR not read
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          rms(c)
+ No vdw_kernel.bindat file found. Calculating vdW kernel (this might take time).
+ The calculation of the vdW kernel is finished
+DAV:   1    -0.320581885601E+01   -0.32058E+01   -0.40998E+03   816   0.802E+02
+DAV:   2    -0.214443975254E+02   -0.18239E+02   -0.17333E+02  1080   0.113E+02
+DAV:   3    -0.215055821985E+02   -0.61185E-01   -0.61185E-01   848   0.795E+00
+DAV:   4    -0.215056396679E+02   -0.57469E-04   -0.57469E-04   992   0.201E-01
+DAV:   5    -0.215056396769E+02   -0.90644E-08   -0.90643E-08   816   0.213E-03    0.621E+00
+DAV:   6    -0.204895219645E+02    0.10161E+01   -0.40367E+00   768   0.145E+01    0.241E+00
+DAV:   7    -0.203938955775E+02    0.95626E-01   -0.94491E-02   992   0.282E+00    0.127E+00
+DAV:   8    -0.203687098200E+02    0.25186E-01   -0.57497E-02   832   0.203E+00    0.151E-01
+DAV:   9    -0.203687267984E+02   -0.16978E-04   -0.82717E-04   784   0.313E-01    0.266E-02
+DAV:  10    -0.203687236889E+02    0.31096E-05   -0.50342E-05  1016   0.566E-02    0.651E-03
+DAV:  11    -0.203687260430E+02   -0.23541E-05   -0.40617E-06   776   0.198E-02    0.305E-03
+DAV:  12    -0.203687261626E+02   -0.11957E-06   -0.63073E-07   736   0.601E-03    0.631E-04
+DAV:  13    -0.203687261696E+02   -0.70256E-08   -0.17910E-08   992   0.126E-03    0.490E-04
+DAV:  14    -0.203687261666E+02    0.29916E-08   -0.33675E-10   760   0.192E-04    0.485E-04
+DAV:  15    -0.203687261644E+02    0.21869E-08   -0.33047E-11   432   0.535E-05    0.485E-04
+DAV:  16    -0.203687261647E+02   -0.33100E-09   -0.34769E-12   368   0.163E-05    0.485E-04
+DAV:  17    -0.203687261648E+02   -0.22851E-10   -0.62885E-13   368   0.764E-06
+   1 F= -.20368726E+02 E0= -.20368726E+02  d E =-.142339E-10
+ writing wavefunctions
+exiting run_vasp
+
+exiting run_recipe bulk_BN_vdW-DF3-opt1
+the frequencies are:
+the frequencies are correct, run successful
+-------------------------------------------
+the energies are:
+        -20.36872616
+        -20.36872616
+the energies are correct, run successful
+the forces are:
+  -0.00000   -0.00000    0.86690
+   0.00000    0.00000   -0.86690
+the forces are correct, run successful
+the stress tensor is:
+    -70.30     -70.30     -72.03       8.10       0.00       0.00
+the tensor is correct, run successful
+
+Running test 3 of 4
+CASE: Fe_r2SCAN_ncl_soc
+------------------------------------------------------------------
+CASE: Fe_r2SCAN_ncl_soc
+entering run_recipe Fe_r2SCAN_ncl_soc
+Fe_r2SCAN_ncl_soc step MGGA
+------------------------------------------------------------------
+Fe_r2SCAN_ncl_soc step MGGA
+entering run_vasp_nc
+ running    4 mpi-ranks, on    1 nodes
+ distrk:  each k-point on    4 cores,    1 groups
+ distr:  one band on    1 cores,    4 groups
+ vasp.6.6.1 17Jul2026 (build Oct 17 2026 20:52:28) complex                      
+  
+ POSCAR found type information on POSCAR Fe
+ POSCAR found :  1 types and       2 ions
+ scaLAPACK will be used
+ -----------------------------------------------------------------------------
+|                                                                             |
+|               ----> ADVICE to this user running VASP <----                  |
+|                                                                             |
+|     You enforced a specific xc type in the INCAR file but a different       |
+|     type was found in the POTCAR file.                                      |
+|     I HOPE YOU KNOW WHAT YOU ARE DOING!                                     |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+ LDA part: xc-table for (None), standard interpolation
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ... GRIDC
+ FFT: planning ... GRID_SOFT
+ FFT: planning ... GRID
+ WAVECAR not read
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1     0.732040053752E+02    0.73204E+02   -0.50091E+03   288   0.113E+03
+DAV:   2    -0.269616759655E+02   -0.10017E+03   -0.93985E+02   312   0.300E+02
+DAV:   3    -0.310710985737E+02   -0.41094E+01   -0.36235E+01   320   0.796E+01
+DAV:   4    -0.311651975131E+02   -0.94099E-01   -0.93067E-01   320   0.120E+01
+DAV:   5    -0.311664894500E+02   -0.12919E-02   -0.12917E-02   304   0.107E+00    0.193E+01
+DAV:   6    -0.272549397176E+02    0.39115E+01   -0.48740E+01   296   0.116E+02    0.180E+01
+DAV:   7    -0.261612759668E+02    0.10937E+01   -0.62697E+00   304   0.414E+01    0.690E+00
+DAV:   8    -0.265043154615E+02   -0.34304E+00   -0.80449E-01   400   0.131E+01    0.511E+00
+DAV:   9    -0.266733085291E+02   -0.16899E+00   -0.10601E+00   384   0.176E+01    0.352E+00
+DAV:  10    -0.267197795507E+02   -0.46471E-01   -0.11207E-01   312   0.476E+00    0.312E+00
+DAV:  11    -0.267690529881E+02   -0.49273E-01   -0.14935E-01   400   0.731E+00    0.244E+00
+DAV:  12    -0.268428526238E+02   -0.73800E-01   -0.15996E-01   376   0.733E+00    0.193E+00
+DAV:  13    -0.268783918702E+02   -0.35539E-01   -0.22414E-01   392   0.864E+00    0.153E+00
+DAV:  14    -0.268643695055E+02    0.14022E-01   -0.14584E-01   472   0.915E+00    0.122E+00
+DAV:  15    -0.269314244230E+02   -0.67055E-01   -0.90710E-02   312   0.382E+00    0.106E+00
+DAV:  16    -0.269524863539E+02   -0.21062E-01   -0.58317E-02   392   0.617E+00    0.506E-01
+DAV:  17    -0.269551214242E+02   -0.26351E-02   -0.15469E-02   344   0.207E+00    0.568E-01
+DAV:  18    -0.269583619428E+02   -0.32405E-02   -0.45446E-03   464   0.171E+00    0.412E-01
+DAV:  19    -0.269609782177E+02   -0.26163E-02   -0.78080E-03   440   0.252E+00    0.232E-01
+DAV:  20    -0.269617884326E+02   -0.81021E-03   -0.21943E-03   440   0.107E+00    0.150E-01
+DAV:  21    -0.269619482383E+02   -0.15981E-03   -0.13671E-03   456   0.936E-01    0.782E-02
+DAV:  22    -0.269622159286E+02   -0.26769E-03   -0.79162E-04   384   0.497E-01    0.425E-02
+DAV:  23    -0.269624678829E+02   -0.25195E-03   -0.55872E-04   448   0.593E-01    0.351E-02
+DAV:  24    -0.269624910968E+02   -0.23214E-04   -0.10129E-04   312   0.130E-01    0.229E-02
+DAV:  25    -0.269625083966E+02   -0.17300E-04   -0.10477E-05   304   0.472E-02    0.121E-02
+DAV:  26    -0.269625110634E+02   -0.26668E-05   -0.22578E-06   384   0.449E-02    0.332E-03
+DAV:  27    -0.269625111624E+02   -0.98992E-07   -0.96778E-07   464   0.226E-02    0.130E-03
+DAV:  28    -0.269625115630E+02   -0.40061E-06   -0.33175E-07   432   0.156E-02    0.715E-04
+DAV:  29    -0.269625112813E+02    0.28167E-06   -0.16915E-07   424   0.941E-03    0.763E-04
+DAV:  30    -0.269625112873E+02   -0.59854E-08   -0.46605E-08   288   0.304E-03    0.762E-04
+DAV:  31    -0.269625112637E+02    0.23545E-07   -0.15805E-08   424   0.254E-03    0.588E-04
+DAV:  32    -0.269625111244E+02    0.13936E-06   -0.21711E-08   384   0.278E-03    0.330E-04
+DAV:  33    -0.269625110917E+02    0.32692E-07   -0.69251E-09   320   0.967E-04    0.186E-04
+DAV:  34    -0.269625110992E+02   -0.75111E-08   -0.76057E-10   328   0.487E-04    0.160E-04
+DAV:  35    -0.269625110451E+02    0.54080E-07   -0.20975E-09   424   0.798E-04    0.101E-04
+DAV:  36    -0.269625110178E+02    0.27323E-07   -0.14838E-09   312   0.452E-04    0.497E-05
+DAV:  37    -0.269625110061E+02    0.11706E-07   -0.43652E-10   320   0.220E-04    0.256E-05
+DAV:  38    -0.269625110041E+02    0.19552E-08   -0.85566E-11   208   0.908E-05    0.154E-05
+DAV:  39    -0.269625110082E+02   -0.40991E-08   -0.71176E-12   144   0.479E-05    0.104E-05
+DAV:  40    -0.269625110098E+02   -0.15864E-08   -0.69185E-12   144   0.926E-05    0.373E-06
+DAV:  41    -0.269625110112E+02   -0.14095E-08   -0.38062E-12   144   0.245E-05    0.220E-06
+DAV:  42    -0.269625110122E+02   -0.95042E-09   -0.89333E-13   144   0.123E-05    0.158E-06
+DAV:  43    -0.269625110126E+02   -0.43360E-09   -0.42517E-13   144   0.205E-05    0.169E-06
+DAV:  44    -0.269625110119E+02    0.75988E-09    0.17004E-13   144   0.131E-05    0.890E-07
+DAV:  45    -0.269625110116E+02    0.28854E-09    0.10737E-13   144   0.931E-06    0.328E-07
+DAV:  46    -0.269625110126E+02   -0.10596E-08    0.14028E-13   144   0.199E-06    0.326E-07
+DAV:  47    -0.269625110124E+02    0.19372E-09    0.73652E-14   144   0.150E-06    0.174E-07
+DAV:  48    -0.269625110121E+02    0.31673E-09    0.26670E-13   144   0.900E-07    0.136E-07
+DAV:  49    -0.269625110122E+02   -0.72987E-10    0.53437E-13   144   0.631E-07
+   1 F= -.26962511E+02 E0= -.26964016E+02  d E =0.451388E-02  mag=     5.1264     5.1264     0.0000
+ writing wavefunctions
+exiting run_vasp_nc
+
+exiting run_recipe Fe_r2SCAN_ncl_soc
+the energies are:
+        -26.96251101
+        -26.96401564
+the energies are correct, run successful
+the forces are:
+  -0.00000    0.00000   -2.09478
+   0.00000   -0.00000    2.09478
+the forces are correct, run successful
+the stress tensor is:
+    333.07     333.07     308.05      -0.02      -0.00       0.00
+the tensor is correct, run successful
+
+Running test 4 of 4
+CASE: H2Ostretch_efor
+------------------------------------------------------------------
+CASE: H2Ostretch_efor
+entering run_recipe H2Ostretch_efor
+H2Ostretch_efor step STD
+------------------------------------------------------------------
+H2Ostretch_efor step STD
+entering run_vasp_g
+ running    4 mpi-ranks, on    1 nodes
+ distrk:  each k-point on    4 cores,    1 groups
+ distr:  one band on    1 cores,    4 groups
+ vasp.6.6.1 17Jul2026 (build Oct 17 2026 20:49:46) gamma-only                   
+  
+ POSCAR found type information on POSCAR O H 
+ POSCAR found :  2 types and       3 ions
+ scaLAPACK will be used
+ LDA part: xc-table for (Slater+PW92), standard interpolation
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ... GRIDC
+ FFT: planning ... GRID_SOFT
+ FFT: planning ... GRID
+ WAVECAR not read
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1     0.767664547895E+02    0.76766E+02   -0.19320E+03    24   0.339E+02
+DAV:   2     0.493578535852E+01   -0.71831E+02   -0.70118E+02    44   0.864E+01
+DAV:   3    -0.154504614495E+02   -0.20386E+02   -0.20287E+02    32   0.618E+01
+DAV:   4    -0.162765118037E+02   -0.82605E+00   -0.82601E+00    32   0.134E+01
+DAV:   5    -0.162818885538E+02   -0.53768E-02   -0.53767E-02    28   0.121E+00    0.797E+00
+DAV:   6    -0.143828466164E+02    0.18990E+01   -0.89541E+00    28   0.148E+01    0.322E+00
+DAV:   7    -0.142822189615E+02    0.10063E+00   -0.14178E-01    28   0.194E+00    0.199E+00
+DAV:   8    -0.141983948341E+02    0.83824E-01   -0.61074E-02    36   0.161E+00    0.206E-01
+DAV:   9    -0.142008916573E+02   -0.24968E-02   -0.19638E-03    28   0.185E-01    0.142E-01
+DAV:  10    -0.142091520724E+02   -0.82604E-02   -0.44761E-03    24   0.354E-01    0.712E-02
+DAV:  11    -0.142171310512E+02   -0.79790E-02   -0.43836E-03    24   0.266E-01    0.976E-02
+DAV:  12    -0.142183124328E+02   -0.11814E-02   -0.11548E-03    28   0.159E-01    0.238E-02
+DAV:  13    -0.142198558044E+02   -0.15434E-02   -0.30669E-04    28   0.859E-02    0.222E-02
+DAV:  14    -0.142199705685E+02   -0.11476E-03   -0.38912E-05    36   0.326E-02    0.602E-03
+DAV:  15    -0.142201631501E+02   -0.19258E-03   -0.19772E-05    28   0.186E-02    0.230E-03
+DAV:  16    -0.142201734104E+02   -0.10260E-04   -0.13531E-06    24   0.515E-03    0.128E-03
+DAV:  17    -0.142201861812E+02   -0.12771E-04   -0.22459E-06    24   0.517E-03    0.674E-04
+DAV:  18    -0.142201868619E+02   -0.68070E-06   -0.67499E-08    28   0.121E-03    0.389E-04
+DAV:  19    -0.142201897779E+02   -0.29160E-05   -0.20647E-07    24   0.168E-03    0.271E-04
+DAV:  20    -0.142201901999E+02   -0.42200E-06   -0.22645E-08    24   0.648E-04    0.105E-04
+DAV:  21    -0.142201904982E+02   -0.29822E-06   -0.96529E-09    24   0.366E-04    0.284E-05
+DAV:  22    -0.142201905432E+02   -0.45038E-07   -0.52989E-10    24   0.102E-04    0.165E-05
+DAV:  23    -0.142201905710E+02   -0.27794E-07   -0.41100E-10    24   0.823E-05    0.945E-06
+DAV:  24    -0.142201905718E+02   -0.78217E-09    0.38245E-11    28   0.235E-05
+   1 F= -.14220191E+02 E0= -.14220191E+02  d E =-.142202E+02
+ BRION: g(F)=  0.965E-01 g(S)=  0.000E+00
+ bond charge predicted
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.141734039229E+02    0.46787E-01   -0.15247E+00    32   0.814E+00    0.480E-01
+DAV:   2    -0.141762078712E+02   -0.28039E-02   -0.35176E-02    24   0.109E+00    0.325E-01
+DAV:   3    -0.141759399859E+02    0.26789E-03   -0.11564E-03    40   0.282E-01    0.797E-02
+DAV:   4    -0.141760458404E+02   -0.10585E-03   -0.27156E-04    32   0.113E-01    0.179E-02
+DAV:   5    -0.141761404635E+02   -0.94623E-04   -0.29074E-05    24   0.340E-02    0.728E-03
+DAV:   6    -0.141762177498E+02   -0.77286E-04   -0.95033E-06    28   0.150E-02    0.316E-03
+DAV:   7    -0.141762875301E+02   -0.69780E-04   -0.82901E-06    28   0.103E-02    0.132E-03
+DAV:   8    -0.141763052197E+02   -0.17690E-04   -0.11884E-06    28   0.393E-03    0.650E-04
+DAV:   9    -0.141763164527E+02   -0.11233E-04   -0.11961E-06    28   0.337E-03    0.244E-04
+DAV:  10    -0.141763178870E+02   -0.14343E-05   -0.52035E-08    32   0.841E-04    0.151E-04
+DAV:  11    -0.141763189762E+02   -0.10892E-05   -0.65508E-08    32   0.772E-04    0.635E-05
+DAV:  12    -0.141763191844E+02   -0.20821E-06   -0.50658E-09    32   0.232E-04    0.358E-05
+DAV:  13    -0.141763193646E+02   -0.18016E-06   -0.84753E-09    32   0.265E-04    0.213E-05
+DAV:  14    -0.141763193823E+02   -0.17704E-07   -0.27530E-10    28   0.562E-05    0.570E-06
+DAV:  15    -0.141763193955E+02   -0.13220E-07   -0.29090E-10    32   0.535E-05    0.279E-06
+DAV:  16    -0.141763193971E+02   -0.16298E-08    0.33307E-11    32   0.153E-05
+   2 F= -.14176319E+02 E0= -.14176319E+02  d E =0.438712E-01
+ BRION: g(F)=  0.137E+00 g(S)=  0.000E+00 retain N=  1 mean eig= 0.34
+ eig:   0.345
+ bond charge predicted
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.142116368009E+02   -0.35317E-01   -0.37513E-01    32   0.405E+00    0.257E-01
+DAV:   2    -0.142120254983E+02   -0.38870E-03   -0.10348E-02    24   0.583E-01    0.181E-01
+DAV:   3    -0.142119199957E+02    0.10550E-03   -0.34653E-04    24   0.140E-01    0.651E-02
+DAV:   4    -0.142119607500E+02   -0.40754E-04   -0.10393E-04    28   0.694E-02    0.101E-02
+DAV:   5    -0.142119902819E+02   -0.29532E-04   -0.61887E-06    24   0.143E-02    0.423E-03
+DAV:   6    -0.142120114080E+02   -0.21126E-04   -0.17286E-06    24   0.717E-03    0.166E-03
+DAV:   7    -0.142120330153E+02   -0.21607E-04   -0.23737E-06    24   0.605E-03    0.112E-03
+DAV:   8    -0.142120407050E+02   -0.76897E-05   -0.63649E-07    28   0.292E-03    0.655E-04
+DAV:   9    -0.142120447624E+02   -0.40574E-05   -0.22414E-07    24   0.151E-03    0.300E-04
+DAV:  10    -0.142120472280E+02   -0.24656E-05   -0.12271E-07    24   0.110E-03    0.186E-04
+DAV:  11    -0.142120481649E+02   -0.93693E-06   -0.30466E-08    24   0.551E-04    0.710E-05
+DAV:  12    -0.142120485133E+02   -0.34839E-06   -0.11335E-08    28   0.328E-04    0.260E-05
+DAV:  13    -0.142120486047E+02   -0.91413E-07   -0.24781E-09    32   0.167E-04    0.135E-05
+DAV:  14    -0.142120486179E+02   -0.13193E-07   -0.18757E-10    32   0.501E-05    0.478E-06
+DAV:  15    -0.142120486240E+02   -0.60438E-08   -0.75140E-11    32   0.342E-05
+   3 F= -.14212049E+02 E0= -.14212049E+02  d E =-.357292E-01
+ BRION: g(F)=  0.616E-01 g(S)=  0.000E+00 retain N=  1 mean eig= 0.43
+ eig:   0.425
+ bond charge predicted
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.142124538505E+02   -0.40523E-03   -0.90713E-01    24   0.602E+00    0.303E-01
+DAV:   2    -0.142131000191E+02   -0.64617E-03   -0.57391E-03    28   0.501E-01    0.183E-01
+DAV:   3    -0.142133767066E+02   -0.27669E-03   -0.30430E-04    24   0.108E-01    0.380E-02
+DAV:   4    -0.142134486230E+02   -0.71916E-04   -0.61622E-05    32   0.415E-02    0.871E-03
+DAV:   5    -0.142134877944E+02   -0.39171E-04   -0.41364E-06    32   0.108E-02    0.503E-03
+DAV:   6    -0.142135830217E+02   -0.95227E-04   -0.12790E-05    24   0.143E-02    0.207E-03
+DAV:   7    -0.142136155953E+02   -0.32574E-04   -0.31831E-06    28   0.693E-03    0.112E-03
+DAV:   8    -0.142136372286E+02   -0.21633E-04   -0.21463E-06    24   0.500E-03    0.421E-04
+DAV:   9    -0.142136428507E+02   -0.56221E-05   -0.24630E-07    28   0.174E-03    0.233E-04
+DAV:  10    -0.142136471519E+02   -0.43012E-05   -0.24288E-07    24   0.139E-03    0.114E-04
+DAV:  11    -0.142136483937E+02   -0.12418E-05   -0.43549E-08    32   0.639E-04    0.643E-05
+DAV:  12    -0.142136489546E+02   -0.56093E-06   -0.24748E-08    32   0.484E-04    0.293E-05
+DAV:  13    -0.142136490239E+02   -0.69277E-07   -0.17009E-09    32   0.145E-04    0.108E-05
+DAV:  14    -0.142136490564E+02   -0.32514E-07   -0.78066E-10    32   0.925E-05    0.826E-06
+DAV:  15    -0.142136490603E+02   -0.39109E-08   -0.67129E-11    32   0.282E-05
+   4 F= -.14213649E+02 E0= -.14213649E+02  d E =-.160044E-02
+ BRION: g(F)=  0.618E-01 g(S)=  0.000E+00 retain N=  2 mean eig= 0.45
+ eig:   0.454  0.454
+ bond charge predicted
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.142126167571E+02    0.10323E-02   -0.19663E-01    24   0.280E+00    0.146E-01
+DAV:   2    -0.142127270215E+02   -0.11026E-03   -0.14574E-03    28   0.254E-01    0.862E-02
+DAV:   3    -0.142127735937E+02   -0.46572E-04   -0.62802E-05    28   0.509E-02    0.245E-02
+DAV:   4    -0.142127915478E+02   -0.17954E-04   -0.16449E-05    32   0.225E-02    0.463E-03
+DAV:   5    -0.142128019073E+02   -0.10360E-04   -0.13381E-06    28   0.617E-03    0.256E-03
+DAV:   6    -0.142128254748E+02   -0.23567E-04   -0.24476E-06    24   0.645E-03    0.985E-04
+DAV:   7    -0.142128335188E+02   -0.80440E-05   -0.56682E-07    28   0.305E-03    0.582E-04
+DAV:   8    -0.142128398248E+02   -0.63060E-05   -0.55759E-07    28   0.244E-03    0.199E-04
+DAV:   9    -0.142128413337E+02   -0.15089E-05   -0.49186E-08    28   0.773E-04    0.103E-04
+DAV:  10    -0.142128426495E+02   -0.13158E-05   -0.58090E-08    28   0.678E-04    0.532E-05
+DAV:  11    -0.142128430567E+02   -0.40725E-06   -0.11614E-08    32   0.321E-04    0.316E-05
+DAV:  12    -0.142128432527E+02   -0.19595E-06   -0.73274E-09    32   0.256E-04    0.152E-05
+DAV:  13    -0.142128432719E+02   -0.19238E-07   -0.34428E-10    32   0.694E-05    0.638E-06
+DAV:  14    -0.142128432834E+02   -0.11528E-07   -0.28527E-10    32   0.549E-05    0.552E-06
+DAV:  15    -0.142128432844E+02   -0.97413E-09    0.26557E-11    32   0.142E-05
+   5 F= -.14212843E+02 E0= -.14212843E+02  d E =0.805776E-03
+ BRION: g(F)=  0.601E-01 g(S)=  0.000E+00 retain N=  1 mean eig= 0.38
+ eig:   0.384
+ writing wavefunctions
+exiting run_vasp_g
+
+exiting run_recipe H2Ostretch_efor
+the energies are:
+        -14.22019057
+        -14.22019057
+        -14.17631940
+        -14.17631940
+        -14.21204862
+        -14.21204862
+        -14.21364906
+        -14.21364906
+        -14.21284328
+        -14.21284328
+the energies are correct, run successful
+the forces are:
+  -0.00000    0.00000   -0.00173
+   0.00002    0.00000    1.00086
+  -0.00002    0.00000   -0.99914
+   2.36141    0.00000   -0.07242
+  -1.06300    0.00000    0.12868
+  -1.29841    0.00000   -0.05625
+   0.94663    0.00000    0.20573
+  -0.59593    0.00000    0.52062
+  -0.35069    0.00000   -0.72635
+   0.92106    0.00000   -0.00284
+  -0.40015    0.00000    0.65314
+  -0.52090    0.00000   -0.65030
+   0.93182    0.00000    0.15902
+  -0.52177    0.00000    0.54998
+  -0.41004    0.00000   -0.70900
+the forces are correct, run successful
+the cartesian positions are:
+   0.00000    0.00000    0.00000
+   0.76817    0.00000    0.59567
+   7.16833    0.00000    0.59567
+   0.00000    0.00000    0.00000
+   0.76817    0.00000    0.64396
+   7.16833    0.00000    0.54747
+   0.00000    0.00000    0.00000
+   0.74733    0.00000    0.64648
+   7.14287    0.00000    0.54637
+   0.00000    0.00000    0.00000
+   0.71850    0.00000    0.67060
+   7.12500    0.00000    0.51289
+   0.00000    0.00000    0.00000
+   0.70971    0.00000    0.68488
+   7.11350    0.00000    0.49870
+the positions are correct, run successful
+the stress tensor is:
+     -0.14      -0.19      -0.26       0.00       0.00       0.00
+      0.33      -0.19      -0.38       0.00       0.00      -3.70
+     -0.59      -0.19      -0.68       0.00       0.00      -1.53
+      0.21      -0.19      -0.40       0.00       0.00      -1.42
+     -0.23      -0.19      -0.69       0.00       0.00      -1.49
+the tensor is correct, run successful
+
+Total test time: 1 min, 3 sec
+==================================================================
+SUCCESS: ALL SELECTED TESTS PASSED
+==================================================================

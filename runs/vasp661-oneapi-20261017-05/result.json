@@ -1,0 +1,31 @@
+{
+  "version": "6.6.1",
+  "job_id": "20950123",
+  "scheduler_state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed": "00:09:27",
+  "allocated_cpus": "8",
+  "node": "apollo31",
+  "verified_utc": "2026-10-17T15:57:11.034888+00:00",
+  "install_root": "/home/u3129/.local/opt/vasp/6.6.1-oneapi-2025",
+  "build_root": "/home6/u3129/.local/opt/vasp/6.6.1-oneapi-2025",
+  "variants": [
+    "vasp_gam",
+    "vasp_ncl",
+    "vasp_std"
+  ],
+  "binary_sha256": {
+    "vasp_std": "773a7c62b14d0a55541c07955da14a98f5ca79a2d1938b71315e69b48565b19a",
+    "vasp_gam": "03adfaccd0fcab7fb0b0a2526dc07c3f9e156fba84463ddd48ac983613f7ad42",
+    "vasp_ncl": "948cce4ba745c6215166fb01711fef665b220dbdbe3a921df6fd2715a12477f8"
+  },
+  "passed_upstream_cases": [
+    "Fe_r2SCAN_ncl_soc",
+    "H2Ostretch_efor",
+    "bulk_AlPAW",
+    "bulk_BN_vdW-DF3-opt1"
+  ],
+  "validation_scope": "four selected upstream cases, not full suite",
+  "mode": "CPU MPI; SSE4.2 portable target; MKL sequential; no GPU or HDF5/optional external interfaces",
+  "toolchain": "Intel ifx 2025.3.2, Intel MPI 2021.17, MKL 2025.3"
+}

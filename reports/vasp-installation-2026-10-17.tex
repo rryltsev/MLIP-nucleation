@@ -1,0 +1,110 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,booktabs,tabularx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\title{VASP 6.6.1: UMT installation and validation record}
+\author{MLIP-nucleation project}
+\date{17 October 2026}
+\begin{document}
+\maketitle
+
+\section{Installed software}
+VASP 6.6.1 was compiled and validated as \texttt{u3129} on the UMT cluster.
+The accepted CPU/MPI executables are \texttt{vasp\_std}, \texttt{vasp\_gam}
+and \texttt{vasp\_ncl}. The installed root is
+\path{/home/u3129/.local/opt/vasp/6.6.1-oneapi-2025}.
+Executables are under \path{src/vasp.6.6.1/bin/} relative to that root.
+Activate the installation by sourcing \path{env.sh} before an MPI launch
+inside a suitable Slurm allocation. No global shell initialization file was modified.
+
+The toolchain comprises Intel ifx 2025.3.2, Intel MPI 2021.17 and MKL 2025.3.
+The build uses the supplied oneAPI template with project overrides:
+\texttt{mpiifx}, sequential MKL and the CPU target \texttt{-xSSE4.2}.
+GPU support, OpenMP, HDF5 and optional external interfaces were not enabled.
+The supported scope is the CPU/MPI build tested on \texttt{apollo31};
+performance tuning and other node/toolchain combinations are not claimed validated.
+
+For \texttt{vdw\_nl.o}, \texttt{-fp-model precise} was applied and confirmed
+in the compilation log. This follows ASU Research Computing's reported workaround
+for the VASP 6.6.x/ifx nonlocal-vdW kernel optimization issue, accessed on
+17 October 2026:\\
+\url{https://docs.rc.asu.edu/vasp/}.
+
+\section{Source and reproducibility}
+The user supplied \texttt{vasp.6.6.1.tgz}, size 85,036,103 bytes.
+Its locally computed SHA-256, verified again after transfer, is:\\
+\path{261f9c1fd730468106191afeb185821d67cb7a58c982f6e063824dd5432106b0}.
+This records the supplied archive and transport integrity, not an independent
+comparison with the VASP Portal's release checksum.
+
+Licensed sources, binaries and bundled test potentials remain in private
+user directories on the cluster. The Git repository stores only project scripts,
+settings, hashes and validation output. The accepted input manifest is
+\path{runs/vasp661-oneapi-20261017-05/manifest.json}; input file hashes bind the
+batch script, environment and compiler overrides to the actual submission.
+Individual executable SHA-256 values and deployment checks are recorded in
+\path{runs/vasp661-oneapi-20261017-05/result.json}.
+Copied executables matched the tested executables byte for byte.
+
+\section{Slurm build and tests}
+Job \texttt{20950123} ran on \texttt{apollo31}, partition \texttt{apollo},
+account \texttt{imet-2026-2}, QoS \texttt{normal}.
+The resource cap was one node, eight CPUs, 16 GiB and one hour.
+The successful job completed in 9 min 27 s with scheduler state
+\texttt{COMPLETED} and exit code \texttt{0:0}.
+Each variant was built with \texttt{make DEPS=1 -j8}; runtime library checks
+found no unresolved shared dependencies.
+
+Four explicitly selected upstream cases ran with four MPI ranks and one
+MKL thread per rank. No additional scientific production calculations were run.
+\begin{tabularx}{\linewidth}{@{}lXl@{}}
+\toprule
+Case & Coverage & Result \\
+\midrule
+\texttt{bulk\_AlPAW} & Standard metallic PAW calculation & Passed \\
+\texttt{bulk\_BN\_vdW-DF3-opt1} & Nonlocal vdW functionality & Passed \\
+\texttt{Fe\_r2SCAN\_ncl\_soc} & Noncollinear r2SCAN with SOC & Passed \\
+\texttt{H2Ostretch\_efor} & Gamma-only calculation and force/trajectory checks & Passed \\
+\bottomrule
+\end{tabularx}
+
+The testsuite reported \texttt{SUCCESS: ALL SELECTED TESTS PASSED}; test execution
+took 1 min 3 s. Reference comparisons include energies, forces, stress and
+other quantities as specified by the upstream recipes.
+The full suite was not run. Successful installation tests do not replace
+system-specific DFT convergence and accuracy studies.
+The upstream test protocol is described at
+\url{https://vasp.at/wiki/Validation_tests}.
+
+The retained validation output is
+\path{runs/vasp661-oneapi-20261017-05/validation-summary.txt};
+runtime dependency records are in \path{runtime-libraries.txt} in that directory.
+The bundled testsuite prints an unavailable Git SHA because the source was
+distributed as an archive; the archive hash above identifies the source instead.
+
+\section{Cluster-specific execution requirements}
+Main home was readable but read-only on compute node \texttt{apollo20}.
+Initial launches failed before compilation when attempting to create shared
+stdout or runtime logs there. A Slurm diagnostic confirmed the read-only error;
+a separate diagnostic on \texttt{apollo31} verified write access to
+\path{/home6/u3129}. The build and tests therefore ran under
+\path{/home6/u3129/.local/opt/vasp/6.6.1-oneapi-2025}.
+Accepted executables were copied to main home from the login node after validation.
+Calculation working directories and Slurm logs must use compute-writable storage.
+
+Compute-node Lmod did not expose the login module
+\texttt{intelmpi/intel64\_2025}. The installation environment instead sources
+the inspected shared compiler, MPI and MKL initialization scripts directly,
+with pinned component versions. Existing user MLIP environments were not modified.
+
+The supplied test POTCAR files were sufficient for the selected validation
+cases. A full licensed PAW potential dataset and its provenance must still be
+configured before production DFT labelling. No general production potential
+library is inferred from these tests. Storage backup and retention policies
+remain to be confirmed for the research workflow.
+
+\end{document}

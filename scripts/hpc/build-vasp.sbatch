@@ -10,7 +10,7 @@
 
 set -eo pipefail
 umask 077
-INSTALL_ROOT="${VASP_BUILD_ROOT:-$HOME/.local/opt/vasp/6.6.1-oneapi-2025}"
+INSTALL_ROOT="${VASP_BUILD_ROOT:-/home6/u3129/.local/opt/vasp/6.6.1-oneapi-2025}"
 RUN_DIR="${VASP_BUILD_RUN_DIR:-$SLURM_SUBMIT_DIR}"
 SOURCE_DIR="$INSTALL_ROOT/src/vasp.6.6.1"
 exec > "$RUN_DIR/runtime.log" 2>&1

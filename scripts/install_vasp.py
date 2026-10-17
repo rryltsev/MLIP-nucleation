@@ -35,6 +35,7 @@ def write_remote(path, content):
 
 
 def stage(archive, run_id, manifest_path):
+    install_root = WRITABLE_BUILD_ROOT
     digest = hashlib.file_digest(archive.open("rb"), "sha256").hexdigest()
     if digest != EXPECTED_SHA:
         raise ValueError("Archive hash differs from the inspected distribution")
@@ -56,11 +57,11 @@ def stage(archive, run_id, manifest_path):
         "env.sh": ROOT / "scripts/hpc/vasp-env.sh",
     }
     payloads = {name: path.read_bytes().replace(b"\r\n", b"\n") for name, path in files.items()}
-    run_dir = REMOTE_ROOT + "/runs/" + run_id
+    run_dir = install_root + "/runs/" + run_id
     manifest = {
         "run_id": run_id, "created_utc": datetime.now(timezone.utc).isoformat(),
         "purpose": "user-requested installation and selected upstream validation tests",
-        "host": "umt.imm.uran.ru", "user": "u3129", "remote_install_root": REMOTE_ROOT,
+        "host": "umt.imm.uran.ru", "user": "u3129", "remote_install_root": install_root,
         "remote_run_dir": run_dir, "archive_sha256": digest, "archive_size": archive.stat().st_size,
         "input_sha256": {name: hashlib.sha256(data).hexdigest() for name, data in payloads.items()},
         "code_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
@@ -71,19 +72,19 @@ def stage(archive, run_id, manifest_path):
     if manifest_path.exists():
         raise FileExistsError("Manifest already exists; inspect its state before continuing")
     save(manifest_path, manifest)
-    remote("set -eu; umask 077; test ! -e " + shlex.quote(REMOTE_ROOT) +
-           "; mkdir -p " + shlex.quote(run_dir) + " " + shlex.quote(REMOTE_ROOT + "/src") +
-           "; chmod 700 " + shlex.quote(REMOTE_ROOT))
+    remote("set -eu; umask 077; test ! -e " + shlex.quote(install_root) +
+           "; mkdir -p " + shlex.quote(run_dir) + " " + shlex.quote(install_root + "/src") +
+           "; chmod 700 " + shlex.quote(install_root))
     with archive.open("rb") as stream:
         subprocess.run(ssh_args() + ["-o", "BatchMode=yes", "mlip-umt",
-                       "umask 077; cat > " + REMOTE_ROOT + "/source.tgz"], stdin=stream, check=True, timeout=600)
-    remote("set -eu; printf '%s  %s\\n' " + digest + " " + REMOTE_ROOT +
-           "/source.tgz | sha256sum -c -; tar --no-same-owner -xzf " + REMOTE_ROOT +
-           "/source.tgz -C " + REMOTE_ROOT + "/src", timeout=120)
+                       "umask 077; cat > " + install_root + "/source.tgz"], stdin=stream, check=True, timeout=600)
+    remote("set -eu; printf '%s  %s\\n' " + digest + " " + install_root +
+           "/source.tgz | sha256sum -c -; tar --no-same-owner -xzf " + install_root +
+           "/source.tgz -C " + install_root + "/src", timeout=120)
     for name, payload in payloads.items():
-        target = REMOTE_ROOT + "/env.sh" if name == "env.sh" else run_dir + "/" + name
+        target = install_root + "/env.sh" if name == "env.sh" else run_dir + "/" + name
         write_remote(target, payload)
-    remote("set -eu; cd " + REMOTE_ROOT + "/src/vasp.6.6.1; cp arch/makefile.include.oneapi makefile.include; "
+    remote("set -eu; cd " + install_root + "/src/vasp.6.6.1; cp arch/makefile.include.oneapi makefile.include; "
            "printf '\\n' >> makefile.include; cat " + run_dir + "/overrides.mk >> makefile.include")
     manifest["stage"] = "staged"
     save(manifest_path, manifest)
@@ -196,6 +197,77 @@ def migrate(previous_path, run_id, new_path):
     refresh(new_path)
 
 
+def finalize(path):
+    manifest = json.loads(path.read_text(encoding="utf-8"))
+    job_id, run_dir, build_root = manifest["job_id"], manifest["remote_run_dir"], manifest["remote_install_root"]
+    if not re.fullmatch(r"\d+", job_id):
+        raise ValueError("Invalid job ID")
+    accounting = remote("sacct -X -j " + job_id + " -nP --format=JobIDRaw,State,ExitCode,Elapsed,AllocCPUS,NodeList")
+    row = next((line.split("|") for line in accounting.splitlines() if line.startswith(job_id + "|")), None)
+    if not row or row[1:3] != ["COMPLETED", "0:0"]:
+        raise RuntimeError("Build job is not successfully completed: " + accounting.strip())
+    status_text = remote("cat " + shlex.quote(run_dir + "/status.txt"))
+    if "phase=complete" not in status_text or "exit_code=0" not in status_text:
+        raise RuntimeError("Build/validation completion marker missing")
+    log = remote("cat " + shlex.quote(run_dir + "/testsuite.log"))
+    if "SUCCESS: ALL SELECTED TESTS PASSED" not in log:
+        raise RuntimeError("Upstream testsuite success summary missing")
+    expected = {"bulk_AlPAW", "H2Ostretch_efor", "Fe_r2SCAN_ncl_soc", "bulk_BN_vdW-DF3-opt1"}
+    cases = set(re.findall(r"CASE:\s*(\S+)", log))
+    if cases != expected:
+        raise RuntimeError("Unexpected test coverage; inspect testsuite log before deployment")
+    binary_hashes = remote("cat " + shlex.quote(run_dir + "/binaries.sha256"))
+    hashes = {PurePosixPath(line.split()[1]).name: line.split()[0] for line in binary_hashes.splitlines()}
+    libraries = remote("cat " + run_dir + "/ldd-std.txt " + run_dir + "/ldd-gam.txt " + run_dir + "/ldd-ncl.txt")
+    if "not found" in libraries:
+        raise RuntimeError("Unresolved runtime dependency")
+    deploy_script = """set -eu
+umask 077
+build=%s
+dest=%s
+mkdir -p "$dest/src/vasp.6.6.1/bin"
+chmod 700 "$dest"
+if [ ! -e "$dest/source.tgz" ]; then
+    install -m 600 "$build/source.tgz" "$dest/source.tgz"
+else
+    cmp "$build/source.tgz" "$dest/source.tgz"
+fi
+for name in vasp_std vasp_gam vasp_ncl; do
+    if [ -e "$dest/src/vasp.6.6.1/bin/$name" ]; then
+        cmp "$build/src/vasp.6.6.1/bin/$name" "$dest/src/vasp.6.6.1/bin/$name"
+    fi
+done
+for name in vasp_std vasp_gam vasp_ncl; do
+    if [ ! -e "$dest/src/vasp.6.6.1/bin/$name" ]; then
+        install -m 700 "$build/src/vasp.6.6.1/bin/$name" "$dest/src/vasp.6.6.1/bin/$name"
+    fi
+done
+install -m 600 "$build/env.sh" "$dest/env.sh"
+cd "$dest/src/vasp.6.6.1"
+sha256sum bin/vasp_std bin/vasp_gam bin/vasp_ncl
+""" % (shlex.quote(build_root), shlex.quote(REMOTE_ROOT))
+    deployed = remote(deploy_script)
+    deployed_hashes = {PurePosixPath(line.split()[1]).name: line.split()[0] for line in deployed.splitlines()}
+    if deployed_hashes != hashes:
+        raise RuntimeError("Deployed binary checksums differ")
+    result = {
+        "version": "6.6.1", "job_id": job_id, "scheduler_state": row[1], "exit_code": row[2],
+        "elapsed": row[3], "allocated_cpus": row[4], "node": row[5],
+        "verified_utc": datetime.now(timezone.utc).isoformat(), "install_root": REMOTE_ROOT,
+        "build_root": build_root, "variants": sorted(hashes), "binary_sha256": hashes,
+        "passed_upstream_cases": sorted(cases), "validation_scope": "four selected upstream cases, not full suite",
+        "mode": "CPU MPI; SSE4.2 portable target; MKL sequential; no GPU or HDF5/optional external interfaces",
+        "toolchain": "Intel ifx 2025.3.2, Intel MPI 2021.17, MKL 2025.3",
+    }
+    save(path.parent / "result.json", result)
+    (path.parent / "validation-summary.txt").write_text(log, encoding="utf-8")
+    (path.parent / "runtime-libraries.txt").write_text(libraries, encoding="utf-8")
+    manifest.update(stage="complete", result="result.json", deployed_root=REMOTE_ROOT)
+    save(path, manifest)
+    write_remote(REMOTE_ROOT + "/installation.json", (path.parent / "result.json").read_bytes())
+    print(json.dumps(result, indent=2))
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="action", required=True)
@@ -215,6 +287,8 @@ def main():
     p.add_argument("previous", type=Path)
     p.add_argument("--run-id", required=True)
     p.add_argument("--manifest", required=True, type=Path)
+    p = sub.add_parser("finalize")
+    p.add_argument("manifest", type=Path)
     args = parser.parse_args()
     if args.action == "stage":
         if not re.fullmatch(r"[a-zA-Z0-9_-]+", args.run_id):
@@ -224,6 +298,8 @@ def main():
         submit(args.manifest)
     elif args.action == "refresh":
         refresh(args.manifest)
+    elif args.action == "finalize":
+        finalize(args.manifest)
     else:
         if not re.fullmatch(r"[a-zA-Z0-9_-]+", args.run_id):
             parser.error("Unsafe run ID")

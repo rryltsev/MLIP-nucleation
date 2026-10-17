@@ -23,8 +23,10 @@
     "memory_gib": 16,
     "walltime": "01:00:00"
   },
-  "stage": "submitted",
+  "stage": "complete",
   "job_id": "20950123",
   "previous_job_id": "20950122",
-  "retry_reason": "configuration repaired after recorded terminal failure; see input hashes and code commit"
+  "retry_reason": "configuration repaired after recorded terminal failure; see input hashes and code commit",
+  "result": "result.json",
+  "deployed_root": "/home/u3129/.local/opt/vasp/6.6.1-oneapi-2025"
 }
