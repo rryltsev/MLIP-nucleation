@@ -1,0 +1,65 @@
+2026-10-17 22:29:18.923723: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-10-17 22:29:18.973865: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-10-17 22:29:20.602796: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:UserWarning: enabling the new type promotion must happen at the beginning of the program. Please ensure no TF APIs have been used yet.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792258163.950649 1406436 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38479 MB memory:  -> device: 0, name: NVIDIA A100-PCIE-40GB, pci bus id: 0000:af:00.0, compute capability: 8.0
+[tensorpotential] Info: tf.experimental.numpy behavior enabled.
+[tensorpotential] Info: TensorFloat-32 execution disabled.
+{
+  "status": "failed",
+  "started_utc": "2026-10-17T17:29:18.548933+00:00",
+  "job_id": "20950273",
+  "host": "tesla-a101",
+  "environment": "/home6/u3129/mlip-research/envs/grace_ft_a100",
+  "cuda_visible_devices": "0",
+  "xla_flags": "--xla_gpu_cuda_data_dir=/home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/nvidia/cuda_nvcc",
+  "scope": "synthetic training from scratch only; no foundation weights or DFT labels",
+  "versions": {
+    "tensorpotential": "0.6.1",
+    "tensorflow": "2.20.0",
+    "tf-keras": "2.20.1",
+    "numpy": "2.4.6",
+    "ase": "3.29.0",
+    "dpdata": "1.1.0"
+  },
+  "cuda_compiler_sha256": {
+    "nvvm/libdevice/libdevice.10.bc": "9e84b504f25d26ec775ef91f7122e68dac77fa1f776f1044128f5028356265d8",
+    "bin/ptxas": "983b0e9283855979f42cebfd80d43f9b6e786eb84f03f7570bf941c4d3a3c461"
+  },
+  "gpu_probe": {
+    "devices": [
+      "PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')"
+    ],
+    "gradient_device": "/job:localhost/replica:0/task:0/device:GPU:0",
+    "build": {
+      "cpu_compiler": "clang 18",
+      "cuda_compute_capabilities": [
+        "sm_60",
+        "sm_70",
+        "sm_80",
+        "sm_89",
+        "compute_90"
+      ],
+      "cuda_version": "12.5.1",
+      "cudnn_version": "9",
+      "is_cuda_build": true,
+      "is_rocm_build": false,
+      "is_tensorrt_build": false
+    }
+  },
+  "input_sha256": "5b17810c7ba5a671ee0264dc206866fa4b6e3635db25421bf455e5626be768cd",
+  "train": {
+    "command": [
+      "/home6/u3129/mlip-research/envs/grace_ft_a100/bin/gracemaker",
+      "input.yaml"
+    ],
+    "returncode": 1,
+    "elapsed_seconds": 8.103029457852244,
+    "pid": 1406669,
+    "log_sha256": "22a9af51c9732c6a5d8b065f03229dddc809816bb60ceb4fe920453a9dd267ac"
+  },
+  "error": "Traceback (most recent call last):\n  File \"/misc/home6/u3129/mlip-research/runs/grace-smoke-20261017-02/grace-smoke.py\", line 118, in main\n    assert proc.returncode == 0, (train / \"train.log\").read_text(errors=\"replace\")[-3500:]\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError:  num. batches: 2 | num. real structures: 4 (+0.00%) | num. real atoms: 16 (+0.00%) | num. real neighbours: 48 (+0.00%) \n/home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorpotential/data/dataset_plotter.py:119: UserWarning: Data has no positive values, and therefore cannot be log-scaled.\n  ax.set_yscale(yscale)\n/home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorpotential/data/dataset_plotter.py:126: UserWarning: Data has no positive values, and therefore cannot be log-scaled.\n  plt.tight_layout()\n2026/10/17 22:29:30 I - Train/test data distributions are plotted and saved to seed/42/plots\n2026/10/17 22:29:30 I - Model parameter dtype: float32\n2026/10/17 22:29:30 I - Constructing model from config\n2026/10/17 22:29:30 I - Model kwargs: {'lmax': 1, 'n_rad_base': 4, 'n_rad_max': 8, 'prod_func_n_max': 8, 'embedding_size': 8, 'n_mlp_dens': 4, 'dense_nbr': False}\n2026-10-17 22:29:30.319981: W tensorflow/core/common_runtime/gpu/gpu_bfc_allocator.cc:47] Overriding orig_value setting because the TF_FORCE_GPU_ALLOW_GROWTH environment variable is set. Original config value was 0.\nWARNING: All log messages before absl::InitializeLog() is called are written to STDERR\nI0000 00:00:1792258170.321054 1406669 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38043 MB memory:  -> device: 0, name: NVIDIA A100-PCIE-40GB, pci bus id: 0000:af:00.0, compute capability: 8.0\n2026/10/17 22:29:30 I - Saving model config to seed/42/model.yaml\n2026/10/17 22:29:30 I - Loss function: Loss(1.0*WeightedSSEEnergyPerAtomLoss(energy) + 1.0*WeightedSSEForceLoss(forces))\n2026/10/17 22:29:30 I - JIT compilation: False\n2026/10/17 22:29:30 I - Optimization options: {'learning_rate': 0.001, 'use_ema': False}\n2026/10/17 22:29:30 I - Setting checkpoint with trackable objects: dict_keys(['model', 'step', 'epoch', 'intra_epoch_save', 'optimizer'])\n2026/10/17 22:29:30 I - [TRAIN] Convert to tensors\n\n  0%|          | 0/4 [00:00<?, ?it/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 4/4 [00:00<00:00, 1539.76it/s]\n2026/10/17 22:29:30 I - [TEST] Convert to tensors\n\n  0%|          | 0/2 [00:00<?, ?it/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 2/2 [00:00<00:00, 1894.02it/s]\n2026/10/17 22:29:30 I - Start Adam optimization\n2026/10/17 22:29:30 I - Number of trainable parameters: 7113\nTraceback (most recent call last):\n  File \"/home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorpotential/cli/train.py\", line 404, in train_adam\n    shed_params = fit_config[LEGACY_SCHEDULER_PARAMS]\n                  ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'learning_rate_reduction'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home6/u3129/mlip-research/envs/grace_ft_a100/bin/gracemaker\", line 6, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"/home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorpotential/scripts/gracemaker.py\", line 141, in main\n    gracemaker_main(sys.argv[1:], strategy=strategy, strategy_desc=strategy_desc)\n  File \"/home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorpotential/cli/gracemaker.py\", line 728, in main\n    train_adam(\n  File \"/home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorpotential/cli/train.py\", line 406, in train_adam\n    shed_params = fit_config[SCHEDULER_PARAMS]\n                  ~~~~~~~~~~^^^^^^^^^^^^^^^^^^\nKeyError: 'scheduler_params'\n\n",
+  "finished_utc": "2026-10-17T17:29:32.530978+00:00"
+}

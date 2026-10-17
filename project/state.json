@@ -1,6 +1,6 @@
 {
   "updated_local_date": "2026-10-17",
-  "stage": "gpu_training_smoke_tests_complete_fm_preparation_pending",
+  "stage": "mlip_training_environments_validated_on_small_synthetic_tests",
   "scientific_results": [],
   "system_selection": "open; compare Al-based alloy/nucleant candidates with alternatives",
   "github": "https://github.com/rryltsev/MLIP-nucleation",
@@ -32,7 +32,7 @@
       "deepmd_2210_k40"
     ],
     "vasp": "VASP 6.6.1 CPU/MPI subsequently installed and validated; see vasp_installation",
-    "runtime_tests": "VASP four upstream cases; A100 DPA4/DPA4c/se_e2_a and K40m se_e2_a synthetic training passed; real FM finetuning and GRACE pending",
+    "runtime_tests": "VASP four upstream cases; A100 DPA4/DPA4c/GRACE-1L and K40m legacy se_e2_a synthetic training passed; real FM checkpoint finetuning pending",
     "latex_preview": "compiler could not start due Windows sandbox access error 5; source preserved"
   },
   "vasp_installation": {
@@ -54,7 +54,6 @@
   },
   "blocking_inputs": [],
   "next_actions": [
-    "resolve/install isolated GRACE environment from proposed specification and validate A100 training",
     "select and hash trainable FM checkpoints for chosen chemistry; validate loading, actual finetuning, restart and deployment",
     "choose storage root after confirming quota, retention and backup policy",
     "select pilot material and observable through comparative literature review",
@@ -75,7 +74,7 @@
     "scientific_validation": "no new DFT calculations; functional, variants and cutoffs remain study-specific choices"
   },
   "mlip_runtime_checks": {
-    "status": "complete",
+    "status": "complete including subsequent GRACE test",
     "report": "reports/mlip-environment-2026-10-17.tex",
     "architecture_preferences": [
       "DPA4",
@@ -87,42 +86,81 @@
     "runs": [
       "runs/mlip-smoke-20261017-a100-01/manifest.json",
       "runs/mlip-smoke-20261017-k40m-01/manifest.json",
-      "runs/mlip-smoke-20261017-a100-vesin-01/manifest.json"
+      "runs/mlip-smoke-20261017-a100-vesin-01/manifest.json",
+      "runs/grace-smoke-20261017-01/manifest.json",
+      "runs/grace-smoke-20261017-02/manifest.json",
+      "runs/grace-smoke-20261017-03/manifest.json"
     ],
     "job_ids": [
       "20950192",
       "20950193",
-      "20950195"
+      "20950195",
+      "20950272",
+      "20950273",
+      "20950274"
     ],
-    "total_gpu_seconds": 241,
+    "total_gpu_seconds": 328,
     "preferred_a100_environment": "lammps_deepmd_dpa4",
     "observations": [
       "A100 se_e2_a, DPA4 and DPA4c each passed 20 synthetic training steps in lammps_deepmd_dpa4",
       "DPA4 first failed in deepmd_320_a100 due missing vesin-torch/nvalchemiops; failure retained",
       "K40m se_e2_a passed 20 steps with DeepMD 2.2.10 TF2.9 CUDA10.2 sm_35",
-      "No existing environment modified; GRACE absent; standard FM caches absent"
+      "Initial DeepMD checks: no existing environment modified; GRACE then absent; later isolated installation recorded in grace_installation",
+      "GRACE small 1-layer model passed five epochs / 20 updates on A100; checkpoint archived in Git; no foundation weights downloaded"
     ],
     "not_validated": [
       "selected foundation checkpoint loading and actual fine-tuning",
       "save/restart and export/deployment equivalence",
-      "multi-GPU execution and production-size memory/performance",
-      "GRACE runtime"
+      "multi-GPU execution and production-size memory/performance"
     ],
-    "latex_preview": "built-in compiler startup failed: Windows CreateProcessAsUserW access denied (5); new report source preserved; existing VASP editor left unchanged"
+    "latex_preview": "built-in compiler startup failed: Windows CreateProcessAsUserW access denied (5); new report source preserved; existing VASP editor left unchanged",
+    "grace_report": "reports/grace-installation-2026-10-17.tex",
+    "deepmd_gpu_seconds": 241,
+    "grace_gpu_seconds": 87
   },
   "grace_installation": {
-    "status": "installed and dependency-checked; fixing XLA CUDA search path after initial GPU check",
-    "run": "runs/grace-install-20261017-03/manifest.json",
-    "failure": "Conda plugin tried writing ~/.cache on compute-read-only home4; next attempt will isolate HOME and caches on home6",
-    "job_id": "20950266",
+    "status": "installed; pip check and A100 synthetic training passed",
     "environment": "/home6/u3129/mlip-research/envs/grace_ft_a100",
-    "prior_attempt": "runs/grace-install-20261017-01/manifest.json",
-    "time_limit": "one CPU, 60 minutes; A100 check remains one GPU, 10 minutes",
-    "resume_policy": "if attempt 02 fails or times out, collect/reconcile then submit install --attempt 03 (one CPU, 60 minutes, reuse only private GRACE Python 3.11 prefix)",
-    "previous_run": "runs/grace-install-20261017-02/manifest.json",
-    "result": "runs/grace-install-20261017-03/result.json",
+    "environment_setup": "/home6/u3129/mlip-research/envs/grace_ft_a100/activate-grace.sh",
+    "python": "3.11.17",
+    "versions": {
+      "tensorpotential": "0.6.1",
+      "tensorflow": "2.20.0",
+      "tf-keras": "2.20.1",
+      "numpy": "2.4.6",
+      "ase": "3.29.0",
+      "dpdata": "1.1.0"
+    },
+    "installation_manifest": "runs/grace-install-20261017-03/manifest.json",
+    "install_job_id": "20950266",
+    "validation_manifest": "runs/grace-smoke-20261017-03/manifest.json",
+    "validation_job_id": "20950274",
+    "report": "reports/grace-installation-2026-10-17.tex",
     "lock": "environments/grace-a100.lock.json",
-    "prior_gpu_check": "runs/grace-smoke-20261017-01/manifest.json",
-    "gpu_check": "runs/grace-smoke-20261017-02/manifest.json"
+    "pip_wheel_count": 82,
+    "epochs": 5,
+    "optimizer_updates": 20,
+    "successful_gpu_seconds": 38,
+    "all_grace_gpu_seconds": 87,
+    "checkpoint_backup": "runs/grace-smoke-20261017-03/checkpoint-backup.json",
+    "failed_or_interrupted_attempts": [
+      "runs/grace-install-20261017-01/manifest.json",
+      "runs/grace-install-20261017-02/manifest.json",
+      "runs/grace-smoke-20261017-01/manifest.json",
+      "runs/grace-smoke-20261017-02/manifest.json"
+    ],
+    "diagnoses": [
+      "Conda plugin cache wrote to compute-read-only home4; isolated installer HOME on home6",
+      "large downloads exceeded initial CPU time limit; cache reused for full reinstall on one CPU",
+      "XLA required packaged CUDA libdevice/ptxas discovery via activation helper",
+      "minimal test input required explicit scheduler_params for TensorPotential 0.6.1"
+    ],
+    "not_validated": [
+      "selected foundation checkpoint loading/fine-tuning",
+      "restart execution and exported prediction equivalence",
+      "XLA-compiled training, multi-GPU training and production-size performance",
+      "GRACE runtime on K40m"
+    ],
+    "latex_preview": "built-in compiler could not start: Windows CreateProcessAsUserW access denied (5); LaTeX source preserved; existing VASP editor unchanged"
   }
 }

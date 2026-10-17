@@ -1,0 +1,16 @@
+{
+  "backend": "Git; small synthetic test checkpoint only",
+  "files": {
+    "checkpoint.data-00000-of-00001": {
+      "bytes": 96650,
+      "sha256": "fd4a48eac210eab3ab7357493ce436e9fc8f32994aee55af6c1a6c3ff9bd23a6"
+    },
+    "checkpoint.index": {
+      "bytes": 3859,
+      "sha256": "1681039fb67724e71e750463dd535afe9abe2f148510f45ea2cfd3f5ec2d719d"
+    }
+  },
+  "model_definition": "train/seed/42/model.yaml",
+  "purpose": "restart/reproduction of the software smoke test; not a selected foundation model",
+  "source_run": "grace-smoke-20261017-03"
+}

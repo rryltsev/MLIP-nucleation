@@ -82,12 +82,21 @@
       ],
       "preferred_hardware": "A100",
       "checkpoint": null,
-      "environment_candidates": [],
-      "runtime_observation": "not installed in inspected conda environments; not GPU-tested",
-      "proposed_environment": "environments/grace-a100.proposed.yml",
-      "dependency_observation": "published TensorPotential 0.6.1 requires TensorFlow <=2.20 and legacy tf_keras; existing DeepMD A100 TensorFlow is 2.21",
+      "environment_candidates": [
+        "/home6/u3129/mlip-research/envs/grace_ft_a100"
+      ],
+      "runtime_observation": "TensorPotential 0.6.1 / TF 2.20 / tf-keras 2.20.1 installed; small GRACE-1L five-epoch / 20-update training passes on A100; actual FM checkpoint finetuning remains untested",
+      "dependency_observation": "isolated environment; packaged CUDA nvvm/libdevice and ptxas configured by activation helper; no existing DeepMD environment modified",
       "checkpoint_requirement": "fine-tuning checkpoint with model.yaml and checkpoint files; inference-only SavedModel is insufficient",
-      "documentation": "https://gracemaker.readthedocs.io/en/latest/gracemaker/foundation/"
+      "documentation": "https://gracemaker.readthedocs.io/en/latest/gracemaker/foundation/",
+      "preferred_environment": "/home6/u3129/mlip-research/envs/grace_ft_a100",
+      "environment_setup": "/home6/u3129/mlip-research/envs/grace_ft_a100/activate-grace.sh",
+      "environment_lock": "environments/grace-a100.lock.json",
+      "runtime_evidence": [
+        "runs/grace-smoke-20261017-03/manifest.json"
+      ],
+      "report": "reports/grace-installation-2026-10-17.tex",
+      "original_specification": "environments/grace-a100.proposed.yml"
     },
     {
       "id": "deepmd-se-e2-a-legacy",

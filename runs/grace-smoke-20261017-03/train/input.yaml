@@ -1,0 +1,40 @@
+seed: 42
+cutoff: 5.0
+data:
+  filename: /misc/home6/u3129/mlip-research/runs/grace-smoke-20261017-03/data/train.extxyz
+  test_filename: /misc/home6/u3129/mlip-research/runs/grace-smoke-20261017-03/data/validation.extxyz
+  reference_energy: 0
+  max_workers: 1
+potential:
+  preset: GRACE_1LAYER_latest
+  param_dtype: float32
+  scale: false
+  kwargs:
+    lmax: 1
+    n_rad_base: 4
+    n_rad_max: 8
+    prod_func_n_max: 8
+    embedding_size: 8
+    n_mlp_dens: 4
+fit:
+  maxiter: 5
+  optimizer: Adam
+  opt_params:
+    learning_rate: 0.001
+    use_ema: false
+  scheduler: cosine_decay
+  scheduler_params:
+    minimum_learning_rate: 0.0001
+  loss:
+    energy:
+      type: square
+      weight: 1.0
+    forces:
+      type: square
+      weight: 1.0
+  batch_size: 2
+  test_batch_size: 2
+  jit_compile: false
+  checkpoint_freq: 1
+  train_max_n_buckets: 1
+  test_max_n_buckets: 1

@@ -93,6 +93,7 @@ def main():
                     "kwargs":{"lmax":1,"n_rad_base":4,"n_rad_max":8,"prod_func_n_max":8,
                               "embedding_size":8,"n_mlp_dens":4}},
                   "fit":{"maxiter":5,"optimizer":"Adam","opt_params":{"learning_rate":0.001,"use_ema":False},
+                         "scheduler":"cosine_decay","scheduler_params":{"minimum_learning_rate":0.0001},
                          "loss":{"energy":{"type":"square","weight":1.},"forces":{"type":"square","weight":1.}},
                          "batch_size":2,"test_batch_size":2,"jit_compile":False,"checkpoint_freq":1,
                          "train_max_n_buckets":1,"test_max_n_buckets":1}}

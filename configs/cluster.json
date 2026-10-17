@@ -10,7 +10,7 @@
     "cpu_count_approx": 1000
   },
   "verified": false,
-  "inventory_status": "VASP CPU/MPI verified; A100 DPA4/DPA4c and K40m legacy DeepMD small training tests passed; GRACE and production FM finetuning pending",
+  "inventory_status": "VASP verified; small A100 DPA4/DPA4c/GRACE-1L and K40m legacy DeepMD training passed; real FM finetuning/production validation pending",
   "inventory_report": "reports/cluster-inventory-2026-10-17.tex",
   "candidate_partitions": {
     "cpu_dft": "apollo",
@@ -82,7 +82,25 @@
       ],
       "validation": "20-step synthetic legacy training; no modern FM support established"
     },
-    "grace": "not installed; proposed isolated environment environments/grace-a100.proposed.yml",
+    "grace": {
+      "environment": "/home6/u3129/mlip-research/envs/grace_ft_a100",
+      "environment_setup": "/home6/u3129/mlip-research/envs/grace_ft_a100/activate-grace.sh",
+      "partition": "v100",
+      "gres": "gpu:a100:1",
+      "validated_node": "tesla-a101",
+      "versions": {
+        "tensorpotential": "0.6.1",
+        "tensorflow": "2.20.0",
+        "tf-keras": "2.20.1",
+        "numpy": "2.4.6",
+        "ase": "3.29.0",
+        "dpdata": "1.1.0"
+      },
+      "lock": "environments/grace-a100.lock.json",
+      "validation": "GRACE_1LAYER_latest reduced-size model; five epochs, 20 synthetic updates; finite metrics/checkpoint; actual GPU process observed; training jit_compile false",
+      "validation_run": "runs/grace-smoke-20261017-03/manifest.json",
+      "report": "reports/grace-installation-2026-10-17.tex"
+    },
     "runtime_check_work_root": "/home6/u3129/mlip-research/runs",
     "production_allocation_budget": null
   }

@@ -45,7 +45,8 @@ def main():
     collect(path)  # Also retrieve the newly created Conda checksum lock.
     lock(path.parent)
     print('INSTALLATION_OK; submitting/continuing the single A100 check',flush=True)
-    path = ROOT/'runs/grace-smoke-20261017-01/manifest.json'
+    known_checks=sorted((ROOT/'runs').glob('grace-smoke-20261017-*/manifest.json'))
+    path = known_checks[-1] if known_checks else ROOT/'runs/grace-smoke-20261017-01/manifest.json'
     if not path.exists(): submit('smoke','01')
     record = wait_for_record(path, 750)
     if record.get('runtime_status') != 'passed':

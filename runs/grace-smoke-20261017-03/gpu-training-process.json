@@ -1,0 +1,38 @@
+[
+  {
+    "elapsed_seconds": 6.10003549233079,
+    "process": "1413505, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 26"
+  },
+  {
+    "elapsed_seconds": 8.132415764033794,
+    "process": "1413505, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 420"
+  },
+  {
+    "elapsed_seconds": 10.166191155090928,
+    "process": "1413505, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 420"
+  },
+  {
+    "elapsed_seconds": 12.198336727917194,
+    "process": "1413505, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 420"
+  },
+  {
+    "elapsed_seconds": 14.229643981903791,
+    "process": "1413505, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 430"
+  },
+  {
+    "elapsed_seconds": 16.26044026017189,
+    "process": "1413505, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 434"
+  },
+  {
+    "elapsed_seconds": 18.29286741837859,
+    "process": "1413505, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 434"
+  },
+  {
+    "elapsed_seconds": 20.326265448704362,
+    "process": "1413505, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 434"
+  },
+  {
+    "elapsed_seconds": 22.35829888470471,
+    "process": "1413505, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 434"
+  }
+]

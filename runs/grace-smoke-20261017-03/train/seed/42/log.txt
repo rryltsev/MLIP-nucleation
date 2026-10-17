@@ -1,0 +1,111 @@
+2026-10-17 22:31:33,258 I - ========================================
+2026-10-17 22:31:33,258 I -             Start GRACEmaker
+2026-10-17 22:31:33,258 I - ========================================
+2026-10-17 22:31:33,258 I - GRACEmaker version: 0.6.1
+2026-10-17 22:31:33,259 I - Tensorflow version: 2.20.0
+2026-10-17 22:31:33,259 I - Loaded input.yaml... 
+2026-10-17 22:31:33,259 I - Set seed to 42
+2026-10-17 22:31:33,260 I - Data distribution strategy: Single GPU
+2026-10-17 22:31:33,260 I - Number of replicas: 1
+2026-10-17 22:31:33,260 I - Replica ID in sync group: 0
+2026-10-17 22:31:33,260 I - Global TRAIN batch size (= minibatch size * num GPUS): 2, num. GPUS: 1, minibatch size: 2
+2026-10-17 22:31:33,260 I - Global TEST batch size (= minibatch size * num GPUS): 2, num. GPUS: 1, minibatch size: 2
+2026-10-17 22:31:33,260 I - Loading training data from /misc/home6/u3129/mlip-research/runs/grace-smoke-20261017-03/data/train.extxyz
+2026-10-17 22:31:33,260 I - Search for dataset file(s): ['/misc/home6/u3129/mlip-research/runs/grace-smoke-20261017-03/data/train.extxyz']
+2026-10-17 22:31:33,260 I - #1/1: try to load /misc/home6/u3129/mlip-research/runs/grace-smoke-20261017-03/data/train.extxyz
+2026-10-17 22:31:33,260 I - Reading extxyz file: /misc/home6/u3129/mlip-research/runs/grace-smoke-20261017-03/data/train.extxyz (6.4KiB)
+2026-10-17 22:31:33,264 I - 8 structures read from /misc/home6/u3129/mlip-research/runs/grace-smoke-20261017-03/data/train.extxyz
+2026-10-17 22:31:33,264 I - Converting to dataframe
+2026-10-17 22:31:33,264 I - Extracting energy
+2026-10-17 22:31:33,266 I - Extracting forces
+2026-10-17 22:31:33,267 I - Trying to extract stresses
+2026-10-17 22:31:33,268 I - Extracting info
+2026-10-17 22:31:33,268 I -  8 structures found
+2026-10-17 22:31:33,269 I - Loaded dataset size: (8, 6)
+2026-10-17 22:31:33,269 I - Loading test data: /misc/home6/u3129/mlip-research/runs/grace-smoke-20261017-03/data/validation.extxyz
+2026-10-17 22:31:33,269 I - Search for dataset file(s): ['/misc/home6/u3129/mlip-research/runs/grace-smoke-20261017-03/data/validation.extxyz']
+2026-10-17 22:31:33,269 I - #1/1: try to load /misc/home6/u3129/mlip-research/runs/grace-smoke-20261017-03/data/validation.extxyz
+2026-10-17 22:31:33,270 I - Reading extxyz file: /misc/home6/u3129/mlip-research/runs/grace-smoke-20261017-03/data/validation.extxyz (3.2KiB)
+2026-10-17 22:31:33,271 I - 4 structures read from /misc/home6/u3129/mlip-research/runs/grace-smoke-20261017-03/data/validation.extxyz
+2026-10-17 22:31:33,271 I - Converting to dataframe
+2026-10-17 22:31:33,271 I - Extracting energy
+2026-10-17 22:31:33,272 I - Extracting forces
+2026-10-17 22:31:33,272 I - Trying to extract stresses
+2026-10-17 22:31:33,273 I - Extracting info
+2026-10-17 22:31:33,273 I -  4 structures found
+2026-10-17 22:31:33,274 I - Set 'energy_corrected' to 'energy', because reference_energy=0
+2026-10-17 22:31:33,275 I - input::fit::compute_convex_hull is False, convex hull and 'low energy' group will not be computed 
+2026-10-17 22:31:33,275 I - Train Dataset size: 8
+2026-10-17 22:31:33,275 I - Test Dataset size: 4
+2026-10-17 22:31:33,275 I - Extract elements from train and test datasets
+2026-10-17 22:31:33,275 I - Elements mapping: {'Al': 0}
+2026-10-17 22:31:33,275 I - TRAIN WEIGHTS: energy - False, forces - False 
+2026-10-17 22:31:33,275 I - TEST WEIGHTS: energy - False, forces - False 
+2026-10-17 22:31:33,276 I - Saving current training set to seed/42/training_set.pkl.gz
+2026-10-17 22:31:33,279 I - Saving current test set to seed/42/test_set.pkl.gz
+2026-10-17 22:31:33,281 I - Train set processing
+2026-10-17 22:31:33,281 I - Train buckets: 1
+2026-10-17 22:31:33,281 I - 1/4. Converting pd.DataFrame to batch data (parallel, max_workers=1)
+2026-10-17 22:31:33,281 I - Parallel data processing: max_workers=1, chunksize=2500
+2026-10-17 22:31:33,310 I - 2/4. Splitting batches into per-batch groups.
+2026-10-17 22:31:33,461 I - 3/4. Joining groups to batches
+2026-10-17 22:31:33,581 I - 4/4. Padding batches
+2026-10-17 22:31:33,582 I - [TRAIN] dataset stats: num. batches: 4 | num. real structures: 8 (+0.00%) | num. real atoms: 32 (+0.00%) | num. real neighbours: 96 (+0.00%) 
+2026-10-17 22:31:33,582 I - Average number of neighbors (computed): 3.0
+2026-10-17 22:31:33,582 I - Test set processing
+2026-10-17 22:31:33,582 I - Test buckets: 1
+2026-10-17 22:31:33,582 I - 1/4. Converting pd.DataFrame to batch data (parallel, max_workers=1)
+2026-10-17 22:31:33,582 I - Parallel data processing: max_workers=1, chunksize=2500
+2026-10-17 22:31:33,607 I - 2/4. Splitting batches into per-batch groups.
+2026-10-17 22:31:33,754 I - 3/4. Joining groups to batches
+2026-10-17 22:31:33,873 I - 4/4. Padding batches
+2026-10-17 22:31:33,873 I - [TEST] dataset stats: num. batches: 2 | num. real structures: 4 (+0.00%) | num. real atoms: 16 (+0.00%) | num. real neighbours: 48 (+0.00%) 
+2026-10-17 22:31:34,848 I - Train/test data distributions are plotted and saved to seed/42/plots
+2026-10-17 22:31:34,848 I - Model parameter dtype: float32
+2026-10-17 22:31:34,848 I - Constructing model from config
+2026-10-17 22:31:34,848 I - Model kwargs: {'lmax': 1, 'n_rad_base': 4, 'n_rad_max': 8, 'prod_func_n_max': 8, 'embedding_size': 8, 'n_mlp_dens': 4, 'dense_nbr': False}
+2026-10-17 22:31:35,224 I - Saving model config to seed/42/model.yaml
+2026-10-17 22:31:35,233 I - Loss function: Loss(1.0*WeightedSSEEnergyPerAtomLoss(energy) + 1.0*WeightedSSEForceLoss(forces))
+2026-10-17 22:31:35,234 I - JIT compilation: False
+2026-10-17 22:31:35,234 I - Optimization options: {'learning_rate': 0.001, 'use_ema': False}
+2026-10-17 22:31:35,456 I - Setting checkpoint with trackable objects: dict_keys(['model', 'step', 'epoch', 'intra_epoch_save', 'optimizer'])
+2026-10-17 22:31:35,457 I - [TRAIN] Convert to tensors
+2026-10-17 22:31:35,460 I - [TEST] Convert to tensors
+2026-10-17 22:31:35,614 I - Start Adam optimization
+2026-10-17 22:31:35,647 I - Number of trainable parameters: 7113
+2026-10-17 22:31:37,907 W - From /home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorflow/python/util/dispatch.py:1264: calling expand_dims (from tensorflow.python.ops.array_ops) with dim is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the `axis` argument instead
+2026-10-17 22:31:39,335 W - From /home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorflow/python/util/dispatch.py:1264: calling squeeze (from tensorflow.python.ops.array_ops) with squeeze_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the `axis` argument instead
+2026-10-17 22:31:48,636 I - Iteration #1/5 TRAIN(TEST): total_loss: 1.335e+00 (1.530e+00) mae/depa: 6.001e-01 (6.565e-01) rmse/depa: 6.014e-01 (6.577e-01) mae/f_comp: 8.150e-01 (8.682e-01) rmse/f_comp: 9.865e-01 (1.048e+00) Time(mcs/at): 338093 (134267)
+2026-10-17 22:31:48,638 I - New best test loss found (1.53039e+00), checkpointing
+2026-10-17 22:31:48,724 I - Sharding callback duration: 19 microseconds
+2026-10-17 22:31:48,742 I - Regular checkpointing
+2026-10-17 22:31:48,789 I - Sharding callback duration: 18 microseconds
+2026-10-17 22:31:48,860 I - Iteration #2/5 TRAIN(TEST): total_loss: 1.272e+00 (1.476e+00) mae/depa: 5.987e-01 (6.540e-01) rmse/depa: 5.999e-01 (6.551e-01) mae/f_comp: 7.881e-01 (8.463e-01) rmse/f_comp: 9.549e-01 (1.023e+00) Time(mcs/at): 1218 (653)
+2026-10-17 22:31:48,861 I - New best test loss found (1.47572e+00), checkpointing
+2026-10-17 22:31:48,908 I - Sharding callback duration: 16 microseconds
+2026-10-17 22:31:48,918 I - Regular checkpointing
+2026-10-17 22:31:48,964 I - Sharding callback duration: 17 microseconds
+2026-10-17 22:31:49,033 I - Iteration #3/5 TRAIN(TEST): total_loss: 1.222e+00 (1.438e+00) mae/depa: 5.979e-01 (6.525e-01) rmse/depa: 5.991e-01 (6.535e-01) mae/f_comp: 7.662e-01 (8.310e-01) rmse/f_comp: 9.291e-01 (1.006e+00) Time(mcs/at): 1171 (658)
+2026-10-17 22:31:49,034 I - New best test loss found (1.43847e+00), checkpointing
+2026-10-17 22:31:49,080 I - Sharding callback duration: 16 microseconds
+2026-10-17 22:31:49,090 I - Regular checkpointing
+2026-10-17 22:31:49,136 I - Sharding callback duration: 16 microseconds
+2026-10-17 22:31:49,203 I - Iteration #4/5 TRAIN(TEST): total_loss: 1.191e+00 (1.419e+00) mae/depa: 5.976e-01 (6.517e-01) rmse/depa: 5.987e-01 (6.527e-01) mae/f_comp: 7.524e-01 (8.230e-01) rmse/f_comp: 9.127e-01 (9.966e-01) Time(mcs/at): 1146 (630)
+2026-10-17 22:31:49,204 I - New best test loss found (1.41933e+00), checkpointing
+2026-10-17 22:31:49,252 I - Sharding callback duration: 15 microseconds
+2026-10-17 22:31:49,263 I - Regular checkpointing
+2026-10-17 22:31:49,310 I - Sharding callback duration: 16 microseconds
+2026-10-17 22:31:49,386 I - Iteration #5/5 TRAIN(TEST): total_loss: 1.177e+00 (1.411e+00) mae/depa: 5.974e-01 (6.513e-01) rmse/depa: 5.985e-01 (6.524e-01) mae/f_comp: 7.458e-01 (8.194e-01) rmse/f_comp: 9.048e-01 (9.926e-01) Time(mcs/at): 1396 (628)
+2026-10-17 22:31:49,387 I - New best test loss found (1.41092e+00), checkpointing
+2026-10-17 22:31:49,434 I - Sharding callback duration: 17 microseconds
+2026-10-17 22:31:49,446 I - Regular checkpointing
+2026-10-17 22:31:49,491 I - Sharding callback duration: 16 microseconds
+2026-10-17 22:31:49,502 I - Loading best test loss model
+2026-10-17 22:31:49,540 I - Loaded checkpoint from seed/42/checkpoints/checkpoint.best_test_loss
+2026-10-17 22:31:49,540 I - Saving model to `final_model`
+2026-10-17 22:31:50,739 I - Function `compute` contains input name(s) resource with unsupported characters which will be renamed to gather_resource in the SavedModel.
+2026-10-17 22:31:51,187 I - Function `compute_energy` contains input name(s) resource with unsupported characters which will be renamed to gather_resource in the SavedModel.

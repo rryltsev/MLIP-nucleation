@@ -36,8 +36,9 @@ def submit(phase, attempt):
                  "grace-smoke.py": ROOT / "scripts/hpc/grace-smoke.py",
                  "mlip-smoke.py": ROOT / "scripts/hpc/mlip-smoke.py"}
         batch, partition, walltime, gres = "grace-smoke.sbatch", "v100", "00:10:00", "gpu:a100:1"
-        if attempt == '02':
-            previous=json.loads((ROOT/'runs/grace-smoke-20261017-01/manifest.json').read_text())
+        if attempt in ['02','03']:
+            previous_attempt='%02d' % (int(attempt)-1)
+            previous=json.loads((ROOT/('runs/grace-smoke-20261017-'+previous_attempt)/'manifest.json').read_text())
             if previous.get('stage') != 'collected' or previous.get('runtime_status') != 'failed':
                 raise RuntimeError('Reconcile the earlier GPU check before retrying')
             walltime='00:05:00'
@@ -54,7 +55,8 @@ def submit(phase, attempt):
         "stage":"preparing","job_id":None}
     save(path,manifest)
     q=shlex.quote(run_dir)
-    remote("set -eu; umask 077; test ! -e " + q + "; mkdir -p " + q)
+    parent=shlex.quote(run_dir.rsplit('/',1)[0])
+    remote("set -eu; umask 077; mkdir -p " + parent + "; mkdir " + q)
     for n,b in payloads.items(): write_remote(run_dir+"/"+n,b)
     manifest['stage']='submission_intent'; save(path,manifest)
     write_remote(run_dir+"/manifest.json",path.read_bytes())
@@ -85,7 +87,7 @@ def collect(path):
 import json,hashlib
 from pathlib import Path
 root=Path(@ROOT@)
-patterns=['*.json','*.txt','*.log','*.out','*.yaml','data/provenance.json','data/*.extxyz','train/*.yaml','train/*.txt','train/*.log','train/seed/*/*.yaml','train/seed/*/*.txt']
+patterns=['*.json','*.txt','*.csv','*.log','*.out','*.yaml','data/provenance.json','data/*.extxyz','train/*.yaml','train/*.txt','train/*.log','train/seed/*/*.yaml','train/seed/*/*.txt']
 records={}
 for pattern in patterns:
  for p in root.glob(pattern):

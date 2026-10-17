@@ -1,0 +1,122 @@
+2026-10-17 22:31:23.141274: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-10-17 22:31:23.194591: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-10-17 22:31:24.977635: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:UserWarning: enabling the new type promotion must happen at the beginning of the program. Please ensure no TF APIs have been used yet.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792258288.497146 1412874 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38479 MB memory:  -> device: 0, name: NVIDIA A100-PCIE-40GB, pci bus id: 0000:af:00.0, compute capability: 8.0
+[tensorpotential] Info: tf.experimental.numpy behavior enabled.
+[tensorpotential] Info: TensorFloat-32 execution disabled.
+{
+  "status": "passed",
+  "started_utc": "2026-10-17T17:31:22.716581+00:00",
+  "job_id": "20950274",
+  "host": "tesla-a101",
+  "environment": "/home6/u3129/mlip-research/envs/grace_ft_a100",
+  "cuda_visible_devices": "0",
+  "xla_flags": "--xla_gpu_cuda_data_dir=/home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/nvidia/cuda_nvcc",
+  "scope": "synthetic training from scratch only; no foundation weights or DFT labels",
+  "versions": {
+    "tensorpotential": "0.6.1",
+    "tensorflow": "2.20.0",
+    "tf-keras": "2.20.1",
+    "numpy": "2.4.6",
+    "ase": "3.29.0",
+    "dpdata": "1.1.0"
+  },
+  "cuda_compiler_sha256": {
+    "nvvm/libdevice/libdevice.10.bc": "9e84b504f25d26ec775ef91f7122e68dac77fa1f776f1044128f5028356265d8",
+    "bin/ptxas": "983b0e9283855979f42cebfd80d43f9b6e786eb84f03f7570bf941c4d3a3c461"
+  },
+  "gpu_probe": {
+    "devices": [
+      "PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')"
+    ],
+    "gradient_device": "/job:localhost/replica:0/task:0/device:GPU:0",
+    "build": {
+      "cpu_compiler": "clang 18",
+      "cuda_compute_capabilities": [
+        "sm_60",
+        "sm_70",
+        "sm_80",
+        "sm_89",
+        "compute_90"
+      ],
+      "cuda_version": "12.5.1",
+      "cudnn_version": "9",
+      "is_cuda_build": true,
+      "is_rocm_build": false,
+      "is_tensorrt_build": false
+    }
+  },
+  "input_sha256": "b793c384640ec2b2123baa388fb164d3e3c9331fd78172748d7f6da5e6d4482f",
+  "train": {
+    "command": [
+      "/home6/u3129/mlip-research/envs/grace_ft_a100/bin/gracemaker",
+      "input.yaml"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 24.358577325940132,
+    "pid": 1413505,
+    "log_sha256": "ce6341707afdd355b04eeaecfa8cf82494b2e9d87df531baf8633264291f1967"
+  },
+  "metrics": {
+    "train": {
+      "epochs": 5,
+      "last": {
+        "total_loss/train": 1.1769463692541335,
+        "mae/depa": 0.5973938059975636,
+        "mae/de": 2.3895752239902546,
+        "rmse/depa": 0.5984937241777937,
+        "rmse/de": 2.3939748967111747,
+        "mae/f_comp": 0.7457580297370505,
+        "rmse/f_comp": 0.9048489550051592,
+        "loss_component/energy/train": 0.1790973689401025,
+        "loss_component/forces/train": 0.40937581568696424,
+        "total_time/train/per_atom": 0.0013956985785625875,
+        "epoch": 5,
+        "step": 20,
+        "lr_epoch_begin": 0.00015423681179527193,
+        "lr_epoch_end": 9.999999747378752e-05
+      },
+      "sha256": "1d3e9553c4a3ecef4c5cdb100a618a55bd0dc74e197b65c371b074233170df37"
+    },
+    "test": {
+      "epochs": 5,
+      "last": {
+        "total_loss/test": 1.410923100404163,
+        "loss_component/energy/test": 0.21279407335572334,
+        "loss_component/forces/test": 0.49266747684635814,
+        "mae/depa": 0.6513375427611512,
+        "mae/de": 2.6053501710446048,
+        "rmse/depa": 0.6523711725018563,
+        "rmse/de": 2.609484690007425,
+        "mae/f_comp": 0.8194396733624442,
+        "rmse/f_comp": 0.9926403949531353,
+        "total_time/test/per_atom": 0.0006277078064158559,
+        "epoch": 5,
+        "step": 20,
+        "lr_epoch_begin": 0.00015423681179527193,
+        "lr_epoch_end": 9.999999747378752e-05
+      },
+      "sha256": "4b87e700009866a84d37bbf96c09ad7fcee602b47924fbd2f49ccde1c7b19f67"
+    }
+  },
+  "checkpoint_step": 20,
+  "output_sha256": {
+    "seed/42/train_metrics.yaml": "1d3e9553c4a3ecef4c5cdb100a618a55bd0dc74e197b65c371b074233170df37",
+    "seed/42/test_metrics.yaml": "4b87e700009866a84d37bbf96c09ad7fcee602b47924fbd2f49ccde1c7b19f67",
+    "seed/42/model.yaml": "2e0da8c905ac354ad78344b6ffe82a2bd383665df89f2157dbfec65293556a01",
+    "seed/42/final_model/metadata.json": "9d3806b724b416e5791434199fe70ef72373a6c7a55d2f07438cd2e46a4199b5",
+    "seed/42/final_model/metadata.yaml": "25deaf41c874056a0a6267d92f14490dceaf70ed4c7456e3e61852b4fd8836b8",
+    "seed/42/final_model/saved_model.pb": "7e0d143b30aaaa8e899c859f628ec51446f1f6f10a8ab779802987f6ba48a004",
+    "seed/42/final_model/fingerprint.pb": "ba3cf977ab029777a63d75d99df5633884600b17b05972f76ab45697ecc61c88",
+    "seed/42/final_model/variables/variables.data-00000-of-00001": "e581684d58d618fedef9b8ca26ad63938efc8d786fa77dfb108a4da208e5a4c9",
+    "seed/42/final_model/variables/variables.index": "19c2c718b841fd61fb2c5add0c04624cfb62f7c96320cfb38037d5c45000ab31",
+    "seed/42/checkpoints/checkpoint.best_test_loss.data-00000-of-00001": "fd4a48eac210eab3ab7357493ce436e9fc8f32994aee55af6c1a6c3ff9bd23a6",
+    "seed/42/checkpoints/checkpoint.index": "1681039fb67724e71e750463dd535afe9abe2f148510f45ea2cfd3f5ec2d719d",
+    "seed/42/checkpoints/checkpoint.best_test_loss.index": "1681039fb67724e71e750463dd535afe9abe2f148510f45ea2cfd3f5ec2d719d",
+    "seed/42/checkpoints/checkpoint.data-00000-of-00001": "fd4a48eac210eab3ab7357493ce436e9fc8f32994aee55af6c1a6c3ff9bd23a6"
+  },
+  "finished_utc": "2026-10-17T17:31:53.403851+00:00"
+}

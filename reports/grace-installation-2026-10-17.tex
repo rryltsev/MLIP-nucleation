@@ -1,0 +1,142 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,booktabs,tabularx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\title{GRACE installation and A100 training validation on UMT}
+\author{MLIP-nucleation project}
+\date{17 October 2026}
+\begin{document}
+\maketitle
+
+\section{Accepted environment}
+A separate environment was installed in
+\path{/home6/u3129/mlip-research/envs/grace_ft_a100}.
+The accepted versions are Python 3.11.17, TensorPotential 0.6.1,
+TensorFlow 2.20.0, tf-keras 2.20.1, NumPy 2.4.6, ASE 3.29.0 and dpdata 1.1.0.
+\texttt{pip check} reported no broken requirements. Existing DeepMD environments
+were not modified. The prefix is on compute-writable home6 storage; the main
+home filesystem is read-only on tested compute nodes.
+
+Inside a suitable Slurm allocation, source:
+\begin{verbatim}
+source /home6/u3129/mlip-research/envs/grace_ft_a100/activate-grace.sh
+gracemaker input.yaml
+\end{verbatim}
+The helper activates the prefix, selects legacy Keras, enables GPU memory growth,
+and sets \texttt{XLA\_FLAGS} to the installed CUDA wheel's data root. It also
+prepends the wheel's \texttt{ptxas} directory to \texttt{PATH}.
+The CUDA data root is \path{lib/python3.11/site-packages/nvidia/cuda_nvcc}
+relative to the environment. Its \path{nvvm/libdevice/libdevice.10.bc} is
+needed even for some ordinary TensorFlow GPU operations when explicit
+training JIT compilation is disabled. The successful run records hashes of
+both \texttt{libdevice} and \texttt{ptxas}.
+
+\section{Successful GPU check}
+Slurm job \textbf{20950274} completed with exit code 0 on
+\texttt{tesla-a101}, partition \texttt{v100}, account \texttt{imet-2026-2},
+QoS \texttt{normal}. It requested one A100, four CPUs, 16 GiB RAM and a
+five-minute limit. Scheduler elapsed time was \textbf{38 seconds}.
+The device was an NVIDIA A100-PCIE-40GB with driver 580.126.20.
+
+A reduced-size \texttt{GRACE\_1LAYER\_latest} model with 7113 trainable
+parameters completed \textbf{five epochs and 20 optimizer updates}.
+The input used angular cutoff 1, radial width 8, embedding width 8,
+batch size 2, Adam and a cosine learning-rate schedule. Training JIT was
+disabled for this bounded check. Both training and validation metrics were
+finite. The regular checkpoint contains step 20 and only finite floating-point
+tensors. GRACE also wrote its automatic \texttt{final\_model} SavedModel.
+
+The runtime probe executed matrix and square-root operations and their
+gradients on GPU:0. Independently, nine NVIDIA process observations identified
+the training child PID on the allocated GPU. Thus a visible device alone
+was not accepted as evidence of GPU training.
+
+Inputs are explicitly synthetic harmonic-pair labels for four Al-labelled
+atoms: eight independently generated training configurations and four validation
+configurations, seed 20261017. They are neither DFT labels nor foundation-model
+predictions and do not select the pilot material. Energies are in eV and forces
+in eV/angstrom. The optional stored ASE stress is $-W/V$, where
+$W=\sum_i\mathbf r_i\otimes\mathbf F_i$, in eV/angstrom$^3$ and Voigt order
+$xx,yy,zz,yz,xz,xy$. Stress was not fitted in this check.
+
+\section{Attempts and diagnosed failures}
+\begin{center}
+\begin{tabularx}{\linewidth}{@{}llllX@{}}
+\toprule
+Job & Kind & CPUs/GPU & Elapsed & Result \\
+\midrule
+20950196 & Install 01 & 4/0 & 0:07 & Failed: Conda plugin cache targeted read-only main home \\
+20950197 & Install 02 & 4/0 & 30:26 & Timeout during extraction after slow package downloads \\
+20950266 & Install 03 & 1/0 & 3:33 & Passed: full reinstall using retained wheel cache \\
+20950272 & GPU check 01 & 4/1 & 0:28 & Failed: TensorFlow could not discover packaged libdevice \\
+20950273 & GPU check 02 & 4/1 & 0:21 & Failed: minimal input omitted required scheduler\_params \\
+20950274 & GPU check 03 & 4/1 & 0:38 & Passed: explicit CUDA paths and scheduler configuration \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+All three GPU attempts consumed a combined \textbf{87 single-GPU seconds},
+within the initial ten GPU-minute envelope. Installation initially had a
+30-minute CPU limit; Slurm denied an attempted live increase. The continuation
+used one CPU and a one-hour limit, and finished in 3 minutes 33 seconds.
+It reinstalled from cache because a timeout during extraction can leave
+partially written files even when some package metadata already exists.
+Installer HOME and caches were isolated on home6; no global shell configuration
+or existing scientific environment was changed.
+
+\section{Locks, records and actual checkpoint backup}
+\path{environments/grace-a100.lock.json} indexes the accepted package set,
+the installation reports and hashes. The explicit Conda lock is
+\path{environments/grace-a100-conda-linux-64.lock.txt}; exact HTTPS wheel
+URLs and SHA-256 values for 82 pip artifacts are in
+\path{environments/grace-a100-pip-linux-64.lock.txt}.
+Rebuild a new Linux x86\_64 prefix from the Conda lock first, then install the
+pip lock with \texttt{--no-deps --require-hashes}. The activation helper is
+prefix-specific. These locks describe software reconstruction; they are not
+a backup backend for future scientific datasets and foundation checkpoints.
+
+Run records are in \path{runs/grace-install-20261017-01/} through
+\path{runs/grace-install-20261017-03/} and
+\path{runs/grace-smoke-20261017-01/} through
+\path{runs/grace-smoke-20261017-03/}. They preserve job IDs, submission intents,
+input hashes, code revisions, exact training inputs, synthetic structures,
+package artifacts, scheduler outcomes, logs and metrics. Collected files are
+verified against remote SHA-256 values. The accepted training inputs are
+identified by \path{runs/grace-smoke-20261017-03/manifest.json}.
+
+The accepted regular checkpoint is also backed up as actual binary files in
+\path{runs/grace-smoke-20261017-03/checkpoint/}, alongside the model definition
+and \path{checkpoint-backup.json}. Its index is 3859 bytes and its data file
+is 96650 bytes. This approximately 100 kB software-test artifact is small
+enough for Git. Full checkpoint hashes and the auto-export's hashes are in
+the run result; exported SavedModel files remain on the cluster.
+The test checkpoint is not a selected scientific foundation model.
+
+\section{Validation limits and next steps}
+This confirms a small single-GPU GRACE-1L fit from scratch, finite saved weights,
+and a usable isolated environment. It does not validate physical accuracy,
+production throughput or memory scaling, K40m execution, multi-GPU execution,
+XLA-compiled training, restart execution or numerical equivalence of the
+automatic export. No foundation checkpoint was downloaded or fine-tuned.
+Select trainable weights separately, recording source revision, SHA-256,
+license, chemical coverage and DFT reference conventions, then validate the
+real fine-tuning and deployment path with grouped scientific data splits.
+
+\section{Primary references}
+Accessed 17 October 2026. Runtime conclusions above are supported by the saved
+cluster records rather than inferred from documentation.
+\begin{itemize}
+\item GRACE installation and legacy Keras guidance:
+\url{https://gracemaker.readthedocs.io/en/latest/gracemaker/install/}.
+\item GRACE training input schema:
+\url{https://gracemaker.readthedocs.io/en/latest/gracemaker/inputfile/}.
+\item Published TensorPotential 0.6.1 package metadata:
+\url{https://pypi.org/pypi/tensorpotential/0.6.1/json}.
+\item TensorFlow issue documenting libdevice discovery:
+\url{https://github.com/tensorflow/tensorflow/issues/56927}.
+\end{itemize}
+\end{document}

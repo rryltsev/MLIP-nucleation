@@ -8,6 +8,7 @@ Read `README.md`, `project/state.json`, and `project/brief.txt` before continuin
 - Split datasets by parent structure/trajectory/system before fitting. Never select models or tune sampling using the held-out DFT test set.
 - Validate teacher and student against DFT and relevant physical observables. Record failed runs and negative evidence.
 - Current architecture priorities are DPA4, DPA4c and GRACE, with extensions allowed. Use `configs/model_backends.json`; architecture availability is not checkpoint readiness. A100 synthetic DPA4/DPA4c training is verified in `lammps_deepmd_dpa4`; K40m verification covers only legacy `se_e2_a`. Keep GRACE separate from existing DeepMD environments because of its TensorFlow version constraint.
+- GRACE-1L synthetic training is verified on A100 in `/home6/u3129/mlip-research/envs/grace_ft_a100`. Source its `activate-grace.sh` to configure legacy Keras and the packaged CUDA `libdevice`/`ptxas` paths. The locked package set is in `environments/grace-a100.lock.json`; real FM fine-tuning, restart and deployment equivalence remain separate validations.
 - Every published number and figure must trace to input hashes, code commit, model hash, analysis settings and source runs. Never invent results or citations.
 
 ## Execution and persistence

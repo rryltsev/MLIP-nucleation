@@ -26,5 +26,7 @@
   },
   "resume_private_prefix": false,
   "run_id": "grace-smoke-20261017-02",
-  "stage": "submitted"
+  "runtime_status": "failed",
+  "scheduler_observation": "20950273|FAILED|1:0|00:00:21|4|tesla-a101\n",
+  "stage": "collected"
 }

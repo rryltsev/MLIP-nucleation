@@ -10,7 +10,7 @@ The source research brief is preserved in `project/brief.txt`. Scientific manusc
 - Cluster: `umt.imm.uran.ru:22`, user `u3129`, scheduler Slurm.
 - Observed Slurm configuration (2026-10-17): 74 unique nodes, 1850 Slurm CPUs, 2 A100, 18 K40m and 62 M2090 GPUs, including configured devices on unavailable nodes. Partition totals overlap. GPU runtime evidence below applies only to the tested allocations.
 - DFT engine: VASP 6.6.1 CPU/MPI installed in `/home/u3129/.local/opt/vasp/6.6.1-oneapi-2025`; `vasp_std`, `vasp_gam`, `vasp_ncl` passed four selected upstream cases on `apollo31`. See `reports/vasp-installation-2026-10-17.tex`.
-- A100 DPA4/DPA4c training and K40m legacy DeepMD training passed small synthetic Slurm checks. Production-size memory/performance and actual FM fine-tuning remain untested. See `reports/mlip-environment-2026-10-17.tex`.
+- A100 DPA4/DPA4c/GRACE-1L training and K40m legacy DeepMD training passed small synthetic Slurm checks. Production-size memory/performance and actual FM fine-tuning remain untested. See `reports/mlip-environment-2026-10-17.tex` and `reports/grace-installation-2026-10-17.tex`.
 
 ## Repository layout
 
@@ -36,7 +36,7 @@ tests/               scientifically meaningful verification
 
 ## Next milestones
 
-1. SSH, inventory, VASP/PAW setup and small DeepMD GPU training checks completed on 2026-10-17. Install and validate the separate GRACE environment, then select and test actual trainable foundation checkpoints. See the reports below for evidence and limitations.
+1. SSH, inventory, VASP/PAW setup and small DeepMD/GRACE GPU training checks completed on 2026-10-17. Select and test actual trainable foundation checkpoints next. See the reports below for evidence and limitations.
 2. On another computer clone the repository, configure its own credentials and read `project/state.json`.
 3. Compare candidate alloy/nucleant systems using literature novelty, experimental access, DFT feasibility and model chemical coverage. Choose one small pilot.
 4. Implement one executable path: structures → converged VASP labels → teacher fine-tuning → independent DFT validation → distillation → student validation → one observable → LaTeX report.
@@ -97,7 +97,18 @@ K40m `deepmd_2210_k40` (DeepMD 2.2.10, TF 2.9, CUDA 10.2) passes a small `se_e2_
 
 Jobs `20950192`, `20950193`, `20950195` consumed a combined 241 single-GPU seconds. Successful cases completed 20 optimizer steps, with finite curves, checkpoint hashes and training-device confirmation. Inputs are explicitly synthetic harmonic pairs, not DFT. Run records are in `runs/mlip-smoke-20261017-*/`; the full interpretation is in `reports/mlip-environment-2026-10-17.tex`. Tiny tests do not provide a production performance comparison.
 
-GRACE/TensorPotential is absent from inspected environments. Its published TensorFlow <=2.20 requirement conflicts with TF 2.21 in the existing DeepMD A100 environment. `environments/grace-a100.proposed.yml` describes a separate proposed installation; it is not installed or locked. Select actual trainable FM checkpoints separately, record revisions/hashes and chemical coverage, then validate loading, fine-tuning, restart and export. No checkpoint was downloaded by these checks.
+GRACE is installed separately in `/home6/u3129/mlip-research/envs/grace_ft_a100`: Python 3.11.17, TensorPotential 0.6.1, TensorFlow 2.20.0, tf-keras 2.20.1. Its own CUDA dependencies avoid changing DeepMD environments. Inside an appropriate Slurm allocation, use the activation helper, which also configures TensorFlow's packaged CUDA compiler/libdevice path:
+
+```bash
+source /home6/u3129/mlip-research/envs/grace_ft_a100/activate-grace.sh
+gracemaker input.yaml
+```
+
+GRACE job `20950274` completed on `tesla-a101` in 38 seconds: a reduced-size one-layer model trained five epochs / 20 updates on synthetic labels, with finite metrics and checkpoint weights. The training child process was observed on GPU. All three GRACE GPU attempts consumed 87 GPU-seconds. Earlier failures (CUDA search path and missing scheduler parameters in the test input) are retained under `runs/grace-smoke-20261017-01/` and `-02/`. Installation cache/read-only-home and time-limit failures are also preserved. See `reports/grace-installation-2026-10-17.tex`.
+
+`environments/grace-a100.lock.json` records the accepted environment: explicit Conda package URLs/hashes and 82 exact pip wheels with SHA-256. To rebuild on Linux x86_64, create a new prefix from `grace-a100-conda-linux-64.lock.txt`, then install `grace-a100-pip-linux-64.lock.txt` with `python -m pip install --no-deps --require-hashes -r ...`. The activation helper is prefix-specific. The original `grace-a100.proposed.yml` is retained as proposal provenance. `scripts/continue_grace_setup.py` resumes recorded setup jobs and the latest recorded GPU check; it never blindly retries a training failure.
+
+The small accepted test checkpoint (about 100 kB) is backed up in `runs/grace-smoke-20261017-03/checkpoint/`, with the model definition and hashes alongside it. It is a software-test artifact. Select actual trainable FM checkpoints separately, record revisions/hashes and chemical coverage, then validate loading, fine-tuning, restart and export equivalence. No foundation checkpoint was downloaded by these checks.
 
 `configs/model_backends.json` keeps the candidate list extensible: DPA4, DPA4c, GRACE and a legacy DeepMD student path. It defines a future adapter contract; a common execution adapter is not yet implemented.
 

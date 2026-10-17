@@ -1,0 +1,2 @@
+name, uuid, driver_version, memory.total [MiB]
+NVIDIA A100-PCIE-40GB, GPU-9de121c5-6e69-818a-2ace-225ee601989c, 580.126.20, 40960 MiB
