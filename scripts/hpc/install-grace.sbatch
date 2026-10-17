@@ -17,17 +17,21 @@ export OMP_NUM_THREADS="${SLURM_CPUS_PER_TASK:-1}"
 export OPENBLAS_NUM_THREADS="$OMP_NUM_THREADS"
 mkdir -p "$CONDA_PKGS_DIRS" "$PIP_CACHE_DIR"
 hostname > node.txt
+pip_install_flags=()
 if [ "${GRACE_RESUME:-0}" = 1 ]; then
     # Resume only this private installation prefix after a reconciled failed job.
     test ! -e "$GRACE_ENV/INSTALLATION.json"
     test -r "$GRACE_ENV/conda-meta/history"
     "$GRACE_ENV/bin/python" -c 'import sys; assert sys.version_info[:2] == (3,11)'
+    # A timeout can interrupt extraction after metadata was written. Reinstall
+    # from the retained cache rather than trusting a partially installed wheel.
+    pip_install_flags=(--force-reinstall)
 else
     test ! -e "$GRACE_ENV"
     /home/u3129/miniconda3/bin/conda create --yes --no-default-packages --override-channels \
         --channel conda-forge --prefix "$GRACE_ENV" python=3.11 pip > conda-create.log 2>&1
 fi
-"$GRACE_ENV/bin/python" -m pip install --only-binary=:all: --report pip-install-report.json \
+"$GRACE_ENV/bin/python" -m pip install "${pip_install_flags[@]}" --only-binary=:all: --report pip-install-report.json \
     'tensorpotential==0.6.1' 'tensorflow[and-cuda]==2.20.0' 'tf-keras~=2.20.0' 'dpdata==1.1.0' \
     > pip-install.log 2>&1
 "$GRACE_ENV/bin/python" -m pip check > pip-check.txt 2>&1

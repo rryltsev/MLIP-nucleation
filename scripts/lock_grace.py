@@ -10,12 +10,25 @@ from vasp_potentials import save
 
 
 def main(run):
-    report = json.loads((run / "pip-install-report.json").read_text(encoding="utf-8"))
     result = json.loads((run / "result.json").read_text(encoding="utf-8"))
     if result["status"] != "installed":
         raise ValueError("Installation did not pass")
+    installed = {}
+    normalize = lambda s:s.lower().replace('_','-').replace('.','-')
+    for line in (run / 'pip-freeze.txt').read_text().splitlines():
+        if '==' in line:
+            name, version = line.split('==',1); installed[normalize(name)] = version
+    # A timed-out install may already have installed some wheels. Preserve the
+    # earlier report, then select only artifacts matching the final versions.
+    reports = sorted(run.parent.glob(run.name.rsplit('-',1)[0]+'-*/pip-install-report.json'))
+    selected = {}
+    for path in reports:
+        for item in json.loads(path.read_text(encoding='utf-8'))['install']:
+            name = normalize(item['metadata']['name'])
+            if installed.get(name) == item['metadata']['version']:
+                selected[name] = item
     artifacts = []
-    for item in report["install"]:
+    for item in selected.values():
         info = item["download_info"]
         url = info["url"]
         parsed = urlparse(url)
@@ -37,6 +50,7 @@ def main(run):
         "scope":"Linux x86_64, observed Python 3.11; Conda base plus exact pip wheels",
         "installation_manifest":(run / "manifest.json").relative_to(ROOT).as_posix(),
         "versions":result["versions"],"python":result["python"],
+        "source_reports":{p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in reports},
         "conda_lock":conda.relative_to(ROOT).as_posix(),"pip_lock":dest.relative_to(ROOT).as_posix(),
         "file_sha256":{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in [conda,dest]},
         "wheel_artifacts":artifacts,
