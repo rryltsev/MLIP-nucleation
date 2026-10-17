@@ -111,8 +111,11 @@
     "latex_preview": "built-in compiler startup failed: Windows CreateProcessAsUserW access denied (5); new report source preserved; existing VASP editor left unchanged"
   },
   "grace_installation": {
-    "status": "installation in progress; first CPU attempt failed before environment creation",
-    "run": "runs/grace-install-20261017-01/manifest.json",
-    "failure": "Conda plugin tried writing ~/.cache on compute-read-only home4; next attempt will isolate HOME and caches on home6"
+    "status": "CPU installation running after cache-path correction",
+    "run": "runs/grace-install-20261017-02/manifest.json",
+    "failure": "Conda plugin tried writing ~/.cache on compute-read-only home4; next attempt will isolate HOME and caches on home6",
+    "job_id": "20950197",
+    "environment": "/home6/u3129/mlip-research/envs/grace_ft_a100",
+    "prior_attempt": "runs/grace-install-20261017-01/manifest.json"
   }
 }

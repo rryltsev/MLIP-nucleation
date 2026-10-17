@@ -2,7 +2,13 @@
 set -eo pipefail
 umask 077
 cd "$GRACE_RUN_DIR"
+mkdir -p home cache
+# Conda plugins write under HOME even when package caches are overridden.
+# The real main home is read-only on compute nodes; isolate installer state.
+export HOME="$GRACE_RUN_DIR/home"
+export XDG_CACHE_HOME="$GRACE_RUN_DIR/cache"
 export PYTHONDONTWRITEBYTECODE=1
+export PYTHONNOUSERSITE=1
 export CONDA_PKGS_DIRS=/home6/u3129/mlip-research/package-cache/conda
 export PIP_CACHE_DIR=/home6/u3129/mlip-research/package-cache/pip
 export CONDA_ENVS_PATH=/home6/u3129/mlip-research/envs

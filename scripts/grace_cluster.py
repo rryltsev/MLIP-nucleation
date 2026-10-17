@@ -14,8 +14,8 @@ from vasp_potentials import save
 ENV = "/home6/u3129/mlip-research/envs/grace_ft_a100"
 
 
-def submit(phase):
-    run_id = "grace-" + phase + "-20261017-01"
+def submit(phase, attempt):
+    run_id = "grace-" + phase + "-20261017-" + attempt
     path = ROOT / "runs" / run_id / "manifest.json"
     if path.exists():
         raise FileExistsError("Run already recorded; reconcile job.id/scheduler before retrying")
@@ -72,7 +72,7 @@ def collect(path):
 import json,hashlib
 from pathlib import Path
 root=Path(@ROOT@)
-patterns=['*.json','*.txt','*.log','*.out','*.yaml','data/provenance.json','train/*.yaml','train/*.txt','train/*.log','train/seed/*/*.yaml']
+patterns=['*.json','*.txt','*.log','*.out','*.yaml','data/provenance.json','data/*.extxyz','train/*.yaml','train/*.txt','train/*.log','train/seed/*/*.yaml','train/seed/*/*.txt']
 records={}
 for pattern in patterns:
  for p in root.glob(pattern):
@@ -98,7 +98,7 @@ PY
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     sub=parser.add_subparsers(dest='command',required=True)
-    p=sub.add_parser('submit'); p.add_argument('phase',choices=['install','smoke'])
+    p=sub.add_parser('submit'); p.add_argument('phase',choices=['install','smoke']); p.add_argument('--attempt',choices=['01','02','03'],default='01')
     p=sub.add_parser('collect'); p.add_argument('manifest',type=Path)
     args=parser.parse_args()
-    submit(args.phase) if args.command=='submit' else collect(args.manifest)
+    submit(args.phase,args.attempt) if args.command=='submit' else collect(args.manifest)
