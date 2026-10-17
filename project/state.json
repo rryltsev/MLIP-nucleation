@@ -1,6 +1,6 @@
 {
   "updated_local_date": "2026-10-17",
-  "stage": "mlip_training_environments_validated_on_small_synthetic_tests",
+  "stage": "foundation_checkpoints_downloaded_finetuning_prepared",
   "scientific_results": [],
   "system_selection": "open; compare Al-based alloy/nucleant candidates with alternatives",
   "github": "https://github.com/rryltsev/MLIP-nucleation",
@@ -162,5 +162,15 @@
       "GRACE runtime on K40m"
     ],
     "latex_preview": "built-in compiler could not start: Windows CreateProcessAsUserW access denied (5); LaTeX source preserved; existing VASP editor unchanged"
+  },
+  "foundation_checkpoints": {
+    "status": "downloaded and SHA-256 verified on workstation and cluster main home; bounded Slurm check prepared",
+    "models": [
+      "models/foundation/dpa4-mini-omat24-20260805.json",
+      "models/foundation/grace-1l-omat.json"
+    ],
+    "scientific_teacher_selection": "open",
+    "planned_budget": "one A100, 4 CPUs, 32 GiB, 15 min maximum; sequential 20-update synthetic checks",
+    "storage": "private main-home cluster copies plus actual local copies under ignored artifacts/foundation-checkpoints; shared archival backend still open"
   }
 }
