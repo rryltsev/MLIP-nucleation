@@ -22,7 +22,7 @@ SYSTEM = ROOT / "configs/systems/al32-pilot-v1.json"
 REMOTE = "/home6/u3129/mlip-research/runs/"
 
 
-def stage(run_id, phase, source=None):
+def stage(run_id, phase, source=None, after_calibration=False):
     if not re.fullmatch(r"al32-(calibration|labeling)-[0-9]{8}-[0-9]{2}", run_id):
         raise ValueError("Use a unique al32-calibration/labeling-YYYYMMDD-NN identifier")
     path = ROOT/"runs"/run_id/"manifest.json"
@@ -33,9 +33,15 @@ def stage(run_id, phase, source=None):
         if source is None:
             raise ValueError("Calibration manifest required")
         src = json.loads(source.read_text())
-        cal = json.loads((source.parent/"calibration.json").read_text())
-        if src["stage"] != "collected" or not cal["passed"]:
-            raise ValueError("Collect accepted calibration first")
+        if src["phase"] != "calibrate":
+            raise ValueError("Source must be a calibration run")
+        if after_calibration:
+            if src["stage"] != "submitted" or not re.fullmatch(r"\d+",src["job_id"] or ""):
+                raise ValueError("Dependency requires a recorded submitted calibration job")
+        else:
+            cal = json.loads((source.parent/"calibration.json").read_text())
+            if src["stage"] != "collected" or not cal["passed"]:
+                raise ValueError("Collect accepted calibration first, or explicitly use --after-calibration")
         source_remote = src["remote_run_dir"]
     else:
         source_remote = ""
@@ -52,6 +58,8 @@ def stage(run_id, phase, source=None):
                 raise ValueError("Prepared structure hash mismatch")
             payloads[row["poscar"]]=data
     payloads = {k:v.replace(b"\r\n",b"\n") for k,v in payloads.items()}
+    if phase=="label" and hashlib.sha256(payloads["system.json"]).hexdigest()!=src["input_sha256"]["system.json"]:
+        raise ValueError("Source calibration and labeling must use identical system configuration")
     m = dict(run_id=run_id, phase=phase, stage="preparing", job_id=None,
         created_utc=datetime.now(timezone.utc).isoformat(), remote_run_dir=REMOTE+run_id,
         host="umt.imm.uran.ru", user="u3129", calibration_source=source_remote,
@@ -62,6 +70,10 @@ def stage(run_id, phase, source=None):
                        walltime="02:00:00" if phase=="calibrate" else "06:00:00"),
         maximum_CPU_hours=32 if phase=="calibrate" else 96,
         authorization="not supplied: explicit authorization record required at submit")
+    if phase=="label":
+        m.update(source_dataset_manifest_sha256=src["input_sha256"]["dataset-manifest.json"],
+                 dependency_job_id=src["job_id"] if after_calibration else None,
+                 gate="afterok dependency plus compute-side scientific convergence validation" if after_calibration else "collected accepted calibration")
     save(path,m)
     remote("set -eu; umask 077; test ! -e "+shlex.quote(m["remote_run_dir"])+"; mkdir "+shlex.quote(m["remote_run_dir"]))
     encoded=base64.b64encode(json.dumps({k:base64.b64encode(v).decode() for k,v in payloads.items()}).encode()).decode()
@@ -107,7 +119,9 @@ def submit(path, authorization):
     write_remote(m["remote_run_dir"]+"/submission-intent.json",path.read_bytes())
     exports="ALL,PILOT_RUN_DIR="+m["remote_run_dir"]+",PILOT_PHASE="+m["phase"]+",PILOT_CODE_COMMIT="+m["code_commit"]
     if m["calibration_source"]: exports+=",PILOT_SOURCE="+m["calibration_source"]
-    cmd="set -eu; cd "+shlex.quote(m["remote_run_dir"])+"; test ! -e job.id; sbatch --parsable --job-name="+shlex.quote(m["run_id"])+" --time="+m["resources"]["walltime"]+" --chdir=/tmp --output="+shlex.quote(m["remote_run_dir"]+"/slurm-%j.out")+" --export="+shlex.quote(exports)+" run.sbatch > job.id; cat job.id"
+    if m.get("source_dataset_manifest_sha256"): exports+=",PILOT_SOURCE_MANIFEST_SHA="+m["source_dataset_manifest_sha256"]
+    dependency=" --dependency=afterok:"+m["dependency_job_id"]+" --kill-on-invalid-dep=yes" if m.get("dependency_job_id") else ""
+    cmd="set -eu; cd "+shlex.quote(m["remote_run_dir"])+"; test ! -e job.id; sbatch --parsable --job-name="+shlex.quote(m["run_id"])+" --time="+m["resources"]["walltime"]+dependency+" --chdir=/tmp --output="+shlex.quote(m["remote_run_dir"]+"/slurm-%j.out")+" --export="+shlex.quote(exports)+" run.sbatch > job.id; cat job.id"
     job=remote(cmd).strip().split(";")[0]
     if not re.fullmatch(r"\d+",job): raise RuntimeError("Uncertain outcome; inspect job.id and scheduler")
     m.update(stage="submitted",job_id=job)
@@ -195,12 +209,12 @@ print(json.dumps(dict(remote_archive=str(archive),sha256=hashlib.sha256(archive.
 if __name__=="__main__":
     p=argparse.ArgumentParser(description=__doc__)
     sub=p.add_subparsers(dest="action",required=True)
-    st=sub.add_parser("stage"); st.add_argument("run_id"); st.add_argument("phase",choices=["calibrate","label"]); st.add_argument("--source",type=Path)
+    st=sub.add_parser("stage"); st.add_argument("run_id"); st.add_argument("phase",choices=["calibrate","label"]); st.add_argument("--source",type=Path); st.add_argument("--after-calibration",action="store_true")
     su=sub.add_parser("submit"); su.add_argument("manifest",type=Path); su.add_argument("--authorization",required=True,type=Path)
     for name in ("collect","backup"):
         s=sub.add_parser(name); s.add_argument("manifest",type=Path)
     a=p.parse_args()
-    if a.action=="stage": stage(a.run_id,a.phase,a.source)
+    if a.action=="stage": stage(a.run_id,a.phase,a.source,a.after_calibration)
     elif a.action=="submit": submit(a.manifest.resolve(),a.authorization.resolve())
     elif a.action=="collect": collect(a.manifest.resolve())
     else: backup(a.manifest.resolve())

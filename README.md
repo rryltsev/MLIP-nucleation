@@ -65,7 +65,13 @@ requires checking remote `job.id`, `squeue` and `sacct` before further action.
 
 Collect terminal results with `scripts/al_pilot.py collect <manifest.json>`.
 Only an accepted calibration can be passed to `stage <al32-labeling-YYYYMMDD-NN>
-label --source <calibration-manifest.json>`. Labeling exports raw force-consistent
+label --source <calibration-manifest.json>`. Alternatively, while the calibration
+is submitted, add `--after-calibration` to stage a dependent labeling job:
+Slurm uses `afterok` and `--kill-on-invalid-dep=yes`, and the compute script also
+requires the accepted scientific convergence result, identical system settings
+and the exact frozen dataset manifest before starting any labeling calculation.
+Both jobs fit the same authorized cap of 32+96=128 reserved CPU-hours.
+Labeling exports raw force-consistent
 DFT energies, forces, stress and virials for ASE/GRACE and DeepMD. Use `backup`
 after collection to retain and verify actual private raw-output archives, including
 POTCAR, in main home and `artifacts/dft-run-backups/`; these archives never go to Git.

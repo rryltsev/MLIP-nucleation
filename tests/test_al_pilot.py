@@ -84,5 +84,26 @@ class LabelContract(unittest.TestCase):
         np.testing.assert_allclose(w/-a.get_volume(),[[1,6,5],[6,2,4],[5,4,3]])
 
 
+class ConditionalLabelGate(unittest.TestCase):
+    def test_failed_calibration_cannot_start_labeling(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            source=Path(tmp)/'source'; target=Path(tmp)/'target'
+            source.mkdir(); target.mkdir()
+            pilot.save(source/'calibration.json',{'passed':False})
+            with self.assertRaisesRegex(ValueError,'Unvalidated protocol'):
+                pilot.label_all(target,{},source)
+
+    def test_changed_configuration_cannot_start_labeling(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            source=Path(tmp)/'source'; target=Path(tmp)/'target'
+            source.mkdir(); target.mkdir()
+            pilot.save(source/'dataset-manifest.json',{'configurations':[]})
+            pilot.save(source/'calibration.json',{'passed':True,'dataset_manifest_sha256':pilot.digest(source/'dataset-manifest.json')})
+            (source/'system.json').write_text('original')
+            (target/'system.json').write_text('changed')
+            with self.assertRaisesRegex(ValueError,'configuration differ'):
+                pilot.label_all(target,{},source)
+
+
 if __name__ == '__main__':
     unittest.main()

@@ -231,6 +231,13 @@ def label_all(root, cfg, source):
     calibration = json.loads((source/"calibration.json").read_text())
     if not calibration["passed"] or calibration["dataset_manifest_sha256"] != digest(source/"dataset-manifest.json"):
         raise ValueError("Unvalidated protocol or changed structures")
+    expected=os.environ.get("PILOT_SOURCE_MANIFEST_SHA")
+    if expected and expected!=digest(source/"dataset-manifest.json"):
+        raise ValueError("Source manifest differs from staged dependency")
+    if digest(root/"system.json")!=digest(source/"system.json"):
+        raise ValueError("Source and target system configuration differ")
+    if calibration["protocol"]!=dict(encut_eV=450,gamma_mesh=4,sigma_eV=0.05):
+        raise ValueError("Unexpected calibrated protocol")
     manifest = json.loads((source/"dataset-manifest.json").read_text())
     rows = manifest["configurations"]
     for r in rows:
