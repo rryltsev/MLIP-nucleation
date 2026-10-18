@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "dataset_id": "al32-pilot-v1",
+  "purpose": "Real VASP labels for bounded foundation-model adaptation; not an interface or nucleation dataset",
+  "elements": ["Al"],
+  "atoms_per_configuration": 32,
+  "selection": {
+    "Al": "Selected: single species, nonmagnetic pilot, connects to proposed Al alloy research",
+    "Cu": "Feasible alternative, less direct connection to current brief; no novelty claim",
+    "Ni": "Deferred: magnetic state and spin consistency complicate first reference protocol",
+    "Al-Ti/TiB2": "Deferred: segregation, terminations and interface size require a larger dedicated dataset"
+  },
+  "generator": {
+    "calculator": "ASE EMT for proposals only; never export EMT labels",
+    "fcc_parent": "fcc-prototype-001",
+    "fcc_volumes_A3_per_atom": [15.5, 16.6, 17.8],
+    "fcc_rattle_A": [0.0, 0.06, 0.12],
+    "md_seed_base": 271828,
+    "md_parents": [
+      ["train", 1000, 17.5], ["train", 1400, 18.5],
+      ["train", 1000, 18.5], ["train", 1400, 17.5],
+      ["validation", 1000, 17.5], ["validation", 1400, 18.5],
+      ["test", 1000, 17.5], ["test", 1400, 18.5]
+    ],
+    "timestep_fs": 2.0,
+    "friction_per_fs": 0.01,
+    "melt_temperature_K": 2500,
+    "melt_steps": 1000,
+    "target_steps": 1000,
+    "frame_interval_steps": 100,
+    "frames_per_parent": 3,
+    "hcp_parent": "hcp-prototype-001",
+    "hcp_volumes_A3_per_atom": [15.5, 16.0, 16.3, 16.6, 16.9, 17.2, 17.8],
+    "minimum_distance_A": 2.0
+  },
+  "split_policy": {
+    "frozen_before_DFT": true,
+    "group_key": "parent_id",
+    "counts": {"train": 21, "validation": 6, "test": 13},
+    "all_fcc_derivatives": "train",
+    "all_hcp_derivatives": "test_extrapolation",
+    "liquidlike_test": "6 frames from two independent proposal trajectories; not equilibrium DFT liquid",
+    "leakage_limit": "Common crystal prototypes may occur in OMat24; no pretraining-independent benchmark claim"
+  },
+  "calibration_configuration_ids": ["fcc-04", "md-00-f1"],
+  "reference_protocol": {
+    "xc": "PBE", "paw_family": "PBE", "paw_variants": ["Al"],
+    "paw_registry": "configs/vasp/paw-64.json",
+    "potcar_sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315",
+    "ISPIN": 1, "ISYM": 0, "PREC": "Accurate", "LREAL": false,
+    "EDIFF": 1e-7, "NELM": 160, "ALGO": "Normal", "ISMEAR": 0,
+    "SIGMA_eV": 0.05, "NSW": 0, "IBRION": -1,
+    "candidate_ENCUT_eV": 450, "candidate_gamma_mesh": [4, 4, 4],
+    "convergence_status": "unvalidated; labeling blocked until calibration passes"
+  },
+  "calibration_cases": [
+    ["reference", 550, 5, 0.05], ["cut350", 350, 5, 0.05],
+    ["cut450", 450, 5, 0.05], ["mesh3", 550, 3, 0.05],
+    ["mesh4", 550, 4, 0.05], ["sigma10", 550, 5, 0.1],
+    ["sigma20", 550, 5, 0.2], ["candidate", 450, 4, 0.05]
+  ],
+  "acceptance": {
+    "energy_eV_per_atom": 0.002,
+    "max_force_component_eV_per_A": 0.02,
+    "max_stress_component_eV_per_A3": 0.001,
+    "required_against_reference": ["cut450", "mesh4", "sigma10", "candidate"],
+    "failure_policy": "Stop and retain evidence; no automatic looser tolerance or reference escalation"
+  },
+  "label_contract": {
+    "energy": "VASP force-consistent free energy TOTEN, eV per configuration",
+    "energy_sigma0": "record separately, never pair with finite-smearing forces for fitting",
+    "forces": "eV/Angstrom Cartesian",
+    "stress": "tensile-positive eV/Angstrom^3; Voigt xx yy zz yz xz xy",
+    "virial": "-volume*stress; eV; full row-major 3x3",
+    "source": "DFT/VASP only; no teacher/EMT predictions",
+    "reference_alignment": "Do not mix OMat24 PAW54 labels with local PAW64 labels. Fit any elemental energy shift on train only; report raw and shifted validation/test metrics."
+  },
+  "allocation_plan": {
+    "partition": "apollo", "account": "imet-2026-2", "qos": "normal",
+    "nodes": 1, "ntasks": 16, "cpus_per_task": 1, "memory_GiB": 32,
+    "calibration_walltime": "02:00:00", "labeling_walltime": "06:00:00",
+    "maximum_reserved_CPU_hours": 128,
+    "authorization": "pending user response; preparation does not authorize submission"
+  }
+}
