@@ -1,0 +1,6 @@
+{
+  "error": "RuntimeError('Convergence criteria failed; production blocked')",
+  "job_id": "20950353",
+  "passed": false,
+  "phase": "calibrate"
+}

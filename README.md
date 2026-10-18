@@ -38,7 +38,7 @@ tests/               scientifically meaningful verification
 
 1. SSH, inventory, VASP/PAW setup, small GPU training and actual foundation checkpoint fine-tuning checks completed on 2026-10-17. Next audit reference settings and choose the scientific pilot. See the reports below for evidence and limitations.
 2. On another computer clone the repository, configure its own credentials and read `project/state.json`.
-3. First bounded DFT pilot selected: Al32 FCC/disordered/HCP, 40 geometries, grouped train/validation/test 21/6/13. This does not select the final alloy/nucleant or establish novelty. See `reports/al32-dft-pilot-2026-10-18.tex`; VASP labels require the convergence gate and an authorized CPU budget.
+3. First bounded DFT pilot selected: Al32 FCC/disordered/HCP, 40 geometries, grouped train/validation/test 21/6/13. Calibration finished: all 16 static calculations converged electronically, but the Gamma4 mesh failed scientific convergence; dependent labeling was cancelled. Accepted production labels: 0/40. See `reports/al32-dft-pilot-2026-10-18.tex`. This does not select the final alloy/nucleant or establish novelty.
 4. Implement one executable path: structures → converged VASP labels → teacher fine-tuning → independent DFT validation → distillation → student validation → one observable → LaTeX report.
 5. Add active learning and rare-event methods after the pilot is validated.
 
@@ -79,6 +79,20 @@ POTCAR, in main home and `artifacts/dft-run-backups/`; these archives never go t
 Do not start model fitting with the unvalidated draft inputs or synthetic checkpoints.
 Original foundation weights remain the initializations; PAW54/PAW64 energy-reference
 compatibility and possible pretraining overlap are recorded in both model cards.
+
+Collected jobs: calibration `20950353` failed the predefined k-mesh criteria;
+labeling `20950356` was cancelled before allocation. All 16 calibration labels
+passed independent raw-XML, checksum, settings and unit checks, but they use
+different protocols and are diagnostics, not a training set. The comparison
+Gamma4 versus Gamma5 failed forces on both parents; Gamma5 itself still needs
+testing against denser meshes. Thresholds were not relaxed and no new jobs were
+submitted during collection. Total allocation cost: 10.4578 CPU-hours.
+
+`runs/al32-calibration-20261018-01/quality-assessment.json` records the decision.
+Run `python scripts/assess_al_pilot.py` to repeat the independent audit with the
+private archives available. Both terminal run archives have actual private main-home
+and workstation copies with every member verified; locations/full hashes are in
+each run's `artifact-backup.json`. The failed scientific gate is preserved.
 
 ## Storage
 

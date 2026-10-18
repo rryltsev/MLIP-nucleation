@@ -1,0 +1,13 @@
+{
+  "code_commit": "e6a2293449d8a5e75c879ea2c735b288ccfdd100",
+  "configuration_id": "fcc-04",
+  "input_sha256": {
+    "INCAR": "400cdca865b8e7aacecb7f08121dc111e06b8408600349911aec42ff679a5916",
+    "KPOINTS": "5f641eb28a2fe96469bbdaf7e72dd73ce831bbf3e9fe1a814c92be51df03ce94",
+    "POSCAR": "5b3090f9d3683cffa8a0162447e400d76d04bdaf264a6441bdbfb699238f3b2d",
+    "POTCAR": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+  },
+  "job_id": "20950353",
+  "parent_id": "fcc-prototype-001",
+  "split": "train"
+}

@@ -1,0 +1,138 @@
+{
+  "analysis_base_commit": "0cab9dfde87888943bea72406f8f8f9b39d61ac9",
+  "analysis_source_sha256": "36e88d6c0d2087a48ab84d41d4f16753f5bfb53617567787b650c79e2c93b1e8",
+  "assessed_utc": "2026-10-18T03:02:14.234608+00:00",
+  "backups": {
+    "al32-calibration-20261018-01": {
+      "bytes": 2741524,
+      "local_archive": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\MLIP-research\\artifacts\\dft-run-backups\\al32-calibration-20261018-01.tar.gz",
+      "members_verified": 369,
+      "remote_archive": "/home/u3129/.local/share/mlip-research/dft-artifacts/al32-calibration-20261018-01.tar.gz",
+      "sha256": "3fbf96f4261f4bdc9efd33299f0a4926de1471f5c566c79f23e023bbefa47aa4",
+      "verified_retrieval": true
+    },
+    "al32-labeling-20261018-01": {
+      "bytes": 8643,
+      "local_archive": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\MLIP-research\\artifacts\\dft-run-backups\\al32-labeling-20261018-01.tar.gz",
+      "members_verified": 5,
+      "remote_archive": "/home/u3129/.local/share/mlip-research/dft-artifacts/al32-labeling-20261018-01.tar.gz",
+      "sha256": "8b7cd955eb5597697ec8107ad173be29437a354d9f177acdad3d3d4125e1a5fc",
+      "verified_retrieval": true
+    }
+  },
+  "budget": {
+    "allocated_CPU_hours": 10.457777777777778,
+    "allocated_CPU_seconds": 37648,
+    "maximum_authorized_CPU_hours": 128,
+    "new_jobs_submitted_during_collection": 0
+  },
+  "calibration_protocol_accepted": false,
+  "checks_recomputed_from_verified_raw_outputs": true,
+  "decision": "Reject draft 450eV / Gamma4 / sigma0.05 protocol. Retain calibration diagnostics only; do not merge settings or fit models.",
+  "electronically_converged_calibration_points": 16,
+  "failed_gate_checks": 4,
+  "gate_checks": [
+    {
+      "case": "cut450",
+      "configuration_id": "fcc-04",
+      "differences": {
+        "energy_eV_per_atom": 6.27356250002542e-05,
+        "max_force_component_eV_per_A": 0.00014135999999997928,
+        "max_stress_component_eV_per_A3": 3.1887770259991614e-05
+      },
+      "passed": true
+    },
+    {
+      "case": "mesh4",
+      "configuration_id": "fcc-04",
+      "differences": {
+        "energy_eV_per_atom": 0.008315038749999726,
+        "max_force_component_eV_per_A": 0.07493372000000004,
+        "max_stress_component_eV_per_A3": 0.0008866782235847741
+      },
+      "passed": false
+    },
+    {
+      "case": "sigma10",
+      "configuration_id": "fcc-04",
+      "differences": {
+        "energy_eV_per_atom": 0.0010829446874995874,
+        "max_force_component_eV_per_A": 0.0061628199999999855,
+        "max_stress_component_eV_per_A3": 0.00015107981033897272
+      },
+      "passed": true
+    },
+    {
+      "case": "candidate",
+      "configuration_id": "fcc-04",
+      "differences": {
+        "energy_eV_per_atom": 0.008250502499999701,
+        "max_force_component_eV_per_A": 0.07491896000000003,
+        "max_stress_component_eV_per_A3": 0.0008562766128212373
+      },
+      "passed": false
+    },
+    {
+      "case": "cut450",
+      "configuration_id": "md-00-f1",
+      "differences": {
+        "energy_eV_per_atom": 7.368374999972005e-05,
+        "max_force_component_eV_per_A": 0.0004511200000001381,
+        "max_stress_component_eV_per_A3": 1.9311535069434227e-05
+      },
+      "passed": true
+    },
+    {
+      "case": "mesh4",
+      "configuration_id": "md-00-f1",
+      "differences": {
+        "energy_eV_per_atom": 0.000727071875000096,
+        "max_force_component_eV_per_A": 0.06297934999999999,
+        "max_stress_component_eV_per_A3": 0.002158959851924963
+      },
+      "passed": false
+    },
+    {
+      "case": "sigma10",
+      "configuration_id": "md-00-f1",
+      "differences": {
+        "energy_eV_per_atom": 0.0007558712499999842,
+        "max_force_component_eV_per_A": 0.005194390000000104,
+        "max_stress_component_eV_per_A3": 0.0002856679432580028
+      },
+      "passed": true
+    },
+    {
+      "case": "candidate",
+      "configuration_id": "md-00-f1",
+      "differences": {
+        "energy_eV_per_atom": 0.000653173750000402,
+        "max_force_component_eV_per_A": 0.06266702999999996,
+        "max_stress_component_eV_per_A3": 0.002178238438067713
+      },
+      "passed": false
+    }
+  ],
+  "limitations": [
+    "Only two training-parent configurations were calibrated",
+    "No production labels; no DFT equilibrium liquid or interfacial validation",
+    "Private main-home and workstation copies verified; institutional backup/retention unconfirmed"
+  ],
+  "next_calibration": "Test denser k meshes on the same train-only parents with fixed sigma and unchanged tolerances; Gamma5 is not established as converged by this run.",
+  "production_labels": 0,
+  "ranges": {
+    "electronic_steps": [
+      16,
+      17
+    ],
+    "energy_eV_per_atom": [
+      -3.7433925028125,
+      -3.4364851975
+    ],
+    "maximum_force_norm_eV_per_A": 3.1996773092720403,
+    "maximum_net_force_norm_eV_per_A": 5.3851648099694804e-08,
+    "maximum_pressure_antisymmetry_kbar": 9.000000034120603e-08
+  },
+  "raw_label_quality_audit_passed": true,
+  "ready_for_finetuning": false
+}

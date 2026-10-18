@@ -1,0 +1,11 @@
+{
+  "exclusions": "POTCAR, raw VASP outputs and binary exports remain private",
+  "sacct": "20950356|CANCELLED|0:0|0|0|0",
+  "sha256": {
+    "al-pilot.py": "321d232b347f3d039ff6af28eb42692c608a7e27a77c35a4ae24d5f18234b3a4",
+    "run.sbatch": "a2b7b83669f82ba721c04452512c0dea867a44387e085c4b8e6c18d1419ed1cb",
+    "submission-intent.json": "6be71cde119773dcd9ff46e9541c65a49c4eea223317db5458d6fbbaca0a7f06",
+    "system.json": "fb505d2cb1492115f8fe8ee4bf3008ab449d6fd310998b0666236b010396511f"
+  },
+  "verified": true
+}

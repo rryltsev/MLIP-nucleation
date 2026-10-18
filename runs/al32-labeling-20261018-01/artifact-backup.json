@@ -1,0 +1,30 @@
+{
+  "bytes": 8643,
+  "local_archive": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\MLIP-research\\artifacts\\dft-run-backups\\al32-labeling-20261018-01.tar.gz",
+  "members": {
+    "al-pilot.py": {
+      "bytes": 16545,
+      "sha256": "321d232b347f3d039ff6af28eb42692c608a7e27a77c35a4ae24d5f18234b3a4"
+    },
+    "job.id": {
+      "bytes": 9,
+      "sha256": "0b93d2c91143ab61ee29e46ab5461b2e16ba4a08c5a060ea860e06f4b030bec9"
+    },
+    "run.sbatch": {
+      "bytes": 613,
+      "sha256": "a2b7b83669f82ba721c04452512c0dea867a44387e085c4b8e6c18d1419ed1cb"
+    },
+    "submission-intent.json": {
+      "bytes": 1349,
+      "sha256": "6be71cde119773dcd9ff46e9541c65a49c4eea223317db5458d6fbbaca0a7f06"
+    },
+    "system.json": {
+      "bytes": 4091,
+      "sha256": "fb505d2cb1492115f8fe8ee4bf3008ab449d6fd310998b0666236b010396511f"
+    }
+  },
+  "policy": "Private cluster main-home archive plus actual workstation copy; retention/institutional backup unconfirmed; contains licensed material, excluded from Git",
+  "remote_archive": "/home/u3129/.local/share/mlip-research/dft-artifacts/al32-labeling-20261018-01.tar.gz",
+  "sha256": "8b7cd955eb5597697ec8107ad173be29437a354d9f177acdad3d3d4125e1a5fc",
+  "verified_retrieval": true
+}

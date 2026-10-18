@@ -3,6 +3,7 @@
   "authorization_sha256": "dad8adaaeafbef81eb4f2cc6888c3bf5f5fad1ad170a1aa1353a54f5d3424f3f",
   "calibration_source": "",
   "code_commit": "e6a2293449d8a5e75c879ea2c735b288ccfdd100",
+  "collected_utc": "2026-10-18T02:58:56.886766+00:00",
   "created_utc": "2026-10-18T01:31:10.825085+00:00",
   "host": "umt.imm.uran.ru",
   "input_sha256": {
@@ -66,6 +67,14 @@
     "walltime": "02:00:00"
   },
   "run_id": "al32-calibration-20261018-01",
-  "stage": "submitted",
+  "scheduler_record": [
+    "20950353",
+    "FAILED",
+    "1:0",
+    "2353",
+    "16",
+    "37648"
+  ],
+  "stage": "collected",
   "user": "u3129"
 }
