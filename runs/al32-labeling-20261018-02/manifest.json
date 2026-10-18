@@ -1,0 +1,65 @@
+{
+  "authorization": "configs\\allocations\\al32-pilot-20261018-dense.json",
+  "authorization_sha256": "53c4f2f62aa2136f131edd55d1abaa1b12f16d2ff11a5205daadbf13542d1bfb",
+  "budget_group": "al32-pilot",
+  "budget_snapshot": {
+    "maximum_CPU_seconds": 460800,
+    "prior_charged_CPU_seconds": 152848,
+    "records": [
+      {
+        "basis": "terminal_actual",
+        "charged_CPU_seconds": 37648,
+        "job_id": "20950353",
+        "run_id": "al32-calibration-20261018-01",
+        "state": "FAILED"
+      },
+      {
+        "basis": "full_live_reservation",
+        "charged_CPU_seconds": 115200,
+        "job_id": "20950692",
+        "run_id": "al32-calibration-20261018-02",
+        "state": "PENDING"
+      },
+      {
+        "basis": "terminal_actual",
+        "charged_CPU_seconds": 0,
+        "job_id": "20950356",
+        "run_id": "al32-labeling-20261018-01",
+        "state": "CANCELLED"
+      }
+    ],
+    "remaining_after_reservation_CPU_seconds": 19952,
+    "requested_reserved_CPU_seconds": 288000,
+    "worst_case_total_CPU_seconds": 440848
+  },
+  "calibration_source": "/home6/u3129/mlip-research/runs/al32-calibration-20261018-02",
+  "code_commit": "9356e989a7e1e34c1133a197df3da0bbe2bc49c2",
+  "created_utc": "2026-10-18T03:18:53.388979+00:00",
+  "dependency_job_id": "20950692",
+  "gate": "afterok dependency plus compute-side scientific convergence validation",
+  "host": "umt.imm.uran.ru",
+  "input_sha256": {
+    "al-pilot.py": "dd1f82e73d355d4cb772fccb346dd6b3b640661cac0daa8b9d18efd2a3ff8228",
+    "run.sbatch": "a2b7b83669f82ba721c04452512c0dea867a44387e085c4b8e6c18d1419ed1cb",
+    "system.json": "f8e1963314f8767bb771a9bcb153ddc2bd5d42de3565620b8e9ebb90ac936eab"
+  },
+  "job_id": "20950693",
+  "maximum_CPU_hours": 80.0,
+  "phase": "label",
+  "remote_run_dir": "/home6/u3129/mlip-research/runs/al32-labeling-20261018-02",
+  "resources": {
+    "account": "imet-2026-2",
+    "cpus_per_task": 1,
+    "memory_GiB": 32,
+    "nodes": 1,
+    "ntasks": 16,
+    "partition": "apollo",
+    "qos": "normal",
+    "walltime": "05:00:00"
+  },
+  "run_id": "al32-labeling-20261018-02",
+  "source_dataset_manifest_sha256": "65a4c6dce1a072504030dca2b0340db72a497e562e40b2717104294c3030fbdd",
+  "stage": "submitted",
+  "system_config": "configs/dft/al32-kmesh-v2.json",
+  "user": "u3129"
+}

@@ -1,6 +1,6 @@
 {
   "updated_local_date": "2026-10-18",
-  "stage": "al32_calibration_failed_kmesh_convergence_raw_outputs_collected_and_backed_up",
+  "stage": "al32_dense_kmesh_calibration_queued_labeling_conditionally_queued",
   "scientific_results": [],
   "system_selection": "Al32 selected only as bounded pure-metal adaptation pilot; full alloy/nucleant selection remains open",
   "github": "https://github.com/rryltsev/MLIP-nucleation",
@@ -54,11 +54,11 @@
   },
   "blocking_inputs": [],
   "next_actions": [
-    "Design a revised train-only k-mesh convergence study with fixed smearing and unchanged tolerances; Gamma5 is not yet established as converged",
-    "Do not label the 40 frozen structures or fine-tune until a revised reference protocol is validated",
-    "Retain failed Gamma4 calibration as negative evidence; preserve all 16 diagnostic points separately from training labels",
-    "After valid DFT labels exist, evaluate original DPA4/GRACE then fine-tune on train/validation only; reserve test for final comparison",
-    "Select full alloy/nucleant study and shared durable archive; institutional retention remains unconfirmed"
+    "Collect terminal dense k-mesh calibration20950692 and verify Gamma7/Gamma8 stability plus all candidate comparisons without changing tolerances",
+    "Conditional labeling20950693 starts only after scientific calibration succeeds; no candidate means cancellation",
+    "Keep actual terminal CPU cost plus full live reservations below overall128 CPUh across all attempts",
+    "After completion collect and audit40 DFT labels/exports, then verify actual private raw-output backups",
+    "Evaluate original DPA4/GRACE before fine-tuning; train/validation only for fitting and fixed test for final comparison"
   ],
   "vasp_pseudopotentials": {
     "library_id": "vasp-paw-64-b3b00158ad69",
@@ -271,17 +271,20 @@
       },
       "labeling": {
         "ntasks": 16,
-        "walltime": "06:00:00"
+        "walltime": "05:00:00"
       },
       "maximum_CPU_hours": 128,
-      "status": "authorized by explicit user reply",
-      "authorization": "configs/allocations/al32-pilot-20261018.json",
+      "status": "Explicit user instruction authorized dense revision under same global128 CPUh cap",
+      "authorization": "configs/allocations/al32-pilot-20261018-dense.json",
       "allocated_CPU_hours": 10.457777777777778,
       "allocated_CPU_seconds": 37648,
-      "workflow_status": "Stopped at scientific convergence gate as authorized; no automatic retries or new calculations",
-      "active_jobs": 0
+      "workflow_status": "Dense calibration and conditional labeling queued; common global actual-plus-reserved accounting enforced",
+      "active_jobs": 2,
+      "reserved_new_CPU_hours": 112.0,
+      "worst_case_overall_CPU_hours": 122.45777777777778,
+      "unreserved_CPU_hours": 5.542222222222223
     },
-    "calibration_status": "FAILED scientific convergence gate; all 16 static calculations electronically converged; 4 of 8 gate comparisons failed",
+    "calibration_status": "PENDING Priority; Gamma6/7/8 and cutoff checks;10 static calculations planned",
     "dataset_id": "al32-pilot-v1",
     "limitations": [
       "No interfaces, solutes, segregation or nucleation rates/barriers",
@@ -313,14 +316,14 @@
       "validation": 6,
       "test": 13
     },
-    "status": "Calibration completed and audited; Gamma4 protocol rejected; dependent labeling cancelled; raw outputs privately backed up on cluster and workstation",
-    "calibration_run": "runs/al32-calibration-20261018-01/manifest.json",
-    "remote_work_dir": "/home6/u3129/mlip-research/runs/al32-calibration-20261018-01",
+    "status": "Dense-mesh revision submitted; frozen40 geometries and split unchanged; no accepted production labels yet",
+    "calibration_run": "runs/al32-calibration-20261018-02/manifest.json",
+    "remote_work_dir": "/home6/u3129/mlip-research/runs/al32-calibration-20261018-02",
     "remote_verified_files": 44,
-    "calibration_job_id": "20950353",
-    "labeling_run": "runs/al32-labeling-20261018-01/manifest.json",
-    "labeling_job_id": "20950356",
-    "labeling_status": "CANCELLED automatically before allocation after scientific calibration failure",
+    "calibration_job_id": "20950692",
+    "labeling_run": "runs/al32-labeling-20261018-02/manifest.json",
+    "labeling_job_id": "20950693",
+    "labeling_status": "PENDING Dependency afterok:20950692; candidate Gamma6/Gamma7 selected only after all scientific gates pass",
     "diagnostic_calibration_labels": 16,
     "ready_for_finetuning": false,
     "quality_assessment": "runs/al32-calibration-20261018-01/quality-assessment.json",
@@ -330,6 +333,28 @@
       "calibration": "runs/al32-calibration-20261018-01/artifact-backup.json",
       "cancelled_labeling": "runs/al32-labeling-20261018-01/artifact-backup.json",
       "verified_actual_cluster_and_workstation_copies": true
+    },
+    "previous_calibration": {
+      "run": "runs/al32-calibration-20261018-01/manifest.json",
+      "job_id": "20950353",
+      "status": "Failed Gamma4 convergence; all16 diagnostic points collected/audited/backed up",
+      "assessment": "runs/al32-calibration-20261018-01/quality-assessment.json",
+      "allocated_CPU_seconds": 37648
+    },
+    "current_protocol_config": "configs/dft/al32-kmesh-v2.json",
+    "raw_label_quality_audit_scope": "Previous v1 calibration diagnostics only; v2 results pending",
+    "dense_revision": {
+      "protocol_id": "al32-kmesh-v2",
+      "authorization": "configs/allocations/al32-pilot-20261018-dense.json",
+      "reference": "550eV Gamma8 sigma0.05",
+      "reference_stability": "Gamma7 versus Gamma8 must pass on both original train parents",
+      "candidate_policy": "450eV Gamma6 then Gamma7; every candidate comparison and common reference gate must pass on both parents",
+      "tolerances_unchanged": true,
+      "frozen_geometry_and_split_unchanged": true,
+      "phase_walltimes": {
+        "calibrate": "02:00:00",
+        "label": "05:00:00"
+      }
     }
   }
 }
