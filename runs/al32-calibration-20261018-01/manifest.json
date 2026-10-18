@@ -1,5 +1,6 @@
 {
-  "authorization": "not supplied: explicit authorization record required at submit",
+  "authorization": "configs\\allocations\\al32-pilot-20261018.json",
+  "authorization_sha256": "dad8adaaeafbef81eb4f2cc6888c3bf5f5fad1ad170a1aa1353a54f5d3424f3f",
   "calibration_source": "",
   "code_commit": "e6a2293449d8a5e75c879ea2c735b288ccfdd100",
   "created_utc": "2026-10-18T01:31:10.825085+00:00",
@@ -50,7 +51,7 @@
     "structures/md-07-f2/POSCAR": "439467828ad60f7d64040b0a0c8079028e8d961372ed54934643172bfb393c82",
     "system.json": "fb505d2cb1492115f8fe8ee4bf3008ab449d6fd310998b0666236b010396511f"
   },
-  "job_id": null,
+  "job_id": "20950353",
   "maximum_CPU_hours": 32,
   "phase": "calibrate",
   "remote_run_dir": "/home6/u3129/mlip-research/runs/al32-calibration-20261018-01",
@@ -65,6 +66,6 @@
     "walltime": "02:00:00"
   },
   "run_id": "al32-calibration-20261018-01",
-  "stage": "staged",
+  "stage": "submitted",
   "user": "u3129"
 }

@@ -1,0 +1,29 @@
+{
+  "allocation_id": "al32-pilot-20261018",
+  "user_authorized": true,
+  "maximum_CPU_hours": 128,
+  "confirmation_received_utc": "2026-10-18T01:47:53.435371+00:00",
+  "user_reply": "Да, до 128 CPU·ч",
+  "scope": "Train-only VASP convergence then 40 frozen Al32 labels if all predefined criteria pass; no GPU",
+  "resources": {
+    "partition": "apollo",
+    "account": "imet-2026-2",
+    "qos": "normal",
+    "maximum_ntasks": 16
+  },
+  "phase_limits": {
+    "calibrate": {
+      "maximum_reserved_CPU_hours": 32,
+      "walltime": "02:00:00"
+    },
+    "label": {
+      "maximum_reserved_CPU_hours": 96,
+      "walltime": "06:00:00"
+    }
+  },
+  "stop_conditions": [
+    "Predefined convergence failure",
+    "Phase walltime or allocation cap reached"
+  ],
+  "source": "Explicit user reply to budget question in this chat"
+}

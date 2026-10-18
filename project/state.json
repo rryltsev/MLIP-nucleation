@@ -1,6 +1,6 @@
 {
   "updated_local_date": "2026-10-18",
-  "stage": "al32_geometries_and_DFT_inputs_prepared_calibration_budget_pending",
+  "stage": "al32_DFT_calibration_authorized",
   "scientific_results": [],
   "system_selection": "Al32 selected only as bounded pure-metal adaptation pilot; full alloy/nucleant selection remains open",
   "github": "https://github.com/rryltsev/MLIP-nucleation",
@@ -54,7 +54,6 @@
   },
   "blocking_inputs": [],
   "next_actions": [
-    "obtain explicit approval of proposed 128 CPU-hour pilot allocation before sbatch",
     "run training-parent-only VASP convergence gate; stop if predefined criteria fail",
     "label 40 frozen structures only after convergence, validate and privately back up raw VASP outputs",
     "evaluate original DPA4/GRACE then fine-tune using train/validation only; reserve test for final comparison",
@@ -274,9 +273,10 @@
         "walltime": "06:00:00"
       },
       "maximum_CPU_hours": 128,
-      "status": "explicit user confirmation pending"
+      "status": "authorized by explicit user reply",
+      "authorization": "configs/allocations/al32-pilot-20261018.json"
     },
-    "calibration_status": "staged and SHA-verified on cluster; bash syntax valid; not submitted; user budget approval pending",
+    "calibration_status": "submitted",
     "dataset_id": "al32-pilot-v1",
     "limitations": [
       "No interfaces, solutes, segregation or nucleation rates/barriers",
@@ -311,6 +311,7 @@
     "status": "40 frozen geometries and 168 VASP input files prepared and hash-verified; no DFT jobs submitted",
     "calibration_run": "runs/al32-calibration-20261018-01/manifest.json",
     "remote_work_dir": "/home6/u3129/mlip-research/runs/al32-calibration-20261018-01",
-    "remote_verified_files": 44
+    "remote_verified_files": 44,
+    "calibration_job_id": "20950353"
   }
 }
