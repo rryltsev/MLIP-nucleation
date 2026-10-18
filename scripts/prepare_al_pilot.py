@@ -29,7 +29,7 @@ def main():
         inc.write_bytes(pilot.incar(450,0.05,row["configuration_id"]).encode())
         kp=p.with_name("KPOINTS")
         kp.write_bytes(b"UNVALIDATED candidate Gamma mesh\n0\nGamma\n4 4 4\n0 0 0\n")
-        for source in (p,inc,kp): inputs[str(source.relative_to(root))]=pilot.digest(source)
+        for source in (p,inc,kp): inputs[source.relative_to(root).as_posix()]=pilot.digest(source)
     for cid in cfg["calibration_configuration_ids"]:
         row=next(r for r in rows if r["configuration_id"]==cid)
         assert row["split"]=="train"
@@ -39,7 +39,7 @@ def main():
             (dest/"POSCAR").write_bytes((root/row["poscar"]).read_bytes())
             (dest/"INCAR").write_bytes(pilot.incar(encut,sigma,cid).encode())
             (dest/"KPOINTS").write_bytes(f"Calibration Gamma mesh\n0\nGamma\n{k} {k} {k}\n0 0 0\n".encode())
-            for source in dest.iterdir(): inputs[str(source.relative_to(root))]=pilot.digest(source)
+            for source in dest.iterdir(): inputs[source.relative_to(root).as_posix()]=pilot.digest(source)
     pilot.save(root/"preparation.json",dict(
         code_commit=subprocess.check_output(["git","rev-parse","HEAD"],cwd=ROOT,text=True).strip(),
         input_sha256=inputs, accepted_DFT_labels=0,

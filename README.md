@@ -38,9 +38,41 @@ tests/               scientifically meaningful verification
 
 1. SSH, inventory, VASP/PAW setup, small GPU training and actual foundation checkpoint fine-tuning checks completed on 2026-10-17. Next audit reference settings and choose the scientific pilot. See the reports below for evidence and limitations.
 2. On another computer clone the repository, configure its own credentials and read `project/state.json`.
-3. Compare candidate alloy/nucleant systems using literature novelty, experimental access, DFT feasibility and model chemical coverage. Choose one small pilot.
+3. First bounded DFT pilot selected: Al32 FCC/disordered/HCP, 40 geometries, grouped train/validation/test 21/6/13. This does not select the final alloy/nucleant or establish novelty. See `reports/al32-dft-pilot-2026-10-18.tex`; VASP labels require the convergence gate and an authorized CPU budget.
 4. Implement one executable path: structures → converged VASP labels → teacher fine-tuning → independent DFT validation → distillation → student validation → one observable → LaTeX report.
 5. Add active learning and rare-event methods after the pilot is validated.
+
+## Al32 DFT pilot
+
+`configs/systems/al32-pilot-v1.json` defines the chemistry, seeds, grouped split,
+label units, convergence thresholds and proposed allocation. Prepared geometries
+and unvalidated INCAR/KPOINTS live in `datasets/al32-pilot-v1/`; no POTCAR content
+belongs in this tree. Geometry generation uses ASE EMT only as a proposal method,
+without exporting its energies/forces. These are not equilibrium DFT liquid samples.
+
+With an isolated Python environment matching `environments/al32-preparation.txt`,
+`python scripts/prepare_al_pilot.py` creates a new dataset and refuses to overwrite
+an existing one. A clone containing the frozen dataset should reuse its exact bytes.
+Run `python -m unittest discover -s tests -v` for energy/stress/export contract tests.
+
+`scripts/al_pilot.py stage <unique-run-id> calibrate` transfers the frozen proposals
+and checked source to the private cluster work root, without submitting a job.
+Run IDs use `al32-calibration-YYYYMMDD-NN`. Submission requires a separate recorded
+user authorization for the 128 CPU-hour maximum and an explicit `submit` command.
+One calibration job and one labeling job are allowed within that authorization;
+failed attempts do not silently regain the budget. A lost submission response
+requires checking remote `job.id`, `squeue` and `sacct` before further action.
+
+Collect terminal results with `scripts/al_pilot.py collect <manifest.json>`.
+Only an accepted calibration can be passed to `stage <al32-labeling-YYYYMMDD-NN>
+label --source <calibration-manifest.json>`. Labeling exports raw force-consistent
+DFT energies, forces, stress and virials for ASE/GRACE and DeepMD. Use `backup`
+after collection to retain and verify actual private raw-output archives, including
+POTCAR, in main home and `artifacts/dft-run-backups/`; these archives never go to Git.
+
+Do not start model fitting with the unvalidated draft inputs or synthetic checkpoints.
+Original foundation weights remain the initializations; PAW54/PAW64 energy-reference
+compatibility and possible pretraining overlap are recorded in both model cards.
 
 ## Storage
 

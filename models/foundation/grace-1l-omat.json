@@ -145,5 +145,15 @@
     "assessment": "runs/fm-finetune-20261017-01/assessment.json",
     "scientific_teacher": false,
     "restart_export_assessment": "runs/fm-deployment-20261017-07/assessment.json"
+  },
+  "pilot_reference_audit": {
+    "compatibility": "Exact Al PAW54 bytes and all model-specific energy preprocessing not independently audited. Do not assume equivalence to PAW64 or merge labels.",
+    "date": "2026-10-18",
+    "energy_alignment": "Any model-specific elemental energy shift must be trained on train only; preserve raw and shifted E metrics, forces and stress independently.",
+    "local_reference": "VASP6.6.1, PBE Al PAW64, Gaussian sigma0.05 eV, TOTEN force-consistent energy; convergence pending",
+    "overlap": "Generated trajectory seeds are new; FCC/HCP and similar local environments can occur in OMat24. No pretraining-independent test claim.",
+    "pilot": "configs/systems/al32-pilot-v1.json",
+    "source": "https://arxiv.org/html/2410.12771v1#S2.SS2.SSS2",
+    "source_findings": "OMat24: VASP PBE/PBE+U, PAW54, MPRelaxSet-derived settings, ALGO Normal. Al metal needs no Hubbard U."
   }
 }

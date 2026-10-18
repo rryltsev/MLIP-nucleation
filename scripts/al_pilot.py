@@ -4,6 +4,7 @@ Never blindly retry submit. A submission_intent without job_id requires reconcil
 Licensed POTCAR and raw VASP outputs are backed up privately, never collected to Git.
 """
 import argparse
+import base64
 from datetime import datetime, timezone
 import hashlib
 import json
@@ -63,11 +64,21 @@ def stage(run_id, phase, source=None):
         authorization="not supplied: explicit authorization record required at submit")
     save(path,m)
     remote("set -eu; umask 077; test ! -e "+shlex.quote(m["remote_run_dir"])+"; mkdir "+shlex.quote(m["remote_run_dir"]))
-    directories=sorted({str(Path(name).parent).replace('\\','/') for name in payloads if '/' in name})
-    if directories:
-        remote("set -eu; umask 077; mkdir -p "+" ".join(shlex.quote(m["remote_run_dir"]+"/"+d) for d in directories))
-    for name,data in payloads.items():
-        write_remote(m["remote_run_dir"]+"/"+name,data)
+    encoded=base64.b64encode(json.dumps({k:base64.b64encode(v).decode() for k,v in payloads.items()}).encode()).decode()
+    program="""import base64,hashlib,json
+from pathlib import Path
+root=Path(ROOT)
+payloads=json.loads(base64.b64decode(PAYLOAD))
+for name,encoded in payloads.items():
+ p=root/name
+ assert not p.exists() and root in p.parents
+ p.parent.mkdir(parents=True,exist_ok=True)
+ data=base64.b64decode(encoded)
+ with p.open('xb') as f: f.write(data)
+ assert hashlib.sha256(p.read_bytes()).hexdigest()==hashlib.sha256(data).hexdigest()
+print('Staged and verified',len(payloads),'files')
+""".replace('Path(ROOT)','Path('+repr(m["remote_run_dir"])+')').replace('PAYLOAD',repr(encoded))
+    print(remote("umask 077; python3 - <<'PY'\n"+program+"\nPY\nbash -n "+shlex.quote(m["remote_run_dir"]+"/run.sbatch"),120))
     m["stage"]="staged"
     save(path,m)
     print(path)

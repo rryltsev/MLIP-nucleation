@@ -1,0 +1,18 @@
+{
+  "accepted_DFT_labels": 0,
+  "configurations": 40,
+  "dataset_manifest_sha256": "65a4c6dce1a072504030dca2b0340db72a497e562e40b2717104294c3030fbdd",
+  "input_files_verified": 168,
+  "md_fcc_bragg_range": [
+    0.13551194289650942,
+    0.3383557410392415
+  ],
+  "minimum_distance_A": 2.077619865868859,
+  "parent_groups": 10,
+  "passed": true,
+  "split_counts": {
+    "test": 13,
+    "train": 21,
+    "validation": 6
+  }
+}

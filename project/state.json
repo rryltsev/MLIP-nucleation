@@ -1,8 +1,8 @@
 {
   "updated_local_date": "2026-10-18",
-  "stage": "restart_and_a100_ase_lammps_export_validated_on_synthetic_data",
+  "stage": "al32_geometries_and_DFT_inputs_prepared_calibration_budget_pending",
   "scientific_results": [],
-  "system_selection": "open; compare Al-based alloy/nucleant candidates with alternatives",
+  "system_selection": "Al32 selected only as bounded pure-metal adaptation pilot; full alloy/nucleant selection remains open",
   "github": "https://github.com/rryltsev/MLIP-nucleation",
   "github_observation": "origin and local Git author configured; determine synchronization from git status and remote refs",
   "git_author": {
@@ -54,11 +54,12 @@
   },
   "blocking_inputs": [],
   "next_actions": [
-    "select pilot material and observable through comparative literature review",
-    "audit selected checkpoints pretraining DFT settings/energy reference and overlap; build converged grouped VASP pilot data",
-    "validate real DFT fine-tuning and physical observables before distillation",
-    "validate DFT physical observables and MD stability; revisit graph-schema export before upgrading DeepMD or deployment hardware",
-    "choose shared durable artifact backend and confirm cluster retention/backup"
+    "stage frozen Al32 calibration inputs without submission; record remote verified hashes",
+    "obtain explicit approval of proposed 128 CPU-hour pilot allocation before sbatch",
+    "run training-parent-only VASP convergence gate; stop if predefined criteria fail",
+    "label 40 frozen structures only after convergence, validate and privately back up raw VASP outputs",
+    "evaluate original DPA4/GRACE then fine-tune using train/validation only; reserve test for final comparison",
+    "extend qualified pilot toward an explicitly selected alloy/nucleant interface; choose shared durable archive"
   ],
   "vasp_pseudopotentials": {
     "library_id": "vasp-paw-64-b3b00158ad69",
@@ -261,5 +262,53 @@
       "DPA4 PT edge_vec export schema is deprecated by installed backend; future graph migration needs retesting"
     ]
   },
-  "infrastructure_gpu_total_seconds": 1007
+  "infrastructure_gpu_total_seconds": 1007,
+  "dft_pilot": {
+    "accepted_DFT_labels": 0,
+    "allocation_budget": {
+      "calibration": {
+        "ntasks": 16,
+        "walltime": "02:00:00"
+      },
+      "labeling": {
+        "ntasks": 16,
+        "walltime": "06:00:00"
+      },
+      "maximum_CPU_hours": 128,
+      "status": "explicit user confirmation pending"
+    },
+    "calibration_status": "not run; train-only convergence gate prepared",
+    "dataset_id": "al32-pilot-v1",
+    "limitations": [
+      "No interfaces, solutes, segregation or nucleation rates/barriers",
+      "EMT geometry proposals are not equilibrium DFT liquid samples",
+      "Pretraining overlap not excluded; PAW54 to PAW64 compatibility unresolved"
+    ],
+    "local_preparation_attempts": [
+      {
+        "DFT_jobs": 0,
+        "attempt": "01",
+        "preserved": "artifacts/al32-incomplete-local-01",
+        "status": "stopped before manifest completion to correct POSIX paths and FixCom/Langevin thermostat"
+      }
+    ],
+    "planned_configurations": 40,
+    "planned_split_counts": {
+      "test": 13,
+      "train": 21,
+      "validation": 6
+    },
+    "report": "reports/al32-dft-pilot-2026-10-18.tex",
+    "system_config": "configs/systems/al32-pilot-v1.json",
+    "dataset_manifest": "datasets/al32-pilot-v1/dataset-manifest.json",
+    "preparation_validation": "datasets/al32-pilot-v1/preparation-validation.json",
+    "prepared_configurations": 40,
+    "prepared_input_files": 168,
+    "split_counts": {
+      "train": 21,
+      "validation": 6,
+      "test": 13
+    },
+    "status": "40 frozen geometries and 168 VASP input files prepared and hash-verified; no DFT jobs submitted"
+  }
 }

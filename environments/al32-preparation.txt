@@ -1,4 +1,4 @@
 # Local preparation/test dependencies. Use an isolated environment.
 ase==3.29.0
-numpy==2.4.6
+numpy==2.3.5
 scipy==1.17.1
