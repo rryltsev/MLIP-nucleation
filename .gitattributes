@@ -5,6 +5,7 @@ configs/vasp/paw-64.json text eol=lf
 scripts/hpc/*.py text eol=lf
 scripts/hpc/*.sh text eol=lf
 scripts/hpc/*.sbatch text eol=lf
+scripts/assess_al_pilot.py text eol=lf
 environments/*.lock.txt text eol=lf
 environments/*.lock.json text eol=lf
 models/foundation/licenses/* -text
