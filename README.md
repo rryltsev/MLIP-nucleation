@@ -57,10 +57,11 @@ Run `python -m unittest discover -s tests -v` for energy/stress/export contract 
 
 `scripts/al_pilot.py stage <unique-run-id> calibrate` transfers the frozen proposals
 and checked source to the private cluster work root, without submitting a job.
-Run IDs use `al32-calibration-YYYYMMDD-NN`. Submission requires a separate recorded
-user authorization for the 128 CPU-hour maximum and an explicit `submit` command.
-One calibration job and one labeling job are allowed within that authorization;
-failed attempts do not silently regain the budget. A lost submission response
+Run IDs use `al32-calibration-YYYYMMDD-NN`. Submission requires recorded
+user authorization for the 128 CPU-hour overall maximum and an explicit `submit` command.
+One attempt per phase is allowed for each explicit authorization revision;
+all revisions share terminal actual CPUTimeRAW plus full reservations of live jobs.
+Failed attempts do not silently regain the budget. A lost submission response
 requires checking remote `job.id`, `squeue` and `sacct` before further action.
 
 Collect terminal results with `scripts/al_pilot.py collect <manifest.json>`.
@@ -70,7 +71,8 @@ is submitted, add `--after-calibration` to stage a dependent labeling job:
 Slurm uses `afterok` and `--kill-on-invalid-dep=yes`, and the compute script also
 requires the accepted scientific convergence result, identical system settings
 and the exact frozen dataset manifest before starting any labeling calculation.
-Both jobs fit the same authorized cap of 32+96=128 reserved CPU-hours.
+Phase limits are defined in the immutable configuration and authorization;
+previous costs are included before every new submission.
 Labeling exports raw force-consistent
 DFT energies, forces, stress and virials for ASE/GRACE and DeepMD. Use `backup`
 after collection to retain and verify actual private raw-output archives, including
@@ -93,6 +95,21 @@ Run `python scripts/assess_al_pilot.py` to repeat the independent audit with the
 private archives available. Both terminal run archives have actual private main-home
 and workstation copies with every member verified; locations/full hashes are in
 each run's `artifact-backup.json`. The failed scientific gate is preserved.
+
+The user authorized a revised dense-mesh study under the same overall cap.
+`configs/dft/al32-kmesh-v2.json` freezes Gamma6/7/8 checks on the same two train
+parents, fixed Gaussian sigma0.05 and unchanged tolerances. Gamma7 versus Gamma8
+must pass first. Then choose Gamma6 only if its 450eV labels agree with the 550eV
+Gamma6/7/8 calculations on both parents; otherwise choose Gamma7 only if its own
+450/550eV and Gamma8 comparisons pass. No candidate passing means no labeling.
+Ten new static calculations are planned. Geometry bytes and splits stay frozen.
+
+Revised limits: 16 ranks for 2h calibration (32 CPUh) and 5h labeling (80 CPUh).
+Including 37648 previously allocated CPU-seconds, the worst case is 122.4578 CPUh,
+below128. The submitter reconciles all recorded parent jobs with Slurm, refuses
+unknown Al32 scheduler jobs or ambiguous submissions, and counts each live job's
+full reservation. `--system configs/dft/al32-kmesh-v2.json` selects the revision
+when staging; dependent labeling inherits the source configuration.
 
 ## Storage
 

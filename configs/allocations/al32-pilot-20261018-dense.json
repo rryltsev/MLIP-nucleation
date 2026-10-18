@@ -1,0 +1,37 @@
+{
+  "allocation_id": "al32-pilot-20261018-dense",
+  "budget_group": "al32-pilot",
+  "user_authorized": true,
+  "maximum_CPU_hours": 128,
+  "confirmation_received_utc": "2026-10-18T03:17:35.258281+00:00",
+  "user_request": "Проверить более плотные k-сетки, сохранив допуски; после успешной калибровки запустить разметку40 структур в пределах общего бюджета128 CPU·ч с учётом уже потраченного времени.",
+  "previous_authorization": "configs/allocations/al32-pilot-20261018.json",
+  "known_prior_CPU_seconds": 37648,
+  "system_config": "configs/dft/al32-kmesh-v2.json",
+  "scope": "One revised dense-mesh calibration on two original train parents; one conditional 40-structure labeling job; unchanged tolerances, no GPU",
+  "resources": {
+    "partition": "apollo",
+    "account": "imet-2026-2",
+    "qos": "normal",
+    "maximum_ntasks": 16
+  },
+  "phase_limits": {
+    "calibrate": {
+      "maximum_reserved_CPU_hours": 32,
+      "walltime": "02:00:00"
+    },
+    "label": {
+      "maximum_reserved_CPU_hours": 80,
+      "walltime": "05:00:00"
+    }
+  },
+  "worst_case_overall_CPU_seconds": 440848,
+  "overall_cap_CPU_seconds": 460800,
+  "accounting_policy": "Terminal actual CPUTimeRAW for every prior Al32 parent job plus full reservations of all live/uncertain jobs. Refuse missing accounting or unrecorded scheduler jobs.",
+  "stop_conditions": [
+    "Gamma7/Gamma8 reference instability",
+    "No candidate passes unchanged energy/force/stress tolerances on both parents",
+    "Walltime or global budget boundary"
+  ],
+  "source": "Explicit latest user instruction in this chat; amendment does not reset or increase global cap"
+}

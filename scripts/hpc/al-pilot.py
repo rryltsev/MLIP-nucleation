@@ -207,23 +207,55 @@ def differences(a, b):
                 max_stress_component_eV_per_A3=float(np.max(np.abs(np.array(a["stress_eV_per_A3"])-b["stress_eV_per_A3"]))))
 
 
+def evaluate_calibration(cfg, labels_by_parent):
+    """Select once using all training parents, without loosening tolerances."""
+    if not labels_by_parent or set(labels_by_parent)!=set(cfg['calibration_configuration_ids']):
+        raise ValueError('Incomplete calibration parent coverage')
+    if "calibration_selection" not in cfg:
+        checks=[]
+        for cid,labels in labels_by_parent.items():
+            for name in cfg['acceptance']['required_against_reference']:
+                diff=differences(labels[name],labels['reference'])
+                checks.append(dict(configuration_id=cid,case=name,differences=diff,
+                    passed=all(v<=cfg['acceptance'][k] for k,v in diff.items())))
+        passed=all(c['passed'] for c in checks)
+        return dict(passed=passed,checks=checks,protocol=dict(encut_eV=450,gamma_mesh=4,sigma_eV=0.05) if passed else None)
+    selection=cfg['calibration_selection']
+    def compare_pairs(pairs):
+        checks=[]
+        for cid,labels in labels_by_parent.items():
+            for left,right in pairs:
+                diff=differences(labels[left],labels[right])
+                checks.append(dict(configuration_id=cid,left=left,right=right,differences=diff,
+                    passed=all(v<=cfg['acceptance'][k] for k,v in diff.items())))
+        return checks
+    references=compare_pairs(selection['reference_checks'])
+    stable=all(c['passed'] for c in references)
+    candidates=[]
+    for candidate in selection['candidates']:
+        checks=compare_pairs(candidate['case_pairs'])
+        candidates.append(dict(id=candidate['id'],protocol=candidate['protocol'],checks=checks,
+            passed=stable and all(c['passed'] for c in checks)))
+    accepted=next((c for c in candidates if c['passed']),None)
+    return dict(passed=accepted is not None,protocol=accepted['protocol'] if accepted else None,
+        reference_checks=references,reference_stable=stable,candidates=candidates,
+        selected_candidate=accepted['id'] if accepted else None)
+
+
 def calibrate(root, cfg, rows):
-    checks = []
+    labels_by_parent={}
     for cid in cfg["calibration_configuration_ids"]:
         row = next(r for r in rows if r["configuration_id"] == cid)
         assert row["split"] == "train"
         labels = {name: calculate(root, row, cid+"-"+name, encut, k, sigma)
                   for name, encut, k, sigma in cfg["calibration_cases"]}
-        for name in cfg["acceptance"]["required_against_reference"]:
-            diff = differences(labels[name], labels["reference"])
-            checks.append(dict(configuration_id=cid, case=name, differences=diff,
-                               passed=all(v <= cfg["acceptance"][k] for k, v in diff.items())))
-    passed = all(c["passed"] for c in checks)
-    save(root/"calibration.json", dict(passed=passed, checks=checks,
-         protocol=dict(encut_eV=450, gamma_mesh=4, sigma_eV=0.05) if passed else None,
+        labels_by_parent[cid]=labels
+    assessment=evaluate_calibration(cfg,labels_by_parent)
+    save(root/"calibration.json", dict(**assessment,
          criterion="All predefined force, stress and absolute energy tolerances; training parents only",
+         system_sha256=digest(root/'system.json'),code_sha256=digest(__file__),
          dataset_manifest_sha256=digest(root/"dataset-manifest.json")))
-    if not passed:
+    if not assessment['passed']:
         raise RuntimeError("Convergence criteria failed; production blocked")
 
 
@@ -236,8 +268,17 @@ def label_all(root, cfg, source):
         raise ValueError("Source manifest differs from staged dependency")
     if digest(root/"system.json")!=digest(source/"system.json"):
         raise ValueError("Source and target system configuration differ")
-    if calibration["protocol"]!=dict(encut_eV=450,gamma_mesh=4,sigma_eV=0.05):
+    allowed=[c['protocol'] for c in cfg['calibration_selection']['candidates']] if 'calibration_selection' in cfg else [dict(encut_eV=450,gamma_mesh=4,sigma_eV=0.05)]
+    if calibration["protocol"] not in allowed:
         raise ValueError("Unexpected calibrated protocol")
+    if 'calibration_selection' in cfg:
+        if calibration.get('system_sha256')!=digest(root/'system.json') or calibration.get('code_sha256')!=digest(__file__):
+            raise ValueError('Calibration code/configuration changed')
+        observed={cid:{name:json.loads((source/'calculations'/(cid+'-'+name)/'label.json').read_text())
+            for name,_,_,_ in cfg['calibration_cases']} for cid in cfg['calibration_configuration_ids']}
+        repeated=evaluate_calibration(cfg,observed)
+        if not repeated['passed'] or repeated['protocol']!=calibration['protocol']:
+            raise ValueError('Scientific convergence gate failed independent replay')
     manifest = json.loads((source/"dataset-manifest.json").read_text())
     rows = manifest["configurations"]
     for r in rows:
@@ -249,8 +290,9 @@ def label_all(root, cfg, source):
     save(root/"dataset-manifest.json", manifest)
     save(root/"calibration-source.json", dict(path=str(source), sha256=digest(source/"calibration.json"), **calibration))
     labels = []
+    protocol=calibration['protocol']
     for row in rows:
-        labels.append(calculate(root, row, row["configuration_id"], 450, 4, 0.05))
+        labels.append(calculate(root, row, row["configuration_id"], protocol['encut_eV'], protocol['gamma_mesh'], protocol['sigma_eV']))
         save(root/"labels.json", dict(source="DFT/VASP", contract=cfg["label_contract"], labels=labels,
              complete=len(labels)==len(rows)))
     export(root, cfg, rows, labels)
@@ -307,8 +349,10 @@ def main():
     try:
         if args.phase == "calibrate":
             manifest = json.loads((root/"dataset-manifest.json").read_text())
-            if manifest["config_sha256"] != digest(root/"system.json"):
+            if manifest["config_sha256"] != cfg.get('geometry_generation_config_sha256',digest(root/"system.json")):
                 raise ValueError("Prepared system configuration changed")
+            if cfg.get('frozen_dataset_manifest_sha256',digest(root/'dataset-manifest.json'))!=digest(root/'dataset-manifest.json'):
+                raise ValueError('Frozen dataset manifest changed')
             rows = manifest["configurations"]
             groups = {}
             for row in rows:

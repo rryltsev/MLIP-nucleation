@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+import sys
 
 import numpy as np
 from ase import units
@@ -17,6 +18,8 @@ ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location("al_pilot_hpc", ROOT/"scripts/hpc/al-pilot.py")
 pilot = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(pilot)
+sys.path.insert(0,str(ROOT/'scripts'))
+from al_pilot import budget_snapshot
 
 
 def xml_fixture():
@@ -92,6 +95,56 @@ class ConditionalLabelGate(unittest.TestCase):
             pilot.save(source/'calibration.json',{'passed':False})
             with self.assertRaisesRegex(ValueError,'Unvalidated protocol'):
                 pilot.label_all(target,{},source)
+
+
+class DenseCalibrationAndBudget(unittest.TestCase):
+    def setUp(self):
+        self.cfg=json.loads((ROOT/'configs/dft/al32-kmesh-v2.json').read_text())
+
+    def label(self, force=0.0):
+        return dict(energy_free_eV=0.0,forces_eV_per_A=[[force,0,0]]*32,stress_eV_per_A3=[0.0]*6)
+
+    def labels(self):
+        return {cid:{name:self.label() for name,_,_,_ in self.cfg['calibration_cases']}
+                for cid in self.cfg['calibration_configuration_ids']}
+
+    def test_cheapest_candidate_must_pass_on_both_parents(self):
+        labels=self.labels()
+        labels['md-00-f1']['candidate6']=self.label(0.021)
+        assessment=pilot.evaluate_calibration(self.cfg,labels)
+        self.assertTrue(assessment['passed'])
+        self.assertEqual(assessment['protocol']['gamma_mesh'],7)
+
+    def test_reference_instability_blocks_all_candidates(self):
+        labels=self.labels()
+        labels['fcc-04']['mesh7']=self.label(0.021)
+        assessment=pilot.evaluate_calibration(self.cfg,labels)
+        self.assertFalse(assessment['passed'])
+        self.assertIsNone(assessment['protocol'])
+
+    def test_gamma6_selected_when_all_comparisons_pass(self):
+        assessment=pilot.evaluate_calibration(self.cfg,self.labels())
+        self.assertTrue(assessment['passed'])
+        self.assertEqual(assessment['protocol']['gamma_mesh'],6)
+
+    def test_global_budget_counts_prior_actual_and_pending_reservations(self):
+        manifests=[dict(run_id='oldcal',stage='collected',job_id='1'),
+                   dict(run_id='oldlabel',stage='collected',job_id='2'),
+                   dict(run_id='newcal',stage='submitted',job_id='3',resources=dict(ntasks=16,walltime='02:00:00'))]
+        accounting={'1':['1','FAILED','1:0','2353','16','37648'],
+                    '2':['2','CANCELLED','0:0','0','0','0'],
+                    '3':['3','PENDING','0:0','0','16','0']}
+        request=dict(resources=dict(ntasks=16,walltime='05:00:00'))
+        result=budget_snapshot(manifests,accounting,request,128)
+        self.assertEqual(result['worst_case_total_CPU_seconds'],440848)
+        request['resources']['walltime']='06:00:00'
+        with self.assertRaisesRegex(ValueError,'exceeded'):
+            budget_snapshot(manifests,accounting,request,128)
+
+    def test_unknown_prior_submission_blocks_budget(self):
+        request=dict(resources=dict(ntasks=16,walltime='02:00:00'))
+        with self.assertRaisesRegex(ValueError,'Uncertain'):
+            budget_snapshot([dict(run_id='ambiguous',stage='submission_intent',job_id=None)],{},request,128)
 
     def test_changed_configuration_cannot_start_labeling(self):
         with tempfile.TemporaryDirectory() as tmp:

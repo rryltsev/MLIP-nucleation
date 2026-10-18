@@ -22,13 +22,12 @@ SYSTEM = ROOT / "configs/systems/al32-pilot-v1.json"
 REMOTE = "/home6/u3129/mlip-research/runs/"
 
 
-def stage(run_id, phase, source=None, after_calibration=False):
+def stage(run_id, phase, source=None, after_calibration=False, system=None):
     if not re.fullmatch(r"al32-(calibration|labeling)-[0-9]{8}-[0-9]{2}", run_id):
         raise ValueError("Use a unique al32-calibration/labeling-YYYYMMDD-NN identifier")
     path = ROOT/"runs"/run_id/"manifest.json"
     if path.exists():
         raise FileExistsError("Run already exists")
-    cfg = json.loads(SYSTEM.read_text())
     if phase == "label":
         if source is None:
             raise ValueError("Calibration manifest required")
@@ -43,9 +42,14 @@ def stage(run_id, phase, source=None, after_calibration=False):
             if src["stage"] != "collected" or not cal["passed"]:
                 raise ValueError("Collect accepted calibration first, or explicitly use --after-calibration")
         source_remote = src["remote_run_dir"]
+        system=system or ROOT/src.get('system_config','configs/systems/al32-pilot-v1.json')
     else:
         source_remote = ""
-    payloads = {"system.json": SYSTEM.read_bytes(),
+    system=(system or SYSTEM).resolve()
+    if ROOT not in system.parents:
+        raise ValueError('System configuration must be tracked inside project')
+    cfg=json.loads(system.read_text())
+    payloads = {"system.json": system.read_bytes(),
                 "al-pilot.py": (ROOT/"scripts/hpc/al-pilot.py").read_bytes(),
                 "run.sbatch": (ROOT/"scripts/hpc/al-pilot.sbatch").read_bytes()}
     if phase == "calibrate":
@@ -63,13 +67,14 @@ def stage(run_id, phase, source=None, after_calibration=False):
     m = dict(run_id=run_id, phase=phase, stage="preparing", job_id=None,
         created_utc=datetime.now(timezone.utc).isoformat(), remote_run_dir=REMOTE+run_id,
         host="umt.imm.uran.ru", user="u3129", calibration_source=source_remote,
+        system_config=system.relative_to(ROOT).as_posix(),budget_group='al32-pilot',
         code_commit=subprocess.check_output(["git","rev-parse","HEAD"],cwd=ROOT,text=True).strip(),
         input_sha256={k:hashlib.sha256(v).hexdigest() for k,v in payloads.items()},
         resources=dict(partition="apollo",account="imet-2026-2",qos="normal",nodes=1,
                        ntasks=16,cpus_per_task=1,memory_GiB=32,
-                       walltime="02:00:00" if phase=="calibrate" else "06:00:00"),
-        maximum_CPU_hours=32 if phase=="calibrate" else 96,
+                       walltime=cfg['allocation_plan']['calibration_walltime' if phase=='calibrate' else 'labeling_walltime']),
         authorization="not supplied: explicit authorization record required at submit")
+    m['maximum_CPU_hours']=reserved_cpu_seconds(m)/3600
     if phase=="label":
         m.update(source_dataset_manifest_sha256=src["input_sha256"]["dataset-manifest.json"],
                  dependency_job_id=src["job_id"] if after_calibration else None,
@@ -96,25 +101,75 @@ print('Staged and verified',len(payloads),'files')
     print(path)
 
 
+def reserved_cpu_seconds(manifest):
+    hours,minutes,seconds=map(int,manifest['resources']['walltime'].split(':'))
+    if hours<0 or not 0<=minutes<60 or not 0<=seconds<60:
+        raise ValueError('Invalid walltime')
+    return (hours*3600+minutes*60+seconds)*manifest['resources']['ntasks']*manifest['resources'].get('cpus_per_task',1)
+
+
+def budget_snapshot(manifests, accounting, requested, maximum_hours):
+    """Count terminal actual CPUTimeRAW and full reservations for all other jobs."""
+    records=[]; seen=set()
+    terminal={'COMPLETED','FAILED','CANCELLED','TIMEOUT','OUT_OF_MEMORY','NODE_FAIL','PREEMPTED','BOOT_FAIL','DEADLINE','REVOKED'}
+    for m in manifests:
+        job=m.get('job_id')
+        if not job:
+            if m['stage']=='submission_intent':
+                raise ValueError('Uncertain prior submission blocks budget: '+m['run_id'])
+            continue
+        if job in seen: raise ValueError('Duplicate recorded job ID')
+        seen.add(job)
+        if job not in accounting: raise ValueError('Missing scheduler accounting: '+job)
+        row=accounting[job]
+        state=row[1].split()[0].rstrip('+')
+        if state in terminal:
+            if not row[5].isdigit(): raise ValueError('Unknown terminal CPUTimeRAW')
+            seconds=int(row[5]); kind='terminal_actual'
+        else:
+            seconds=reserved_cpu_seconds(m); kind='full_live_reservation'
+        records.append(dict(job_id=job,run_id=m['run_id'],state=state,charged_CPU_seconds=seconds,basis=kind))
+    prior=sum(x['charged_CPU_seconds'] for x in records)
+    new=reserved_cpu_seconds(requested)
+    cap=int(maximum_hours*3600)
+    if prior+new>cap:
+        raise ValueError(f'Global CPU budget exceeded: {prior}+{new}>{cap} seconds')
+    return dict(records=records,prior_charged_CPU_seconds=prior,requested_reserved_CPU_seconds=new,
+         worst_case_total_CPU_seconds=prior+new,maximum_CPU_seconds=cap,
+         remaining_after_reservation_CPU_seconds=cap-prior-new)
+
+
 def submit(path, authorization):
     m=json.loads(path.read_text())
     if m["stage"]!="staged" or m["job_id"]:
         raise ValueError("Reconcile scheduler before any repeated submit")
     auth=json.loads(authorization.read_text())
-    if not auth.get("user_authorized") or auth["maximum_CPU_hours"] < 128:
+    if not auth.get("user_authorized") or auth["maximum_CPU_hours"] != 128:
         raise ValueError("User-authorized 128 CPU-hour cap required")
-    # This allocation covers exactly one calibration and one labeling job, no retries.
-    other=[]
+    # Each authorization revision permits one attempt per phase. All revisions
+    # still share the same global budget, including failed/cancelled jobs.
+    prior_manifests=[]
     for p in (ROOT/"runs").glob("al32-*/manifest.json"):
         x=json.loads(p.read_text())
+        if p==path.resolve(): continue
+        prior_manifests.append(x)
         if p != path.resolve() and x.get("authorization_sha256")==hashlib.sha256(authorization.read_bytes()).hexdigest():
             if x["phase"]==m["phase"] and x["stage"] in ("submission_intent","submitted","collected"):
                 raise ValueError("Budget phase already consumed; no automatic retry")
-            other.append(x["maximum_CPU_hours"])
-    if sum(other)+m["maximum_CPU_hours"] > auth["maximum_CPU_hours"]:
-        raise ValueError("Reservation exceeds budget")
+    ids=[x['job_id'] for x in prior_manifests if x.get('job_id')]
+    observed=remote("sacct -n -P -u u3129 --starttime=2026-10-18 --format=JobIDRaw,JobName%100,State; squeue -h -u u3129 -o '%i|%j|%T'")
+    for line in observed.splitlines():
+        fields=line.split('|')
+        if len(fields)>=2 and fields[0].isdigit() and fields[1].startswith('al32-') and fields[0] not in ids:
+            raise ValueError('Unrecorded Al32 scheduler job; reconcile before submission: '+fields[0])
+    raw=remote('sacct -n -P -j '+','.join(ids)+' --format=JobIDRaw,State,ExitCode,ElapsedRaw,AllocCPUS,CPUTimeRAW') if ids else ''
+    accounting={r[0]:r for line in raw.splitlines() if len(r:=line.split('|'))>=6 and r[0] in ids}
+    snapshot=budget_snapshot(prior_manifests,accounting,m,auth['maximum_CPU_hours'])
+    phase_limit=auth['phase_limits'][m['phase']]
+    if m['maximum_CPU_hours']>phase_limit['maximum_reserved_CPU_hours'] or m['resources']['walltime']!=phase_limit['walltime']:
+        raise ValueError('Resources differ from authorized phase limits')
     m.update(stage="submission_intent", authorization=str(authorization.relative_to(ROOT)),
-             authorization_sha256=hashlib.sha256(authorization.read_bytes()).hexdigest())
+             authorization_sha256=hashlib.sha256(authorization.read_bytes()).hexdigest(),budget_snapshot=snapshot)
     save(path,m)
     write_remote(m["remote_run_dir"]+"/submission-intent.json",path.read_bytes())
     exports="ALL,PILOT_RUN_DIR="+m["remote_run_dir"]+",PILOT_PHASE="+m["phase"]+",PILOT_CODE_COMMIT="+m["code_commit"]
@@ -209,12 +264,12 @@ print(json.dumps(dict(remote_archive=str(archive),sha256=hashlib.sha256(archive.
 if __name__=="__main__":
     p=argparse.ArgumentParser(description=__doc__)
     sub=p.add_subparsers(dest="action",required=True)
-    st=sub.add_parser("stage"); st.add_argument("run_id"); st.add_argument("phase",choices=["calibrate","label"]); st.add_argument("--source",type=Path); st.add_argument("--after-calibration",action="store_true")
+    st=sub.add_parser("stage"); st.add_argument("run_id"); st.add_argument("phase",choices=["calibrate","label"]); st.add_argument("--source",type=Path); st.add_argument("--after-calibration",action="store_true"); st.add_argument('--system',type=Path)
     su=sub.add_parser("submit"); su.add_argument("manifest",type=Path); su.add_argument("--authorization",required=True,type=Path)
     for name in ("collect","backup"):
         s=sub.add_parser(name); s.add_argument("manifest",type=Path)
     a=p.parse_args()
-    if a.action=="stage": stage(a.run_id,a.phase,a.source,a.after_calibration)
+    if a.action=="stage": stage(a.run_id,a.phase,a.source,a.after_calibration,a.system)
     elif a.action=="submit": submit(a.manifest.resolve(),a.authorization.resolve())
     elif a.action=="collect": collect(a.manifest.resolve())
     else: backup(a.manifest.resolve())
