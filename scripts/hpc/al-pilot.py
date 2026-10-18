@@ -17,6 +17,7 @@ from ase import Atoms, units
 from ase.build import bulk
 from ase.calculators.emt import EMT
 from ase.calculators.singlepoint import SinglePointCalculator
+from ase.constraints import FixCom
 from ase.io import read, write
 from ase.md.langevin import Langevin
 from ase.md.velocitydistribution import MaxwellBoltzmannDistribution, Stationary
@@ -45,7 +46,7 @@ def proposal(a, root, config_id, parent, split, kind, extra):
     write(p, a, format="vasp", direct=True, sort=False)
     p.write_bytes(p.read_bytes().replace(b"\r\n", b"\n"))
     return dict(configuration_id=config_id, parent_id=parent, split=split,
-                kind=kind, poscar=str(p.relative_to(root)), poscar_sha256=digest(p),
+                kind=kind, poscar=p.relative_to(root).as_posix(), poscar_sha256=digest(p),
                 minimum_distance_A=float(d.min()), atoms=32, **extra)
 
 
@@ -68,11 +69,12 @@ def generate(root, cfg):
         rng = np.random.RandomState(seed)
         a = bulk("Al", "fcc", a=(4*volume)**(1/3), cubic=True).repeat((2, 2, 2))
         a.calc = EMT()
+        a.set_constraint(FixCom())
         MaxwellBoltzmannDistribution(a, temperature_K=g["melt_temperature_K"], rng=rng)
         Stationary(a)
         dyn = Langevin(a, g["timestep_fs"]*units.fs,
                        temperature_K=g["melt_temperature_K"],
-                       friction=g["friction_per_fs"]/units.fs, rng=rng, logfile=None)
+                       friction=g["friction_per_fs"]/units.fs, rng=rng, logfile=None, fixcm=False)
         dyn.run(g["melt_steps"])
         dyn.set_temperature(temperature_K=temperature)
         dyn.run(g["target_steps"])
@@ -170,6 +172,8 @@ def parse_label(path, expected_atoms=32):
 
 
 def calculate(root, row, name, encut, k, sigma):
+    if digest(root/row["poscar"]) != row["poscar_sha256"]:
+        raise ValueError("Geometry hash mismatch")
     p = root/"calculations"/name
     p.mkdir(parents=True, exist_ok=False)
     (p/"POSCAR").write_bytes((root/row["poscar"]).read_bytes())
