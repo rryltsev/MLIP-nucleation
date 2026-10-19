@@ -1,0 +1,39 @@
+{
+  "allocation_id": "al32-kplib-20261019",
+  "budget_group": "al32-pilot",
+  "user_authorized": true,
+  "maximum_CPU_hours": 128,
+  "recorded_utc": "2026-10-19T02:17:52.267251+00:00",
+  "source": "Current explicit user request to install kpLib, test min_distance convergence, compare accuracy/cost and assess usefulness; continue within existing overall128 CPUh cap",
+  "scope": "Isolated kpLib setup, train-parent-only grid generation and one paired Slurm VASP comparison; no relabeling or held-out selection",
+  "known_prior_CPU_seconds": 333472,
+  "phase_limits": {
+    "setup": {
+      "ntasks": 1,
+      "cpus_per_task": 2,
+      "memory_GiB": 4,
+      "walltime": "00:15:00",
+      "maximum_reserved_CPU_hours": 0.5
+    },
+    "grids": {
+      "ntasks": 1,
+      "cpus_per_task": 1,
+      "memory_GiB": 4,
+      "walltime": "00:15:00",
+      "maximum_reserved_CPU_hours": 0.25
+    },
+    "benchmark": {
+      "ntasks": 16,
+      "cpus_per_task": 1,
+      "memory_GiB": 32,
+      "walltime": "02:00:00",
+      "maximum_reserved_CPU_hours": 32
+    }
+  },
+  "worst_case_overall_CPU_hours": 125.38111111111111,
+  "stop_conditions": [
+    "Any failed setup/DFT/representation guard",
+    "Phase walltime or overall128 CPUh cap"
+  ],
+  "scientific_thresholds": "Existing unchanged energy/force/stress tolerances; adoption requires accuracy plus at least10 percent timing gain on both parents"
+}
