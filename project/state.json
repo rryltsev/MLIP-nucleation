@@ -1,6 +1,22 @@
 {
   "updated_local_date": "2026-10-19",
-  "stage": "kplib_benchmark_audited_backed_up_and_rejected_for_current_pilot_keep_Gamma7",
+  "stage": "original_FM_Al32_baseline_inference_submitted",
+  "foundation_DFT_baseline": {
+    "status": "Submitted immutable original-checkpoint inference; metrics and energy-zero shift pending",
+    "run": "runs/fm-al32-baseline-20261019-01/manifest.json",
+    "job_id": "20952051",
+    "configuration": "configs/evaluation/al32-foundation-baseline-v1.json",
+    "models": ["dpa4-mini-omat24-20260805", "grace-1l-omat"],
+    "dataset": "datasets/al32-pilot-v1/dft-v2.json",
+    "energy_alignment": "One additive eV/Al shift per model fitted on21 train configurations only, then frozen for validation6/test13; keep raw metrics",
+    "test_policy": "Frozen baseline evaluation requested by user; no test-based checkpoint selection, hyperparameter adjustment or sampling",
+    "resources": "One A100,4CPU,32GiB,max15minutes; predictions only, no optimization or new VASP",
+    "maximum_GPU_seconds": 900,
+    "maximum_CPU_seconds": 3600,
+    "previous_DFT_kplib_CPU_hours": 114.50722222222223,
+    "conservative_combined_CPU_hour_ceiling": 115.50722222222223,
+    "continuation": "Collect job20952051 without resubmission; verify raw predictions/model hashes, audit train-only offsets and split metrics, back up and update existing Al32 report"
+  },
   "kplib_benchmark": {
     "status": "COMPLETED0:0 on apollo30;14 VASP cases independently audited from verified raw archive; no candidate passed both-parent accuracy gates",
     "configuration": "configs/dft/al32-kplib-benchmark-v1.json",
