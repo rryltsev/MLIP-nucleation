@@ -72,6 +72,33 @@ def main():
                 return float(atoms.get_potential_energy()),atoms.get_forces(),atoms.get_stress()
             result['versions']={p:importlib.metadata.version(p) for p in ('tensorpotential','tensorflow','numpy','ase')}
             result['device']=[d.name for d in tf.config.list_physical_devices('GPU')] if use_gpu else 'CPU, CUDA_VISIBLE_DEVICES empty'
+        if 'derivative_check' in cfg:
+            settings=cfg['derivative_check'];row=next(r for r in rows if r['configuration_id']==settings['configuration_id'])
+            assert row['split']=='train'
+            atoms=read(ROOT/row['poscar'],format='vasp');energy,force,stress=evaluate(atoms)
+            h=settings['position_step_A'];plus=atoms.copy();minus=atoms.copy()
+            plus.positions[0,0]+=h;minus.positions[0,0]-=h
+            fp=-(evaluate(plus)[0]-evaluate(minus)[0])/(2*h)
+            h=settings['strain_step'];fd=[];pairs=[(0,0),(1,1),(2,2),(1,2),(0,2),(0,1)]
+            for i,j in pairs:
+                strain=np.zeros((3,3));strain[i,j]=1 if i==j else .5
+                if i!=j:strain[j,i]=.5
+                plus=atoms.copy();minus=atoms.copy()
+                plus.set_cell(atoms.cell.array@(np.eye(3)+h*strain).T,scale_atoms=True)
+                minus.set_cell(atoms.cell.array@(np.eye(3)-h*strain).T,scale_atoms=True)
+                fd.append((evaluate(plus)[0]-evaluate(minus)[0])/(2*h*atoms.get_volume()))
+            check=dict(settings=settings,configuration_id=row['configuration_id'],split='train',
+                analytic_force_x_eV_per_A=float(force[0,0]),finite_difference_force_x_eV_per_A=float(fp),
+                force_absolute_error_eV_per_A=float(abs(fp-force[0,0])),analytic_stress_eV_per_A3=stress.tolist(),
+                finite_difference_stress_eV_per_A3=fd,max_stress_error_eV_per_A3=float(np.max(np.abs(np.array(fd)-stress))),
+                convention='Engineering shear h: epsilon_ij=epsilon_ji=h/2; derivative dE/(V dh) gives tensile Voigt component',
+                source_unchanged=all(sha(x['remote_path'])==x['sha256'] for x in card['files'].values()))
+            check['passed']=bool(check['force_absolute_error_eV_per_A']<=settings['force_tolerance_eV_per_A'] and check['max_stress_error_eV_per_A3']<=settings['stress_tolerance_eV_per_A3'] and check['source_unchanged'])
+            save(WORK/'derivative-check.json',check)
+            assert check['passed'],check
+            result.update(status='passed',derivative_check=check,execution_device='CPU',source_unchanged=True,
+                finished_utc=datetime.now(timezone.utc).isoformat())
+            save(WORK/'result.json',result);return 0
         predictions=[];telemetry=[]
         for row in rows:
             path=ROOT/row['poscar'];assert sha(path)==row['poscar_sha256']
