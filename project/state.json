@@ -18,6 +18,8 @@
     "geometry_scope": "Original two train parents only; frozen40-label dataset and existing Gamma7 protocol unchanged",
     "weight_policy": "Uniform full grid reconstructed from all kpLib coordinates; only time reversal used for reduction under VASP ISYM0",
     "decision": "Pending DFT accuracy, same-node cold timing and full/TR equivalence gates; no measured speedup or adoption conclusion yet",
+    "startup_check": "configs/observations/2026-10-19-kplib-startup.json",
+    "audit_script": "scripts/assess_kplib_benchmark.py",
     "actual_terminal_CPU_seconds_including_prior": 333602,
     "benchmark_reserved_CPU_hours": 32,
     "worst_case_overall_CPU_hours": 124.66722222222222,

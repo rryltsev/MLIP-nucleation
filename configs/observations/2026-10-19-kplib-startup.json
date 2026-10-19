@@ -1,0 +1,33 @@
+{
+  "job_id": "20952034",
+  "run_id": "al32-kplib-benchmark-20261019-01",
+  "code_commit": "675f68619c4aaffda019406a10650cecdafbab23",
+  "case": "fcc-04-gamma7-r0",
+  "audit_scope": "First completed baseline only; generalized grids and full benchmark pending",
+  "quality_audit_passed": true,
+  "diagnostics": {
+    "configuration_id": "fcc-04",
+    "case": "gamma7-r0",
+    "actual_kpoints": 172,
+    "electronic_steps": 16,
+    "wall_seconds": 341.7407138980925,
+    "energy_eV_per_atom": -3.723182696875,
+    "net_force_norm_eV_per_A": 2.000000000335067e-08,
+    "stress_antisymmetry_kbar": 2.999999999808711e-08
+  },
+  "versus_reference": {
+    "energy_eV_per_atom": 4.4009687500068395e-05,
+    "max_force_component_eV_per_A": 0.019934899999999978,
+    "max_stress_component_eV_per_A3": 0.0007406318845218791
+  },
+  "source_hashes": {
+    "INCAR": "09a671915304213a95c0cd9fe06318fd5c8c4936918239cd1a59c14a7f617570",
+    "KPOINTS": "9ee0f1c3efa9737ec1ca91c855fd0c68870222f7485a9794973d12ddd1f46700",
+    "OUTCAR": "12e211eda90a147a346642bb71d5697ca31937b20d45e4d76b36dbb335b2070f",
+    "POSCAR": "5b3090f9d3683cffa8a0162447e400d76d04bdaf264a6441bdbfb699238f3b2d",
+    "POTCAR": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315",
+    "vasprun.xml": "7029621a6374e5b55f82a6c133ba02461d009eaff8f0364351af68c7ec908717"
+  },
+  "analysis_source_sha256": "af1d552ae742a8ad2db705a628d594bae9487be04b7ab0c7756e3e49804cd2b4",
+  "analysis_base_commit": "8f95b1097467c44c16b796194094ab2cbc5904eb"
+}

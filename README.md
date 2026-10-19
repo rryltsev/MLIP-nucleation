@@ -276,6 +276,8 @@ Setup20952032 and grids20952033 completed and were collected/backed up. Benchmar
 python scripts/kplib_cluster.py collect runs/al32-kplib-benchmark-20261019-01/manifest.json
 # After terminal collection:
 python scripts/kplib_cluster.py backup runs/al32-kplib-benchmark-20261019-01/manifest.json
+# With NumPy/ASE available, after verified backup:
+python scripts/assess_kplib_benchmark.py runs/al32-kplib-benchmark-20261019-01
 ```
 
 The selection/adoption gates are fixed before DFT: a grid below d80 must pass both references for both parents and all denser tested grids must pass; full/TR equivalence must pass; median end-to-end wall time must fall at least10 percent on both parents. If any gate fails, retain Gamma7 and record the negative evidence. Source references are the [official project](https://muellergroup.jhu.edu/K-Points.html), [pinned release](https://pypi.org/project/kpLib/1.1.1/), [algorithm paper](https://arxiv.org/abs/1907.13610) and [VASP ISYM documentation](https://vasp.at/wiki/ISYM).
