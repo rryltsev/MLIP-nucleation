@@ -55,6 +55,7 @@
   },
   "calibration_source": "",
   "code_commit": "675f68619c4aaffda019406a10650cecdafbab23",
+  "collected_utc": "2026-10-19T04:40:54.130586+00:00",
   "created_utc": "2026-10-19T02:24:22.367067+00:00",
   "host": "umt.imm.uran.ru",
   "input_sha256": {
@@ -83,6 +84,14 @@
     "walltime": "02:00:00"
   },
   "run_id": "al32-kplib-benchmark-20261019-01",
-  "stage": "submitted",
+  "scheduler_record": [
+    "20952034",
+    "COMPLETED",
+    "0:0",
+    "4914",
+    "16",
+    "78624"
+  ],
+  "stage": "collected",
   "user": "u3129"
 }

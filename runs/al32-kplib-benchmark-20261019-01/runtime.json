@@ -1,0 +1,9 @@
+{
+  "grids_sha256": "8428f811224c9242e0c0810c1f64d552c0f635f35da38440f97c4a34e3eec327",
+  "host": "apollo30",
+  "ntasks": 16,
+  "python": "3.12.14 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:46:43) [GCC 14.3.0]",
+  "reference_labels_sha256": "e272d4fa986ebd278beb20aefeaa7933f03dd56749b86141957fb4a575d33fd1",
+  "vasp_executable": "/home/u3129/.local/opt/vasp/6.6.1-oneapi-2025/src/vasp.6.6.1/bin/vasp_std",
+  "vasp_sha256": "773a7c62b14d0a55541c07955da14a98f5ca79a2d1938b71315e69b48565b19a"
+}

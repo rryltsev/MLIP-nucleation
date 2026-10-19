@@ -1,0 +1,19 @@
+{
+  "archive_sha256": "b3b00158ad69862b1632947cc3377de110181e6f509ed408b0a6bfc30023f461",
+  "assembly_script_sha256": "69a235355dc99722020a6daa3bd7e260aadca2a0a0469c1859b9139a4cc356b2",
+  "created_utc": "2026-10-19T03:16:53.187404+00:00",
+  "family": "PBE",
+  "library_id": "vasp-paw-64-b3b00158ad69",
+  "ordered_potentials": [
+    {
+      "bytes": 197982,
+      "lexch": "PE",
+      "path": "Al/POTCAR",
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315",
+      "titel": "PAW_PBE Al 04Jan2001",
+      "variant": "Al"
+    }
+  ],
+  "potcar_sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315",
+  "registry_sha256": "682a27af5778084e99f5cea9eabe3e6668e1fd319a5b0e38b99b6c8321d80d8c"
+}

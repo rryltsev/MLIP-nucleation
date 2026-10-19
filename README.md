@@ -56,7 +56,9 @@ Original-FM baselines, learned accuracy and physical MD remain untested.
 Audit: `scripts/assess_al32_dataset.py` (ASE/NumPy required), with actual private
 archives available. Results and complete accounting are in
 `runs/al32-labeling-20261018-02/quality-assessment.json` and `scheduler-final.json`.
-All attempts cost333472 allocated CPU-seconds =92.6311 CPUh of128; no live jobs.
+Calibration/labeling attempts cost333472 allocated CPU-seconds =92.6311 CPUh.
+Including the subsequent kpLib setup/grids/benchmark below, the shared total
+is412226 CPU-seconds =114.5072 CPUh of128, with13.4928 CPUh remaining; no live Al32 jobs.
 Private main-home and workstation backups for both new runs include raw outputs,
 licensed POTCAR and complete DeepMD exports, with every member verified.
 
@@ -270,7 +272,11 @@ source /home6/u3129/mlip-research/envs/kplib_111/activate-kplib.sh
 
 The fixed experiment is `configs/dft/al32-kplib-benchmark-v1.json`: two original train parents, min_distance40/48/56/64/80 Angstrom, unchanged energy/force/stress tolerances, existing550eV Gamma8 and internal d80 references. It compares two cold repeats with fresh450eV Gamma7 on the same allocation, includes grid generation in reported speedup, and checks full/TR prediction equivalence. This is an exploratory pilot; fewer k-points alone are not evidence of adequate accuracy or faster execution. The40 accepted labels remain under their existing Gamma7 protocol.
 
-Setup20952032 and grids20952033 completed and were collected/backed up. Benchmark20952034 is recorded in `runs/al32-kplib-benchmark-20261019-01/manifest.json`; check current scheduler/result state rather than submitting it again. These jobs share the original128 CPU-hour cap, including earlier failures. Resume collection and backup with:
+Setup20952032, grids20952033 and benchmark20952034 completed and were collected/backed up. The benchmark ran14 VASP cases in4914s on16 CPUs/apollo30; independent raw-output audit passed. No tested grid qualified on both train parents: the d80 anchor itself fails FCC stress against Gamma8 (0.00118250 versus0.001 eV/A^3). Retain Gamma7 for the current pilot. This is local negative evidence, not a general rejection of kpLib.
+
+Smaller grids were faster at insufficient accuracy. For example d56 totals250.84/306.76s including generation versus Gamma7 medians342.05/415.20s, but FCC force/stress and disordered stress fail. Each kpLib convergence grid has one run; Gamma7 has two per parent. Selected-grid repeats and full/TR VASP equivalence were conditional on the accuracy gate and were not triggered. Full/TR numerical quadrature, weight closure and actual XML coordinate/weight checks passed. Equal-accuracy speedup was not established.
+
+The summary is `runs/al32-kplib-benchmark-20261019-01/quality-assessment.json`; CSV, tables and figures are under that run and `results/al32-kplib-20261019/`. The existing Al32 LaTeX report contains the conclusion and scope. The raw benchmark archive is4038136 bytes/286 members, with actual checksum-verified cluster-main-home and workstation copies. The shared all-attempt total is114.5072 CPUh of128. Do not resubmit recorded jobs. To reproduce collection/audit with the private archives and NumPy/ASE available:
 
 ```powershell
 python scripts/kplib_cluster.py collect runs/al32-kplib-benchmark-20261019-01/manifest.json
@@ -278,6 +284,8 @@ python scripts/kplib_cluster.py collect runs/al32-kplib-benchmark-20261019-01/ma
 python scripts/kplib_cluster.py backup runs/al32-kplib-benchmark-20261019-01/manifest.json
 # With NumPy/ASE available, after verified backup:
 python scripts/assess_kplib_benchmark.py runs/al32-kplib-benchmark-20261019-01
+# With Matplotlib available, reproduce figures and LaTeX tables:
+python scripts/plot_kplib_benchmark.py
 ```
 
 The selection/adoption gates are fixed before DFT: a grid below d80 must pass both references for both parents and all denser tested grids must pass; full/TR equivalence must pass; median end-to-end wall time must fall at least10 percent on both parents. If any gate fails, retain Gamma7 and record the negative evidence. Source references are the [official project](https://muellergroup.jhu.edu/K-Points.html), [pinned release](https://pypi.org/project/kpLib/1.1.1/), [algorithm paper](https://arxiv.org/abs/1907.13610) and [VASP ISYM documentation](https://vasp.at/wiki/ISYM).

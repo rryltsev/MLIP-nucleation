@@ -1,0 +1,31 @@
+{
+  "analysis_source_sha256": "c0bd7adb80fbf9630cac3171d4772b11ef511441a0c3a58b0ba935e0a4a05307",
+  "code_base_commit": "fc96047a14fef7e382ebbf912d306f47e25b448c",
+  "inputs": {
+    "quality-assessment.json": "fb6780be1737491cb86663f4b4aa99ed345d0fd9c202e734e9b97e1800670007",
+    "system.json": "0118fb30ddaa0b2b8dca693a638bcc757301893566371778f7abe1f691f4ecb0"
+  },
+  "packages": {
+    "matplotlib": "3.10.8",
+    "numpy": "2.3.5",
+    "contourpy": "1.4.0",
+    "cycler": "0.12.1",
+    "fonttools": "4.67.0",
+    "kiwisolver": "1.5.1",
+    "packaging": "26.3",
+    "pillow": "13.0.0",
+    "pyparsing": "3.3.3",
+    "python-dateutil": "2.9.0.post0",
+    "six": "1.17.0"
+  },
+  "settings": {
+    "error_normalization": "Absolute component maxima / unchanged tolerance",
+    "timing": "Gamma7 median of n2; each kpLib grid n1, including separately measured generation",
+    "dpi": 180
+  },
+  "output_sha256": {
+    "convergence.png": "40ba7f1826a7fdb7e7b3ddad6a8a638401797553b866d4458b55ac03008d7824",
+    "summary-tables.tex": "b255a2fe4f11ff02c64a6b568b5a1f1ca387c442c8fdda982be8e95f713431ff",
+    "timing.png": "d3a179eaa1af500e8f60b61eed3671d49f4aa1ff2c4e18245b6e78aecdd4d544"
+  }
+}

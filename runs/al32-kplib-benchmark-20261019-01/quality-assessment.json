@@ -1,0 +1,542 @@
+{
+  "analysis_code_commit": "fc96047a14fef7e382ebbf912d306f47e25b448c",
+  "analysis_source_sha256": "3267de116dd03753a06f8737aa6dc25c77ad6da6830eebd595004f8de5330c30",
+  "assessed_utc": "2026-10-19T04:47:35.836798+00:00",
+  "baseline_summary": {
+    "fcc-04": {
+      "differences_vs_gamma8": {
+        "energy_eV_per_atom": 4.4009687500068395e-05,
+        "max_force_component_eV_per_A": 0.019934899999999978,
+        "max_stress_component_eV_per_A3": 0.0007406318845218791
+      },
+      "median_seconds": 342.0483639780432,
+      "wall_samples_seconds": [
+        341.7407138980925,
+        342.3560140579939
+      ]
+    },
+    "md-00-f1": {
+      "differences_vs_gamma8": {
+        "energy_eV_per_atom": 1.04687500002143e-06,
+        "max_force_component_eV_per_A": 0.012823150000000005,
+        "max_stress_component_eV_per_A3": 0.0008438139481307325
+      },
+      "median_seconds": 415.2046163780615,
+      "wall_samples_seconds": [
+        415.0684695318341,
+        415.3407632242888
+      ]
+    }
+  },
+  "budget": {
+    "jobs": [
+      {
+        "allocated_CPU_seconds": 37648,
+        "job_id": "20950353",
+        "run_id": "al32-calibration-20261018-01",
+        "state": "FAILED"
+      },
+      {
+        "allocated_CPU_seconds": 68576,
+        "job_id": "20950692",
+        "run_id": "al32-calibration-20261018-02",
+        "state": "COMPLETED"
+      },
+      {
+        "allocated_CPU_seconds": 78624,
+        "job_id": "20952034",
+        "run_id": "al32-kplib-benchmark-20261019-01",
+        "state": "COMPLETED"
+      },
+      {
+        "allocated_CPU_seconds": 30,
+        "job_id": "20952033",
+        "run_id": "al32-kplib-grids-20261019-01",
+        "state": "COMPLETED"
+      },
+      {
+        "allocated_CPU_seconds": 100,
+        "job_id": "20952032",
+        "run_id": "al32-kplib-setup-20261019-01",
+        "state": "COMPLETED"
+      },
+      {
+        "allocated_CPU_seconds": 0,
+        "job_id": "20950356",
+        "run_id": "al32-labeling-20261018-01",
+        "state": "CANCELLED"
+      },
+      {
+        "allocated_CPU_seconds": 227248,
+        "job_id": "20950693",
+        "run_id": "al32-labeling-20261018-02",
+        "state": "COMPLETED"
+      }
+    ],
+    "remaining_CPU_hours": 13.492777777777775,
+    "total_CPU_hours": 114.50722222222223,
+    "total_CPU_seconds": 412226
+  },
+  "checks": [
+    {
+      "configuration_id": "fcc-04",
+      "min_distance_A": 40,
+      "passed": false,
+      "versus_anchor": {
+        "energy_eV_per_atom": 3.934312500009085e-05,
+        "max_force_component_eV_per_A": 0.03785409000000001,
+        "max_stress_component_eV_per_A3": 0.0012492272474932372
+      },
+      "versus_gamma8": {
+        "energy_eV_per_atom": 0.0006457687500001086,
+        "max_force_component_eV_per_A": 0.049118669999999975,
+        "max_stress_component_eV_per_A3": 0.0007673525902444626
+      }
+    },
+    {
+      "configuration_id": "md-00-f1",
+      "min_distance_A": 40,
+      "passed": false,
+      "versus_anchor": {
+        "energy_eV_per_atom": 0.000917887499999992,
+        "max_force_component_eV_per_A": 0.03265779,
+        "max_stress_component_eV_per_A3": 0.0016085946621247817
+      },
+      "versus_gamma8": {
+        "energy_eV_per_atom": 0.0007385525000001003,
+        "max_force_component_eV_per_A": 0.033201800000000004,
+        "max_stress_component_eV_per_A3": 0.0011271726203932898
+      }
+    },
+    {
+      "configuration_id": "fcc-04",
+      "min_distance_A": 48,
+      "passed": false,
+      "versus_anchor": {
+        "energy_eV_per_atom": 0.00044549281250017003,
+        "max_force_component_eV_per_A": 0.028784199999999982,
+        "max_stress_component_eV_per_A3": 0.005578685435777394
+      },
+      "versus_gamma8": {
+        "energy_eV_per_atom": 0.0002396190625000294,
+        "max_force_component_eV_per_A": 0.03454360000000001,
+        "max_stress_component_eV_per_A3": 0.005837704344562111
+      }
+    },
+    {
+      "configuration_id": "md-00-f1",
+      "min_distance_A": 48,
+      "passed": false,
+      "versus_anchor": {
+        "energy_eV_per_atom": 0.00035252250000006313,
+        "max_force_component_eV_per_A": 0.020067920000000017,
+        "max_stress_component_eV_per_A3": 0.0007530772914396528
+      },
+      "versus_gamma8": {
+        "energy_eV_per_atom": 0.0005318574999999548,
+        "max_force_component_eV_per_A": 0.02985015000000013,
+        "max_stress_component_eV_per_A3": 0.0008215638793572888
+      }
+    },
+    {
+      "configuration_id": "fcc-04",
+      "min_distance_A": 56,
+      "passed": false,
+      "versus_anchor": {
+        "energy_eV_per_atom": 0.00044970593750015553,
+        "max_force_component_eV_per_A": 0.01906395000000005,
+        "max_stress_component_eV_per_A3": 0.003008339341260222
+      },
+      "versus_gamma8": {
+        "energy_eV_per_atom": 0.0002354059375000439,
+        "max_force_component_eV_per_A": 0.022385970000000033,
+        "max_stress_component_eV_per_A3": 0.0021039408615991712
+      }
+    },
+    {
+      "configuration_id": "md-00-f1",
+      "min_distance_A": 56,
+      "passed": false,
+      "versus_anchor": {
+        "energy_eV_per_atom": 0.0003108843750001533,
+        "max_force_component_eV_per_A": 0.018187090000000072,
+        "max_stress_component_eV_per_A3": 0.0016057276498738435
+      },
+      "versus_gamma8": {
+        "energy_eV_per_atom": 0.00013154937500026165,
+        "max_force_component_eV_per_A": 0.016076129999999966,
+        "max_stress_component_eV_per_A3": 0.001376086088997561
+      }
+    },
+    {
+      "configuration_id": "fcc-04",
+      "min_distance_A": 64,
+      "passed": false,
+      "versus_anchor": {
+        "energy_eV_per_atom": 7.532718750002942e-05,
+        "max_force_component_eV_per_A": 0.016327580000000008,
+        "max_stress_component_eV_per_A3": 0.0023940328489406955
+      },
+      "versus_gamma8": {
+        "energy_eV_per_atom": 0.00060978468750017,
+        "max_force_component_eV_per_A": 0.020957759999999992,
+        "max_stress_component_eV_per_A3": 0.0017299190139324746
+      }
+    },
+    {
+      "configuration_id": "md-00-f1",
+      "min_distance_A": 64,
+      "passed": true,
+      "versus_anchor": {
+        "energy_eV_per_atom": 0.0001106856249997179,
+        "max_force_component_eV_per_A": 0.011070279999999988,
+        "max_stress_component_eV_per_A3": 0.0004380737122787002
+      },
+      "versus_gamma8": {
+        "energy_eV_per_atom": 0.00029002062499960957,
+        "max_force_component_eV_per_A": 0.015608630000000012,
+        "max_stress_component_eV_per_A3": 0.0006367199201113144
+      }
+    },
+    {
+      "configuration_id": "fcc-04",
+      "min_distance_A": 80,
+      "passed": false,
+      "versus_anchor": {
+        "energy_eV_per_atom": 0.0,
+        "max_force_component_eV_per_A": 0.0,
+        "max_stress_component_eV_per_A3": 0.0
+      },
+      "versus_gamma8": {
+        "energy_eV_per_atom": 0.0006851118750001994,
+        "max_force_component_eV_per_A": 0.014474259999999989,
+        "max_stress_component_eV_per_A3": 0.001182495940462546
+      }
+    },
+    {
+      "configuration_id": "md-00-f1",
+      "min_distance_A": 80,
+      "passed": true,
+      "versus_anchor": {
+        "energy_eV_per_atom": 0.0,
+        "max_force_component_eV_per_A": 0.0,
+        "max_stress_component_eV_per_A3": 0.0
+      },
+      "versus_gamma8": {
+        "energy_eV_per_atom": 0.00017933499999989166,
+        "max_force_component_eV_per_A": 0.01424976,
+        "max_stress_component_eV_per_A3": 0.0005495556473420204
+      }
+    }
+  ],
+  "decision": "Retain validated Gamma7; generalized-grid adoption not supported by all predefined gates",
+  "diagnostics": [
+    {
+      "actual_kpoints": 172,
+      "case": "gamma7-r0",
+      "configuration_id": "fcc-04",
+      "electronic_steps": 16,
+      "energy_eV_per_atom": -3.723182696875,
+      "net_force_norm_eV_per_A": 2.000000000335067e-08,
+      "stress_antisymmetry_kbar": 2.999999999808711e-08,
+      "wall_seconds": 341.7407138980925
+    },
+    {
+      "actual_kpoints": 172,
+      "case": "gamma7-r1",
+      "configuration_id": "fcc-04",
+      "electronic_steps": 16,
+      "energy_eV_per_atom": -3.723182696875,
+      "net_force_norm_eV_per_A": 2.000000000335067e-08,
+      "stress_antisymmetry_kbar": 3.9999999978945766e-08,
+      "wall_seconds": 342.3560140579939
+    },
+    {
+      "actual_kpoints": 46,
+      "case": "d40",
+      "configuration_id": "fcc-04",
+      "electronic_steps": 16,
+      "energy_eV_per_atom": -3.7225809378125,
+      "net_force_norm_eV_per_A": 2.8284271154069686e-08,
+      "stress_antisymmetry_kbar": 1.0000000050247593e-08,
+      "wall_seconds": 95.90401376597583
+    },
+    {
+      "actual_kpoints": 80,
+      "case": "d48",
+      "configuration_id": "fcc-04",
+      "electronic_steps": 16,
+      "energy_eV_per_atom": -3.7229870875,
+      "net_force_norm_eV_per_A": 1.9999999739672703e-08,
+      "stress_antisymmetry_kbar": 6.000000007944095e-08,
+      "wall_seconds": 162.161408809945
+    },
+    {
+      "actual_kpoints": 125,
+      "case": "d56",
+      "configuration_id": "fcc-04",
+      "electronic_steps": 16,
+      "energy_eV_per_atom": -3.722991300625,
+      "net_force_norm_eV_per_A": 4.1231056268132976e-08,
+      "stress_antisymmetry_kbar": 1.999999987845058e-08,
+      "wall_seconds": 249.99967626668513
+    },
+    {
+      "actual_kpoints": 192,
+      "case": "d64",
+      "configuration_id": "fcc-04",
+      "electronic_steps": 16,
+      "energy_eV_per_atom": -3.722616921875,
+      "net_force_norm_eV_per_A": 3.741657404462171e-08,
+      "stress_antisymmetry_kbar": 1.9999999989472883e-08,
+      "wall_seconds": 384.5468778386712
+    },
+    {
+      "actual_kpoints": 343,
+      "case": "d80",
+      "configuration_id": "fcc-04",
+      "electronic_steps": 16,
+      "energy_eV_per_atom": -3.7225415946875,
+      "net_force_norm_eV_per_A": 2.236067987494226e-08,
+      "stress_antisymmetry_kbar": 4.9999999918171056e-08,
+      "wall_seconds": 675.3275670520961
+    },
+    {
+      "actual_kpoints": 172,
+      "case": "gamma7-r0",
+      "configuration_id": "md-00-f1",
+      "electronic_steps": 17,
+      "energy_eV_per_atom": -3.4391366171875,
+      "net_force_norm_eV_per_A": 2.8284271880237453e-08,
+      "stress_antisymmetry_kbar": 5.000000058430487e-08,
+      "wall_seconds": 415.0684695318341
+    },
+    {
+      "actual_kpoints": 172,
+      "case": "gamma7-r1",
+      "configuration_id": "md-00-f1",
+      "electronic_steps": 17,
+      "energy_eV_per_atom": -3.4391366171875,
+      "net_force_norm_eV_per_A": 3.6055513443878936e-08,
+      "stress_antisymmetry_kbar": 3.999999975690116e-08,
+      "wall_seconds": 415.3407632242888
+    },
+    {
+      "actual_kpoints": 46,
+      "case": "d40",
+      "configuration_id": "md-00-f1",
+      "electronic_steps": 17,
+      "energy_eV_per_atom": -3.4383991115625,
+      "net_force_norm_eV_per_A": 3.162277590481498e-08,
+      "stress_antisymmetry_kbar": 7.000000001866624e-08,
+      "wall_seconds": 116.09441474825144
+    },
+    {
+      "actual_kpoints": 72,
+      "case": "d48",
+      "configuration_id": "md-00-f1",
+      "electronic_steps": 17,
+      "energy_eV_per_atom": -3.4396695215625,
+      "net_force_norm_eV_per_A": 1.0000000411070094e-08,
+      "stress_antisymmetry_kbar": 3.000000026176508e-08,
+      "wall_seconds": 177.0572279561311
+    },
+    {
+      "actual_kpoints": 125,
+      "case": "d56",
+      "configuration_id": "md-00-f1",
+      "electronic_steps": 17,
+      "energy_eV_per_atom": -3.4390061146875,
+      "net_force_norm_eV_per_A": 2.999999988243893e-08,
+      "stress_antisymmetry_kbar": 2.000000000335067e-08,
+      "wall_seconds": 305.43943315558136
+    },
+    {
+      "actual_kpoints": 171,
+      "case": "d64",
+      "configuration_id": "md-00-f1",
+      "electronic_steps": 17,
+      "energy_eV_per_atom": -3.4394276846875,
+      "net_force_norm_eV_per_A": 3.000000053006898e-08,
+      "stress_antisymmetry_kbar": 9.000000011916143e-08,
+      "wall_seconds": 413.52930163033307
+    },
+    {
+      "actual_kpoints": 343,
+      "case": "d80",
+      "configuration_id": "md-00-f1",
+      "electronic_steps": 17,
+      "energy_eV_per_atom": -3.4393169990625,
+      "net_force_norm_eV_per_A": 2.2360680458337788e-08,
+      "stress_antisymmetry_kbar": 5.000000014021566e-08,
+      "wall_seconds": 814.4803933128715
+    }
+  ],
+  "exploratory_timing": [
+    {
+      "actual_kpoints": 46,
+      "baseline_DFT_samples": 2,
+      "comparison_scope": "Single kpLib run versus median of two same-node Gamma7 runs; not a validated speedup at equal accuracy",
+      "configuration_id": "fcc-04",
+      "end_to_end_wall_seconds": 95.95000388473272,
+      "exploratory_speedup": 3.5648603452789325,
+      "gamma7_median_seconds": 342.0483639780432,
+      "generation_seconds": 0.0459901187568903,
+      "kplib_DFT_samples": 1,
+      "min_distance_A": 40,
+      "wall_seconds": 95.90401376597583
+    },
+    {
+      "actual_kpoints": 80,
+      "baseline_DFT_samples": 2,
+      "comparison_scope": "Single kpLib run versus median of two same-node Gamma7 runs; not a validated speedup at equal accuracy",
+      "configuration_id": "fcc-04",
+      "end_to_end_wall_seconds": 162.40998684987426,
+      "exploratory_speedup": 2.106079623626963,
+      "gamma7_median_seconds": 342.0483639780432,
+      "generation_seconds": 0.24857803992927074,
+      "kplib_DFT_samples": 1,
+      "min_distance_A": 48,
+      "wall_seconds": 162.161408809945
+    },
+    {
+      "actual_kpoints": 125,
+      "baseline_DFT_samples": 2,
+      "comparison_scope": "Single kpLib run versus median of two same-node Gamma7 runs; not a validated speedup at equal accuracy",
+      "configuration_id": "fcc-04",
+      "end_to_end_wall_seconds": 250.83965009078383,
+      "exploratory_speedup": 1.3636136227037836,
+      "gamma7_median_seconds": 342.0483639780432,
+      "generation_seconds": 0.8399738240987062,
+      "kplib_DFT_samples": 1,
+      "min_distance_A": 56,
+      "wall_seconds": 249.99967626668513
+    },
+    {
+      "actual_kpoints": 192,
+      "baseline_DFT_samples": 2,
+      "comparison_scope": "Single kpLib run versus median of two same-node Gamma7 runs; not a validated speedup at equal accuracy",
+      "configuration_id": "fcc-04",
+      "end_to_end_wall_seconds": 388.9183845333755,
+      "exploratory_speedup": 0.8794862304810636,
+      "gamma7_median_seconds": 342.0483639780432,
+      "generation_seconds": 4.371506694704294,
+      "kplib_DFT_samples": 1,
+      "min_distance_A": 64,
+      "wall_seconds": 384.5468778386712
+    },
+    {
+      "actual_kpoints": 343,
+      "baseline_DFT_samples": 2,
+      "comparison_scope": "Single kpLib run versus median of two same-node Gamma7 runs; not a validated speedup at equal accuracy",
+      "configuration_id": "fcc-04",
+      "end_to_end_wall_seconds": 677.8913339562714,
+      "exploratory_speedup": 0.5045769828355818,
+      "gamma7_median_seconds": 342.0483639780432,
+      "generation_seconds": 2.5637669041752815,
+      "kplib_DFT_samples": 1,
+      "min_distance_A": 80,
+      "wall_seconds": 675.3275670520961
+    },
+    {
+      "actual_kpoints": 46,
+      "baseline_DFT_samples": 2,
+      "comparison_scope": "Single kpLib run versus median of two same-node Gamma7 runs; not a validated speedup at equal accuracy",
+      "configuration_id": "md-00-f1",
+      "end_to_end_wall_seconds": 116.16523678600788,
+      "exploratory_speedup": 3.574258770228521,
+      "gamma7_median_seconds": 415.2046163780615,
+      "generation_seconds": 0.07082203775644302,
+      "kplib_DFT_samples": 1,
+      "min_distance_A": 40,
+      "wall_seconds": 116.09441474825144
+    },
+    {
+      "actual_kpoints": 72,
+      "baseline_DFT_samples": 2,
+      "comparison_scope": "Single kpLib run versus median of two same-node Gamma7 runs; not a validated speedup at equal accuracy",
+      "configuration_id": "md-00-f1",
+      "end_to_end_wall_seconds": 177.15239850990474,
+      "exploratory_speedup": 2.343770786455635,
+      "gamma7_median_seconds": 415.2046163780615,
+      "generation_seconds": 0.09517055377364159,
+      "kplib_DFT_samples": 1,
+      "min_distance_A": 48,
+      "wall_seconds": 177.0572279561311
+    },
+    {
+      "actual_kpoints": 125,
+      "baseline_DFT_samples": 2,
+      "comparison_scope": "Single kpLib run versus median of two same-node Gamma7 runs; not a validated speedup at equal accuracy",
+      "configuration_id": "md-00-f1",
+      "end_to_end_wall_seconds": 306.76372083462775,
+      "exploratory_speedup": 1.3534997399574924,
+      "gamma7_median_seconds": 415.2046163780615,
+      "generation_seconds": 1.3242876790463924,
+      "kplib_DFT_samples": 1,
+      "min_distance_A": 56,
+      "wall_seconds": 305.43943315558136
+    },
+    {
+      "actual_kpoints": 171,
+      "baseline_DFT_samples": 2,
+      "comparison_scope": "Single kpLib run versus median of two same-node Gamma7 runs; not a validated speedup at equal accuracy",
+      "configuration_id": "md-00-f1",
+      "end_to_end_wall_seconds": 414.6772717628628,
+      "exploratory_speedup": 1.0012716988634482,
+      "gamma7_median_seconds": 415.2046163780615,
+      "generation_seconds": 1.1479701325297356,
+      "kplib_DFT_samples": 1,
+      "min_distance_A": 64,
+      "wall_seconds": 413.52930163033307
+    },
+    {
+      "actual_kpoints": 343,
+      "baseline_DFT_samples": 2,
+      "comparison_scope": "Single kpLib run versus median of two same-node Gamma7 runs; not a validated speedup at equal accuracy",
+      "configuration_id": "md-00-f1",
+      "end_to_end_wall_seconds": 831.5397357307374,
+      "exploratory_speedup": 0.4993202351456957,
+      "gamma7_median_seconds": 415.2046163780615,
+      "generation_seconds": 17.05934241786599,
+      "kplib_DFT_samples": 1,
+      "min_distance_A": 80,
+      "wall_seconds": 814.4803933128715
+    }
+  ],
+  "full_TR_VASP_check_status": "Not performed: no candidate passed the accuracy gate",
+  "limitations": [
+    "Two train parents only; Gamma7 has two cold repeats per parent; each convergence grid has one run",
+    "No candidate passed, so selected-grid repeats and full/TR VASP comparison were not triggered",
+    "Grid generation timings came from the separate grid-generation allocation",
+    "Gamma8 and d80 are finite local references, not an exact infinite-grid limit",
+    "No universal library rejection, optimality or production throughput claim"
+  ],
+  "raw_backup": {
+    "bytes": 4038136,
+    "local_archive": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\MLIP-research\\artifacts\\dft-run-backups\\al32-kplib-benchmark-20261019-01.tar.gz",
+    "remote_archive": "/home/u3129/.local/share/mlip-research/dft-artifacts/al32-kplib-benchmark-20261019-01.tar.gz",
+    "sha256": "ee9f715bade249359df7111c349502aa95fce9ce4f81a74ab65fbb110a81dd4f",
+    "verified_retrieval": true
+  },
+  "raw_cases_verified": 14,
+  "raw_label_quality_audit_passed": true,
+  "recommend_for_this_pilot": false,
+  "reference_backup": {
+    "bytes": 2882031,
+    "local_archive": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\MLIP-research\\artifacts\\dft-run-backups\\al32-calibration-20261018-02.tar.gz",
+    "remote_archive": "/home/u3129/.local/share/mlip-research/dft-artifacts/al32-calibration-20261018-02.tar.gz",
+    "sha256": "3552c82fd9cc4d4654227df49387111e7605213997557ee3c5816b42b7d50341",
+    "verified_retrieval": true
+  },
+  "representation_checks": {},
+  "selected_min_distance_A": null,
+  "source_sha256": {
+    "benchmark.json": "484d36165599260f61e0f46168707b96ba2a2ee7e4afa018625267c585281dd8",
+    "grids.json": "8428f811224c9242e0c0810c1f64d552c0f635f35da38440f97c4a34e3eec327",
+    "references.json": "e272d4fa986ebd278beb20aefeaa7933f03dd56749b86141957fb4a575d33fd1",
+    "runtime.json": "fe53c3d7fce129ba343e222173ef19b79d7eb7cb0419b886ae87466a4f32cc5e",
+    "system.json": "0118fb30ddaa0b2b8dca693a638bcc757301893566371778f7abe1f691f4ecb0"
+  },
+  "timing": {}
+}
