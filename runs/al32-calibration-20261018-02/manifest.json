@@ -27,6 +27,7 @@
   },
   "calibration_source": "",
   "code_commit": "9356e989a7e1e34c1133a197df3da0bbe2bc49c2",
+  "collected_utc": "2026-10-19T01:43:43.743532+00:00",
   "created_utc": "2026-10-18T03:18:24.879601+00:00",
   "host": "umt.imm.uran.ru",
   "input_sha256": {
@@ -90,7 +91,15 @@
     "walltime": "02:00:00"
   },
   "run_id": "al32-calibration-20261018-02",
-  "stage": "submitted",
+  "scheduler_record": [
+    "20950692",
+    "COMPLETED",
+    "0:0",
+    "4286",
+    "16",
+    "68576"
+  ],
+  "stage": "collected",
   "system_config": "configs/dft/al32-kmesh-v2.json",
   "user": "u3129"
 }

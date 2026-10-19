@@ -1,6 +1,6 @@
 {
-  "updated_local_date": "2026-10-18",
-  "stage": "al32_dense_kmesh_calibration_queued_labeling_conditionally_queued",
+  "updated_local_date": "2026-10-19",
+  "stage": "al32_40_DFT_labels_audited_exports_verified_and_raw_outputs_backed_up",
   "scientific_results": [],
   "system_selection": "Al32 selected only as bounded pure-metal adaptation pilot; full alloy/nucleant selection remains open",
   "github": "https://github.com/rryltsev/MLIP-nucleation",
@@ -54,11 +54,11 @@
   },
   "blocking_inputs": [],
   "next_actions": [
-    "Collect terminal dense k-mesh calibration20950692 and verify Gamma7/Gamma8 stability plus all candidate comparisons without changing tolerances",
-    "Conditional labeling20950693 starts only after scientific calibration succeeds; no candidate means cancellation",
-    "Keep actual terminal CPU cost plus full live reservations below overall128 CPUh across all attempts",
-    "After completion collect and audit40 DFT labels/exports, then verify actual private raw-output backups",
-    "Evaluate original DPA4/GRACE before fine-tuning; train/validation only for fitting and fixed test for final comparison"
+    "Evaluate original DPA4-Mini-OMat24 and GRACE-1L-OMAT against real Al32 DFT data before fine-tuning",
+    "Determine any elemental energy offset from train only; keep raw energies and show raw/shifted metrics; do not silently merge PAW54/PAW64 labels",
+    "Fine-tune on21 train configurations, select checkpoint with6 validation configurations, reserve13 test configurations for final comparison",
+    "Respect narrow force convergence margin on the two calibration parents; extend numerical convergence/domain coverage before production MD or interfaces",
+    "Validate physical observables and MD stability before distillation and final alloy/nucleant selection; confirm institutional archive retention"
   ],
   "vasp_pseudopotentials": {
     "library_id": "vasp-paw-64-b3b00158ad69",
@@ -263,7 +263,7 @@
   },
   "infrastructure_gpu_total_seconds": 1007,
   "dft_pilot": {
-    "accepted_DFT_labels": 0,
+    "accepted_DFT_labels": 40,
     "allocation_budget": {
       "calibration": {
         "ntasks": 16,
@@ -276,15 +276,17 @@
       "maximum_CPU_hours": 128,
       "status": "Explicit user instruction authorized dense revision under same global128 CPUh cap",
       "authorization": "configs/allocations/al32-pilot-20261018-dense.json",
-      "allocated_CPU_hours": 10.457777777777778,
-      "allocated_CPU_seconds": 37648,
-      "workflow_status": "Dense calibration and conditional labeling queued; common global actual-plus-reserved accounting enforced",
-      "active_jobs": 2,
-      "reserved_new_CPU_hours": 112.0,
-      "worst_case_overall_CPU_hours": 122.45777777777778,
-      "unreserved_CPU_hours": 5.542222222222223
+      "allocated_CPU_hours": 92.63111111111111,
+      "allocated_CPU_seconds": 333472,
+      "workflow_status": "All4 Al32 parent jobs terminal; totalactual cost92.6311 CPUh; collection/audit submitted no new jobs",
+      "active_jobs": 0,
+      "reserved_new_CPU_hours": 0,
+      "worst_case_overall_CPU_hours": 92.63111111111111,
+      "unreserved_CPU_hours": 35.36888888888889,
+      "remaining_CPU_hours": 35.36888888888889,
+      "final_scheduler_snapshot": "runs/al32-labeling-20261018-02/scheduler-final.json"
     },
-    "calibration_status": "PENDING Priority; Gamma6/7/8 and cutoff checks;10 static calculations planned",
+    "calibration_status": "COMPLETED0:0; Gamma6 rejected, Gamma7 accepted by unchanged criteria on both train parents",
     "dataset_id": "al32-pilot-v1",
     "limitations": [
       "No interfaces, solutes, segregation or nucleation rates/barriers",
@@ -316,22 +318,24 @@
       "validation": 6,
       "test": 13
     },
-    "status": "Dense-mesh revision submitted; frozen40 geometries and split unchanged; no accepted production labels yet",
+    "status": "Dense calibration and40 static DFT labels completed, independently audited, exported and privately backed up",
     "calibration_run": "runs/al32-calibration-20261018-02/manifest.json",
     "remote_work_dir": "/home6/u3129/mlip-research/runs/al32-calibration-20261018-02",
     "remote_verified_files": 44,
     "calibration_job_id": "20950692",
     "labeling_run": "runs/al32-labeling-20261018-02/manifest.json",
     "labeling_job_id": "20950693",
-    "labeling_status": "PENDING Dependency afterok:20950692; candidate Gamma6/Gamma7 selected only after all scientific gates pass",
-    "diagnostic_calibration_labels": 16,
-    "ready_for_finetuning": false,
-    "quality_assessment": "runs/al32-calibration-20261018-01/quality-assessment.json",
-    "calibration_diagnostics": "runs/al32-calibration-20261018-01/calibration-diagnostics.csv",
+    "labeling_status": "COMPLETED0:0; all40 labels electronically converged, exported and checksum-verified",
+    "diagnostic_calibration_labels": 26,
+    "ready_for_finetuning": true,
+    "quality_assessment": "runs/al32-labeling-20261018-02/quality-assessment.json",
+    "calibration_diagnostics": "runs/al32-calibration-20261018-02/calibration-diagnostics.csv",
     "raw_label_quality_audit_passed": true,
     "backups": {
-      "calibration": "runs/al32-calibration-20261018-01/artifact-backup.json",
-      "cancelled_labeling": "runs/al32-labeling-20261018-01/artifact-backup.json",
+      "v1_calibration": "runs/al32-calibration-20261018-01/artifact-backup.json",
+      "v1_cancelled_labeling": "runs/al32-labeling-20261018-01/artifact-backup.json",
+      "v2_calibration": "runs/al32-calibration-20261018-02/artifact-backup.json",
+      "v2_labeling": "runs/al32-labeling-20261018-02/artifact-backup.json",
       "verified_actual_cluster_and_workstation_copies": true
     },
     "previous_calibration": {
@@ -342,7 +346,7 @@
       "allocated_CPU_seconds": 37648
     },
     "current_protocol_config": "configs/dft/al32-kmesh-v2.json",
-    "raw_label_quality_audit_scope": "Previous v1 calibration diagnostics only; v2 results pending",
+    "raw_label_quality_audit_scope": "V1 diagnostic16 points previously audited; V2 calibration10 points and40 production labels audited from verified raw archives",
     "dense_revision": {
       "protocol_id": "al32-kmesh-v2",
       "authorization": "configs/allocations/al32-pilot-20261018-dense.json",
@@ -354,7 +358,25 @@
       "phase_walltimes": {
         "calibrate": "02:00:00",
         "label": "05:00:00"
-      }
-    }
+      },
+      "status": "completed_and_audited",
+      "verified_calibration_points": 10,
+      "accepted_protocol": {
+        "encut_eV": 450,
+        "gamma_mesh": 7,
+        "sigma_eV": 0.05
+      },
+      "force_tolerance_margin_eV_per_A": 6.510000000002278e-05
+    },
+    "readiness_scope": "Bounded real-DFT pilot dataset only; model accuracy and physical MD observables not validated",
+    "accepted_protocol": "configs/dft/al32-pbe-pilot-accepted-v2.json",
+    "labeled_dataset": "datasets/al32-pilot-v1/dft-v2.json",
+    "label_diagnostics": "runs/al32-labeling-20261018-02/label-diagnostics.csv",
+    "selected_label_protocol": {
+      "encut_eV": 450,
+      "gamma_mesh": 7,
+      "sigma_eV": 0.05
+    },
+    "force_tolerance_margin_eV_per_A": 6.510000000002278e-05
   }
 }

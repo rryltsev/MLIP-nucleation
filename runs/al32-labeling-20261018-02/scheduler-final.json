@@ -1,0 +1,44 @@
+{
+  "observed_utc": "2026-10-19T01:48:57.901228+00:00",
+  "host": "umt.imm.uran.ru",
+  "jobs": [
+    {
+      "job_id": "20950353",
+      "run_name": "al32-calibration-20261018-01",
+      "state": "FAILED",
+      "exit_code": "1:0",
+      "wall_seconds": 2353,
+      "allocated_cpus": 16,
+      "allocated_CPU_seconds": 37648
+    },
+    {
+      "job_id": "20950356",
+      "run_name": "al32-labeling-20261018-01",
+      "state": "CANCELLED",
+      "exit_code": "0:0",
+      "wall_seconds": 0,
+      "allocated_cpus": 0,
+      "allocated_CPU_seconds": 0
+    },
+    {
+      "job_id": "20950692",
+      "run_name": "al32-calibration-20261018-02",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "wall_seconds": 4286,
+      "allocated_cpus": 16,
+      "allocated_CPU_seconds": 68576
+    },
+    {
+      "job_id": "20950693",
+      "run_name": "al32-labeling-20261018-02",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "wall_seconds": 14203,
+      "allocated_cpus": 16,
+      "allocated_CPU_seconds": 227248
+    }
+  ],
+  "user_inventory_unknown_Al32_jobs": [],
+  "note": "Known IDs queried explicitly to include never-started cancelled dependency job"
+}

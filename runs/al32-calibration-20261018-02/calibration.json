@@ -1,0 +1,172 @@
+{
+  "candidates": [
+    {
+      "checks": [
+        {
+          "configuration_id": "fcc-04",
+          "differences": {
+            "energy_eV_per_atom": 0.0029276015624999374,
+            "max_force_component_eV_per_A": 0.03836217000000003,
+            "max_stress_component_eV_per_A3": 0.00020549175772868706
+          },
+          "left": "candidate6",
+          "passed": false,
+          "right": "reference"
+        },
+        {
+          "configuration_id": "fcc-04",
+          "differences": {
+            "energy_eV_per_atom": 0.002945526249999997,
+            "max_force_component_eV_per_A": 0.03206742000000001,
+            "max_stress_component_eV_per_A3": 0.0005654443887388923
+          },
+          "left": "candidate6",
+          "passed": false,
+          "right": "mesh7"
+        },
+        {
+          "configuration_id": "fcc-04",
+          "differences": {
+            "energy_eV_per_atom": 6.239874999991457e-05,
+            "max_force_component_eV_per_A": 0.0001410199999999917,
+            "max_stress_component_eV_per_A3": 3.161135878684265e-05
+          },
+          "left": "candidate6",
+          "passed": true,
+          "right": "mesh6"
+        },
+        {
+          "configuration_id": "md-00-f1",
+          "differences": {
+            "energy_eV_per_atom": 0.00010370312500018741,
+            "max_force_component_eV_per_A": 0.03301354000000001,
+            "max_stress_component_eV_per_A3": 0.0011949395123766401
+          },
+          "left": "candidate6",
+          "passed": false,
+          "right": "reference"
+        },
+        {
+          "configuration_id": "md-00-f1",
+          "differences": {
+            "energy_eV_per_atom": 0.00017680249999996178,
+            "max_force_component_eV_per_A": 0.028449469999999977,
+            "max_stress_component_eV_per_A3": 0.0005519379752017967
+          },
+          "left": "candidate6",
+          "passed": false,
+          "right": "mesh7"
+        },
+        {
+          "configuration_id": "md-00-f1",
+          "differences": {
+            "energy_eV_per_atom": 7.408468749980912e-05,
+            "max_force_component_eV_per_A": 0.00045165000000002564,
+            "max_stress_component_eV_per_A3": 1.938962883161338e-05
+          },
+          "left": "candidate6",
+          "passed": true,
+          "right": "mesh6"
+        }
+      ],
+      "id": "gamma6",
+      "passed": false,
+      "protocol": {
+        "encut_eV": 450,
+        "gamma_mesh": 6,
+        "sigma_eV": 0.05
+      }
+    },
+    {
+      "checks": [
+        {
+          "configuration_id": "fcc-04",
+          "differences": {
+            "energy_eV_per_atom": 4.4009687500068395e-05,
+            "max_force_component_eV_per_A": 0.019934899999999978,
+            "max_stress_component_eV_per_A3": 0.0007406318845218791
+          },
+          "left": "candidate7",
+          "passed": true,
+          "right": "reference"
+        },
+        {
+          "configuration_id": "fcc-04",
+          "differences": {
+            "energy_eV_per_atom": 6.193437500012777e-05,
+            "max_force_component_eV_per_A": 0.00014312999999999132,
+            "max_stress_component_eV_per_A3": 3.145947166226411e-05
+          },
+          "left": "candidate7",
+          "passed": true,
+          "right": "mesh7"
+        },
+        {
+          "configuration_id": "md-00-f1",
+          "differences": {
+            "energy_eV_per_atom": 1.04687500002143e-06,
+            "max_force_component_eV_per_A": 0.012823150000000005,
+            "max_stress_component_eV_per_A3": 0.0008438139106816747
+          },
+          "left": "candidate7",
+          "passed": true,
+          "right": "reference"
+        },
+        {
+          "configuration_id": "md-00-f1",
+          "differences": {
+            "energy_eV_per_atom": 7.41462499997958e-05,
+            "max_force_component_eV_per_A": 0.00045187000000002087,
+            "max_stress_component_eV_per_A3": 1.9413739781364014e-05
+          },
+          "left": "candidate7",
+          "passed": true,
+          "right": "mesh7"
+        }
+      ],
+      "id": "gamma7",
+      "passed": true,
+      "protocol": {
+        "encut_eV": 450,
+        "gamma_mesh": 7,
+        "sigma_eV": 0.05
+      }
+    }
+  ],
+  "code_sha256": "dd1f82e73d355d4cb772fccb346dd6b3b640661cac0daa8b9d18efd2a3ff8228",
+  "criterion": "All predefined force, stress and absolute energy tolerances; training parents only",
+  "dataset_manifest_sha256": "65a4c6dce1a072504030dca2b0340db72a497e562e40b2717104294c3030fbdd",
+  "passed": true,
+  "protocol": {
+    "encut_eV": 450,
+    "gamma_mesh": 7,
+    "sigma_eV": 0.05
+  },
+  "reference_checks": [
+    {
+      "configuration_id": "fcc-04",
+      "differences": {
+        "energy_eV_per_atom": 1.7924687500059377e-05,
+        "max_force_component_eV_per_A": 0.019903249999999928,
+        "max_stress_component_eV_per_A3": 0.000709371392170548
+      },
+      "left": "mesh7",
+      "passed": true,
+      "right": "reference"
+    },
+    {
+      "configuration_id": "md-00-f1",
+      "differences": {
+        "energy_eV_per_atom": 7.309937499977437e-05,
+        "max_force_component_eV_per_A": 0.012913450000000104,
+        "max_stress_component_eV_per_A3": 0.0008256355777676305
+      },
+      "left": "mesh7",
+      "passed": true,
+      "right": "reference"
+    }
+  ],
+  "reference_stable": true,
+  "selected_candidate": "gamma7",
+  "system_sha256": "f8e1963314f8767bb771a9bcb153ddc2bd5d42de3565620b8e9ebb90ac936eab"
+}

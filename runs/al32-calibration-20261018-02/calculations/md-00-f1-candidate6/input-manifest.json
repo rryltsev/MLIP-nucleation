@@ -1,0 +1,13 @@
+{
+  "code_commit": "9356e989a7e1e34c1133a197df3da0bbe2bc49c2",
+  "configuration_id": "md-00-f1",
+  "input_sha256": {
+    "INCAR": "0f5e258369709ee24ce2083ecf92d5a4f8118c8aef716f1a8b2d8e195a7f4885",
+    "KPOINTS": "7284c816471e8d87701fee4531353badb058bbaf1d0e1e06c506163e3536a3f7",
+    "POSCAR": "c1922c7cfa4ce82ba49afb820246202309671d47327827ce652150b9dc820bd0",
+    "POTCAR": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+  },
+  "job_id": "20950692",
+  "parent_id": "emt-md-00",
+  "split": "train"
+}

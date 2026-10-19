@@ -30,7 +30,7 @@
   "license": "Academic Software License v1.0",
   "license_url": "https://github.com/ICAMS/grace-tensorpotential/blob/39fa4a7489c7bf7c91ea187cc91b7713f97fe149/LICENSE.md",
   "model_id": "grace-1l-omat",
-  "overlap_audit": "no scientific held-out DFT set exists; synthetic diagnostic labels only",
+  "overlap_audit": "Al32 grouped real-DFT test set now exists (13 configurations); common FCC/HCP prototypes and environments may overlap with OMat24. No pretraining-independent benchmark claim; test not used for DFT calibration or model selection.",
   "pretraining": "OMat24; no OAM fine-tuning",
   "purpose": "foundation initialization for software fine-tuning check; not selected scientific teacher",
   "reference_settings": "OMat24 reference; exact PAW/DFT/electronic and energy-reference compatibility must be audited before real DFT fine-tuning",
@@ -155,5 +155,7 @@
     "pilot": "configs/systems/al32-pilot-v1.json",
     "source": "https://arxiv.org/html/2410.12771v1#S2.SS2.SSS2",
     "source_findings": "OMat24: VASP PBE/PBE+U, PAW54, MPRelaxSet-derived settings, ALGO Normal. Al metal needs no Hubbard U."
-  }
+  },
+  "real_DFT_pilot_dataset": "datasets/al32-pilot-v1/dft-v2.json",
+  "pilot_evaluation_status": "40 DFT labels audited; original FM baseline and real-DFT model fine-tuning have not yet been performed"
 }

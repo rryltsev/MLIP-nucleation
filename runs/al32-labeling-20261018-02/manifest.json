@@ -34,6 +34,7 @@
   },
   "calibration_source": "/home6/u3129/mlip-research/runs/al32-calibration-20261018-02",
   "code_commit": "9356e989a7e1e34c1133a197df3da0bbe2bc49c2",
+  "collected_utc": "2026-10-19T01:43:52.757844+00:00",
   "created_utc": "2026-10-18T03:18:53.388979+00:00",
   "dependency_job_id": "20950692",
   "gate": "afterok dependency plus compute-side scientific convergence validation",
@@ -58,8 +59,16 @@
     "walltime": "05:00:00"
   },
   "run_id": "al32-labeling-20261018-02",
+  "scheduler_record": [
+    "20950693",
+    "COMPLETED",
+    "0:0",
+    "14203",
+    "16",
+    "227248"
+  ],
   "source_dataset_manifest_sha256": "65a4c6dce1a072504030dca2b0340db72a497e562e40b2717104294c3030fbdd",
-  "stage": "submitted",
+  "stage": "collected",
   "system_config": "configs/dft/al32-kmesh-v2.json",
   "user": "u3129"
 }

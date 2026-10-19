@@ -1,0 +1,13 @@
+{
+  "code_commit": "9356e989a7e1e34c1133a197df3da0bbe2bc49c2",
+  "configuration_id": "md-04-f2",
+  "input_sha256": {
+    "INCAR": "d6a80276770f35fc1e10bacde4c7ab56d6c71dcbb06ed552ddf8961d513feed0",
+    "KPOINTS": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9",
+    "POSCAR": "141df929862eaa71b73f4353fd665e1f324858028e28f3140fc25d3566d9c0ee",
+    "POTCAR": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+  },
+  "job_id": "20950693",
+  "parent_id": "emt-md-04",
+  "split": "validation"
+}

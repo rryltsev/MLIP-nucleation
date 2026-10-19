@@ -1,0 +1,3522 @@
+{
+  "bytes": 10666149,
+  "local_archive": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\MLIP-research\\artifacts\\dft-run-backups\\al32-labeling-20261018-02.tar.gz",
+  "members": {
+    "al-pilot.py": {
+      "bytes": 19440,
+      "sha256": "dd1f82e73d355d4cb772fccb346dd6b3b640661cac0daa8b9d18efd2a3ff8228"
+    },
+    "calculations/fcc-00/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/fcc-00/CONTCAR": {
+      "bytes": 4036,
+      "sha256": "63dc24669658a43429212b1abb34113e8975f92b5e3ae2f32496f27dbf6dfc86"
+    },
+    "calculations/fcc-00/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "07980ffa8fd78be0ab189b8ef298e0ed8af30de49a8757cc823eca8f06a610f7"
+    },
+    "calculations/fcc-00/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "9eba2301b942110399322aebafb063a72ce23e0f9f5a1fe12745f12bc2ce15ba"
+    },
+    "calculations/fcc-00/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "654640ff1c2474e2175d100cfab4b4f879c2eaa219863ca23f2143a08e0cad52"
+    },
+    "calculations/fcc-00/INCAR": {
+      "bytes": 270,
+      "sha256": "7491df85ee2bc3bdece84b755f5a9817204b47002c9bc1197f85609f40672fc9"
+    },
+    "calculations/fcc-00/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/fcc-00/OSZICAR": {
+      "bytes": 1390,
+      "sha256": "32257c672e0fe569cbc7adf7802bd4ac9a5e8313cf698dfcdf48e28504d77807"
+    },
+    "calculations/fcc-00/OUTCAR": {
+      "bytes": 527577,
+      "sha256": "43b62511e83114a6850e956d778d50fd39ac2856e0f43259fb99f6fc1cbddc03"
+    },
+    "calculations/fcc-00/PCDAT": {
+      "bytes": 234,
+      "sha256": "6897bba0105ded7275dc8047b2a820f7e97bdc9f1745eff47951f109eaeaae06"
+    },
+    "calculations/fcc-00/POSCAR": {
+      "bytes": 2196,
+      "sha256": "9cf79d3eb019b43b37bb55073bdd92582d00207988108d407aebbfcd8ca08c99"
+    },
+    "calculations/fcc-00/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/fcc-00/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/fcc-00/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/fcc-00/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "d494d4c2e0cad84f7e57b9cdc54c748ae2a7711c7cda5dfaec2933bc174b82e3"
+    },
+    "calculations/fcc-00/input-manifest.json": {
+      "bytes": 528,
+      "sha256": "476d5b5434860772cd7755496521200de74f28ff0292f685a5b3c4a7ca8a0fff"
+    },
+    "calculations/fcc-00/label.json": {
+      "bytes": 3074,
+      "sha256": "cbe2ab24566d949304195122c830d2d4f3e6018e15a59c3eae71ad37df962479"
+    },
+    "calculations/fcc-00/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "1c354df7d6743ccd217c63ac823a038957c4adb1280957787ca49203bdd27798"
+    },
+    "calculations/fcc-00/vasp.stdout": {
+      "bytes": 2821,
+      "sha256": "4ab11536b3edaad9073d432fe6bd2dc0d2ca117d0a5411192f9842cfd37b7882"
+    },
+    "calculations/fcc-00/vasprun.xml": {
+      "bytes": 497940,
+      "sha256": "50f09692dc5dcafb54faf7b5a5a0d4df849144104a8fb8f47cd888331e966b40"
+    },
+    "calculations/fcc-01/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/fcc-01/CONTCAR": {
+      "bytes": 4036,
+      "sha256": "7a85357abf88a1fddfcf95914b6d0d00d74a0c4dd6826876d134da7b0ca9b604"
+    },
+    "calculations/fcc-01/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "328ec498ab9d2194b80d4533476ab17ac09aa2af7420faec194f877522a787db"
+    },
+    "calculations/fcc-01/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "33c548c8da9ffa9d9d4ebb89f513b25f8cf400cc05ad777a3909828983e4f187"
+    },
+    "calculations/fcc-01/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "95b57ea2f211e472c950892df7879ba014682d954d1306e09b995461bd98aff1"
+    },
+    "calculations/fcc-01/INCAR": {
+      "bytes": 270,
+      "sha256": "efecccfc3b88b54258fcee41417e545b04c7a1df546d4babbf26fcfcfcacc783"
+    },
+    "calculations/fcc-01/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/fcc-01/OSZICAR": {
+      "bytes": 1576,
+      "sha256": "d0d43beb35fbfa67a6ebcd3e64d9898e3622820ea7cb5b46f2c915c62cf4f592"
+    },
+    "calculations/fcc-01/OUTCAR": {
+      "bytes": 531529,
+      "sha256": "14115f475e1523260b253a771e49ba434b351ed77bf10acc8b3f7b23608c0872"
+    },
+    "calculations/fcc-01/PCDAT": {
+      "bytes": 234,
+      "sha256": "b23f78905187811c75148ec8004d03a8fbd4df89919745dadae028a74e66242e"
+    },
+    "calculations/fcc-01/POSCAR": {
+      "bytes": 2196,
+      "sha256": "430b7f418f6e20656c5e7f1e032d3699395c32d98711dd75b164a308fc105bec"
+    },
+    "calculations/fcc-01/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/fcc-01/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/fcc-01/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/fcc-01/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "fe186dde8bddb52040dc49ead175256c8bda1f7482873620a016d29942ba8239"
+    },
+    "calculations/fcc-01/input-manifest.json": {
+      "bytes": 528,
+      "sha256": "09eb44f2b602cf0241d556ee4f791f5a408a4d7a14c14935aaac178af5463c7c"
+    },
+    "calculations/fcc-01/label.json": {
+      "bytes": 3382,
+      "sha256": "321888d3fcaf51e0ceaf537db6fad943158530411ec10c73a55faf417838fac6"
+    },
+    "calculations/fcc-01/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "f98596f69e11b9be2757bd78d709b57dcd67a96e8f2a82394382d454e87f9405"
+    },
+    "calculations/fcc-01/vasp.stdout": {
+      "bytes": 3007,
+      "sha256": "f9bf4f3499623692c3fbdea8a898afd835621e4a1a7e53ff1083d56a61d32f51"
+    },
+    "calculations/fcc-01/vasprun.xml": {
+      "bytes": 498500,
+      "sha256": "ae76a33afde42bbbd6959be7ad720aad3fdd9fc4833048a843066090674ffa10"
+    },
+    "calculations/fcc-02/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/fcc-02/CONTCAR": {
+      "bytes": 4036,
+      "sha256": "b566e2603ecab6b86e979cc1d8b1d530412c2e2283c73d6f3e42d8721ce6706e"
+    },
+    "calculations/fcc-02/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "c8bceae493524b19cbdf25fb5aef7a85b03c039eaa5633b0c021cbb0563d4ad5"
+    },
+    "calculations/fcc-02/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "2593ee6063ff96dfc77e9224f982e247baf565ac084f6ac6da7d374cb54cd957"
+    },
+    "calculations/fcc-02/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "bdbbeec43550bac117a3e5d0a946139605ac6e784ff4ef57f159304b42d9be10"
+    },
+    "calculations/fcc-02/INCAR": {
+      "bytes": 270,
+      "sha256": "95d85b2486ff3439148d23358b30a082662529d97d908d46cd8db1b9cf788ad1"
+    },
+    "calculations/fcc-02/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/fcc-02/OSZICAR": {
+      "bytes": 1576,
+      "sha256": "3cb7dcd7543ae922abd6c37ddfea021b06ad414d3c25119df8204a50ad13e303"
+    },
+    "calculations/fcc-02/OUTCAR": {
+      "bytes": 531529,
+      "sha256": "f567ccc3e03acd82283a0ff3fd46357d9801275fd33f75a10ded6bda559e1661"
+    },
+    "calculations/fcc-02/PCDAT": {
+      "bytes": 234,
+      "sha256": "e9214f8e792c6e60c82da66e6b5c4c0fe51ce9ab077c19e30c087b59a221141c"
+    },
+    "calculations/fcc-02/POSCAR": {
+      "bytes": 2196,
+      "sha256": "d8dd32b0a8d38931be9a9debd49b559ca923872d8752d48d44d1d574999ca54a"
+    },
+    "calculations/fcc-02/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/fcc-02/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/fcc-02/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/fcc-02/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "b112f77a135f9b229fcc4e962ee280e845712716002fa7ac2b44350bb31fcbe6"
+    },
+    "calculations/fcc-02/input-manifest.json": {
+      "bytes": 528,
+      "sha256": "e93ab03c761f2e05da4979d408ee4eb27072f5e61d599d4ee9fe344687e24817"
+    },
+    "calculations/fcc-02/label.json": {
+      "bytes": 3386,
+      "sha256": "fba7278a44be6f064befc878d9b17ffcca562d1684fe2935d16aa6482aa01b97"
+    },
+    "calculations/fcc-02/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "d7d9996e88f607c785bf7d893d5cf3eccfd2307f98bb7ab794e992e7374e7775"
+    },
+    "calculations/fcc-02/vasp.stdout": {
+      "bytes": 3007,
+      "sha256": "cb1c92f060d5e63b571bb485da30c3ac04b70a1a6a1695c4f82a58daf6a0f9dc"
+    },
+    "calculations/fcc-02/vasprun.xml": {
+      "bytes": 498500,
+      "sha256": "92a8d3f1b3a3a27a5da2e3207999ca359394cab930397ff52229ed77a504db0c"
+    },
+    "calculations/fcc-03/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/fcc-03/CONTCAR": {
+      "bytes": 4036,
+      "sha256": "fca9824dc1297bd476d5f1a9b57c3155c314fef6919dc653c3119c74ef545cf6"
+    },
+    "calculations/fcc-03/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "9b9762042725b7eba1cccfb1837fc471f3bd8f56b8d5ec8ee1c7eafc4d47d6fe"
+    },
+    "calculations/fcc-03/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "2fd2f6a95f7c99ca1191b7580573571bf9b6f572f189fdd99345b89204c15d28"
+    },
+    "calculations/fcc-03/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "654640ff1c2474e2175d100cfab4b4f879c2eaa219863ca23f2143a08e0cad52"
+    },
+    "calculations/fcc-03/INCAR": {
+      "bytes": 270,
+      "sha256": "cb5b51e439db434fcd1e5957d766161e4b03d4dfe7b0aa0cffdfbfc25e586d9a"
+    },
+    "calculations/fcc-03/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/fcc-03/OSZICAR": {
+      "bytes": 1204,
+      "sha256": "e876baaac31b7b182c4eb1ea4b2252ea177bf1b62d2632bb6e970e5a0e8fa145"
+    },
+    "calculations/fcc-03/OUTCAR": {
+      "bytes": 523657,
+      "sha256": "5c623a61deecbffaa6c500f54a6ad3b53802c43ab90746bce30f7a89087f7b6f"
+    },
+    "calculations/fcc-03/PCDAT": {
+      "bytes": 234,
+      "sha256": "57633d5bec1ed120d777cbc97c71beaa89a760157bd6077ba99b667f4d798a2b"
+    },
+    "calculations/fcc-03/POSCAR": {
+      "bytes": 2196,
+      "sha256": "0d43405be8b5ff0f17dd2dcb90fd772bb0583856bf156a36383b54d7c526f0be"
+    },
+    "calculations/fcc-03/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/fcc-03/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/fcc-03/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/fcc-03/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "1459914c6adf4cea6a8ee9244005b866599597a19f1d2afbdbffdd5a55d7402e"
+    },
+    "calculations/fcc-03/input-manifest.json": {
+      "bytes": 528,
+      "sha256": "26fde22f15911e66dd7e678ede18266b0ca26aabba2d1f87c48b4279ba7f5eb4"
+    },
+    "calculations/fcc-03/label.json": {
+      "bytes": 3095,
+      "sha256": "6e21d01e89262aabf3324074794f366cae71c7defe34d8656050963d35374b6e"
+    },
+    "calculations/fcc-03/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "68960e15e3f22f7c59ba55eefbf85b9551435be6d49982e923762e000603d37d"
+    },
+    "calculations/fcc-03/vasp.stdout": {
+      "bytes": 2635,
+      "sha256": "92f63aaae431100f89675931f563387b7b80896c86b467248456ac9cfd1d6115"
+    },
+    "calculations/fcc-03/vasprun.xml": {
+      "bytes": 497380,
+      "sha256": "7f0d830798fbb5da7fe2e6d95b57a576e7ec14e5a47cc2d542424f957447f166"
+    },
+    "calculations/fcc-04/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/fcc-04/CONTCAR": {
+      "bytes": 4036,
+      "sha256": "35ecb9911cd0bf18c943c0b415180cbfba9cc06a0e04cc7a28d549405cbaf450"
+    },
+    "calculations/fcc-04/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "348ddc781bc783580de47d4772ad73596813e88ae8e303d7a6adac394c96fbab"
+    },
+    "calculations/fcc-04/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "620acf0a29ffcaf36463b5acba16ff804d1fc064ba0c4015a739f7b78e16d109"
+    },
+    "calculations/fcc-04/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "95b57ea2f211e472c950892df7879ba014682d954d1306e09b995461bd98aff1"
+    },
+    "calculations/fcc-04/INCAR": {
+      "bytes": 270,
+      "sha256": "09a671915304213a95c0cd9fe06318fd5c8c4936918239cd1a59c14a7f617570"
+    },
+    "calculations/fcc-04/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/fcc-04/OSZICAR": {
+      "bytes": 1576,
+      "sha256": "99bcf1b23662b910a5f29d4addd7d74dfd267eba92e494bf95d5a6e0a4a9d497"
+    },
+    "calculations/fcc-04/OUTCAR": {
+      "bytes": 531529,
+      "sha256": "596b3274b362e987ce646017f7ace057e041fe04024f56f076137f4ef540787c"
+    },
+    "calculations/fcc-04/PCDAT": {
+      "bytes": 234,
+      "sha256": "1d8051ead6848dfc82b7c29e1a63981ee86368d82580af9553090da8f4d73523"
+    },
+    "calculations/fcc-04/POSCAR": {
+      "bytes": 2196,
+      "sha256": "5b3090f9d3683cffa8a0162447e400d76d04bdaf264a6441bdbfb699238f3b2d"
+    },
+    "calculations/fcc-04/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/fcc-04/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/fcc-04/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/fcc-04/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "efa932c0bb8f0150c8069b01473d15bf76cd804730f25f6d166009e5e46198bf"
+    },
+    "calculations/fcc-04/input-manifest.json": {
+      "bytes": 528,
+      "sha256": "09747f755905dd0768b80a54d4b6940940b216c0e3e7256dc58853c75973039a"
+    },
+    "calculations/fcc-04/label.json": {
+      "bytes": 3393,
+      "sha256": "f9d69818168b90189debc4d834cdd9c09f477a669998f27de01fa16536234e68"
+    },
+    "calculations/fcc-04/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "1a97ec1381ade74f9f40494afb8b7e4412f3a749327c393d8c34ad45f0f4d6b0"
+    },
+    "calculations/fcc-04/vasp.stdout": {
+      "bytes": 3007,
+      "sha256": "2b6377068fd54c4e3aa30523e84aae4eb620fa098eea1d919e1e9fd23c4a1a92"
+    },
+    "calculations/fcc-04/vasprun.xml": {
+      "bytes": 498500,
+      "sha256": "1bb458ad732fef93f493753c1b19196611bcee1124d4cfb05e8f6206a51b0fc7"
+    },
+    "calculations/fcc-05/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/fcc-05/CONTCAR": {
+      "bytes": 4036,
+      "sha256": "9d2b943eb4dbdae519cd20b94a77a92678fe8c909b5d1c0cf1d290af5621e81b"
+    },
+    "calculations/fcc-05/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "0eeb0b5c80941a734bdc5e74b70b0db603a0fa49725b2d0b2e6ef63c10d55bbb"
+    },
+    "calculations/fcc-05/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "16b6c173d2636f9c31f40003e0d5c8d5b6cb34716c7b12fa1aede558d907fa9a"
+    },
+    "calculations/fcc-05/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "bdbbeec43550bac117a3e5d0a946139605ac6e784ff4ef57f159304b42d9be10"
+    },
+    "calculations/fcc-05/INCAR": {
+      "bytes": 270,
+      "sha256": "552a58c10595b23e393081f07a22c34ff84abde60737024013d63438ef4a0c68"
+    },
+    "calculations/fcc-05/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/fcc-05/OSZICAR": {
+      "bytes": 1669,
+      "sha256": "2ae0423adad3c92bee7562a42df913815cd876baddfab9e7ded977d3302c486c"
+    },
+    "calculations/fcc-05/OUTCAR": {
+      "bytes": 533518,
+      "sha256": "e65d6720d5b7f33e614cf5c4992946e53a24f335d5fa3e548cb1ee3583e76926"
+    },
+    "calculations/fcc-05/PCDAT": {
+      "bytes": 234,
+      "sha256": "7ae3d20978348c8491116ed80cf5d4a1c1ce423b38edb86d7ec3f8078e1ff69d"
+    },
+    "calculations/fcc-05/POSCAR": {
+      "bytes": 2196,
+      "sha256": "8ee3a9275a58a44b656a8fc011eba9f6b90d19168af098d4b5598f742be54478"
+    },
+    "calculations/fcc-05/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/fcc-05/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/fcc-05/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/fcc-05/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "75e4a4d7447b4b3e9f4737bfde044d0b21ee3108fdb0a27eef09d6738f084d9d"
+    },
+    "calculations/fcc-05/input-manifest.json": {
+      "bytes": 528,
+      "sha256": "60e882ba05e9f8719cf70023fbe5ce6241e1db7912e120533da35f2e1721f037"
+    },
+    "calculations/fcc-05/label.json": {
+      "bytes": 3382,
+      "sha256": "42a1262afb509624fe2260722e281e14b02f59593f3bff8049490202c552ebc9"
+    },
+    "calculations/fcc-05/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "9f97bc28ff6eb07e9edd189df04f6a1d815a9f7e2737a3eb35856cd1df7219bd"
+    },
+    "calculations/fcc-05/vasp.stdout": {
+      "bytes": 3100,
+      "sha256": "f8c32eaa3e10631fa29e029c25701beb13ffdd291af1c9a51b9fbe00baa81634"
+    },
+    "calculations/fcc-05/vasprun.xml": {
+      "bytes": 498780,
+      "sha256": "7c26486397475dc1c6ee2af58ade08abab4e3a01c82c3eeea491d8e9277b2c93"
+    },
+    "calculations/fcc-06/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/fcc-06/CONTCAR": {
+      "bytes": 4036,
+      "sha256": "6d44331461b185330876debd42f2e9d3b98cf1b84a78347defb79512abb76e9e"
+    },
+    "calculations/fcc-06/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "41a5a80d6be6a1cbb27253899a726bf52bc5c40bd22e462a8d58ce4a6aa93dee"
+    },
+    "calculations/fcc-06/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "d4a3d1580faf355da0d01a1c653d5c40d83d11ff02cefccc2461d9f6793fa9a7"
+    },
+    "calculations/fcc-06/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "654640ff1c2474e2175d100cfab4b4f879c2eaa219863ca23f2143a08e0cad52"
+    },
+    "calculations/fcc-06/INCAR": {
+      "bytes": 270,
+      "sha256": "c0381f47c1404957a6e4a52021786989dea8ae171d71c26b25aa8292ce7c0eee"
+    },
+    "calculations/fcc-06/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/fcc-06/OSZICAR": {
+      "bytes": 1204,
+      "sha256": "246f21a86c853bdfb7bf7bf1c4c0785848db01b1915bd278a693f7d5d2132df1"
+    },
+    "calculations/fcc-06/OUTCAR": {
+      "bytes": 523657,
+      "sha256": "fb6493c1a6669d756d74f4247da8f2a3f94e9b21fce69ac0f06543535e7c152a"
+    },
+    "calculations/fcc-06/PCDAT": {
+      "bytes": 234,
+      "sha256": "bc556dbd5a7674dcb8b8a9d8a312324e272804ac64301f74ec8ada639e3f3111"
+    },
+    "calculations/fcc-06/POSCAR": {
+      "bytes": 2196,
+      "sha256": "a9a3d7fb64da3f5a4e71e82192b6430ed1e906a856af9d2c5748e8849d94b688"
+    },
+    "calculations/fcc-06/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/fcc-06/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/fcc-06/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/fcc-06/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "509aa4068fe690a5ef9bafbe7486a999094af4e547ad5ab8123f4b6e1c136f5c"
+    },
+    "calculations/fcc-06/input-manifest.json": {
+      "bytes": 528,
+      "sha256": "12c8a7836a0532d8a1f080374a5d6fd48679c748069f78f1c41b190f303cbe5d"
+    },
+    "calculations/fcc-06/label.json": {
+      "bytes": 3105,
+      "sha256": "62523cf23b75d1786520c9173725df04fa0098031bace42c4e0ea72b9386dc95"
+    },
+    "calculations/fcc-06/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "95493275ea6a6a30f6b2a4ffaf7b55116d124c552c304e1300db87cf8b5afbdb"
+    },
+    "calculations/fcc-06/vasp.stdout": {
+      "bytes": 2635,
+      "sha256": "e97d1cce2e0e25e2dbfab9b51ba268858e22ae607434a5096171f52d6c113f19"
+    },
+    "calculations/fcc-06/vasprun.xml": {
+      "bytes": 497380,
+      "sha256": "1b35055a0b035fe741eda60562671e76adaaf3b85ab731c523d638f03afbe7fe"
+    },
+    "calculations/fcc-07/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/fcc-07/CONTCAR": {
+      "bytes": 4036,
+      "sha256": "8cf5c5a36085ca13a526d403e9cab3b86232774bfac1af397029ef796b43ebcc"
+    },
+    "calculations/fcc-07/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "ac5072a4969925df76d85e448d97c8b11e122e101463ed908adeb73d01da55d7"
+    },
+    "calculations/fcc-07/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "b8c713fc7250906ba5eebbecfd763b9b44f596f6f44929c392bf406facee4e5c"
+    },
+    "calculations/fcc-07/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "95b57ea2f211e472c950892df7879ba014682d954d1306e09b995461bd98aff1"
+    },
+    "calculations/fcc-07/INCAR": {
+      "bytes": 270,
+      "sha256": "cc7bb4108196f8e3e78d36baabc2162c1aecadd4214d90266c8fe02a5096015d"
+    },
+    "calculations/fcc-07/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/fcc-07/OSZICAR": {
+      "bytes": 1669,
+      "sha256": "b201d4f3d36161aea347e3fbd09cf6e14743c995cf05d030f8fc73f1bae9ce87"
+    },
+    "calculations/fcc-07/OUTCAR": {
+      "bytes": 533518,
+      "sha256": "af5711b72dbe4fb7e0609f47584c735ff34b7f3108c9cb8231bc28ea4b8a7cd3"
+    },
+    "calculations/fcc-07/PCDAT": {
+      "bytes": 234,
+      "sha256": "93c3363d37c0f12cb9a808e2a5136a8b1fe25b807d990c8d02470270c94a9a63"
+    },
+    "calculations/fcc-07/POSCAR": {
+      "bytes": 2196,
+      "sha256": "364e3f583c8b0f3a8e785d2226d528b6f31814f68bc5c4b6f5b35a299520f733"
+    },
+    "calculations/fcc-07/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/fcc-07/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/fcc-07/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/fcc-07/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "5dda918670d9ba6c8a0d80f015f693b22d2138be2b810fcaeba0de0ea58f7112"
+    },
+    "calculations/fcc-07/input-manifest.json": {
+      "bytes": 528,
+      "sha256": "ed31d4a606b880b696297d34942b5ab7292c94480a016bcf2188db652111a056"
+    },
+    "calculations/fcc-07/label.json": {
+      "bytes": 3392,
+      "sha256": "944db9611b8fa40d62583d29ed79514dca07ea1b50811da0468fc4478395e0c9"
+    },
+    "calculations/fcc-07/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "38f2f7f78a713209ffae8516ecf79969e842ab2202fcf008d69eb96e8a025878"
+    },
+    "calculations/fcc-07/vasp.stdout": {
+      "bytes": 3100,
+      "sha256": "30a7c3d857123ae1c9e34af9494155d6e2baf5adc80f641e5377b125e8070213"
+    },
+    "calculations/fcc-07/vasprun.xml": {
+      "bytes": 498780,
+      "sha256": "c2aeefdd4d3b63a0d4d25b52aafa2221b62e8e302c6482eb5ee5eb551c2f4c67"
+    },
+    "calculations/fcc-08/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/fcc-08/CONTCAR": {
+      "bytes": 4036,
+      "sha256": "cf8b1656b29fbe69a3661049050140fd3b984943dc4f6d1f546e2b779f0a7667"
+    },
+    "calculations/fcc-08/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "41b149e8fb41cda053dcfa42cdc2f67493032083a79057ae36faad4238fb7e93"
+    },
+    "calculations/fcc-08/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "d6b730022e6d912c414d2cb2ec04ead85216eda282e7eb77ba263533380e4047"
+    },
+    "calculations/fcc-08/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "bdbbeec43550bac117a3e5d0a946139605ac6e784ff4ef57f159304b42d9be10"
+    },
+    "calculations/fcc-08/INCAR": {
+      "bytes": 270,
+      "sha256": "ead0bf6184e9f7200476abdbe388ccdca93368b56f203c7cac886b301e3286ba"
+    },
+    "calculations/fcc-08/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/fcc-08/OSZICAR": {
+      "bytes": 1669,
+      "sha256": "9b56fc725fe4aa3699ed07ea47d22687f08201382a9c131699d1a889753ea9d3"
+    },
+    "calculations/fcc-08/OUTCAR": {
+      "bytes": 533482,
+      "sha256": "ea79a1b0cf84ceb535dd809e3f4b5625a179832539490cbab258746fadc1efe2"
+    },
+    "calculations/fcc-08/PCDAT": {
+      "bytes": 234,
+      "sha256": "8c3e3dcf8625779d406198dd1ca9f53be280ab66fc3b6718143f9a51fa2cab8e"
+    },
+    "calculations/fcc-08/POSCAR": {
+      "bytes": 2196,
+      "sha256": "2152b8c01bf9ac3b43ef5bdffb2d779b67ee5e87d7b795b807d4e0c85b963fdc"
+    },
+    "calculations/fcc-08/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/fcc-08/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/fcc-08/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/fcc-08/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "4d95817a609336a90664287cbf8495c360dd33fae456a9b290073dd0f93d274d"
+    },
+    "calculations/fcc-08/input-manifest.json": {
+      "bytes": 528,
+      "sha256": "f4a528a4189c9784262abbf74e0308bf9345c529eea22037c95960b75e9322e8"
+    },
+    "calculations/fcc-08/label.json": {
+      "bytes": 3387,
+      "sha256": "96fe421761481c2618c9e96e266a88b8362a9fffe5ae89d9cd42bf4a9cbd6726"
+    },
+    "calculations/fcc-08/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "0afbedd298de45c36ea2f6adb01ef2fc4c9b08587039de9d2c5400b34059dd42"
+    },
+    "calculations/fcc-08/vasp.stdout": {
+      "bytes": 3100,
+      "sha256": "81a3034f84b1df2dd3a90acc48d9ae82c0260d0b1ac84dfdab700cab8f386b6c"
+    },
+    "calculations/fcc-08/vasprun.xml": {
+      "bytes": 498780,
+      "sha256": "55634debd365214907f11633202f553640f6ada15b44611f5f8c1d81eabf0ae2"
+    },
+    "calculations/hcp-00/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/hcp-00/CONTCAR": {
+      "bytes": 4036,
+      "sha256": "939e182ede4ad425762780567b89a698a3ce9f182374cc08e955e9421690956a"
+    },
+    "calculations/hcp-00/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "d62b27efd615628f0afb95725977bb453f254663ff78f74e28f88580fb668e18"
+    },
+    "calculations/hcp-00/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "3db323d65685134fc2e1b5650b86f9ed5f9f08111b1481d95c23b20751e7b671"
+    },
+    "calculations/hcp-00/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "1c981fc2fe26a502f53246c8bf4ad8a2a5f5bf8648a674d769c74a56ea3f9622"
+    },
+    "calculations/hcp-00/INCAR": {
+      "bytes": 270,
+      "sha256": "8417f30d391d900059c7503db03dee03a7cf11e7b232213cd1bbc631d1e4ff28"
+    },
+    "calculations/hcp-00/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/hcp-00/OSZICAR": {
+      "bytes": 1483,
+      "sha256": "9e509a0838ea1b70f65ce643faca0596c37f5b8b5bc8f6d2e321e84c5399c164"
+    },
+    "calculations/hcp-00/OUTCAR": {
+      "bytes": 529549,
+      "sha256": "65575b12a927ab51b2541844b1718bedac8645899073f13ecc2070fa1927cb0a"
+    },
+    "calculations/hcp-00/PCDAT": {
+      "bytes": 234,
+      "sha256": "607c5180c94efaade024312d2c4acc39b533f37697a007f5a367e469705ecf02"
+    },
+    "calculations/hcp-00/POSCAR": {
+      "bytes": 2196,
+      "sha256": "b321dc22061b87baa60a6930e7d2e597b2df21d2a5a66ea97fd1d3d3cf0de9db"
+    },
+    "calculations/hcp-00/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/hcp-00/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/hcp-00/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/hcp-00/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "5caddb06ef5ea048096c8854aca9785ba4c86326c686ebad9e201dc227baa143"
+    },
+    "calculations/hcp-00/input-manifest.json": {
+      "bytes": 527,
+      "sha256": "e0083dcb1552cc08db92ed83783b8e90b39238aba86b134a0dd74f53d6788719"
+    },
+    "calculations/hcp-00/label.json": {
+      "bytes": 3065,
+      "sha256": "4e7fd7e1265d1a42fafea2225b52fc10b2ec1e5001b4dda8aef4af9eb98fe77a"
+    },
+    "calculations/hcp-00/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "dda083b1379f9aaaadd32fb8c50f0113d364ba68d72255a985b930d1b97d84c5"
+    },
+    "calculations/hcp-00/vasp.stdout": {
+      "bytes": 2914,
+      "sha256": "1b49df45f5b6f05a28f5af52ca3963e4ef4f84c38e070d438cd274109245ae87"
+    },
+    "calculations/hcp-00/vasprun.xml": {
+      "bytes": 498220,
+      "sha256": "4fe1f011cab0e899e20bc662b10ba96f5b7d28df92eb0dcf9046b13ed476eca4"
+    },
+    "calculations/hcp-01/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/hcp-01/CONTCAR": {
+      "bytes": 4036,
+      "sha256": "a437f8f644f7a3903255e8dc6bbc62b3bd80434d0d3651a1234b5edb569d101a"
+    },
+    "calculations/hcp-01/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "01d2c7f55d0d1b7059972573c79edabe2d1181954cd523280b8e3edcac5f7a41"
+    },
+    "calculations/hcp-01/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "b703e0330b90a3894df05491292a69e6d97d1c8752204ff74f5735a55c4a61b7"
+    },
+    "calculations/hcp-01/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "1c981fc2fe26a502f53246c8bf4ad8a2a5f5bf8648a674d769c74a56ea3f9622"
+    },
+    "calculations/hcp-01/INCAR": {
+      "bytes": 270,
+      "sha256": "ed3fb537b764f6e9365b85bb4b311f332610eeb5c1a1ad8a7d1eba66e0d082de"
+    },
+    "calculations/hcp-01/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/hcp-01/OSZICAR": {
+      "bytes": 1483,
+      "sha256": "cb900aa9bd23670215342672837acdcead621ab8ada6c7e13ac4d37e0829529b"
+    },
+    "calculations/hcp-01/OUTCAR": {
+      "bytes": 529549,
+      "sha256": "3ced79f8ae791b8e8f869d178f07099dd6d6dbc217a1a53832dee2f79de1972f"
+    },
+    "calculations/hcp-01/PCDAT": {
+      "bytes": 234,
+      "sha256": "3993ea30bf4ecc1156e913d17540e1336b7d8c0abcc962b2fedfd67d14a94b24"
+    },
+    "calculations/hcp-01/POSCAR": {
+      "bytes": 2196,
+      "sha256": "b80d0b12a688030e745f1966181047723a8fbb661afda93d9a4e0981f05f6639"
+    },
+    "calculations/hcp-01/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/hcp-01/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/hcp-01/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/hcp-01/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "af9fbffd8de1b099f71e62c1a3626635c356b56a7d6ebaabb8bd3b5a61ee9490"
+    },
+    "calculations/hcp-01/input-manifest.json": {
+      "bytes": 527,
+      "sha256": "6432e3152e1b64ba949b82eb74f86c5db0b11f4aa1d85db0e01135f43053d603"
+    },
+    "calculations/hcp-01/label.json": {
+      "bytes": 3066,
+      "sha256": "2d5849af1139d39914d0e97b84be656ee006c3b7ca7197066dcdb8fc6b25f9d0"
+    },
+    "calculations/hcp-01/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "8cf62451603156e90bbb3583902e35cbb8186a589b4f8b7715f3186a7214cbb6"
+    },
+    "calculations/hcp-01/vasp.stdout": {
+      "bytes": 2914,
+      "sha256": "30bcb9babe77f9b47db3c0b53ccb7d34c3ef1139193cafddf941fa0fd3754730"
+    },
+    "calculations/hcp-01/vasprun.xml": {
+      "bytes": 498220,
+      "sha256": "02c8ff5a36776779dbf9d872e1a29fe0417d4a316e90fae6a2c6a1532935058d"
+    },
+    "calculations/hcp-02/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/hcp-02/CONTCAR": {
+      "bytes": 4036,
+      "sha256": "176e98ebfa4d047f9a3e40ceceb574787628c4c531cfc2e11893f1d104a76848"
+    },
+    "calculations/hcp-02/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "c4f3a2e34c7550f9d7e388bde205274c4c0b23805f2708257acbb106514723dd"
+    },
+    "calculations/hcp-02/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "3d5a539d751622070be5c8ec4c062f06a597fda154028e12dc0ec0d892dbf8a7"
+    },
+    "calculations/hcp-02/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "1c981fc2fe26a502f53246c8bf4ad8a2a5f5bf8648a674d769c74a56ea3f9622"
+    },
+    "calculations/hcp-02/INCAR": {
+      "bytes": 270,
+      "sha256": "7c803068e3f5507df4c5d1d17864e3881289d82846c15aec2b9c1deb66c4fac0"
+    },
+    "calculations/hcp-02/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/hcp-02/OSZICAR": {
+      "bytes": 1483,
+      "sha256": "c9c5240bf891df82ed419a73de2d0034642cfa319db5f3598dbf02d3723212ae"
+    },
+    "calculations/hcp-02/OUTCAR": {
+      "bytes": 529549,
+      "sha256": "c6107feefcef872641d39bf4ae7002f741a9553524b4d98f19e7c61425e40f3a"
+    },
+    "calculations/hcp-02/PCDAT": {
+      "bytes": 234,
+      "sha256": "6368c39b66628e5857aa8677895c3ace6384dff6ad6b0aa3a2aa600c4ed28795"
+    },
+    "calculations/hcp-02/POSCAR": {
+      "bytes": 2196,
+      "sha256": "fc2e6978f6760aa12cf17025c0086fe4dff1155c8b8a9054e01c3dc6013f9738"
+    },
+    "calculations/hcp-02/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/hcp-02/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/hcp-02/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/hcp-02/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "26b614fb5e43ee017a449aa12fbb0e7fe0afc7e759994fda9ffbcf5b22683514"
+    },
+    "calculations/hcp-02/input-manifest.json": {
+      "bytes": 527,
+      "sha256": "266f18fd897c810a7d84efdc62773ed3619ab10ccdf87b4b8dcae5ea0282dfba"
+    },
+    "calculations/hcp-02/label.json": {
+      "bytes": 3083,
+      "sha256": "c68fd51e97345f295f67a4222db40d1aba367ae93be57cacc2540ecdcc6942e4"
+    },
+    "calculations/hcp-02/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "492670867edf586a567cbf06df55d31a3f9f2e65e33978438a95d99e0ab51dba"
+    },
+    "calculations/hcp-02/vasp.stdout": {
+      "bytes": 2914,
+      "sha256": "97e51696f1cf2254730be2311b7c393b44fa16f81426f885308a2a7296522641"
+    },
+    "calculations/hcp-02/vasprun.xml": {
+      "bytes": 498220,
+      "sha256": "53720a15c857a60ae37973588e2bfd591c3d0828f3565598ba6e96417a57e400"
+    },
+    "calculations/hcp-03/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/hcp-03/CONTCAR": {
+      "bytes": 4036,
+      "sha256": "6c59ee1c770014c70fbf5e7e437ec186a0d1c4beef76e357a55143f9d0b92f09"
+    },
+    "calculations/hcp-03/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "7bfda075815eef7b4e1ed077188883a4d5ad79abc379bc8524e066413463fb2c"
+    },
+    "calculations/hcp-03/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "e8d33b12d6d9380b54fd2b097fe49396e8dfe1fe89e45180766cf735d9a2360f"
+    },
+    "calculations/hcp-03/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "1c981fc2fe26a502f53246c8bf4ad8a2a5f5bf8648a674d769c74a56ea3f9622"
+    },
+    "calculations/hcp-03/INCAR": {
+      "bytes": 270,
+      "sha256": "e8c936632ffe3becdd13435b70aab2c96b3976d6c015935ff5b20f438218ebf3"
+    },
+    "calculations/hcp-03/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/hcp-03/OSZICAR": {
+      "bytes": 1483,
+      "sha256": "669d417c38ebe05c4d0908a64057a6c0c7628291394b8e208176eea6409cb664"
+    },
+    "calculations/hcp-03/OUTCAR": {
+      "bytes": 529549,
+      "sha256": "d76a87269b28b252e9b53f98bee33be0cd9509f48c2485d87e1b6cab6fc2ef04"
+    },
+    "calculations/hcp-03/PCDAT": {
+      "bytes": 234,
+      "sha256": "2f0017978c00731bed154b570e8ba1c8073ead5135ca131c12f49d66ec794c16"
+    },
+    "calculations/hcp-03/POSCAR": {
+      "bytes": 2196,
+      "sha256": "7f6a15369377bec5d09e188ef8e4be71009defd2d1e6a10cf98576a92d009ab7"
+    },
+    "calculations/hcp-03/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/hcp-03/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/hcp-03/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/hcp-03/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "d5ff3958b223909539d475d262280e4350ff758b7f30efcf928f5de66dbd8f46"
+    },
+    "calculations/hcp-03/input-manifest.json": {
+      "bytes": 527,
+      "sha256": "b9ca81240978aafabdaaaac4648ecd675fb69fa0dc5d68e7502e2a53fa09cce8"
+    },
+    "calculations/hcp-03/label.json": {
+      "bytes": 3058,
+      "sha256": "3cd0b374ed449f7e67fca368c17ae90fdeacf551f19198b02a75ee479f7511a8"
+    },
+    "calculations/hcp-03/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "edd18be7e38f67dd0c079037dd4d36dbe32dbb09385dd1dc48887accd2cc3c35"
+    },
+    "calculations/hcp-03/vasp.stdout": {
+      "bytes": 2914,
+      "sha256": "7ba8ef9fbb12b60aad8e7dc04e3983ca02d248241c1aa52331a2168df8bbefbd"
+    },
+    "calculations/hcp-03/vasprun.xml": {
+      "bytes": 498220,
+      "sha256": "c457bd414cddbd48a9b0a2db8b72b5d014dcb67420f6aba21dc616ab33543b4e"
+    },
+    "calculations/hcp-04/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/hcp-04/CONTCAR": {
+      "bytes": 4036,
+      "sha256": "5974d7b248177c2b8d5f3110f071be652250aff1ce76c609a6dacdfa4b184786"
+    },
+    "calculations/hcp-04/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "31bd6edae3f86c1eec9674c7673af6b79a599c35b7ba49e778dac97209d0b88e"
+    },
+    "calculations/hcp-04/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "974e9441251d03a0e6253a3f8382a8af551a35d69ce95eb906720a410bbb1012"
+    },
+    "calculations/hcp-04/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "1c981fc2fe26a502f53246c8bf4ad8a2a5f5bf8648a674d769c74a56ea3f9622"
+    },
+    "calculations/hcp-04/INCAR": {
+      "bytes": 270,
+      "sha256": "9616b69700a60e39c5b597c70d9408aa60085ce51da820367989def2515f493e"
+    },
+    "calculations/hcp-04/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/hcp-04/OSZICAR": {
+      "bytes": 1483,
+      "sha256": "7e3db5bb9eea2c675ec3d62c322907ca92cb94f7a60b7c374e391d094911c165"
+    },
+    "calculations/hcp-04/OUTCAR": {
+      "bytes": 529549,
+      "sha256": "c0cbc90a24c2cbf71b20beae35c4a67cedbf641a18fedcbb7cfae0de7fd6b4ac"
+    },
+    "calculations/hcp-04/PCDAT": {
+      "bytes": 234,
+      "sha256": "b4e79940565e3e80ba95392794aa19217b67ce3b237aed62d9dbb2beb8e26788"
+    },
+    "calculations/hcp-04/POSCAR": {
+      "bytes": 2196,
+      "sha256": "a0d17abf69ca6af80286b9f0828b04b3a21c6664c6c4962498be28bc2f86daca"
+    },
+    "calculations/hcp-04/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/hcp-04/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/hcp-04/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/hcp-04/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "6465d725e907394e0572bd1603f4a31512e189e40ca63c77ff6d4e782bef7e38"
+    },
+    "calculations/hcp-04/input-manifest.json": {
+      "bytes": 527,
+      "sha256": "4c6bc86dd883774c035b054d52ef6acde276d11ede62715bddd898550d29b020"
+    },
+    "calculations/hcp-04/label.json": {
+      "bytes": 3077,
+      "sha256": "9330f3e16795e4faa6b72b97756ed94ac90dfb569b3ebbaae067fee1dbfd4882"
+    },
+    "calculations/hcp-04/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "18d56ee2b50ce27bb608c679357d1ef91f7c46df7b3855d6f1aa51df6c6a13c7"
+    },
+    "calculations/hcp-04/vasp.stdout": {
+      "bytes": 2914,
+      "sha256": "17d5d3852c79f81120180e58084b5a90336d8bccde8ac7dd8a4ad1f0896ef5ce"
+    },
+    "calculations/hcp-04/vasprun.xml": {
+      "bytes": 498220,
+      "sha256": "5bafbcfe8b3c60f1d9ace8405b39918e1afd5969b806c9925c854b00d75a1f28"
+    },
+    "calculations/hcp-05/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/hcp-05/CONTCAR": {
+      "bytes": 4036,
+      "sha256": "b13a18b67ee26c693997d3c4a764bd6c7ac84c034ef2df103ab1ffeff10440e3"
+    },
+    "calculations/hcp-05/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "d5a16d1eebac764ac0a06222c5f40a0713c54543914ec244255b141dfe7c92d4"
+    },
+    "calculations/hcp-05/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "3b6c8b56487652fdfbebf14bdb094d3e8577a23dc6a03c201b87dcfa698f5f8d"
+    },
+    "calculations/hcp-05/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "1c981fc2fe26a502f53246c8bf4ad8a2a5f5bf8648a674d769c74a56ea3f9622"
+    },
+    "calculations/hcp-05/INCAR": {
+      "bytes": 270,
+      "sha256": "22497272bd98f098be062a85e6bae1f13ce4620e0674ef124368aeed49096daf"
+    },
+    "calculations/hcp-05/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/hcp-05/OSZICAR": {
+      "bytes": 1483,
+      "sha256": "23621de12eb75e263bc9636a3b88dbc64b7e8887ecf4b5f6f1f18585fe7b844e"
+    },
+    "calculations/hcp-05/OUTCAR": {
+      "bytes": 529549,
+      "sha256": "b01c9f1fb4cb98c25c52a0d809ba37cab66cff8b1c5f36c84d55d84ad712c8b0"
+    },
+    "calculations/hcp-05/PCDAT": {
+      "bytes": 234,
+      "sha256": "31709eeaca8d155f8a3793bfe3968dd805be27e0f34591daa32bfbf2a59a3ff6"
+    },
+    "calculations/hcp-05/POSCAR": {
+      "bytes": 2196,
+      "sha256": "b532da4c1c8f0262021e5c396a77bb32b74364ceaa16538ea719215e074e7add"
+    },
+    "calculations/hcp-05/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/hcp-05/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/hcp-05/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/hcp-05/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "994edbc1d3c895899aecb6bf6df2c7286139720372f7aa075941c95898b0d8e7"
+    },
+    "calculations/hcp-05/input-manifest.json": {
+      "bytes": 527,
+      "sha256": "5d05fa9871890e3111114cfd39b687c5712809e28fc9c319420b46749a7e3b93"
+    },
+    "calculations/hcp-05/label.json": {
+      "bytes": 3069,
+      "sha256": "e8ae61b957001f4c190f411474401b1f82ec1faea42aed05f8b5c9822fa25de0"
+    },
+    "calculations/hcp-05/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "082f1af38b428cf2664979fce7745363790c81acec703d778503462d12ccfddc"
+    },
+    "calculations/hcp-05/vasp.stdout": {
+      "bytes": 2914,
+      "sha256": "6f1e4e6abce6315ddf85ea1c5b1164dc29e60abaa09e4c1103f48e9cec1af044"
+    },
+    "calculations/hcp-05/vasprun.xml": {
+      "bytes": 498220,
+      "sha256": "7deb7db93e688e844ee0384e0ed71ce340d93a2334517da74265f2285cf08faa"
+    },
+    "calculations/hcp-06/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/hcp-06/CONTCAR": {
+      "bytes": 4036,
+      "sha256": "7aadcf4add6131cbf8220c20f9f15c32090643515c39c15cf2fa9b788a0e8175"
+    },
+    "calculations/hcp-06/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "c056b678f76dd86e92c1ba9e051010905f172c31fe4f40283e5a45a84784cfc2"
+    },
+    "calculations/hcp-06/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "eda4cca4357c1c7860a4af310f26c436650f4a82cf1de1487d1f4d4c0b1cb087"
+    },
+    "calculations/hcp-06/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "1c981fc2fe26a502f53246c8bf4ad8a2a5f5bf8648a674d769c74a56ea3f9622"
+    },
+    "calculations/hcp-06/INCAR": {
+      "bytes": 270,
+      "sha256": "14e19f687778b77792d46770371558daaa9e495c3f6eb6252965d0644cccd270"
+    },
+    "calculations/hcp-06/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/hcp-06/OSZICAR": {
+      "bytes": 1483,
+      "sha256": "50d4ceb2994adcd5fb855bf085ed4f3d242037026802b1597ead5a15f1c10fbf"
+    },
+    "calculations/hcp-06/OUTCAR": {
+      "bytes": 529549,
+      "sha256": "cf0379a56cbd64266138aa1cbf00db8ea6eedaee67081bb6e14c7a9d28c6fd20"
+    },
+    "calculations/hcp-06/PCDAT": {
+      "bytes": 234,
+      "sha256": "1b5f2c7f70201925eb082b00f3d24892bca4bb8a6f9586c1b01ba35802fcba19"
+    },
+    "calculations/hcp-06/POSCAR": {
+      "bytes": 2196,
+      "sha256": "d6329b0b0134ea393b113b6b406b2917c522d2c6887da3955767095be509cea6"
+    },
+    "calculations/hcp-06/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/hcp-06/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/hcp-06/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/hcp-06/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "b2d6f10f76bf0501498e435069ffe2edb6608203ed2334f88a5da31036a2ff41"
+    },
+    "calculations/hcp-06/input-manifest.json": {
+      "bytes": 527,
+      "sha256": "0abf60bb185aaddb1188d57d139798e40bac748b2b8c7fa70bbec51d48a9c024"
+    },
+    "calculations/hcp-06/label.json": {
+      "bytes": 3005,
+      "sha256": "8d668ff335932a9c46ff1bb1015724bdf3a45e3fce96f6c1a3f1be0d19feb4b1"
+    },
+    "calculations/hcp-06/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "dd57129e07bfd50d7a4e155c3d2c7816c9ad9c68292b78e8af7b1dd4647ff775"
+    },
+    "calculations/hcp-06/vasp.stdout": {
+      "bytes": 2914,
+      "sha256": "d8c378ae1d540adec1766b07b734f11a949c6ccfa377af2d082d7bcdde572666"
+    },
+    "calculations/hcp-06/vasprun.xml": {
+      "bytes": 498220,
+      "sha256": "28a1ef886ea76925e11279446aa9599035830fbe9732c33517ed947b67db9f3f"
+    },
+    "calculations/md-00-f0/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-00-f0/CONTCAR": {
+      "bytes": 4439,
+      "sha256": "876a8c949f71f67c8a8b67dc2d3cab04335d67750f053ff15b4f096933a4e4da"
+    },
+    "calculations/md-00-f0/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "d35ebe3b99d958f57096deac902eaab4a22c92db8e6aaab36a97d274ea104367"
+    },
+    "calculations/md-00-f0/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "700c419a3a3a4fb6695fdb8866b2816098ad8787cd5895a3cc97f596a68216f0"
+    },
+    "calculations/md-00-f0/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "95b57ea2f211e472c950892df7879ba014682d954d1306e09b995461bd98aff1"
+    },
+    "calculations/md-00-f0/INCAR": {
+      "bytes": 272,
+      "sha256": "bf673de5d7df8b8793c4f00be8d74124efacbc50e811445d9f714f212f22b50d"
+    },
+    "calculations/md-00-f0/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/md-00-f0/OSZICAR": {
+      "bytes": 1669,
+      "sha256": "ca5f6f9f080d88f0639662dc791ef06b1465ab64d254220934322380d4e18757"
+    },
+    "calculations/md-00-f0/OUTCAR": {
+      "bytes": 533013,
+      "sha256": "28342227da9a35f9ae631536c6ae37f88752a17b1aeef34a470d235a3fd36bf2"
+    },
+    "calculations/md-00-f0/PCDAT": {
+      "bytes": 234,
+      "sha256": "6c8c5406290fcea87540bcceed4f652166fea4482e7096da3a7b0d6c493df36e"
+    },
+    "calculations/md-00-f0/POSCAR": {
+      "bytes": 4561,
+      "sha256": "b33d82d21301b204e16d4589f93af311ff4e232c8bcc4a185caebe29541bb92f"
+    },
+    "calculations/md-00-f0/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/md-00-f0/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-00-f0/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-00-f0/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "2b3aa365d8ad2e917ec5e72041c3388b5c755cfc594dc408109915b09f2e5472"
+    },
+    "calculations/md-00-f0/input-manifest.json": {
+      "bytes": 522,
+      "sha256": "fd2d4b9bc378ffe37c6e3b8900f3bf11a19961bed6cab7556ada11b765d3f968"
+    },
+    "calculations/md-00-f0/label.json": {
+      "bytes": 3388,
+      "sha256": "e9a4efdd2a84f70df48e855cfc57cdb12df73b42b3bf49cbe2ae56369c92ab88"
+    },
+    "calculations/md-00-f0/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "a4c766b383dab4de610f95195ee475e0eb98d3e564ce3f3f66d7e0847804d235"
+    },
+    "calculations/md-00-f0/vasp.stdout": {
+      "bytes": 3100,
+      "sha256": "676de36c9d287317f685fc38d6deea010c28273c960d343d90b407451a98cb65"
+    },
+    "calculations/md-00-f0/vasprun.xml": {
+      "bytes": 501464,
+      "sha256": "89cc020b06f5ae597f567c8afd0e740d773f84d79f95ea710a281adc5f038ea8"
+    },
+    "calculations/md-00-f1/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-00-f1/CONTCAR": {
+      "bytes": 4439,
+      "sha256": "fb299d2e95f384f0889afb330af734d9b72f0bbe4192a971e727fa2c8c11aa3f"
+    },
+    "calculations/md-00-f1/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "74768eacabb162db1b13631aa5c9fea506f097087dbb374a70f7006b209b49f8"
+    },
+    "calculations/md-00-f1/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "a129456bd04f9bdcee772745e73aa51f8e8f029b3800cf159a686e0bf4cc2e20"
+    },
+    "calculations/md-00-f1/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "95b57ea2f211e472c950892df7879ba014682d954d1306e09b995461bd98aff1"
+    },
+    "calculations/md-00-f1/INCAR": {
+      "bytes": 272,
+      "sha256": "0f5e258369709ee24ce2083ecf92d5a4f8118c8aef716f1a8b2d8e195a7f4885"
+    },
+    "calculations/md-00-f1/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/md-00-f1/OSZICAR": {
+      "bytes": 1669,
+      "sha256": "a42f50290253c0eaeaf842a6ad43f8fc1950f132b973d636f9bbb876924625cc"
+    },
+    "calculations/md-00-f1/OUTCAR": {
+      "bytes": 532915,
+      "sha256": "1a5b9897361e11f09f7e4c5835d87bff8d4d9f0c7098c1773b960c678d1bddbb"
+    },
+    "calculations/md-00-f1/PCDAT": {
+      "bytes": 234,
+      "sha256": "cf6a1c7a9ba24d8773897e39316e225df67e1f4988692ae47d0006efcdfe0b58"
+    },
+    "calculations/md-00-f1/POSCAR": {
+      "bytes": 4561,
+      "sha256": "c1922c7cfa4ce82ba49afb820246202309671d47327827ce652150b9dc820bd0"
+    },
+    "calculations/md-00-f1/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/md-00-f1/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-00-f1/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-00-f1/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "1c5d2eec773d6f41254118141839db023da0546500f1e30b1183cee127322637"
+    },
+    "calculations/md-00-f1/input-manifest.json": {
+      "bytes": 522,
+      "sha256": "8ca2432d003591e0b82d83080eeb49cf617e943ec20699682cd78fec7e8bafa5"
+    },
+    "calculations/md-00-f1/label.json": {
+      "bytes": 3383,
+      "sha256": "26d936abdec82de8595d41e7df91ffcf3a20703a4a475530ff2180a425644396"
+    },
+    "calculations/md-00-f1/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "504b225c6fbfb944ebaa0f712deb0de5695ba1dd21bc184bdb2bf3bf05d6c94c"
+    },
+    "calculations/md-00-f1/vasp.stdout": {
+      "bytes": 3100,
+      "sha256": "e9d677c1bb6df5b8e8222217cd2639ce1996e58197186dd5a6fce9880d139ec3"
+    },
+    "calculations/md-00-f1/vasprun.xml": {
+      "bytes": 501464,
+      "sha256": "bbd9f8ad99032864082f62bf73a08402e30d957ee687c74ea8712aff7f55d959"
+    },
+    "calculations/md-00-f2/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-00-f2/CONTCAR": {
+      "bytes": 4439,
+      "sha256": "c341e2d78afc76e05636842dfc4a4e93a20706aeae083ff7268f79a243edac40"
+    },
+    "calculations/md-00-f2/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "28162980658db10b9462b174b603d3571b7833ad433994bec79d201797219dd2"
+    },
+    "calculations/md-00-f2/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "d14ff8cc2a0b3017e3e4231b097c94c620a2b3aae4b15963731b25857942e646"
+    },
+    "calculations/md-00-f2/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "95b57ea2f211e472c950892df7879ba014682d954d1306e09b995461bd98aff1"
+    },
+    "calculations/md-00-f2/INCAR": {
+      "bytes": 272,
+      "sha256": "9c88d7fa6a11419c2a84ae66f225349e15430305567cc34eb8624649eaaf6a28"
+    },
+    "calculations/md-00-f2/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/md-00-f2/OSZICAR": {
+      "bytes": 1576,
+      "sha256": "046ef178ef2a3c12fc7058277d07b4fff916c40314bb9f39f1a25760944b56fa"
+    },
+    "calculations/md-00-f2/OUTCAR": {
+      "bytes": 531087,
+      "sha256": "db2bcfd1c4cf7605a0a2768afdc8e247c566283750607ceb03844740cdccdd40"
+    },
+    "calculations/md-00-f2/PCDAT": {
+      "bytes": 234,
+      "sha256": "d0b60b0a53a1df447f721cba5a5f58cb97affa67fdc3d020236ba7978756b677"
+    },
+    "calculations/md-00-f2/POSCAR": {
+      "bytes": 4561,
+      "sha256": "542978f4bf8ca854d20e11545061ee95db0af868d83b55661f98c2ada5a4f00a"
+    },
+    "calculations/md-00-f2/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/md-00-f2/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-00-f2/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-00-f2/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "c6077476e8e447d6fe177914f296da6dd78a8dc2a67276f0364af81a330f6bd2"
+    },
+    "calculations/md-00-f2/input-manifest.json": {
+      "bytes": 522,
+      "sha256": "f21cd6875c2c751c5e2ebf7b0edbea6e762c06ab582f6345329c5ca8d9cf108c"
+    },
+    "calculations/md-00-f2/label.json": {
+      "bytes": 3391,
+      "sha256": "5fa1651f81d8d8ad21fe49a2b23244e3b53c9a1c6a6c857a40653a44849b2a36"
+    },
+    "calculations/md-00-f2/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "07118d01a9638b2326a6534879741f697b227938ca227f6c2b33c13d788b8d50"
+    },
+    "calculations/md-00-f2/vasp.stdout": {
+      "bytes": 3007,
+      "sha256": "63767c27ceff50124dd1c76efb56cd2f913f87eb6da2bace61f13aa52014c104"
+    },
+    "calculations/md-00-f2/vasprun.xml": {
+      "bytes": 501184,
+      "sha256": "6dfd3f2b8b1f7f92bd097465a8244037ccce15d083087ba4a9e3cbabf89961e9"
+    },
+    "calculations/md-01-f0/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-01-f0/CONTCAR": {
+      "bytes": 4439,
+      "sha256": "94061523b70e74bf0b69bff3cac2b8724d11997da681792b4cb3ae176655b47a"
+    },
+    "calculations/md-01-f0/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "4440b6d0181668e5ba8bde7e35d27ba78750fef1dfb8d74dbb294b37b885dd30"
+    },
+    "calculations/md-01-f0/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "76dea4911c53362ae4a9c9860503c455b87de9d106534450c2e4a9561a8bb1c1"
+    },
+    "calculations/md-01-f0/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "95b57ea2f211e472c950892df7879ba014682d954d1306e09b995461bd98aff1"
+    },
+    "calculations/md-01-f0/INCAR": {
+      "bytes": 272,
+      "sha256": "a1ef0918e4b38d6cf51b2631ea9e09ddff9f8ff451742f74994cc25f189744c0"
+    },
+    "calculations/md-01-f0/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/md-01-f0/OSZICAR": {
+      "bytes": 1669,
+      "sha256": "7814fade156c762c28f3830969af52225315ae3f07e8580595a33bfd7eeecb6b"
+    },
+    "calculations/md-01-f0/OUTCAR": {
+      "bytes": 532906,
+      "sha256": "d1adf211d4050a8db5ee204f289a171d6a5476a1c6ae321ad8f97f1c2f51080b"
+    },
+    "calculations/md-01-f0/PCDAT": {
+      "bytes": 234,
+      "sha256": "ba27a02c10887fdf03e0d1e7cd8d9c691b169b1cf953656a98b979c13d5d78f2"
+    },
+    "calculations/md-01-f0/POSCAR": {
+      "bytes": 4561,
+      "sha256": "f8db30814960f0b0087cfeef57febd9ee160ef711552279a83ee72020dbb6b82"
+    },
+    "calculations/md-01-f0/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/md-01-f0/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-01-f0/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-01-f0/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "aab29f9d0cab213daf4c693286e4e246cb3a226adba6413307cd669db0d84370"
+    },
+    "calculations/md-01-f0/input-manifest.json": {
+      "bytes": 522,
+      "sha256": "4a28d20beb81ce8171b7593b20ee1b40f4ee23c27af30393f46dcc6706913b56"
+    },
+    "calculations/md-01-f0/label.json": {
+      "bytes": 3380,
+      "sha256": "2027aff8c8bd4e0ed15ee1604005e8599f75e33d1ce8ea9ec9a9b9f01fdab6d8"
+    },
+    "calculations/md-01-f0/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "6856c2085a80fb392814b60267c5bd4ce14feeb11ec3a5f42563d0fcab445209"
+    },
+    "calculations/md-01-f0/vasp.stdout": {
+      "bytes": 3100,
+      "sha256": "4abfa912167036364cb290d8f445431ec002b6b284efc9a7bf3c49a237553e4c"
+    },
+    "calculations/md-01-f0/vasprun.xml": {
+      "bytes": 501464,
+      "sha256": "ce3ab93338ef5bb37a6685c33a73d077221a6b19eca02792dbcd1c1947e51677"
+    },
+    "calculations/md-01-f1/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-01-f1/CONTCAR": {
+      "bytes": 4439,
+      "sha256": "e6d2fe67a889d5428419cdbf4d540398a0056aa64c24295ea00f8b36c86eae2c"
+    },
+    "calculations/md-01-f1/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "5befa6aab1dbd0dce48082ae0a14de85fa2bf832b0e632b9ceede5d3cc7b84b4"
+    },
+    "calculations/md-01-f1/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "e649b81e53aa157473c0666545a0472b78935102f27f9d76f5e30114ad74766d"
+    },
+    "calculations/md-01-f1/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "95b57ea2f211e472c950892df7879ba014682d954d1306e09b995461bd98aff1"
+    },
+    "calculations/md-01-f1/INCAR": {
+      "bytes": 272,
+      "sha256": "256a36b708b8db006eee920fc761fc457f901e4a082b02b417015de73e445ebe"
+    },
+    "calculations/md-01-f1/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/md-01-f1/OSZICAR": {
+      "bytes": 1669,
+      "sha256": "ed15461384f535bd64b1ca1443a134831a64ec3eae94a5e7bd2824a4364020d5"
+    },
+    "calculations/md-01-f1/OUTCAR": {
+      "bytes": 532771,
+      "sha256": "73de04be90f6eb2d142c2a6f87b961d6e46991e1a5ccf03171f14deb7d044b1d"
+    },
+    "calculations/md-01-f1/PCDAT": {
+      "bytes": 234,
+      "sha256": "341b0d3b5de122a7bb2ca452bf868dabcbfdb2966bd995a8440b0475ceca5f8c"
+    },
+    "calculations/md-01-f1/POSCAR": {
+      "bytes": 4561,
+      "sha256": "900086f04d04c52eda240c67e60d27d9d7a1ee051d3f4f1b165ce02e8ca35a52"
+    },
+    "calculations/md-01-f1/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/md-01-f1/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-01-f1/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-01-f1/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "64d4ea27fdec5c2133e8e000359594c9d37c8d21b045296e25f41633b9294e0d"
+    },
+    "calculations/md-01-f1/input-manifest.json": {
+      "bytes": 522,
+      "sha256": "f2175b2f16dcdac88c355a140c1977d2037a07e502fd5b175df09c3d83171cb8"
+    },
+    "calculations/md-01-f1/label.json": {
+      "bytes": 3387,
+      "sha256": "0eb848cc308020cd6747463288158aad4bb75e208013efe81c457f3852ef64c6"
+    },
+    "calculations/md-01-f1/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "27bf34ba7690dafec96940645cf0dea0f3cf418fcbeb21e9969dd35f7a51c1ec"
+    },
+    "calculations/md-01-f1/vasp.stdout": {
+      "bytes": 3100,
+      "sha256": "c5811b1b20356a0814b18fdf3983948231490888fce9ab2448e6cc6bc44be1df"
+    },
+    "calculations/md-01-f1/vasprun.xml": {
+      "bytes": 501464,
+      "sha256": "891c995cd16649e04c703ff2102f79445cd75a02623cdd3266370646116a6969"
+    },
+    "calculations/md-01-f2/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-01-f2/CONTCAR": {
+      "bytes": 4439,
+      "sha256": "f1a718bda94941a44c7b87c9758e39c951abae4de078112c71684a3bcf97118c"
+    },
+    "calculations/md-01-f2/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "e9a954b6d38cc5508af70914d56bde9bf15c47d4438c77a6883a3f00f0424c52"
+    },
+    "calculations/md-01-f2/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "8cb4fa5cb80392067256b6c28558231376d3f8325e7b892dbe34e1e36eeb39b1"
+    },
+    "calculations/md-01-f2/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "95b57ea2f211e472c950892df7879ba014682d954d1306e09b995461bd98aff1"
+    },
+    "calculations/md-01-f2/INCAR": {
+      "bytes": 272,
+      "sha256": "19103cda78b405ef236d7f7a5a13619dc9c8094c1a0d4b8097764d997e76ff9f"
+    },
+    "calculations/md-01-f2/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/md-01-f2/OSZICAR": {
+      "bytes": 1669,
+      "sha256": "842df73044ece5053fadf6cd28a85fde623521bf33a078c0b925a3de5edae95c"
+    },
+    "calculations/md-01-f2/OUTCAR": {
+      "bytes": 532587,
+      "sha256": "dd2bac0f115f0d5ec7f17ab33cced79a3d30a50c495d170516b9edec3f27abd8"
+    },
+    "calculations/md-01-f2/PCDAT": {
+      "bytes": 234,
+      "sha256": "c3cc24fee784cbad979a066e2051d8dcf18d0fea9c8a539060261e7b0d958a61"
+    },
+    "calculations/md-01-f2/POSCAR": {
+      "bytes": 4561,
+      "sha256": "d3880964792be2b221b9678378c06a8e91dc4b3398a7d735bfc5b9c49da1f843"
+    },
+    "calculations/md-01-f2/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/md-01-f2/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-01-f2/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-01-f2/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "81585c44fa45e610e751159932c1f3acebe7862c628a443b219d6635959a0667"
+    },
+    "calculations/md-01-f2/input-manifest.json": {
+      "bytes": 522,
+      "sha256": "35db3201e05cf57040e67f9da3cf09d54fe94dc70e07aff1a44ad2424caf3878"
+    },
+    "calculations/md-01-f2/label.json": {
+      "bytes": 3385,
+      "sha256": "91ddf6f9aca0a22bddf91d7fd615f4d4ec0d6f9979443fe283a9a2fa97a3b2e1"
+    },
+    "calculations/md-01-f2/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "e66b0c620534dbce941012b1a7d6e77e61015d6786a1cd832a344e5708c49d58"
+    },
+    "calculations/md-01-f2/vasp.stdout": {
+      "bytes": 3100,
+      "sha256": "c49dda1f3664b9c040a35f2cf0fe5c9f663b60b69739f78d15cca0a3f2e30f43"
+    },
+    "calculations/md-01-f2/vasprun.xml": {
+      "bytes": 501464,
+      "sha256": "c5781a2bb2dcb470df5aaf56d1ba6b2599e9b701d958a934c6092440afcdccd4"
+    },
+    "calculations/md-02-f0/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-02-f0/CONTCAR": {
+      "bytes": 4439,
+      "sha256": "ea9d63b373c065df0c557548c82adcb0badf1f8e747fc6080566b80d545daf2e"
+    },
+    "calculations/md-02-f0/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "9dd755d2eac34eba940ae0fd721d79f889ac2055fdc54ba6d51e8fce464ce499"
+    },
+    "calculations/md-02-f0/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "a1f5b0aae1a418f9930cea79f3031cb46159ee07c6b498c1abd34c29310583ad"
+    },
+    "calculations/md-02-f0/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "95b57ea2f211e472c950892df7879ba014682d954d1306e09b995461bd98aff1"
+    },
+    "calculations/md-02-f0/INCAR": {
+      "bytes": 272,
+      "sha256": "40d9e5dcbfb48c5d049937f13c44a25535a48f775ddd719cffa0db54f5038515"
+    },
+    "calculations/md-02-f0/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/md-02-f0/OSZICAR": {
+      "bytes": 1669,
+      "sha256": "7cc17e76562f9cd82ec93ff5454ec9e9a1841b7f79707384916a7a656925e302"
+    },
+    "calculations/md-02-f0/OUTCAR": {
+      "bytes": 532694,
+      "sha256": "8a8f6f6ec53a3d8621b0dd99d868814c15853677f725286129007eef6dfaba42"
+    },
+    "calculations/md-02-f0/PCDAT": {
+      "bytes": 234,
+      "sha256": "9b8116f278308f77f53fef9308784eed1d10e1d0a1c5eeca0f1e78219ffb05e7"
+    },
+    "calculations/md-02-f0/POSCAR": {
+      "bytes": 4561,
+      "sha256": "f9a64206b657e6e0b6af212810e2071852c47c2f210c4bf3227db6e5d3779d59"
+    },
+    "calculations/md-02-f0/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/md-02-f0/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-02-f0/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-02-f0/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "87982d497e0b6d401bd770e65f5a3da0c6d42a8e851b11c9173f3ec954d36b39"
+    },
+    "calculations/md-02-f0/input-manifest.json": {
+      "bytes": 522,
+      "sha256": "276394d42dc7d263a57b0daaca305719799b3423dd4cb4f66fbce06bf60a226f"
+    },
+    "calculations/md-02-f0/label.json": {
+      "bytes": 3391,
+      "sha256": "a076441ec9bfb9dcfa2d1e20658981abbed138a16faf1b6f942971ba97611b2d"
+    },
+    "calculations/md-02-f0/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "ea5597d007cf1d179eaf9b96b6941088a61a5b7bb552f491f2c46c6ee92334a0"
+    },
+    "calculations/md-02-f0/vasp.stdout": {
+      "bytes": 3100,
+      "sha256": "3b72a23c9c6ae63d7de9d60a9a127815a61c79d7ada4fbd20256c6577f6d0677"
+    },
+    "calculations/md-02-f0/vasprun.xml": {
+      "bytes": 501464,
+      "sha256": "8dc03eaf3e952c8b0f456416acfa93e6168ed592c1ada5891746e57a42420aa7"
+    },
+    "calculations/md-02-f1/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-02-f1/CONTCAR": {
+      "bytes": 4439,
+      "sha256": "52b5e82b874c42f8cd20bd80f0c9d6476a1ce50ec6fe003e7f41dca4ed7a2ad5"
+    },
+    "calculations/md-02-f1/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "3850e6792806485c381b339ee9b6a4a5a6fdc612c6d7c6e6eaa1627f7b1ae813"
+    },
+    "calculations/md-02-f1/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "b817fb08324c0a947579f08471276f9b2cc2729e647aab5eb074d973c028e5ad"
+    },
+    "calculations/md-02-f1/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "95b57ea2f211e472c950892df7879ba014682d954d1306e09b995461bd98aff1"
+    },
+    "calculations/md-02-f1/INCAR": {
+      "bytes": 272,
+      "sha256": "b46087fe1fb4366c8d929dcd32c53b30f30bcb4829f1e377f174d2e29c4e9801"
+    },
+    "calculations/md-02-f1/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/md-02-f1/OSZICAR": {
+      "bytes": 1669,
+      "sha256": "6ca9f97cb579c46502b1363d8c85afcd5248f7e6730f2e97bd3b9235b22d6bad"
+    },
+    "calculations/md-02-f1/OUTCAR": {
+      "bytes": 532817,
+      "sha256": "6e0623e7812e1e090ce1dd4589e0b60d577bc90e1b919c64f2f7bf2e2bcc7b9f"
+    },
+    "calculations/md-02-f1/PCDAT": {
+      "bytes": 234,
+      "sha256": "e17d1f1df4fd2c1bf29d0fb251ebb19e59b406cd8fe6aa29e8e2d9ad846495bf"
+    },
+    "calculations/md-02-f1/POSCAR": {
+      "bytes": 4561,
+      "sha256": "4f0d5f60e5dd8f65044fc5d648ea5846e190c2d0e64ec8720b915abac3d82d1b"
+    },
+    "calculations/md-02-f1/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/md-02-f1/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-02-f1/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-02-f1/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "d95088a6829497882d4fbe22942665be2acfb70aa3d3630065e53a49bec50f0c"
+    },
+    "calculations/md-02-f1/input-manifest.json": {
+      "bytes": 522,
+      "sha256": "3e9c65b04eb74b6d97946d9a0024429edc2dcd16262c8aca231e7af57d2b564d"
+    },
+    "calculations/md-02-f1/label.json": {
+      "bytes": 3380,
+      "sha256": "a21920a901fb50aba1c12cdade5fd1acf1ba589392d448c9e024cbe77cf9b66d"
+    },
+    "calculations/md-02-f1/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "a36b6b1381ebeef2026425e66049f9c02c3d85c31549b056865ecc6cc2e79bda"
+    },
+    "calculations/md-02-f1/vasp.stdout": {
+      "bytes": 3100,
+      "sha256": "1b8901e0b05ecba13865b85907f184c476580c33ac1ccc62e518731e7df0ebc3"
+    },
+    "calculations/md-02-f1/vasprun.xml": {
+      "bytes": 501464,
+      "sha256": "e3c2594588ddac7cb82a1976c72d282aed54aeb3730c03811199edcc2f8ecb41"
+    },
+    "calculations/md-02-f2/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-02-f2/CONTCAR": {
+      "bytes": 4439,
+      "sha256": "e53d105375a6c568e7097a258a862ef65a310b190a9195d633ebf3b787c6bef1"
+    },
+    "calculations/md-02-f2/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "4d6c2488f89fd6a6804bde530111235b68f20e8af47fea00efce8084e8294973"
+    },
+    "calculations/md-02-f2/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "7ec389a70f4a1020c8561c505c44177c844400051703ac1ac270af08ee2a2af0"
+    },
+    "calculations/md-02-f2/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "95b57ea2f211e472c950892df7879ba014682d954d1306e09b995461bd98aff1"
+    },
+    "calculations/md-02-f2/INCAR": {
+      "bytes": 272,
+      "sha256": "74a5cfe25da44c678924c10ad71e08c5308d0a62008aacb691be3bd494d6254d"
+    },
+    "calculations/md-02-f2/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/md-02-f2/OSZICAR": {
+      "bytes": 1669,
+      "sha256": "83a14a5c54ecc795199d8d34a3d05318472e0d09915a95b3c9d320201ea55dd9"
+    },
+    "calculations/md-02-f2/OUTCAR": {
+      "bytes": 532691,
+      "sha256": "f461dcfb0a2d4a4f67b54975e26b739464f582237969d92935fb87013a9ca6e4"
+    },
+    "calculations/md-02-f2/PCDAT": {
+      "bytes": 234,
+      "sha256": "308ef69a991223e1f55f8572b7f4d1de7749d14afa556faaccce308f0b3d3a04"
+    },
+    "calculations/md-02-f2/POSCAR": {
+      "bytes": 4561,
+      "sha256": "cdc89dcd258ed77b0f856934621ddeadbf1868fd6206b0624050a539420429e9"
+    },
+    "calculations/md-02-f2/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/md-02-f2/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-02-f2/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-02-f2/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "56e94c58e8af4ae9807e3eb753843c4071ef151b714c5ab658b0d47dfa8c65f0"
+    },
+    "calculations/md-02-f2/input-manifest.json": {
+      "bytes": 522,
+      "sha256": "442774c96e615ab7b3e141175e271338566bd00fcd43a9b2815da1c2b4c8906b"
+    },
+    "calculations/md-02-f2/label.json": {
+      "bytes": 3390,
+      "sha256": "280ac6dd0d4e21913e2e574425b2b1fa243a2357ad81e1cfcca86e5245ce8e5d"
+    },
+    "calculations/md-02-f2/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "3bef8791fbaaa641976422421490995b0e31d938b63434bc426a968b8e6974d0"
+    },
+    "calculations/md-02-f2/vasp.stdout": {
+      "bytes": 3100,
+      "sha256": "44774e2c5c0086748928581a40feef0e3a670fb92de2bf39c22d95f80d3de328"
+    },
+    "calculations/md-02-f2/vasprun.xml": {
+      "bytes": 501464,
+      "sha256": "6a538af6dd9bf8d95d3a8ff6b42365d3fbdc2d4b36390b08bbebf59c3f7b6d11"
+    },
+    "calculations/md-03-f0/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-03-f0/CONTCAR": {
+      "bytes": 4439,
+      "sha256": "bfc4e114edf5a842fb72386fdf8edcdf43015c5093ba553c26620972def31ec7"
+    },
+    "calculations/md-03-f0/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "7297c48f8e537c9964d42c94dfe95553c4c97750db6664270195281ff82d91bc"
+    },
+    "calculations/md-03-f0/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "c4c7546fdc15406822c3750ced493f0289fd0e938c4b4ee326ba5e0ecd78577f"
+    },
+    "calculations/md-03-f0/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "95b57ea2f211e472c950892df7879ba014682d954d1306e09b995461bd98aff1"
+    },
+    "calculations/md-03-f0/INCAR": {
+      "bytes": 272,
+      "sha256": "effd1646a54dd74008d9fc2ac1c70ac34db0491c386e1f28f7d24065c6d4a56f"
+    },
+    "calculations/md-03-f0/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/md-03-f0/OSZICAR": {
+      "bytes": 1669,
+      "sha256": "a1ec12651c010145c1b4f2222b97765a984dbf4af4df93832276fcf4fcdcbf67"
+    },
+    "calculations/md-03-f0/OUTCAR": {
+      "bytes": 532758,
+      "sha256": "3b2292527b27637d600fc92b6b6ad9ff339a3a2c32905a46f2eb67eb8736ef7b"
+    },
+    "calculations/md-03-f0/PCDAT": {
+      "bytes": 234,
+      "sha256": "ed56d90ed0fbf36b9c07e6c97f417ab564bb7c47332f435345ee6d5dd2eaea23"
+    },
+    "calculations/md-03-f0/POSCAR": {
+      "bytes": 4561,
+      "sha256": "1c44df86554dde4e4cb31f2b9b69d1c8b715251fc4629ac4d946c6f44840794a"
+    },
+    "calculations/md-03-f0/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/md-03-f0/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-03-f0/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-03-f0/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "d202f0deda9dc3f4a9f5210344ec3be802dc2327be2aa9e01b3b99896a390bb6"
+    },
+    "calculations/md-03-f0/input-manifest.json": {
+      "bytes": 522,
+      "sha256": "db29d3a9e8a8b82601356f9603d0bf8d143e2b3fdcb305f9e7fbb0276f84c7f8"
+    },
+    "calculations/md-03-f0/label.json": {
+      "bytes": 3381,
+      "sha256": "582e01e6f6b6b0cbee1a93c733f1302b38b0814a581ac68cd20236f34313a846"
+    },
+    "calculations/md-03-f0/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "bcdb31e569c7662c4baa13943e16dc4db379e91e2f2c221307a86816824df1e0"
+    },
+    "calculations/md-03-f0/vasp.stdout": {
+      "bytes": 3100,
+      "sha256": "c686ec7cafd5ddb66a0367059a33e3c94f6205505195c800b686ae2931c7ac85"
+    },
+    "calculations/md-03-f0/vasprun.xml": {
+      "bytes": 501464,
+      "sha256": "7c91f3d34dbbf0b4651701a6a1cf90a17808f5048f997871180e7b8cb6a0d54a"
+    },
+    "calculations/md-03-f1/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-03-f1/CONTCAR": {
+      "bytes": 4439,
+      "sha256": "26ef27a5967671d3a10158d17a1aec1705a0cafdb4d3042df4f7d3bd242325ae"
+    },
+    "calculations/md-03-f1/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "7b2ae8cb732f249e9cb2c876b53a743cf89812d4428b2b558629ab6f306d6bc2"
+    },
+    "calculations/md-03-f1/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "f364571a8d074fd9e454affae10f1d58de7480e4a21926ce54c39331fba0c8f2"
+    },
+    "calculations/md-03-f1/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "95b57ea2f211e472c950892df7879ba014682d954d1306e09b995461bd98aff1"
+    },
+    "calculations/md-03-f1/INCAR": {
+      "bytes": 272,
+      "sha256": "c3c13efa480606cc31e28f109640e01aedc4a95afad0351a555e58d1c970a00c"
+    },
+    "calculations/md-03-f1/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/md-03-f1/OSZICAR": {
+      "bytes": 1669,
+      "sha256": "482f5f0a1440cf7e433bb79e5b4a237c8576281296f904701d52ef8ceb4d7c83"
+    },
+    "calculations/md-03-f1/OUTCAR": {
+      "bytes": 532934,
+      "sha256": "7ce21339a50d735122b963bd3ebbc313e7e3afc44f25198313bc4177f166e8b5"
+    },
+    "calculations/md-03-f1/PCDAT": {
+      "bytes": 234,
+      "sha256": "85e59085fc912d34a7e42b5d675108ee24559f4bd3035ed3a097721dec85be9a"
+    },
+    "calculations/md-03-f1/POSCAR": {
+      "bytes": 4561,
+      "sha256": "c4ce48512ff889e7dfa9a401eb2833167ecaf831a6835405c273e5f236d0bfed"
+    },
+    "calculations/md-03-f1/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/md-03-f1/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-03-f1/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-03-f1/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "e30a642bf4e365806cfc4a3a7070a1137ca93f3de4f179b36bddfcd48cc6b34c"
+    },
+    "calculations/md-03-f1/input-manifest.json": {
+      "bytes": 522,
+      "sha256": "cea5b0bfb6a8f3ea7804e8c1293cf9620d4438435c5699ae39d2dcb083649d66"
+    },
+    "calculations/md-03-f1/label.json": {
+      "bytes": 3387,
+      "sha256": "08e64800948ee81688299b8084ebdee03bccd2d44ae3e9f24cd7c0232e140f3c"
+    },
+    "calculations/md-03-f1/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "0d294912b354ece90f9495385e433b5dd551e726461c08d9fdc91d2faf0b9da7"
+    },
+    "calculations/md-03-f1/vasp.stdout": {
+      "bytes": 3100,
+      "sha256": "544fd3ff84078cc978d50724590d2f0885613abf20b5801137a4c68dda2d4466"
+    },
+    "calculations/md-03-f1/vasprun.xml": {
+      "bytes": 501464,
+      "sha256": "a67fa7977fdb6138dedc28474d39db2edf5cdcc99b1e8b97bd897d198a714ab1"
+    },
+    "calculations/md-03-f2/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-03-f2/CONTCAR": {
+      "bytes": 4439,
+      "sha256": "4a49a52e2d03040ff028fbccff96e3da800199cd5ca5a42bad3e5ebed24c6a2a"
+    },
+    "calculations/md-03-f2/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "a77613a2bec06f99dc99006156d55f1957111d41322a6745e4a326c54d2bd499"
+    },
+    "calculations/md-03-f2/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "0fa05b58a17da79b1d2d5d7ea49c716ae2a38377fb11ba8c586e530f43c33097"
+    },
+    "calculations/md-03-f2/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "95b57ea2f211e472c950892df7879ba014682d954d1306e09b995461bd98aff1"
+    },
+    "calculations/md-03-f2/INCAR": {
+      "bytes": 272,
+      "sha256": "2fc13a5d67b26dc8e052da16453a32319e66f0a63b5e8c6deb5eff394f83fc77"
+    },
+    "calculations/md-03-f2/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/md-03-f2/OSZICAR": {
+      "bytes": 1576,
+      "sha256": "a794ba348a306fb7c55bbc617660e4243c14fa4b3da41c3858b68144607070b4"
+    },
+    "calculations/md-03-f2/OUTCAR": {
+      "bytes": 530577,
+      "sha256": "84629890ebaafe218716e61f00de070ef2175412062c0ed9f1aa535ede9786b0"
+    },
+    "calculations/md-03-f2/PCDAT": {
+      "bytes": 234,
+      "sha256": "21cb448ff14090446d2fa067c8e34a16208c2dee25545dee671d472578a5b866"
+    },
+    "calculations/md-03-f2/POSCAR": {
+      "bytes": 4561,
+      "sha256": "5bdf77433e9d7fd41072ecb0dcffdc2934d65b092e9743e3b0ac6cf0eb61c47e"
+    },
+    "calculations/md-03-f2/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/md-03-f2/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-03-f2/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-03-f2/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "67e044b9689f1468f909b81253a2580bbe639fd7351beb3ae6e16bf271c24ab7"
+    },
+    "calculations/md-03-f2/input-manifest.json": {
+      "bytes": 522,
+      "sha256": "bd0655fdb24e0a752a03654e0f4b505b77fdd71532101f1ad80765340de3623e"
+    },
+    "calculations/md-03-f2/label.json": {
+      "bytes": 3378,
+      "sha256": "0e4b7cade8e589d5379824b51084459bc77f553a9dd9de7c9bd46a428bdc0bec"
+    },
+    "calculations/md-03-f2/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "815eedcb885320ab51f5492832dc43d24423750d58f8e47a02c24d1dff121d25"
+    },
+    "calculations/md-03-f2/vasp.stdout": {
+      "bytes": 3007,
+      "sha256": "7fd23782a493495b52746689eb8d9dc5761b0562f5146f357959a94e791c3a89"
+    },
+    "calculations/md-03-f2/vasprun.xml": {
+      "bytes": 501184,
+      "sha256": "0d246fa2cff19dff19eeeaaab136eaa6869d4736b525436673d37fecd7026fa2"
+    },
+    "calculations/md-04-f0/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-04-f0/CONTCAR": {
+      "bytes": 4439,
+      "sha256": "eafa3b184cf1a760aaad2f86ce271e2c778ecb67ef22841325411aedbbe7f17a"
+    },
+    "calculations/md-04-f0/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "8a00bebec3e237bde78874e083a9d497618b1a77489faef974b5325289baee21"
+    },
+    "calculations/md-04-f0/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "bd7ff0b5293bc03055f829b9214d71b01318fe5393017196f4672be84e23251a"
+    },
+    "calculations/md-04-f0/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "95b57ea2f211e472c950892df7879ba014682d954d1306e09b995461bd98aff1"
+    },
+    "calculations/md-04-f0/INCAR": {
+      "bytes": 272,
+      "sha256": "fe7bd66ddf0a0b2275cd734b990a85b3bec523c90e8245cf471d8d9afeb653e3"
+    },
+    "calculations/md-04-f0/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/md-04-f0/OSZICAR": {
+      "bytes": 1669,
+      "sha256": "a75c82b3cd0e74f0dad81c76aa26e9ca28e5c353527111d0fb276fdbd62b9f38"
+    },
+    "calculations/md-04-f0/OUTCAR": {
+      "bytes": 533042,
+      "sha256": "f218cb809d476d2940dc12f447f66a02c7e91ae71f53d145f8601b7eca6543eb"
+    },
+    "calculations/md-04-f0/PCDAT": {
+      "bytes": 234,
+      "sha256": "92e92d851e23f3fa6e4d6b081eb455313ea41ec682a341e570fe0122eeb4b41b"
+    },
+    "calculations/md-04-f0/POSCAR": {
+      "bytes": 4561,
+      "sha256": "7871a3cbaeaa1c4d5f8767f2a7d1e9f4a02f1a50da5dfed4772d9d9ad7972aa8"
+    },
+    "calculations/md-04-f0/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/md-04-f0/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-04-f0/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-04-f0/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "b44f477f90e050ecd996adf7b0b1e3d4b40a4c3f55e6aceba89443dff0c623b3"
+    },
+    "calculations/md-04-f0/input-manifest.json": {
+      "bytes": 527,
+      "sha256": "385eea1d61baf5fb2e72681c7133e931e49aa3619bb3fb5ad03577ed707f458a"
+    },
+    "calculations/md-04-f0/label.json": {
+      "bytes": 3394,
+      "sha256": "f4203e05c463cc0f5c0696bcdedc9e0e6594d27c1104300680788420ed7000c7"
+    },
+    "calculations/md-04-f0/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "ca461b7a90584f5786d54b89cb598aa210087a36deb1ecbeec7a26b3d29caaae"
+    },
+    "calculations/md-04-f0/vasp.stdout": {
+      "bytes": 3100,
+      "sha256": "52ae5f0270c7e7f97b945aeb009101a9edd7da6dae94756942f0e42bb8b4fedb"
+    },
+    "calculations/md-04-f0/vasprun.xml": {
+      "bytes": 501464,
+      "sha256": "377b7a1f95ef89e09cb2b4a0b26accfc157cabee50eff0d463d4c086cb5552d4"
+    },
+    "calculations/md-04-f1/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-04-f1/CONTCAR": {
+      "bytes": 4439,
+      "sha256": "d433d8e1a0786f4f1dbee2b0eccaee0b5a6632c5c00f886779957021678f671b"
+    },
+    "calculations/md-04-f1/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "3801fb7d31214d1a41f24a16e00dc4838b34ab633128f0f25123403a3cb581b8"
+    },
+    "calculations/md-04-f1/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "9cfc1f4ee031997c14db4cef22abb34f84bd9097363038b3a8ce1ec02f061b05"
+    },
+    "calculations/md-04-f1/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "95b57ea2f211e472c950892df7879ba014682d954d1306e09b995461bd98aff1"
+    },
+    "calculations/md-04-f1/INCAR": {
+      "bytes": 272,
+      "sha256": "36d28ea0e2c334ba7c010cd5b4f8c8c831ed56b42a638d57ebbe3373d5a6b151"
+    },
+    "calculations/md-04-f1/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/md-04-f1/OSZICAR": {
+      "bytes": 1576,
+      "sha256": "d9e059123ee54e6dff32a01d6152f3537f805607cd59ce2a65fbf5a7b0966105"
+    },
+    "calculations/md-04-f1/OUTCAR": {
+      "bytes": 531034,
+      "sha256": "dcebba3b2f1c0a3721f4c6b77af557239362ca7ec0ebdf34491dc9e04089437b"
+    },
+    "calculations/md-04-f1/PCDAT": {
+      "bytes": 234,
+      "sha256": "a7a2f8539403527f4d32062d39c0cd74626941feb148e1d66b77a02bb6934e60"
+    },
+    "calculations/md-04-f1/POSCAR": {
+      "bytes": 4561,
+      "sha256": "5129c1716313ea9cf892a02167d1e86f606be4d8bac913b868c50cf960189857"
+    },
+    "calculations/md-04-f1/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/md-04-f1/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-04-f1/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-04-f1/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "ea246b39fe83c6d1915f73f7a6a10d98c7461678ad24a23de3a13c54fc613ee1"
+    },
+    "calculations/md-04-f1/input-manifest.json": {
+      "bytes": 527,
+      "sha256": "2a6ebb12f78e3d8185c366fb5b04cd2b2a94c4ae96821dbd14a892dae77a3df9"
+    },
+    "calculations/md-04-f1/label.json": {
+      "bytes": 3397,
+      "sha256": "65695e9c9f024eceedaa03615e848ba1689035e6d52db065a99cc2d527f66793"
+    },
+    "calculations/md-04-f1/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "103ebf95cc87db83a17fa4e59453aea7a8b5b7ce119730a8debd4bc5c559e24a"
+    },
+    "calculations/md-04-f1/vasp.stdout": {
+      "bytes": 3007,
+      "sha256": "d629c1c50adce5467ae0ff38bd4c1876ebdcac6f2d77d1c0aaff83fec263d474"
+    },
+    "calculations/md-04-f1/vasprun.xml": {
+      "bytes": 501184,
+      "sha256": "33dc51629dcdb6cdc6baaa7b6437572dc3a3c6addef8fdb9f533fd23b24be51d"
+    },
+    "calculations/md-04-f2/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-04-f2/CONTCAR": {
+      "bytes": 4439,
+      "sha256": "cfe3be6aea4065c271651bb0129f1c2ad6d2228743576339de9a21a943728879"
+    },
+    "calculations/md-04-f2/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "b48a472c76172db491f6cfa47399a93d0350c5270d8be53dd4c01333d0a7fda9"
+    },
+    "calculations/md-04-f2/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "5d3e9ddd690ee4391023ff65371589aabe8d31436606e7b7f608a0d597d75be8"
+    },
+    "calculations/md-04-f2/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "95b57ea2f211e472c950892df7879ba014682d954d1306e09b995461bd98aff1"
+    },
+    "calculations/md-04-f2/INCAR": {
+      "bytes": 272,
+      "sha256": "d6a80276770f35fc1e10bacde4c7ab56d6c71dcbb06ed552ddf8961d513feed0"
+    },
+    "calculations/md-04-f2/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/md-04-f2/OSZICAR": {
+      "bytes": 1576,
+      "sha256": "8da7988b1d7404a1734d92f968a8306f2023eb75e016008dcd3632eb8587442e"
+    },
+    "calculations/md-04-f2/OUTCAR": {
+      "bytes": 530909,
+      "sha256": "3e9c693f4e9f3fafc6d506ae148b72feca25daaf8e8b19aee6ac28a4f6016649"
+    },
+    "calculations/md-04-f2/PCDAT": {
+      "bytes": 234,
+      "sha256": "2f230254ec20c3559ae45ac971b78f1c5bf102a8085dcf6af49289c05ca5811d"
+    },
+    "calculations/md-04-f2/POSCAR": {
+      "bytes": 4561,
+      "sha256": "141df929862eaa71b73f4353fd665e1f324858028e28f3140fc25d3566d9c0ee"
+    },
+    "calculations/md-04-f2/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/md-04-f2/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-04-f2/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-04-f2/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "3b7b3c4d4b3950f2696c5af7076fb74dedf213692e7c03bd00295ab69b8a17a8"
+    },
+    "calculations/md-04-f2/input-manifest.json": {
+      "bytes": 527,
+      "sha256": "98bc5e32c46002d4b8f566ab5eeb06b5942521b0b097ddbf5e3feb1f4cac00fe"
+    },
+    "calculations/md-04-f2/label.json": {
+      "bytes": 3390,
+      "sha256": "ea48deb49041cf2c3886d0b6e63056aaac07101e3006ea388f58ae342fa8683a"
+    },
+    "calculations/md-04-f2/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "f779b43a562c58dd89f7fc0399d19b1916954cdcebfc15d5fc43e4e5f363c23a"
+    },
+    "calculations/md-04-f2/vasp.stdout": {
+      "bytes": 3007,
+      "sha256": "f561b0cd90790c2c6c867df331f747acd3828c63e7d45bb8571e48c50c9f91bd"
+    },
+    "calculations/md-04-f2/vasprun.xml": {
+      "bytes": 501184,
+      "sha256": "7d146009ca2c215df671972c2936ae6fd5a7be7fd015dcece6c164471d33f31a"
+    },
+    "calculations/md-05-f0/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-05-f0/CONTCAR": {
+      "bytes": 4439,
+      "sha256": "b5347f633d099596a73837dfc11d66420caa1ede2ebdca4727de77d2254f30f5"
+    },
+    "calculations/md-05-f0/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "4e74617a9291063a9a14de736a5244fdabb79e507b65d1acd38e6442a51b366d"
+    },
+    "calculations/md-05-f0/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "e1c5ed7dadb6f5944c8d9a33c4da608407e97ca7ed36675f08980ff361eb54a3"
+    },
+    "calculations/md-05-f0/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "95b57ea2f211e472c950892df7879ba014682d954d1306e09b995461bd98aff1"
+    },
+    "calculations/md-05-f0/INCAR": {
+      "bytes": 272,
+      "sha256": "260a4dfce12f71783a63fb17f8865995800bc93906187492e2c747dd8d89ae23"
+    },
+    "calculations/md-05-f0/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/md-05-f0/OSZICAR": {
+      "bytes": 1669,
+      "sha256": "2c0866097c9bdec4489fcf3489ed3c7bbb7d17f238f47ea043613adf1e91e065"
+    },
+    "calculations/md-05-f0/OUTCAR": {
+      "bytes": 532526,
+      "sha256": "4a8ed293e9590a516308de767a1bd6f0ce5dce3dfa93f5cf631106f6467c0642"
+    },
+    "calculations/md-05-f0/PCDAT": {
+      "bytes": 234,
+      "sha256": "49853f9296e57b1acff53d41b83350d2386a845c7634983c7bf4147f78754708"
+    },
+    "calculations/md-05-f0/POSCAR": {
+      "bytes": 4561,
+      "sha256": "d0b06f651131ac3aa08fff987da6e9e31630bca3f2ee9d4f16df279e167ae343"
+    },
+    "calculations/md-05-f0/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/md-05-f0/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-05-f0/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-05-f0/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "248d25f4046c803d25e4846ba277f7cc1dd76e3b5dd629b1772b31f2b99cb030"
+    },
+    "calculations/md-05-f0/input-manifest.json": {
+      "bytes": 527,
+      "sha256": "d3f9e15c399eb55ca2803a4baf06a37420055ca11601971c4032c13ef0fbd7b4"
+    },
+    "calculations/md-05-f0/label.json": {
+      "bytes": 3392,
+      "sha256": "e3e6dbe3c4ed36f54cd2ed90ca6ab81b93b2e6f2bb070ea8e5356c7f50f7d331"
+    },
+    "calculations/md-05-f0/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "4efdec1f441caf711ccf8ef1717a6bcbdebff111169e2fd05d185fb015843995"
+    },
+    "calculations/md-05-f0/vasp.stdout": {
+      "bytes": 3100,
+      "sha256": "9a9f7323226f009f797ae4bb75ff4102d2a255b1d6586c2beca6a89ffe5babbe"
+    },
+    "calculations/md-05-f0/vasprun.xml": {
+      "bytes": 501464,
+      "sha256": "9d693e8a25dfe3854a250c255c982f9bc4f2ac59585ff7552374a194ba7f7541"
+    },
+    "calculations/md-05-f1/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-05-f1/CONTCAR": {
+      "bytes": 4439,
+      "sha256": "9631308953a10ee047566dcd4f248547f9572b5489bb6033166e191eb7e4f857"
+    },
+    "calculations/md-05-f1/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "bf7ca8c729d537362aed2cf8e1b6108beced3059536e508f3ade51268497c74f"
+    },
+    "calculations/md-05-f1/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "cf8be7ba874a014234e98ac912529c3ff7877dcd560ec2dee5490d2acb3aac8b"
+    },
+    "calculations/md-05-f1/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "95b57ea2f211e472c950892df7879ba014682d954d1306e09b995461bd98aff1"
+    },
+    "calculations/md-05-f1/INCAR": {
+      "bytes": 272,
+      "sha256": "3f128d8e44044b1cef02c8f60d40d19389eb40792fcdfd2727b3f62aadafee40"
+    },
+    "calculations/md-05-f1/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/md-05-f1/OSZICAR": {
+      "bytes": 1669,
+      "sha256": "a6433f7bd83a8ca1416439936637d2dd4fd94f27632fcdd70c756176022dca48"
+    },
+    "calculations/md-05-f1/OUTCAR": {
+      "bytes": 532810,
+      "sha256": "5072ce70447186d3b2270f8ecb3ae58d7b073b3f3f55bd782ec55ff141d22a8a"
+    },
+    "calculations/md-05-f1/PCDAT": {
+      "bytes": 234,
+      "sha256": "65e62227a4203209ed6e79f05e979f2037c38b8c31a7e853097f4be7a80e3f48"
+    },
+    "calculations/md-05-f1/POSCAR": {
+      "bytes": 4561,
+      "sha256": "4729cd46a39b7ea029576700c9d664e22c283d5c9284fe653508c88c69440468"
+    },
+    "calculations/md-05-f1/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/md-05-f1/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-05-f1/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-05-f1/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "65678b9548753d934944524c6cac76b62b2f8c92fab4da7ae6632fcfa6369e34"
+    },
+    "calculations/md-05-f1/input-manifest.json": {
+      "bytes": 527,
+      "sha256": "bda23000aa9642057e167224a875043523a49c586bae2c9a9598b584c886b9ef"
+    },
+    "calculations/md-05-f1/label.json": {
+      "bytes": 3396,
+      "sha256": "f0e501f2fa2c6ba5fd89f094bd324a63391146f39c1eaa9dad6cf7bdf117faff"
+    },
+    "calculations/md-05-f1/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "f0625722625c293289757d050be36c35d72aedb78edf5459da5c7f23ca3e3ae3"
+    },
+    "calculations/md-05-f1/vasp.stdout": {
+      "bytes": 3100,
+      "sha256": "8cc56b656f73c525ec96dc27fbbb6e1c383f0ba880385ef2877e18bf967667f4"
+    },
+    "calculations/md-05-f1/vasprun.xml": {
+      "bytes": 501464,
+      "sha256": "2945fdec4ff7d114c0561e318045a9f1c104030c7c8895a1d92999829c300035"
+    },
+    "calculations/md-05-f2/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-05-f2/CONTCAR": {
+      "bytes": 4439,
+      "sha256": "f82fa15c1bb367b510112aa62c293dd49990f196c8f4a0a1df1087d8928e574d"
+    },
+    "calculations/md-05-f2/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "bc06cbff5ae689582517b85524281a89bcd7f9314825f4fbc4a335872e3c4ec3"
+    },
+    "calculations/md-05-f2/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "ababd3a2b2aa0665ccbae85a079474db51f3ed6d4b3f5e1aaf3bd7e1f3290b10"
+    },
+    "calculations/md-05-f2/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "95b57ea2f211e472c950892df7879ba014682d954d1306e09b995461bd98aff1"
+    },
+    "calculations/md-05-f2/INCAR": {
+      "bytes": 272,
+      "sha256": "fe459b70fef3e06fffee74aeb22efa593d702f897da22a8a7953b6de36b84bb1"
+    },
+    "calculations/md-05-f2/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/md-05-f2/OSZICAR": {
+      "bytes": 1669,
+      "sha256": "780f5303ed8df84f812418e847292a92aca206e1bdbf1971ed385d4684049162"
+    },
+    "calculations/md-05-f2/OUTCAR": {
+      "bytes": 532220,
+      "sha256": "1d7677d746c7c2a1c77533dfb0b38b83bd718f4041a55b9c7484d2f8e6657c39"
+    },
+    "calculations/md-05-f2/PCDAT": {
+      "bytes": 234,
+      "sha256": "9218eb048695164057730c7029525565b8b2d013f9df462a54dccf6882f1288c"
+    },
+    "calculations/md-05-f2/POSCAR": {
+      "bytes": 4561,
+      "sha256": "6fc4595d5dfe8492c15f2f94ed3a715051ddd0a047c81ac8595f436ae3100f36"
+    },
+    "calculations/md-05-f2/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/md-05-f2/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-05-f2/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-05-f2/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "fdf2ea3ce438aa27a40296f88fbce3b55472c0aaba2699806bd3dc4c226451cc"
+    },
+    "calculations/md-05-f2/input-manifest.json": {
+      "bytes": 527,
+      "sha256": "9e8d6b36961bbd2645e721b21270a29f9fe5264ee0c1d24ec1add4b1b6e2d876"
+    },
+    "calculations/md-05-f2/label.json": {
+      "bytes": 3395,
+      "sha256": "c95e03019011d89589eafbba332ac81b1ee8ac7bb30a2f4dbfa7aa4760b9da5c"
+    },
+    "calculations/md-05-f2/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "250ee2f66ce1b794758b4e9de7ddb3f123a4a1b690dcd758b7f7e5b19e77c8e1"
+    },
+    "calculations/md-05-f2/vasp.stdout": {
+      "bytes": 3100,
+      "sha256": "1ba2ff3a1b6a5ba2307f3e66966ef6f02f57425561fde438a0b487e1493ebc19"
+    },
+    "calculations/md-05-f2/vasprun.xml": {
+      "bytes": 501464,
+      "sha256": "4afa1f16a4fd379f8e0f89f1304bab7cbab9a5617fb8819bafe304cc937657dc"
+    },
+    "calculations/md-06-f0/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-06-f0/CONTCAR": {
+      "bytes": 4439,
+      "sha256": "464cfcbd575b7902edb3b45df8ac570e7ecab1ebad1613269823fc24e3e5d8aa"
+    },
+    "calculations/md-06-f0/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "ffb006abdd9366ff59f4c37aee6e3efd77d4e9a8ac3187762db2d8a2001bbfab"
+    },
+    "calculations/md-06-f0/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "4ffd5aab3493e159a4d32b07614c6041bd446c53663d87a6a003b2b3e80eea70"
+    },
+    "calculations/md-06-f0/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "95b57ea2f211e472c950892df7879ba014682d954d1306e09b995461bd98aff1"
+    },
+    "calculations/md-06-f0/INCAR": {
+      "bytes": 272,
+      "sha256": "176dd41a44179e33de388e766b39f083563dcca2c773ffeededa9a6a98a72914"
+    },
+    "calculations/md-06-f0/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/md-06-f0/OSZICAR": {
+      "bytes": 1669,
+      "sha256": "9851654286b62c960fccd74837da226616cf0856c5119e4d9666011a6526ccd4"
+    },
+    "calculations/md-06-f0/OUTCAR": {
+      "bytes": 532952,
+      "sha256": "51dd7c81e8a056b0fbaadc8ba6670db483925cd0d4b62503c01df9de39627d68"
+    },
+    "calculations/md-06-f0/PCDAT": {
+      "bytes": 234,
+      "sha256": "2804ae0411dc2d041a5bc17afabd77207ed2b8c1aeaacb38c2426905f6d649bc"
+    },
+    "calculations/md-06-f0/POSCAR": {
+      "bytes": 4561,
+      "sha256": "f765ffc216d804ae23df5d0df5e6409dba4c4c97e3f2456749378a0883194c16"
+    },
+    "calculations/md-06-f0/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/md-06-f0/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-06-f0/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-06-f0/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "61ed9a22be3b3fa538a1210c1d2c9289a7f50eb3f62024b133823648fdef6ec6"
+    },
+    "calculations/md-06-f0/input-manifest.json": {
+      "bytes": 521,
+      "sha256": "1f6652448fe7a17bd59da3cb196a7c6bc34db048d9563914b4638e179ae2b518"
+    },
+    "calculations/md-06-f0/label.json": {
+      "bytes": 3381,
+      "sha256": "6f05e6adc89e502820255c9b0521a0dbe14214a46dbe38a4b9493b908bd3038b"
+    },
+    "calculations/md-06-f0/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "289106343c3e6aeffafe08506157a0aa1a97b5f1b59be020a1c57c5f3bfd8cc9"
+    },
+    "calculations/md-06-f0/vasp.stdout": {
+      "bytes": 3100,
+      "sha256": "8bde457d5904d0af3399615636c2de30f5797369ad96ca401991c198089fdfa5"
+    },
+    "calculations/md-06-f0/vasprun.xml": {
+      "bytes": 501464,
+      "sha256": "d1be179b36164e08f096b9c17a70c1892608f904c2101289b222959a227b5281"
+    },
+    "calculations/md-06-f1/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-06-f1/CONTCAR": {
+      "bytes": 4439,
+      "sha256": "d782c81a20f9b338d4c06bfa371298abf39564f649eadebd578bf719c49cb7b7"
+    },
+    "calculations/md-06-f1/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "78db53cca24e31755248a8210081523f5f1c9d924eb7c32a4f9039cbf875cbb5"
+    },
+    "calculations/md-06-f1/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "0a5dfb3bfdcdf741217bdbe0d49f710ef2643d497b18b6edf24872c9c567d245"
+    },
+    "calculations/md-06-f1/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "95b57ea2f211e472c950892df7879ba014682d954d1306e09b995461bd98aff1"
+    },
+    "calculations/md-06-f1/INCAR": {
+      "bytes": 272,
+      "sha256": "01eef6abb268a16e4c249dc84175742e3153904356900f638ad6b5ab02b81d57"
+    },
+    "calculations/md-06-f1/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/md-06-f1/OSZICAR": {
+      "bytes": 1576,
+      "sha256": "6cf41fa7e5deed680359ef192fb30216e571bad83c62958a5547e36071b656c5"
+    },
+    "calculations/md-06-f1/OUTCAR": {
+      "bytes": 530937,
+      "sha256": "88a5a7a954187c0ce99d0db9914fe81da790ccd3c22599176596f7cc52801bea"
+    },
+    "calculations/md-06-f1/PCDAT": {
+      "bytes": 234,
+      "sha256": "d41707e500252bfb6228f01f2e5dc889197153a7d2fb768a3c98e0cc8b1fc53a"
+    },
+    "calculations/md-06-f1/POSCAR": {
+      "bytes": 4561,
+      "sha256": "0e82d8dd1d6313bf871244fae841486dc63cb958f64f70a658eafad3b9dbba5c"
+    },
+    "calculations/md-06-f1/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/md-06-f1/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-06-f1/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-06-f1/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "ad2bd414eb383e05b87fa59a586e8dadd4c22699eeff693865c3d0ceaf1c02e7"
+    },
+    "calculations/md-06-f1/input-manifest.json": {
+      "bytes": 521,
+      "sha256": "da87427785725b24ba249435092ee39c4a95218d7d6f5ede74f0b31f3f262ed0"
+    },
+    "calculations/md-06-f1/label.json": {
+      "bytes": 3389,
+      "sha256": "0c395f611c86b77b54b06bcd68bb0699f6f1ac2060f41402b113fc8c39a21527"
+    },
+    "calculations/md-06-f1/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "6fda24b2358afb9669f0322a3be349e759369633c291bd069482f7cb1a23c248"
+    },
+    "calculations/md-06-f1/vasp.stdout": {
+      "bytes": 3007,
+      "sha256": "57599d9a5a086ce71953b952744a929b0119f2a3957eb7d83dd94cf90dcd99a0"
+    },
+    "calculations/md-06-f1/vasprun.xml": {
+      "bytes": 501184,
+      "sha256": "4f65bcd53b3639739fdf747a8a011295ea172668bbc3f14f93b57a65d1eb0524"
+    },
+    "calculations/md-06-f2/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-06-f2/CONTCAR": {
+      "bytes": 4439,
+      "sha256": "6a06dbe6409e6b4262c5c96469aa88229c1094057ea03a410c30093fec41100f"
+    },
+    "calculations/md-06-f2/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "82edbfe258379f3716f27aab921d78bfb8d15e2952125cc2c893bab3b872a2f3"
+    },
+    "calculations/md-06-f2/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "6a4d224110df0e8bd17609e0162d37b8e905fa13c3f4163689a92924f6805105"
+    },
+    "calculations/md-06-f2/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "95b57ea2f211e472c950892df7879ba014682d954d1306e09b995461bd98aff1"
+    },
+    "calculations/md-06-f2/INCAR": {
+      "bytes": 272,
+      "sha256": "bb86ad32893fdfcf33d0d7b5ae29e4793984f77880db69ff3efd0a561aec84a2"
+    },
+    "calculations/md-06-f2/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/md-06-f2/OSZICAR": {
+      "bytes": 1669,
+      "sha256": "a9fba8cd9ca7dc713eb193152b6555bad390ce4ec1b7a10b1f3608e4c482b908"
+    },
+    "calculations/md-06-f2/OUTCAR": {
+      "bytes": 533130,
+      "sha256": "511892cfcf76ab0370d547194127cf12143d2c467bf3c5178e145be5d321d026"
+    },
+    "calculations/md-06-f2/PCDAT": {
+      "bytes": 234,
+      "sha256": "afc057eb0269baeea7a7fc2371c525c5c6bd2b91a25b41bdb8f04af0f9b713f9"
+    },
+    "calculations/md-06-f2/POSCAR": {
+      "bytes": 4561,
+      "sha256": "295f6aa4870ae5f813eddbb0e53f0a77a5aedd1e443252e4e6a481dafb85dee8"
+    },
+    "calculations/md-06-f2/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/md-06-f2/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-06-f2/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-06-f2/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "329bae40f0a3f7f06a704b349f23de78df2b74e57b15674f642900aefeb5a3fe"
+    },
+    "calculations/md-06-f2/input-manifest.json": {
+      "bytes": 521,
+      "sha256": "da8db258ba09796552869c7e48367c5ae600e575503ff7b3ed914010eefcf3c3"
+    },
+    "calculations/md-06-f2/label.json": {
+      "bytes": 3381,
+      "sha256": "f8b52204d1e640b8f6a02c5480a5842b4a0fc6b2326ecec99fd068738b6b4514"
+    },
+    "calculations/md-06-f2/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "17a60120814486210dc399afeb0227f15df508b9809950a5626b3a8ed75182f6"
+    },
+    "calculations/md-06-f2/vasp.stdout": {
+      "bytes": 3100,
+      "sha256": "e6f76fe3760a2d42d8e8d69fb586db3f9f7a4333cc679bb6617feb8136676d08"
+    },
+    "calculations/md-06-f2/vasprun.xml": {
+      "bytes": 501464,
+      "sha256": "6e8b8cf54eeb0b78f8482bb929d02a8ebec9ccd1d46e20c335eb0bb8a4cb0112"
+    },
+    "calculations/md-07-f0/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-07-f0/CONTCAR": {
+      "bytes": 4439,
+      "sha256": "27d0301b6acde524bf8bc32d781c45ea48eaab942fbe2df1b3cf71ecd86c61ae"
+    },
+    "calculations/md-07-f0/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "67528967093326c259878d46bc47803a43feb60da95ec7e17bbc0c0c68edc3d7"
+    },
+    "calculations/md-07-f0/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "83063e558d335967ccb24c4cf70ea30a8d6b34c874d0945303aca07284530239"
+    },
+    "calculations/md-07-f0/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "95b57ea2f211e472c950892df7879ba014682d954d1306e09b995461bd98aff1"
+    },
+    "calculations/md-07-f0/INCAR": {
+      "bytes": 272,
+      "sha256": "224eff53f037abf7f8283569e9ac72a09a0448d8e95c2a3d00af0ec63a7c4f63"
+    },
+    "calculations/md-07-f0/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/md-07-f0/OSZICAR": {
+      "bytes": 1669,
+      "sha256": "e45984681cb0879d428d6eeb25447e80a4d924515c1cce35cefa4bb86d7a1fd3"
+    },
+    "calculations/md-07-f0/OUTCAR": {
+      "bytes": 532719,
+      "sha256": "292c2725d3486fcc6f92237e00a257eda4364d83209f0cfc7140b4e144abb49f"
+    },
+    "calculations/md-07-f0/PCDAT": {
+      "bytes": 234,
+      "sha256": "3afe610ef9a82f9175d13029f05028d5f8153ed629c5be833f9ec040e958ea11"
+    },
+    "calculations/md-07-f0/POSCAR": {
+      "bytes": 4561,
+      "sha256": "42a3609b07ee99ad91a0712ceb4dff9216f7cf442b0af2be1cf904587ade271a"
+    },
+    "calculations/md-07-f0/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/md-07-f0/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-07-f0/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-07-f0/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "15ad7cb4756a9a5051b55c993f5efadff8d304abdd6787c78ad02c9202e09590"
+    },
+    "calculations/md-07-f0/input-manifest.json": {
+      "bytes": 521,
+      "sha256": "47bbf3afaf3e811b79e5499d5d993ca750b5cb81a0d855c552575cbfe9dab34c"
+    },
+    "calculations/md-07-f0/label.json": {
+      "bytes": 3382,
+      "sha256": "8b7afc0d14d1232857fb4c2dd109463347e7416537a0657093c2402c0a21d08e"
+    },
+    "calculations/md-07-f0/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "11f163c352c5f46d9f0eec2375a51c57e126151bcf35525354fa890ea3058728"
+    },
+    "calculations/md-07-f0/vasp.stdout": {
+      "bytes": 3100,
+      "sha256": "3e4388b78e2874751cce17e0967a9f64d0b1993ce1727e7040009069255e1cae"
+    },
+    "calculations/md-07-f0/vasprun.xml": {
+      "bytes": 501464,
+      "sha256": "bba29ec83959b06d3f65ccc649f97fdf752b77f7915d567ec9eb03138c3907ab"
+    },
+    "calculations/md-07-f1/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-07-f1/CONTCAR": {
+      "bytes": 4439,
+      "sha256": "54c3a20b90fc4de9e038f506d9f458298ae760221fd7ecc98bd5731880a6ae9b"
+    },
+    "calculations/md-07-f1/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "c4d5f13b4f37aaa7583b529f17f05844f1104e66d7025c2c6e925542f6f73881"
+    },
+    "calculations/md-07-f1/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "ff5da06b1a521711d984c7039e7ccef5ef2548e4a72125bd0f2cc2f7f8a3200c"
+    },
+    "calculations/md-07-f1/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "95b57ea2f211e472c950892df7879ba014682d954d1306e09b995461bd98aff1"
+    },
+    "calculations/md-07-f1/INCAR": {
+      "bytes": 272,
+      "sha256": "208ec3d85f58fe0b5fe0014392fe09faa4a1ddae60a2c2f429004c54b3ba73bb"
+    },
+    "calculations/md-07-f1/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/md-07-f1/OSZICAR": {
+      "bytes": 1669,
+      "sha256": "d6cea1e0a5fdde177352abc675ea65171822c954512cc2f0794b1fdabc18378b"
+    },
+    "calculations/md-07-f1/OUTCAR": {
+      "bytes": 532257,
+      "sha256": "1e59c217605e051cba513cb2eabcb358166091e5f92c4a5f4c88d4be18112f85"
+    },
+    "calculations/md-07-f1/PCDAT": {
+      "bytes": 234,
+      "sha256": "a23b2a0fcc27c0852b015edf723b9a9fd256f4e3167f6ce6e2fdb67d0daf0eb8"
+    },
+    "calculations/md-07-f1/POSCAR": {
+      "bytes": 4561,
+      "sha256": "1ff34aaf615800a7a6d10fa29f281231d80ebe16bc6c893764d05ee7b9e3ab4f"
+    },
+    "calculations/md-07-f1/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/md-07-f1/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-07-f1/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-07-f1/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "593a5954fb226c7e64ee5bfca35d49534f54f03d130cf3d69647bed5c2f87c0b"
+    },
+    "calculations/md-07-f1/input-manifest.json": {
+      "bytes": 521,
+      "sha256": "ac3f3dbabc33f774f7df5b4351cfb214f2d60547040ce9c44cbfd6b001cbba27"
+    },
+    "calculations/md-07-f1/label.json": {
+      "bytes": 3386,
+      "sha256": "0e291d881fe468352c7fb5759c698e2f43aec7cb2ef9347209d9b44050064185"
+    },
+    "calculations/md-07-f1/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "57cc83b408e961b9d8037176ad226fb276996cf36c5f980979789f01207bed6b"
+    },
+    "calculations/md-07-f1/vasp.stdout": {
+      "bytes": 3100,
+      "sha256": "b1a5b164e1f6a4f1d232c7dc877375e31cc9068ffb6c02686976177fa3e7abee"
+    },
+    "calculations/md-07-f1/vasprun.xml": {
+      "bytes": 501464,
+      "sha256": "8c607411ec0764bce76c6f25ba1cbb9e77a0522fe7afcab8d41d2663c1e8257a"
+    },
+    "calculations/md-07-f2/CHG": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-07-f2/CONTCAR": {
+      "bytes": 4439,
+      "sha256": "489f11b4bfafa3ec7fd2104d7a880014c8cf1c1944aae74912d61d8a01f17d31"
+    },
+    "calculations/md-07-f2/DOSCAR": {
+      "bytes": 11073,
+      "sha256": "9931028162d83d10d9e70c121e1bf0405fe5566495b97a4a5b73269cfea51ef7"
+    },
+    "calculations/md-07-f2/EIGENVAL": {
+      "bytes": 443781,
+      "sha256": "538436054edef0754c1692e3dc485d93d7fc7828ccb90ef223eb60e884d6c576"
+    },
+    "calculations/md-07-f2/IBZKPT": {
+      "bytes": 12957,
+      "sha256": "95b57ea2f211e472c950892df7879ba014682d954d1306e09b995461bd98aff1"
+    },
+    "calculations/md-07-f2/INCAR": {
+      "bytes": 272,
+      "sha256": "6d061dee1627fda9dd4c573f58f15e1e1a5f023971e2e94d81d9de90a63dfcc1"
+    },
+    "calculations/md-07-f2/KPOINTS": {
+      "bytes": 31,
+      "sha256": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9"
+    },
+    "calculations/md-07-f2/OSZICAR": {
+      "bytes": 1669,
+      "sha256": "c210f70c3e27665bb37629ce29ee9e1ba8d20462c1e567c5761b4c563f21735e"
+    },
+    "calculations/md-07-f2/OUTCAR": {
+      "bytes": 532417,
+      "sha256": "36d2171795cf2ead19062195c90d5d7ffa8516fb0e3eb3b9d1d9cb6d02b9e869"
+    },
+    "calculations/md-07-f2/PCDAT": {
+      "bytes": 234,
+      "sha256": "ac0ef2b4496558d51b0f6ab6d04ac57588277261a0e9ad0e1602d16f73a389f5"
+    },
+    "calculations/md-07-f2/POSCAR": {
+      "bytes": 4561,
+      "sha256": "439467828ad60f7d64040b0a0c8079028e8d961372ed54934643172bfb393c82"
+    },
+    "calculations/md-07-f2/POTCAR": {
+      "bytes": 197982,
+      "sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+    },
+    "calculations/md-07-f2/REPORT": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-07-f2/WAVECAR": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "calculations/md-07-f2/XDATCAR": {
+      "bytes": 1431,
+      "sha256": "330755a0c286bc09d5147c8b94d58c1afc69782d5f111b80beb035f4c32cb23c"
+    },
+    "calculations/md-07-f2/input-manifest.json": {
+      "bytes": 521,
+      "sha256": "19154e1761115908b16ffadff8028e9d1de80db0c7466fab5c06396d8dd44dc7"
+    },
+    "calculations/md-07-f2/label.json": {
+      "bytes": 3398,
+      "sha256": "9247f87512cc98237e3d03c1f92d6bb89fa645eb513ccc6eb0cb062fb4560bc0"
+    },
+    "calculations/md-07-f2/potcar-provenance.json": {
+      "bytes": 738,
+      "sha256": "c9912ef16dc82bb6e446d65f33d0fb95f191da2518d8b7160b1f406a72d695d1"
+    },
+    "calculations/md-07-f2/vasp.stdout": {
+      "bytes": 3100,
+      "sha256": "295c739e854425b5d9999a6b6856fc84a560973def4c5df4f0e76d0aa0663c3f"
+    },
+    "calculations/md-07-f2/vasprun.xml": {
+      "bytes": 501464,
+      "sha256": "a80b70597cd1456a1856639c5ea168682c1cb4600971e49be40f81983d3e4a26"
+    },
+    "calibration-source.json": {
+      "bytes": 5586,
+      "sha256": "ce59e46a452c104ad4cb98f5d175966261388f4ad70f52d3cfb13b2653c472cc"
+    },
+    "dataset-manifest.json": {
+      "bytes": 21196,
+      "sha256": "65a4c6dce1a072504030dca2b0340db72a497e562e40b2717104294c3030fbdd"
+    },
+    "export-manifest.json": {
+      "bytes": 3861,
+      "sha256": "0727c472058ee957a59e5e5a1b99bab1560e8b39b24bd3a48ce358153d724da7"
+    },
+    "export/deepmd/test/frame-ids.json": {
+      "bytes": 171,
+      "sha256": "9a9d7ed0685010113f265f8b68dbcdb1aa2f097eef445fae879ad1170b77bc3c"
+    },
+    "export/deepmd/test/set.000/box.npy": {
+      "bytes": 1064,
+      "sha256": "fc9a3cab1bb664eaa81828fb1185687cea01fc2ea8249d337016e8a3cb6c5a1f"
+    },
+    "export/deepmd/test/set.000/coord.npy": {
+      "bytes": 10112,
+      "sha256": "94eac80d37147175379d757df98f0f9fb7fd8d2628b2f1b30ac962c91672a3d0"
+    },
+    "export/deepmd/test/set.000/energy.npy": {
+      "bytes": 232,
+      "sha256": "1395fd44f3d1ac07c504f9f7e9eda9b78fae896bba1d87000fdc54f161e716f0"
+    },
+    "export/deepmd/test/set.000/force.npy": {
+      "bytes": 10112,
+      "sha256": "89edd74c35efa66e3462dea3bffc94bcfab7867bed6ae5c048df073af259a0f8"
+    },
+    "export/deepmd/test/set.000/virial.npy": {
+      "bytes": 1064,
+      "sha256": "46936830c173c9f6fec622869d8cae4288da105a96b33be0fb9e343e36648e84"
+    },
+    "export/deepmd/test/type.raw": {
+      "bytes": 64,
+      "sha256": "de502d46d792c81ad2c69acc5d8e3c1cc48d9e59cdf9d6b724df314f877a620f"
+    },
+    "export/deepmd/test/type_map.raw": {
+      "bytes": 3,
+      "sha256": "caca9e1e8fb0757238c027c8bad3af35e724e3a84ae3acb5a3cd2db9a9966f95"
+    },
+    "export/deepmd/train/frame-ids.json": {
+      "bytes": 279,
+      "sha256": "2b9713b198404bcd79af10140047a9e567c997eae20203914718d485b7e0f54a"
+    },
+    "export/deepmd/train/set.000/box.npy": {
+      "bytes": 1640,
+      "sha256": "8d8d0ec0e428a086be93038c340a88e880be7ce83f5f60ec2c8a1dd0124d505c"
+    },
+    "export/deepmd/train/set.000/coord.npy": {
+      "bytes": 16256,
+      "sha256": "300770c2720008bebeef5990454357c74e5fc7ed44b55eb892c1deba68d7117a"
+    },
+    "export/deepmd/train/set.000/energy.npy": {
+      "bytes": 296,
+      "sha256": "f18451ad436c43edd3107fa1f3c2d0c410d6dcdf216052c045d315dc68fc5fa1"
+    },
+    "export/deepmd/train/set.000/force.npy": {
+      "bytes": 16256,
+      "sha256": "2a660779cce22bc1c4cee7c68153791879d0992fe6387e291984fa7e94a68f3a"
+    },
+    "export/deepmd/train/set.000/virial.npy": {
+      "bytes": 1640,
+      "sha256": "5717857d8bbc564aef6be29b0b3ec055fe872cdef44f72fb99c966436e5d9808"
+    },
+    "export/deepmd/train/type.raw": {
+      "bytes": 64,
+      "sha256": "de502d46d792c81ad2c69acc5d8e3c1cc48d9e59cdf9d6b724df314f877a620f"
+    },
+    "export/deepmd/train/type_map.raw": {
+      "bytes": 3,
+      "sha256": "caca9e1e8fb0757238c027c8bad3af35e724e3a84ae3acb5a3cd2db9a9966f95"
+    },
+    "export/deepmd/validation/frame-ids.json": {
+      "bytes": 87,
+      "sha256": "9346e07012ce1f9b96b01c8555716ff806ceb30043cd9efa3aaf22ccc6fe9b5d"
+    },
+    "export/deepmd/validation/set.000/box.npy": {
+      "bytes": 560,
+      "sha256": "b879566773eb601c420c69cf00393ed1cc7e47b85058b8be183afc5ece51e293"
+    },
+    "export/deepmd/validation/set.000/coord.npy": {
+      "bytes": 4736,
+      "sha256": "493703262ce2a848cf6233632a9d117c18ead5cd64596f8c589416815bc2a0c8"
+    },
+    "export/deepmd/validation/set.000/energy.npy": {
+      "bytes": 176,
+      "sha256": "d324edc6c606603f07bc570681b7571e27c81b0919ffc8784876e75ca484b525"
+    },
+    "export/deepmd/validation/set.000/force.npy": {
+      "bytes": 4736,
+      "sha256": "4a38c26edd3bcd8653897aee8fa8e48618d7eb123f107d86f4b197252dd8d631"
+    },
+    "export/deepmd/validation/set.000/virial.npy": {
+      "bytes": 560,
+      "sha256": "99f964a696f3226f02f7597b0f7c85a5fef985f4f316b2e63ca162a3bb6b40e5"
+    },
+    "export/deepmd/validation/type.raw": {
+      "bytes": 64,
+      "sha256": "de502d46d792c81ad2c69acc5d8e3c1cc48d9e59cdf9d6b724df314f877a620f"
+    },
+    "export/deepmd/validation/type_map.raw": {
+      "bytes": 3,
+      "sha256": "caca9e1e8fb0757238c027c8bad3af35e724e3a84ae3acb5a3cd2db9a9966f95"
+    },
+    "export/test.extxyz": {
+      "bytes": 59763,
+      "sha256": "550dcf3cf0936ab554e2155f696fa265c9593e90fc10995701ba05c25e55eefe"
+    },
+    "export/train.extxyz": {
+      "bytes": 100200,
+      "sha256": "40bb773fea22383c83ce9684a47b47b94ba7963b3fbc5da4fc3edd383174030b"
+    },
+    "export/validation.extxyz": {
+      "bytes": 32798,
+      "sha256": "e0d1946116fbba924138128a1d9efa2c2c345df13310cac4b002b11f58bc4850"
+    },
+    "job.id": {
+      "bytes": 9,
+      "sha256": "877433eaeeb07f7e4a96fa8ba54fcc1f6fa78f4730aa13d6f654957f06995807"
+    },
+    "labels.json": {
+      "bytes": 163906,
+      "sha256": "d5f462ce6321f1afcbac3ce5e04ec430546b0e22b9676faf1de4a306b8d53650"
+    },
+    "result.json": {
+      "bytes": 65,
+      "sha256": "62f8038d1d24657d7b511b31866cedfcb3d5792736033ae08eedbf3ca5617c16"
+    },
+    "run.sbatch": {
+      "bytes": 613,
+      "sha256": "a2b7b83669f82ba721c04452512c0dea867a44387e085c4b8e6c18d1419ed1cb"
+    },
+    "slurm-20950693.out": {
+      "bytes": 5068,
+      "sha256": "c642df2b6b222b9effaa05a881edda11491465ec29d9eb60250278c5c0fac310"
+    },
+    "structures/fcc-00/POSCAR": {
+      "bytes": 2196,
+      "sha256": "9cf79d3eb019b43b37bb55073bdd92582d00207988108d407aebbfcd8ca08c99"
+    },
+    "structures/fcc-01/POSCAR": {
+      "bytes": 2196,
+      "sha256": "430b7f418f6e20656c5e7f1e032d3699395c32d98711dd75b164a308fc105bec"
+    },
+    "structures/fcc-02/POSCAR": {
+      "bytes": 2196,
+      "sha256": "d8dd32b0a8d38931be9a9debd49b559ca923872d8752d48d44d1d574999ca54a"
+    },
+    "structures/fcc-03/POSCAR": {
+      "bytes": 2196,
+      "sha256": "0d43405be8b5ff0f17dd2dcb90fd772bb0583856bf156a36383b54d7c526f0be"
+    },
+    "structures/fcc-04/POSCAR": {
+      "bytes": 2196,
+      "sha256": "5b3090f9d3683cffa8a0162447e400d76d04bdaf264a6441bdbfb699238f3b2d"
+    },
+    "structures/fcc-05/POSCAR": {
+      "bytes": 2196,
+      "sha256": "8ee3a9275a58a44b656a8fc011eba9f6b90d19168af098d4b5598f742be54478"
+    },
+    "structures/fcc-06/POSCAR": {
+      "bytes": 2196,
+      "sha256": "a9a3d7fb64da3f5a4e71e82192b6430ed1e906a856af9d2c5748e8849d94b688"
+    },
+    "structures/fcc-07/POSCAR": {
+      "bytes": 2196,
+      "sha256": "364e3f583c8b0f3a8e785d2226d528b6f31814f68bc5c4b6f5b35a299520f733"
+    },
+    "structures/fcc-08/POSCAR": {
+      "bytes": 2196,
+      "sha256": "2152b8c01bf9ac3b43ef5bdffb2d779b67ee5e87d7b795b807d4e0c85b963fdc"
+    },
+    "structures/hcp-00/POSCAR": {
+      "bytes": 2196,
+      "sha256": "b321dc22061b87baa60a6930e7d2e597b2df21d2a5a66ea97fd1d3d3cf0de9db"
+    },
+    "structures/hcp-01/POSCAR": {
+      "bytes": 2196,
+      "sha256": "b80d0b12a688030e745f1966181047723a8fbb661afda93d9a4e0981f05f6639"
+    },
+    "structures/hcp-02/POSCAR": {
+      "bytes": 2196,
+      "sha256": "fc2e6978f6760aa12cf17025c0086fe4dff1155c8b8a9054e01c3dc6013f9738"
+    },
+    "structures/hcp-03/POSCAR": {
+      "bytes": 2196,
+      "sha256": "7f6a15369377bec5d09e188ef8e4be71009defd2d1e6a10cf98576a92d009ab7"
+    },
+    "structures/hcp-04/POSCAR": {
+      "bytes": 2196,
+      "sha256": "a0d17abf69ca6af80286b9f0828b04b3a21c6664c6c4962498be28bc2f86daca"
+    },
+    "structures/hcp-05/POSCAR": {
+      "bytes": 2196,
+      "sha256": "b532da4c1c8f0262021e5c396a77bb32b74364ceaa16538ea719215e074e7add"
+    },
+    "structures/hcp-06/POSCAR": {
+      "bytes": 2196,
+      "sha256": "d6329b0b0134ea393b113b6b406b2917c522d2c6887da3955767095be509cea6"
+    },
+    "structures/md-00-f0/POSCAR": {
+      "bytes": 4561,
+      "sha256": "b33d82d21301b204e16d4589f93af311ff4e232c8bcc4a185caebe29541bb92f"
+    },
+    "structures/md-00-f1/POSCAR": {
+      "bytes": 4561,
+      "sha256": "c1922c7cfa4ce82ba49afb820246202309671d47327827ce652150b9dc820bd0"
+    },
+    "structures/md-00-f2/POSCAR": {
+      "bytes": 4561,
+      "sha256": "542978f4bf8ca854d20e11545061ee95db0af868d83b55661f98c2ada5a4f00a"
+    },
+    "structures/md-01-f0/POSCAR": {
+      "bytes": 4561,
+      "sha256": "f8db30814960f0b0087cfeef57febd9ee160ef711552279a83ee72020dbb6b82"
+    },
+    "structures/md-01-f1/POSCAR": {
+      "bytes": 4561,
+      "sha256": "900086f04d04c52eda240c67e60d27d9d7a1ee051d3f4f1b165ce02e8ca35a52"
+    },
+    "structures/md-01-f2/POSCAR": {
+      "bytes": 4561,
+      "sha256": "d3880964792be2b221b9678378c06a8e91dc4b3398a7d735bfc5b9c49da1f843"
+    },
+    "structures/md-02-f0/POSCAR": {
+      "bytes": 4561,
+      "sha256": "f9a64206b657e6e0b6af212810e2071852c47c2f210c4bf3227db6e5d3779d59"
+    },
+    "structures/md-02-f1/POSCAR": {
+      "bytes": 4561,
+      "sha256": "4f0d5f60e5dd8f65044fc5d648ea5846e190c2d0e64ec8720b915abac3d82d1b"
+    },
+    "structures/md-02-f2/POSCAR": {
+      "bytes": 4561,
+      "sha256": "cdc89dcd258ed77b0f856934621ddeadbf1868fd6206b0624050a539420429e9"
+    },
+    "structures/md-03-f0/POSCAR": {
+      "bytes": 4561,
+      "sha256": "1c44df86554dde4e4cb31f2b9b69d1c8b715251fc4629ac4d946c6f44840794a"
+    },
+    "structures/md-03-f1/POSCAR": {
+      "bytes": 4561,
+      "sha256": "c4ce48512ff889e7dfa9a401eb2833167ecaf831a6835405c273e5f236d0bfed"
+    },
+    "structures/md-03-f2/POSCAR": {
+      "bytes": 4561,
+      "sha256": "5bdf77433e9d7fd41072ecb0dcffdc2934d65b092e9743e3b0ac6cf0eb61c47e"
+    },
+    "structures/md-04-f0/POSCAR": {
+      "bytes": 4561,
+      "sha256": "7871a3cbaeaa1c4d5f8767f2a7d1e9f4a02f1a50da5dfed4772d9d9ad7972aa8"
+    },
+    "structures/md-04-f1/POSCAR": {
+      "bytes": 4561,
+      "sha256": "5129c1716313ea9cf892a02167d1e86f606be4d8bac913b868c50cf960189857"
+    },
+    "structures/md-04-f2/POSCAR": {
+      "bytes": 4561,
+      "sha256": "141df929862eaa71b73f4353fd665e1f324858028e28f3140fc25d3566d9c0ee"
+    },
+    "structures/md-05-f0/POSCAR": {
+      "bytes": 4561,
+      "sha256": "d0b06f651131ac3aa08fff987da6e9e31630bca3f2ee9d4f16df279e167ae343"
+    },
+    "structures/md-05-f1/POSCAR": {
+      "bytes": 4561,
+      "sha256": "4729cd46a39b7ea029576700c9d664e22c283d5c9284fe653508c88c69440468"
+    },
+    "structures/md-05-f2/POSCAR": {
+      "bytes": 4561,
+      "sha256": "6fc4595d5dfe8492c15f2f94ed3a715051ddd0a047c81ac8595f436ae3100f36"
+    },
+    "structures/md-06-f0/POSCAR": {
+      "bytes": 4561,
+      "sha256": "f765ffc216d804ae23df5d0df5e6409dba4c4c97e3f2456749378a0883194c16"
+    },
+    "structures/md-06-f1/POSCAR": {
+      "bytes": 4561,
+      "sha256": "0e82d8dd1d6313bf871244fae841486dc63cb958f64f70a658eafad3b9dbba5c"
+    },
+    "structures/md-06-f2/POSCAR": {
+      "bytes": 4561,
+      "sha256": "295f6aa4870ae5f813eddbb0e53f0a77a5aedd1e443252e4e6a481dafb85dee8"
+    },
+    "structures/md-07-f0/POSCAR": {
+      "bytes": 4561,
+      "sha256": "42a3609b07ee99ad91a0712ceb4dff9216f7cf442b0af2be1cf904587ade271a"
+    },
+    "structures/md-07-f1/POSCAR": {
+      "bytes": 4561,
+      "sha256": "1ff34aaf615800a7a6d10fa29f281231d80ebe16bc6c893764d05ee7b9e3ab4f"
+    },
+    "structures/md-07-f2/POSCAR": {
+      "bytes": 4561,
+      "sha256": "439467828ad60f7d64040b0a0c8079028e8d961372ed54934643172bfb393c82"
+    },
+    "submission-intent.json": {
+      "bytes": 2307,
+      "sha256": "7d261dba8af04e447d94583b40bc8e37d96c54bbf0de6eb01f5e57294c588482"
+    },
+    "system.json": {
+      "bytes": 6053,
+      "sha256": "f8e1963314f8767bb771a9bcb153ddc2bd5d42de3565620b8e9ebb90ac936eab"
+    }
+  },
+  "policy": "Private cluster main-home archive plus actual workstation copy; retention/institutional backup unconfirmed; contains licensed material, excluded from Git",
+  "remote_archive": "/home/u3129/.local/share/mlip-research/dft-artifacts/al32-labeling-20261018-02.tar.gz",
+  "sha256": "bd1b89d65e2f6682501152b6a46b483a26bab02adeeb63e314e03219c2b136d6",
+  "verified_retrieval": true
+}

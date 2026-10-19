@@ -1,0 +1,65 @@
+{
+  "protocol_id": "al32-pbe-pilot-accepted-v2",
+  "status": "Locally validated on two training-parent configurations; use within bounded Al32 pilot",
+  "engine": "VASP6.6.1 CPU/MPI",
+  "xc": "PBE",
+  "paw_family": "PBE",
+  "paw_variants": [
+    "Al"
+  ],
+  "potcar_sha256": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315",
+  "incar": {
+    "GGA": "PE",
+    "ENCUT": "450",
+    "PREC": "Accurate",
+    "LREAL": ".FALSE.",
+    "LASPH": ".TRUE.",
+    "ADDGRID": ".TRUE.",
+    "ISPIN": "1",
+    "ISYM": "0",
+    "ISMEAR": "0",
+    "SIGMA": "0.05",
+    "ALGO": "Normal",
+    "EDIFF": "1E-7",
+    "NELM": "160",
+    "NELMIN": "4",
+    "IBRION": "-1",
+    "NSW": "0",
+    "ISIF": "2",
+    "LWAVE": ".FALSE.",
+    "LCHARG": ".FALSE.",
+    "NCORE": "4"
+  },
+  "gamma_mesh": [
+    7,
+    7,
+    7
+  ],
+  "labels_contract": {
+    "energy": "VASP force-consistent free energy TOTEN, eV per configuration",
+    "energy_sigma0": "record separately, never pair with finite-smearing forces for fitting",
+    "forces": "eV/Angstrom Cartesian",
+    "stress": "tensile-positive eV/Angstrom^3; Voigt xx yy zz yz xz xy",
+    "virial": "-volume*stress; eV; full row-major 3x3",
+    "source": "DFT/VASP only; no teacher/EMT predictions",
+    "reference_alignment": "Do not mix OMat24 PAW54 labels with local PAW64 labels. Fit any elemental energy shift on train only; report raw and shifted validation/test metrics."
+  },
+  "calibration_run": "runs/al32-calibration-20261018-02",
+  "calibration_sha256": "2878b815bd74d9c77d339aa7004638fabc4e72f604d77c86866b2a419f05d5d8",
+  "quality_assessment": "runs/al32-labeling-20261018-02/quality-assessment.json",
+  "analysis_code_commit": "3ff82686c878bd87ed2150fbdd2108fb1451788f",
+  "unchanged_tolerances": {
+    "energy_eV_per_atom": 0.002,
+    "max_force_component_eV_per_A": 0.02,
+    "max_stress_component_eV_per_A3": 0.001,
+    "failure_policy": "Stop and retain evidence; no automatic looser tolerance or reference escalation"
+  },
+  "force_tolerance_margin_eV_per_A": 6.510000000002278e-05,
+  "limitations": [
+    "Convergence calibrated on only two training configurations",
+    "Force criterion passes narrowly; no claim of a large numerical margin",
+    "EMT proposals do not establish equilibrium DFT liquid; no interfaces/segregation/nucleation validation",
+    "Potential pretraining overlap and PAW54/PAW64 alignment remain to be handled in model evaluation",
+    "Private main-home plus workstation backups verified; institutional retention unconfirmed"
+  ]
+}

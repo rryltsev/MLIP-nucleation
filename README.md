@@ -36,17 +36,35 @@ tests/               scientifically meaningful verification
 
 ## Next milestones
 
-1. SSH, inventory, VASP/PAW setup, small GPU training and actual foundation checkpoint fine-tuning checks completed on 2026-10-17. Next audit reference settings and choose the scientific pilot. See the reports below for evidence and limitations.
+1. SSH, inventory, VASP/PAW setup and synthetic foundation fine-tuning/restart/export checks completed. The first real Al32 DFT pilot dataset was collected and audited on 2026-10-19; original-FM DFT baselines and real-data fine-tuning remain next steps.
 2. On another computer clone the repository, configure its own credentials and read `project/state.json`.
-3. First bounded DFT pilot selected: Al32 FCC/disordered/HCP, 40 geometries, grouped train/validation/test 21/6/13. Calibration finished: all 16 static calculations converged electronically, but the Gamma4 mesh failed scientific convergence; dependent labeling was cancelled. Accepted production labels: 0/40. See `reports/al32-dft-pilot-2026-10-18.tex`. This does not select the final alloy/nucleant or establish novelty.
+3. First bounded DFT pilot: Al32 FCC/disordered/HCP, 40 audited real-DFT labels, grouped train/validation/test 21/6/13. Dense calibration selected PBE/450eV/Gamma7/sigma0.05 after Gamma4 and Gamma6 failed. Total all-attempt cost92.6311 CPUh. See `reports/al32-dft-pilot-2026-10-18.tex`. This does not select the final alloy/nucleant or establish novelty.
 4. Implement one executable path: structures → converged VASP labels → teacher fine-tuning → independent DFT validation → distillation → student validation → one observable → LaTeX report.
 5. Add active learning and rare-event methods after the pilot is validated.
 
 ## Al32 DFT pilot
 
+Accepted data: `datasets/al32-pilot-v1/dft-v2.json`; accepted bounded protocol:
+`configs/dft/al32-pbe-pilot-accepted-v2.json`. Jobs20950692 and20950693 completed;
+all10 dense calibration points and40 main labels were independently checked
+against raw XML/OUTCAR and hashes. Extxyz and DeepMD NPY exports were checked
+frame by frame, including stress/virial sign, units, type map and frozen splits.
+The Gamma7 force comparison passes narrowly (0.0199349 versus0.02 eV/A) on two
+train structures; this is local qualification for a small fine-tuning pilot.
+Original-FM baselines, learned accuracy and physical MD remain untested.
+
+Audit: `scripts/assess_al32_dataset.py` (ASE/NumPy required), with actual private
+archives available. Results and complete accounting are in
+`runs/al32-labeling-20261018-02/quality-assessment.json` and `scheduler-final.json`.
+All attempts cost333472 allocated CPU-seconds =92.6311 CPUh of128; no live jobs.
+Private main-home and workstation backups for both new runs include raw outputs,
+licensed POTCAR and complete DeepMD exports, with every member verified.
+
 `configs/systems/al32-pilot-v1.json` defines the chemistry, seeds, grouped split,
-label units, convergence thresholds and proposed allocation. Prepared geometries
-and unvalidated INCAR/KPOINTS live in `datasets/al32-pilot-v1/`; no POTCAR content
+label units, convergence thresholds and original proposed allocation. Frozen geometries
+and original draft Gamma4 INCAR/KPOINTS live in `datasets/al32-pilot-v1/`; those
+drafts remain historical inputs. Use the accepted record above for real labels.
+No POTCAR content
 belongs in this tree. Geometry generation uses ASE EMT only as a proposal method,
 without exporting its energies/forces. These are not equilibrium DFT liquid samples.
 

@@ -1,0 +1,282 @@
+{
+  "all_electronically_converged": true,
+  "all_raw_hashes_and_label_provenance_verified": true,
+  "analysis_code_commit": "3ff82686c878bd87ed2150fbdd2108fb1451788f",
+  "analysis_source_sha256": "e7a4ec2842c71b2e682a6d3a88da440b042c6f3f52ddc739f7603b6f1413599b",
+  "assessed_utc": "2026-10-19T01:49:09.264473+00:00",
+  "backups": {
+    "al32-calibration-20261018-02": {
+      "bytes": 2882031,
+      "local_archive": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\MLIP-research\\artifacts\\dft-run-backups\\al32-calibration-20261018-02.tar.gz",
+      "remote_archive": "/home/u3129/.local/share/mlip-research/dft-artifacts/al32-calibration-20261018-02.tar.gz",
+      "sha256": "3552c82fd9cc4d4654227df49387111e7605213997557ee3c5816b42b7d50341",
+      "verified_retrieval": true
+    },
+    "al32-labeling-20261018-02": {
+      "bytes": 10666149,
+      "local_archive": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\MLIP-research\\artifacts\\dft-run-backups\\al32-labeling-20261018-02.tar.gz",
+      "remote_archive": "/home/u3129/.local/share/mlip-research/dft-artifacts/al32-labeling-20261018-02.tar.gz",
+      "sha256": "bd1b89d65e2f6682501152b6a46b483a26bab02adeeb63e314e03219c2b136d6",
+      "verified_retrieval": true
+    }
+  },
+  "budget": {
+    "cap_CPU_hours": 128,
+    "jobs": [
+      {
+        "allocated_CPU_hours": 10.457777777777778,
+        "allocated_CPU_seconds": 37648,
+        "job_id": "20950353",
+        "run_id": "al32-calibration-20261018-01",
+        "state": "FAILED",
+        "wall_seconds": 2353
+      },
+      {
+        "allocated_CPU_hours": 19.04888888888889,
+        "allocated_CPU_seconds": 68576,
+        "job_id": "20950692",
+        "run_id": "al32-calibration-20261018-02",
+        "state": "COMPLETED",
+        "wall_seconds": 4286
+      },
+      {
+        "allocated_CPU_hours": 0.0,
+        "allocated_CPU_seconds": 0,
+        "job_id": "20950356",
+        "run_id": "al32-labeling-20261018-01",
+        "state": "CANCELLED",
+        "wall_seconds": 0
+      },
+      {
+        "allocated_CPU_hours": 63.12444444444444,
+        "allocated_CPU_seconds": 227248,
+        "job_id": "20950693",
+        "run_id": "al32-labeling-20261018-02",
+        "state": "COMPLETED",
+        "wall_seconds": 14203
+      }
+    ],
+    "remaining_CPU_hours": 35.36888888888889,
+    "total_CPU_hours": 92.63111111111111,
+    "total_CPU_seconds": 333472
+  },
+  "calibration_passed": true,
+  "calibration_points_verified": 10,
+  "candidate_results": [
+    {
+      "checks": [
+        {
+          "configuration_id": "fcc-04",
+          "differences": {
+            "energy_eV_per_atom": 0.0029276015624999374,
+            "max_force_component_eV_per_A": 0.03836217000000003,
+            "max_stress_component_eV_per_A3": 0.00020549175772868706
+          },
+          "left": "candidate6",
+          "passed": false,
+          "right": "reference"
+        },
+        {
+          "configuration_id": "fcc-04",
+          "differences": {
+            "energy_eV_per_atom": 0.002945526249999997,
+            "max_force_component_eV_per_A": 0.03206742000000001,
+            "max_stress_component_eV_per_A3": 0.0005654443887388923
+          },
+          "left": "candidate6",
+          "passed": false,
+          "right": "mesh7"
+        },
+        {
+          "configuration_id": "fcc-04",
+          "differences": {
+            "energy_eV_per_atom": 6.239874999991457e-05,
+            "max_force_component_eV_per_A": 0.0001410199999999917,
+            "max_stress_component_eV_per_A3": 3.161135878684265e-05
+          },
+          "left": "candidate6",
+          "passed": true,
+          "right": "mesh6"
+        },
+        {
+          "configuration_id": "md-00-f1",
+          "differences": {
+            "energy_eV_per_atom": 0.00010370312500018741,
+            "max_force_component_eV_per_A": 0.03301354000000001,
+            "max_stress_component_eV_per_A3": 0.0011949395123766401
+          },
+          "left": "candidate6",
+          "passed": false,
+          "right": "reference"
+        },
+        {
+          "configuration_id": "md-00-f1",
+          "differences": {
+            "energy_eV_per_atom": 0.00017680249999996178,
+            "max_force_component_eV_per_A": 0.028449469999999977,
+            "max_stress_component_eV_per_A3": 0.0005519379752017967
+          },
+          "left": "candidate6",
+          "passed": false,
+          "right": "mesh7"
+        },
+        {
+          "configuration_id": "md-00-f1",
+          "differences": {
+            "energy_eV_per_atom": 7.408468749980912e-05,
+            "max_force_component_eV_per_A": 0.00045165000000002564,
+            "max_stress_component_eV_per_A3": 1.938962883161338e-05
+          },
+          "left": "candidate6",
+          "passed": true,
+          "right": "mesh6"
+        }
+      ],
+      "id": "gamma6",
+      "passed": false,
+      "protocol": {
+        "encut_eV": 450,
+        "gamma_mesh": 6,
+        "sigma_eV": 0.05
+      }
+    },
+    {
+      "checks": [
+        {
+          "configuration_id": "fcc-04",
+          "differences": {
+            "energy_eV_per_atom": 4.4009687500068395e-05,
+            "max_force_component_eV_per_A": 0.019934899999999978,
+            "max_stress_component_eV_per_A3": 0.0007406318845218791
+          },
+          "left": "candidate7",
+          "passed": true,
+          "right": "reference"
+        },
+        {
+          "configuration_id": "fcc-04",
+          "differences": {
+            "energy_eV_per_atom": 6.193437500012777e-05,
+            "max_force_component_eV_per_A": 0.00014312999999999132,
+            "max_stress_component_eV_per_A3": 3.145947166226411e-05
+          },
+          "left": "candidate7",
+          "passed": true,
+          "right": "mesh7"
+        },
+        {
+          "configuration_id": "md-00-f1",
+          "differences": {
+            "energy_eV_per_atom": 1.04687500002143e-06,
+            "max_force_component_eV_per_A": 0.012823150000000005,
+            "max_stress_component_eV_per_A3": 0.0008438139106816747
+          },
+          "left": "candidate7",
+          "passed": true,
+          "right": "reference"
+        },
+        {
+          "configuration_id": "md-00-f1",
+          "differences": {
+            "energy_eV_per_atom": 7.41462499997958e-05,
+            "max_force_component_eV_per_A": 0.00045187000000002087,
+            "max_stress_component_eV_per_A3": 1.9413739781364014e-05
+          },
+          "left": "candidate7",
+          "passed": true,
+          "right": "mesh7"
+        }
+      ],
+      "id": "gamma7",
+      "passed": true,
+      "protocol": {
+        "encut_eV": 450,
+        "gamma_mesh": 7,
+        "sigma_eV": 0.05
+      }
+    }
+  ],
+  "dataset_manifest_sha256": "65a4c6dce1a072504030dca2b0340db72a497e562e40b2717104294c3030fbdd",
+  "export_manifest_sha256": "0727c472058ee957a59e5e5a1b99bab1560e8b39b24bd3a48ce358153d724da7",
+  "export_maximum_differences": {
+    "cell_A": 0.0,
+    "energy_eV": 0.0,
+    "force_eV_per_A": 0.0,
+    "position_A": 4.999681113559973e-09,
+    "stress_eV_per_A3": 0.0,
+    "virial_eV": 0.0
+  },
+  "exports_verified": true,
+  "force_tolerance_margin_eV_per_A": 6.510000000002278e-05,
+  "labels_sha256": "d5f462ce6321f1afcbac3ce5e04ec430546b0e22b9676faf1de4a306b8d53650",
+  "limitations": [
+    "Convergence calibrated on only two training configurations",
+    "Force criterion passes narrowly; no claim of a large numerical margin",
+    "EMT proposals do not establish equilibrium DFT liquid; no interfaces/segregation/nucleation validation",
+    "Potential pretraining overlap and PAW54/PAW64 alignment remain to be handled in model evaluation",
+    "Private main-home plus workstation backups verified; institutional retention unconfirmed"
+  ],
+  "parent_groups": 10,
+  "production_points_verified": 40,
+  "production_ranges": {
+    "electronic_steps": [
+      12,
+      17
+    ],
+    "energy_eV_per_atom": [
+      -3.746384721875,
+      -3.2884021796875
+    ],
+    "max_abs_stress_eV_per_A3": 0.07056088879398799,
+    "max_force_norm_eV_per_A": 6.417341725205277,
+    "max_net_force_norm_eV_per_A": 5.385164823885499e-08
+  },
+  "protocol": {
+    "encut_eV": 450,
+    "gamma_mesh": 7,
+    "sigma_eV": 0.05
+  },
+  "ready_for_pilot_finetuning": true,
+  "ready_for_production_MD": false,
+  "reference_checks": [
+    {
+      "configuration_id": "fcc-04",
+      "differences": {
+        "energy_eV_per_atom": 1.7924687500059377e-05,
+        "max_force_component_eV_per_A": 0.019903249999999928,
+        "max_stress_component_eV_per_A3": 0.000709371392170548
+      },
+      "left": "mesh7",
+      "passed": true,
+      "right": "reference"
+    },
+    {
+      "configuration_id": "md-00-f1",
+      "differences": {
+        "energy_eV_per_atom": 7.309937499977437e-05,
+        "max_force_component_eV_per_A": 0.012913450000000104,
+        "max_stress_component_eV_per_A3": 0.0008256355777676305
+      },
+      "left": "mesh7",
+      "passed": true,
+      "right": "reference"
+    }
+  ],
+  "repeated_train_points_differences": {
+    "fcc-04": {
+      "energy_eV_per_atom": 0.0,
+      "max_force_component_eV_per_A": 0.0,
+      "max_stress_component_eV_per_A3": 2.4966036399690084e-11
+    },
+    "md-00-f1": {
+      "energy_eV_per_atom": 0.0,
+      "max_force_component_eV_per_A": 0.0,
+      "max_stress_component_eV_per_A3": 3.744905470795534e-11
+    }
+  },
+  "split_counts": {
+    "test": 13,
+    "train": 21,
+    "validation": 6
+  }
+}

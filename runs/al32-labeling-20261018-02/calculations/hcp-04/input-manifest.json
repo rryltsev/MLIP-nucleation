@@ -1,0 +1,13 @@
+{
+  "code_commit": "9356e989a7e1e34c1133a197df3da0bbe2bc49c2",
+  "configuration_id": "hcp-04",
+  "input_sha256": {
+    "INCAR": "9616b69700a60e39c5b597c70d9408aa60085ce51da820367989def2515f493e",
+    "KPOINTS": "184beccc578697519583f15ae00b3873830915353cf6ba71099fd0f9e5c544d9",
+    "POSCAR": "a0d17abf69ca6af80286b9f0828b04b3a21c6664c6c4962498be28bc2f86daca",
+    "POTCAR": "1b07010218b572e3404ce1eea8fed39e24b52859ebef1517bffa2ef69b8d1315"
+  },
+  "job_id": "20950693",
+  "parent_id": "hcp-prototype-001",
+  "split": "test"
+}

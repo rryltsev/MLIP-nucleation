@@ -21,7 +21,7 @@
   "license": "CC-BY-NC-4.0",
   "license_url": "https://huggingface.co/deepmodelingcommunity/DPA4-OMat24/blob/173bfd5a26f90a756ee891777270ef117078d9be/README.md",
   "model_id": "dpa4-mini-omat24-20260805",
-  "overlap_audit": "no scientific held-out DFT set exists; synthetic diagnostic labels only",
+  "overlap_audit": "Al32 grouped real-DFT test set now exists (13 configurations); common FCC/HCP prototypes and environments may overlap with OMat24. No pretraining-independent benchmark claim; test not used for DFT calibration or model selection.",
   "pretraining": "OMat24",
   "purpose": "foundation initialization for software fine-tuning check; not selected scientific teacher",
   "reference_settings": "OMat24 reference; exact PAW/DFT/electronic and energy-reference compatibility must be audited before real DFT fine-tuning",
@@ -173,5 +173,7 @@
     "pilot": "configs/systems/al32-pilot-v1.json",
     "source": "https://arxiv.org/html/2410.12771v1#S2.SS2.SSS2",
     "source_findings": "OMat24: VASP PBE/PBE+U, PAW54, MPRelaxSet-derived settings, ALGO Normal. Al metal needs no Hubbard U."
-  }
+  },
+  "real_DFT_pilot_dataset": "datasets/al32-pilot-v1/dft-v2.json",
+  "pilot_evaluation_status": "40 DFT labels audited; original FM baseline and real-DFT model fine-tuning have not yet been performed"
 }
