@@ -26,5 +26,11 @@ class EnergyAlignment(unittest.TestCase):
         self.assertEqual(before['delta_Al_eV_per_atom'],after['delta_Al_eV_per_atom'])
         self.assertNotEqual(before['metrics_by_split']['test'],after['metrics_by_split']['test'])
 
+    def test_final_evaluation_preserves_locked_train_offset(self):
+        rows,pred,ref=self.data()
+        result=evaluate(rows,pred,ref,fixed_train_offset=-4.)
+        self.assertEqual(result['delta_Al_eV_per_atom'],-4.)
+        self.assertEqual(result['metrics_by_split']['test']['energy_aligned_eV_per_atom']['rmse'],1.)
+
 
 if __name__=='__main__':unittest.main()

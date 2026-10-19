@@ -9,12 +9,13 @@ def statistics(values):
                 signed_mean=float(x.mean()),max_absolute=float(np.abs(x).max()),components=int(x.size))
 
 
-def evaluate(rows,predictions,labels):
+def evaluate(rows,predictions,labels,*,fixed_train_offset=None):
     ids=[r['configuration_id'] for r in rows]
     assert len(set(ids))==len(ids) and set(ids)==set(predictions)==set(labels)
     train=[r['configuration_id'] for r in rows if r['split']=='train'];assert train
     n={cid:len(labels[cid]['forces_eV_per_A']) for cid in ids}
     delta=float(np.mean([(labels[c]['energy_free_eV']-predictions[c]['energy_eV'])/n[c] for c in train]))
+    if fixed_train_offset is not None:delta=float(fixed_train_offset)
     residuals={}
     for row in rows:
         cid=row['configuration_id'];pred=predictions[cid];ref=labels[cid]

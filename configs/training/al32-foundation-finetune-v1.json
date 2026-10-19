@@ -1,0 +1,40 @@
+{
+  "study_id": "al32-foundation-finetune-v1",
+  "dataset": "datasets/al32-pilot-v1/dft-v2.json",
+  "geometry_manifest_sha256": "65a4c6dce1a072504030dca2b0340db72a497e562e40b2717104294c3030fbdd",
+  "labels_sha256": "d5f462ce6321f1afcbac3ce5e04ec430546b0e22b9676faf1de4a306b8d53650",
+  "models": {"dpa4": "models/foundation/dpa4-mini-omat24-20260805.json", "grace": "models/foundation/grace-1l-omat.json"},
+  "seed": 42,
+  "split_counts": {"train": 21, "validation": 6, "test": 13},
+  "training": {
+    "batch_size": 2,
+    "learning_rate_start": 0.0001,
+    "learning_rate_end": 0.00001,
+    "dpa4_steps": 1000,
+    "dpa4_checkpoint_interval": 100,
+    "grace_epochs": 100,
+    "grace_checkpoint_interval": 10,
+    "dpa4_loss": {"energy_prefactor": 10000, "force_prefactor": 400, "virial_prefactor": 3460.207612456747, "intensive_ener_virial": true},
+    "grace_loss": {"energy_weight": 10000, "forces_weight": 400, "stress_weight": 1000000},
+    "loss_note": "E/N scale0.01eV, force0.05eV/A, stress0.001eV/A^3. DPA4 intensive virial/N approximates stress using fixed17A^3/atom; native tensor averaging differs, common validation score is authoritative.",
+    "optimizer": "Adam, no EMA, all native trainable parameters; no architecture/type-map reduction",
+    "initialization": "Original pinned foundation weights, not synthetic fine-tuned checkpoints; DeepMD train-only bias/statistics adjustment recorded; GRACE shift=false"
+  },
+  "selection": {
+    "energy_RMSE_scale_eV_per_atom": 0.01,
+    "force_RMSE_scale_eV_per_A": 0.05,
+    "stress_RMSE_scale_eV_per_A3": 0.001,
+    "score": "Mean of squared full-validation RMSE/scale for train-aligned E/N, force components, six stress components",
+    "energy_alignment": "Fit one additive eV/Al shift per checkpoint on train only; freeze for validation and final test; report raw and aligned energies",
+    "tie_break": "Smallest training progress at exactly equal score",
+    "include_original_checkpoint": true,
+    "baseline_fallback": "If original checkpoint has the lowest validation score, retain it explicitly and report no validated adaptation benefit",
+    "test_gate": "No test labels in training/selection payload. Open test member from verified private DFT archive only after both immutable selections and selected-weight hashes are locked.",
+    "normalizers_are": "Fixed comparison scales, not an accuracy qualification or tuned acceptance thresholds"
+  },
+  "evaluation": "Re-evaluate original and selected models on same A100; identical raw/aligned energy and force/stress MAE/RMSE/bias/max by split and parent; no test-based selection or further tuning",
+  "resources": {"partition": "v100", "account": "imet-2026-2", "qos": "normal", "nodes": 1, "ntasks": 1, "cpus_per_task": 4, "gpus": 1, "memory_GiB": 32, "walltime": "01:00:00"},
+  "budget": {"maximum_GPU_seconds": 3600, "maximum_CPU_seconds": 14400, "prior_related_CPU_seconds": 412562, "global_CPU_hour_cap": 128, "worst_case_combined_CPU_hours": 118.60055555555556},
+  "authorization": "User explicitly requested DPA4/GRACE fine-tuning through Slurm on A100, train fitting, validation checkpoint selection, test final comparison; bounded one-seed pilot only",
+  "limitations": ["21 training structures only; no universal teacher qualification", "Prior baseline test results were inspected but must not set this run's model/checkpoint/sampling choices", "No pretraining-independent generalization claim; PAW54/PAW64 differences and narrow DFT convergence remain", "No MD stability, EOS, interface or distillation validation"]
+}
