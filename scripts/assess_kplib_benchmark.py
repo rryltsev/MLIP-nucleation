@@ -172,6 +172,24 @@ def main(path):
         assert r[1] in ('COMPLETED','FAILED','CANCELLED','TIMEOUT','OUT_OF_MEMORY','NODE_FAIL')
         budget.append(dict(run_id=m['run_id'],job_id=m['job_id'],state=r[1],allocated_CPU_seconds=int(r[5])))
     total=sum(r['allocated_CPU_seconds'] for r in budget);assert total<=128*3600
+    exploratory=[]
+    baseline_summary={}
+    for cid in refs:
+        samples=[cases[cid]['gamma7-r'+str(i)]['wall_seconds'] for i in range(2)]
+        median=statistics.median(samples)
+        baseline_summary[cid]=dict(wall_samples_seconds=samples,median_seconds=median,
+            differences_vs_gamma8=differences(cases[cid]['gamma7-r0'],refs[cid]['label']))
+        for d in distances:
+            label=cases[cid]['d'+str(d)];generation=grids[cid][str(d)]['generation_seconds']
+            exploratory.append(dict(configuration_id=cid,min_distance_A=d,
+                kplib_DFT_samples=1,baseline_DFT_samples=2,actual_kpoints=label['actual_kpoints'],
+                wall_seconds=label['wall_seconds'],generation_seconds=generation,
+                gamma7_median_seconds=median,end_to_end_wall_seconds=label['wall_seconds']+generation,
+                exploratory_speedup=median/(label['wall_seconds']+generation),
+                comparison_scope='Single kpLib run versus median of two same-node Gamma7 runs; not a validated speedup at equal accuracy'))
+    snapshot=json.loads((path/'scheduler-final.json').read_text())
+    assert snapshot['total_CPU_seconds']==total and not snapshot['live_al32_jobs']
+    assert {j['job_id']:j['allocated_CPU_seconds'] for j in snapshot['jobs']}=={j['job_id']:j['allocated_CPU_seconds'] for j in budget}
     assessment=dict(assessed_utc=datetime.now(timezone.utc).isoformat(),
         analysis_code_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
         analysis_source_sha256=sha(Path(__file__).read_bytes()),raw_label_quality_audit_passed=True,
@@ -179,7 +197,13 @@ def main(path):
         decision=stored['decision'],checks=checks,timing=timing,representation_checks=representation,
         source_sha256={n:sha(data[n]) for n in ('system.json','grids.json','references.json','benchmark.json','runtime.json')},
         raw_backup=backup,reference_backup=calbackup,budget=dict(jobs=budget,total_CPU_seconds=total,total_CPU_hours=total/3600,remaining_CPU_hours=128-total/3600),
-        diagnostics=diagnostics,limitations=stored['limitations'])
+        diagnostics=diagnostics,baseline_summary=baseline_summary,exploratory_timing=exploratory,
+        full_TR_VASP_check_status='Not performed: no candidate passed the accuracy gate' if selected is None else 'Performed for selected candidate',
+        limitations=['Two train parents only; Gamma7 has two cold repeats per parent; each convergence grid has one run',
+            ('No candidate passed, so selected-grid repeats and full/TR VASP comparison were not triggered' if selected is None else 'Selected grid additionally has a repeat and full/TR VASP comparison'),
+            'Grid generation timings came from the separate grid-generation allocation',
+            'Gamma8 and d80 are finite local references, not an exact infinite-grid limit',
+            'No universal library rejection, optimality or production throughput claim'])
     save(path/'quality-assessment.json',assessment)
     with (path/'convergence.csv').open('w',newline='',encoding='utf-8') as f:
         fields=['configuration_id','min_distance_A','actual_kpoints','wall_seconds']+[f'{ref}_{key}' for ref in ('gamma8','anchor') for key in cfg['tolerances']]+['passed']
