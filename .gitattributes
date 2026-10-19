@@ -11,6 +11,12 @@ scripts/assess_kplib_benchmark.py text eol=lf
 scripts/plot_kplib_benchmark.py text eol=lf
 scripts/refresh_al32_accounting.py text eol=lf
 results/al32-kplib-20261019/** -text
+scripts/baseline_metrics.py text eol=lf
+scripts/assess_fm_baseline.py text eol=lf
+scripts/plot_fm_baseline.py text eol=lf
+scripts/fm_baseline_cluster.py text eol=lf
+tests/test_baseline_metrics.py text eol=lf
+results/al32-foundation-baseline-20261019/** -text
 environments/*.lock.txt text eol=lf
 environments/*.lock.json text eol=lf
 models/foundation/licenses/* -text
