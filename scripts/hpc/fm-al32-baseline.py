@@ -35,7 +35,7 @@ def main():
         code_commit=os.environ['BASELINE_CODE_COMMIT'],started_utc=datetime.now(timezone.utc).isoformat(),
         scope='Original checkpoint inference only; no fitting or automatic energy-zero adjustment',python=sys.version,environment=sys.prefix)
     try:
-        cfg=json.loads((ROOT/'evaluation.json').read_text())
+        cfg=json.loads((ROOT/'evaluation.json').read_text());use_gpu=cfg['resources']['gpus']>0
         card=json.loads((ROOT/(BACKEND+'-checkpoint.json')).read_text())
         manifest=json.loads((ROOT/'run-inputs.json').read_text())
         for name,h in manifest.items():assert sha(ROOT/name)==h,name
@@ -47,7 +47,7 @@ def main():
         if BACKEND=='dpa4':
             import torch
             from deepmd.infer import DeepPot
-            assert torch.cuda.is_available()
+            assert torch.cuda.is_available() if use_gpu else not torch.cuda.is_available()
             engine=DeepPot(str(Path(card['remote_root'])/card['filename']))
             types=engine.get_type_map()
             def evaluate(atoms):
@@ -55,13 +55,13 @@ def main():
                 stress=-virial.reshape(3,3)/atoms.get_volume()
                 return float(energy.ravel()[0]),force.reshape(-1,3),stress.ravel()[[0,4,8,5,2,1]]
             result['versions']={p:importlib.metadata.version(p) for p in ('deepmd-kit','torch','numpy','ase')}
-            result['device']=torch.cuda.get_device_name(0)
+            result['device']=torch.cuda.get_device_name(0) if use_gpu else 'CPU, CUDA_VISIBLE_DEVICES empty'
         else:
             import tensorflow as tf
             from tensorpotential import TensorPotential
             from tensorpotential.instructions.base import load_instructions
             from tensorpotential.calculator import TPCalculator
-            assert tf.config.list_physical_devices('GPU')
+            assert tf.config.list_physical_devices('GPU') if use_gpu else not tf.config.list_physical_devices('GPU')
             source=Path(next(x['remote_path'] for n,x in card['files'].items() if n.endswith('model.yaml'))).parent
             model=TensorPotential(potential=load_instructions(str(source/'model.yaml')),param_dtype=tf.float64)
             model.load_checkpoint(checkpoint_name=str(source/'checkpoint'),expect_partial=True,assert_existing_objects_matched=True,model_only=True)
@@ -71,7 +71,7 @@ def main():
                 atoms.calc=calculator
                 return float(atoms.get_potential_energy()),atoms.get_forces(),atoms.get_stress()
             result['versions']={p:importlib.metadata.version(p) for p in ('tensorpotential','tensorflow','numpy','ase')}
-            result['device']=[d.name for d in tf.config.list_physical_devices('GPU')]
+            result['device']=[d.name for d in tf.config.list_physical_devices('GPU')] if use_gpu else 'CPU, CUDA_VISIBLE_DEVICES empty'
         predictions=[];telemetry=[]
         for row in rows:
             path=ROOT/row['poscar'];assert sha(path)==row['poscar_sha256']
@@ -80,14 +80,14 @@ def main():
             assert forces.shape==(32,3) and stress.shape==(6,) and np.isfinite(np.r_[energy,forces.ravel(),stress]).all()
             predictions.append(dict(configuration_id=row['configuration_id'],parent_id=row['parent_id'],split=row['split'],
                 energy_eV=energy,forces_eV_per_A=forces.tolist(),stress_eV_per_A3=stress.tolist(),volume_A3=atoms.get_volume(),inference_seconds=seconds))
-            if len(predictions) in (1,20,40):telemetry.extend(gpu_sample())
+            if use_gpu and len(predictions) in (1,20,40):telemetry.extend(gpu_sample())
             save(WORK/'predictions.json',dict(complete=False,model_id=card['model_id'],model_sha256=card['sha256'],frames=predictions))
-        assert telemetry,'Inference process not observed on GPU'
+        if use_gpu:assert telemetry,'Inference process not observed on GPU'
         # Verify files remain byte-identical after evaluation; no source overwrite.
         for item in card['files'].values():assert sha(item['remote_path'])==item['sha256']
         save(WORK/'predictions.json',dict(complete=True,model_id=card['model_id'],model_sha256=card['sha256'],
             contract=dict(energy='eV per cell, raw original model output',forces='eV/A Cartesian',stress='eV/A^3 tensile-positive Voigt xx yy zz yz xz xy'),frames=predictions))
-        result.update(status='passed',frames=40,gpu_samples=telemetry,predictions_sha256=sha(WORK/'predictions.json'),source_unchanged=True)
+        result.update(status='passed',frames=40,gpu_samples=telemetry,execution_device='GPU' if use_gpu else 'CPU',predictions_sha256=sha(WORK/'predictions.json'),source_unchanged=True)
     except Exception:
         result.update(status='failed',error=traceback.format_exc())
     result['finished_utc']=datetime.now(timezone.utc).isoformat();save(WORK/'result.json',result)

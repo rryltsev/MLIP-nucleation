@@ -16,11 +16,11 @@ from fm_cluster import collect
 from al_pilot import backup
 
 
-def submit(run_id):
+def submit(run_id,config):
     assert re.fullmatch(r'fm-al32-baseline-\d{8}-\d{2}',run_id)
     path=ROOT/'runs'/run_id/'manifest.json'
     if path.exists():raise FileExistsError('Reconcile recorded intent; no blind retry')
-    cfgpath=ROOT/'configs/evaluation/al32-foundation-baseline-v1.json';cfg=json.loads(cfgpath.read_text())
+    cfgpath=config.resolve();cfg=json.loads(cfgpath.read_text())
     dataset=json.loads((ROOT/cfg['dataset']).read_text())
     geometry=ROOT/dataset['geometry_manifest'];labels=ROOT/dataset['labels']
     assert hashlib.sha256(geometry.read_bytes()).hexdigest()==cfg['geometry_manifest_sha256']
@@ -50,10 +50,11 @@ def submit(run_id):
     remote("umask 077; python3 - <<'PY'\n"+code+"\nPY\nbash -n "+shlex.quote(run_dir+'/run.sbatch'),120)
     m['stage']='submission_intent';save(path,m);write_remote(run_dir+'/submission-intent.json',path.read_bytes())
     q=shlex.quote(run_dir);r=cfg['resources']
-    exports='ALL,BASELINE_RUN_DIR='+run_dir+',BASELINE_CODE_COMMIT='+m['code_commit']
+    exports='ALL,BASELINE_RUN_DIR='+run_dir+',BASELINE_CODE_COMMIT='+m['code_commit']+',BASELINE_DEVICE='+('gpu' if r['gpus'] else 'cpu')
+    gpu_flag=' --gres=gpu:a100:1' if r['gpus'] else ''
     reply=remote('set -euC; cd '+q+'; test ! -e job.id; sbatch --parsable --job-name='+run_id+
         ' --partition='+r['partition']+' --account='+r['account']+' --qos='+r['qos']+' --nodes=1 --ntasks=1 --cpus-per-task=4 --mem=32G --time='+r['walltime']+
-        ' --gres=gpu:a100:1 --chdir='+q+' --output='+q+'/slurm-%j.out --export='+shlex.quote(exports)+' run.sbatch > job.id; cat job.id')
+        gpu_flag+' --chdir='+q+' --output='+q+'/slurm-%j.out --export='+shlex.quote(exports)+' run.sbatch > job.id; cat job.id')
     job=reply.strip().split(';')[0]
     if not job.isdigit():raise RuntimeError('Uncertain submission; reconcile job.id and scheduler before retry')
     m.update(stage='submitted',job_id=job);save(path,m);print(json.dumps(dict(run_id=run_id,job_id=job)))
@@ -61,9 +62,9 @@ def submit(run_id):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);s=p.add_subparsers(dest='action',required=True)
-    s.add_parser('submit').add_argument('run_id')
+    su=s.add_parser('submit');su.add_argument('run_id');su.add_argument('--config',type=Path,default=ROOT/'configs/evaluation/al32-foundation-baseline-v1.json')
     for name in ('collect','backup'):s.add_parser(name).add_argument('manifest',type=Path)
     a=p.parse_args()
-    if a.action=='submit':submit(a.run_id)
+    if a.action=='submit':submit(a.run_id,a.config)
     elif a.action=='collect':collect(a.manifest.resolve())
     else:backup(a.manifest.resolve())
