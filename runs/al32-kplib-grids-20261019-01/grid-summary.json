@@ -1,0 +1,116 @@
+{
+  "fcc-04": {
+    "40": {
+      "effective_min_distance_A": 40.49387704010914,
+      "gamma_included": true,
+      "generation_seconds": 0.0459901187568903,
+      "library_num_distinct_kpts": 46,
+      "num_time_reversal_kpts": 46,
+      "num_total_kpts": 91,
+      "requested_min_distance_A": 40,
+      "spacegroup_number": 1,
+      "spatial_rotation_count": 1
+    },
+    "48": {
+      "effective_min_distance_A": 48.59265244813097,
+      "gamma_included": false,
+      "generation_seconds": 0.24857803992927074,
+      "library_num_distinct_kpts": 80,
+      "num_time_reversal_kpts": 80,
+      "num_total_kpts": 160,
+      "requested_min_distance_A": 48,
+      "spacegroup_number": 1,
+      "spatial_rotation_count": 1
+    },
+    "56": {
+      "effective_min_distance_A": 57.26699010319083,
+      "gamma_included": false,
+      "generation_seconds": 0.8399738240987062,
+      "library_num_distinct_kpts": 125,
+      "num_time_reversal_kpts": 125,
+      "num_total_kpts": 250,
+      "requested_min_distance_A": 56,
+      "spacegroup_number": 1,
+      "spatial_rotation_count": 1
+    },
+    "64": {
+      "effective_min_distance_A": 65.29441478505373,
+      "gamma_included": true,
+      "generation_seconds": 4.371506694704294,
+      "library_num_distinct_kpts": 192,
+      "num_time_reversal_kpts": 192,
+      "num_total_kpts": 383,
+      "requested_min_distance_A": 64,
+      "spacegroup_number": 1,
+      "spatial_rotation_count": 1
+    },
+    "80": {
+      "effective_min_distance_A": 80.17378614446716,
+      "gamma_included": false,
+      "generation_seconds": 2.5637669041752815,
+      "library_num_distinct_kpts": 343,
+      "num_time_reversal_kpts": 343,
+      "num_total_kpts": 686,
+      "requested_min_distance_A": 80,
+      "spacegroup_number": 1,
+      "spatial_rotation_count": 1
+    }
+  },
+  "md-00-f1": {
+    "40": {
+      "effective_min_distance_A": 41.212852998085566,
+      "gamma_included": true,
+      "generation_seconds": 0.07082203775644302,
+      "library_num_distinct_kpts": 46,
+      "num_time_reversal_kpts": 46,
+      "num_total_kpts": 91,
+      "requested_min_distance_A": 40,
+      "spacegroup_number": 1,
+      "spatial_rotation_count": 1
+    },
+    "48": {
+      "effective_min_distance_A": 48.06203265623356,
+      "gamma_included": false,
+      "generation_seconds": 0.09517055377364159,
+      "library_num_distinct_kpts": 72,
+      "num_time_reversal_kpts": 72,
+      "num_total_kpts": 144,
+      "requested_min_distance_A": 48,
+      "spacegroup_number": 1,
+      "spatial_rotation_count": 1
+    },
+    "56": {
+      "effective_min_distance_A": 58.28377565398127,
+      "gamma_included": false,
+      "generation_seconds": 1.3242876790463924,
+      "library_num_distinct_kpts": 125,
+      "num_time_reversal_kpts": 125,
+      "num_total_kpts": 250,
+      "requested_min_distance_A": 56,
+      "spacegroup_number": 1,
+      "spatial_rotation_count": 1
+    },
+    "64": {
+      "effective_min_distance_A": 64.37653435429715,
+      "gamma_included": true,
+      "generation_seconds": 1.1479701325297356,
+      "library_num_distinct_kpts": 171,
+      "num_time_reversal_kpts": 171,
+      "num_total_kpts": 341,
+      "requested_min_distance_A": 64,
+      "spacegroup_number": 1,
+      "spatial_rotation_count": 1
+    },
+    "80": {
+      "effective_min_distance_A": 81.59728591557378,
+      "gamma_included": false,
+      "generation_seconds": 17.05934241786599,
+      "library_num_distinct_kpts": 343,
+      "num_time_reversal_kpts": 343,
+      "num_total_kpts": 686,
+      "requested_min_distance_A": 80,
+      "spacegroup_number": 1,
+      "spatial_rotation_count": 1
+    }
+  }
+}

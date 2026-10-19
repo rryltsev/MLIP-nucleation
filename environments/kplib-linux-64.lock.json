@@ -1,0 +1,60 @@
+{
+  "activation": "/home6/u3129/mlip-research/envs/kplib_111/activate-kplib.sh",
+  "base_interpreter": "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/python",
+  "compiler": "g++ (GCC) 8.5.0 20210514 (Red Hat 8.5.0-10)",
+  "environment": "/home6/u3129/mlip-research/envs/kplib_111",
+  "extension_sha256": "9f48f70825bb98d538e16be3e716f4e87b361f04dea960c8c7cfd76faced02c5",
+  "grid_manifest": "runs/al32-kplib-grids-20261019-01/manifest.json",
+  "installed_packages": [
+    "kpLib @ file:///misc/home6/u3129/mlip-research/runs/al32-kplib-setup-20261019-01/wheelhouse/kpLib-1.1.1-cp312-cp312-linux_x86_64.whl#sha256=806820a696df9e8d936056434e2e28cf20c9c205bed9d4ef0073405c309f2d0f",
+    "numpy==1.26.4",
+    "packaging==25.0",
+    "pip==25.0.1",
+    "pybind11==2.13.6",
+    "setuptools==75.8.0",
+    "spglib==2.7.0",
+    "typing_extensions==4.14.1",
+    "wheel==0.45.1"
+  ],
+  "inventory_note": "The run requirements.lock.txt is a wheel filename/checksum inventory, not a pip -r requirements file.",
+  "python": "3.12.14 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:46:43) [GCC 14.3.0]",
+  "rebuild": "On compatible Linux x86_64/Python3.12 create a fresh venv, verify every wheel hash from the private archive, then pip install --no-index --no-deps wheelhouse/*.whl; pip check. Preserve existing environments.",
+  "setup_manifest": "runs/al32-kplib-setup-20261019-01/manifest.json",
+  "source_sha256": "a7b8d51e77e383d69ab5896a6a79a7fc02def93a9ab0f2e32407afb2a7060731",
+  "wheel_archive_sha256": "19bdb62badc970630a0ad28336e12342742c4ccfd5b9f737203680a6014c67c7",
+  "wheel_backup": "runs/al32-kplib-setup-20261019-01/artifact-backup.json",
+  "wheel_files": {
+    "kpLib-1.1.1-cp312-cp312-linux_x86_64.whl": {
+      "bytes": 157589,
+      "sha256": "806820a696df9e8d936056434e2e28cf20c9c205bed9d4ef0073405c309f2d0f"
+    },
+    "numpy-1.26.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl": {
+      "bytes": 17950613,
+      "sha256": "675d61ffbfa78604709862923189bad94014bef562cc35cf61d3a07bba02a7ed"
+    },
+    "packaging-25.0-py3-none-any.whl": {
+      "bytes": 66469,
+      "sha256": "29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484"
+    },
+    "pybind11-2.13.6-py3-none-any.whl": {
+      "bytes": 243282,
+      "sha256": "237c41e29157b962835d356b370ededd57594a26d5894a795960f0047cb5caf5"
+    },
+    "setuptools-75.8.0-py3-none-any.whl": {
+      "bytes": 1228782,
+      "sha256": "e3982f444617239225d675215d51f6ba05f845d4eec313da4418fdbb56fb27e3"
+    },
+    "spglib-2.7.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl": {
+      "bytes": 962531,
+      "sha256": "6913906fd9108e7bb2ce06a810513a95a82d801530f10230979bf3427bb7e771"
+    },
+    "typing_extensions-4.14.1-py3-none-any.whl": {
+      "bytes": 43906,
+      "sha256": "d1e1e3b58374dc93031d6eda2420a48ea44a36c2b4766a4fdeb3710755731d76"
+    },
+    "wheel-0.45.1-py3-none-any.whl": {
+      "bytes": 72494,
+      "sha256": "708e7481cc80179af0e556bbf0cc00b8444c7321e2700b8d8580231d13017248"
+    }
+  }
+}

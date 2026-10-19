@@ -1,0 +1,150 @@
+{
+  "bytes": 101119,
+  "local_archive": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\MLIP-research\\artifacts\\dft-run-backups\\al32-kplib-grids-20261019-01.tar.gz",
+  "members": {
+    "al-pilot.py": {
+      "bytes": 19440,
+      "sha256": "dd1f82e73d355d4cb772fccb346dd6b3b640661cac0daa8b9d18efd2a3ff8228"
+    },
+    "grid-summary.json": {
+      "bytes": 3619,
+      "sha256": "970a657df9ec907260690b46303fcbfb5181cc1a8c426c311e086982eefde5ee"
+    },
+    "grids.json": {
+      "bytes": 527990,
+      "sha256": "8428f811224c9242e0c0810c1f64d552c0f635f35da38440f97c4a34e3eec327"
+    },
+    "grids/fcc-04/40/KPOINTS": {
+      "bytes": 2718,
+      "sha256": "267a7329ec744fd66f74c3eb0b7d78e601966e89c940713d3ebf3db17b844885"
+    },
+    "grids/fcc-04/40/grid.json": {
+      "bytes": 13674,
+      "sha256": "8a2e3c87d7ba92a2204bb0d5e2bd57271dcbdf009d98b76d20552c7ff713c505"
+    },
+    "grids/fcc-04/48/KPOINTS": {
+      "bytes": 2609,
+      "sha256": "a8e22ad864da67797bc32c7aeb63ed54f369be74f0830434f9f30439a48b9cd3"
+    },
+    "grids/fcc-04/48/grid.json": {
+      "bytes": 17932,
+      "sha256": "152cfd9d33acac85aa3a9ae6513321e926c8908ae14fe74efced10b644c13b23"
+    },
+    "grids/fcc-04/56/KPOINTS": {
+      "bytes": 3511,
+      "sha256": "077f3cefca7920b074426cf039cb7e364bfd54c288d5356d28312282697bfbc9"
+    },
+    "grids/fcc-04/56/grid.json": {
+      "bytes": 28491,
+      "sha256": "f038d659f9bd1133626885ff9fe0ef1f72a45286f7e9685bda9385003584735b"
+    },
+    "grids/fcc-04/64/KPOINTS": {
+      "bytes": 11355,
+      "sha256": "270ee37ab50a772f2537f0a6a0d70ff93182b6c4c12c67970dcecc55c0ba96dc"
+    },
+    "grids/fcc-04/64/grid.json": {
+      "bytes": 56634,
+      "sha256": "d7823624d53131dd457339d81bda30c14d26397f18d31e4421350a46e1a1b04e"
+    },
+    "grids/fcc-04/80/KPOINTS": {
+      "bytes": 18309,
+      "sha256": "b289f5b4751b9a84d62ce1c96d0b16bf4f0702f4baafd347ad5a117fa178d53d"
+    },
+    "grids/fcc-04/80/grid.json": {
+      "bytes": 94976,
+      "sha256": "df64ba887faed650848447dc0afefe88f34dcae455968e4368fa9796645fad48"
+    },
+    "grids/md-00-f1/40/KPOINTS": {
+      "bytes": 2718,
+      "sha256": "267a7329ec744fd66f74c3eb0b7d78e601966e89c940713d3ebf3db17b844885"
+    },
+    "grids/md-00-f1/40/grid.json": {
+      "bytes": 13676,
+      "sha256": "f8944d95d2a2ec5f16ce921a3c9e012ce0de076b3a3db733757ec442557ff902"
+    },
+    "grids/md-00-f1/48/KPOINTS": {
+      "bytes": 2721,
+      "sha256": "ad349b23ea9e9ddb1b9bfce071d26ba1ae7e9df729bd9a6f2bcef62b0f8a3990"
+    },
+    "grids/md-00-f1/48/grid.json": {
+      "bytes": 16810,
+      "sha256": "7988200b42dd1f92ba4a2136b3f70a7db7529f855afbb9ec41ae0f0b3d87fccd"
+    },
+    "grids/md-00-f1/56/KPOINTS": {
+      "bytes": 3511,
+      "sha256": "077f3cefca7920b074426cf039cb7e364bfd54c288d5356d28312282697bfbc9"
+    },
+    "grids/md-00-f1/56/grid.json": {
+      "bytes": 28491,
+      "sha256": "9ea31a2380e2db0dd8a211d116313a540769592a3340549d954f3dd399afe9fe"
+    },
+    "grids/md-00-f1/64/KPOINTS": {
+      "bytes": 10107,
+      "sha256": "96f8383a25b5e328796c3134b1f85c1d653c21a803a0661c1f88de7ee6e8ee25"
+    },
+    "grids/md-00-f1/64/grid.json": {
+      "bytes": 50460,
+      "sha256": "70ca002411bbbefdc53ade9616683df0230e1d48e00c714c44b3670da1f4f926"
+    },
+    "grids/md-00-f1/80/KPOINTS": {
+      "bytes": 18309,
+      "sha256": "b289f5b4751b9a84d62ce1c96d0b16bf4f0702f4baafd347ad5a117fa178d53d"
+    },
+    "grids/md-00-f1/80/grid.json": {
+      "bytes": 94975,
+      "sha256": "4f43b5ee582c77159cd8340e8c64366e117072cd21df3cbeb20470c151d7e072"
+    },
+    "job.id": {
+      "bytes": 9,
+      "sha256": "ee0bf0270c1ab5631b72aeea7bfb77ec34cd1f10ecbc1370ef8791c91bca3bdd"
+    },
+    "kplib-run.py": {
+      "bytes": 11220,
+      "sha256": "eca66dac0ce8acbc96e50d6a5211a9f65b52d9778a0a3a833f0d3eaccbbb994d"
+    },
+    "kplib_grid.py": {
+      "bytes": 3112,
+      "sha256": "b0da602c2b44eb6aeb9485b69dc6ee5da98f98317b6290709aab6198f1e97985"
+    },
+    "references.json": {
+      "bytes": 9412,
+      "sha256": "e272d4fa986ebd278beb20aefeaa7933f03dd56749b86141957fb4a575d33fd1"
+    },
+    "result.json": {
+      "bytes": 65,
+      "sha256": "8aed3a607dcf9b22da0caabfc7bef982b99960a53bd0fe342fd2fff6e417a6db"
+    },
+    "run.sbatch": {
+      "bytes": 405,
+      "sha256": "1b9cab58cee229e8b7d244eba5e9a4f9c8ce884b9ea8ee91cf0b669eea2c0033"
+    },
+    "runtime.json": {
+      "bytes": 388,
+      "sha256": "da588d20ebb44e0dfdf1c4127015854251a0583fb9d371388f44d0048e0656d5"
+    },
+    "slurm-20952033.out": {
+      "bytes": 216,
+      "sha256": "53e73aaea3bb20ae7e80ffcba2807f514a9acf11ae58492d75ebc79d161bba51"
+    },
+    "structures/fcc-04/POSCAR": {
+      "bytes": 2196,
+      "sha256": "5b3090f9d3683cffa8a0162447e400d76d04bdaf264a6441bdbfb699238f3b2d"
+    },
+    "structures/md-00-f1/POSCAR": {
+      "bytes": 4561,
+      "sha256": "c1922c7cfa4ce82ba49afb820246202309671d47327827ce652150b9dc820bd0"
+    },
+    "submission-intent.json": {
+      "bytes": 2828,
+      "sha256": "aff58838b97e19f43df8d5ad76697cdc2276686674ec22f1260bf2f1ec9f3656"
+    },
+    "system.json": {
+      "bytes": 2772,
+      "sha256": "0118fb30ddaa0b2b8dca693a638bcc757301893566371778f7abe1f691f4ecb0"
+    }
+  },
+  "policy": "Private cluster main-home archive plus actual workstation copy; retention/institutional backup unconfirmed; contains licensed material, excluded from Git",
+  "remote_archive": "/home/u3129/.local/share/mlip-research/dft-artifacts/al32-kplib-grids-20261019-01.tar.gz",
+  "sha256": "c2cb5d0e6a4d2bf8572fb8e6c583ba0fb4f572069928e423b559b7a21cfb6b8d",
+  "verified_retrieval": true
+}

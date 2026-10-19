@@ -1,0 +1,19 @@
+{
+  "exclusions": "POTCAR, raw VASP outputs and binary exports remain private",
+  "sacct": "20952032|COMPLETED|0:0|50|2|100\n20952032.batch|COMPLETED|0:0|50|2|100\n20952032.extern|COMPLETED|0:0|50|2|100",
+  "sha256": {
+    "al-pilot.py": "dd1f82e73d355d4cb772fccb346dd6b3b640661cac0daa8b9d18efd2a3ff8228",
+    "kplib-run.py": "499dc317d78df5f9d6c10ee36929e67b09ca4b318b7a1f88545d2b4c2a4b73f9",
+    "kplib_grid.py": "02f08b594f614bfd6857b3b49bb6afc9ceb9e80b1df346b054638c23149f6ccb",
+    "references.json": "e272d4fa986ebd278beb20aefeaa7933f03dd56749b86141957fb4a575d33fd1",
+    "requirements.lock.txt": "44142d356dd15f80fc82242c859942e94e3f2dc4c1685e0090d4e7d8608a41c7",
+    "result.json": "4bd443fb854c3568b01fe455fb6c563e9e85023724801b40caf5c495902fb1f6",
+    "run.sbatch": "925929e0064a71a2fa407981ae306ecfbe507961d861fba4e8e84d5e00cb1f6c",
+    "software.json": "55a43b521339f4985e7040df0b5f9fe4622a4cf23350e79b40dff334f12d3d8a",
+    "structures/fcc-04/POSCAR": "5b3090f9d3683cffa8a0162447e400d76d04bdaf264a6441bdbfb699238f3b2d",
+    "structures/md-00-f1/POSCAR": "c1922c7cfa4ce82ba49afb820246202309671d47327827ce652150b9dc820bd0",
+    "submission-intent.json": "3357209af44e7bb3452ab7e803732a52e8979009e5467233a7857f4c42cdd50e",
+    "system.json": "0118fb30ddaa0b2b8dca693a638bcc757301893566371778f7abe1f691f4ecb0"
+  },
+  "verified": true
+}

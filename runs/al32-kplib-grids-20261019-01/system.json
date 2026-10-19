@@ -1,0 +1,34 @@
+{
+  "study_id": "al32-kplib-benchmark-v1",
+  "purpose": "Bounded generalized-grid accuracy/cost comparison on the original two training parents",
+  "configuration_ids": ["fcc-04", "md-00-f1"],
+  "geometry_manifest": "datasets/al32-pilot-v1/dataset-manifest.json",
+  "reference_run": "runs/al32-calibration-20261018-02",
+  "reference_case": "reference",
+  "reference_protocol": {"encut_eV": 550, "gamma_mesh": 8, "sigma_eV": 0.05},
+  "calculation_protocol": {"encut_eV": 450, "sigma_eV": 0.05, "ISYM": 0, "ISPIN": 1, "NCORE": 4},
+  "kplib": {
+    "version": "1.1.1",
+    "source_sha256": "a7b8d51e77e383d69ab5896a6a79a7fc02def93a9ab0f2e32407afb2a7060731",
+    "environment": "/home6/u3129/mlip-research/envs/kplib_111",
+    "min_distance_A": [40, 48, 56, 64, 80],
+    "anchor_min_distance_A": 80,
+    "include_gamma": "auto",
+    "symprec_A": 0.00001,
+    "use_scale_factor": false,
+    "weight_policy": "Full generated coordinates, uniform full weights, then time-reversal-only reduction. Never use spatially reduced weights with ISYM0."
+  },
+  "tolerances": {"energy_eV_per_atom": 0.002, "max_force_component_eV_per_A": 0.02, "max_stress_component_eV_per_A3": 0.001},
+  "representation_tolerances": {"energy_eV_per_atom": 0.000001, "max_force_component_eV_per_A": 0.00001, "max_stress_component_eV_per_A3": 0.0000001},
+  "selection": "Choose lowest tested min_distance BELOW80 passing BOTH existing Gamma8 and internal d80 anchor on BOTH parents, with every denser tested grid also passing. Anchor itself must pass Gamma8; it is not eligible as a candidate without a denser internal reference.",
+  "timing": {"cold_starts": true, "repeats_per_method_per_parent": 2, "baseline": "Fresh Gamma7 on the same allocation/node and unchanged INCAR", "old_run_timings": "context only, never used as a claimed speedup", "claim_scope": "Exploratory two-parent paired timings, no general performance guarantee"},
+  "adoption": "Recommend for this pilot only if accuracy gates and full/TR representation check pass, and median wall time is at least10 percent lower on BOTH parents. Otherwise retain Gamma7 or record insufficient evidence.",
+  "maximum_overall_CPU_hours": 128,
+  "known_prior_CPU_seconds": 333472,
+  "phase_limits": {
+    "setup": {"ntasks": 1, "cpus_per_task": 2, "memory_GiB": 4, "walltime": "00:15:00", "maximum_reserved_CPU_hours": 0.5},
+    "grids": {"ntasks": 1, "cpus_per_task": 1, "memory_GiB": 4, "walltime": "00:15:00", "maximum_reserved_CPU_hours": 0.25},
+    "benchmark": {"ntasks": 16, "cpus_per_task": 1, "memory_GiB": 32, "walltime": "02:00:00", "maximum_reserved_CPU_hours": 32}
+  },
+  "sources": ["https://muellergroup.jhu.edu/K-Points.html", "https://pypi.org/project/kpLib/1.1.1/", "https://arxiv.org/abs/1907.13610", "https://vasp.at/wiki/ISYM"]
+}

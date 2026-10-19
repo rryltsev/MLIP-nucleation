@@ -257,6 +257,29 @@ Installation provenance and hashes are in `runs/vasp661-oneapi-20261017-05/`. Jo
 
 The licensed source archive, source tree, binaries, test potentials and raw build logs remain on the cluster, outside Git. `scripts/install_vasp.py` records input hashes before submission and guards deployment on successful scheduler state, test coverage, resolved libraries and matching binary checksums. Earlier failed launch attempts and their diagnosed filesystem/module causes are retained in `runs/`.
 
+### Generalized k-point grids with kpLib
+
+An isolated Linux/Python3.12 environment contains kpLib1.1.1, NumPy1.26.4 and spglib2.7.0. Source, built wheels and the installed extension are checksum verified; the exact inventory is `environments/kplib-linux-64.lock.json`. Actual wheels have private cluster and workstation backups referenced in the setup run. The run's `requirements.lock.txt` is a filename/checksum inventory, not a pip requirements file. Existing DeepMD/GRACE environments were preserved.
+
+```bash
+source /home6/u3129/mlip-research/envs/kplib_111/activate-kplib.sh
+# Python API: from kpLib.interface import get_kpoints
+```
+
+`min_distance` is in Angstrom in the real-space superlattice; increasing it normally increases reciprocal sampling. The adapter `scripts/kplib_grid.py` writes explicit reciprocal VASP KPOINTS. It reconstructs uniform weights on the full coordinates and reduces only time reversal. Do not attach kpLib's spatial-orbit weights to all full coordinates or use spatial reduction without validating force/stress reconstruction for the chosen VASP symmetry settings.
+
+The fixed experiment is `configs/dft/al32-kplib-benchmark-v1.json`: two original train parents, min_distance40/48/56/64/80 Angstrom, unchanged energy/force/stress tolerances, existing550eV Gamma8 and internal d80 references. It compares two cold repeats with fresh450eV Gamma7 on the same allocation, includes grid generation in reported speedup, and checks full/TR prediction equivalence. This is an exploratory pilot; fewer k-points alone are not evidence of adequate accuracy or faster execution. The40 accepted labels remain under their existing Gamma7 protocol.
+
+Setup20952032 and grids20952033 completed and were collected/backed up. Benchmark20952034 is recorded in `runs/al32-kplib-benchmark-20261019-01/manifest.json`; check current scheduler/result state rather than submitting it again. These jobs share the original128 CPU-hour cap, including earlier failures. Resume collection and backup with:
+
+```powershell
+python scripts/kplib_cluster.py collect runs/al32-kplib-benchmark-20261019-01/manifest.json
+# After terminal collection:
+python scripts/kplib_cluster.py backup runs/al32-kplib-benchmark-20261019-01/manifest.json
+```
+
+The selection/adoption gates are fixed before DFT: a grid below d80 must pass both references for both parents and all denser tested grids must pass; full/TR equivalence must pass; median end-to-end wall time must fall at least10 percent on both parents. If any gate fails, retain Gamma7 and record the negative evidence. Source references are the [official project](https://muellergroup.jhu.edu/K-Points.html), [pinned release](https://pypi.org/project/kpLib/1.1.1/), [algorithm paper](https://arxiv.org/abs/1907.13610) and [VASP ISYM documentation](https://vasp.at/wiki/ISYM).
+
 ### PAW pseudopotentials
 
 The user-provided `Pseudopotentials_v6.4.zip` is stored privately, together with its extracted files, under:

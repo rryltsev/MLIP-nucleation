@@ -1,0 +1,290 @@
+{
+  "bytes": 41885464,
+  "local_archive": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\MLIP-research\\artifacts\\dft-run-backups\\al32-kplib-setup-20261019-01.tar.gz",
+  "members": {
+    "al-pilot.py": {
+      "bytes": 19440,
+      "sha256": "dd1f82e73d355d4cb772fccb346dd6b3b640661cac0daa8b9d18efd2a3ff8228"
+    },
+    "job.id": {
+      "bytes": 9,
+      "sha256": "cab2c433d9904807c479610d57151906a0f6c6c41dcdd0db589161bdf3ad34d7"
+    },
+    "kpLib-1.1.1.tar.gz": {
+      "bytes": 149972,
+      "sha256": "a7b8d51e77e383d69ab5896a6a79a7fc02def93a9ab0f2e32407afb2a7060731"
+    },
+    "kplib-run.py": {
+      "bytes": 10582,
+      "sha256": "499dc317d78df5f9d6c10ee36929e67b09ca4b318b7a1f88545d2b4c2a4b73f9"
+    },
+    "kplib_grid.py": {
+      "bytes": 2810,
+      "sha256": "02f08b594f614bfd6857b3b49bb6afc9ceb9e80b1df346b054638c23149f6ccb"
+    },
+    "references.json": {
+      "bytes": 9412,
+      "sha256": "e272d4fa986ebd278beb20aefeaa7933f03dd56749b86141957fb4a575d33fd1"
+    },
+    "requirements.lock.txt": {
+      "bytes": 878,
+      "sha256": "44142d356dd15f80fc82242c859942e94e3f2dc4c1685e0090d4e7d8608a41c7"
+    },
+    "result.json": {
+      "bytes": 65,
+      "sha256": "4bd443fb854c3568b01fe455fb6c563e9e85023724801b40caf5c495902fb1f6"
+    },
+    "run.sbatch": {
+      "bytes": 410,
+      "sha256": "925929e0064a71a2fa407981ae306ecfbe507961d861fba4e8e84d5e00cb1f6c"
+    },
+    "setup-home/pip-cache/http-v2/0/4/1/8/c/0418c83b80f7f7bfaec2738bfbbee53d2c1562196c0781702f6eddc8": {
+      "bytes": 1895,
+      "sha256": "d6e04a6714215ddded186c54b8fcce8cc5eebac3a3c9a99852ab9418aebbcf45"
+    },
+    "setup-home/pip-cache/http-v2/0/4/1/8/c/0418c83b80f7f7bfaec2738bfbbee53d2c1562196c0781702f6eddc8.body": {
+      "bytes": 191203,
+      "sha256": "adda37eec0d5328fe05200f20fc80f5b1f9fed6c29cd9e3c71be012adc85592b"
+    },
+    "setup-home/pip-cache/http-v2/0/9/8/8/b/0988b57fb531a31461371dfb762e53a63aa5fdfd9075193693910521": {
+      "bytes": 1873,
+      "sha256": "7ce76a9b9e69eee206af136beb2cb8a64492044537192eed8aef6fbbcde6caad"
+    },
+    "setup-home/pip-cache/http-v2/0/9/8/8/b/0988b57fb531a31461371dfb762e53a63aa5fdfd9075193693910521.body": {
+      "bytes": 108075,
+      "sha256": "7909e4aca1ed036e61958009f6e6877333b3e99d9e29fea4b4b53d017273cd9c"
+    },
+    "setup-home/pip-cache/http-v2/3/7/d/a/9/37da91f32d419e420b93e82f44b5eba0745e106943aba378e32f559b": {
+      "bytes": 1235,
+      "sha256": "44f11c588ec68393b03b4c7f66487b37b1631078d737bdd467d010d2bea850c4"
+    },
+    "setup-home/pip-cache/http-v2/3/7/d/a/9/37da91f32d419e420b93e82f44b5eba0745e106943aba378e32f559b.body": {
+      "bytes": 1228782,
+      "sha256": "e3982f444617239225d675215d51f6ba05f845d4eec313da4418fdbb56fb27e3"
+    },
+    "setup-home/pip-cache/http-v2/3/d/0/7/6/3d07669e080e2ea2aac984ad88c80963f309c7d0d661888211645de8": {
+      "bytes": 1240,
+      "sha256": "2c715c798530fd24a4a7eed7d04dcdd47fce61cd6f4f6745ee3895c3041d6c19"
+    },
+    "setup-home/pip-cache/http-v2/3/d/0/7/6/3d07669e080e2ea2aac984ad88c80963f309c7d0d661888211645de8.body": {
+      "bytes": 43906,
+      "sha256": "d1e1e3b58374dc93031d6eda2420a48ea44a36c2b4766a4fdeb3710755731d76"
+    },
+    "setup-home/pip-cache/http-v2/4/4/e/5/b/44e5b11a6caa92636d8ccfe658d420ba4ed8f67f7f4e835b214255aa": {
+      "bytes": 1899,
+      "sha256": "11c678140fb92dc73d7dd74dc3c7363dc66491184f0ffe6e9c22cf5d505c38be"
+    },
+    "setup-home/pip-cache/http-v2/4/4/e/5/b/44e5b11a6caa92636d8ccfe658d420ba4ed8f67f7f4e835b214255aa.body": {
+      "bytes": 14909,
+      "sha256": "838454e1cd9a16010d91baa79a13219595e25fc1cadccb6c8afe65e7c96b101a"
+    },
+    "setup-home/pip-cache/http-v2/4/d/2/7/2/4d272e6453941ce8b0a37a02cdb1685fc612c33441fa74691fb40656": {
+      "bytes": 1899,
+      "sha256": "6f9b0f5e6cbc39982c4f0abde8fe82e9dae6c8f4aed2e7f763263f63f5431c95"
+    },
+    "setup-home/pip-cache/http-v2/4/d/2/7/2/4d272e6453941ce8b0a37a02cdb1685fc612c33441fa74691fb40656.body": {
+      "bytes": 21119,
+      "sha256": "f076138f1379ef47f165bd377e6ef31c825af08d5f129f563341a3af47c045f0"
+    },
+    "setup-home/pip-cache/http-v2/7/a/a/4/3/7aa434d24502a688d27606fdc15e20687108a5f174613207fb3cd5e2": {
+      "bytes": 1275,
+      "sha256": "007a540e1dbf302bb4e472458d664db022a192a0cb34bf9c1c61d678ff204870"
+    },
+    "setup-home/pip-cache/http-v2/7/a/a/4/3/7aa434d24502a688d27606fdc15e20687108a5f174613207fb3cd5e2.body": {
+      "bytes": 3281,
+      "sha256": "5b611a609c38fefc3d616bf45d20aec98fb7d53f245daca9e2c30fc85c7ac282"
+    },
+    "setup-home/pip-cache/http-v2/7/b/6/b/b/7b6bbe6761c4b96a22fceae90ae94b84afddc06ce20edb28bf2eaf86": {
+      "bytes": 1234,
+      "sha256": "0d0e2d411e2cf9d8d7f222abf5d8157b5b3dd38f51888f2dc49c347153905153"
+    },
+    "setup-home/pip-cache/http-v2/7/b/6/b/b/7b6bbe6761c4b96a22fceae90ae94b84afddc06ce20edb28bf2eaf86.body": {
+      "bytes": 66469,
+      "sha256": "29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484"
+    },
+    "setup-home/pip-cache/http-v2/8/7/d/7/b/87d7b52be3254762e9570f8aac901a6441d4d9f0a427a6cff6fdca32": {
+      "bytes": 1285,
+      "sha256": "bbb0b10f49d490d27793476ae1f4d8a6700964fc1b03b17bcf3d3674179e9e24"
+    },
+    "setup-home/pip-cache/http-v2/8/7/d/7/b/87d7b52be3254762e9570f8aac901a6441d4d9f0a427a6cff6fdca32.body": {
+      "bytes": 2995,
+      "sha256": "f0b4b77a7174c372b22f85988a69457ec91c9e401183eb2ffcbead1db3cc4b9b"
+    },
+    "setup-home/pip-cache/http-v2/9/1/a/4/3/91a4332c2c4a39962263612615d886de584fd5f5212f21c26fc32778": {
+      "bytes": 1205,
+      "sha256": "90ecc9f1cdcfacc4e118d319335fff42d68c04c5a53c338e93a053ff6244a371"
+    },
+    "setup-home/pip-cache/http-v2/9/1/a/4/3/91a4332c2c4a39962263612615d886de584fd5f5212f21c26fc32778.body": {
+      "bytes": 962531,
+      "sha256": "6913906fd9108e7bb2ce06a810513a95a82d801530f10230979bf3427bb7e771"
+    },
+    "setup-home/pip-cache/http-v2/9/4/4/8/e/9448eb45dfdd5e498d052f91989e10596586e4619d278b7160a39d76": {
+      "bytes": 1250,
+      "sha256": "0e5349c28fe9742382d7af9d4b3bcfcf1652813158f606b8b65b289aa445c7fb"
+    },
+    "setup-home/pip-cache/http-v2/9/4/4/8/e/9448eb45dfdd5e498d052f91989e10596586e4619d278b7160a39d76.body": {
+      "bytes": 6670,
+      "sha256": "8a38c979e7476630c10f727747d74b73a3735b054b00c83797f06a8521332e49"
+    },
+    "setup-home/pip-cache/http-v2/a/1/9/5/3/a19537d3cf37c122db841d6fe4cd322bc10d1a558bb00d146b85cb9a": {
+      "bytes": 1903,
+      "sha256": "590d23fa8de1d9a463eaf02163e654d51f25f9e2439dd17e1697ae932921fcd3"
+    },
+    "setup-home/pip-cache/http-v2/a/1/9/5/3/a19537d3cf37c122db841d6fe4cd322bc10d1a558bb00d146b85cb9a.body": {
+      "bytes": 38310,
+      "sha256": "a9a1662c9adb8b89998f127c395e01dede79216bf5c936cf7357583207099f88"
+    },
+    "setup-home/pip-cache/http-v2/a/c/1/2/1/ac121eb2a7062004c159c9846b81c222037ecf784138942f6cd1bd3c": {
+      "bytes": 1246,
+      "sha256": "8b4ef9d0ead42bdfb3152ea35621213c3a4203d7c09f91983faa4af901df913b"
+    },
+    "setup-home/pip-cache/http-v2/a/c/1/2/1/ac121eb2a7062004c159c9846b81c222037ecf784138942f6cd1bd3c.body": {
+      "bytes": 4229,
+      "sha256": "459ac8c88e78c86919f60067944a9795221e5719566060e79d46f81cda5506a5"
+    },
+    "setup-home/pip-cache/http-v2/b/9/3/f/7/b93f7ad640fa0f717b74b70fbc56226f3f08061cc041badf79ba04d3": {
+      "bytes": 1248,
+      "sha256": "d2b42b0e524f77e54cc4f5c1c10d8e2f2babb6d026c592eec7f4646e065fecf6"
+    },
+    "setup-home/pip-cache/http-v2/b/9/3/f/7/b93f7ad640fa0f717b74b70fbc56226f3f08061cc041badf79ba04d3.body": {
+      "bytes": 9513,
+      "sha256": "1a0fda6747f76851431776d0be0cd1f64c154ff8e882354473be240d595d96ad"
+    },
+    "setup-home/pip-cache/http-v2/c/2/4/f/7/c24f77ec5538d680199568a6b5b74698f60f542f8659806a00a7b6d2": {
+      "bytes": 1278,
+      "sha256": "925a803746535d2ac14e9e806ea54b690c4549a05c19f77ad0ea9f9152e126eb"
+    },
+    "setup-home/pip-cache/http-v2/c/2/4/f/7/c24f77ec5538d680199568a6b5b74698f60f542f8659806a00a7b6d2.body": {
+      "bytes": 61041,
+      "sha256": "b09734a7fed44e84b4c8161934ce532dff1e779ec6822d415644d117f6381070"
+    },
+    "setup-home/pip-cache/http-v2/c/3/c/e/1/c3ce1c35ce00d433762536be2ec627df23191ae60c39692f0f81d474": {
+      "bytes": 1228,
+      "sha256": "137bd2e35eaef4d3462da66f20f5af1f39e74f55f61807637aad8f7f46a3ccc3"
+    },
+    "setup-home/pip-cache/http-v2/c/3/c/e/1/c3ce1c35ce00d433762536be2ec627df23191ae60c39692f0f81d474.body": {
+      "bytes": 72494,
+      "sha256": "708e7481cc80179af0e556bbf0cc00b8444c7321e2700b8d8580231d13017248"
+    },
+    "setup-home/pip-cache/http-v2/c/c/1/3/3/cc133da5701a066bc3777b2575e0daa601596f19871db4608ca98b97": {
+      "bytes": 1875,
+      "sha256": "0a618c98484eb06f34bfe6a20c4fe961a3b8acdee803c73fd72daed251d92954"
+    },
+    "setup-home/pip-cache/http-v2/c/c/1/3/3/cc133da5701a066bc3777b2575e0daa601596f19871db4608ca98b97.body": {
+      "bytes": 476410,
+      "sha256": "9aace35e860e81f0923768b24c30a069713324b034d60001c58fe0b89f5d264d"
+    },
+    "setup-home/pip-cache/http-v2/c/d/4/5/2/cd4528e5b19f1106930aba9092c033940763f8adf8b337a5641d53d4": {
+      "bytes": 1204,
+      "sha256": "a7dc60f9cada43749ca1ff7e5f2117a1ba5ef7b78e9d27b569386206adc05520"
+    },
+    "setup-home/pip-cache/http-v2/c/d/4/5/2/cd4528e5b19f1106930aba9092c033940763f8adf8b337a5641d53d4.body": {
+      "bytes": 243282,
+      "sha256": "237c41e29157b962835d356b370ededd57594a26d5894a795960f0047cb5caf5"
+    },
+    "setup-home/pip-cache/http-v2/e/2/0/7/4/e207426cbcf220918fdf354826064190a066f96cd6ad8830f1f11fdc": {
+      "bytes": 1899,
+      "sha256": "7e6b45e451a6cadcdc1d587b16e4b137f91bfc9832e36d6013b811cf41413096"
+    },
+    "setup-home/pip-cache/http-v2/e/2/0/7/4/e207426cbcf220918fdf354826064190a066f96cd6ad8830f1f11fdc.body": {
+      "bytes": 15878,
+      "sha256": "ea569435ba6dc2b781d3b021a0513738cf52226b5e02cc32cf0e91eb2446561c"
+    },
+    "setup-home/pip-cache/http-v2/f/5/4/b/f/f54bf1ab24b17702a3d5b634fb0987938080d9ce378e65475199368a": {
+      "bytes": 1898,
+      "sha256": "3f4b709b79536a095294287caf7fc51ee6f1a4e4b9cf6cf0547b8c3f09fc3d2c"
+    },
+    "setup-home/pip-cache/http-v2/f/5/4/b/f/f54bf1ab24b17702a3d5b634fb0987938080d9ce378e65475199368a.body": {
+      "bytes": 18548,
+      "sha256": "2272500eceb200485ab656f14397cd5c9f49d4781da72e34184ac0c1be7e298e"
+    },
+    "setup-home/pip-cache/http-v2/f/6/b/2/0/f6b20d8fc3476496c62e133f6fc2e793e33ff831cbfde2042904c5be": {
+      "bytes": 1276,
+      "sha256": "03f511a4591a6b887fb4d18b66cea6432c769f5103aa98f3b31af5e2079cfa2d"
+    },
+    "setup-home/pip-cache/http-v2/f/6/b/2/0/f6b20d8fc3476496c62e133f6fc2e793e33ff831cbfde2042904c5be.body": {
+      "bytes": 2313,
+      "sha256": "98acfce07ee6ee3b31272cde21c4d53918936f434f315dfd2af3886211a09a30"
+    },
+    "setup-home/pip-cache/http-v2/f/f/e/f/3/ffef33c0bb7d648ce2d42a2118c753857b4f2b90f98c35a1ce65e871": {
+      "bytes": 1209,
+      "sha256": "140880acb2bc0912529628e07cf1619d8969196714413202474314735f34c89a"
+    },
+    "setup-home/pip-cache/http-v2/f/f/e/f/3/ffef33c0bb7d648ce2d42a2118c753857b4f2b90f98c35a1ce65e871.body": {
+      "bytes": 17950613,
+      "sha256": "675d61ffbfa78604709862923189bad94014bef562cc35cf61d3a07bba02a7ed"
+    },
+    "setup-home/pip-cache/selfcheck/011c816d471ab670c751373d9e848b3655653539e16681bfd5baa840": {
+      "bytes": 123,
+      "sha256": "1ee94999b376f8b248a19d31da0ad68304fd51409d17fdcd630bf804624bd1ec"
+    },
+    "setup-home/pip-cache/wheels/f9/15/eb/602832b19d69d60db7f14b2d371aad4b1658274765555565ca/kpLib-1.1.1-cp312-cp312-linux_x86_64.whl": {
+      "bytes": 157589,
+      "sha256": "806820a696df9e8d936056434e2e28cf20c9c205bed9d4ef0073405c309f2d0f"
+    },
+    "setup-home/pip-cache/wheels/f9/15/eb/602832b19d69d60db7f14b2d371aad4b1658274765555565ca/origin.json": {
+      "bytes": 293,
+      "sha256": "ab85367a141825b6a0b14a8c24ee1425a14ce92907d525e81d9ea37d2dba1091"
+    },
+    "slurm-20952032.out": {
+      "bytes": 4381,
+      "sha256": "039989397a65a804ca836d9fa484cf80620783587cc7b959c2698781b303f224"
+    },
+    "software.json": {
+      "bytes": 2266,
+      "sha256": "55a43b521339f4985e7040df0b5f9fe4622a4cf23350e79b40dff334f12d3d8a"
+    },
+    "structures/fcc-04/POSCAR": {
+      "bytes": 2196,
+      "sha256": "5b3090f9d3683cffa8a0162447e400d76d04bdaf264a6441bdbfb699238f3b2d"
+    },
+    "structures/md-00-f1/POSCAR": {
+      "bytes": 4561,
+      "sha256": "c1922c7cfa4ce82ba49afb820246202309671d47327827ce652150b9dc820bd0"
+    },
+    "submission-intent.json": {
+      "bytes": 2724,
+      "sha256": "3357209af44e7bb3452ab7e803732a52e8979009e5467233a7857f4c42cdd50e"
+    },
+    "system.json": {
+      "bytes": 2772,
+      "sha256": "0118fb30ddaa0b2b8dca693a638bcc757301893566371778f7abe1f691f4ecb0"
+    },
+    "wheelhouse/kpLib-1.1.1-cp312-cp312-linux_x86_64.whl": {
+      "bytes": 157589,
+      "sha256": "806820a696df9e8d936056434e2e28cf20c9c205bed9d4ef0073405c309f2d0f"
+    },
+    "wheelhouse/numpy-1.26.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl": {
+      "bytes": 17950613,
+      "sha256": "675d61ffbfa78604709862923189bad94014bef562cc35cf61d3a07bba02a7ed"
+    },
+    "wheelhouse/packaging-25.0-py3-none-any.whl": {
+      "bytes": 66469,
+      "sha256": "29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484"
+    },
+    "wheelhouse/pybind11-2.13.6-py3-none-any.whl": {
+      "bytes": 243282,
+      "sha256": "237c41e29157b962835d356b370ededd57594a26d5894a795960f0047cb5caf5"
+    },
+    "wheelhouse/setuptools-75.8.0-py3-none-any.whl": {
+      "bytes": 1228782,
+      "sha256": "e3982f444617239225d675215d51f6ba05f845d4eec313da4418fdbb56fb27e3"
+    },
+    "wheelhouse/spglib-2.7.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl": {
+      "bytes": 962531,
+      "sha256": "6913906fd9108e7bb2ce06a810513a95a82d801530f10230979bf3427bb7e771"
+    },
+    "wheelhouse/typing_extensions-4.14.1-py3-none-any.whl": {
+      "bytes": 43906,
+      "sha256": "d1e1e3b58374dc93031d6eda2420a48ea44a36c2b4766a4fdeb3710755731d76"
+    },
+    "wheelhouse/wheel-0.45.1-py3-none-any.whl": {
+      "bytes": 72494,
+      "sha256": "708e7481cc80179af0e556bbf0cc00b8444c7321e2700b8d8580231d13017248"
+    }
+  },
+  "policy": "Private cluster main-home archive plus actual workstation copy; retention/institutional backup unconfirmed; contains licensed material, excluded from Git",
+  "remote_archive": "/home/u3129/.local/share/mlip-research/dft-artifacts/al32-kplib-setup-20261019-01.tar.gz",
+  "sha256": "19bdb62badc970630a0ad28336e12342742c4ccfd5b9f737203680a6014c67c7",
+  "verified_retrieval": true
+}

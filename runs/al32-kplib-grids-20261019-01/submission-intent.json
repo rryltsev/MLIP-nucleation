@@ -1,0 +1,80 @@
+{
+  "authorization": "configs\\allocations\\al32-kplib-20261019.json",
+  "authorization_sha256": "7663b65a2a68637a617a7c22f103e897de60737e55fb6917a32a74d9cccbde44",
+  "budget_group": "al32-pilot",
+  "budget_snapshot": {
+    "maximum_CPU_seconds": 460800,
+    "prior_charged_CPU_seconds": 333572,
+    "records": [
+      {
+        "basis": "terminal_actual",
+        "charged_CPU_seconds": 37648,
+        "job_id": "20950353",
+        "run_id": "al32-calibration-20261018-01",
+        "state": "FAILED"
+      },
+      {
+        "basis": "terminal_actual",
+        "charged_CPU_seconds": 68576,
+        "job_id": "20950692",
+        "run_id": "al32-calibration-20261018-02",
+        "state": "COMPLETED"
+      },
+      {
+        "basis": "terminal_actual",
+        "charged_CPU_seconds": 100,
+        "job_id": "20952032",
+        "run_id": "al32-kplib-setup-20261019-01",
+        "state": "COMPLETED"
+      },
+      {
+        "basis": "terminal_actual",
+        "charged_CPU_seconds": 0,
+        "job_id": "20950356",
+        "run_id": "al32-labeling-20261018-01",
+        "state": "CANCELLED"
+      },
+      {
+        "basis": "terminal_actual",
+        "charged_CPU_seconds": 227248,
+        "job_id": "20950693",
+        "run_id": "al32-labeling-20261018-02",
+        "state": "COMPLETED"
+      }
+    ],
+    "remaining_after_reservation_CPU_seconds": 126328,
+    "requested_reserved_CPU_seconds": 900,
+    "worst_case_total_CPU_seconds": 334472
+  },
+  "calibration_source": "",
+  "code_commit": "675f68619c4aaffda019406a10650cecdafbab23",
+  "created_utc": "2026-10-19T02:20:40.556562+00:00",
+  "host": "umt.imm.uran.ru",
+  "input_sha256": {
+    "al-pilot.py": "dd1f82e73d355d4cb772fccb346dd6b3b640661cac0daa8b9d18efd2a3ff8228",
+    "kplib-run.py": "eca66dac0ce8acbc96e50d6a5211a9f65b52d9778a0a3a833f0d3eaccbbb994d",
+    "kplib_grid.py": "b0da602c2b44eb6aeb9485b69dc6ee5da98f98317b6290709aab6198f1e97985",
+    "references.json": "e272d4fa986ebd278beb20aefeaa7933f03dd56749b86141957fb4a575d33fd1",
+    "run.sbatch": "1b9cab58cee229e8b7d244eba5e9a4f9c8ce884b9ea8ee91cf0b669eea2c0033",
+    "structures/fcc-04/POSCAR": "5b3090f9d3683cffa8a0162447e400d76d04bdaf264a6441bdbfb699238f3b2d",
+    "structures/md-00-f1/POSCAR": "c1922c7cfa4ce82ba49afb820246202309671d47327827ce652150b9dc820bd0",
+    "system.json": "0118fb30ddaa0b2b8dca693a638bcc757301893566371778f7abe1f691f4ecb0"
+  },
+  "job_id": null,
+  "maximum_CPU_hours": 0.25,
+  "phase": "grids",
+  "remote_run_dir": "/home6/u3129/mlip-research/runs/al32-kplib-grids-20261019-01",
+  "resources": {
+    "account": "imet-2026-2",
+    "cpus_per_task": 1,
+    "memory_GiB": 4,
+    "nodes": 1,
+    "ntasks": 1,
+    "partition": "apollo",
+    "qos": "normal",
+    "walltime": "00:15:00"
+  },
+  "run_id": "al32-kplib-grids-20261019-01",
+  "stage": "submission_intent",
+  "user": "u3129"
+}

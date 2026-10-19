@@ -1,0 +1,8 @@
+{
+  "extension_path": "/home6/u3129/mlip-research/envs/kplib_111/lib/python3.12/site-packages/kpLib/lib.cpython-312-x86_64-linux-gnu.so",
+  "extension_sha256": "9f48f70825bb98d538e16be3e716f4e87b361f04dea960c8c7cfd76faced02c5",
+  "kplib": "1.1.1",
+  "numpy": "1.26.4",
+  "python": "3.12.14 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:46:43) [GCC 14.3.0]",
+  "spglib": "2.7.0"
+}
