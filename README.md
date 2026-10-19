@@ -10,7 +10,7 @@ The source research brief is preserved in `project/brief.txt`. Scientific manusc
 - Cluster: `umt.imm.uran.ru:22`, user `u3129`, scheduler Slurm.
 - Observed Slurm configuration (2026-10-17): 74 unique nodes, 1850 Slurm CPUs, 2 A100, 18 K40m and 62 M2090 GPUs, including configured devices on unavailable nodes. Partition totals overlap. GPU runtime evidence below applies only to the tested allocations.
 - DFT engine: VASP 6.6.1 CPU/MPI installed in `/home/u3129/.local/opt/vasp/6.6.1-oneapi-2025`; `vasp_std`, `vasp_gam`, `vasp_ncl` passed four selected upstream cases on `apollo31`. See `reports/vasp-installation-2026-10-17.tex`.
-- A100 DPA4/DPA4c/GRACE-1L training and K40m legacy DeepMD training passed small synthetic Slurm checks. Actual DPA4-Mini and GRACE-1L-OMAT weights passed fine-tuning, Adam restart to update24 and ASE/native-LAMMPS export comparisons on A100. Production performance and scientific accuracy remain untested. See `reports/restart-export-validation-2026-10-17.tex` and the earlier reports.
+- A100 DPA4/DPA4c/GRACE-1L training and K40m legacy DeepMD training passed small synthetic Slurm checks. Actual DPA4-Mini and GRACE-1L-OMAT weights passed fine-tuning, Adam restart to update24 and ASE/native-LAMMPS export comparisons on A100. Production performance and physical MD validity remain untested; a bounded original-checkpoint DFT baseline is reported below. See `reports/restart-export-validation-2026-10-17.tex` and the earlier reports.
 
 ## Repository layout
 
@@ -36,7 +36,7 @@ tests/               scientifically meaningful verification
 
 ## Next milestones
 
-1. SSH, inventory, VASP/PAW setup and synthetic foundation fine-tuning/restart/export checks completed. The first real Al32 DFT pilot dataset was collected and audited on 2026-10-19; original-FM DFT baselines and real-data fine-tuning remain next steps.
+1. SSH, inventory, VASP/PAW setup, synthetic foundation fine-tuning/restart/export checks and original-FM baselines on the audited real Al32 DFT dataset completed. Real-data fine-tuning remains a next step.
 2. On another computer clone the repository, configure its own credentials and read `project/state.json`.
 3. First bounded DFT pilot: Al32 FCC/disordered/HCP, 40 audited real-DFT labels, grouped train/validation/test 21/6/13. Dense calibration selected PBE/450eV/Gamma7/sigma0.05 after Gamma4 and Gamma6 failed. Total all-attempt cost92.6311 CPUh. See `reports/al32-dft-pilot-2026-10-18.tex`. This does not select the final alloy/nucleant or establish novelty.
 4. Implement one executable path: structures → converged VASP labels → teacher fine-tuning → independent DFT validation → distillation → student validation → one observable → LaTeX report.
@@ -51,14 +51,16 @@ against raw XML/OUTCAR and hashes. Extxyz and DeepMD NPY exports were checked
 frame by frame, including stress/virial sign, units, type map and frozen splits.
 The Gamma7 force comparison passes narrowly (0.0199349 versus0.02 eV/A) on two
 train structures; this is local qualification for a small fine-tuning pilot.
-Original-FM baselines, learned accuracy and physical MD remain untested.
+Original-FM baselines are now reported below; real-DFT fine-tuning and physical MD remain untested.
 
 Audit: `scripts/assess_al32_dataset.py` (ASE/NumPy required), with actual private
 archives available. Results and complete accounting are in
 `runs/al32-labeling-20261018-02/quality-assessment.json` and `scheduler-final.json`.
 Calibration/labeling attempts cost333472 allocated CPU-seconds =92.6311 CPUh.
 Including the subsequent kpLib setup/grids/benchmark below, the shared total
-is412226 CPU-seconds =114.5072 CPUh of128, with13.4928 CPUh remaining; no live Al32 jobs.
+is412226 CPU-seconds =114.5072 CPUh. Including the subsequent original-FM baseline
+and derivative diagnostics, the conservative shared total is412562 CPU-seconds
+=114.6006 CPUh of128, with13.3994 CPUh remaining; no live related jobs.
 Private main-home and workstation backups for both new runs include raw outputs,
 licensed POTCAR and complete DeepMD exports, with every member verified.
 
@@ -258,6 +260,24 @@ The same environment provides `vasp_gam` and `vasp_ncl`. Use a writable calculat
 Installation provenance and hashes are in `runs/vasp661-oneapi-20261017-05/`. Job `20950123` completed on `apollo31` in 9 min 27 s with 8 allocated CPUs. Four upstream cases passed, including gamma-only, noncollinear SOC and nonlocal vdW; the full upstream suite was not run. No GPU, HDF5 or optional external interfaces were enabled. Use the separately installed PAW library below for production input preparation; bundled test potentials remain private and are for validation.
 
 The licensed source archive, source tree, binaries, test potentials and raw build logs remain on the cluster, outside Git. `scripts/install_vasp.py` records input hashes before submission and guards deployment on successful scheduler state, test coverage, resolved libraries and matching binary checksums. Earlier failed launch attempts and their diagnosed filesystem/module causes are retained in `runs/`.
+
+### Original foundation checkpoints against real Al32 DFT
+
+The exact original DPA4-Mini-OMat24-v20260805 and GRACE-1L-OMAT checkpoints were evaluated on all40 frozen configurations without changing weights. CPU Slurm20952054 completed in39s on4 CPUs/apollo30. GPU20952051 was cancelled while PENDING because both A100s were occupied with an estimated15hour wait; it consumed no allocation. The method is frozen in `configs/evaluation/al32-foundation-baseline-v1.json`, with a CPU-only resource revision. Source model hashes, types, splits and reference labels were verified before computing metrics.
+
+For each model fit only one shift: `delta = mean_train((E_DFT - E_model)/N)` and `E_aligned = E_model + N*delta`. The shifts are -5.104208 meV/Al for DPA4 and +2.188817 for GRACE. Forces/stress are unchanged. Report raw and aligned errors even when alignment worsens held-out errors: DPA4 test energy RMSE15.3234 ->19.2701 meV/atom; GRACE4.7379 ->4.0831. Test force-component RMSE is23.4147/23.0820 meV/A and stress-component RMSE0.2639/0.7016 GPa (DPA4/GRACE). This is a fixed baseline comparison; no scientific teacher was chosen and test values must not guide later fine-tuning/sampling decisions.
+
+`runs/fm-al32-baseline-20261019-02/assessment.json` includes MAE/RMSE/bias/max by split and parent, unchanged source hashes and all four attempt costs. Tables/CSV/figures are in `results/al32-foundation-baseline-20261019/` and the existing Al32 LaTeX report. The train-only derivative check initially failed for DPA4 at a very small finite-difference step; GRACE passed. Both passed a larger-step check with the same tolerances. Preserve the failed diagnostic20952058 and corrected20952062; no main predictions or weights were altered. All four runs have verified actual private cluster/workstation archives. Additional cost336 CPU-s,0 GPU-s; total including DFT/kpLib114.6006 CPUh.
+
+To reproduce with the private archives and NumPy/ASE available:
+
+```powershell
+python scripts/assess_fm_baseline.py runs/fm-al32-baseline-20261019-02
+# Matplotlib is required for figures/tables:
+python scripts/plot_fm_baseline.py
+```
+
+The constant shift is an empirical energy-reference diagnostic, not a proof of PAW54/PAW64 equivalence. It cannot repair state-dependent energy errors, forces or stress. Pretraining overlap and production MD validity remain unresolved. Real-data fine-tuning has not been performed.
 
 ### Generalized k-point grids with kpLib
 

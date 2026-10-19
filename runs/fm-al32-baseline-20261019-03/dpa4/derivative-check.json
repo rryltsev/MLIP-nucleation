@@ -1,0 +1,34 @@
+{
+  "settings": {
+    "configuration_id": "fcc-04",
+    "position_step_A": 0.0001,
+    "strain_step": 0.0001,
+    "force_tolerance_eV_per_A": 0.001,
+    "stress_tolerance_eV_per_A3": 1e-05
+  },
+  "configuration_id": "fcc-04",
+  "split": "train",
+  "analytic_force_x_eV_per_A": 0.2921555530711544,
+  "finite_difference_force_x_eV_per_A": 0.28580427169799805,
+  "force_absolute_error_eV_per_A": 0.006351281373156326,
+  "analytic_stress_eV_per_A3": [
+    -0.001419658355201607,
+    -0.0007585074018515473,
+    -0.0007857862443861256,
+    -0.0010141427765053038,
+    0.000205718000563123,
+    8.220552447435995e-06
+  ],
+  "finite_difference_stress_eV_per_A3": [
+    -0.0014463551791317494,
+    -0.0007349593811724561,
+    -0.0008185539978096286,
+    -0.0010250158697725782,
+    0.00018682555261864724,
+    1.3464904693235838e-05
+  ],
+  "max_stress_error_eV_per_A3": 3.276775342350301e-05,
+  "convention": "Engineering shear h: epsilon_ij=epsilon_ji=h/2; derivative dE/(V dh) gives tensile Voigt component",
+  "source_unchanged": true,
+  "passed": false
+}

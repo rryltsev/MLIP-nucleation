@@ -1,0 +1,57 @@
+{
+  "evaluation_id": "al32-foundation-baseline-derivative-check-v1",
+  "dataset": "datasets/al32-pilot-v1/dft-v2.json",
+  "geometry_manifest_sha256": "65a4c6dce1a072504030dca2b0340db72a497e562e40b2717104294c3030fbdd",
+  "labels_sha256": "d5f462ce6321f1afcbac3ce5e04ec430546b0e22b9676faf1de4a306b8d53650",
+  "models": {
+    "dpa4": "models/foundation/dpa4-mini-omat24-20260805.json",
+    "grace": "models/foundation/grace-1l-omat.json"
+  },
+  "energy_target": "VASP force-consistent TOTEN, eV per cell; never silently substitute sigma0 energy",
+  "offset": {
+    "fit_split": "train",
+    "fit_ids_count": 21,
+    "objective": "Mean of (E_DFT - E_model)/N over train configurations, uniform configuration weights",
+    "application": "E_aligned = E_model + N * delta_Al; same delta on all splits",
+    "parameters_per_model": 1,
+    "forbidden": "No validation/test-fitted, phase-specific or stress offsets; no scale fit"
+  },
+  "metrics": {
+    "energy": "MAE/RMSE/signed mean/max absolute error per atom, raw and train-aligned",
+    "forces": "MAE/RMSE/signed mean/max over Cartesian components; no offset",
+    "stress": "MAE/RMSE/signed mean/max over six independent tensile-positive Voigt components xx yy zz yz xz xy, eV/A^3; no offset",
+    "grouping": "Report each frozen split and each parent_id; all40 pooled is descriptive only"
+  },
+  "test_policy": "User-requested frozen baseline evaluation only. Test values must not guide checkpoint choice, fine-tuning hyperparameters or sampling. Original checkpoints remain fixed; no scientific teacher selected.",
+  "limits": [
+    "Pure Al32 cannot identify multielement reference shifts",
+    "A constant energy shift cannot repair PAW/functional/smearing-dependent forces, stress or state-dependent energy errors",
+    "Pretraining overlap with OMat24 not excluded; no pretraining-independent generalization claim",
+    "Local DFT convergence was qualified narrowly on two train parents, not an exact reference limit"
+  ],
+  "resources": {
+    "partition": "apollo",
+    "account": "imet-2026-2",
+    "qos": "normal",
+    "ntasks": 1,
+    "cpus_per_task": 4,
+    "gpus": 0,
+    "memory_GiB": 32,
+    "walltime": "00:05:00"
+  },
+  "authorization": "Read-only derivative/sign/order quality check of the user-requested original-FM error evaluation, on one train geometry; no training or DFT",
+  "budget": {
+    "maximum_GPU_seconds": 0,
+    "maximum_allocated_CPU_seconds": 1200,
+    "previous_DFT_kplib_CPU_seconds": 412226,
+    "conservative_combined_CPU_hour_ceiling": 115.50722222222223
+  },
+  "runtime_revision": "A100 GPUs occupied with estimated15hour wait; same checkpoints/geometries/metrics, CPU-only Slurm inference, no model adaptation",
+  "derivative_check": {
+    "configuration_id": "fcc-04",
+    "position_step_A": 0.0001,
+    "strain_step": 0.0001,
+    "force_tolerance_eV_per_A": 0.001,
+    "stress_tolerance_eV_per_A3": 1e-05
+  }
+}

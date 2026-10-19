@@ -1,0 +1,25 @@
+{
+  "analysis_source_sha256": "12ac64fead19578786fd196ea1272455e46f96c2993de02dc20b0100f039383f",
+  "code_commit": "57a52fca4b784bfa19fd71d5256fd8b4c76fa940",
+  "inputs": {
+    "assessment.json": "1ab21bc22b9bafd712b5dcdd3e1d1926a0afad7f49d374d092c288c13a7d74c6",
+    "dataset-manifest.json": "65a4c6dce1a072504030dca2b0340db72a497e562e40b2717104294c3030fbdd"
+  },
+  "packages": {
+    "matplotlib": "3.10.8",
+    "numpy": "2.3.5"
+  },
+  "settings": {
+    "energy_scale": 1000,
+    "force_scale": 1000,
+    "stress_GPa_per_eV_A3": 160.2176634,
+    "offset": "Frozen train-only per-model additive shift; no phase fits"
+  },
+  "outputs": {
+    "derivative-table.tex": "f037f6b455564c595cef73b0be88882222b8c8e8417199f3d03b800ca6e6af81",
+    "energy-residuals.png": "51e8ede83f9fc7eb47f8bff028ae532255f48035b41853cfef44398c869fde06",
+    "energy-table.tex": "31717e52bf707ec1ba2a95506b8ca1f2c824e7f04ad238086745c1facba682a2",
+    "split-metrics.csv": "dfe2ae6b14d0931e9c695fe8204021b6c5a445a80e67a2e533623e2865824b06",
+    "split-rmse.png": "386f11b4e3ffae41c496366ba10a0375228550b1fea5bd456324439ac1e9107a"
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "bytes": 107188,
+  "local_archive": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\MLIP-research\\artifacts\\dft-run-backups\\fm-al32-baseline-20261019-04.tar.gz",
+  "members": {
+    "dataset-manifest.json": {
+      "bytes": 21196,
+      "sha256": "65a4c6dce1a072504030dca2b0340db72a497e562e40b2717104294c3030fbdd"
+    },
+    "dataset-pointer.json": {
+      "bytes": 1729,
+      "sha256": "f5e323bcb823727532c07375d49ca732bbae8dc4c0c51592706a69db88d1c49d"
+    },
+    "dpa4-checkpoint.json": {
+      "bytes": 5422,
+      "sha256": "8a006f3bf4623b594d42f4c7b0c73a8b2a7dedadf185575b00e8d5ba23c80c80"
+    },
+    "dpa4-console.txt": {
+      "bytes": 404,
+      "sha256": "a327fe0cdc77afc32c0c33011191e4923ff1ead88a602a8b1cc3ec1bf01f4900"
+    },
+    "dpa4/derivative-check.json": {
+      "bytes": 1046,
+      "sha256": "cc58eafc2dfeafc84e5618810547029e637713c9ea4d436dda24e908d67d2b29"
+    },
+    "dpa4/result.json": {
+      "bytes": 7261,
+      "sha256": "12b762e69ebc341a5caa2660ebcb5e6454acf9caea7be7e3c5a26dc280d0b2b7"
+    },
+    "evaluation.json": {
+      "bytes": 3117,
+      "sha256": "6a9a1da3ffec2556d2252eaf5e6f84d15986743cae915e504c96a634994bb15a"
+    },
+    "fm-al32-baseline.py": {
+      "bytes": 8697,
+      "sha256": "09325ad99f287b18d324611948be2b7fdcb21663d3c5cf5481e41e2f80907157"
+    },
+    "grace-checkpoint.json": {
+      "bytes": 5946,
+      "sha256": "e2f3f2c8fb2466201d34fc5a0e08e9490ec5aa770e2976cd7dd6551714842a09"
+    },
+    "grace-console.txt": {
+      "bytes": 2024,
+      "sha256": "53ca2427c5c132b54a66a786513c4e8abf36e3c16ea2b0a0fbd5a0114adde8b8"
+    },
+    "grace/derivative-check.json": {
+      "bytes": 1045,
+      "sha256": "476fe6e8591e52a5d36dd1107fecc3ec3697ac23f8aae7317e0b44e83bf60860"
+    },
+    "grace/result.json": {
+      "bytes": 7396,
+      "sha256": "d9c93dfe03f19310aa61dd06f9423f6b495eb98a78d4fddb038e26033b12f0e3"
+    },
+    "job.id": {
+      "bytes": 9,
+      "sha256": "c892b4f9da97b33ddd2b3d54153aadf5d761e9604153f989e8a6e0f8cbb48e5e"
+    },
+    "labels.json": {
+      "bytes": 163906,
+      "sha256": "d5f462ce6321f1afcbac3ce5e04ec430546b0e22b9676faf1de4a306b8d53650"
+    },
+    "node.txt": {
+      "bytes": 9,
+      "sha256": "fe1588f68a220f2f676a4b5ce61d989c7c0e793f2db3c4f7724b5de56140a237"
+    },
+    "result.json": {
+      "bytes": 15642,
+      "sha256": "2c5971d430a06e4cdce4ba440d6e90fc10fc10f2f6a16b56b0fc0ff18f22e1a5"
+    },
+    "run-inputs.json": {
+      "bytes": 4700,
+      "sha256": "82d2e733c2825d8718d3cf5d314c071ea776420af81eb82b1fcfa9861bda3218"
+    },
+    "run.sbatch": {
+      "bytes": 1696,
+      "sha256": "f411dee7bc7158bf08b2b2e7273a4d9335dcf01ff6c09a96acff59474dfbd70b"
+    },
+    "slurm-20952062.out": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "structures/fcc-00/POSCAR": {
+      "bytes": 2196,
+      "sha256": "9cf79d3eb019b43b37bb55073bdd92582d00207988108d407aebbfcd8ca08c99"
+    },
+    "structures/fcc-01/POSCAR": {
+      "bytes": 2196,
+      "sha256": "430b7f418f6e20656c5e7f1e032d3699395c32d98711dd75b164a308fc105bec"
+    },
+    "structures/fcc-02/POSCAR": {
+      "bytes": 2196,
+      "sha256": "d8dd32b0a8d38931be9a9debd49b559ca923872d8752d48d44d1d574999ca54a"
+    },
+    "structures/fcc-03/POSCAR": {
+      "bytes": 2196,
+      "sha256": "0d43405be8b5ff0f17dd2dcb90fd772bb0583856bf156a36383b54d7c526f0be"
+    },
+    "structures/fcc-04/POSCAR": {
+      "bytes": 2196,
+      "sha256": "5b3090f9d3683cffa8a0162447e400d76d04bdaf264a6441bdbfb699238f3b2d"
+    },
+    "structures/fcc-05/POSCAR": {
+      "bytes": 2196,
+      "sha256": "8ee3a9275a58a44b656a8fc011eba9f6b90d19168af098d4b5598f742be54478"
+    },
+    "structures/fcc-06/POSCAR": {
+      "bytes": 2196,
+      "sha256": "a9a3d7fb64da3f5a4e71e82192b6430ed1e906a856af9d2c5748e8849d94b688"
+    },
+    "structures/fcc-07/POSCAR": {
+      "bytes": 2196,
+      "sha256": "364e3f583c8b0f3a8e785d2226d528b6f31814f68bc5c4b6f5b35a299520f733"
+    },
+    "structures/fcc-08/POSCAR": {
+      "bytes": 2196,
+      "sha256": "2152b8c01bf9ac3b43ef5bdffb2d779b67ee5e87d7b795b807d4e0c85b963fdc"
+    },
+    "structures/hcp-00/POSCAR": {
+      "bytes": 2196,
+      "sha256": "b321dc22061b87baa60a6930e7d2e597b2df21d2a5a66ea97fd1d3d3cf0de9db"
+    },
+    "structures/hcp-01/POSCAR": {
+      "bytes": 2196,
+      "sha256": "b80d0b12a688030e745f1966181047723a8fbb661afda93d9a4e0981f05f6639"
+    },
+    "structures/hcp-02/POSCAR": {
+      "bytes": 2196,
+      "sha256": "fc2e6978f6760aa12cf17025c0086fe4dff1155c8b8a9054e01c3dc6013f9738"
+    },
+    "structures/hcp-03/POSCAR": {
+      "bytes": 2196,
+      "sha256": "7f6a15369377bec5d09e188ef8e4be71009defd2d1e6a10cf98576a92d009ab7"
+    },
+    "structures/hcp-04/POSCAR": {
+      "bytes": 2196,
+      "sha256": "a0d17abf69ca6af80286b9f0828b04b3a21c6664c6c4962498be28bc2f86daca"
+    },
+    "structures/hcp-05/POSCAR": {
+      "bytes": 2196,
+      "sha256": "b532da4c1c8f0262021e5c396a77bb32b74364ceaa16538ea719215e074e7add"
+    },
+    "structures/hcp-06/POSCAR": {
+      "bytes": 2196,
+      "sha256": "d6329b0b0134ea393b113b6b406b2917c522d2c6887da3955767095be509cea6"
+    },
+    "structures/md-00-f0/POSCAR": {
+      "bytes": 4561,
+      "sha256": "b33d82d21301b204e16d4589f93af311ff4e232c8bcc4a185caebe29541bb92f"
+    },
+    "structures/md-00-f1/POSCAR": {
+      "bytes": 4561,
+      "sha256": "c1922c7cfa4ce82ba49afb820246202309671d47327827ce652150b9dc820bd0"
+    },
+    "structures/md-00-f2/POSCAR": {
+      "bytes": 4561,
+      "sha256": "542978f4bf8ca854d20e11545061ee95db0af868d83b55661f98c2ada5a4f00a"
+    },
+    "structures/md-01-f0/POSCAR": {
+      "bytes": 4561,
+      "sha256": "f8db30814960f0b0087cfeef57febd9ee160ef711552279a83ee72020dbb6b82"
+    },
+    "structures/md-01-f1/POSCAR": {
+      "bytes": 4561,
+      "sha256": "900086f04d04c52eda240c67e60d27d9d7a1ee051d3f4f1b165ce02e8ca35a52"
+    },
+    "structures/md-01-f2/POSCAR": {
+      "bytes": 4561,
+      "sha256": "d3880964792be2b221b9678378c06a8e91dc4b3398a7d735bfc5b9c49da1f843"
+    },
+    "structures/md-02-f0/POSCAR": {
+      "bytes": 4561,
+      "sha256": "f9a64206b657e6e0b6af212810e2071852c47c2f210c4bf3227db6e5d3779d59"
+    },
+    "structures/md-02-f1/POSCAR": {
+      "bytes": 4561,
+      "sha256": "4f0d5f60e5dd8f65044fc5d648ea5846e190c2d0e64ec8720b915abac3d82d1b"
+    },
+    "structures/md-02-f2/POSCAR": {
+      "bytes": 4561,
+      "sha256": "cdc89dcd258ed77b0f856934621ddeadbf1868fd6206b0624050a539420429e9"
+    },
+    "structures/md-03-f0/POSCAR": {
+      "bytes": 4561,
+      "sha256": "1c44df86554dde4e4cb31f2b9b69d1c8b715251fc4629ac4d946c6f44840794a"
+    },
+    "structures/md-03-f1/POSCAR": {
+      "bytes": 4561,
+      "sha256": "c4ce48512ff889e7dfa9a401eb2833167ecaf831a6835405c273e5f236d0bfed"
+    },
+    "structures/md-03-f2/POSCAR": {
+      "bytes": 4561,
+      "sha256": "5bdf77433e9d7fd41072ecb0dcffdc2934d65b092e9743e3b0ac6cf0eb61c47e"
+    },
+    "structures/md-04-f0/POSCAR": {
+      "bytes": 4561,
+      "sha256": "7871a3cbaeaa1c4d5f8767f2a7d1e9f4a02f1a50da5dfed4772d9d9ad7972aa8"
+    },
+    "structures/md-04-f1/POSCAR": {
+      "bytes": 4561,
+      "sha256": "5129c1716313ea9cf892a02167d1e86f606be4d8bac913b868c50cf960189857"
+    },
+    "structures/md-04-f2/POSCAR": {
+      "bytes": 4561,
+      "sha256": "141df929862eaa71b73f4353fd665e1f324858028e28f3140fc25d3566d9c0ee"
+    },
+    "structures/md-05-f0/POSCAR": {
+      "bytes": 4561,
+      "sha256": "d0b06f651131ac3aa08fff987da6e9e31630bca3f2ee9d4f16df279e167ae343"
+    },
+    "structures/md-05-f1/POSCAR": {
+      "bytes": 4561,
+      "sha256": "4729cd46a39b7ea029576700c9d664e22c283d5c9284fe653508c88c69440468"
+    },
+    "structures/md-05-f2/POSCAR": {
+      "bytes": 4561,
+      "sha256": "6fc4595d5dfe8492c15f2f94ed3a715051ddd0a047c81ac8595f436ae3100f36"
+    },
+    "structures/md-06-f0/POSCAR": {
+      "bytes": 4561,
+      "sha256": "f765ffc216d804ae23df5d0df5e6409dba4c4c97e3f2456749378a0883194c16"
+    },
+    "structures/md-06-f1/POSCAR": {
+      "bytes": 4561,
+      "sha256": "0e82d8dd1d6313bf871244fae841486dc63cb958f64f70a658eafad3b9dbba5c"
+    },
+    "structures/md-06-f2/POSCAR": {
+      "bytes": 4561,
+      "sha256": "295f6aa4870ae5f813eddbb0e53f0a77a5aedd1e443252e4e6a481dafb85dee8"
+    },
+    "structures/md-07-f0/POSCAR": {
+      "bytes": 4561,
+      "sha256": "42a3609b07ee99ad91a0712ceb4dff9216f7cf442b0af2be1cf904587ade271a"
+    },
+    "structures/md-07-f1/POSCAR": {
+      "bytes": 4561,
+      "sha256": "1ff34aaf615800a7a6d10fa29f281231d80ebe16bc6c893764d05ee7b9e3ab4f"
+    },
+    "structures/md-07-f2/POSCAR": {
+      "bytes": 4561,
+      "sha256": "439467828ad60f7d64040b0a0c8079028e8d961372ed54934643172bfb393c82"
+    },
+    "submission-intent.json": {
+      "bytes": 5802,
+      "sha256": "4031c248d1bbbd74f94603b0ee7331bedd899604b4dfb68b5c5b0425cf15878d"
+    }
+  },
+  "policy": "Private cluster main-home archive plus actual workstation copy; retention/institutional backup unconfirmed; contains licensed material, excluded from Git",
+  "remote_archive": "/home/u3129/.local/share/mlip-research/dft-artifacts/fm-al32-baseline-20261019-04.tar.gz",
+  "sha256": "e3ad59ddecd050eb101d566b6d801654c6e5035e03459bc8308501b6ea86c5c0",
+  "verified_retrieval": true
+}

@@ -168,12 +168,22 @@
     "compatibility": "Exact Al PAW54 bytes and all model-specific energy preprocessing not independently audited. Do not assume equivalence to PAW64 or merge labels.",
     "date": "2026-10-18",
     "energy_alignment": "Any model-specific elemental energy shift must be trained on train only; preserve raw and shifted E metrics, forces and stress independently.",
-    "local_reference": "VASP6.6.1, PBE Al PAW64, Gaussian sigma0.05 eV, TOTEN force-consistent energy; convergence pending",
+    "local_reference": "Audited VASP6.6.1/PBE Al PAW64,450eV,Gamma7,Gaussian sigma0.05,TOTEN; narrow local convergence margin; exact pretraining compatibility unresolved",
     "overlap": "Generated trajectory seeds are new; FCC/HCP and similar local environments can occur in OMat24. No pretraining-independent test claim.",
     "pilot": "configs/systems/al32-pilot-v1.json",
     "source": "https://arxiv.org/html/2410.12771v1#S2.SS2.SSS2",
     "source_findings": "OMat24: VASP PBE/PBE+U, PAW54, MPRelaxSet-derived settings, ALGO Normal. Al metal needs no Hubbard U."
   },
   "real_DFT_pilot_dataset": "datasets/al32-pilot-v1/dft-v2.json",
-  "pilot_evaluation_status": "40 DFT labels audited; original FM baseline and real-DFT model fine-tuning have not yet been performed"
+  "pilot_evaluation_status": "Original checkpoint evaluated on40 audited Al32 DFT labels, train-only energy alignment and fixed split metrics reported; real-DFT fine-tuning not performed",
+  "baseline_evaluation": {
+    "assessment": "runs/fm-al32-baseline-20261019-02/assessment.json",
+    "job_id": "20952054",
+    "device": "CPU",
+    "delta_Al_eV_per_atom": -0.005104208411228177,
+    "offset_fit_split": "train21 only",
+    "raw_predictions": "runs/fm-al32-baseline-20261019-02/dpa4/predictions.json",
+    "native_checkpoint_unchanged": true,
+    "scientific_teacher_selected": false
+  }
 }

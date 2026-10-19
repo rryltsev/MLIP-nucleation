@@ -1,0 +1,19 @@
+{
+  "dataset-manifest.json": "65a4c6dce1a072504030dca2b0340db72a497e562e40b2717104294c3030fbdd",
+  "dataset-pointer.json": "f5e323bcb823727532c07375d49ca732bbae8dc4c0c51592706a69db88d1c49d",
+  "dpa4-checkpoint.json": "8a006f3bf4623b594d42f4c7b0c73a8b2a7dedadf185575b00e8d5ba23c80c80",
+  "dpa4-console.txt": "3cd44ec66750b85d2d7ac7e425f54daef6f80241477a96b916fb8fe8f7811e59",
+  "dpa4/predictions.json": "220764d10331b5466410c2c73836a5fec0049f89a86f9d9129bdcf764e2452dd",
+  "dpa4/result.json": "fb81830484b9c122a3c49dd2225cf2fa173fec04f8fb212573051b456ff2780e",
+  "evaluation.json": "73fd8e1bd9226d89c4a4f4de8b598ed4fb727b312434fffdd3b929971ab64440",
+  "grace-checkpoint.json": "e2f3f2c8fb2466201d34fc5a0e08e9490ec5aa770e2976cd7dd6551714842a09",
+  "grace-console.txt": "21826529509ec440a427db2288780f0a356b5cb50524f1b8beb9aa1abe38340d",
+  "grace/predictions.json": "da983ca436d26a5648e5f90e8b1ede048844ec118ecc09e938dca9b76ae4970e",
+  "grace/result.json": "0d7df4a72812949a295ead648a0cefc306ce00a98542c4ec1f8d3f3d37913767",
+  "labels.json": "d5f462ce6321f1afcbac3ce5e04ec430546b0e22b9676faf1de4a306b8d53650",
+  "node.txt": "fe1588f68a220f2f676a4b5ce61d989c7c0e793f2db3c4f7724b5de56140a237",
+  "result.json": "577a8d68f905fd242f5a0ca6785afa3b1024e663b6a30d5d5a26be4ec3641a22",
+  "run-inputs.json": "65de5cd07d05b981f398cfe5cdc79f258414dd610bec5484deb5fe996f715b59",
+  "slurm-20952054.out": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "submission-intent.json": "84cc2c39e08aaf32fae1cfad3d5fa52de0112880e9f226a0f3ee6278aa70777f"
+}

@@ -1,21 +1,101 @@
 {
   "updated_local_date": "2026-10-19",
-  "stage": "original_FM_Al32_baseline_inference_submitted",
+  "stage": "original_FM_Al32_baselines_audited_train_only_energy_shifts_reported",
   "foundation_DFT_baseline": {
-    "status": "Submitted immutable original-checkpoint inference; metrics and energy-zero shift pending",
-    "run": "runs/fm-al32-baseline-20261019-01/manifest.json",
-    "job_id": "20952051",
-    "configuration": "configs/evaluation/al32-foundation-baseline-v1.json",
-    "models": ["dpa4-mini-omat24-20260805", "grace-1l-omat"],
+    "status": "Complete: original DPA4-Mini and GRACE-1L evaluated on all40 frozen DFT configurations, no fine-tuning",
+    "run": "runs/fm-al32-baseline-20261019-02/manifest.json",
+    "job_id": "20952054",
+    "configuration": "configs/evaluation/al32-foundation-baseline-v2-cpu.json",
+    "assessment": "runs/fm-al32-baseline-20261019-02/assessment.json",
+    "figures": "results/al32-foundation-baseline-20261019/figure-manifest.json",
+    "models": [
+      "dpa4-mini-omat24-20260805",
+      "grace-1l-omat"
+    ],
     "dataset": "datasets/al32-pilot-v1/dft-v2.json",
-    "energy_alignment": "One additive eV/Al shift per model fitted on21 train configurations only, then frozen for validation6/test13; keep raw metrics",
-    "test_policy": "Frozen baseline evaluation requested by user; no test-based checkpoint selection, hyperparameter adjustment or sampling",
-    "resources": "One A100,4CPU,32GiB,max15minutes; predictions only, no optimization or new VASP",
-    "maximum_GPU_seconds": 900,
-    "maximum_CPU_seconds": 3600,
-    "previous_DFT_kplib_CPU_hours": 114.50722222222223,
-    "conservative_combined_CPU_hour_ceiling": 115.50722222222223,
-    "continuation": "Collect job20952051 without resubmission; verify raw predictions/model hashes, audit train-only offsets and split metrics, back up and update existing Al32 report"
+    "runtime": "CPU apollo30,4CPUs,39seconds; A100 job20952051 cancelled while pending due15hour estimated queue, zero cost",
+    "energy_alignment": "One additive eV/Al shift per original model fitted on21 train configurations only, applied unchanged on6 validation and13 test; raw metrics preserved",
+    "shifts_eV_per_atom": {
+      "dpa4": -0.005104208411228177,
+      "grace": 0.00218881688612072
+    },
+    "test_summary": {
+      "dpa4": {
+        "configurations": 13,
+        "atoms": 416,
+        "energy_raw_eV_per_atom": {
+          "mae": 0.012064536419312667,
+          "rmse": 0.01532335325122561,
+          "signed_mean": -0.01082235784465559,
+          "max_absolute": 0.02430685075654182,
+          "components": 13
+        },
+        "energy_aligned_eV_per_atom": {
+          "mae": 0.015926566255883765,
+          "rmse": 0.019270112564464266,
+          "signed_mean": -0.015926566255883765,
+          "max_absolute": 0.029411059167769996,
+          "components": 13
+        },
+        "forces_eV_per_A": {
+          "mae": 0.012615428476316136,
+          "rmse": 0.023414720354475012,
+          "signed_mean": -3.2051283579842287e-11,
+          "max_absolute": 0.11429324797880425,
+          "components": 1248
+        },
+        "stress_eV_per_A3": {
+          "mae": 0.0010449642421502617,
+          "rmse": 0.0016471536100711728,
+          "signed_mean": 0.0007719896795971027,
+          "max_absolute": 0.006113208446202167,
+          "components": 78
+        }
+      },
+      "grace": {
+        "configurations": 13,
+        "atoms": 416,
+        "energy_raw_eV_per_atom": {
+          "mae": 0.0032540527196099987,
+          "rmse": 0.004737928184072905,
+          "signed_mean": -0.0024138466209210085,
+          "max_absolute": 0.013327479285483612,
+          "components": 13
+        },
+        "energy_aligned_eV_per_atom": {
+          "mae": 0.003046373021404682,
+          "rmse": 0.004083129479902014,
+          "signed_mean": -0.00022502973480028858,
+          "max_absolute": 0.011138662399362892,
+          "components": 13
+        },
+        "forces_eV_per_A": {
+          "mae": 0.012414351469179522,
+          "rmse": 0.02308202320697394,
+          "signed_mean": -3.205128552359422e-11,
+          "max_absolute": 0.09440412311816404,
+          "components": 1248
+        },
+        "stress_eV_per_A3": {
+          "mae": 0.0021207988061743336,
+          "rmse": 0.004379095434215229,
+          "signed_mean": 0.0018658652594862857,
+          "max_absolute": 0.015460296244444095,
+          "components": 78
+        }
+      }
+    },
+    "interpretation": "DPA4 train alignment worsens validation/test energy errors; GRACE has smaller energy errors but higher stress errors. Neither selected as scientific teacher; no automatic fine-tuning.",
+    "test_policy": "User-requested frozen baseline evaluation only. Test values must not guide checkpoint choice, fine-tuning hyperparameters or sampling. Original checkpoints remain fixed; no scientific teacher selected.",
+    "derivative_checks": "fcc-04 train only: initial tiny-step DPA4 check FAILED, GRACE passed; larger-step check passed both with unchanged tolerances; all attempts archived",
+    "source_checkpoints_unchanged": true,
+    "baseline_and_diagnostic_CPU_seconds": 336,
+    "GPU_seconds": 0,
+    "conservative_combined_CPU_hours": 114.60055555555556,
+    "remaining_CPU_hours": 13.399444444444441,
+    "accounting": "runs/fm-al32-baseline-20261019-02/scheduler-all-attempts.json",
+    "all_four_runs_have_verified_cluster_and_workstation_archives": true,
+    "latex_preview": "Built-in compiler startup failed with Windows access denied5; existing report source, tables and visually checked figures preserved"
   },
   "kplib_benchmark": {
     "status": "COMPLETED0:0 on apollo30;14 VASP cases independently audited from verified raw archive; no candidate passed both-parent accuracy gates",
@@ -29,8 +109,17 @@
     "grids_job_id": "20952033",
     "benchmark_run": "runs/al32-kplib-benchmark-20261019-01/manifest.json",
     "benchmark_job_id": "20952034",
-    "configuration_ids": ["fcc-04", "md-00-f1"],
-    "min_distance_A": [40, 48, 56, 64, 80],
+    "configuration_ids": [
+      "fcc-04",
+      "md-00-f1"
+    ],
+    "min_distance_A": [
+      40,
+      48,
+      56,
+      64,
+      80
+    ],
     "geometry_scope": "Original two train parents only; frozen40-label dataset and existing Gamma7 protocol unchanged",
     "weight_policy": "Uniform full grid reconstructed from all kpLib coordinates; only time reversal used for reduction under VASP ISYM0",
     "decision": "Retain existing Gamma7 for this bounded pilot. Smaller kpLib grids are faster but fail force/stress criteria; d80 anchor fails FCC stress versus Gamma8. No equal-accuracy performance benefit established; no universal rejection of kpLib.",
@@ -107,8 +196,7 @@
   },
   "blocking_inputs": [],
   "next_actions": [
-    "Evaluate original DPA4-Mini-OMat24 and GRACE-1L-OMAT against real Al32 DFT data before fine-tuning",
-    "Determine any elemental energy offset from train only; keep raw energies and show raw/shifted metrics; do not silently merge PAW54/PAW64 labels",
+    "Design real-data fine-tuning on fixed train21/validation6 only; do not use inspected frozen test13 to choose models, loss weights, sampling or hyperparameters",
     "Fine-tune on21 train configurations, select checkpoint with6 validation configurations, reserve13 test configurations for final comparison",
     "Respect narrow force convergence margin on the two calibration parents; extend numerical convergence/domain coverage before production MD or interfaces",
     "Validate physical observables and MD stability before distillation and final alloy/nucleant selection; confirm institutional archive retention"
@@ -329,15 +417,17 @@
       "maximum_CPU_hours": 128,
       "status": "Explicit user instruction authorized dense revision under same global128 CPUh cap",
       "authorization": "configs/allocations/al32-kplib-20261019.json",
-      "allocated_CPU_hours": 114.50722222222223,
-      "allocated_CPU_seconds": 412226,
-      "workflow_status": "All7 Al32 parent jobs terminal; total includes failed calibration,40 labels,kpLib setup/grids/benchmark; no new DFT jobs submitted during collection",
+      "allocated_CPU_hours": 114.60055555555556,
+      "allocated_CPU_seconds": 412562,
+      "workflow_status": "All11 related parent jobs terminal; DFT/kpLib412226 plus original-FM baseline/diagnostics336 CPU-s; cancelled GPU0; no live jobs",
       "active_jobs": 0,
       "reserved_new_CPU_hours": 0,
-      "worst_case_overall_CPU_hours": 114.50722222222223,
-      "unreserved_CPU_hours": 13.492777777777775,
-      "remaining_CPU_hours": 13.492777777777775,
-      "final_scheduler_snapshot": "runs/al32-kplib-benchmark-20261019-01/scheduler-final.json"
+      "worst_case_overall_CPU_hours": 114.60055555555556,
+      "unreserved_CPU_hours": 13.399444444444441,
+      "remaining_CPU_hours": 13.399444444444441,
+      "final_scheduler_snapshot": "runs/fm-al32-baseline-20261019-02/scheduler-all-attempts.json",
+      "DFT_kplib_CPU_seconds": 412226,
+      "FM_baseline_and_diagnostics_CPU_seconds": 336
     },
     "calibration_status": "COMPLETED0:0; Gamma6 rejected, Gamma7 accepted by unchanged criteria on both train parents",
     "dataset_id": "al32-pilot-v1",

@@ -1,0 +1,133 @@
+{
+  "observed_utc": "2026-10-19T05:10:30.434453+00:00",
+  "host": "umt.imm.uran.ru",
+  "jobs": [
+    {
+      "job_id": "20950353",
+      "run_id": "al32-calibration-20261018-01",
+      "state": "FAILED",
+      "exit_code": "1:0",
+      "wall_seconds": 2353,
+      "CPUs": 16,
+      "CPU_seconds": 37648,
+      "allocated_TRES": "billing=2816,cpu=16,mem=32G,node=1",
+      "node": "apollo20"
+    },
+    {
+      "job_id": "20950692",
+      "run_id": "al32-calibration-20261018-02",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "wall_seconds": 4286,
+      "CPUs": 16,
+      "CPU_seconds": 68576,
+      "allocated_TRES": "billing=2816,cpu=16,mem=32G,node=1",
+      "node": "apollo25"
+    },
+    {
+      "job_id": "20952034",
+      "run_id": "al32-kplib-benchmark-20261019-01",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "wall_seconds": 4914,
+      "CPUs": 16,
+      "CPU_seconds": 78624,
+      "allocated_TRES": "billing=2816,cpu=16,mem=32G,node=1",
+      "node": "apollo30"
+    },
+    {
+      "job_id": "20952033",
+      "run_id": "al32-kplib-grids-20261019-01",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "wall_seconds": 30,
+      "CPUs": 1,
+      "CPU_seconds": 30,
+      "allocated_TRES": "billing=176,cpu=1,mem=4G,node=1",
+      "node": "apollo30"
+    },
+    {
+      "job_id": "20952032",
+      "run_id": "al32-kplib-setup-20261019-01",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "wall_seconds": 50,
+      "CPUs": 2,
+      "CPU_seconds": 100,
+      "allocated_TRES": "billing=352,cpu=2,mem=4G,node=1",
+      "node": "apollo30"
+    },
+    {
+      "job_id": "20950356",
+      "run_id": "al32-labeling-20261018-01",
+      "state": "CANCELLED",
+      "exit_code": "0:0",
+      "wall_seconds": 0,
+      "CPUs": 0,
+      "CPU_seconds": 0,
+      "allocated_TRES": "",
+      "node": "None assigned"
+    },
+    {
+      "job_id": "20950693",
+      "run_id": "al32-labeling-20261018-02",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "wall_seconds": 14203,
+      "CPUs": 16,
+      "CPU_seconds": 227248,
+      "allocated_TRES": "billing=2816,cpu=16,mem=32G,node=1",
+      "node": "apollo30"
+    },
+    {
+      "job_id": "20952051",
+      "run_id": "fm-al32-baseline-20261019-01",
+      "state": "CANCELLED by 13129",
+      "exit_code": "0:0",
+      "wall_seconds": 0,
+      "CPUs": 0,
+      "CPU_seconds": 0,
+      "allocated_TRES": "",
+      "node": "None assigned"
+    },
+    {
+      "job_id": "20952054",
+      "run_id": "fm-al32-baseline-20261019-02",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "wall_seconds": 39,
+      "CPUs": 4,
+      "CPU_seconds": 156,
+      "allocated_TRES": "billing=704,cpu=4,mem=32G,node=1",
+      "node": "apollo30"
+    },
+    {
+      "job_id": "20952058",
+      "run_id": "fm-al32-baseline-20261019-03",
+      "state": "FAILED",
+      "exit_code": "1:0",
+      "wall_seconds": 22,
+      "CPUs": 4,
+      "CPU_seconds": 88,
+      "allocated_TRES": "billing=704,cpu=4,mem=32G,node=1",
+      "node": "apollo30"
+    },
+    {
+      "job_id": "20952062",
+      "run_id": "fm-al32-baseline-20261019-04",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "wall_seconds": 23,
+      "CPUs": 4,
+      "CPU_seconds": 92,
+      "allocated_TRES": "billing=704,cpu=4,mem=32G,node=1",
+      "node": "apollo30"
+    }
+  ],
+  "live_related_jobs": [],
+  "total_CPU_seconds": 412562,
+  "total_CPU_hours": 114.60055555555556,
+  "remaining_CPU_hours": 13.399444444444441,
+  "raw_sacct": "20950353|al32-calibration-20261018-01|FAILED|1:0|2353|16|37648|billing=2816,cpu=16,mem=32G,node=1|apollo20\n20950353.batch|batch|FAILED|1:0|2353|16|37648|cpu=16,mem=32G,node=1|apollo20\n20950353.extern|extern|COMPLETED|0:0|2353|16|37648|billing=2816,cpu=16,mem=32G,node=1|apollo20\n20950353.0|hydra_bstrap_proxy|COMPLETED|0:0|206|16|3296|cpu=16,mem=32G,node=1|apollo20\n20950353.1|hydra_bstrap_proxy|COMPLETED|0:0|98|16|1568|cpu=16,mem=32G,node=1|apollo20\n20950353.2|hydra_bstrap_proxy|COMPLETED|0:0|138|16|2208|cpu=16,mem=32G,node=1|apollo20\n20950353.3|hydra_bstrap_proxy|COMPLETED|0:0|52|16|832|cpu=16,mem=32G,node=1|apollo20\n20950353.4|hydra_bstrap_proxy|COMPLETED|0:0|120|16|1920|cpu=16,mem=32G,node=1|apollo20\n20950353.5|hydra_bstrap_proxy|COMPLETED|0:0|205|16|3280|cpu=16,mem=32G,node=1|apollo20\n20950353.6|hydra_bstrap_proxy|COMPLETED|0:0|205|16|3280|cpu=16,mem=32G,node=1|apollo20\n20950353.7|hydra_bstrap_proxy|COMPLETED|0:0|80|16|1280|cpu=16,mem=32G,node=1|apollo20\n20950353.8|hydra_bstrap_proxy|COMPLETED|0:0|224|16|3584|cpu=16,mem=32G,node=1|apollo20\n20950353.9|hydra_bstrap_proxy|COMPLETED|0:0|107|16|1712|cpu=16,mem=32G,node=1|apollo20\n20950353.10|hydra_bstrap_proxy|COMPLETED|0:0|168|16|2688|cpu=16,mem=32G,node=1|apollo20\n20950353.11|hydra_bstrap_proxy|COMPLETED|0:0|54|16|864|cpu=16,mem=32G,node=1|apollo20\n20950353.12|hydra_bstrap_proxy|COMPLETED|0:0|133|16|2128|cpu=16,mem=32G,node=1|apollo20\n20950353.13|hydra_bstrap_proxy|COMPLETED|0:0|225|16|3600|cpu=16,mem=32G,node=1|apollo20\n20950353.14|hydra_bstrap_proxy|COMPLETED|0:0|225|16|3600|cpu=16,mem=32G,node=1|apollo20\n20950353.15|hydra_bstrap_proxy|COMPLETED|0:0|99|16|1584|cpu=16,mem=32G,node=1|apollo20\n20950356|al32-labeling-20261018-01|CANCELLED|0:0|0|0|0||None assigned\n20950692|al32-calibration-20261018-02|COMPLETED|0:0|4286|16|68576|billing=2816,cpu=16,mem=32G,node=1|apollo25\n20950692.batch|batch|COMPLETED|0:0|4286|16|68576|cpu=16,mem=32G,node=1|apollo25\n20950692.extern|extern|COMPLETED|0:0|4286|16|68576|billing=2816,cpu=16,mem=32G,node=1|apollo25\n20950692.0|hydra_bstrap_proxy|COMPLETED|0:0|708|16|11328|cpu=16,mem=32G,node=1|apollo25\n20950692.1|hydra_bstrap_proxy|COMPLETED|0:0|472|16|7552|cpu=16,mem=32G,node=1|apollo25\n20950692.2|hydra_bstrap_proxy|COMPLETED|0:0|306|16|4896|cpu=16,mem=32G,node=1|apollo25\n20950692.3|hydra_bstrap_proxy|COMPLETED|0:0|208|16|3328|cpu=16,mem=32G,node=1|apollo25\n20950692.4|hydra_bstrap_proxy|COMPLETED|0:0|319|16|5104|cpu=16,mem=32G,node=1|apollo25\n20950692.5|hydra_bstrap_proxy|COMPLETED|0:0|779|16|12464|cpu=16,mem=32G,node=1|apollo25\n20950692.6|hydra_bstrap_proxy|COMPLETED|0:0|514|16|8224|cpu=16,mem=32G,node=1|apollo25\n20950692.7|hydra_bstrap_proxy|COMPLETED|0:0|337|16|5392|cpu=16,mem=32G,node=1|apollo25\n20950692.8|hydra_bstrap_proxy|COMPLETED|0:0|253|16|4048|cpu=16,mem=32G,node=1|apollo25\n20950692.9|hydra_bstrap_proxy|COMPLETED|0:0|381|16|6096|cpu=16,mem=32G,node=1|apollo25\n20950693|al32-labeling-20261018-02|COMPLETED|0:0|14203|16|227248|billing=2816,cpu=16,mem=32G,node=1|apollo30\n20950693.batch|batch|COMPLETED|0:0|14203|16|227248|cpu=16,mem=32G,node=1|apollo30\n20950693.extern|extern|COMPLETED|0:0|14203|16|227248|billing=2816,cpu=16,mem=32G,node=1|apollo30\n20950693.0|hydra_bstrap_proxy|COMPLETED|0:0|253|16|4048|cpu=16,mem=32G,node=1|apollo30\n20950693.1|hydra_bstrap_proxy|COMPLETED|0:0|293|16|4688|cpu=16,mem=32G,node=1|apollo30\n20950693.2|hydra_bstrap_proxy|COMPLETED|0:0|292|16|4672|cpu=16,mem=32G,node=1|apollo30\n20950693.3|hydra_bstrap_proxy|COMPLETED|0:0|248|16|3968|cpu=16,mem=32G,node=1|apollo30\n20950693.4|hydra_bstrap_proxy|COMPLETED|0:0|324|16|5184|cpu=16,mem=32G,node=1|apollo30\n20950693.5|hydra_bstrap_proxy|COMPLETED|0:0|329|16|5264|cpu=16,mem=32G,node=1|apollo30\n20950693.6|hydra_bstrap_proxy|COMPLETED|0:0|269|16|4304|cpu=16,mem=32G,node=1|apollo30\n20950693.7|hydra_bstrap_proxy|COMPLETED|0:0|360|16|5760|cpu=16,mem=32G,node=1|apollo30\n20950693.8|hydra_bstrap_proxy|COMPLETED|0:0|371|16|5936|cpu=16,mem=32G,node=1|apollo30\n20950693.9|hydra_bstrap_proxy|COMPLETED|0:0|371|16|5936|cpu=16,mem=32G,node=1|apollo30\n20950693.10|hydra_bstrap_proxy|COMPLETED|0:0|371|16|5936|cpu=16,mem=32G,node=1|apollo30\n20950693.11|hydra_bstrap_proxy|COMPLETED|0:0|355|16|5680|cpu=16,mem=32G,node=1|apollo30\n20950693.12|hydra_bstrap_proxy|COMPLETED|0:0|386|16|6176|cpu=16,mem=32G,node=1|apollo30\n20950693.13|hydra_bstrap_proxy|COMPLETED|0:0|389|16|6224|cpu=16,mem=32G,node=1|apollo30\n20950693.14|hydra_bstrap_proxy|COMPLETED|0:0|390|16|6240|cpu=16,mem=32G,node=1|apollo30\n20950693.15|hydra_bstrap_proxy|COMPLETED|0:0|392|16|6272|cpu=16,mem=32G,node=1|apollo30\n20950693.16|hydra_bstrap_proxy|COMPLETED|0:0|391|16|6256|cpu=16,mem=32G,node=1|apollo30\n20950693.17|hydra_bstrap_proxy|COMPLETED|0:0|391|16|6256|cpu=16,mem=32G,node=1|apollo30\n20950693.18|hydra_bstrap_proxy|COMPLETED|0:0|380|16|6080|cpu=16,mem=32G,node=1|apollo30\n20950693.19|hydra_bstrap_proxy|COMPLETED|0:0|381|16|6096|cpu=16,mem=32G,node=1|apollo30\n20950693.20|hydra_bstrap_proxy|COMPLETED|0:0|371|16|5936|cpu=16,mem=32G,node=1|apollo30\n20950693.21|hydra_bstrap_proxy|COMPLETED|0:0|377|16|6032|cpu=16,mem=32G,node=1|apollo30\n20950693.22|hydra_bstrap_proxy|COMPLETED|0:0|363|16|5808|cpu=16,mem=32G,node=1|apollo30\n20950693.23|hydra_bstrap_proxy|COMPLETED|0:0|354|16|5664|cpu=16,mem=32G,node=1|apollo30\n20950693.24|hydra_bstrap_proxy|COMPLETED|0:0|382|16|6112|cpu=16,mem=32G,node=1|apollo30\n20950693.25|hydra_bstrap_proxy|COMPLETED|0:0|387|16|6192|cpu=16,mem=32G,node=1|apollo30\n20950693.26|hydra_bstrap_proxy|COMPLETED|0:0|389|16|6224|cpu=16,mem=32G,node=1|apollo30\n20950693.27|hydra_bstrap_proxy|COMPLETED|0:0|383|16|6128|cpu=16,mem=32G,node=1|apollo30\n20950693.28|hydra_bstrap_proxy|COMPLETED|0:0|360|16|5760|cpu=16,mem=32G,node=1|apollo30\n20950693.29|hydra_bstrap_proxy|COMPLETED|0:0|375|16|6000|cpu=16,mem=32G,node=1|apollo30\n20950693.30|hydra_bstrap_proxy|COMPLETED|0:0|389|16|6224|cpu=16,mem=32G,node=1|apollo30\n20950693.31|hydra_bstrap_proxy|COMPLETED|0:0|386|16|6176|cpu=16,mem=32G,node=1|apollo30\n20950693.32|hydra_bstrap_proxy|COMPLETED|0:0|387|16|6192|cpu=16,mem=32G,node=1|apollo30\n20950693.33|hydra_bstrap_proxy|COMPLETED|0:0|314|16|5024|cpu=16,mem=32G,node=1|apollo30\n20950693.34|hydra_bstrap_proxy|COMPLETED|0:0|316|16|5056|cpu=16,mem=32G,node=1|apollo30\n20950693.35|hydra_bstrap_proxy|COMPLETED|0:0|328|16|5248|cpu=16,mem=32G,node=1|apollo30\n20950693.36|hydra_bstrap_proxy|COMPLETED|0:0|334|16|5344|cpu=16,mem=32G,node=1|apollo30\n20950693.37|hydra_bstrap_proxy|COMPLETED|0:0|338|16|5408|cpu=16,mem=32G,node=1|apollo30\n20950693.38|hydra_bstrap_proxy|COMPLETED|0:0|346|16|5536|cpu=16,mem=32G,node=1|apollo30\n20950693.39|hydra_bstrap_proxy|COMPLETED|0:0|373|16|5968|cpu=16,mem=32G,node=1|apollo30\n20952032|al32-kplib-setup-20261019-01|COMPLETED|0:0|50|2|100|billing=352,cpu=2,mem=4G,node=1|apollo30\n20952032.batch|batch|COMPLETED|0:0|50|2|100|cpu=2,mem=4G,node=1|apollo30\n20952032.extern|extern|COMPLETED|0:0|50|2|100|billing=352,cpu=2,mem=4G,node=1|apollo30\n20952033|al32-kplib-grids-20261019-01|COMPLETED|0:0|30|1|30|billing=176,cpu=1,mem=4G,node=1|apollo30\n20952033.batch|batch|COMPLETED|0:0|30|1|30|cpu=1,mem=4G,node=1|apollo30\n20952033.extern|extern|COMPLETED|0:0|30|1|30|billing=176,cpu=1,mem=4G,node=1|apollo30\n20952034|al32-kplib-benchmark-20261019-01|COMPLETED|0:0|4914|16|78624|billing=2816,cpu=16,mem=32G,node=1|apollo30\n20952034.batch|batch|COMPLETED|0:0|4914|16|78624|cpu=16,mem=32G,node=1|apollo30\n20952034.extern|extern|COMPLETED|0:0|4914|16|78624|billing=2816,cpu=16,mem=32G,node=1|apollo30\n20952034.0|hydra_bstrap_proxy|COMPLETED|0:0|342|16|5472|cpu=16,mem=32G,node=1|apollo30\n20952034.1|hydra_bstrap_proxy|COMPLETED|0:0|415|16|6640|cpu=16,mem=32G,node=1|apollo30\n20952034.2|hydra_bstrap_proxy|COMPLETED|0:0|416|16|6656|cpu=16,mem=32G,node=1|apollo30\n20952034.3|hydra_bstrap_proxy|COMPLETED|0:0|342|16|5472|cpu=16,mem=32G,node=1|apollo30\n20952034.4|hydra_bstrap_proxy|COMPLETED|0:0|676|16|10816|cpu=16,mem=32G,node=1|apollo30\n20952034.5|hydra_bstrap_proxy|COMPLETED|0:0|814|16|13024|cpu=16,mem=32G,node=1|apollo30\n20952034.6|hydra_bstrap_proxy|COMPLETED|0:0|116|16|1856|cpu=16,mem=32G,node=1|apollo30\n20952034.7|hydra_bstrap_proxy|COMPLETED|0:0|96|16|1536|cpu=16,mem=32G,node=1|apollo30\n20952034.8|hydra_bstrap_proxy|COMPLETED|0:0|162|16|2592|cpu=16,mem=32G,node=1|apollo30\n20952034.9|hydra_bstrap_proxy|COMPLETED|0:0|177|16|2832|cpu=16,mem=32G,node=1|apollo30\n20952034.10|hydra_bstrap_proxy|COMPLETED|0:0|306|16|4896|cpu=16,mem=32G,node=1|apollo30\n20952034.11|hydra_bstrap_proxy|COMPLETED|0:0|250|16|4000|cpu=16,mem=32G,node=1|apollo30\n20952034.12|hydra_bstrap_proxy|COMPLETED|0:0|385|16|6160|cpu=16,mem=32G,node=1|apollo30\n20952034.13|hydra_bstrap_proxy|COMPLETED|0:0|413|16|6608|cpu=16,mem=32G,node=1|apollo30\n20952051|fm-al32-baseline-20261019-01|CANCELLED by 13129|0:0|0|0|0||None assigned\n20952054|fm-al32-baseline-20261019-02|COMPLETED|0:0|39|4|156|billing=704,cpu=4,mem=32G,node=1|apollo30\n20952054.batch|batch|COMPLETED|0:0|39|4|156|cpu=4,mem=32G,node=1|apollo30\n20952054.extern|extern|COMPLETED|0:0|39|4|156|billing=704,cpu=4,mem=32G,node=1|apollo30\n20952058|fm-al32-baseline-20261019-03|FAILED|1:0|22|4|88|billing=704,cpu=4,mem=32G,node=1|apollo30\n20952058.batch|batch|FAILED|1:0|22|4|88|cpu=4,mem=32G,node=1|apollo30\n20952058.extern|extern|COMPLETED|0:0|22|4|88|billing=704,cpu=4,mem=32G,node=1|apollo30\n20952062|fm-al32-baseline-20261019-04|COMPLETED|0:0|23|4|92|billing=704,cpu=4,mem=32G,node=1|apollo30\n20952062.batch|batch|COMPLETED|0:0|23|4|92|cpu=4,mem=32G,node=1|apollo30\n20952062.extern|extern|COMPLETED|0:0|23|4|92|billing=704,cpu=4,mem=32G,node=1|apollo30\n",
+  "interpretation": "Parent CPUTimeRAW only; includes failed/cancelled attempts, no step double counting"
+}

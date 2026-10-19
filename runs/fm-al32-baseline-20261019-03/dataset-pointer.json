@@ -1,0 +1,33 @@
+{
+  "dataset_id": "al32-pilot-v1-dft-v2",
+  "geometry_manifest": "datasets/al32-pilot-v1/dataset-manifest.json",
+  "geometry_manifest_sha256": "65a4c6dce1a072504030dca2b0340db72a497e562e40b2717104294c3030fbdd",
+  "labels": "runs/al32-labeling-20261018-02/labels.json",
+  "labels_sha256": "d5f462ce6321f1afcbac3ce5e04ec430546b0e22b9676faf1de4a306b8d53650",
+  "export_manifest": "runs/al32-labeling-20261018-02/export-manifest.json",
+  "export_manifest_sha256": "0727c472058ee957a59e5e5a1b99bab1560e8b39b24bd3a48ce358153d724da7",
+  "export_directory": "runs/al32-labeling-20261018-02/export",
+  "remote_DeepMD_export": "/home6/u3129/mlip-research/runs/al32-labeling-20261018-02/export/deepmd",
+  "accepted_protocol": "configs/dft/al32-pbe-pilot-accepted-v2.json",
+  "quality_assessment": "runs/al32-labeling-20261018-02/quality-assessment.json",
+  "split_counts": {
+    "test": 13,
+    "train": 21,
+    "validation": 6
+  },
+  "split_group_key": "parent_id",
+  "label_source": "DFT/VASP only; no teacher or EMT labels",
+  "ready_for_pilot_finetuning": true,
+  "raw_backups": [
+    "runs/al32-calibration-20261018-02/artifact-backup.json",
+    "runs/al32-labeling-20261018-02/artifact-backup.json"
+  ],
+  "institutional_backup_retention_confirmed": false,
+  "limitations": [
+    "Convergence calibrated on only two training configurations",
+    "Force criterion passes narrowly; no claim of a large numerical margin",
+    "EMT proposals do not establish equilibrium DFT liquid; no interfaces/segregation/nucleation validation",
+    "Potential pretraining overlap and PAW54/PAW64 alignment remain to be handled in model evaluation",
+    "Private main-home plus workstation backups verified; institutional retention unconfirmed"
+  ]
+}
