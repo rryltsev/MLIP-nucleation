@@ -52,6 +52,7 @@ def main():
             types=engine.get_type_map()
             def evaluate(atoms):
                 energy,force,virial=engine.eval(atoms.positions.reshape(1,-1),atoms.cell.array.reshape(1,9),[types.index(s) for s in atoms.get_chemical_symbols()])
+                result['native_output_dtypes']={'energy':str(energy.dtype),'force':str(force.dtype),'virial':str(virial.dtype)}
                 stress=-virial.reshape(3,3)/atoms.get_volume()
                 return float(energy.ravel()[0]),force.reshape(-1,3),stress.ravel()[[0,4,8,5,2,1]]
             result['versions']={p:importlib.metadata.version(p) for p in ('deepmd-kit','torch','numpy','ase')}
