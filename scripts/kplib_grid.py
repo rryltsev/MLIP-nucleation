@@ -41,6 +41,7 @@ def kpoints(coords,weights,title):
 
 def generate(path,distance,settings):
     from kpLib.interface import get_kpoints
+    import spglib
     cell,frac,numbers=poscar(path)
     started=time.perf_counter()
     result=get_kpoints(cell,frac,numbers,min_distance=distance,min_total_kpoints=1,
@@ -49,10 +50,13 @@ def generate(path,distance,settings):
     full=result['coords']; n=int(result['num_total_kpts'])
     assert len(full)==n and result['min_periodic_distance']>=distance-1e-6
     reduced,weights=reduce_time_reversal(full)
+    symmetry=spglib.get_symmetry_dataset((cell,frac,numbers),symprec=settings['symprec_A'])
     # kpLib weights describe spatial orbits, and contain zeros on other full
     # points. Uniform full weights must be reconstructed before TR reduction.
     assert len(result['weights'])==n and sum(result['weights'])==n
     return dict(requested_min_distance_A=distance,effective_min_distance_A=float(result['min_periodic_distance']),
         full_coords=full,full_weights=[1]*n,tr_coords=reduced,tr_weights=weights,
         num_total_kpts=n,num_time_reversal_kpts=len(reduced),
-        library_num_distinct_kpts=int(result['num_distinct_kpts']),generation_seconds=elapsed)
+        library_num_distinct_kpts=int(result['num_distinct_kpts']),generation_seconds=elapsed,
+        spacegroup_number=int(symmetry.number),spatial_rotation_count=len(symmetry.rotations),
+        gamma_included=bool(np.any(np.max(np.abs(np.asarray(full)-np.rint(full)),axis=1)<1e-8)))

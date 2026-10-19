@@ -5,6 +5,7 @@ import json
 import os
 from pathlib import Path
 import platform
+import shutil
 import statistics
 import subprocess
 import sys
@@ -51,7 +52,12 @@ def setup():
 
 def grids():
     import numpy as np
+    import importlib.metadata
+    import kpLib.lib
     from kplib_grid import generate,reduce_time_reversal,kpoints
+    save(ROOT/'runtime.json',dict(python=sys.version,kplib=importlib.metadata.version('kpLib'),
+        numpy=np.__version__,spglib=importlib.metadata.version('spglib'),
+        extension_path=kpLib.lib.__file__,extension_sha256=sha(kpLib.lib.__file__)))
     # Direct representation tests, including self-inverse and shifted points.
     for n,shift,expected in ((3,0,14),(2,0,8),(2,0.5,4)):
         coords=np.array([[(i+shift)/n,(j+shift)/n,(k+shift)/n] for i in range(n) for j in range(n) for k in range(n)])
@@ -79,6 +85,10 @@ def benchmark():
     from kplib_grid import kpoints
     spec=importlib.util.spec_from_file_location('vasp_api',ROOT/'al-pilot.py'); api=importlib.util.module_from_spec(spec);spec.loader.exec_module(api)
     refs=json.loads((ROOT/'references.json').read_text());grids=json.loads((ROOT/'grids.json').read_text())
+    program=Path(shutil.which('vasp_std'))
+    save(ROOT/'runtime.json',dict(vasp_executable=str(program),vasp_sha256=sha(program),
+        python=sys.version,host=platform.node(),ntasks=int(os.environ['SLURM_NTASKS']),
+        reference_labels_sha256=sha(ROOT/'references.json'),grids_sha256=sha(ROOT/'grids.json')))
     cases={};root=ROOT/'calculations';root.mkdir()
     def run(cid,name,grid=None,full=False):
         path=root/(cid+'-'+name);path.mkdir()

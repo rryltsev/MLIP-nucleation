@@ -197,7 +197,7 @@ def collect(path):
 from pathlib import Path
 root=Path(ROOT)
 names=['system.json','al-pilot.py','run.sbatch','submission-intent.json','dataset-manifest.json','calibration.json','calibration-source.json','labels.json','result.json','export-manifest.json']
-names += ['kplib-run.py','kplib_grid.py','references.json','software.json','requirements.lock.txt','grids.json','grid-summary.json','benchmark.json','benchmark-progress.json']
+names += ['kplib-run.py','kplib_grid.py','references.json','software.json','requirements.lock.txt','grids.json','grid-summary.json','benchmark.json','benchmark-progress.json','runtime.json']
 names += [str(p.relative_to(root)) for p in root.glob('structures/*/POSCAR')]
 names += [str(p.relative_to(root)) for p in root.glob('grids/*/*/*') if p.name in ('KPOINTS','grid.json')]
 names += [str(p.relative_to(root)) for p in root.glob('calculations/*/*') if p.name in ('POSCAR','INCAR','KPOINTS','input-manifest.json','potcar-provenance.json','label.json')]
