@@ -1,0 +1,136 @@
+{
+  "authorization": "User explicitly requested DPA4/GRACE fine-tuning through Slurm on A100, train fitting, validation checkpoint selection, test final comparison; bounded one-seed pilot only",
+  "budget": {
+    "global_CPU_hour_cap": 128,
+    "maximum_CPU_seconds": 14400,
+    "maximum_GPU_seconds": 3600,
+    "prior_related_CPU_seconds": 412562,
+    "worst_case_combined_CPU_hours": 118.60055555555556
+  },
+  "budget_snapshot": {
+    "new_reserved_CPU_seconds": 14400,
+    "prior_charged_CPU_seconds": 412562,
+    "raw": "20950353|FAILED|37648\n20950353.batch|FAILED|37648\n20950353.extern|COMPLETED|37648\n20950353.0|COMPLETED|3296\n20950353.1|COMPLETED|1568\n20950353.2|COMPLETED|2208\n20950353.3|COMPLETED|832\n20950353.4|COMPLETED|1920\n20950353.5|COMPLETED|3280\n20950353.6|COMPLETED|3280\n20950353.7|COMPLETED|1280\n20950353.8|COMPLETED|3584\n20950353.9|COMPLETED|1712\n20950353.10|COMPLETED|2688\n20950353.11|COMPLETED|864\n20950353.12|COMPLETED|2128\n20950353.13|COMPLETED|3600\n20950353.14|COMPLETED|3600\n20950353.15|COMPLETED|1584\n20950356|CANCELLED|0\n20950692|COMPLETED|68576\n20950692.batch|COMPLETED|68576\n20950692.extern|COMPLETED|68576\n20950692.0|COMPLETED|11328\n20950692.1|COMPLETED|7552\n20950692.2|COMPLETED|4896\n20950692.3|COMPLETED|3328\n20950692.4|COMPLETED|5104\n20950692.5|COMPLETED|12464\n20950692.6|COMPLETED|8224\n20950692.7|COMPLETED|5392\n20950692.8|COMPLETED|4048\n20950692.9|COMPLETED|6096\n20950693|COMPLETED|227248\n20950693.batch|COMPLETED|227248\n20950693.extern|COMPLETED|227248\n20950693.0|COMPLETED|4048\n20950693.1|COMPLETED|4688\n20950693.2|COMPLETED|4672\n20950693.3|COMPLETED|3968\n20950693.4|COMPLETED|5184\n20950693.5|COMPLETED|5264\n20950693.6|COMPLETED|4304\n20950693.7|COMPLETED|5760\n20950693.8|COMPLETED|5936\n20950693.9|COMPLETED|5936\n20950693.10|COMPLETED|5936\n20950693.11|COMPLETED|5680\n20950693.12|COMPLETED|6176\n20950693.13|COMPLETED|6224\n20950693.14|COMPLETED|6240\n20950693.15|COMPLETED|6272\n20950693.16|COMPLETED|6256\n20950693.17|COMPLETED|6256\n20950693.18|COMPLETED|6080\n20950693.19|COMPLETED|6096\n20950693.20|COMPLETED|5936\n20950693.21|COMPLETED|6032\n20950693.22|COMPLETED|5808\n20950693.23|COMPLETED|5664\n20950693.24|COMPLETED|6112\n20950693.25|COMPLETED|6192\n20950693.26|COMPLETED|6224\n20950693.27|COMPLETED|6128\n20950693.28|COMPLETED|5760\n20950693.29|COMPLETED|6000\n20950693.30|COMPLETED|6224\n20950693.31|COMPLETED|6176\n20950693.32|COMPLETED|6192\n20950693.33|COMPLETED|5024\n20950693.34|COMPLETED|5056\n20950693.35|COMPLETED|5248\n20950693.36|COMPLETED|5344\n20950693.37|COMPLETED|5408\n20950693.38|COMPLETED|5536\n20950693.39|COMPLETED|5968\n20952032|COMPLETED|100\n20952032.batch|COMPLETED|100\n20952032.extern|COMPLETED|100\n20952033|COMPLETED|30\n20952033.batch|COMPLETED|30\n20952033.extern|COMPLETED|30\n20952034|COMPLETED|78624\n20952034.batch|COMPLETED|78624\n20952034.extern|COMPLETED|78624\n20952034.0|COMPLETED|5472\n20952034.1|COMPLETED|6640\n20952034.2|COMPLETED|6656\n20952034.3|COMPLETED|5472\n20952034.4|COMPLETED|10816\n20952034.5|COMPLETED|13024\n20952034.6|COMPLETED|1856\n20952034.7|COMPLETED|1536\n20952034.8|COMPLETED|2592\n20952034.9|COMPLETED|2832\n20952034.10|COMPLETED|4896\n20952034.11|COMPLETED|4000\n20952034.12|COMPLETED|6160\n20952034.13|COMPLETED|6608\n20952051|CANCELLED by 13129|0\n20952054|COMPLETED|156\n20952054.batch|COMPLETED|156\n20952054.extern|COMPLETED|156\n20952058|FAILED|88\n20952058.batch|FAILED|88\n20952058.extern|COMPLETED|88\n20952062|COMPLETED|92\n20952062.batch|COMPLETED|92\n20952062.extern|COMPLETED|92\n",
+    "records": [
+      {
+        "CPU_seconds": 37648,
+        "basis": "actual terminal",
+        "job_id": "20950353",
+        "state": "FAILED"
+      },
+      {
+        "CPU_seconds": 68576,
+        "basis": "actual terminal",
+        "job_id": "20950692",
+        "state": "COMPLETED"
+      },
+      {
+        "CPU_seconds": 78624,
+        "basis": "actual terminal",
+        "job_id": "20952034",
+        "state": "COMPLETED"
+      },
+      {
+        "CPU_seconds": 30,
+        "basis": "actual terminal",
+        "job_id": "20952033",
+        "state": "COMPLETED"
+      },
+      {
+        "CPU_seconds": 100,
+        "basis": "actual terminal",
+        "job_id": "20952032",
+        "state": "COMPLETED"
+      },
+      {
+        "CPU_seconds": 0,
+        "basis": "actual terminal",
+        "job_id": "20950356",
+        "state": "CANCELLED"
+      },
+      {
+        "CPU_seconds": 227248,
+        "basis": "actual terminal",
+        "job_id": "20950693",
+        "state": "COMPLETED"
+      },
+      {
+        "CPU_seconds": 0,
+        "basis": "actual terminal",
+        "job_id": "20952051",
+        "state": "CANCELLED by 13129"
+      },
+      {
+        "CPU_seconds": 156,
+        "basis": "actual terminal",
+        "job_id": "20952054",
+        "state": "COMPLETED"
+      },
+      {
+        "CPU_seconds": 88,
+        "basis": "actual terminal",
+        "job_id": "20952058",
+        "state": "FAILED"
+      },
+      {
+        "CPU_seconds": 92,
+        "basis": "actual terminal",
+        "job_id": "20952062",
+        "state": "COMPLETED"
+      }
+    ],
+    "worst_case_CPU_hours": 118.60055555555556
+  },
+  "code_commit": "50fa5c94f00365466d54908739b7a57bc605d603",
+  "created_utc": "2026-10-19T05:36:49.941223+00:00",
+  "host": "umt.imm.uran.ru",
+  "input_sha256": {
+    "DFT-export-provenance.json": "0727c472058ee957a59e5e5a1b99bab1560e8b39b24bd3a48ce358153d724da7",
+    "al32-finetune-run.py": "697c01dd288b43446c6fda326cf79bfcf75eb43ece9b8ebbeb06ccce47815c04",
+    "baseline_metrics.py": "2708cd2be53c7993bc1e9dfabe5f79f12024451b45c561f894672d67d362f725",
+    "data/deepmd/train/frame-ids.json": "2b9713b198404bcd79af10140047a9e567c997eae20203914718d485b7e0f54a",
+    "data/deepmd/train/set.000/box.npy": "8d8d0ec0e428a086be93038c340a88e880be7ce83f5f60ec2c8a1dd0124d505c",
+    "data/deepmd/train/set.000/coord.npy": "300770c2720008bebeef5990454357c74e5fc7ed44b55eb892c1deba68d7117a",
+    "data/deepmd/train/set.000/energy.npy": "f18451ad436c43edd3107fa1f3c2d0c410d6dcdf216052c045d315dc68fc5fa1",
+    "data/deepmd/train/set.000/force.npy": "2a660779cce22bc1c4cee7c68153791879d0992fe6387e291984fa7e94a68f3a",
+    "data/deepmd/train/set.000/virial.npy": "5717857d8bbc564aef6be29b0b3ec055fe872cdef44f72fb99c966436e5d9808",
+    "data/deepmd/train/type.raw": "de502d46d792c81ad2c69acc5d8e3c1cc48d9e59cdf9d6b724df314f877a620f",
+    "data/deepmd/train/type_map.raw": "caca9e1e8fb0757238c027c8bad3af35e724e3a84ae3acb5a3cd2db9a9966f95",
+    "data/deepmd/validation/frame-ids.json": "9346e07012ce1f9b96b01c8555716ff806ceb30043cd9efa3aaf22ccc6fe9b5d",
+    "data/deepmd/validation/set.000/box.npy": "b879566773eb601c420c69cf00393ed1cc7e47b85058b8be183afc5ece51e293",
+    "data/deepmd/validation/set.000/coord.npy": "493703262ce2a848cf6233632a9d117c18ead5cd64596f8c589416815bc2a0c8",
+    "data/deepmd/validation/set.000/energy.npy": "d324edc6c606603f07bc570681b7571e27c81b0919ffc8784876e75ca484b525",
+    "data/deepmd/validation/set.000/force.npy": "4a38c26edd3bcd8653897aee8fa8e48618d7eb123f107d86f4b197252dd8d631",
+    "data/deepmd/validation/set.000/virial.npy": "99f964a696f3226f02f7597b0f7c85a5fef985f4f316b2e63ca162a3bb6b40e5",
+    "data/deepmd/validation/type.raw": "de502d46d792c81ad2c69acc5d8e3c1cc48d9e59cdf9d6b724df314f877a620f",
+    "data/deepmd/validation/type_map.raw": "caca9e1e8fb0757238c027c8bad3af35e724e3a84ae3acb5a3cd2db9a9966f95",
+    "data/train.extxyz": "40bb773fea22383c83ce9684a47b47b94ba7963b3fbc5da4fc3edd383174030b",
+    "data/validation.extxyz": "e0d1946116fbba924138128a1d9efa2c2c345df13310cac4b002b11f58bc4850",
+    "dataset-manifest.json": "65a4c6dce1a072504030dca2b0340db72a497e562e40b2717104294c3030fbdd",
+    "dpa4-checkpoint.json": "c59a09ed92f6c60defa66cd830b096d392f79caee6f0874eff8a26813fc3b692",
+    "finetune_selection.py": "07e496e97f18249d1a18a6a62858bf8f337810ef6bae32b06365221a21e4587a",
+    "fm-child.py": "0f4b2d13e7c262e546f637786e8c60d73466481406349b4c45ff334a32a48a4c",
+    "fm-finetune.py": "c3c895c5701df93cd13069ea455aef91f2a2d0eb85b9726875dd567a9637478d",
+    "grace-checkpoint.json": "8f9de3a25f648c7d2a8ce11fb70c07ec4168cd2bf93201fc454d23476c618f04",
+    "run-inputs.json": "a231f85874477f6afc82f8e00e4dafddddc731c78216f1ad492fcf06a3155c94",
+    "run.sbatch": "0b37ba56ed42dc1d6e51744290b4269a9b5163c383794f19c66f3aca45cc7126",
+    "sealed-test-source.json": "86215c262aeba6e22de5c166137db5114fd0cb85887c12b2117b9c05c0736a32",
+    "study.json": "32c76078be45473b90ddc20dcda3eee21afe40be45df84cdb6b215ed3701540e"
+  },
+  "job_id": "20952229",
+  "remote_run_dir": "/home6/u3129/mlip-research/runs/fm-al32-finetune-20261019-01",
+  "resources": {
+    "account": "imet-2026-2",
+    "cpus_per_task": 4,
+    "gpus": 1,
+    "memory_GiB": 32,
+    "nodes": 1,
+    "ntasks": 1,
+    "partition": "v100",
+    "qos": "normal",
+    "walltime": "01:00:00"
+  },
+  "run_id": "fm-al32-finetune-20261019-01",
+  "stage": "submitted",
+  "test_policy": "No test labels in training/selection payload; final test opened only after both validation selections are locked"
+}

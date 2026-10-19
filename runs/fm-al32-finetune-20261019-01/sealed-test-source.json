@@ -1,0 +1,7 @@
+{
+  "archive": "/home/u3129/.local/share/mlip-research/dft-artifacts/al32-labeling-20261018-02.tar.gz",
+  "archive_sha256": "bd1b89d65e2f6682501152b6a46b483a26bab02adeeb63e314e03219c2b136d6",
+  "member": "export/test.extxyz",
+  "member_sha256": "550dcf3cf0936ab554e2155f696fa265c9593e90fc10995701ba05c25e55eefe",
+  "policy": "Open only after both model selections are hashed and locked; test labels absent from training payload"
+}

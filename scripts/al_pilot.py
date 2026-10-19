@@ -239,7 +239,7 @@ records={str(p.relative_to(root)):{'sha256':hashlib.sha256(p.read_bytes()).hexdi
 archive.parent.mkdir(parents=True,exist_ok=True)
 if not archive.exists():
  with archive.open('xb') as f:
-  with tarfile.open(fileobj=f,mode='w:gz') as t:
+  with tarfile.open(fileobj=f,mode='w:gz',dereference=True) as t:
    for p in files: t.add(p,arcname=str(p.relative_to(root)),recursive=False)
  archive.chmod(0o400)
 with tarfile.open(archive) as t:

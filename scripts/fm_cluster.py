@@ -90,7 +90,7 @@ PY
     save(path.parent/"collected-sha256.json",{n:r['sha256'] for n,r in records.items()})
     result=json.loads(records['result.json']['text']) if 'result.json' in records else {'status':'missing_result'}
     manifest.update(stage='collected',runtime_status=result['status'],scheduler_observation=status); save(path,manifest)
-    print(json.dumps({'status':result['status'],'scheduler':status,'cases':{n:r['status'] for n,r in result.get('cases',{}).items()}}))
+    print(json.dumps({'status':result['status'],'scheduler':status,'cases':{n:r.get('status',r.get('final-metrics',{}).get('status','missing_result')) for n,r in result.get('cases',{}).items()}}))
 
 
 if __name__=='__main__':
