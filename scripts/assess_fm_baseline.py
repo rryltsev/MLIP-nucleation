@@ -100,6 +100,11 @@ def main(path):
             checks[rm['run_id']][backend]=check
     assert all(check['passed'] for check in checks['fm-al32-baseline-20261019-04'].values())
     assert total_cpu<=6000 and total_gpu==0
+    combined=json.loads((path/'scheduler-all-attempts.json').read_text())
+    assert combined['total_CPU_seconds']==412226+total_cpu and not combined['live_related_jobs']
+    for attempt in attempts:
+        actual=next(j for j in combined['jobs'] if j['job_id']==attempt['job_id'])
+        assert actual['CPU_seconds']==attempt['CPU_seconds']
     assessment=dict(assessed_utc=datetime.now(timezone.utc).isoformat(),status='passed',
         analysis_code_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
         analysis_source_sha256=sha(Path(__file__).read_bytes()),metrics_source_sha256=sha((ROOT/'scripts/baseline_metrics.py').read_bytes()),
