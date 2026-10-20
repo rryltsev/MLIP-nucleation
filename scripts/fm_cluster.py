@@ -1,6 +1,8 @@
 """Persistent, bounded A100 foundation fine-tuning submission and collection."""
 import argparse
+import base64
 from datetime import datetime, timezone
+import gzip
 import hashlib
 import json
 from pathlib import Path
@@ -64,26 +66,31 @@ def submit(attempt, source=None):
 def collect(path):
     manifest=json.loads(path.read_text()); job=manifest["job_id"]
     if not job or not job.isdigit(): raise ValueError("Reconcile submission first")
-    status=remote("sacct -X -j "+job+" -nP --format=JobIDRaw,State,ExitCode,Elapsed,ElapsedRaw,AllocCPUS,NodeList; squeue -h -j "+job+" -o '%i|%T|%R'")
+    # Completed jobs can disappear from squeue while remaining in sacct. Query
+    # the user's queue and filter locally so an absent job is not an SSH error.
+    status=remote("sacct -X -j "+job+" -nP --format=JobIDRaw,State,ExitCode,Elapsed,ElapsedRaw,AllocCPUS,NodeList")
+    queue=remote("squeue -h -u u3129 -o '%i|%T|%R'")
+    status+=''.join(line+'\n' for line in queue.splitlines() if line.split('|',1)[0]==job)
     save(path.parent/"scheduler.json",{"observed_utc":datetime.now(timezone.utc).isoformat(),"output":status})
     if any('|'+s in status for s in ['RUNNING','PENDING','COMPLETING','CONFIGURING']): print(status); return
     if not any('|'+s in status for s in ['COMPLETED','FAILED','TIMEOUT','CANCELLED','OUT_OF_MEMORY','NODE_FAIL','PREEMPTED']):
         raise RuntimeError("Unknown scheduler state")
     script="""python3 - <<'PY'
 from pathlib import Path
-import hashlib,json
+import base64,gzip,hashlib,json
 root=Path(@ROOT@); records={}
 for p in root.rglob('*'):
  rel=p.relative_to(root)
  if not p.is_file() or 'cache' in rel.parts or 'loaded-initial' in rel.parts or p.name in ['manifest.json','job.id']: continue
  if p.suffix not in ['.json','.yaml','.txt','.log','.out','.csv','.extxyz','.data','.lammps','.dump']: continue
+ if p.stat().st_size>2500000: continue
  b=p.read_bytes()
  if len(b)>2500000: continue
  records[rel.as_posix()]={'sha256':hashlib.sha256(b).hexdigest(),'text':b.decode()}
-print(json.dumps(records))
+print(base64.b64encode(gzip.compress(json.dumps(records).encode())).decode())
 PY
 """.replace('@ROOT@',repr(manifest["remote_run_dir"]))
-    records=json.loads(remote(script))
+    records=json.loads(gzip.decompress(base64.b64decode(remote(script,180))))
     for name,record in records.items():
         b=record["text"].encode(); assert hashlib.sha256(b).hexdigest()==record["sha256"]
         target=path.parent/name; target.parent.mkdir(parents=True,exist_ok=True); target.write_bytes(b)

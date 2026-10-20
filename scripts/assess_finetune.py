@@ -28,14 +28,25 @@ def close(a,b):
 
 def main(run):
     manifest=json.loads((run/'manifest.json').read_text());assert manifest['stage']=='collected' and manifest['runtime_status']=='passed'
-    b=json.loads((run/'artifact-backup.json').read_text());assert b['verified_retrieval']
-    archive=Path(b['local_archive'])
-    if not archive.is_file():archive=ROOT/'artifacts/dft-run-backups'/Path(b['remote_archive']).name
-    with archive.open('rb') as f:assert hashlib.file_digest(f,'sha256').hexdigest()==b['sha256']
+    b=json.loads((run/'artifact-backup.json').read_text())
+    full_local=b['verified_retrieval']
+    if full_local:
+        archive=Path(b['local_archive']);archive_hash=b['sha256']
+        if not archive.is_file():archive=ROOT/'artifacts/dft-run-backups'/Path(b['remote_archive']).name
+    else:
+        assert b['remote_archive_verified'] and b['evidence_verified_retrieval']
+        archive=Path(b['local_evidence_archive']);archive_hash=b['evidence_sha256']
+        if not archive.is_file():archive=ROOT/'artifacts/dft-run-backups'/Path(b['remote_evidence_archive']).name
+    with archive.open('rb') as f:assert hashlib.file_digest(f,'sha256').hexdigest()==archive_hash
     data={};hashes={}
     with tarfile.open(archive) as tar:
         members=tar.getmembers();assert all(m.isfile() for m in members)
-        assert len({m.name for m in members})==len(members) and {m.name for m in members}==set(b['members'])
+        assert len({m.name for m in members})==len(members)
+        assert {m.name for m in members}<=set(b['members'])
+        if full_local:assert {m.name for m in members}==set(b['members'])
+        # Native binaries in the cluster-only backend were streamed and hashed
+        # from the complete immutable archive by backup_finetune_evidence.py.
+        hashes={n:r['sha256'] for n,r in b['members'].items()}
         for member in members:
             with tar.extractfile(member) as f:hashes[member.name]=hashlib.file_digest(f,'sha256').hexdigest()
             assert hashes[member.name]==b['members'][member.name]['sha256']
@@ -78,8 +89,13 @@ def main(run):
     assert sha(test)==sealed['member_sha256']
     test_atoms=read(io.StringIO(test.decode()),format='extxyz',index=':');assert len(test_atoms)==13
     for a in test_atoms:labels[a.info['configuration_id']]=dict(energy_free_eV=float(a.get_potential_energy()),forces_eV_per_A=a.get_forces().tolist(),stress_eV_per_A3=a.get_stress().tolist())
-    reports={}
+    reports={};training={}
     for backend in cfg['models']:
+        process=json.loads(data[backend+'/training-process.json'])
+        updates=json.loads(data[backend+'/weight-update-check.json'])
+        assert process['exit_code']==0 and process['GPU_samples']
+        assert updates['updated_original_tensors']>0
+        training[backend]=dict(seconds=process['seconds'],GPU_sample_count=len(process['GPU_samples']),weight_update_check=updates)
         pred=json.loads(data[backend+'/final-predictions.json']);stored=json.loads(data[backend+'/final-metrics.json'])
         assert stored['status']=='passed' and stored['selection_lock_sha256']==hashes['selection-lock.json'] and stored['test_used_only_after_lock']
         assert stored['predictions_sha256']==hashes[backend+'/final-predictions.json']
@@ -92,6 +108,8 @@ def main(run):
         analysis_code_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
         analysis_source_sha256=sha(Path(__file__).read_bytes()),inference_code_commit=manifest['code_commit'],
         study_sha256=hashes['study.json'],selection_lock_sha256=hashes['selection-lock.json'],raw_archive_sha256=b['sha256'],
+        archive_audit_backend='full_local' if full_local else 'full_cluster_verified_plus_local_evidence',
+        training=training,backup_record_sha256=sha((run/'artifact-backup.json').read_bytes()),
         selection={k:{f:v[f] for f in ('progress','score','checkpoint','weight_sha256')} for k,v in selections.items()},
         metrics=reports,test_policy='Test used only after both immutable validation selections; no subsequent selection/tuning',limitations=cfg['limitations'])
     (run/'assessment.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
