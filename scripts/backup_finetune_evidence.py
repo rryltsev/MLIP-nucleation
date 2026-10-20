@@ -17,9 +17,23 @@ from cluster_ssh import ROOT,ssh_args
 from install_vasp import remote
 
 
-def main(run):
+def main(run,create=False):
     manifest=json.loads((run/'manifest.json').read_text());assert manifest['stage']=='collected'
     archive='/home/u3129/.local/share/mlip-research/dft-artifacts/'+manifest['run_id']+'.tar.gz'
+    if create:
+        creation="""import tarfile
+from pathlib import Path
+source=Path(SOURCE);archive=Path(ARCHIVE)
+archive.parent.mkdir(parents=True,exist_ok=True)
+if not archive.exists():
+ partial=archive.with_name(archive.name+'.partial')
+ with partial.open('xb') as output:
+  with tarfile.open(fileobj=output,mode='w:gz',dereference=True) as tar:
+   for p in sorted(source.rglob('*')):
+    if p.is_file() and not p.name.startswith('core'):tar.add(p,arcname=str(p.relative_to(source)),recursive=False)
+ partial.chmod(0o400);partial.rename(archive)
+""".replace('Path(SOURCE)','Path('+repr(manifest['remote_run_dir'])+')').replace('Path(ARCHIVE)','Path('+repr(archive)+')')
+        remote("umask 077; python3 - <<'PY'\n"+creation+"\nPY",300)
     program=r'''import hashlib,json,tarfile
 from pathlib import Path
 archive=Path(ARCHIVE); evidence=archive.with_name(archive.name.replace('.tar.gz','-evidence.tar.gz'))
@@ -52,7 +66,7 @@ print(json.dumps(dict(remote_archive=str(archive),sha256=fullhash,bytes=archive.
 '''.replace('Path(ARCHIVE)','Path('+repr(archive)+')').replace('set(INPUTS)','set('+repr(list(manifest['input_sha256']))+')')
     record=json.loads(remote("python3 - <<'PY'\n"+program+"\nPY",300))
     record.update(observed_utc=datetime.now(timezone.utc).isoformat(),verified_retrieval=False,
-        local_full_archive_status='Incomplete transfer; not a verified backup',
+        local_full_archive_status='Not retrieved; not a verified local native archive',
         verification_source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         policy='Full native archive verified in cluster main home; actual audit bundle on workstation. Native weights are not fully copied to workstation; institutional retention unconfirmed.')
     path=run/'artifact-backup.json'
@@ -71,5 +85,5 @@ print(json.dumps(dict(remote_archive=str(archive),sha256=fullhash,bytes=archive.
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('run',type=Path)
-    main(p.parse_args().run.resolve())
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('run',type=Path);p.add_argument('--create',action='store_true')
+    args=p.parse_args();main(args.run.resolve(),args.create)

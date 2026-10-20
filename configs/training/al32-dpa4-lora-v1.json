@@ -1,0 +1,84 @@
+{
+  "study_id": "al32-dpa4-lora-v1",
+  "dataset": "datasets/al32-pilot-v1/dft-v2.json",
+  "geometry_manifest_sha256": "65a4c6dce1a072504030dca2b0340db72a497e562e40b2717104294c3030fbdd",
+  "labels_sha256": "d5f462ce6321f1afcbac3ce5e04ec430546b0e22b9676faf1de4a306b8d53650",
+  "models": {
+    "dpa4": "models/foundation/dpa4-mini-omat24-20260805.json"
+  },
+  "seed": 42,
+  "split_counts": {
+    "train": 21,
+    "validation": 6,
+    "test": 13
+  },
+  "training": {
+    "batch_size": 2,
+    "learning_rate_start": 0.0001,
+    "learning_rate_end": 1e-05,
+    "dpa4_steps": 1000,
+    "dpa4_checkpoint_interval": 100,
+    "dpa4_loss": {
+      "energy_prefactor": 10000,
+      "force_prefactor": 400,
+      "virial_prefactor": 3460.207612456747,
+      "intensive_ener_virial": true
+    },
+    "loss_note": "E/N scale0.01eV, force0.05eV/A, stress0.001eV/A^3. DPA4 intensive virial/N approximates stress using fixed17A^3/atom; native tensor averaging differs, common validation score is authoritative.",
+    "optimizer": "Adam without EMA; native DeepMD LoRA freeze/unfreeze policy",
+    "initialization": "Original pinned foundation weights, not synthetic fine-tuned checkpoints; DeepMD train-only bias/statistics adjustment recorded; GRACE shift=false"
+  },
+  "selection": {
+    "energy_RMSE_scale_eV_per_atom": 0.01,
+    "force_RMSE_scale_eV_per_A": 0.05,
+    "stress_RMSE_scale_eV_per_A3": 0.001,
+    "score": "Mean of squared full-validation RMSE/scale for train-aligned E/N, force components, six stress components",
+    "energy_alignment": "Fit one additive eV/Al shift per checkpoint on train only; freeze for validation and final test; report raw and aligned energies",
+    "tie_break": "Smallest training progress at exactly equal score",
+    "include_original_checkpoint": true,
+    "baseline_fallback": "If original checkpoint has the lowest validation score, retain it explicitly and report no validated adaptation benefit",
+    "test_gate": "No test labels, sealed-test pointer or test archive access in this run",
+    "normalizers_are": "Fixed comparison scales, not an accuracy qualification or tuned acceptance thresholds",
+    "derivative_guard": "Report whether selected validation F/stress RMSE are each no worse than original; diagnostic flag, not a posthoc replacement of the fixed minimum-score selection"
+  },
+  "evaluation": "Only27 train/validation structures. Same11 candidates/original and100..1000 as prior full fine-tuning. No test predictions or new test-based ranking.",
+  "resources": {
+    "partition": "v100",
+    "account": "imet-2026-2",
+    "qos": "normal",
+    "nodes": 1,
+    "ntasks": 1,
+    "cpus_per_task": 4,
+    "gpus": 1,
+    "memory_GiB": 32,
+    "walltime": "00:15:00"
+  },
+  "budget": {
+    "maximum_GPU_seconds": 900,
+    "maximum_CPU_seconds": 3600,
+    "prior_related_CPU_seconds": 414066,
+    "global_CPU_hour_cap": 128,
+    "worst_case_combined_CPU_hours": 116.01833333333333
+  },
+  "authorization": "User explicitly requested trying LoRA after DPA4 diagnosis; one bounded A100 experiment under existing128CPUh cap",
+  "limitations": [
+    "21 training structures only; no universal teacher qualification",
+    "Prior baseline test results were inspected but must not set this run's model/checkpoint/sampling choices",
+    "No pretraining-independent generalization claim; PAW54/PAW64 differences and narrow DFT convergence remain",
+    "No MD stability, EOS, interface or distillation validation",
+    "One rank/seed; no hyperparameter optimum or causal identification from validation reuse",
+    "Native LoRA also trains selected original submodules; not adapter-only",
+    "No old held-out test access in this diagnostic run"
+  ],
+  "lora": {
+    "rank": 8,
+    "alpha": 8.0,
+    "policy": "Native apply_lora_to_sezm: low-rank adapters plus native unfrozen heads/scales/biases; verify actual trainable/frozen inventory",
+    "matched_full_finetune": "runs/fm-al32-finetune-20261019-01/dpa4/selection.json",
+    "zero_step_tolerances": {
+      "energy_nonconstant_max_eV_per_atom": 2e-05,
+      "force_max_eV_per_A": 0.0001,
+      "stress_max_eV_per_A3": 1e-05
+    }
+  }
+}

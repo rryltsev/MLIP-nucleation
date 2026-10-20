@@ -1,0 +1,14 @@
+{
+  "observed_utc": "2026-10-20T17:53:41.608566+00:00",
+  "backend": "DeepMD3.2.0 PT",
+  "source_files": {
+    "pt/train/training.py": "2ee355877da3ba10bf213b5653b3b858caa7795d846528c47ab1d7881dc3d090",
+    "pt/model/descriptor/sezm_nn/lora.py": "03591f701e266b9db0e395c53765391183dda38e9c8786d1d0a304a14c5a1644",
+    "dpmodel/descriptor/dpa4_nn/lora.py": "bb287ce92ca63161f16da1641927dea3869eeedc14259b96061d30a77b6fe1f6",
+    "utils/argcheck.py": "11e6f9300b6afd39d0fc7f326bb9d278c19da1fa67426d08c374c503400a243b"
+  },
+  "policy": "Native single-task SeZM LoRA: SO3/SO2 low-rank matrices plus permitted heads/scales/biases; actual inventory and immutable base matrices verified in Slurm",
+  "source_url": "https://docs.deepmodeling.com/projects/deepmd/en/v3.2.0/model/dpa4.html",
+  "regular_checkpoint": "Native adapters plus optimizer; resumable format, restart not yet tested",
+  "merged_checkpoint": "Plain SeZM; adapters folded into base; optimizer absent; inference export, not Adam restart"
+}
