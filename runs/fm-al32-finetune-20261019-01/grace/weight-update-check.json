@@ -1,0 +1,9 @@
+{
+  "source_float_tensors": 19,
+  "exactly_restored_tensors": 19,
+  "initial_changed_keys": [],
+  "initial_adjustments": {},
+  "updated_tensors": 18,
+  "updated_original_tensors": 18,
+  "max_abs_update": 0.03686521213119409
+}

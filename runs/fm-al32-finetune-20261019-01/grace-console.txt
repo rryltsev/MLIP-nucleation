@@ -1,0 +1,16 @@
+2026-10-20 16:29:24.353612: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-10-20 16:29:24.406490: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-10-20 16:29:26.133683: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:UserWarning: enabling the new type promotion must happen at the beginning of the program. Please ensure no TF APIs have been used yet.
+2026-10-20 16:29:30.036780: W tensorflow/core/common_runtime/gpu/gpu_bfc_allocator.cc:47] Overriding orig_value setting because the TF_FORCE_GPU_ALLOW_GROWTH environment variable is set. Original config value was 0.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792495770.037668 3256051 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38479 MB memory:  -> device: 0, name: NVIDIA A100-PCIE-40GB, pci bus id: 0000:18:00.0, compute capability: 8.0
+WARNING:tensorflow:From /home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorflow/python/util/dispatch.py:1264: calling expand_dims (from tensorflow.python.ops.array_ops) with dim is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the `axis` argument instead
+WARNING:tensorflow:From /home6/u3129/mlip-research/envs/grace_ft_a100/lib/python3.11/site-packages/tensorflow/python/util/dispatch.py:1264: calling expand_dims (from tensorflow.python.ops.array_ops) with dim is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the `axis` argument instead
+[tensorpotential] Info: tf.experimental.numpy behavior enabled.
+[tensorpotential] Info: TensorFloat-32 execution disabled.

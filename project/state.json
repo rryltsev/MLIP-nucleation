@@ -1,6 +1,6 @@
 {
-  "updated_local_date": "2026-10-19",
-  "stage": "real_DFT_finetuning_queued_on_A100",
+  "updated_local_date": "2026-10-20",
+  "stage": "real_DFT_finetuning_completed_and_audited",
   "foundation_DFT_baseline": {
     "status": "Complete: original DPA4-Mini and GRACE-1L evaluated on all40 frozen DFT configurations, no fine-tuning",
     "run": "runs/fm-al32-baseline-20261019-02/manifest.json",
@@ -416,17 +416,18 @@
       "maximum_CPU_hours": 128,
       "status": "Explicit user instruction authorized dense revision under same global128 CPUh cap",
       "authorization": "configs/training/al32-foundation-finetune-v1.json",
-      "allocated_CPU_hours": 114.60055555555556,
-      "allocated_CPU_seconds": 412562,
-      "workflow_status": "Eleven prior related jobs terminal; A100 real-DFT fine-tuning20952229 queued with full4CPUh reservation; actual114.6006CPUh unchanged",
-      "active_jobs": 1,
-      "reserved_new_CPU_hours": 4,
-      "worst_case_overall_CPU_hours": 118.60055555555556,
-      "unreserved_CPU_hours": 9.399444444444441,
-      "remaining_CPU_hours": 13.399444444444441,
-      "final_scheduler_snapshot": "runs/fm-al32-baseline-20261019-02/scheduler-all-attempts.json",
+      "allocated_CPU_hours": 115.01833333333333,
+      "allocated_CPU_seconds": 414066,
+      "workflow_status": "All12 related parent jobs terminal; real DFT fine-tuning20952229 completed and independently audited",
+      "active_jobs": 0,
+      "reserved_new_CPU_hours": 0,
+      "worst_case_overall_CPU_hours": 115.01833333333333,
+      "unreserved_CPU_hours": 12.98166666666667,
+      "remaining_CPU_hours": 12.98166666666667,
+      "final_scheduler_snapshot": "runs/fm-al32-finetune-20261019-01/scheduler-all-attempts.json",
       "DFT_kplib_CPU_seconds": 412226,
-      "FM_baseline_and_diagnostics_CPU_seconds": 336
+      "FM_baseline_and_diagnostics_CPU_seconds": 336,
+      "FM_real_DFT_finetuning_CPU_seconds": 1504
     },
     "calibration_status": "COMPLETED0:0; Gamma6 rejected, Gamma7 accepted by unchanged criteria on both train parents",
     "dataset_id": "al32-pilot-v1",
@@ -522,29 +523,90 @@
     "force_tolerance_margin_eV_per_A": 6.510000000002278e-05
   },
   "foundation_DFT_finetuning": {
-    "status": "Slurm PENDING(Resources); no real-DFT training results or checkpoint comparison yet",
+    "status": "COMPLETED0:0; independently audited; GRACE improves pilot test metrics, DPA4 worsens all three test RMSEs",
     "run": "runs/fm-al32-finetune-20261019-01/manifest.json",
     "job_id": "20952229",
     "configuration": "configs/training/al32-foundation-finetune-v1.json",
     "code_commit": "50fa5c94f00365466d54908739b7a57bc605d603",
-    "scheduler_observation": "runs/fm-al32-finetune-20261019-01/scheduler-pending.json",
+    "scheduler_observation": "runs/fm-al32-finetune-20261019-01/scheduler.json",
     "models": [
       "dpa4-mini-omat24-20260805",
       "grace-1l-omat"
     ],
     "training": "Original checkpoints; seed42; train21 only; DPA4 1000updates/checkpoint100, GRACE100epochs/checkpoint10; E/F/stress losses; Adam1e-4 to1e-5",
-    "selection": "Evaluate original and10 trained candidates on all6 validation structures using fixed normalized E/F/stress score; train-only energy alignment, original can win",
+    "selection": {
+      "dpa4": {
+        "progress": 100,
+        "score": 0.3468833264507552,
+        "checkpoint": "/misc/home6/u3129/mlip-research/runs/fm-al32-finetune-20261019-01/dpa4/model.ckpt-100.pt",
+        "weight_sha256": {
+          "/misc/home6/u3129/mlip-research/runs/fm-al32-finetune-20261019-01/dpa4/model.ckpt-100.pt": "e7ef5dcb675f7254f6a447d289fa9d016b22f066833a6987ae96e0101eb867a2"
+        }
+      },
+      "grace": {
+        "progress": 100,
+        "score": 0.30437116645024764,
+        "checkpoint": "/misc/home6/u3129/mlip-research/runs/fm-al32-finetune-20261019-01/grace/seed/42/checkpoints/checkpoint.epoch_100",
+        "weight_sha256": {
+          "/misc/home6/u3129/mlip-research/runs/fm-al32-finetune-20261019-01/grace/seed/42/checkpoints/checkpoint.epoch_100.index": "3e3b3270c113a48f518613e3bef1e1c93edaf3130fb1c354982dc3f0c6565508",
+          "/misc/home6/u3129/mlip-research/runs/fm-al32-finetune-20261019-01/grace/seed/42/checkpoints/checkpoint.epoch_100.data-00000-of-00001": "fbde59a86915ff1b598853354f5a37d8f9aa5205436fda53e4f2a8b5cdb79229"
+        }
+      }
+    },
     "test_gate": "Test labels absent from training payload. Both selections and selected-weight hashes must be locked before opening verified private test archive member. Final original/selected prediction on same A100.",
     "resources": "One A100,4CPUs,32GiB,max1hour on v100/imet-2026-2/normal; wait for A100, no CPU-training fallback",
     "budget": {
       "prior_actual_CPU_hours": 114.60055555555556,
-      "reserved_CPU_hours": 4,
+      "reserved_CPU_hours": 0,
       "maximum_GPU_seconds": 3600,
-      "worst_case_total_CPU_hours": 118.60055555555556,
-      "unreserved_CPU_hours": 9.399444444444441
+      "unreserved_CPU_hours": 12.98166666666667,
+      "actual_CPU_hours": 0.4177777777777778,
+      "actual_total_CPU_hours": 115.01833333333333,
+      "remaining_CPU_hours": 12.98166666666667,
+      "historical_submission_worst_case_total_CPU_hours": 118.60055555555556,
+      "worst_case_total_CPU_hours": 115.01833333333333
     },
-    "tests": "22 local tests passed, including validation-vs-train selection, rejection of test rows and immutable final energy offset",
-    "continuation": "Collect job20952229 without resubmission, preserve failures, back up actual checkpoints in cluster main home/workstation, independently audit with scripts/assess_finetune.py and update existing Al32 report",
-    "latex_preview": "Existing Al32 source updated; built-in compiler startup failed with Windows CreateProcessAsUserW access denied5"
-  }
+    "tests": "23 local tests passed; full candidate scores/final metrics independently recomputed",
+    "continuation": "Preserve fixed selections and negative DPA4 evidence; no post-test tuning. No scientific teacher qualified. Before production validate deployment, MD stability and physical observables with an independently specified protocol; do not use this test for new selection.",
+    "latex_preview": "Existing Al32 source updated; built-in compiler failed before parsing with Windows CreateProcessAsUserW Access denied5 on2026-10-20; PDF not verified",
+    "assessment": "runs/fm-al32-finetune-20261019-01/assessment.json",
+    "results": "results/al32-foundation-finetune-20261020",
+    "backup": "runs/fm-al32-finetune-20261019-01/artifact-backup.json",
+    "actual_CPU_seconds": 1504,
+    "actual_GPU_allocation_seconds": 376,
+    "active_jobs": 0,
+    "backup_scope": "Full native archive verified in cluster main home; workstation has verified1.25MB evidence bundle only. Full450MB local copy incomplete due slow network; never count partial file as backup.",
+    "test_RMSE": {
+      "dpa4": {
+        "original": {
+          "energy_raw_eV_per_atom": 0.01532340942915478,
+          "energy_aligned_eV_per_atom": 0.019270165016275282,
+          "forces_eV_per_A": 0.023414712313030415,
+          "stress_eV_per_A3": 0.0016471724647025064
+        },
+        "selected": {
+          "energy_raw_eV_per_atom": 0.019848638990247927,
+          "energy_aligned_eV_per_atom": 0.02356613626431473,
+          "forces_eV_per_A": 0.026064941863763437,
+          "stress_eV_per_A3": 0.0018093269068430796
+        }
+      },
+      "grace": {
+        "original": {
+          "energy_raw_eV_per_atom": 0.004737928256349331,
+          "energy_aligned_eV_per_atom": 0.004083129479048116,
+          "forces_eV_per_A": 0.023082023734025563,
+          "stress_eV_per_A3": 0.004379095432805204
+        },
+        "selected": {
+          "energy_raw_eV_per_atom": 0.0023796961973919194,
+          "energy_aligned_eV_per_atom": 0.0023834005160842065,
+          "forces_eV_per_A": 0.02221161082306109,
+          "stress_eV_per_A3": 0.0020480366027755314
+        }
+      }
+    },
+    "analysis_code_commit": "9cd9350"
+  },
+  "last_updated_utc": "2026-10-20T16:40:33.366079+00:00"
 }

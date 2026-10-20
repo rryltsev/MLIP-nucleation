@@ -1,0 +1,39 @@
+{
+  "model_id": "grace-al32-pilot-v1-seed42",
+  "status": "Diagnostic pilot checkpoint; not qualified as a scientific teacher",
+  "architecture": "grace",
+  "source_model_card": "models/foundation/grace-1l-omat.json",
+  "training_run": "runs/fm-al32-finetune-20261019-01/manifest.json",
+  "training_code_commit": "50fa5c94f00365466d54908739b7a57bc605d603",
+  "study_sha256": "32c76078be45473b90ddc20dcda3eee21afe40be45df84cdb6b215ed3701540e",
+  "dataset": "datasets/al32-pilot-v1/dft-v2.json",
+  "selection": {
+    "progress": 100,
+    "score": 0.30437116645024764,
+    "checkpoint": "/misc/home6/u3129/mlip-research/runs/fm-al32-finetune-20261019-01/grace/seed/42/checkpoints/checkpoint.epoch_100",
+    "weight_sha256": {
+      "/misc/home6/u3129/mlip-research/runs/fm-al32-finetune-20261019-01/grace/seed/42/checkpoints/checkpoint.epoch_100.index": "3e3b3270c113a48f518613e3bef1e1c93edaf3130fb1c354982dc3f0c6565508",
+      "/misc/home6/u3129/mlip-research/runs/fm-al32-finetune-20261019-01/grace/seed/42/checkpoints/checkpoint.epoch_100.data-00000-of-00001": "fbde59a86915ff1b598853354f5a37d8f9aa5205436fda53e4f2a8b5cdb79229"
+    }
+  },
+  "selection_basis": "Frozen full validation E/F/stress score; selected before test; no post-test replacement",
+  "energy_alignment_delta_Al_eV_per_atom": -2.5845232606640828e-05,
+  "assessment": "runs/fm-al32-finetune-20261019-01/assessment.json",
+  "archive": {
+    "record": "runs/fm-al32-finetune-20261019-01/artifact-backup.json",
+    "remote_archive": "/home/u3129/.local/share/mlip-research/dft-artifacts/fm-al32-finetune-20261019-01.tar.gz",
+    "sha256": "dff4b940942d4f21812ee4abce0fca36ef19da4e041fe9ae80b12eed4a56ab16",
+    "native_weights_on_workstation": false
+  },
+  "outcome": "Pilot test energy/force/stress RMSE improved; no physical-observable qualification",
+  "limitations": [
+    "21 training structures only; no universal teacher qualification",
+    "Prior baseline test results were inspected but must not set this run's model/checkpoint/sampling choices",
+    "No pretraining-independent generalization claim; PAW54/PAW64 differences and narrow DFT convergence remain",
+    "No MD stability, EOS, interface or distillation validation"
+  ],
+  "model_definition": {
+    "archive_member": "grace/seed/42/model.yaml",
+    "sha256": "dabf6514e6deffaf5f2e5e55faa3a580d425095bfd04bfd48435136fbd82b4fc"
+  }
+}

@@ -131,6 +131,8 @@
     "walltime": "01:00:00"
   },
   "run_id": "fm-al32-finetune-20261019-01",
-  "stage": "submitted",
+  "runtime_status": "passed",
+  "scheduler_observation": "20952229|COMPLETED|0:0|00:06:16|376|4|tesla-a101\n",
+  "stage": "collected",
   "test_policy": "No test labels in training/selection payload; final test opened only after both validation selections are locked"
 }

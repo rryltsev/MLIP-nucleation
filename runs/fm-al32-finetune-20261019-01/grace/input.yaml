@@ -1,0 +1,42 @@
+seed: 42
+cutoff: 6.0
+data:
+  filename: /misc/home6/u3129/mlip-research/runs/fm-al32-finetune-20261019-01/data/train.extxyz
+  test_filename: /misc/home6/u3129/mlip-research/runs/fm-al32-finetune-20261019-01/data/validation.extxyz
+  reference_energy: 0
+  stress_units: eV/A3
+  max_workers: 1
+potential:
+  filename: /home/u3129/.local/share/mlip-research/foundation-checkpoints/grace-1l-omat-ad76b7845df6/extracted/GRACE-1L-OMAT-30Jan25/model.yaml
+  checkpoint_name: /home/u3129/.local/share/mlip-research/foundation-checkpoints/grace-1l-omat-ad76b7845df6/extracted/GRACE-1L-OMAT-30Jan25/checkpoint
+  shift: false
+  reduce_elements: false
+fit:
+  maxiter: 100
+  optimizer: Adam
+  opt_params:
+    learning_rate: 0.0001
+    use_ema: false
+  reset_epoch_and_step: true
+  reset_optimizer: true
+  eval_init_stats: true
+  scheduler: cosine_decay
+  scheduler_params:
+    minimum_learning_rate: 1.0e-05
+  loss:
+    energy:
+      type: square
+      weight: 10000
+    forces:
+      type: square
+      weight: 400
+    stress:
+      type: square
+      weight: 1000000
+  batch_size: 2
+  test_batch_size: 2
+  jit_compile: false
+  checkpoint_freq: 10
+  save_all_regular_checkpoints: true
+  train_max_n_buckets: 1
+  test_max_n_buckets: 1

@@ -1,0 +1,26 @@
+{
+  "code_commit": "9cd9350fa42ede12b85e6c8157ed975cb6a217bc",
+  "analysis_source_sha256": "ca407d7ad2ff0c1643cfe490a35bd341412b82c743d93be70d0b111ded8d8deb",
+  "inputs": {
+    "runs\\fm-al32-finetune-20261019-01\\assessment.json": "759310a5ab0325d921cf63abd4916eeb4cc40c5ebccc6e439d49f89652fff85f",
+    "runs\\fm-al32-finetune-20261019-01\\dpa4\\selection.json": "912691f8a9565d2e7fee62f8fffe1f2c244244810a3da5e076e89692e562f0d6",
+    "runs\\fm-al32-finetune-20261019-01\\grace\\selection.json": "a6300802b39763795a4ff0e570472b394273f2470c2bc342c6155e4320b8989c"
+  },
+  "packages": {
+    "matplotlib": "3.10.8",
+    "numpy": "2.3.5"
+  },
+  "settings": {
+    "energy_meV": 1000,
+    "force_meV": 1000,
+    "stress_GPa": 160.2176634,
+    "alignment": "Frozen train-only shifts; no test refit"
+  },
+  "outputs": {
+    "rmse-table.tex": "4f13ca204b4bf41ab415ad1b4d0a7d79d529034cbb66ecb2fd361a317afc083d",
+    "selection-history.json": "b254a46973c635b15c4a64f30b1be4300413480130a36ce5e179ced6bb6b476b",
+    "split-metrics.csv": "9e5331ab79dff19b086b41d28a58190f4d1a9b7dcd7e7824bd1556e34611d267",
+    "split-rmse.png": "503ebf8a9c282bff2d8a9e88fe6a1f3a492397b3444e26b424a3cbc3f2b7c015",
+    "validation-selection.png": "b8d8369f1bf53d25c816cb6d4eec9cd00593d0c07367c8d9aee192c00b5fe6f0"
+  }
+}

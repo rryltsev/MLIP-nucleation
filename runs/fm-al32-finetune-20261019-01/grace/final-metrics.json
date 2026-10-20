@@ -1,0 +1,1348 @@
+{
+  "status": "passed",
+  "metrics": {
+    "original": {
+      "delta_Al_eV_per_atom": 0.0021888168472172153,
+      "offset_fit_ids": [
+        "fcc-00",
+        "fcc-01",
+        "fcc-02",
+        "fcc-03",
+        "fcc-04",
+        "fcc-05",
+        "fcc-06",
+        "fcc-07",
+        "fcc-08",
+        "md-00-f0",
+        "md-00-f1",
+        "md-00-f2",
+        "md-01-f0",
+        "md-01-f1",
+        "md-01-f2",
+        "md-02-f0",
+        "md-02-f1",
+        "md-02-f2",
+        "md-03-f0",
+        "md-03-f1",
+        "md-03-f2"
+      ],
+      "metrics_by_split": {
+        "train": {
+          "configurations": 21,
+          "atoms": 672,
+          "energy_raw_eV_per_atom": {
+            "mae": 0.002596312361205917,
+            "rmse": 0.0033105704951569286,
+            "signed_mean": -0.0021888168472172574,
+            "max_absolute": 0.006441190071623026,
+            "components": 21
+          },
+          "energy_aligned_eV_per_atom": {
+            "mae": 0.002064547999175031,
+            "rmse": 0.0024837386764193802,
+            "signed_mean": -4.21703016421981e-17,
+            "max_absolute": 0.004252373224405811,
+            "components": 21
+          },
+          "forces_eV_per_A": {
+            "mae": 0.018053722755766888,
+            "rmse": 0.0257826845195715,
+            "signed_mean": 3.472221540272854e-11,
+            "max_absolute": 0.1359910442638097,
+            "components": 2016
+          },
+          "stress_eV_per_A3": {
+            "mae": 0.0012865071805194727,
+            "rmse": 0.0025148293416120625,
+            "signed_mean": 0.0007916789112964228,
+            "max_absolute": 0.010354369619470189,
+            "components": 126
+          }
+        },
+        "validation": {
+          "configurations": 6,
+          "atoms": 192,
+          "energy_raw_eV_per_atom": {
+            "mae": 0.002697139747022422,
+            "rmse": 0.004251218667047094,
+            "signed_mean": -0.002357723586260111,
+            "max_absolute": 0.009879187122689537,
+            "components": 6
+          },
+          "energy_aligned_eV_per_atom": {
+            "mae": 0.0024764835589604784,
+            "rmse": 0.003541543326339032,
+            "signed_mean": -0.00016890673904289594,
+            "max_absolute": 0.007690370275472321,
+            "components": 6
+          },
+          "forces_eV_per_A": {
+            "mae": 0.026331136978394776,
+            "rmse": 0.033937350943733895,
+            "signed_mean": 1.6383499495336511e-18,
+            "max_absolute": 0.13160574612894782,
+            "components": 576
+          },
+          "stress_eV_per_A3": {
+            "mae": 0.000588125484213275,
+            "rmse": 0.0007242465789169889,
+            "signed_mean": 0.0002740391742997077,
+            "max_absolute": 0.0013900772367298683,
+            "components": 36
+          }
+        },
+        "test": {
+          "configurations": 13,
+          "atoms": 416,
+          "energy_raw_eV_per_atom": {
+            "mae": 0.003254052830794325,
+            "rmse": 0.004737928256349331,
+            "signed_mean": -0.002413846782963593,
+            "max_absolute": 0.013327479285483168,
+            "components": 13
+          },
+          "energy_aligned_eV_per_atom": {
+            "mae": 0.003046373097759129,
+            "rmse": 0.004083129479048116,
+            "signed_mean": -0.00022502993574637713,
+            "max_absolute": 0.011138662438265952,
+            "components": 13
+          },
+          "forces_eV_per_A": {
+            "mae": 0.01241435374748098,
+            "rmse": 0.023082023734025563,
+            "signed_mean": -3.205128270460749e-11,
+            "max_absolute": 0.09440410664954868,
+            "components": 1248
+          },
+          "stress_eV_per_A3": {
+            "mae": 0.00212079879863632,
+            "rmse": 0.004379095432805204,
+            "signed_mean": 0.0018658652732294618,
+            "max_absolute": 0.01546029632418226,
+            "components": 78
+          }
+        }
+      },
+      "metrics_by_parent": {
+        "emt-md-00": {
+          "split": "train",
+          "metrics": {
+            "configurations": 3,
+            "atoms": 96,
+            "energy_raw_eV_per_atom": {
+              "mae": 0.001759277407319478,
+              "rmse": 0.0017878832719574382,
+              "signed_mean": -0.0006103685974784648,
+              "max_absolute": 0.0021661265521677464,
+              "components": 3
+            },
+            "energy_aligned_eV_per_atom": {
+              "mae": 0.0015784482497387504,
+              "rmse": 0.0023055315323067547,
+              "signed_mean": 0.0015784482497387504,
+              "max_absolute": 0.003912180061978735,
+              "components": 3
+            },
+            "forces_eV_per_A": {
+              "mae": 0.027395495090269013,
+              "rmse": 0.034876510972559185,
+              "signed_mean": 1.3888889758577483e-10,
+              "max_absolute": 0.1359910442638097,
+              "components": 288
+            },
+            "stress_eV_per_A3": {
+              "mae": 0.0007522102633161788,
+              "rmse": 0.000911406487176732,
+              "signed_mean": 0.00030637793606423755,
+              "max_absolute": 0.0022983924145558547,
+              "components": 18
+            }
+          }
+        },
+        "emt-md-01": {
+          "split": "train",
+          "metrics": {
+            "configurations": 3,
+            "atoms": 96,
+            "energy_raw_eV_per_atom": {
+              "mae": 0.0034368167890835486,
+              "rmse": 0.0037481754049592812,
+              "signed_mean": -0.0034368167890835486,
+              "max_absolute": 0.0055255016943296376,
+              "components": 3
+            },
+            "energy_aligned_eV_per_atom": {
+              "mae": 0.0013051132358425392,
+              "rmse": 0.0019479766629796906,
+              "signed_mean": -0.001247999941866333,
+              "max_absolute": 0.0033366848471124222,
+              "components": 3
+            },
+            "forces_eV_per_A": {
+              "mae": 0.022128374011615236,
+              "rmse": 0.027467294628580517,
+              "signed_mean": 3.4722205627699426e-11,
+              "max_absolute": 0.07845589728600233,
+              "components": 288
+            },
+            "stress_eV_per_A3": {
+              "mae": 0.000545042065765912,
+              "rmse": 0.0007264731861073568,
+              "signed_mean": 0.0003771683231812941,
+              "max_absolute": 0.0016502392074183303,
+              "components": 18
+            }
+          }
+        },
+        "emt-md-02": {
+          "split": "train",
+          "metrics": {
+            "configurations": 3,
+            "atoms": 96,
+            "energy_raw_eV_per_atom": {
+              "mae": 0.0016731485524420127,
+              "rmse": 0.0016909480467419873,
+              "signed_mean": -0.0016731485524420127,
+              "max_absolute": 0.0019931515008280165,
+              "components": 3
+            },
+            "energy_aligned_eV_per_atom": {
+              "mae": 0.0005156682947752026,
+              "rmse": 0.0005707828032431467,
+              "signed_mean": 0.0005156682947752026,
+              "max_absolute": 0.0007897636431718957,
+              "components": 3
+            },
+            "forces_eV_per_A": {
+              "mae": 0.022463003938871077,
+              "rmse": 0.027873456865157582,
+              "signed_mean": -6.944445192502702e-11,
+              "max_absolute": 0.08777533829809053,
+              "components": 288
+            },
+            "stress_eV_per_A3": {
+              "mae": 0.0005968823822226336,
+              "rmse": 0.0007454943427918268,
+              "signed_mean": -0.0001118380033693844,
+              "max_absolute": 0.0015344586763521538,
+              "components": 18
+            }
+          }
+        },
+        "emt-md-03": {
+          "split": "train",
+          "metrics": {
+            "configurations": 3,
+            "atoms": 96,
+            "energy_raw_eV_per_atom": {
+              "mae": 0.004318938196237483,
+              "rmse": 0.004428704185740429,
+              "signed_mean": -0.004318938196237483,
+              "max_absolute": 0.005133611856039444,
+              "components": 3
+            },
+            "energy_aligned_eV_per_atom": {
+              "mae": 0.0021301213490202684,
+              "rmse": 0.0023446983992461874,
+              "signed_mean": -0.0021301213490202684,
+              "max_absolute": 0.0029447950088222286,
+              "components": 3
+            },
+            "forces_eV_per_A": {
+              "mae": 0.02903733234865724,
+              "rmse": 0.03676557582343775,
+              "signed_mean": -1.696174065399545e-17,
+              "max_absolute": 0.11678652894659591,
+              "components": 288
+            },
+            "stress_eV_per_A3": {
+              "mae": 0.0006822718468793867,
+              "rmse": 0.0007740656163789021,
+              "signed_mean": 0.00031757443145005905,
+              "max_absolute": 0.001382159270502982,
+              "components": 18
+            }
+          }
+        },
+        "emt-md-04": {
+          "split": "validation",
+          "metrics": {
+            "configurations": 3,
+            "atoms": 96,
+            "energy_raw_eV_per_atom": {
+              "mae": 0.0006792973573244154,
+              "rmse": 0.0007207357697482527,
+              "signed_mean": -4.6503579979410386e-07,
+              "max_absolute": 0.001018248482286932,
+              "components": 3
+            },
+            "energy_aligned_eV_per_atom": {
+              "mae": 0.0021883518114174214,
+              "rmse": 0.002303984262982328,
+              "signed_mean": 0.0021883518114174214,
+              "max_absolute": 0.0032070653295041473,
+              "components": 3
+            },
+            "forces_eV_per_A": {
+              "mae": 0.02685913452887849,
+              "rmse": 0.03402339370862363,
+              "signed_mean": 1.0416666400975272e-10,
+              "max_absolute": 0.13160574612894782,
+              "components": 288
+            },
+            "stress_eV_per_A3": {
+              "mae": 0.0005934413780102527,
+              "rmse": 0.0007120750539485456,
+              "signed_mean": 0.0002464812840541214,
+              "max_absolute": 0.0013577357796146841,
+              "components": 18
+            }
+          }
+        },
+        "emt-md-05": {
+          "split": "validation",
+          "metrics": {
+            "configurations": 3,
+            "atoms": 96,
+            "energy_raw_eV_per_atom": {
+              "mae": 0.004714982136720429,
+              "rmse": 0.005968773765213818,
+              "signed_mean": -0.004714982136720429,
+              "max_absolute": 0.009879187122689537,
+              "components": 3
+            },
+            "energy_aligned_eV_per_atom": {
+              "mae": 0.002764615306503536,
+              "rmse": 0.004447101840592686,
+              "signed_mean": -0.002526165289503213,
+              "max_absolute": 0.007690370275472321,
+              "components": 3
+            },
+            "forces_eV_per_A": {
+              "mae": 0.025803139427911067,
+              "rmse": 0.03385108947588396,
+              "signed_mean": -1.0416666073305282e-10,
+              "max_absolute": 0.12052972195599719,
+              "components": 288
+            },
+            "stress_eV_per_A3": {
+              "mae": 0.0005828095904162978,
+              "rmse": 0.0007362169053275676,
+              "signed_mean": 0.00030159706454529404,
+              "max_absolute": 0.0013900772367298683,
+              "components": 18
+            }
+          }
+        },
+        "emt-md-06": {
+          "split": "test",
+          "metrics": {
+            "configurations": 3,
+            "atoms": 96,
+            "energy_raw_eV_per_atom": {
+              "mae": 0.0019189973055016019,
+              "rmse": 0.002277196646010744,
+              "signed_mean": 0.00012150300495106237,
+              "max_absolute": 0.002872585914155845,
+              "components": 3
+            },
+            "energy_aligned_eV_per_atom": {
+              "mae": 0.002648602921240674,
+              "rmse": 0.0032416723159062973,
+              "signed_mean": 0.0023103198521682777,
+              "max_absolute": 0.0050614027613730605,
+              "components": 3
+            },
+            "forces_eV_per_A": {
+              "mae": 0.024396422054144596,
+              "rmse": 0.03111012206723977,
+              "signed_mean": -1.0416665779366026e-10,
+              "max_absolute": 0.09440410664954868,
+              "components": 288
+            },
+            "stress_eV_per_A3": {
+              "mae": 0.0005836934166741113,
+              "rmse": 0.000681103948155376,
+              "signed_mean": 0.00012419791379964082,
+              "max_absolute": 0.0013481756602955084,
+              "components": 18
+            }
+          }
+        },
+        "emt-md-07": {
+          "split": "test",
+          "metrics": {
+            "configurations": 3,
+            "atoms": 96,
+            "energy_raw_eV_per_atom": {
+              "mae": 0.002622912860445137,
+              "rmse": 0.0030134745261977403,
+              "signed_mean": -0.002622912860445137,
+              "max_absolute": 0.003878811624757894,
+              "components": 3
+            },
+            "energy_aligned_eV_per_atom": {
+              "mae": 0.0015338008925442374,
+              "rmse": 0.0015458965668034138,
+              "signed_mean": -0.0004340960132279215,
+              "max_absolute": 0.0016899947775406788,
+              "components": 3
+            },
+            "forces_eV_per_A": {
+              "mae": 0.0293951537976976,
+              "rmse": 0.036617930469217394,
+              "signed_mean": -4.1666667463910145e-10,
+              "max_absolute": 0.0922992145719217,
+              "components": 288
+            },
+            "stress_eV_per_A3": {
+              "mae": 0.0004909861418314478,
+              "rmse": 0.000634309585798613,
+              "signed_mean": 0.00021242735071582664,
+              "max_absolute": 0.0013887972748337016,
+              "components": 18
+            }
+          }
+        },
+        "fcc-prototype-001": {
+          "split": "train",
+          "metrics": {
+            "configurations": 9,
+            "atoms": 288,
+            "energy_raw_eV_per_atom": {
+              "mae": 0.002328668527786299,
+              "rmse": 0.0035119352453105257,
+              "signed_mean": -0.0017608152650930976,
+              "max_absolute": 0.006441190071623026,
+              "components": 9
+            },
+            "energy_aligned_eV_per_atom": {
+              "mae": 0.0029741616216161513,
+              "rmse": 0.0030686159948371144,
+              "signed_mean": 0.0004280015821241177,
+              "max_absolute": 0.004252373224405811,
+              "components": 9
+            },
+            "forces_eV_per_A": {
+              "mae": 0.00845061796698522,
+              "rmse": 0.013586357031660142,
+              "signed_mean": 4.6296291252473465e-11,
+              "max_absolute": 0.05584320931778741,
+              "components": 864
+            },
+            "stress_eV_per_A3": {
+              "mae": 0.0021430479018173998,
+              "rmse": 0.0037308266221413203,
+              "signed_mean": 0.0015508232305829178,
+              "max_absolute": 0.010354369619470189,
+              "components": 54
+            }
+          }
+        },
+        "hcp-prototype-001": {
+          "split": "test",
+          "metrics": {
+            "configurations": 7,
+            "atoms": 224,
+            "energy_raw_eV_per_atom": {
+              "mae": 0.004096708043212287,
+              "rmse": 0.005964461109128427,
+              "signed_mean": -0.003410825516006355,
+              "max_absolute": 0.013327479285483168,
+              "components": 7
+            },
+            "energy_aligned_eV_per_atom": {
+              "mae": 0.0038650912613591346,
+              "rmse": 0.005043250024365368,
+              "signed_mean": -0.0012220086687891388,
+              "max_absolute": 0.011138662438265952,
+              "components": 7
+            },
+            "forces_eV_per_A": {
+              "mae": 1.6958802465924261e-06,
+              "rmse": 3.2709665908627986e-06,
+              "signed_mean": 1.636904746670632e-10,
+              "max_absolute": 1.1489955854379285e-05,
+              "components": 672
+            },
+            "stress_eV_per_A3": {
+              "mae": 0.0034780493866793543,
+              "rmse": 0.005936514667817829,
+              "signed_mean": 0.0033209103940623724,
+              "max_absolute": 0.01546029632418226,
+              "components": 42
+            }
+          }
+        }
+      },
+      "pooled_descriptive": {
+        "configurations": 40,
+        "atoms": 1280,
+        "energy_raw_eV_per_atom": {
+          "mae": 0.0028252021216946255,
+          "rmse": 0.003969943677534506,
+          "signed_mean": -0.0022872875871912447,
+          "max_absolute": 0.013327479285483168,
+          "components": 40
+        },
+        "energy_aligned_eV_per_atom": {
+          "mae": 0.0024454314901826797,
+          "rmse": 0.003246300168331339,
+          "signed_mean": -9.847073997402908e-05,
+          "max_absolute": 0.011138662438265952,
+          "components": 40
+        },
+        "forces_eV_per_A": {
+          "mae": 0.01746253996146815,
+          "rmse": 0.02636109047050941,
+          "signed_mean": 7.812496488962331e-12,
+          "max_absolute": 0.1359910442638097,
+          "components": 3840
+        },
+        "stress_eV_per_A3": {
+          "mae": 0.0014528947019615186,
+          "rmse": 0.0031034379973407323,
+          "signed_mean": 0.0010631435183751535,
+          "max_absolute": 0.01546029632418226,
+          "components": 240
+        }
+      },
+      "per_frame": {
+        "fcc-00": {
+          "energy_raw_eV_per_atom": -0.006441190071623026,
+          "energy_aligned_eV_per_atom": -0.004252373224405811
+        },
+        "fcc-01": {
+          "energy_raw_eV_per_atom": -0.00595236155154133,
+          "energy_aligned_eV_per_atom": -0.0037635447043241144
+        },
+        "fcc-02": {
+          "energy_raw_eV_per_atom": -0.005630619096201439,
+          "energy_aligned_eV_per_atom": -0.0034418022489842237
+        },
+        "fcc-03": {
+          "energy_raw_eV_per_atom": 0.0006477882748527897,
+          "energy_aligned_eV_per_atom": 0.002836605122070005
+        },
+        "fcc-04": {
+          "energy_raw_eV_per_atom": 0.00014607546834000118,
+          "energy_aligned_eV_per_atom": 0.0023348923155572165
+        },
+        "fcc-05": {
+          "energy_raw_eV_per_atom": -3.5924109309526386e-05,
+          "energy_aligned_eV_per_atom": 0.002152892737907689
+        },
+        "fcc-06": {
+          "energy_raw_eV_per_atom": 0.0012473262632211046,
+          "energy_aligned_eV_per_atom": 0.00343614311043832
+        },
+        "fcc-07": {
+          "energy_raw_eV_per_atom": 0.0005141496757055108,
+          "energy_aligned_eV_per_atom": 0.002702966522922726
+        },
+        "fcc-08": {
+          "energy_raw_eV_per_atom": -0.0003425822392819633,
+          "energy_aligned_eV_per_atom": 0.001846234607935252
+        },
+        "md-00-f0": {
+          "energy_raw_eV_per_atom": 0.0017233632147615197,
+          "energy_aligned_eV_per_atom": 0.003912180061978735
+        },
+        "md-00-f1": {
+          "energy_raw_eV_per_atom": -0.0021661265521677464,
+          "energy_aligned_eV_per_atom": 2.269029504946892e-05
+        },
+        "md-00-f2": {
+          "energy_raw_eV_per_atom": -0.0013883424550291679,
+          "energy_aligned_eV_per_atom": 0.0008004743921880475
+        },
+        "md-01-f0": {
+          "energy_raw_eV_per_atom": -0.0021031469062529062,
+          "energy_aligned_eV_per_atom": 8.56699409643091e-05
+        },
+        "md-01-f1": {
+          "energy_raw_eV_per_atom": -0.0055255016943296376,
+          "energy_aligned_eV_per_atom": -0.0033366848471124222
+        },
+        "md-01-f2": {
+          "energy_raw_eV_per_atom": -0.0026818017666681015,
+          "energy_aligned_eV_per_atom": -0.0004929849194508862
+        },
+        "md-02-f0": {
+          "energy_raw_eV_per_atom": -0.0019931515008280165,
+          "energy_aligned_eV_per_atom": 0.00019566534638919882
+        },
+        "md-02-f1": {
+          "energy_raw_eV_per_atom": -0.001627240952452702,
+          "energy_aligned_eV_per_atom": 0.0005615758947645133
+        },
+        "md-02-f2": {
+          "energy_raw_eV_per_atom": -0.0013990532040453196,
+          "energy_aligned_eV_per_atom": 0.0007897636431718957
+        },
+        "md-03-f0": {
+          "energy_raw_eV_per_atom": -0.002940766388684679,
+          "energy_aligned_eV_per_atom": -0.0007519495414674638
+        },
+        "md-03-f1": {
+          "energy_raw_eV_per_atom": -0.004882436343988328,
+          "energy_aligned_eV_per_atom": -0.0026936194967711125
+        },
+        "md-03-f2": {
+          "energy_raw_eV_per_atom": -0.005133611856039444,
+          "energy_aligned_eV_per_atom": -0.0029447950088222286
+        },
+        "md-04-f0": {
+          "energy_raw_eV_per_atom": -0.0004805501984570526,
+          "energy_aligned_eV_per_atom": 0.0017082666487601627
+        },
+        "md-04-f1": {
+          "energy_raw_eV_per_atom": 0.001018248482286932,
+          "energy_aligned_eV_per_atom": 0.0032070653295041473
+        },
+        "md-04-f2": {
+          "energy_raw_eV_per_atom": -0.0005390933912292617,
+          "energy_aligned_eV_per_atom": 0.0016497234559879536
+        },
+        "md-05-f0": {
+          "energy_raw_eV_per_atom": -0.009879187122689537,
+          "energy_aligned_eV_per_atom": -0.007690370275472321
+        },
+        "md-05-f1": {
+          "energy_raw_eV_per_atom": -0.0018311418217167308,
+          "energy_aligned_eV_per_atom": 0.00035767502550048454
+        },
+        "md-05-f2": {
+          "energy_raw_eV_per_atom": -0.002434617465755018,
+          "energy_aligned_eV_per_atom": -0.0002458006185378026
+        },
+        "md-06-f0": {
+          "energy_raw_eV_per_atom": -0.0026962414508258092,
+          "energy_aligned_eV_per_atom": -0.0005074246036085939
+        },
+        "md-06-f1": {
+          "energy_raw_eV_per_atom": 0.00018816455152315115,
+          "energy_aligned_eV_per_atom": 0.0023769813987403665
+        },
+        "md-06-f2": {
+          "energy_raw_eV_per_atom": 0.002872585914155845,
+          "energy_aligned_eV_per_atom": 0.0050614027613730605
+        },
+        "md-07-f0": {
+          "energy_raw_eV_per_atom": -0.0005392595282427415,
+          "energy_aligned_eV_per_atom": 0.0016495573189744739
+        },
+        "md-07-f1": {
+          "energy_raw_eV_per_atom": -0.003878811624757894,
+          "energy_aligned_eV_per_atom": -0.0016899947775406788
+        },
+        "md-07-f2": {
+          "energy_raw_eV_per_atom": -0.003450667428334775,
+          "energy_aligned_eV_per_atom": -0.0012618505811175596
+        },
+        "hcp-00": {
+          "energy_raw_eV_per_atom": -0.013327479285483168,
+          "energy_aligned_eV_per_atom": -0.011138662438265952
+        },
+        "hcp-01": {
+          "energy_raw_eV_per_atom": -0.006971803553911915,
+          "energy_aligned_eV_per_atom": -0.0047829867066947
+        },
+        "hcp-02": {
+          "energy_raw_eV_per_atom": -0.004072017457775523,
+          "energy_aligned_eV_per_atom": -0.0018832006105583077
+        },
+        "hcp-03": {
+          "energy_raw_eV_per_atom": -0.0017896685269125356,
+          "energy_aligned_eV_per_atom": 0.0003991483203046797
+        },
+        "hcp-04": {
+          "energy_raw_eV_per_atom": -0.00011539863318210664,
+          "energy_aligned_eV_per_atom": 0.0020734182140351087
+        },
+        "hcp-05": {
+          "energy_raw_eV_per_atom": 0.0009585760971493329,
+          "energy_aligned_eV_per_atom": 0.0031473929443665482
+        },
+        "hcp-06": {
+          "energy_raw_eV_per_atom": 0.0014420127480714307,
+          "energy_aligned_eV_per_atom": 0.003630829595288646
+        }
+      }
+    },
+    "selected": {
+      "delta_Al_eV_per_atom": -2.5845232606640828e-05,
+      "offset_fit_ids": [
+        "fcc-00",
+        "fcc-01",
+        "fcc-02",
+        "fcc-03",
+        "fcc-04",
+        "fcc-05",
+        "fcc-06",
+        "fcc-07",
+        "fcc-08",
+        "md-00-f0",
+        "md-00-f1",
+        "md-00-f2",
+        "md-01-f0",
+        "md-01-f1",
+        "md-01-f2",
+        "md-02-f0",
+        "md-02-f1",
+        "md-02-f2",
+        "md-03-f0",
+        "md-03-f1",
+        "md-03-f2"
+      ],
+      "metrics_by_split": {
+        "train": {
+          "configurations": 21,
+          "atoms": 672,
+          "energy_raw_eV_per_atom": {
+            "mae": 0.0007446594123994499,
+            "rmse": 0.0012039740395430574,
+            "signed_mean": 2.5845232606661977e-05,
+            "max_absolute": 0.0038932524213852737,
+            "components": 21
+          },
+          "energy_aligned_eV_per_atom": {
+            "mae": 0.000745890137761671,
+            "rmse": 0.0012036966029050408,
+            "signed_mean": 2.108515082109905e-17,
+            "max_absolute": 0.0038674071887786327,
+            "components": 21
+          },
+          "forces_eV_per_A": {
+            "mae": 0.01655895444904179,
+            "rmse": 0.023576551457895424,
+            "signed_mean": 3.4722220462338676e-11,
+            "max_absolute": 0.12011620538479617,
+            "components": 2016
+          },
+          "stress_eV_per_A3": {
+            "mae": 0.00042320516078823934,
+            "rmse": 0.0005910199182895422,
+            "signed_mean": -5.318983600341949e-05,
+            "max_absolute": 0.0017013947806431215,
+            "components": 126
+          }
+        },
+        "validation": {
+          "configurations": 6,
+          "atoms": 192,
+          "energy_raw_eV_per_atom": {
+            "mae": 0.0026455489045547065,
+            "rmse": 0.003247604697737775,
+            "signed_mean": 0.000670283727368437,
+            "max_absolute": 0.0059257955315588084,
+            "components": 6
+          },
+          "energy_aligned_eV_per_atom": {
+            "mae": 0.002628318749483612,
+            "rmse": 0.003242369036850122,
+            "signed_mean": 0.000644438494761796,
+            "max_absolute": 0.005951640764165449,
+            "components": 6
+          },
+          "forces_eV_per_A": {
+            "mae": 0.02492170951948986,
+            "rmse": 0.03176506287910186,
+            "signed_mean": 9.107298248878237e-18,
+            "max_absolute": 0.13072128891742915,
+            "components": 576
+          },
+          "stress_eV_per_A3": {
+            "mae": 0.0005385810202138742,
+            "rmse": 0.0006359058434659774,
+            "signed_mean": -4.9743451707144163e-05,
+            "max_absolute": 0.00128454391630229,
+            "components": 36
+          }
+        },
+        "test": {
+          "configurations": 13,
+          "atoms": 416,
+          "energy_raw_eV_per_atom": {
+            "mae": 0.0017858825651669253,
+            "rmse": 0.0023796961973919194,
+            "signed_mean": -0.00032841747642170944,
+            "max_absolute": 0.005324068899392298,
+            "components": 13
+          },
+          "energy_aligned_eV_per_atom": {
+            "mae": 0.0017918468496146119,
+            "rmse": 0.0023834005160842065,
+            "signed_mean": -0.00035426270902835,
+            "max_absolute": 0.005349914131998939,
+            "components": 13
+          },
+          "forces_eV_per_A": {
+            "mae": 0.011907751742994813,
+            "rmse": 0.02221161082306109,
+            "signed_mean": -3.2051281147184025e-11,
+            "max_absolute": 0.11558135063488528,
+            "components": 1248
+          },
+          "stress_eV_per_A3": {
+            "mae": 0.0011405095478781533,
+            "rmse": 0.0020480366027755314,
+            "signed_mean": 0.0006152516364482144,
+            "max_absolute": 0.0062434942728762065,
+            "components": 78
+          }
+        }
+      },
+      "metrics_by_parent": {
+        "emt-md-00": {
+          "split": "train",
+          "metrics": {
+            "configurations": 3,
+            "atoms": 96,
+            "energy_raw_eV_per_atom": {
+              "mae": 0.0015753440422372478,
+              "rmse": 0.0022738659362061347,
+              "signed_mean": 0.0015753440422372478,
+              "max_absolute": 0.0038932524213852737,
+              "components": 3
+            },
+            "energy_aligned_eV_per_atom": {
+              "mae": 0.001549498809630607,
+              "rmse": 0.0022560372349482347,
+              "signed_mean": 0.001549498809630607,
+              "max_absolute": 0.0038674071887786327,
+              "components": 3
+            },
+            "forces_eV_per_A": {
+              "mae": 0.02482187252139397,
+              "rmse": 0.03115119602413993,
+              "signed_mean": 1.3888887681727988e-10,
+              "max_absolute": 0.12011620538479617,
+              "components": 288
+            },
+            "stress_eV_per_A3": {
+              "mae": 0.0005072972412779397,
+              "rmse": 0.0006727426338576652,
+              "signed_mean": -8.844602456835234e-05,
+              "max_absolute": 0.0017013947806431215,
+              "components": 18
+            }
+          }
+        },
+        "emt-md-01": {
+          "split": "train",
+          "metrics": {
+            "configurations": 3,
+            "atoms": 96,
+            "energy_raw_eV_per_atom": {
+              "mae": 0.0010916608998969106,
+              "rmse": 0.0016132393776156402,
+              "signed_mean": -0.0007536615246136099,
+              "max_absolute": 0.0027679836367657806,
+              "components": 3
+            },
+            "energy_aligned_eV_per_atom": {
+              "mae": 0.0010830458223613636,
+              "rmse": 0.001625474201689716,
+              "signed_mean": -0.0007795067572202509,
+              "max_absolute": 0.0027938288693724216,
+              "components": 3
+            },
+            "forces_eV_per_A": {
+              "mae": 0.020951642829456617,
+              "rmse": 0.026608734459811306,
+              "signed_mean": 3.472222152933129e-11,
+              "max_absolute": 0.08762492710933817,
+              "components": 288
+            },
+            "stress_eV_per_A3": {
+              "mae": 0.0004038878820616342,
+              "rmse": 0.0006098855527130623,
+              "signed_mean": 0.00020483546965460768,
+              "max_absolute": 0.001489824224391421,
+              "components": 18
+            }
+          }
+        },
+        "emt-md-02": {
+          "split": "train",
+          "metrics": {
+            "configurations": 3,
+            "atoms": 96,
+            "energy_raw_eV_per_atom": {
+              "mae": 0.0005655489836565349,
+              "rmse": 0.0006521011138408898,
+              "signed_mean": 0.0004813088091197848,
+              "max_absolute": 0.0009009892102196382,
+              "components": 3
+            },
+            "energy_aligned_eV_per_atom": {
+              "mae": 0.0005569339061209879,
+              "rmse": 0.0006332651596814468,
+              "signed_mean": 0.000455463576513144,
+              "max_absolute": 0.0008751439776129974,
+              "components": 3
+            },
+            "forces_eV_per_A": {
+              "mae": 0.020239709803191088,
+              "rmse": 0.025248329414579024,
+              "signed_mean": -6.944444233586114e-11,
+              "max_absolute": 0.08699468187634618,
+              "components": 288
+            },
+            "stress_eV_per_A3": {
+              "mae": 0.0005424573799543967,
+              "rmse": 0.0006894559432594026,
+              "signed_mean": -0.00021209561734019514,
+              "max_absolute": 0.0012935893709556242,
+              "components": 18
+            }
+          }
+        },
+        "emt-md-03": {
+          "split": "train",
+          "metrics": {
+            "configurations": 3,
+            "atoms": 96,
+            "energy_raw_eV_per_atom": {
+              "mae": 0.001136884461404808,
+              "rmse": 0.0012630203389861626,
+              "signed_mean": -0.0006854931125448438,
+              "max_absolute": 0.0019103923085044272,
+              "components": 3
+            },
+            "energy_aligned_eV_per_atom": {
+              "mae": 0.0011454995389403547,
+              "rmse": 0.0012772320895707075,
+              "signed_mean": -0.0007113383451514847,
+              "max_absolute": 0.001936237541111068,
+              "components": 3
+            },
+            "forces_eV_per_A": {
+              "mae": 0.02703341836491803,
+              "rmse": 0.03370934332414545,
+              "signed_mean": 5.782411586589357e-18,
+              "max_absolute": 0.10543178058352742,
+              "components": 288
+            },
+            "stress_eV_per_A3": {
+              "mae": 0.00048714224011102945,
+              "rmse": 0.0005925038459559633,
+              "signed_mean": 1.0502056242602774e-05,
+              "max_absolute": 0.001356348404066364,
+              "components": 18
+            }
+          }
+        },
+        "emt-md-04": {
+          "split": "validation",
+          "metrics": {
+            "configurations": 3,
+            "atoms": 96,
+            "energy_raw_eV_per_atom": {
+              "mae": 0.00279264206931377,
+              "rmse": 0.0029777738260131424,
+              "signed_mean": 0.00279264206931377,
+              "max_absolute": 0.003930146646698773,
+              "components": 3
+            },
+            "energy_aligned_eV_per_atom": {
+              "mae": 0.002766796836707129,
+              "rmse": 0.002953549046012344,
+              "signed_mean": 0.002766796836707129,
+              "max_absolute": 0.0039043014140921323,
+              "components": 3
+            },
+            "forces_eV_per_A": {
+              "mae": 0.024747321073523725,
+              "rmse": 0.031014945503698987,
+              "signed_mean": 1.0416668183885511e-10,
+              "max_absolute": 0.11621070205607464,
+              "components": 288
+            },
+            "stress_eV_per_A3": {
+              "mae": 0.0005307107775296999,
+              "rmse": 0.0006198235595140877,
+              "signed_mean": -0.00014103500946242517,
+              "max_absolute": 0.00128454391630229,
+              "components": 18
+            }
+          }
+        },
+        "emt-md-05": {
+          "split": "validation",
+          "metrics": {
+            "configurations": 3,
+            "atoms": 96,
+            "energy_raw_eV_per_atom": {
+              "mae": 0.002498455739795643,
+              "rmse": 0.0034966749329395754,
+              "signed_mean": -0.0014520746145768963,
+              "max_absolute": 0.0059257955315588084,
+              "components": 3
+            },
+            "energy_aligned_eV_per_atom": {
+              "mae": 0.002489840662260096,
+              "rmse": 0.0035074865609219874,
+              "signed_mean": -0.001477919847183537,
+              "max_absolute": 0.005951640764165449,
+              "components": 3
+            },
+            "forces_eV_per_A": {
+              "mae": 0.025096097965455994,
+              "rmse": 0.03249787061992173,
+              "signed_mean": -1.0416666362425861e-10,
+              "max_absolute": 0.13072128891742915,
+              "components": 288
+            },
+            "stress_eV_per_A3": {
+              "mae": 0.0005464512628980487,
+              "rmse": 0.0006515913125415641,
+              "signed_mean": 4.1548106048136855e-05,
+              "max_absolute": 0.0012798511751939828,
+              "components": 18
+            }
+          }
+        },
+        "emt-md-06": {
+          "split": "test",
+          "metrics": {
+            "configurations": 3,
+            "atoms": 96,
+            "energy_raw_eV_per_atom": {
+              "mae": 0.002303961679866499,
+              "rmse": 0.0028084993146669426,
+              "signed_mean": 0.0020993085229550346,
+              "max_absolute": 0.004239571002323306,
+              "components": 3
+            },
+            "energy_aligned_eV_per_atom": {
+              "mae": 0.0022953466023309522,
+              "rmse": 0.002789233253486597,
+              "signed_mean": 0.0020734632903483935,
+              "max_absolute": 0.004213725769716665,
+              "components": 3
+            },
+            "forces_eV_per_A": {
+              "mae": 0.023313118075987165,
+              "rmse": 0.029211066457250745,
+              "signed_mean": -1.0416665644443089e-10,
+              "max_absolute": 0.08712423297064764,
+              "components": 288
+            },
+            "stress_eV_per_A3": {
+              "mae": 0.0004964559654110522,
+              "rmse": 0.0005946934670582824,
+              "signed_mean": -0.00014098073813081292,
+              "max_absolute": 0.0013286070507733312,
+              "components": 18
+            }
+          }
+        },
+        "emt-md-07": {
+          "split": "test",
+          "metrics": {
+            "configurations": 3,
+            "atoms": 96,
+            "energy_raw_eV_per_atom": {
+              "mae": 0.0014157290303700165,
+              "rmse": 0.0015915136375696593,
+              "signed_mean": 0.0001194167147791821,
+              "max_absolute": 0.002302718617723798,
+              "components": 3
+            },
+            "energy_aligned_eV_per_atom": {
+              "mae": 0.0014243441079055633,
+              "rmse": 0.0015897832962632117,
+              "signed_mean": 9.357148217254124e-05,
+              "max_absolute": 0.002276873385117157,
+              "components": 3
+            },
+            "forces_eV_per_A": {
+              "mae": 0.028283182360728867,
+              "rmse": 0.03584115062332625,
+              "signed_mean": -4.1666667675931907e-10,
+              "max_absolute": 0.11558135063488528,
+              "components": 288
+            },
+            "stress_eV_per_A3": {
+              "mae": 0.0005041079102341052,
+              "rmse": 0.0006186155598783355,
+              "signed_mean": -8.218500821736505e-05,
+              "max_absolute": 0.0013760696052754103,
+              "components": 18
+            }
+          }
+        },
+        "fcc-prototype-001": {
+          "split": "train",
+          "metrics": {
+            "configurations": 9,
+            "atoms": 288,
+            "energy_raw_eV_per_atom": {
+              "mae": 0.0002810591665335495,
+              "rmse": 0.0003432251887424364,
+              "signed_mean": -0.00014552719531731503,
+              "max_absolute": 0.0006054764611178598,
+              "components": 9
+            },
+            "energy_aligned_eV_per_atom": {
+              "mae": 0.00029541762909279437,
+              "rmse": 0.0003549561587899393,
+              "signed_mean": -0.00017137242792395586,
+              "max_absolute": 0.0006313216937245006,
+              "components": 9
+            },
+            "forces_eV_per_A": {
+              "mae": 0.007622012541444267,
+              "rmse": 0.012093479257685233,
+              "signed_mean": 4.629629401919679e-11,
+              "max_absolute": 0.052746368542126665,
+              "components": 864
+            },
+            "stress_eV_per_A3": {
+              "mae": 0.0003405504607042251,
+              "rmse": 0.0005145154557829639,
+              "signed_mean": -9.570824533753315e-05,
+              "max_absolute": 0.0015687926496798738,
+              "components": 54
+            }
+          }
+        },
+        "hcp-prototype-001": {
+          "split": "test",
+          "metrics": {
+            "configurations": 7,
+            "atoms": 224,
+            "energy_raw_eV_per_atom": {
+              "mae": 0.0017224858880657834,
+              "rmse": 0.00245986787442205,
+              "signed_mean": -0.001560800415240696,
+              "max_absolute": 0.005324068899392298,
+              "components": 7
+            },
+            "energy_aligned_eV_per_atom": {
+              "mae": 0.0017335624163257722,
+              "rmse": 0.002476347397929261,
+              "signed_mean": -0.0015866456478473366,
+              "max_absolute": 0.005349914131998939,
+              "components": 7
+            },
+            "forces_eV_per_A": {
+              "mae": 1.6959069692117742e-06,
+              "rmse": 3.270975902464348e-06,
+              "signed_mean": 1.636904778283061e-10,
+              "max_absolute": 1.1489962278749611e-05,
+              "components": 672
+            },
+            "stress_eV_per_A3": {
+              "mae": 0.001689276070782932,
+              "rmse": 0.0027338843232387004,
+              "signed_mean": 0.0012382526446959026,
+              "max_absolute": 0.0062434942728762065,
+              "components": 42
+            }
+          }
+        }
+      },
+      "pooled_descriptive": {
+        "configurations": 40,
+        "atoms": 1280,
+        "energy_raw_eV_per_atom": {
+          "mae": 0.001368190360872168,
+          "rmse": 0.002045364532160693,
+          "signed_mean": 7.375626386707523e-06,
+          "max_absolute": 0.0059257955315588084,
+          "components": 40
+        },
+        "energy_aligned_eV_per_atom": {
+          "mae": 0.001368190360872168,
+          "rmse": 0.0020454346227416448,
+          "signed_mean": -1.846960621993336e-05,
+          "max_absolute": 0.005951640764165449,
+          "components": 40
+        },
+        "forces_eV_per_A": {
+          "mae": 0.01630172683014373,
+          "rmse": 0.024566576984532768,
+          "signed_mean": 7.812500839867063e-12,
+          "max_absolute": 0.13072128891742915,
+          "components": 3840
+        },
+        "stress_eV_per_A3": {
+          "mae": 0.0006736354655063067,
+          "rmse": 0.0012677692407596108,
+          "signed_mean": 0.00016457060018780273,
+          "max_absolute": 0.0062434942728762065,
+          "components": 240
+        }
+      },
+      "per_frame": {
+        "fcc-00": {
+          "energy_raw_eV_per_atom": -0.0006054764611178598,
+          "energy_aligned_eV_per_atom": -0.0006313216937245006
+        },
+        "fcc-01": {
+          "energy_raw_eV_per_atom": -4.0269665065206794e-05,
+          "energy_aligned_eV_per_atom": -6.611489767184762e-05
+        },
+        "fcc-02": {
+          "energy_raw_eV_per_atom": 7.591548622043476e-05,
+          "energy_aligned_eV_per_atom": 5.007025361379393e-05
+        },
+        "fcc-03": {
+          "energy_raw_eV_per_atom": -0.0002490397239496289,
+          "energy_aligned_eV_per_atom": -0.0002748849565562698
+        },
+        "fcc-04": {
+          "energy_raw_eV_per_atom": -0.00027774533058710915,
+          "energy_aligned_eV_per_atom": -0.00030359056319375
+        },
+        "fcc-05": {
+          "energy_raw_eV_per_atom": 0.0005339783842526202,
+          "energy_aligned_eV_per_atom": 0.0005081331516459794
+        },
+        "fcc-06": {
+          "energy_raw_eV_per_atom": -0.00028065349503592074,
+          "energy_aligned_eV_per_atom": -0.0003064987276425616
+        },
+        "fcc-07": {
+          "energy_raw_eV_per_atom": -0.00042609094767165345,
+          "energy_aligned_eV_per_atom": -0.0004519361802782943
+        },
+        "fcc-08": {
+          "energy_raw_eV_per_atom": -4.0363004901511346e-05,
+          "energy_aligned_eV_per_atom": -6.620823750815217e-05
+        },
+        "md-00-f0": {
+          "energy_raw_eV_per_atom": 0.0038932524213852737,
+          "energy_aligned_eV_per_atom": 0.0038674071887786327
+        },
+        "md-00-f1": {
+          "energy_raw_eV_per_atom": 0.00035629221505706354,
+          "energy_aligned_eV_per_atom": 0.0003304469824504227
+        },
+        "md-00-f2": {
+          "energy_raw_eV_per_atom": 0.00047648749026940607,
+          "energy_aligned_eV_per_atom": 0.0004506422576627652
+        },
+        "md-01-f0": {
+          "energy_raw_eV_per_atom": 0.00034668330194476127,
+          "energy_aligned_eV_per_atom": 0.0003208380693381204
+        },
+        "md-01-f1": {
+          "energy_raw_eV_per_atom": -0.0027679836367657806,
+          "energy_aligned_eV_per_atom": -0.0027938288693724216
+        },
+        "md-01-f2": {
+          "energy_raw_eV_per_atom": 0.00016031576098018974,
+          "energy_aligned_eV_per_atom": 0.0001344705283735489
+        },
+        "md-02-f0": {
+          "energy_raw_eV_per_atom": -0.00012636026180512516,
+          "energy_aligned_eV_per_atom": -0.000152205494411766
+        },
+        "md-02-f1": {
+          "energy_raw_eV_per_atom": 0.0009009892102196382,
+          "energy_aligned_eV_per_atom": 0.0008751439776129974
+        },
+        "md-02-f2": {
+          "energy_raw_eV_per_atom": 0.0006692974789448414,
+          "energy_aligned_eV_per_atom": 0.0006434522463382006
+        },
+        "md-03-f0": {
+          "energy_raw_eV_per_atom": 0.0006770870232899462,
+          "energy_aligned_eV_per_atom": 0.0006512417906833054
+        },
+        "md-03-f1": {
+          "energy_raw_eV_per_atom": -0.0019103923085044272,
+          "energy_aligned_eV_per_atom": -0.001936237541111068
+        },
+        "md-03-f2": {
+          "energy_raw_eV_per_atom": -0.0008231740524200504,
+          "energy_aligned_eV_per_atom": -0.0008490192850266912
+        },
+        "md-04-f0": {
+          "energy_raw_eV_per_atom": 0.0014289096867177165,
+          "energy_aligned_eV_per_atom": 0.0014030644541110757
+        },
+        "md-04-f1": {
+          "energy_raw_eV_per_atom": 0.003930146646698773,
+          "energy_aligned_eV_per_atom": 0.0039043014140921323
+        },
+        "md-04-f2": {
+          "energy_raw_eV_per_atom": 0.003018869874524821,
+          "energy_aligned_eV_per_atom": 0.00299302464191818
+        },
+        "md-05-f0": {
+          "energy_raw_eV_per_atom": -0.0059257955315588084,
+          "energy_aligned_eV_per_atom": -0.005951640764165449
+        },
+        "md-05-f1": {
+          "energy_raw_eV_per_atom": 0.00037651115912096245,
+          "energy_aligned_eV_per_atom": 0.0003506659265143216
+        },
+        "md-05-f2": {
+          "energy_raw_eV_per_atom": 0.0011930605287071572,
+          "energy_aligned_eV_per_atom": 0.0011672152961005164
+        },
+        "md-06-f0": {
+          "energy_raw_eV_per_atom": -0.0003069797353671966,
+          "energy_aligned_eV_per_atom": -0.00033282496797383743
+        },
+        "md-06-f1": {
+          "energy_raw_eV_per_atom": 0.0023653343019089945,
+          "energy_aligned_eV_per_atom": 0.0023394890693023535
+        },
+        "md-06-f2": {
+          "energy_raw_eV_per_atom": 0.004239571002323306,
+          "energy_aligned_eV_per_atom": 0.004213725769716665
+        },
+        "md-07-f0": {
+          "energy_raw_eV_per_atom": 0.002302718617723798,
+          "energy_aligned_eV_per_atom": 0.002276873385117157
+        },
+        "md-07-f1": {
+          "energy_raw_eV_per_atom": -0.0014226535531651763,
+          "energy_aligned_eV_per_atom": -0.001448498785771817
+        },
+        "md-07-f2": {
+          "energy_raw_eV_per_atom": -0.0005218149202210753,
+          "energy_aligned_eV_per_atom": -0.0005476601528277161
+        },
+        "hcp-00": {
+          "energy_raw_eV_per_atom": -0.005324068899392298,
+          "energy_aligned_eV_per_atom": -0.005349914131998939
+        },
+        "hcp-01": {
+          "energy_raw_eV_per_atom": -0.003028083355054445,
+          "energy_aligned_eV_per_atom": -0.003053928587661086
+        },
+        "hcp-02": {
+          "energy_raw_eV_per_atom": -0.0019129446242240888,
+          "energy_aligned_eV_per_atom": -0.0019387898568307296
+        },
+        "hcp-03": {
+          "energy_raw_eV_per_atom": -0.0009755351904900955,
+          "energy_aligned_eV_per_atom": -0.0010013804230967363
+        },
+        "hcp-04": {
+          "energy_raw_eV_per_atom": -0.0002508699924117508,
+          "energy_aligned_eV_per_atom": -0.00027671522501839164
+        },
+        "hcp-05": {
+          "energy_raw_eV_per_atom": 0.00022143314230227418,
+          "energy_aligned_eV_per_atom": 0.00019558790969563335
+        },
+        "hcp-06": {
+          "energy_raw_eV_per_atom": 0.00034446601258553144,
+          "energy_aligned_eV_per_atom": 0.0003186207799788906
+        }
+      }
+    }
+  },
+  "selection_lock_sha256": "561f3a13dc34de14fdc997309bbe4c54806b1bbe8ee41735b2679fb3c9b5490c",
+  "predictions_sha256": "a2d17f855a19d5f3fe6682d3021684619764e0e6629edfa795a5363288907d19",
+  "test_used_only_after_lock": true
+}

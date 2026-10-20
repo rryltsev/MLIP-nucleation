@@ -1,0 +1,9 @@
+{
+  "status": "both_selections_locked",
+  "selection_sha256": {
+    "dpa4": "912691f8a9565d2e7fee62f8fffe1f2c244244810a3da5e076e89692e562f0d6",
+    "grace": "a6300802b39763795a4ff0e570472b394273f2470c2bc342c6155e4320b8989c"
+  },
+  "study_sha256": "32c76078be45473b90ddc20dcda3eee21afe40be45df84cdb6b215ed3701540e",
+  "created_utc": "2026-10-20T11:30:10.643786+00:00"
+}

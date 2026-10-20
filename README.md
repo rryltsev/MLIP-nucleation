@@ -36,7 +36,7 @@ tests/               scientifically meaningful verification
 
 ## Next milestones
 
-1. SSH, inventory, VASP/PAW setup, synthetic foundation fine-tuning/restart/export checks and original-FM baselines on the audited real Al32 DFT dataset completed. Real-data fine-tuning is queued on A100 as20952229; results remain pending.
+1. SSH, inventory, VASP/PAW setup, synthetic foundation checks, original-FM baselines and real-DFT fine-tuning20952229 completed. Independent audit confirms GRACE pilot improvements and negative DPA4 test transfer; neither is a qualified scientific teacher.
 2. On another computer clone the repository, configure its own credentials and read `project/state.json`.
 3. First bounded DFT pilot: Al32 FCC/disordered/HCP, 40 audited real-DFT labels, grouped train/validation/test 21/6/13. Dense calibration selected PBE/450eV/Gamma7/sigma0.05 after Gamma4 and Gamma6 failed. Total all-attempt cost92.6311 CPUh. See `reports/al32-dft-pilot-2026-10-18.tex`. This does not select the final alloy/nucleant or establish novelty.
 4. Implement one executable path: structures → converged VASP labels → teacher fine-tuning → independent DFT validation → distillation → student validation → one observable → LaTeX report.
@@ -51,7 +51,7 @@ against raw XML/OUTCAR and hashes. Extxyz and DeepMD NPY exports were checked
 frame by frame, including stress/virial sign, units, type map and frozen splits.
 The Gamma7 force comparison passes narrowly (0.0199349 versus0.02 eV/A) on two
 train structures; this is local qualification for a small fine-tuning pilot.
-Original-FM baselines are now reported below; real-DFT fine-tuning and physical MD remain untested.
+Original-FM baselines and real-DFT fine-tuning are reported below; physical MD remains untested.
 
 Audit: `scripts/assess_al32_dataset.py` (ASE/NumPy required), with actual private
 archives available. Results and complete accounting are in
@@ -60,8 +60,9 @@ Calibration/labeling attempts cost333472 allocated CPU-seconds =92.6311 CPUh.
 Including the subsequent kpLib setup/grids/benchmark below, the shared total
 is412226 CPU-seconds =114.5072 CPUh. Including the subsequent original-FM baseline
 and derivative diagnostics, the conservative shared total is412562 CPU-seconds
-=114.6006 CPUh of128. The later A100 fine-tuning below reserves4 additional
-CPUh: worst-case118.6006 CPUh, with9.3994 CPUh unreserved; one queued related job.
+=114.6006 CPUh of128 before the A100 fine-tuning below, which reserved4 additional
+CPUh at submission. It completed using0.4178CPUh; the current total is115.0183CPUh,
+with12.9817CPUh remaining and no related queued/running job.
 Private main-home and workstation backups for both new runs include raw outputs,
 licensed POTCAR and complete DeepMD exports, with every member verified.
 
@@ -278,25 +279,27 @@ python scripts/assess_fm_baseline.py runs/fm-al32-baseline-20261019-02
 python scripts/plot_fm_baseline.py
 ```
 
-The constant shift is an empirical energy-reference diagnostic, not a proof of PAW54/PAW64 equivalence. It cannot repair state-dependent energy errors, forces or stress. Pretraining overlap and production MD validity remain unresolved. Real-data fine-tuning has not been performed.
+The constant shift is an empirical energy-reference diagnostic, not a proof of PAW54/PAW64 equivalence. It cannot repair state-dependent energy errors, forces or stress. Pretraining overlap and production MD validity remain unresolved. The subsequent real-data fine-tuning is reported below.
 
-### Real-DFT fine-tuning on A100 (queued)
+### Real-DFT fine-tuning on A100 (completed and audited)
 
-Slurm20952229 (`fm-al32-finetune-20261019-01`) is PENDING(Resources) on `v100`, one A100/4CPUs/32GiB/max1hour. Both A100s were occupied; the observed start estimate was2026-10-20T00:56:36 in cluster local time, not a guarantee. This request remains on A100; no CPU-training fallback. Actual prior cost114.6006 CPUh plus full4CPUh reservation stays below128. Do not resubmit the recorded run.
+Slurm20952229 (`fm-al32-finetune-20261019-01`) completed0:0 on2026-10-20, `tesla-a101`, one A100/4CPUs, in376s. Native training processes took188.67s DPA4 and64.92s GRACE; both used GPU and changed source weights. Different training workloads prevent interpreting these times as an architecture speed comparison. Total actual cost is1504CPU-s/376GPU-allocation-s; all12 related parent jobs total115.0183CPUh of128, leaving12.9817CPUh with no active reservation. Do not resubmit the recorded run.
 
 `configs/training/al32-foundation-finetune-v1.json` fixes original checkpoint initialization, seed42, train21/validation6/test13, batch2 and Adam1e-4 ->1e-5. DPA4 trains1000updates/checkpoints100; GRACE100epochs/checkpoints10, with E/F/stress objectives. Common selection evaluates all6 validation configurations for the original and10 trained candidates, using mean squared normalized RMSE: aligned E/N scale0.01eV, force-component0.05eV/A, stress-component0.001eV/A^3. These are fixed comparison scales, not physical accuracy acceptance thresholds. Each energy shift is fit on train only. The original can win; that outcome must be reported explicitly as no demonstrated adaptation benefit.
 
 No test labels are in the training/selection payload. Only after both immutable selections and selected-weight hashes are locked does the job read the13 test labels from the verified private DFT archive. It then evaluates original and selected models on the same A100, preserving raw/aligned E and force/stress split/parent metrics. GRACE's native `test_filename` points only to the6 validation frames. No post-test selection or tuning is implemented. Historical baseline test inspection is disclosed; no completely blind or pretraining-independent test claim is made.
 
-The input hashes, run ID, job ID, code commit and full budget snapshot are in `runs/fm-al32-finetune-20261019-01/manifest.json`. Twenty-two local tests passed, including validation-vs-train selection, rejection of test rows and frozen final energy shifts. This does not yet verify real training convergence or improvement. Resume after completion:
+The input hashes, run ID, job ID, code commit and budget snapshot are in `runs/fm-al32-finetune-20261019-01/manifest.json`. Independent audit passed: all11 candidate scores per model, locked selections, training weight updates/GPU evidence, frozen train-only shifts and final predictions were checked. Twenty-three local tests passed. Validation selected DPA4 update100 (S0.361354 ->0.346883) and GRACE epoch100 (S0.370219 ->0.304371); no replacement after test. Test RMSE before ->after: DPA4 aligned energy19.2702 ->23.5661meV/atom, force23.4147 ->26.0649meV/A, stress0.2639 ->0.2899GPa; GRACE4.0831 ->2.3834meV/atom,23.0820 ->22.2116meV/A,0.7016 ->0.3281GPa. DPA4 HCP transfer worsens; GRACE improves aggregate metrics but slightly worsens energy on one disordered test parent. The HCP structures have near-zero forces and lower pooled force RMSE. No teacher, MD validity or generalization beyond this small pilot is qualified. Reproduce collection/audit (NumPy/ASE required):
 
 ```powershell
 python scripts/finetune_cluster.py collect runs/fm-al32-finetune-20261019-01/manifest.json
-python scripts/finetune_cluster.py backup runs/fm-al32-finetune-20261019-01/manifest.json
+python scripts/backup_finetune_evidence.py runs/fm-al32-finetune-20261019-01
 python scripts/assess_finetune.py runs/fm-al32-finetune-20261019-01
+# With Matplotlib:
+python scripts/plot_finetune.py
 ```
 
-The backup retains actual checkpoints privately in cluster main home plus a verified workstation archive; licensed/large binaries stay outside Git. Those fine-tuned artifacts do not exist while the job is queued. Preserve failures; do not automatically repeat a failed run unchanged. Update the existing Al32 LaTeX report with measured comparisons only after collection and independent audit.
+The full450482449-byte native archive is verified in cluster main home (`artifact-backup.json`, SHA256dff4b940942d4f21...). The workstation has a verified1250425-byte audit bundle with every input and small textual output, without native weights. The full local download was stopped at about40kB/s; partial files are explicitly not backups. `scripts/backup_finetune_evidence.py` verifies all full-archive members remotely and the audit bundle locally; `assess_finetune.py` records this backend rather than claiming a full local binary audit. Native files remain outside Git. A full workstation copy remains pending and needs a longer resumable transfer than the original600s downloader; no background transfer/monitor remains running. Diagnostic model cards are in `models/finetuned/`; comparisons and provenance are under `results/al32-foundation-finetune-20261020/`. The existing Al32 report includes measured comparisons and limitations. Preserve negative evidence; no new tuning or test-based selection was performed.
 
 ### Generalized k-point grids with kpLib
 

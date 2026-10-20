@@ -1,0 +1,34 @@
+{
+  "model_id": "dpa4-al32-pilot-v1-seed42",
+  "status": "Diagnostic pilot checkpoint; not qualified as a scientific teacher",
+  "architecture": "dpa4",
+  "source_model_card": "models/foundation/dpa4-mini-omat24-20260805.json",
+  "training_run": "runs/fm-al32-finetune-20261019-01/manifest.json",
+  "training_code_commit": "50fa5c94f00365466d54908739b7a57bc605d603",
+  "study_sha256": "32c76078be45473b90ddc20dcda3eee21afe40be45df84cdb6b215ed3701540e",
+  "dataset": "datasets/al32-pilot-v1/dft-v2.json",
+  "selection": {
+    "progress": 100,
+    "score": 0.3468833264507552,
+    "checkpoint": "/misc/home6/u3129/mlip-research/runs/fm-al32-finetune-20261019-01/dpa4/model.ckpt-100.pt",
+    "weight_sha256": {
+      "/misc/home6/u3129/mlip-research/runs/fm-al32-finetune-20261019-01/dpa4/model.ckpt-100.pt": "e7ef5dcb675f7254f6a447d289fa9d016b22f066833a6987ae96e0101eb867a2"
+    }
+  },
+  "selection_basis": "Frozen full validation E/F/stress score; selected before test; no post-test replacement",
+  "energy_alignment_delta_Al_eV_per_atom": -0.005391161753763133,
+  "assessment": "runs/fm-al32-finetune-20261019-01/assessment.json",
+  "archive": {
+    "record": "runs/fm-al32-finetune-20261019-01/artifact-backup.json",
+    "remote_archive": "/home/u3129/.local/share/mlip-research/dft-artifacts/fm-al32-finetune-20261019-01.tar.gz",
+    "sha256": "dff4b940942d4f21812ee4abce0fca36ef19da4e041fe9ae80b12eed4a56ab16",
+    "native_weights_on_workstation": false
+  },
+  "outcome": "Test energy/force/stress RMSE all worsened; preserve negative evidence",
+  "limitations": [
+    "21 training structures only; no universal teacher qualification",
+    "Prior baseline test results were inspected but must not set this run's model/checkpoint/sampling choices",
+    "No pretraining-independent generalization claim; PAW54/PAW64 differences and narrow DFT convergence remain",
+    "No MD stability, EOS, interface or distillation validation"
+  ]
+}

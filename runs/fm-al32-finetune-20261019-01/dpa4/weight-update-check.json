@@ -1,0 +1,29 @@
+{
+  "source_float_tensors": 102,
+  "exactly_restored_tensors": 99,
+  "initial_changed_keys": [
+    "model.Default.atomic_model.out_bias",
+    "model.Default.atomic_model.out_std",
+    "model.Default.atomic_model.descriptor.version_tensor"
+  ],
+  "initial_adjustments": {
+    "model.Default.atomic_model.out_bias": {
+      "max_abs_difference": 0.005382713643845349,
+      "before": "array",
+      "after": "array"
+    },
+    "model.Default.atomic_model.out_std": {
+      "max_abs_difference": 19.823716771520985,
+      "before": "array",
+      "after": "array"
+    },
+    "model.Default.atomic_model.descriptor.version_tensor": {
+      "max_abs_difference": 0.09999999999999987,
+      "before": 1.1,
+      "after": 1.2
+    }
+  },
+  "updated_tensors": 88,
+  "updated_original_tensors": 83,
+  "max_abs_update": 3.2061861234897764
+}

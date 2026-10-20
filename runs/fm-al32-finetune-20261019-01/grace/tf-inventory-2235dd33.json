@@ -1,0 +1,235 @@
+{
+  "checkpoint": "/misc/home6/u3129/mlip-research/runs/fm-al32-finetune-20261019-01/grace/loaded-initial/model",
+  "model_tensors": {
+    "model/instructions/A1/w_left/VARIABLE_VALUE": {
+      "shape": [
+        32,
+        32,
+        5
+      ],
+      "sha256": "669a00dbfbc5af8f8a0e5cf640ae01d34c5d5c8cac15958324375bfb8c86587a"
+    },
+    "model/instructions/A1/w_right/VARIABLE_VALUE": {
+      "shape": [
+        32,
+        32,
+        5
+      ],
+      "sha256": "ef07ed97cb81d48549f82dddd83fd993eb73f2fbc648c9859e7f5d5f54633a58"
+    },
+    "model/instructions/AA1/w_left/VARIABLE_VALUE": {
+      "shape": [
+        32,
+        32,
+        27
+      ],
+      "sha256": "2e2aab3ecfd6f2368910d2020dcdf724d968b92b89cd702fb663269a698be33b"
+    },
+    "model/instructions/AA1/w_right/VARIABLE_VALUE": {
+      "shape": [
+        32,
+        32,
+        27
+      ],
+      "sha256": "a00f081ae714bf7d995e31835cd9bd2a81b0a28db48fbeb451b70183d5d117b0"
+    },
+    "model/instructions/AA2/w_left/VARIABLE_VALUE": {
+      "shape": [
+        32,
+        32,
+        27
+      ],
+      "sha256": "e1a887ad05c68702e7672cded8271d77b59cfc75d3075ab2cab07c532be0571c"
+    },
+    "model/instructions/AA2/w_right/VARIABLE_VALUE": {
+      "shape": [
+        32,
+        32,
+        27
+      ],
+      "sha256": "335c63ea7faea27d2a0ecc7dd68818e7717ba6cb621ea85c22fe289c41b9bb95"
+    },
+    "model/instructions/MLPOut2ScalarTarget/scale/VARIABLE_VALUE": {
+      "shape": [
+        1,
+        12
+      ],
+      "sha256": "6aeef2130fbdea2b1db2e14dba07f73c1b939730fe453e38cedd64e0222684fd"
+    },
+    "model/instructions/RadialBasis/rc/VARIABLE_VALUE": {
+      "shape": [],
+      "sha256": "3e6357a56fbae74413051d518261f4b70e5b3758172a70e7f101e996e00a9ee0"
+    },
+    "model/instructions/Z/w/VARIABLE_VALUE": {
+      "shape": [
+        89,
+        128
+      ],
+      "sha256": "6e32fb32ae840c1399b17ce0cb5ebca18312f50c1ed609d198101a41f2de0b21"
+    },
+    "model/instructions/rho/reducing_A/VARIABLE_VALUE": {
+      "shape": [
+        89,
+        13,
+        32,
+        1
+      ],
+      "sha256": "e8f2a44c76cb525261e09ec9e6ac40158fd9b3f4516840a52f1866b7484c8319"
+    },
+    "model/instructions/rho/reducing_AA/VARIABLE_VALUE": {
+      "shape": [
+        89,
+        13,
+        32,
+        5
+      ],
+      "sha256": "a392412614f5c9d1eadfce2f11ba052d9bf1ce0bc00417fdeabdcca3311e5863"
+    },
+    "model/instructions/rho/reducing_AAA/VARIABLE_VALUE": {
+      "shape": [
+        89,
+        13,
+        32,
+        14
+      ],
+      "sha256": "ba198052e52804f706798244238c80df461d42f92c373039002f428daa35aac5"
+    },
+    "model/instructions/rho/reducing_AAAA/VARIABLE_VALUE": {
+      "shape": [
+        89,
+        13,
+        32,
+        69
+      ],
+      "sha256": "3f620ad84c4c4fb5135ef7a21b5f86add9c20836a27fa86bb4770dd2f9467800"
+    },
+    "model/instructions/A/lin_transform/w/VARIABLE_VALUE": {
+      "shape": [
+        128,
+        32
+      ],
+      "sha256": "ca73a8ea2c9081f0ff6de3ee78ac3e77fe786d35f91a45c4a2b0456bb5bcf224"
+    },
+    "model/instructions/MLPOut2ScalarTarget/mlp/layer0/w/VARIABLE_VALUE": {
+      "shape": [
+        12,
+        64
+      ],
+      "sha256": "b6cb74be4703bbe464b411be1eee6eba2bf83cfa4a32c76892293bda3fb10003"
+    },
+    "model/instructions/MLPOut2ScalarTarget/mlp/layer1/w/VARIABLE_VALUE": {
+      "shape": [
+        64,
+        1
+      ],
+      "sha256": "c84308943bac4a0846c4bc103c724610202949609cdf2e75b1b11dc68ab5ef67"
+    },
+    "model/instructions/R/mlp/layer0/w/VARIABLE_VALUE": {
+      "shape": [
+        8,
+        64
+      ],
+      "sha256": "9fa7153a25218011dd109d4902ada0e89ced1c313eda0ae44d146be0a1c86edf"
+    },
+    "model/instructions/R/mlp/layer1/w/VARIABLE_VALUE": {
+      "shape": [
+        64,
+        64
+      ],
+      "sha256": "8b49f70fa1f2c5c46fa763d6a10a1a658c7d99cd9ec58989261bbba526b9316f"
+    },
+    "model/instructions/R/mlp/layer2/w/VARIABLE_VALUE": {
+      "shape": [
+        64,
+        160
+      ],
+      "sha256": "a5b81fc9ca63e025ecbb05dac660d816b657be7d4d8ec145bde44115bcce2433"
+    }
+  },
+  "attributes": [
+    {
+      "full_name": "RadialBasis/cutoff",
+      "checkpoint_key": "model/instructions/RadialBasis/rc/.ATTRIBUTES/VARIABLE_VALUE"
+    },
+    {
+      "full_name": "element_map_symbols",
+      "checkpoint_key": "model/instructions/Z/element_map_symbols/.ATTRIBUTES/VARIABLE_VALUE"
+    },
+    {
+      "full_name": "element_map_index",
+      "checkpoint_key": "model/instructions/Z/element_map_index/.ATTRIBUTES/VARIABLE_VALUE"
+    },
+    {
+      "full_name": "Z/ChemicalEmbedding",
+      "checkpoint_key": "model/instructions/Z/w/.ATTRIBUTES/VARIABLE_VALUE"
+    },
+    {
+      "full_name": "A1/w_left_FC",
+      "checkpoint_key": "model/instructions/A1/w_left/.ATTRIBUTES/VARIABLE_VALUE"
+    },
+    {
+      "full_name": "A1/w_right_FC",
+      "checkpoint_key": "model/instructions/A1/w_right/.ATTRIBUTES/VARIABLE_VALUE"
+    },
+    {
+      "full_name": "AA1/w_left_FC",
+      "checkpoint_key": "model/instructions/AA1/w_left/.ATTRIBUTES/VARIABLE_VALUE"
+    },
+    {
+      "full_name": "AA1/w_right_FC",
+      "checkpoint_key": "model/instructions/AA1/w_right/.ATTRIBUTES/VARIABLE_VALUE"
+    },
+    {
+      "full_name": "AA2/w_left_FC",
+      "checkpoint_key": "model/instructions/AA2/w_left/.ATTRIBUTES/VARIABLE_VALUE"
+    },
+    {
+      "full_name": "AA2/w_right_FC",
+      "checkpoint_key": "model/instructions/AA2/w_right/.ATTRIBUTES/VARIABLE_VALUE"
+    },
+    {
+      "full_name": "rho/reducing_A",
+      "checkpoint_key": "model/instructions/rho/reducing_A/.ATTRIBUTES/VARIABLE_VALUE"
+    },
+    {
+      "full_name": "rho/reducing_AA",
+      "checkpoint_key": "model/instructions/rho/reducing_AA/.ATTRIBUTES/VARIABLE_VALUE"
+    },
+    {
+      "full_name": "rho/reducing_AAA",
+      "checkpoint_key": "model/instructions/rho/reducing_AAA/.ATTRIBUTES/VARIABLE_VALUE"
+    },
+    {
+      "full_name": "rho/reducing_AAAA",
+      "checkpoint_key": "model/instructions/rho/reducing_AAAA/.ATTRIBUTES/VARIABLE_VALUE"
+    },
+    {
+      "full_name": "MLPOut2ScalarTarget/scale",
+      "checkpoint_key": "model/instructions/MLPOut2ScalarTarget/scale/.ATTRIBUTES/VARIABLE_VALUE"
+    },
+    {
+      "full_name": "A_ChemIndTransf/DenseLayer_A_ChemIndTransf__",
+      "checkpoint_key": "model/instructions/A/lin_transform/w/.ATTRIBUTES/VARIABLE_VALUE"
+    },
+    {
+      "full_name": "R_MLP_layer0/DenseLayer_R_MLP_layer0_no_decay",
+      "checkpoint_key": "model/instructions/R/mlp/layer0/w/.ATTRIBUTES/VARIABLE_VALUE"
+    },
+    {
+      "full_name": "R_MLP_layer1/DenseLayer_R_MLP_layer1_no_decay",
+      "checkpoint_key": "model/instructions/R/mlp/layer1/w/.ATTRIBUTES/VARIABLE_VALUE"
+    },
+    {
+      "full_name": "R_MLP_layer2/DenseLayer_R_MLP_layer2_no_decay",
+      "checkpoint_key": "model/instructions/R/mlp/layer2/w/.ATTRIBUTES/VARIABLE_VALUE"
+    },
+    {
+      "full_name": "MLPOut2ScalarTarget_MLP_layer0/DenseLayer_MLPOut2ScalarTarget_MLP_layer0__",
+      "checkpoint_key": "model/instructions/MLPOut2ScalarTarget/mlp/layer0/w/.ATTRIBUTES/VARIABLE_VALUE"
+    },
+    {
+      "full_name": "MLPOut2ScalarTarget_MLP_layer1/DenseLayer_MLPOut2ScalarTarget_MLP_layer1__",
+      "checkpoint_key": "model/instructions/MLPOut2ScalarTarget/mlp/layer1/w/.ATTRIBUTES/VARIABLE_VALUE"
+    }
+  ]
+}
