@@ -1,6 +1,6 @@
 {
   "updated_local_date": "2026-10-20",
-  "stage": "real_DFT_finetuning_completed_and_audited",
+  "stage": "DPA4_LoRA_queued_on_A100",
   "foundation_DFT_baseline": {
     "status": "Complete: original DPA4-Mini and GRACE-1L evaluated on all40 frozen DFT configurations, no fine-tuning",
     "run": "runs/fm-al32-baseline-20261019-02/manifest.json",
@@ -418,13 +418,13 @@
       "authorization": "configs/training/al32-foundation-finetune-v1.json",
       "allocated_CPU_hours": 115.01833333333333,
       "allocated_CPU_seconds": 414066,
-      "workflow_status": "All12 related parent jobs terminal; real DFT fine-tuning20952229 completed and independently audited",
-      "active_jobs": 0,
-      "reserved_new_CPU_hours": 0,
-      "worst_case_overall_CPU_hours": 115.01833333333333,
-      "unreserved_CPU_hours": 12.98166666666667,
+      "workflow_status": "12 prior related parent jobs terminal; LoRA20957086 PENDING with full1CPUh reservation; actual115.0183CPUh unchanged",
+      "active_jobs": 1,
+      "reserved_new_CPU_hours": 1,
+      "worst_case_overall_CPU_hours": 116.01833333333333,
+      "unreserved_CPU_hours": 11.98166666666667,
       "remaining_CPU_hours": 12.98166666666667,
-      "final_scheduler_snapshot": "runs/fm-al32-finetune-20261019-01/scheduler-all-attempts.json",
+      "final_scheduler_snapshot": "runs/fm-al32-lora-20261020-01/scheduler.json",
       "DFT_kplib_CPU_seconds": 412226,
       "FM_baseline_and_diagnostics_CPU_seconds": 336,
       "FM_real_DFT_finetuning_CPU_seconds": 1504
@@ -622,5 +622,33 @@
       "next": "First compare original versus loaded-initial on train/validation, then a bounded predeclared LR/head-only-or-LoRA/loss diagnostic; no post-test checkpoint re-ranking or test-driven acquisition"
     }
   },
-  "last_updated_utc": "2026-10-20T17:35:08.600088+00:00"
+  "last_updated_utc": "2026-10-20T17:57:53.662973+00:00",
+  "DPA4_LoRA": {
+    "status": "PENDING(Resources); no LoRA GPU/accuracy results yet",
+    "job_id": "20957086",
+    "run": "runs/fm-al32-lora-20261020-01/manifest.json",
+    "configuration": "configs/training/al32-dpa4-lora-v1.json",
+    "code_commit": "146e7a67b9a1f1ccfc31db50a999893052bbb576",
+    "rank": 8,
+    "alpha": 8,
+    "scope": "Train21/validation6 only; original foundation checkpoint, no prior synthetic/full-finetuned weights or test access",
+    "training": "Matched prior seed42, batch2, Adam1e-4 to1e-5,1000updates/checkpoint100, E/F/virial loss; native LoRA plus allowed heads/scales/biases",
+    "gates": "Zero-step equivalence up to train-only constant energy; GPU observed; frozen parameters unchanged; adapters updated; live/merged E/F/stress equivalence for every checkpoint",
+    "selection": "Same fixed common validation score with original fallback; report derivative nonregression separately",
+    "resources": "One A100,4CPUs,32GiB,max15min v100/imet-2026-2/normal",
+    "estimated_start_cluster_local": "2026-10-21T12:11:03; scheduler estimate only",
+    "budget": {
+      "prior_actual_CPU_hours": 115.01833333333333,
+      "reserved_CPU_hours": 1.0,
+      "worst_case_total_CPU_hours": 116.01833333333333,
+      "unreserved_CPU_hours": 11.98166666666667
+    },
+    "tests": "25 local tests passed; Slurm/LoRA tests and post-run auditor not yet executed on real outputs",
+    "continuation": [
+      "python scripts/finetune_cluster.py collect runs/fm-al32-lora-20261020-01/manifest.json",
+      "After terminal collection: python scripts/backup_finetune_evidence.py runs/fm-al32-lora-20261020-01 --create",
+      "With NumPy/ASE: python scripts/assess_lora.py runs/fm-al32-lora-20261020-01"
+    ],
+    "recovery": "Never resubmit this run. Reconcile job20957086. Preserve failures and CPU cost; no unchanged blind retry. No automatic monitor configured."
+  }
 }

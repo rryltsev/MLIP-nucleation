@@ -62,7 +62,7 @@ is412226 CPU-seconds =114.5072 CPUh. Including the subsequent original-FM baseli
 and derivative diagnostics, the conservative shared total is412562 CPU-seconds
 =114.6006 CPUh of128 before the A100 fine-tuning below, which reserved4 additional
 CPUh at submission. It completed using0.4178CPUh; the current total is115.0183CPUh,
-with12.9817CPUh remaining and no related queued/running job.
+with12.9817CPUh actually remaining; the subsequent LoRA trial reserves1CPUh.
 Private main-home and workstation backups for both new runs include raw outputs,
 licensed POTCAR and complete DeepMD exports, with every member verified.
 
@@ -300,6 +300,24 @@ python scripts/plot_finetune.py
 ```
 
 The full450482449-byte native archive is verified in cluster main home (`artifact-backup.json`, SHA256dff4b940942d4f21...). The workstation has a verified1250425-byte audit bundle with every input and small textual output, without native weights. The full local download was stopped at about40kB/s; partial files are explicitly not backups. `scripts/backup_finetune_evidence.py` verifies all full-archive members remotely and the audit bundle locally; `assess_finetune.py` records this backend rather than claiming a full local binary audit. Native files remain outside Git. A full workstation copy remains pending and needs a longer resumable transfer than the original600s downloader; no background transfer/monitor remains running. Diagnostic model cards are in `models/finetuned/`; comparisons and provenance are under `results/al32-foundation-finetune-20261020/`. The existing Al32 report includes measured comparisons and limitations. Preserve negative evidence; no new tuning or test-based selection was performed.
+
+### DPA4 LoRA trial (queued 2026-10-20)
+
+User-requested LoRA run `fm-al32-lora-20261020-01`, job20957086, is PENDING(Resources) on one A100/4CPUs/32GiB, max15minutes. The observed scheduler start estimate is2026-10-21T12:11:03, cluster-local time, not a guarantee. Source code commit146e7a6 and all input hashes are persisted before submission. Do not resubmit the recorded run.
+
+`configs/training/al32-dpa4-lora-v1.json` fixes rank8/alpha8, original DPA4-Mini source, matched seed42/batch2/Adam1e-4->1e-5/1000steps/checkpoint100 and unchanged E/F/virial loss. Native LoRA also permits selected heads/scales/biases; actual trainable counts and frozen-weight hashes will be recorded. Gates check zero-step E/F/stress up to a train-only constant energy shift, actual GPU use, adapter updates, unchanged frozen weights and live-LoRA versus merged-export predictions. Regular checkpoints retain adapters/optimizer; merged checkpoints are inference artifacts, not Adam restart snapshots. Restart is not yet validated.
+
+This run contains only21 train and6 validation labels, with no sealed-test pointer or test archive access. The same11-candidate common validation score is used, including original fallback; force/stress nonregression is a separate reported flag. No old test predictions will be generated. No improvement or successful GPU LoRA training is claimed while queued. Full1CPUh reservation gives worst-case116.0183 of128CPUh; actual cost remains115.0183CPUh.25 local tests passed. Continue with NumPy/ASE available:
+
+```powershell
+python scripts/finetune_cluster.py collect runs/fm-al32-lora-20261020-01/manifest.json
+# Only after terminal collection, including failed attempts:
+python scripts/backup_finetune_evidence.py runs/fm-al32-lora-20261020-01 --create
+# Only after a passed run and verified archive/evidence retrieval:
+python scripts/assess_lora.py runs/fm-al32-lora-20261020-01
+```
+
+The selected artifact backend is a full verified private cluster-main-home archive plus an actual workstation audit bundle; native weights are not claimed to have a complete workstation copy. No automatic monitor is configured. The existing Al32 LaTeX report records the experiment and pending status.
 
 ### Generalized k-point grids with kpLib
 
