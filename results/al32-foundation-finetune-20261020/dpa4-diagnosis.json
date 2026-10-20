@@ -1,0 +1,264 @@
+{
+  "created_utc": "2026-10-20T17:35:08.397394+00:00",
+  "analysis_code_commit": "27ada62bd9b62ecf9d4ea36790ee24a22d577145",
+  "analysis_source_sha256": "adfa138e2d28e9f9d8ec7f3d02f78eb4170663c8c90740227eb882e531242276",
+  "inputs": {
+    "runs\\fm-al32-finetune-20261019-01\\assessment.json": "759310a5ab0325d921cf63abd4916eeb4cc40c5ebccc6e439d49f89652fff85f",
+    "runs\\fm-al32-finetune-20261019-01\\dpa4\\selection.json": "912691f8a9565d2e7fee62f8fffe1f2c244244810a3da5e076e89692e562f0d6",
+    "runs\\fm-al32-finetune-20261019-01\\dataset-manifest.json": "65a4c6dce1a072504030dca2b0340db72a497e562e40b2717104294c3030fbdd",
+    "runs\\fm-al32-finetune-20261019-01\\dpa4\\weight-update-check.json": "d136853cf4e9de0375135e3ed9a39ca543b413a6588bd8a25f952fb52d1d333b"
+  },
+  "status": "Descriptive diagnosis; no causal attribution or new model selection",
+  "split_kind_counts": {
+    "train": {
+      "fcc_strain_rattle": 9,
+      "emt_disordered_proposal": 12
+    },
+    "validation": {
+      "emt_disordered_proposal": 6
+    },
+    "test": {
+      "emt_disordered_proposal": 6,
+      "hcp_extrapolation": 7
+    }
+  },
+  "parent_counts": {
+    "train": 5,
+    "validation": 2,
+    "test": 3
+  },
+  "selected_progress_unchanged": 100,
+  "selected_validation_score_delta_components": {
+    "energy_aligned_eV_per_atom": -0.05639297641534661,
+    "forces_eV_per_A": 0.033357641087434,
+    "stress_eV_per_A3": 0.008564660327670318
+  },
+  "trained_candidates_with_worse_validation": {
+    "energy_aligned_eV_per_atom": 0,
+    "forces_eV_per_A": 10,
+    "stress_eV_per_A3": 10
+  },
+  "history": [
+    {
+      "progress": 0,
+      "score": 0.3613540014509975,
+      "validation_score_components": {
+        "energy_aligned_eV_per_atom": 0.079253754856794,
+        "forces_eV_per_A": 0.17165991219712837,
+        "stress_eV_per_A3": 0.11044033439707517
+      },
+      "validation_RMSE": {
+        "energy_aligned_eV_per_atom": 0.004876076953559921,
+        "forces_eV_per_A": 0.03588104431978622,
+        "stress_eV_per_A3": 0.0005756049019867929
+      },
+      "training_RMSE": {
+        "energy_aligned_eV_per_atom": 0.0049447775654934585,
+        "forces_eV_per_A": 0.027566891654333008,
+        "stress_eV_per_A3": 0.0009757822031586532
+      }
+    },
+    {
+      "progress": 100,
+      "score": 0.3468833264507552,
+      "validation_score_components": {
+        "energy_aligned_eV_per_atom": 0.0228607784414474,
+        "forces_eV_per_A": 0.20501755328456236,
+        "stress_eV_per_A3": 0.11900499472474547
+      },
+      "validation_RMSE": {
+        "energy_aligned_eV_per_atom": 0.0026188229288048896,
+        "forces_eV_per_A": 0.039212646552282314,
+        "stress_eV_per_A3": 0.0005975073088877127
+      },
+      "training_RMSE": {
+        "energy_aligned_eV_per_atom": 0.001595713046108549,
+        "forces_eV_per_A": 0.028295111740004448,
+        "stress_eV_per_A3": 0.0006366805503908412
+      }
+    },
+    {
+      "progress": 200,
+      "score": 0.35552892706661804,
+      "validation_score_components": {
+        "energy_aligned_eV_per_atom": 0.02235333975793491,
+        "forces_eV_per_A": 0.19072715005634322,
+        "stress_eV_per_A3": 0.14244843725233997
+      },
+      "validation_RMSE": {
+        "energy_aligned_eV_per_atom": 0.002589594935000544,
+        "forces_eV_per_A": 0.03782133822886988,
+        "stress_eV_per_A3": 0.0006537165377723129
+      },
+      "training_RMSE": {
+        "energy_aligned_eV_per_atom": 0.0014279824458702942,
+        "forces_eV_per_A": 0.027318789602692496,
+        "stress_eV_per_A3": 0.0005876388584716409
+      }
+    },
+    {
+      "progress": 300,
+      "score": 0.4162742274155751,
+      "validation_score_components": {
+        "energy_aligned_eV_per_atom": 0.022899909762241526,
+        "forces_eV_per_A": 0.19240873458963723,
+        "stress_eV_per_A3": 0.2009655830636964
+      },
+      "validation_RMSE": {
+        "energy_aligned_eV_per_atom": 0.002621063320233309,
+        "forces_eV_per_A": 0.037987702081361534,
+        "stress_eV_per_A3": 0.0007764642613740114
+      },
+      "training_RMSE": {
+        "energy_aligned_eV_per_atom": 0.0013109055369753268,
+        "forces_eV_per_A": 0.026991919864367754,
+        "stress_eV_per_A3": 0.0006625003218215324
+      }
+    },
+    {
+      "progress": 400,
+      "score": 0.3810426598477082,
+      "validation_score_components": {
+        "energy_aligned_eV_per_atom": 0.021305588141453113,
+        "forces_eV_per_A": 0.18806295040855006,
+        "stress_eV_per_A3": 0.171674121297705
+      },
+      "validation_RMSE": {
+        "energy_aligned_eV_per_atom": 0.0025281765053959213,
+        "forces_eV_per_A": 0.03755625284908128,
+        "stress_eV_per_A3": 0.0007176505862138727
+      },
+      "training_RMSE": {
+        "energy_aligned_eV_per_atom": 0.0014415799655367533,
+        "forces_eV_per_A": 0.026514419303783406,
+        "stress_eV_per_A3": 0.0005930003072117853
+      }
+    },
+    {
+      "progress": 500,
+      "score": 0.41121781243742944,
+      "validation_score_components": {
+        "energy_aligned_eV_per_atom": 0.022493197486400926,
+        "forces_eV_per_A": 0.19065054198348697,
+        "stress_eV_per_A3": 0.1980740729675415
+      },
+      "validation_RMSE": {
+        "energy_aligned_eV_per_atom": 0.002597683438358161,
+        "forces_eV_per_A": 0.03781374174656817,
+        "stress_eV_per_A3": 0.0007708581055568038
+      },
+      "training_RMSE": {
+        "energy_aligned_eV_per_atom": 0.001316800640831493,
+        "forces_eV_per_A": 0.026265279142149493,
+        "stress_eV_per_A3": 0.000639339709374093
+      }
+    },
+    {
+      "progress": 600,
+      "score": 0.4417586828131179,
+      "validation_score_components": {
+        "energy_aligned_eV_per_atom": 0.02379411773801075,
+        "forces_eV_per_A": 0.19207982020529613,
+        "stress_eV_per_A3": 0.22588474486981103
+      },
+      "validation_RMSE": {
+        "energy_aligned_eV_per_atom": 0.0026717476155885727,
+        "forces_eV_per_A": 0.03795521902900471,
+        "stress_eV_per_A3": 0.0008231975671790054
+      },
+      "training_RMSE": {
+        "energy_aligned_eV_per_atom": 0.0013969601005883166,
+        "forces_eV_per_A": 0.026057465011925515,
+        "stress_eV_per_A3": 0.0006698728543871403
+      }
+    },
+    {
+      "progress": 700,
+      "score": 0.3847076122665907,
+      "validation_score_components": {
+        "energy_aligned_eV_per_atom": 0.02217820602769746,
+        "forces_eV_per_A": 0.19255636944903373,
+        "stress_eV_per_A3": 0.16997303678985953
+      },
+      "validation_RMSE": {
+        "energy_aligned_eV_per_atom": 0.002579430520155416,
+        "forces_eV_per_A": 0.03800227323289691,
+        "stress_eV_per_A3": 0.0007140862065392235
+      },
+      "training_RMSE": {
+        "energy_aligned_eV_per_atom": 0.0011847615206668591,
+        "forces_eV_per_A": 0.025964280465547,
+        "stress_eV_per_A3": 0.000565276079066536
+      }
+    },
+    {
+      "progress": 800,
+      "score": 0.359938051468989,
+      "validation_score_components": {
+        "energy_aligned_eV_per_atom": 0.023349812390629342,
+        "forces_eV_per_A": 0.19422690941988563,
+        "stress_eV_per_A3": 0.14236132965847406
+      },
+      "validation_RMSE": {
+        "energy_aligned_eV_per_atom": 0.0026466854208970136,
+        "forces_eV_per_A": 0.038166763298046934,
+        "stress_eV_per_A3": 0.0006535166325162828
+      },
+      "training_RMSE": {
+        "energy_aligned_eV_per_atom": 0.0013188258764271887,
+        "forces_eV_per_A": 0.025920625672944935,
+        "stress_eV_per_A3": 0.0005290231031113641
+      }
+    },
+    {
+      "progress": 900,
+      "score": 0.40921843678942366,
+      "validation_score_components": {
+        "energy_aligned_eV_per_atom": 0.023033501938532295,
+        "forces_eV_per_A": 0.19522737665543333,
+        "stress_eV_per_A3": 0.1909575581954581
+      },
+      "validation_RMSE": {
+        "energy_aligned_eV_per_atom": 0.002628697506667454,
+        "forces_eV_per_A": 0.03826493597166667,
+        "stress_eV_per_A3": 0.0007568835277546831
+      },
+      "training_RMSE": {
+        "energy_aligned_eV_per_atom": 0.0011864985303840754,
+        "forces_eV_per_A": 0.025641459963158263,
+        "stress_eV_per_A3": 0.0006030101441392322
+      }
+    },
+    {
+      "progress": 1000,
+      "score": 0.4160577764351188,
+      "validation_score_components": {
+        "energy_aligned_eV_per_atom": 0.02235210952112128,
+        "forces_eV_per_A": 0.19363780377502607,
+        "stress_eV_per_A3": 0.2000678631389715
+      },
+      "validation_RMSE": {
+        "energy_aligned_eV_per_atom": 0.0025895236736389153,
+        "forces_eV_per_A": 0.03810883792918246,
+        "stress_eV_per_A3": 0.0007747280744989913
+      },
+      "training_RMSE": {
+        "energy_aligned_eV_per_atom": 0.0011823568882983104,
+        "forces_eV_per_A": 0.025535553933801608,
+        "stress_eV_per_A3": 0.0006156092332635323
+      }
+    }
+  ],
+  "HCP_minus_FCC_mean_energy_residual_eV_per_atom": {
+    "original": -0.031189545880887286,
+    "selected": -0.03299442085428848
+  },
+  "contrast_interpretation": "Energy-zero invariant contrast between residual means of unmatched ensembles; NOT a matched-volume HCP-FCC phase energy difference",
+  "causal_gaps": [
+    "No E/F/stress evaluation of loaded-initial snapshot before optimizer updates",
+    "No alternative LR, frozen-layer, LoRA, loss or precision ablation",
+    "One seed; correlated frames; validation has only two parent trajectories",
+    "No inference that DFT convergence tolerance equals the RMSE noise floor"
+  ],
+  "test_policy": "Existing test inspected descriptively only; no re-ranking, re-splitting or test-driven acquisition. Future method selection uses train/validation and requires a new independent final control."
+}

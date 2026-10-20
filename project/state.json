@@ -606,7 +606,21 @@
         }
       }
     },
-    "analysis_code_commit": "9cd9350"
+    "analysis_code_commit": "9cd9350",
+    "diagnosis": {
+      "report_section": "sec:dpa4-diagnosis",
+      "result": "results/al32-foundation-finetune-20261020/dpa4-diagnosis.json",
+      "code_commit": "27ada62",
+      "source_audit": "configs/observations/2026-10-20-dpa4-initialization-source.json",
+      "status": "Descriptive evidence and prioritized options; no new runs or causal claim",
+      "findings": [
+        "All10 saved trained DPA4 candidates improve validation aligned energy but worsen validation forces and stress",
+        "Validation contains only two disordered parents; HCP is a deliberate extrapolation test",
+        "Aggregate score trades energy gain for derivative regressions; energy-zero shift cannot explain force/stress changes",
+        "Functional E/F/stress comparison against loaded-initial snapshot remains missing; out_std change is not sufficient evidence of a bug"
+      ],
+      "next": "First compare original versus loaded-initial on train/validation, then a bounded predeclared LR/head-only-or-LoRA/loss diagnostic; no post-test checkpoint re-ranking or test-driven acquisition"
+    }
   },
-  "last_updated_utc": "2026-10-20T16:40:33.366079+00:00"
+  "last_updated_utc": "2026-10-20T17:35:08.600088+00:00"
 }
