@@ -56,19 +56,26 @@ def main(run):
     assert zero['initial_merged_sha256']==hashes['dpa4/initial-merged.pt']
     inventory=json.loads(data['dpa4/parameter-inventory.json']);updates=json.loads(data['dpa4/parameter-update-check.json'])
     assert updates['status']=='passed' and not updates['frozen_changed'] and updates['updated_adapters']
+    assert inventory['parameters'].keys()==updates['final_sha256'].keys()
     for name,p in inventory['parameters'].items():
         if not p['trainable']:assert p['initial_sha256']==updates['final_sha256'][name]
+    for name in updates['updated_adapters']+updates['updated_original_parameters']:
+        p=inventory['parameters'][name]
+        assert p['trainable'] and p['initial_sha256']!=updates['final_sha256'][name]
+    assert all(inventory['parameters'][n]['adapter'] for n in updates['updated_adapters'])
     s=json.loads(data['dpa4/selection.json']);lock=json.loads(data['selection-lock.json'])
     assert not s['test_labels_opened'] and lock['selection_sha256']==hashes['dpa4/selection.json']
     card=json.loads(data['dpa4-checkpoint.json']);original_path=card['files'][card['filename']]['remote_path']
     marker='/mlip-research/runs/'+manifest['run_id']+'/'
-    history=[]
+    history=[];export_maxima={}
+    assert [x['progress'] for x in s['all_candidates']]==[0]+list(range(cfg['training']['dpa4_checkpoint_interval'],cfg['training']['dpa4_steps']+1,cfg['training']['dpa4_checkpoint_interval']))
     for item in s['all_candidates']:
         step=item['progress']
         if step==0:predictions=initial['original'];assert item['weight_sha256']=={original_path:card['sha256']}
         else:
             e=json.loads(data[f'dpa4/export-checks/{step:04d}.json'])
             diff=differences(e['live_predictions'],e['merged_predictions'],rows)
+            for k,v in diff.items():export_maxima[k]=max(export_maxima.get(k,0.),abs(v))
             assert e['status']=='passed' and close(diff,e['differences'])
             assert all(diff[k]<=v for k,v in cfg['lora']['zero_step_tolerances'].items())
             assert e['merged_sha256']==hashes[f'dpa4/merged/{step:04d}.pt']
@@ -84,6 +91,7 @@ def main(run):
             if step:assert hashes[p.split(marker,1)[1]]==h
         history.append(item)
     expected=choose(history);assert s['progress']==expected['progress'] and s['weight_sha256']==expected['weight_sha256']
+    assert close(s['metrics'],expected['metrics']) and close(s['score'],expected['score'])
     assert lock['weight_sha256']==s['weight_sha256']
     original=history[0]['metrics']['metrics_by_split']['validation'];selected=s['metrics']['metrics_by_split']['validation']
     guards={k:selected[k]['rmse']<=original[k]['rmse'] for k in ('forces_eV_per_A','stress_eV_per_A3')}
@@ -97,6 +105,8 @@ def main(run):
         prior_full_selection_sha256=sha(prior.read_bytes()),study_sha256=hashes['study.json'],selection_lock_sha256=hashes['selection-lock.json'],
         selected_progress=s['progress'],weight_sha256=s['weight_sha256'],derivative_guard_passed=s['derivative_guard_passed'],
         parameter_counts={k:inventory[k] for k in ['total','trainable','frozen']},updated_adapter_tensors=len(updates['updated_adapters']),
+        export_maxima=export_maxima,export_checkpoints=len(history)-1,
+        parameter_scope=dict(adapter_parameters=sum(v['numel'] for v in inventory['parameters'].values() if v['adapter']),trainable_original_parameters=sum(v['numel'] for v in inventory['parameters'].values() if v['trainable'] and not v['adapter']),updated_original_tensors=len(updates['updated_original_parameters'])),
         zero_step=zero,training_seconds=process['seconds'],GPU_sample_count=len(process['GPU_samples']),
         validation_comparison=dict(original=original,prior_full_selected=full['metrics']['metrics_by_split']['validation'],lora_selected=selected),
         selected_metrics=s['metrics'],history=[dict(progress=x['progress'],score=x['score']) for x in history],
