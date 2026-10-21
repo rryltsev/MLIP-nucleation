@@ -135,6 +135,8 @@
     "walltime": "00:15:00"
   },
   "run_id": "fm-al32-lora-20261020-01",
-  "stage": "submitted",
+  "runtime_status": "passed",
+  "scheduler_observation": "20957086|COMPLETED|0:0|00:03:03|183|4|tesla-a101\n",
+  "stage": "collected",
   "test_policy": "Train/validation only; no test labels or test archive access"
 }

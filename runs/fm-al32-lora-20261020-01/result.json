@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "job_id": "20957086",
+  "scope": "27 train/validation frames only; no test evaluation",
+  "selected_progress": 500,
+  "derivative_guard_passed": false,
+  "baseline_retained": false
+}

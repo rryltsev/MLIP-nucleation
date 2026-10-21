@@ -1,0 +1,26 @@
+{
+  "code_commit": "9281632786e7528fe7f3816d0f7ec4b27d25c904",
+  "analysis_source_sha256": "5d06669007044b9a7e18a81cba02ae0303b3110eb2020b891e9321ce2b3d4d43",
+  "inputs": {
+    "runs\\fm-al32-lora-20261020-01\\assessment.json": "f5c98e23a3896a5476eeeb844c1668f3012162d4e5fc1452159bac127b46cd04",
+    "runs\\fm-al32-lora-20261020-01\\dpa4\\selection.json": "452cc6bcfd8c895b230e37127a8b713a1373f322dc91f62b10b6655b8c6e6253",
+    "runs\\fm-al32-finetune-20261019-01\\dpa4\\selection.json": "912691f8a9565d2e7fee62f8fffe1f2c244244810a3da5e076e89692e562f0d6"
+  },
+  "packages": {
+    "numpy": "2.3.5",
+    "matplotlib": "3.10.8"
+  },
+  "settings": {
+    "scope": "Validation6 only; no test",
+    "alignment": "Train-only fixed per-model shift",
+    "force_components": "Cartesian",
+    "stress_components": "Voigt6",
+    "stress_GPa_per_eV_A3": 160.2176634
+  },
+  "outputs": {
+    "validation-metrics.csv": "4ded1482524b98edbc61d398c5cd9e5f6c70353ac60d8ce1d55aeec064a92303",
+    "validation-rmse.png": "f87a242b8a33a2272a2a8b5d5e426dcbd6bdd03d166661bbc6bf6f9a3f046658",
+    "validation-score.png": "ec60bb7dce0260e22474db07baf0f83cd99ddb57458730c43a9dfd3ead8dc160",
+    "validation-table.tex": "6a000ef5a6dbc230667c723631462e6bb26bbad2fa2406a09aaa02c8fa170099"
+  }
+}

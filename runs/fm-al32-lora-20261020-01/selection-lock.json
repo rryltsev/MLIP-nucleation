@@ -1,0 +1,7 @@
+{
+  "status": "validation_selection_locked_no_test",
+  "selection_sha256": "452cc6bcfd8c895b230e37127a8b713a1373f322dc91f62b10b6655b8c6e6253",
+  "weight_sha256": {
+    "/misc/home6/u3129/mlip-research/runs/fm-al32-lora-20261020-01/dpa4/merged/0500.pt": "b24a2b419bc6e28509b5222d56a0b097087bd459dc883ce7871b4e4c1c6916c5"
+  }
+}

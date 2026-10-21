@@ -1,0 +1,46 @@
+{
+  "model_id": "dpa4-lora-al32-pilot-v1-seed42-r8",
+  "status": "Diagnostic validation-selected checkpoint; derivative guard failed; not qualified scientific teacher",
+  "source_model_card": "models/foundation/dpa4-mini-omat24-20260805.json",
+  "training_configuration": "configs/training/al32-dpa4-lora-v1.json",
+  "training_run": "runs/fm-al32-lora-20261020-01/manifest.json",
+  "training_code_commit": "146e7a67b9a1f1ccfc31db50a999893052bbb576",
+  "study_sha256": "24836d0bd1fd2305d7e836ef141c8c386e9f91e9ceabec8d4b556443c1e7e6fb",
+  "dataset": "datasets/al32-pilot-v1/dft-v2.json",
+  "lora": {
+    "rank": 8,
+    "alpha": 8,
+    "trainable": 121124,
+    "policy": "Native adapters plus permitted heads/scales/biases"
+  },
+  "selected_progress": 500,
+  "merged_weight_sha256": {
+    "/misc/home6/u3129/mlip-research/runs/fm-al32-lora-20261020-01/dpa4/merged/0500.pt": "b24a2b419bc6e28509b5222d56a0b097087bd459dc883ce7871b4e4c1c6916c5"
+  },
+  "native_checkpoint_archive_member": "dpa4/model.ckpt-500.pt",
+  "native_checkpoint_sha256": "b9b2c40c56ab438694052ff0f853392148655f2dded1f2304d87db5a0dd183ad",
+  "selection_basis": "Same normalized full-validation score with original fallback; no test predictions",
+  "score": 0.3190751418919137,
+  "derivative_nonregression": {
+    "forces_eV_per_A": false,
+    "stress_eV_per_A3": false
+  },
+  "delta_Al_eV_per_atom": -0.0017690022588777562,
+  "assessment": "runs/fm-al32-lora-20261020-01/assessment.json",
+  "archive": {
+    "record": "runs/fm-al32-lora-20261020-01/artifact-backup.json",
+    "remote_archive": "/home/u3129/.local/share/mlip-research/dft-artifacts/fm-al32-lora-20261020-01.tar.gz",
+    "sha256": "5c03ffdef6e6a7e54452a7e92200f6be604d4a033f0672edcefc00194c5def97",
+    "native_weights_on_workstation": false
+  },
+  "deployment": "Merged live equivalence on27 train/validation frames passed; ASE/LAMMPS MD and Adam restart not tested",
+  "limitations": [
+    "21 training structures only; no universal teacher qualification",
+    "Prior baseline test results were inspected but must not set this run's model/checkpoint/sampling choices",
+    "No pretraining-independent generalization claim; PAW54/PAW64 differences and narrow DFT convergence remain",
+    "No MD stability, EOS, interface or distillation validation",
+    "One rank/seed; no hyperparameter optimum or causal identification from validation reuse",
+    "Native LoRA also trains selected original submodules; not adapter-only",
+    "No old held-out test access in this diagnostic run"
+  ]
+}

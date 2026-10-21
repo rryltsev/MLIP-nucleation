@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "all_adapter_B_zero": true,
+  "original_vs_initialized": {
+    "energy_constant_eV_per_atom": -0.005382705084547402,
+    "energy_nonconstant_max_eV_per_atom": 7.282055559595935e-08,
+    "force_max_eV_per_A": 1.9264789574702235e-06,
+    "stress_max_eV_per_A3": 1.579067632206943e-08
+  },
+  "live_vs_merged": {
+    "energy_constant_eV_per_atom": 0.0,
+    "energy_nonconstant_max_eV_per_atom": 7.264316082000732e-08,
+    "force_max_eV_per_A": 2.48040836936525e-06,
+    "stress_max_eV_per_A3": 1.5958744312150053e-08
+  },
+  "test_labels_opened": false,
+  "initial_merged_sha256": "9401d7ae7e1c471dc178db4c380955c48b8fb47553f4fef889c31fb343adf542"
+}
