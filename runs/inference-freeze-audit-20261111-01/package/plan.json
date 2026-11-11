@@ -1,0 +1,152 @@
+{
+  "run_id": "inference-freeze-audit-20261111-01",
+  "scope": "Inference throughput of fixed original foundation checkpoints; no training, DFT or held-out test access",
+  "structures": [
+    "Ti96",
+    "TiAl216",
+    "TiAl432",
+    "TiAl864"
+  ],
+  "geometry_source": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\TiAl\\research\\tial_fm\\runs\\grace-precision-20261107-02\\package\\inputs\\timing",
+  "structures_scope": "Existing GRACE timing geometries; TiAl cells from train, Ti96 diagnostic cell; same bytes for every model",
+  "warmup_calls": 5,
+  "measured_calls": 30,
+  "process_blocks": 2,
+  "freeze_timeout_seconds": 420,
+  "worker_timeout_seconds": 120,
+  "cases": [
+    {
+      "id": "dpa4-mini-pt",
+      "backend": "dpa4",
+      "format": "pt",
+      "triton_level": 0,
+      "path": "/home/u3129/.local/share/mlip-research/foundation-checkpoints/dpa4-mini-omat24-20260805-13edeea63448/DPA4-Mini-OMat24-v20260805.pt",
+      "source_files": {
+        "/home/u3129/.local/share/mlip-research/foundation-checkpoints/dpa4-mini-omat24-20260805-13edeea63448/DPA4-Mini-OMat24-v20260805.pt": "13edeea63448c0f8a0b38e08fd8ba196fb1e2fad5f12486b1cd23320829da268"
+      },
+      "precision": "checkpoint native float32"
+    },
+    {
+      "id": "dpa4-mini-pt2-triton0",
+      "backend": "dpa4",
+      "format": "pt2",
+      "triton_level": 0,
+      "path": "/home/u3129/.local/share/mlip-research/foundation-checkpoints/dpa4-mini-omat24-20260805-13edeea63448/DPA4-Mini-OMat24-v20260805.pt",
+      "source_files": {
+        "/home/u3129/.local/share/mlip-research/foundation-checkpoints/dpa4-mini-omat24-20260805-13edeea63448/DPA4-Mini-OMat24-v20260805.pt": "13edeea63448c0f8a0b38e08fd8ba196fb1e2fad5f12486b1cd23320829da268"
+      },
+      "precision": "checkpoint native float32"
+    },
+    {
+      "id": "dpa4-mini-pt2-triton2",
+      "backend": "dpa4",
+      "format": "pt2",
+      "triton_level": 2,
+      "path": "/home/u3129/.local/share/mlip-research/foundation-checkpoints/dpa4-mini-omat24-20260805-13edeea63448/DPA4-Mini-OMat24-v20260805.pt",
+      "source_files": {
+        "/home/u3129/.local/share/mlip-research/foundation-checkpoints/dpa4-mini-omat24-20260805-13edeea63448/DPA4-Mini-OMat24-v20260805.pt": "13edeea63448c0f8a0b38e08fd8ba196fb1e2fad5f12486b1cd23320829da268"
+      },
+      "precision": "checkpoint native float32"
+    },
+    {
+      "id": "dpa4-neo-pt",
+      "backend": "dpa4",
+      "format": "pt",
+      "triton_level": 0,
+      "path": "/home6/u3129/tial-testsets/pretrained-neo-20261022-01/DPA4-Neo-OMat24-v20260805.pt",
+      "source_files": {
+        "/home6/u3129/tial-testsets/pretrained-neo-20261022-01/DPA4-Neo-OMat24-v20260805.pt": "fd7f34ae28f921201e4a0328ddf56179892752084f8363e7796038201471c989"
+      },
+      "precision": "checkpoint native float32"
+    },
+    {
+      "id": "dpa4-neo-pt2-triton0",
+      "backend": "dpa4",
+      "format": "pt2",
+      "triton_level": 0,
+      "path": "/home6/u3129/tial-testsets/pretrained-neo-20261022-01/DPA4-Neo-OMat24-v20260805.pt",
+      "source_files": {
+        "/home6/u3129/tial-testsets/pretrained-neo-20261022-01/DPA4-Neo-OMat24-v20260805.pt": "fd7f34ae28f921201e4a0328ddf56179892752084f8363e7796038201471c989"
+      },
+      "precision": "checkpoint native float32"
+    },
+    {
+      "id": "dpa4-neo-pt2-triton2",
+      "backend": "dpa4",
+      "format": "pt2",
+      "triton_level": 2,
+      "path": "/home6/u3129/tial-testsets/pretrained-neo-20261022-01/DPA4-Neo-OMat24-v20260805.pt",
+      "source_files": {
+        "/home6/u3129/tial-testsets/pretrained-neo-20261022-01/DPA4-Neo-OMat24-v20260805.pt": "fd7f34ae28f921201e4a0328ddf56179892752084f8363e7796038201471c989"
+      },
+      "precision": "checkpoint native float32"
+    },
+    {
+      "id": "grace-1l-fp64",
+      "backend": "grace",
+      "precision": "fp64",
+      "path": "/home/u3129/.local/share/mlip-research/foundation-checkpoints/grace-1l-omat-ad76b7845df6/extracted/GRACE-1L-OMAT-30Jan25",
+      "source_files": {
+        "/home/u3129/.local/share/mlip-research/foundation-checkpoints/grace-1l-omat-ad76b7845df6/extracted/GRACE-1L-OMAT-30Jan25/checkpoint.data-00000-of-00001": "77670444b5a844fb7e4a05aae5763d339dbf9fae2b8224b6745a410bca99eb3d",
+        "/home/u3129/.local/share/mlip-research/foundation-checkpoints/grace-1l-omat-ad76b7845df6/extracted/GRACE-1L-OMAT-30Jan25/checkpoint.index": "3dfc916447b164cf16be9745889c0a13b1c96e94ac2b8b653fb089d1f6a8c34a",
+        "/home/u3129/.local/share/mlip-research/foundation-checkpoints/grace-1l-omat-ad76b7845df6/extracted/GRACE-1L-OMAT-30Jan25/model.yaml": "7610ae8c0cae122d58fc02cc5ee8b7ba915a9f84e4313574f500185aa2293123"
+      }
+    },
+    {
+      "id": "grace-2l-fp32",
+      "backend": "grace",
+      "precision": "fp32",
+      "path": "/home6/u3129/tial-fm-research/grace-precision-20261107-02/checkpoint-fp32",
+      "source_files": {
+        "/home6/u3129/tial-fm-research/grace-precision-20261107-02/checkpoint-fp32/checkpoint.index": "4ca5b700af4a30d10e4ec8c8cab6b7b86478f58adc69b6517ebbf61f1b57ff68",
+        "/home6/u3129/tial-fm-research/grace-precision-20261107-02/checkpoint-fp32/checkpoint.data-00000-of-00001": "a1d005b87b9318fc99853d3c7acdddfe633a531e5171e5ab17717c31a4a6ff6a",
+        "/home6/u3129/tial-fm-research/grace-precision-20261107-02/checkpoint-fp32/model.yaml": "9d2c48d499253916fc02189f3dbee87c079dfdf87d86770a986315e073c0c15c"
+      },
+      "provenance": {
+        "path": "/home6/u3129/tial-fm-research/grace-precision-20261107-02/checkpoint-fp32",
+        "source_kind": "controlled_cast",
+        "source_archive_sha256": "763b7e5679c81ea82d39e595e701d0c9f6565064393f705cbe76663c9583d0aa"
+      }
+    },
+    {
+      "id": "grace-2l-fp64",
+      "backend": "grace",
+      "precision": "fp64",
+      "path": "/home6/u3129/tial-fm-research/grace-2l-preparation-20261107-01/checkpoint",
+      "source_files": {
+        "/home6/u3129/tial-fm-research/grace-2l-preparation-20261107-01/checkpoint/model.yaml": "9d2c48d499253916fc02189f3dbee87c079dfdf87d86770a986315e073c0c15c",
+        "/home6/u3129/tial-fm-research/grace-2l-preparation-20261107-01/checkpoint/checkpoint.index": "e6b88f7815fb91bc8687079fc177e4d88ba4640528101855e7c6eff61a4939d1",
+        "/home6/u3129/tial-fm-research/grace-2l-preparation-20261107-01/checkpoint/checkpoint.data-00000-of-00001": "b0edbae73335e32b55e8bb64c7f4fe3cac4d5b01ea277dc5db1ac61a0d1231e5"
+      },
+      "provenance": {
+        "path": "/home6/u3129/tial-fm-research/grace-2l-preparation-20261107-01/checkpoint",
+        "archive_sha256": "763b7e5679c81ea82d39e595e701d0c9f6565064393f705cbe76663c9583d0aa",
+        "file_hashes": {
+          "model.yaml": "9d2c48d499253916fc02189f3dbee87c079dfdf87d86770a986315e073c0c15c",
+          "checkpoint.index": "e6b88f7815fb91bc8687079fc177e4d88ba4640528101855e7c6eff61a4939d1",
+          "checkpoint.data-00000-of-00001": "b0edbae73335e32b55e8bb64c7f4fe3cac4d5b01ea277dc5db1ac61a0d1231e5"
+        }
+      }
+    }
+  ],
+  "environments": {
+    "dpa4": "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4",
+    "grace": "/home6/u3129/mlip-research/envs/grace_ft_a100"
+  },
+  "metric": "Median full ASE E/F/stress latency, cache bypassed and GPU synchronized; cold load/export separate",
+  "export_tolerances": {
+    "energy_eV_per_atom": 1e-05,
+    "force_max_eV_per_A": 0.0002,
+    "stress_max_eV_per_A3": 1e-06
+  },
+  "tolerances_scope": "Serialization consistency only, not DFT accuracy or physical MD validation",
+  "input_sha256": {
+    "job.sbatch": "882d2c11d4026c5e9407082a40898616f42fd05d58c155d5df5da0122676503a",
+    "runner.py": "eb2bd726f4882f66e05f16ce8aa74bf3de816cc81307d6bb8dd559e3e797f8f9",
+    "worker.py": "aca04b96f402fabc8d4374e12f2b034d603eb292d95932cf2ccb64af19258eea",
+    "inputs/Ti96.extxyz": "c951111593e30d4cc0618bdb434a6cfd2a9780daf7afd887b10aa918fc13a793",
+    "inputs/TiAl216.extxyz": "362e955909c696f386d8dc3a53e5bdab5696eb40d130b406a2c7177ff7e452a3",
+    "inputs/TiAl432.extxyz": "8fec1eb8318689748d61027b4e2e7d6e24228e4ffb4864e2d670f32df76891cf",
+    "inputs/TiAl864.extxyz": "1561768d168637900dd51a22f1991eb44460aeed8a33b9e37fb8a4d35fbed0c2"
+  }
+}

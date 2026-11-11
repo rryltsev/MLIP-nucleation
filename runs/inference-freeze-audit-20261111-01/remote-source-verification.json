@@ -1,0 +1,13 @@
+{
+  "/home/u3129/.local/share/mlip-research/foundation-checkpoints/dpa4-mini-omat24-20260805-13edeea63448/DPA4-Mini-OMat24-v20260805.pt": true,
+  "/home6/u3129/tial-testsets/pretrained-neo-20261022-01/DPA4-Neo-OMat24-v20260805.pt": true,
+  "/home/u3129/.local/share/mlip-research/foundation-checkpoints/grace-1l-omat-ad76b7845df6/extracted/GRACE-1L-OMAT-30Jan25/checkpoint.data-00000-of-00001": true,
+  "/home/u3129/.local/share/mlip-research/foundation-checkpoints/grace-1l-omat-ad76b7845df6/extracted/GRACE-1L-OMAT-30Jan25/checkpoint.index": true,
+  "/home/u3129/.local/share/mlip-research/foundation-checkpoints/grace-1l-omat-ad76b7845df6/extracted/GRACE-1L-OMAT-30Jan25/model.yaml": true,
+  "/home6/u3129/tial-fm-research/grace-precision-20261107-02/checkpoint-fp32/checkpoint.index": true,
+  "/home6/u3129/tial-fm-research/grace-precision-20261107-02/checkpoint-fp32/checkpoint.data-00000-of-00001": true,
+  "/home6/u3129/tial-fm-research/grace-precision-20261107-02/checkpoint-fp32/model.yaml": true,
+  "/home6/u3129/tial-fm-research/grace-2l-preparation-20261107-01/checkpoint/model.yaml": true,
+  "/home6/u3129/tial-fm-research/grace-2l-preparation-20261107-01/checkpoint/checkpoint.index": true,
+  "/home6/u3129/tial-fm-research/grace-2l-preparation-20261107-01/checkpoint/checkpoint.data-00000-of-00001": true
+}
