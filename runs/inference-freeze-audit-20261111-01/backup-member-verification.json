@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "remote_archive": "/home/u3129/.local/share/mlip-research/test-artifacts/inference-freeze-audit-20261111-01.tar.gz",
+  "remote_archive_sha256": "813bd89b7b331b5c1c0e9348f7cc16ec6215d68a3b9c74b6eb0093c8ac6a70ca",
+  "members": 91,
+  "matches_collected_sha256": true
+}

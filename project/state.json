@@ -1,5 +1,5 @@
 {
-  "updated_local_date": "2026-11-11",
+  "updated_local_date": "2026-11-12",
   "stage": "DPA4_LoRA_completed_and_audited",
   "foundation_DFT_baseline": {
     "status": "Complete: original DPA4-Mini and GRACE-1L evaluated on all40 frozen DFT configurations, no fine-tuning",
@@ -196,7 +196,6 @@
   },
   "blocking_inputs": [],
   "next_actions": [
-    "Collect and assess inference benchmark20992566 when terminal; no automatic resubmission.",
     "Collect A100 job20952229, back up actual selected/candidate checkpoint outputs, audit validation-only selection and locked final test, compare with same-A100 original predictions; no blind resubmission",
     "Respect narrow force convergence margin on the two calibration parents; extend numerical convergence/domain coverage before production MD or interfaces",
     "Validate physical observables and MD stability before distillation and final alloy/nucleant selection; confirm institutional archive retention"
@@ -807,7 +806,7 @@
     "latex_preview": "Existing source updated; built-in compiler startup failed on2026-10-21 with Windows CreateProcessAsUserW Access denied5; PDF not verified"
   },
   "inference_performance_audit": {
-    "status": "historical_audit_complete; matched_A100_benchmark_pending",
+    "status": "collected_and_audited; eight_cases_complete; Neo_Triton2_export_timeout",
     "historical_audit": "runs/inference-freeze-audit-20261111-01/historical-audit.json",
     "finding": "Both projects froze DPA4 and used .pt2 in LAMMPS; several baseline, fine-tuning evaluation and phonon paths still used .pt with compile/Triton disabled. Historical exports used Triton0, which still includes AOTInductor.",
     "run": "runs/inference-freeze-audit-20261111-01/manifest.json",
@@ -827,7 +826,6 @@
     "maximum_CPU_hours": 3,
     "authorization": "User confirmed: Да, до 45 минут на одной A100. Maximum 0.75 GPU-hours and 3 CPU-hours; one A100, four CPUs, one attempt.",
     "queue_observed_local_date": "2026-11-11",
-    "estimated_start_local": "2026-11-12T02:00:22+05:00; scheduler estimate, not guaranteed",
     "benchmarks": [
       "DPA4-Mini pt/pt2-Triton0/pt2-Triton2",
       "DPA4-Neo pt/pt2-Triton0/pt2-Triton2",
@@ -841,22 +839,91 @@
       864
     ],
     "metric": "Two fresh processes per case; five warmups and thirty cache-bypassed synchronized ASE E/F/stress calls per size/process",
-    "new_results": null,
+    "new_results": {
+      "dpa4-mini-pt": {
+        "Ti96": 39.652294,
+        "TiAl216": 39.702155,
+        "TiAl432": 39.85407,
+        "TiAl864": 42.551504
+      },
+      "dpa4-mini-pt2-triton0": {
+        "Ti96": 10.882298,
+        "TiAl216": 8.63546,
+        "TiAl432": 12.862555,
+        "TiAl864": 20.846142
+      },
+      "dpa4-mini-pt2-triton2": {
+        "Ti96": 9.755174,
+        "TiAl216": 7.654051,
+        "TiAl432": 10.258839,
+        "TiAl864": 15.029231
+      },
+      "dpa4-neo-pt": {
+        "Ti96": 40.68922,
+        "TiAl216": 41.531731,
+        "TiAl432": 51.710222,
+        "TiAl864": 82.572379
+      },
+      "dpa4-neo-pt2-triton0": {
+        "Ti96": 12.745009,
+        "TiAl216": 17.056129,
+        "TiAl432": 28.896878,
+        "TiAl864": 53.351914
+      },
+      "grace-1l-fp64": {
+        "Ti96": 11.749053,
+        "TiAl216": 16.025466,
+        "TiAl432": 22.503594,
+        "TiAl864": 40.731253
+      },
+      "grace-2l-fp32": {
+        "Ti96": 14.335006,
+        "TiAl216": 18.924004,
+        "TiAl432": 28.940783,
+        "TiAl864": 48.467022
+      },
+      "grace-2l-fp64": {
+        "Ti96": 17.054228,
+        "TiAl216": 23.715342,
+        "TiAl432": 31.786138,
+        "TiAl864": 61.238053
+      }
+    },
     "continuation": [
-      "Reconcile job20992566 with squeue/sacct; do not submit a duplicate.",
-      "After terminal state: python scripts/inference_benchmark.py collect inference-freeze-audit-20261111-01",
-      "python scripts/assess_inference_benchmark.py runs/inference-freeze-audit-20261111-01",
-      "Review raw failures, .pt2 numerical equivalence and actual allocated cost; update LaTeX report and state; commit/push curated results."
+      "Retain three successfully checked ASE exports and all timing evidence; reject the partial Neo Triton2 artifact.",
+      "Neo Triton2 export/benchmark remains unmeasured; any future run needs its own immutable record and authorized budget.",
+      "Validate new exported artifacts in native LAMMPS separately before production MD."
     ],
-    "backup": "Existing private cluster main-home archive plus verified workstation archive; exports excluded from Git",
+    "backup": "runs/inference-freeze-audit-20261111-01/artifact-backup.json",
     "automatic_followup_scheduled": false,
     "report": "reports/inference-freeze-audit-2026-11-11/main.tex",
-    "latex_preview": "Compiler could not start: Tectonic WinError5 access denied; no PDF created. Source retained.",
-    "scheduler_observation": "runs/inference-freeze-audit-20261111-01/scheduler-observation-20261111.json",
-    "allocated_cost_at_observation": {
-      "CPU_seconds": 0,
-      "GPU_seconds": 0,
-      "state": "PENDING"
-    }
+    "latex_preview": "2026-11-12: updated source and generated tables preserved; built-in Tectonic still fails before compilation with WinError5. No PDF created.",
+    "scheduler_observation": "runs/inference-freeze-audit-20261111-01/scheduler.json",
+    "assessment": "runs/inference-freeze-audit-20261111-01/assessment.json",
+    "completed_local": "2026-11-11T21:52:26+05:00",
+    "started_local": "2026-11-11T21:22:48+05:00",
+    "scheduler_status": "COMPLETED",
+    "scheduler_exit_code": "0:0",
+    "actual_GPU_seconds": 1778,
+    "actual_GPU_hours": 0.4938888888888889,
+    "actual_CPU_seconds": 7112,
+    "actual_CPU_hours": 1.9755555555555555,
+    "active_jobs": 0,
+    "successful_cases": 8,
+    "measurement_processes": 16,
+    "failures": {
+      "dpa4-neo-pt2-triton2": "Export timeout after 420.191 seconds; no inference measurements"
+    },
+    "export_equivalence": {
+      "dpa4-mini-pt2-triton0": true,
+      "dpa4-mini-pt2-triton2": true,
+      "dpa4-neo-pt2-triton0": true
+    },
+    "new_results_units": "milliseconds per full ASE E/F/stress call; median of 60 measurements per case/structure",
+    "conclusion": "Freeze yields 2.04-4.60x Mini speedup (Triton0), 2.83-5.19x Mini (Triton2), and 1.55-3.19x Neo (Triton0). On TiAl216/432/864 Mini Triton2 is 2.09/2.19/2.71x faster than GRACE-1L fp64; Neo Triton0 is similar to GRACE-2L fp32, with size-dependent ranking. No Neo Triton2 timing is available.",
+    "scope": "One A100, four fixed structures, ASE E/F/stress including neighbours and synchronization; not equal DFT accuracy, long MD or native LAMMPS throughput.",
+    "backup_verification": "runs/inference-freeze-audit-20261111-01/backup-member-verification.json",
+    "collected_files_verified": 91,
+    "no_resubmission": true
   }
 }

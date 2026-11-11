@@ -1,6 +1,6 @@
 {
   "run_id": "inference-freeze-audit-20261111-01",
-  "stage": "submitted",
+  "stage": "collected",
   "job_id": "20992566",
   "created_utc": "2026-11-11T05:03:19.844609+00:00",
   "remote_run_dir": "/home6/u3129/mlip-research/runs/inference-freeze-audit-20261111-01",
@@ -33,5 +33,16 @@
   "authorization": "User confirmed: \u0414\u0430, \u0434\u043e 45 \u043c\u0438\u043d\u0443\u0442 \u043d\u0430 \u043e\u0434\u043d\u043e\u0439 A100. Maximum 0.75 GPU-hours and 3 CPU-hours; one A100, four CPUs, one attempt.",
   "authorization_recorded_utc": "2026-11-11T05:05:32.885288+00:00",
   "base_checkout_commit": "55b448ba09e2cc1515fff65198fb908ea1618ad1",
-  "code_provenance_note": "Implementation committed after submission; staged source bytes are fixed by input_sha256 and identical to this commit."
+  "code_provenance_note": "Implementation committed after submission; staged source bytes are fixed by input_sha256 and identical to this commit.",
+  "scheduler_parent": "20992566|COMPLETED|0:0|1778|7112|tesla-a101",
+  "result_archive_sha256": "2910cd09126f7ecfe0236806029d20439aa2ce19efd39ec6ac6c7e5ff74a465e",
+  "assessment": "assessment.json",
+  "assessment_status": "partial",
+  "successful_cases": 8,
+  "failed_cases": {
+    "dpa4-neo-pt2-triton2": "Export timeout after 420.191 seconds; no inference measurements"
+  },
+  "actual_GPU_seconds": 1778,
+  "actual_CPU_seconds": 7112,
+  "finished_local": "2026-11-11T21:52:26+05:00"
 }

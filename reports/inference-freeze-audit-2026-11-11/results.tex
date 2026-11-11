@@ -1,0 +1,69 @@
+\section*{Matched A100 results}
+Median full ASE energy/force/stress latency in milliseconds; lower is faster.
+The table pools 60 timed calls per case and structure (30 in each of two processes).
+Compilation, model loading and warmup are excluded.
+\begin{center}\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Model and runtime & Ti96 & TiAl216 & TiAl432 & TiAl864 \\
+\midrule
+DPA4-Mini, \texttt{.pt} & 39.65 & 39.70 & 39.85 & 42.55 \\
+DPA4-Mini, \texttt{.pt2}, Triton0 & 10.88 & 8.64 & 12.86 & 20.85 \\
+DPA4-Mini, \texttt{.pt2}, Triton2 & 9.76 & 7.65 & 10.26 & 15.03 \\
+DPA4-Neo, \texttt{.pt} & 40.69 & 41.53 & 51.71 & 82.57 \\
+DPA4-Neo, \texttt{.pt2}, Triton0 & 12.75 & 17.06 & 28.90 & 53.35 \\
+GRACE-1L, fp64 / XLA & 11.75 & 16.03 & 22.50 & 40.73 \\
+GRACE-2L, fp32 / XLA & 14.34 & 18.92 & 28.94 & 48.47 \\
+GRACE-2L, fp64 / XLA & 17.05 & 23.72 & 31.79 & 61.24 \\
+\bottomrule
+\end{tabular}\end{center}
+DPA4-Neo/Triton2 is omitted because export exceeded its 420-second subprocess limit.
+The last logged stage was compilation of the parallel with-communication artifact,
+after the first AOTInductor compilation. The retained partial file is not an accepted export;
+no inference time or numerical-equivalence result exists for this case.
+\begin{center}\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Export / eager speedup & Ti96 & TiAl216 & TiAl432 & TiAl864 \\
+\midrule
+DPA4-Mini, \texttt{.pt2}, Triton0 & 3.64 & 4.60 & 3.10 & 2.04 \\
+DPA4-Mini, \texttt{.pt2}, Triton2 & 4.06 & 5.19 & 3.88 & 2.83 \\
+DPA4-Neo, \texttt{.pt2}, Triton0 & 3.19 & 2.44 & 1.79 & 1.55 \\
+\bottomrule
+\end{tabular}\end{center}
+For TiAl216/432/864, DPA4-Mini/Triton2 is respectively 2.09, 2.19 and 2.71 times
+faster than the tested GRACE-1L fp64 path. DPA4-Neo/Triton0 and GRACE-2L fp32
+have similar throughput: Neo latency is about 10\% lower at 216 atoms, almost equal
+at 432 atoms, and 10\% higher at 864 atoms. These compare the specific checkpoint
+variants and precisions used by the projects, not equal-accuracy models.
+\section*{Numerical checks and export cost}
+Every completed export passes all predefined tolerances on the first perturbed
+frame of each of the four structures in both processes. Maximum absolute discrepancies
+are shown below; this is serialization consistency, not DFT validation.
+\begin{center}\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Export & $\Delta E$/atom (eV) & $\Delta F$ (eV/\AA) & $\Delta\sigma$ (eV/\AA$^3$) & Freeze (s) \\
+\midrule
+DPA4-Mini/T0 & 8.64e-08 & 8.89e-06 & 1.23e-07 & 287.1 \\
+DPA4-Mini/T2 & 8.60e-08 & 9.23e-06 & 1.15e-07 & 333.4 \\
+DPA4-Neo/T0 & 1.88e-07 & 4.64e-06 & 8.41e-08 & 291.0 \\
+\bottomrule
+\end{tabular}\end{center}
+The largest force difference across all three accepted exports is below
+$9.3\,10^{-6}$ eV/\AA. TF32 and AMP were disabled. Triton2 was enabled during
+the Mini export; the runtime environment reports Triton0 because the frozen
+executable retains its export-time settings.
+\section*{Scope and variability}
+All cases ran sequentially on one NVIDIA A100-PCIE-40GB on tesla-a101, driver
+580.126.20, with four allocated CPUs. DeePMD-kit 3.2.0 / Torch 2.11.0 and
+TensorPotential 0.6.1 / TensorFlow 2.20.0 were used. Neighbour preparation,
+host/device transfers and result synchronization are included; ASE result caching is bypassed.
+The second process block reversed the case order. Some small-cell measurements show
+visible process variation: Mini/Triton2 at Ti96 has process medians 9.78 and 7.85 ms;
+GRACE-2L fp64 at TiAl216 has 25.11 and 20.52 ms. Raw samples, process medians and
+10th/90th percentiles are retained. Two processes do not define a broad uncertainty estimate.
+Ti96 is pure Ti whereas the other cases are Ti--Al; the four points are not a single
+composition-controlled scaling series. This is an ASE inference benchmark, not native
+LAMMPS MD throughput, long-time stability, or an equal-DFT-accuracy comparison.
+The timeout applies only to Neo/Triton2 export. No new computation was submitted during collection.

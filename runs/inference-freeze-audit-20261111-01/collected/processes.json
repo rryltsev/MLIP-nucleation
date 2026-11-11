@@ -1,0 +1,194 @@
+[
+  {
+    "command": [
+      "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/inference-freeze-audit-20261111-01/worker.py",
+      "dpa4-mini-pt",
+      "0"
+    ],
+    "returncode": 0,
+    "seconds": 21.140242733061314,
+    "case": "dpa4-mini-pt",
+    "block": 0
+  },
+  {
+    "command": [
+      "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/inference-freeze-audit-20261111-01/worker.py",
+      "dpa4-mini-pt2-triton0",
+      "0"
+    ],
+    "returncode": 0,
+    "seconds": 11.998777747154236,
+    "case": "dpa4-mini-pt2-triton0",
+    "block": 0
+  },
+  {
+    "command": [
+      "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/inference-freeze-audit-20261111-01/worker.py",
+      "dpa4-mini-pt2-triton2",
+      "0"
+    ],
+    "returncode": 0,
+    "seconds": 11.8994957562536,
+    "case": "dpa4-mini-pt2-triton2",
+    "block": 0
+  },
+  {
+    "command": [
+      "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/inference-freeze-audit-20261111-01/worker.py",
+      "dpa4-neo-pt",
+      "0"
+    ],
+    "returncode": 0,
+    "seconds": 21.506218448281288,
+    "case": "dpa4-neo-pt",
+    "block": 0
+  },
+  {
+    "command": [
+      "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/inference-freeze-audit-20261111-01/worker.py",
+      "dpa4-neo-pt2-triton0",
+      "0"
+    ],
+    "returncode": 0,
+    "seconds": 15.602711282670498,
+    "case": "dpa4-neo-pt2-triton0",
+    "block": 0
+  },
+  {
+    "command": [
+      "/home6/u3129/mlip-research/envs/grace_ft_a100/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/inference-freeze-audit-20261111-01/worker.py",
+      "grace-1l-fp64",
+      "0"
+    ],
+    "returncode": 0,
+    "seconds": 31.941921468824148,
+    "case": "grace-1l-fp64",
+    "block": 0
+  },
+  {
+    "command": [
+      "/home6/u3129/mlip-research/envs/grace_ft_a100/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/inference-freeze-audit-20261111-01/worker.py",
+      "grace-2l-fp32",
+      "0"
+    ],
+    "returncode": 0,
+    "seconds": 50.469144850969315,
+    "case": "grace-2l-fp32",
+    "block": 0
+  },
+  {
+    "command": [
+      "/home6/u3129/mlip-research/envs/grace_ft_a100/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/inference-freeze-audit-20261111-01/worker.py",
+      "grace-2l-fp64",
+      "0"
+    ],
+    "returncode": 0,
+    "seconds": 57.367317885160446,
+    "case": "grace-2l-fp64",
+    "block": 0
+  },
+  {
+    "command": [
+      "/home6/u3129/mlip-research/envs/grace_ft_a100/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/inference-freeze-audit-20261111-01/worker.py",
+      "grace-2l-fp64",
+      "1"
+    ],
+    "returncode": 0,
+    "seconds": 52.21933579444885,
+    "case": "grace-2l-fp64",
+    "block": 1
+  },
+  {
+    "command": [
+      "/home6/u3129/mlip-research/envs/grace_ft_a100/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/inference-freeze-audit-20261111-01/worker.py",
+      "grace-2l-fp32",
+      "1"
+    ],
+    "returncode": 0,
+    "seconds": 50.612429071217775,
+    "case": "grace-2l-fp32",
+    "block": 1
+  },
+  {
+    "command": [
+      "/home6/u3129/mlip-research/envs/grace_ft_a100/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/inference-freeze-audit-20261111-01/worker.py",
+      "grace-1l-fp64",
+      "1"
+    ],
+    "returncode": 0,
+    "seconds": 32.63711869716644,
+    "case": "grace-1l-fp64",
+    "block": 1
+  },
+  {
+    "command": [
+      "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/inference-freeze-audit-20261111-01/worker.py",
+      "dpa4-neo-pt2-triton0",
+      "1"
+    ],
+    "returncode": 0,
+    "seconds": 18.672686425969005,
+    "case": "dpa4-neo-pt2-triton0",
+    "block": 1
+  },
+  {
+    "command": [
+      "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/inference-freeze-audit-20261111-01/worker.py",
+      "dpa4-neo-pt",
+      "1"
+    ],
+    "returncode": 0,
+    "seconds": 20.778166573494673,
+    "case": "dpa4-neo-pt",
+    "block": 1
+  },
+  {
+    "command": [
+      "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/inference-freeze-audit-20261111-01/worker.py",
+      "dpa4-mini-pt2-triton2",
+      "1"
+    ],
+    "returncode": 0,
+    "seconds": 12.610378995537758,
+    "case": "dpa4-mini-pt2-triton2",
+    "block": 1
+  },
+  {
+    "command": [
+      "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/inference-freeze-audit-20261111-01/worker.py",
+      "dpa4-mini-pt2-triton0",
+      "1"
+    ],
+    "returncode": 0,
+    "seconds": 12.75908719561994,
+    "case": "dpa4-mini-pt2-triton0",
+    "block": 1
+  },
+  {
+    "command": [
+      "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/inference-freeze-audit-20261111-01/worker.py",
+      "dpa4-mini-pt",
+      "1"
+    ],
+    "returncode": 0,
+    "seconds": 18.275004629045725,
+    "case": "dpa4-mini-pt",
+    "block": 1
+  }
+]

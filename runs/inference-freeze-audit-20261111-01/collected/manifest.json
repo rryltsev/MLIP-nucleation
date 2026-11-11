@@ -1,0 +1,37 @@
+{
+  "run_id": "inference-freeze-audit-20261111-01",
+  "stage": "submitted",
+  "job_id": "20992566",
+  "created_utc": "2026-11-11T05:03:19.844609+00:00",
+  "remote_run_dir": "/home6/u3129/mlip-research/runs/inference-freeze-audit-20261111-01",
+  "code_commit": "36182d092f6c93b6cd35f350f3a0d20c80d74073",
+  "resources": {
+    "partition": "v100",
+    "account": "imet-2026-2",
+    "qos": "normal",
+    "nodes": 1,
+    "tasks": 1,
+    "cpus": 4,
+    "gpus": 1,
+    "memory_GiB": 32,
+    "walltime": "00:45:00"
+  },
+  "maximum_GPU_hours": 0.75,
+  "maximum_CPU_hours": 3.0,
+  "user_authorized_budget": true,
+  "input_sha256": {
+    "job.sbatch": "882d2c11d4026c5e9407082a40898616f42fd05d58c155d5df5da0122676503a",
+    "plan.json": "a41da592e7911bd2cab252e6ea23250521804fc3b9e107f92c95e93dee7ecdd8",
+    "runner.py": "eb2bd726f4882f66e05f16ce8aa74bf3de816cc81307d6bb8dd559e3e797f8f9",
+    "worker.py": "aca04b96f402fabc8d4374e12f2b034d603eb292d95932cf2ccb64af19258eea",
+    "inputs/Ti96.extxyz": "c951111593e30d4cc0618bdb434a6cfd2a9780daf7afd887b10aa918fc13a793",
+    "inputs/TiAl216.extxyz": "362e955909c696f386d8dc3a53e5bdab5696eb40d130b406a2c7177ff7e452a3",
+    "inputs/TiAl432.extxyz": "8fec1eb8318689748d61027b4e2e7d6e24228e4ffb4864e2d670f32df76891cf",
+    "inputs/TiAl864.extxyz": "1561768d168637900dd51a22f1991eb44460aeed8a33b9e37fb8a4d35fbed0c2"
+  },
+  "input_hash": "2ce6b30618f22023f3e4f48cc29ced037608948a47814f4c1c32fcaece195750",
+  "authorization": "User confirmed: \u0414\u0430, \u0434\u043e 45 \u043c\u0438\u043d\u0443\u0442 \u043d\u0430 \u043e\u0434\u043d\u043e\u0439 A100. Maximum 0.75 GPU-hours and 3 CPU-hours; one A100, four CPUs, one attempt.",
+  "authorization_recorded_utc": "2026-11-11T05:05:32.885288+00:00",
+  "base_checkout_commit": "55b448ba09e2cc1515fff65198fb908ea1618ad1",
+  "code_provenance_note": "Implementation committed after submission; staged source bytes are fixed by input_sha256 and identical to this commit."
+}

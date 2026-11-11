@@ -1,0 +1,26 @@
+{
+  "dpa4-mini-pt2-triton0": {
+    "returncode": 0,
+    "seconds": 287.0508616939187,
+    "last_logged_stage": "[2026-11-11 21:27:33,479] DEEPMD INFO    Detected DPA4 / SeZM checkpoint '/home/u3129/.local/share/mlip-research/foundation-checkpoints/dpa4-mini-omat24-20260805-13edeea63448/DPA4-Mini-OMat24-v20260805.pt'; saved AOTInductor archive to /misc/home6/u3129/mlip-research/runs/inference-freeze-audit-20261111-01/exports/dpa4-mini-pt2-triton0.pt2",
+    "accepted": true
+  },
+  "dpa4-mini-pt2-triton2": {
+    "returncode": 0,
+    "seconds": 333.4374545253813,
+    "last_logged_stage": "[2026-11-11 21:33:04,658] DEEPMD INFO    Detected DPA4 / SeZM checkpoint '/home/u3129/.local/share/mlip-research/foundation-checkpoints/dpa4-mini-omat24-20260805-13edeea63448/DPA4-Mini-OMat24-v20260805.pt'; saved AOTInductor archive to /misc/home6/u3129/mlip-research/runs/inference-freeze-audit-20261111-01/exports/dpa4-mini-pt2-triton2.pt2",
+    "accepted": true
+  },
+  "dpa4-neo-pt2-triton0": {
+    "returncode": 0,
+    "seconds": 291.044059144333,
+    "last_logged_stage": "[2026-11-11 21:37:56,543] DEEPMD INFO    Detected DPA4 / SeZM checkpoint '/home6/u3129/tial-testsets/pretrained-neo-20261022-01/DPA4-Neo-OMat24-v20260805.pt'; saved AOTInductor archive to /misc/home6/u3129/mlip-research/runs/inference-freeze-audit-20261111-01/exports/dpa4-neo-pt2-triton0.pt2",
+    "accepted": true
+  },
+  "dpa4-neo-pt2-triton2": {
+    "returncode": -999,
+    "seconds": 420.1909900587052,
+    "last_logged_stage": "[2026-11-11 21:43:25,621] DEEPMD INFO    Compiling the parallel with-comm artifact (second AOTInductor compilation)...",
+    "accepted": false
+  }
+}

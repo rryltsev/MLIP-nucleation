@@ -1,0 +1,3 @@
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda4       397G  3.0G  394G   1% /tmp
+stg06:/home6     28T   17T  9.9T  63% /misc/home6

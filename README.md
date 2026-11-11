@@ -136,6 +136,27 @@ unknown Al32 scheduler jobs or ambiguous submissions, and counts each live job's
 full reservation. `--system configs/dft/al32-kmesh-v2.json` selects the revision
 when staging; dependent labeling inherits the source configuration.
 
+## Matched inference benchmark
+
+Job `20992566` completed on 2026-11-11 on one A100 in 1778 seconds. Eight of nine
+cases completed two fresh-process measurement blocks on identical Ti96 and
+TiAl216/432/864 inputs. Standard `.pt2` freeze accelerated DPA4-Mini by 2.04--4.60x
+and DPA4-Neo by 1.55--3.19x relative to their eager `.pt` paths; Mini with Triton2
+gave 2.83--5.19x. All three completed exports passed predefined E/F/stress
+equivalence checks. Neo/Triton2 exceeded its 420-second export limit during the
+second, with-communication AOT compilation and has no accepted inference result.
+Compared with the project GRACE variants, frozen Mini/Triton2 was faster than
+GRACE-1L fp64 on these cases; frozen Neo/Triton0 and GRACE-2L fp32 were close,
+with a size-dependent ranking. This measures full ASE E/F/stress latency,
+including neighbours and synchronization, not equal-accuracy performance or
+native LAMMPS MD throughput.
+
+See `runs/inference-freeze-audit-20261111-01/assessment.json` and
+`reports/inference-freeze-audit-2026-11-11/main.tex`. All 91 collected members and
+the actual private main-home/workstation backups were verified. Export binaries
+remain outside Git. Reproduce tables using `scripts/assess_inference_benchmark.py`
+and `scripts/report_inference_benchmark.py`; no automatic resubmission is configured.
+
 ## Storage
 
 Commit source, configuration, skills, manifests, small curated results, LaTeX and bibliography. Choose LFS or durable external storage before producing large datasets, checkpoints and trajectories. Keep immutable SHA-256 manifests and verify retrieval; cluster scratch is not an archive. VASP POTCAR files and credentials must not be uploaded.

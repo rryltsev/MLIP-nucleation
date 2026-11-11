@@ -1,0 +1,8 @@
+{
+  "remote_archive": "/home/u3129/.local/share/mlip-research/test-artifacts/inference-freeze-audit-20261111-01.tar.gz",
+  "remote_archive_sha256": "813bd89b7b331b5c1c0e9348f7cc16ec6215d68a3b9c74b6eb0093c8ac6a70ca",
+  "local_archive": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\MLIP-research\\runs\\inference-freeze-audit-20261111-01\\result.tar.gz",
+  "local_archive_sha256": "2910cd09126f7ecfe0236806029d20439aa2ce19efd39ec6ac6c7e5ff74a465e",
+  "all_members_verified": true,
+  "note": "Archives may differ in gzip metadata; remote/local member equality verified before archive creation"
+}

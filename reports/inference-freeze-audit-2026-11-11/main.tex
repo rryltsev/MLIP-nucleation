@@ -5,7 +5,7 @@
 \hypersetup{colorlinks=true,urlcolor=blue}
 \title{DPA4 inference-path audit and comparison with GRACE}
 \author{MLIP research workflow}
-\date{11 November 2026}
+\date{12 November 2026}
 \begin{document}
 \maketitle
 \noindent\textbf{Conclusion.} Both MLIP-research and TiAl exported DPA4 checkpoints to
@@ -13,8 +13,10 @@
 However, several baseline, fine-tuned prediction and phonon workflows continued
 to use the original \texttt{.pt} checkpoint. Their launchers disabled inference
 compilation and optional Triton kernels. Thus export was implemented, but was not
-consistently used for repeated inference. The performance penalty has not yet
-been isolated experimentally.
+consistently used for repeated inference. The matched A100 benchmark now confirms
+2.04--4.60-fold speedup for DPA4-Mini with standard freeze, 2.83--5.19-fold with
+Triton2 freeze, and 1.55--3.19-fold for DPA4-Neo with standard freeze. Every
+completed export passed the predefined energy, force and stress tolerances.
 
 \section*{Direct evidence}
 In MLIP-research, job 20950326 ran
@@ -85,13 +87,16 @@ TiAl864 & 48.47 & 60.65 & 1.251\\
 These full-call timings include neighbour preparation. They cannot be compared
 directly with DPA4 measured on another structure or device.
 
-\section*{Matched experiment submitted}
+\section*{Matched experiment completed}
 Run \texttt{inference-freeze-audit-20261111-01}, Slurm job
 \textbf{20992566}, was submitted after explicit user approval.
 Allocation: one A100, four CPUs, 32 GiB, account \texttt{imet-2026-2},
 partition \texttt{v100}, maximum 45 minutes (0.75 GPU-hours and 3 CPU-hours).
-At the recorded observation it is pending for resources; Slurm estimates
-12 November, 02:00 local time (UTC+5). This estimate is not guaranteed.
+The job completed successfully on 11 November, 21:22:48--21:52:26 local time
+(UTC+5), earlier than its queue estimate. Actual allocation cost was 1778
+GPU-seconds (0.4939 GPU-hours) and 7112 CPU-seconds (1.9756 CPU-hours).
+Eight cases completed both measurement processes. One export exceeded its
+420-second subprocess limit; this failure is preserved despite the Slurm exit code 0.
 
 Nine cases compare DPA4-Mini and DPA4-Neo in eager \texttt{.pt},
 \texttt{.pt2}/Triton0 and \texttt{.pt2}/Triton2 modes, GRACE-1L fp64,
@@ -107,9 +112,9 @@ $10^{-5}$ eV/atom in energy, $2\,10^{-4}$ eV/\AA\ in force components, and
 $10^{-6}$ eV/\AA$^3$ in tensile ASE stress. Speed claims for an export must be
 accompanied by these checks. The experiment does not establish equal DFT accuracy,
 long-time MD stability, or native LAMMPS/Kokkos throughput.
-No matched A100 performance results are available at the time of this report.
+\input{results.tex}
 
-\section*{Reproducibility and continuation}
+\section*{Reproducibility and storage}
 All findings, historical source snapshots and SHA-256 values are retained under
 \path{runs/inference-freeze-audit-20261111-01/}.
 \texttt{historical-audit.json} maps each statement to its source;
@@ -119,13 +124,21 @@ Implementation commit:
 \path{36182d0}.
 The staged source hashes identify the exact executed code.
 
-Reconcile job 20992566 before taking further action. After a terminal state:
+All 91 collected files match their remote SHA-256 values; all submitted input
+hashes and model hashes were rechecked. The actual result archive is stored
+privately on this workstation and in cluster main home. All 91 members of the
+main-home archive were independently checked against the collected hashes.
+Successful exports and the rejected partial Neo/Triton2 file remain outside Git.
+\texttt{assessment.json} holds raw-derived timing summaries, export checks and
+ratios; \texttt{report-provenance.json} hashes the generated result tables.
+
+To reproduce the local analysis from collected data:
 \begin{quote}\ttfamily\small
-python scripts/inference\_benchmark.py collect inference-freeze-audit-20261111-01\\
-python scripts/assess\_inference\_benchmark.py runs/inference-freeze-audit-20261111-01
+python scripts/assess\_inference\_benchmark.py runs/inference-freeze-audit-20261111-01\\
+python scripts/report\_inference\_benchmark.py
 \end{quote}
-Retain failed exports and process logs. Verify remote/local member hashes,
-archive actual exports using the existing private main-home/workstation
-backend, update this report and project state, and commit curated results.
-Do not resubmit automatically or interpret absence of measurements as a speed result.
+The completed run was not resubmitted. Neo/Triton2 throughput remains unknown;
+any future completion of that case needs a separately recorded allocation and
+must retain the failed attempt. The present export checks cover ASE; native
+LAMMPS deployment of these newly frozen artifacts is a separate validation.
 \end{document}

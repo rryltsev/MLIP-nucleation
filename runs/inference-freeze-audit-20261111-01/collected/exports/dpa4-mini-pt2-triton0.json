@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/dp",
+    "--pt",
+    "freeze",
+    "-c",
+    "/home/u3129/.local/share/mlip-research/foundation-checkpoints/dpa4-mini-omat24-20260805-13edeea63448/DPA4-Mini-OMat24-v20260805.pt",
+    "-o",
+    "/misc/home6/u3129/mlip-research/runs/inference-freeze-audit-20261111-01/exports/dpa4-mini-pt2-triton0.pt2"
+  ],
+  "returncode": 0,
+  "seconds": 287.0508616939187,
+  "freeze_environment": {
+    "DP_TRITON_INFER": "0",
+    "DP_COMPILE_INFER": "0",
+    "DP_TF32_INFER": "0",
+    "DP_AMP_INFER": "0"
+  },
+  "source_files": {
+    "/home/u3129/.local/share/mlip-research/foundation-checkpoints/dpa4-mini-omat24-20260805-13edeea63448/DPA4-Mini-OMat24-v20260805.pt": "13edeea63448c0f8a0b38e08fd8ba196fb1e2fad5f12486b1cd23320829da268"
+  },
+  "sha256": "e92399065d55f2d336d7b86992594e8be457ec55a5c67e55a5dc4f4bade5173e"
+}
