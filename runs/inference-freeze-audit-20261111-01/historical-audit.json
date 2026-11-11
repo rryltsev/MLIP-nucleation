@@ -1,0 +1,419 @@
+{
+  "date": "2026-11-11",
+  "sources": {
+    "mlip-freeze-process": {
+      "original": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\MLIP-research\\runs\\fm-deployment-20261017-03\\dpa4\\export-process.json",
+      "snapshot": "runs/inference-freeze-audit-20261111-01/historical-evidence/mlip-freeze-process.json",
+      "sha256": "1f00c9e6b0a3bc7a0467d8e813f16c627eef1b0f08be6b1db519a5eb70102877"
+    },
+    "mlip-lammps-result": {
+      "original": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\MLIP-research\\runs\\fm-deployment-20261017-07\\dpa4\\result.json",
+      "snapshot": "runs/inference-freeze-audit-20261111-01/historical-evidence/mlip-lammps-result.json",
+      "sha256": "b3c2225ad852312c79a06f7192d709f59521192706dda5b67b102b3b4963ac15"
+    },
+    "mlip-export-launcher": {
+      "original": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\MLIP-research\\scripts\\hpc\\fm-deployment.sbatch",
+      "snapshot": "runs/inference-freeze-audit-20261111-01/historical-evidence/mlip-export-launcher.sbatch",
+      "sha256": "14c3a2d73efa2dcc187c5e28cd2c9ae013cf4c4bd17d461bd5c07ceed1f2f426"
+    },
+    "mlip-baseline-launcher": {
+      "original": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\MLIP-research\\scripts\\hpc\\fm-al32-baseline.sbatch",
+      "snapshot": "runs/inference-freeze-audit-20261111-01/historical-evidence/mlip-baseline-launcher.sbatch",
+      "sha256": "f411dee7bc7158bf08b2b2e7273a4d9335dcf01ff6c09a96acff59474dfbd70b"
+    },
+    "mlip-baseline-worker": {
+      "original": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\MLIP-research\\scripts\\hpc\\fm-al32-baseline.py",
+      "snapshot": "runs/inference-freeze-audit-20261111-01/historical-evidence/mlip-baseline-worker.py",
+      "sha256": "09325ad99f287b18d324611948be2b7fdcb21663d3c5cf5481e41e2f80907157"
+    },
+    "mlip-dpa4-timing": {
+      "original": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\MLIP-research\\runs\\fm-al32-baseline-20261019-02\\dpa4\\predictions.json",
+      "snapshot": "runs/inference-freeze-audit-20261111-01/historical-evidence/mlip-dpa4-timing.json",
+      "sha256": "220764d10331b5466410c2c73836a5fec0049f89a86f9d9129bdcf764e2452dd"
+    },
+    "mlip-grace-timing": {
+      "original": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\MLIP-research\\runs\\fm-al32-baseline-20261019-02\\grace\\predictions.json",
+      "snapshot": "runs/inference-freeze-audit-20261111-01/historical-evidence/mlip-grace-timing.json",
+      "sha256": "da983ca436d26a5648e5f90e8b1ede048844ec118ecc09e938dca9b76ae4970e"
+    },
+    "tial-pilot-worker": {
+      "original": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\TiAl\\research\\tial_fm\\scripts\\evaluate_pilot.py",
+      "snapshot": "runs/inference-freeze-audit-20261111-01/historical-evidence/tial-pilot-worker.py",
+      "sha256": "663f5fa9a6b4c5b2edbd2d47ee07dc8c30f89032e69e49d7d433f5766bb1d41b"
+    },
+    "tial-baseline-worker": {
+      "original": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\TiAl\\research\\tial_fm\\scripts\\baseline_worker.py",
+      "snapshot": "runs/inference-freeze-audit-20261111-01/historical-evidence/tial-baseline-worker.py",
+      "sha256": "ee6a45f509e812826172ebd89530a07718ab972b62bf9870c86a21cfcc56eb34"
+    },
+    "tial-baseline-export": {
+      "original": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\TiAl\\research\\tial_fm\\runs\\dpa4-n200-pilot-20261106-02\\collected\\baseline\\export_checks.json",
+      "snapshot": "runs/inference-freeze-audit-20261111-01/historical-evidence/tial-baseline-export.json",
+      "sha256": "082ca19ce86e4a93e0b5770db521388114962128d3f20b2ead5c09990b42fc69"
+    },
+    "tial-md-launcher": {
+      "original": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\TiAl\\audit\\oct26\\pbe15k_melting_1775\\collected\\job.sbatch",
+      "snapshot": "runs/inference-freeze-audit-20261111-01/historical-evidence/tial-md-launcher.sbatch",
+      "sha256": "c14b5f5c787c7637a40181e0c0209e8024c44cf7d3ee127b2f2b46b538eed6c1"
+    },
+    "tial-md-input": {
+      "original": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\TiAl\\audit\\oct26\\pbe15k_melting_1775\\collected\\T1775K\\melt\\setup.in",
+      "snapshot": "runs/inference-freeze-audit-20261111-01/historical-evidence/tial-md-input.in",
+      "sha256": "a6a68c523a7e6cc5da603b371d4fac41bc0f62ac7f0ee7751106fd2f74c26915"
+    },
+    "tial-md-preflight": {
+      "original": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\TiAl\\audit\\oct26\\pbe15k_melting_1775\\collected\\preflight.json",
+      "snapshot": "runs/inference-freeze-audit-20261111-01/historical-evidence/tial-md-preflight.json",
+      "sha256": "b17d759efa7542850c2135671a576e50621b05ef51bb3c6491d4c3fb508629e7"
+    },
+    "tial-grace-gpu-summary": {
+      "original": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\TiAl\\research\\tial_fm\\runs\\grace-precision-20261107-02\\collected\\comparison\\gpu\\summary.json",
+      "snapshot": "runs/inference-freeze-audit-20261111-01/historical-evidence/tial-grace-gpu-summary.json",
+      "sha256": "3d7e4815f1c0bb78a585d82402950a1efbeb2f7c0bacaf36fa427ff100339aff"
+    }
+  },
+  "conclusion": "Freeze was performed in both projects and .pt2 was actually used in native LAMMPS. Several baseline, fine-tuned metric and phonon paths continued to use .pt with inference compile and Triton disabled. Prior .pt2 exports used Triton level0; level0 still contains AOTInductor compilation.",
+  "mlip": {
+    "freeze_job": "20950326",
+    "freeze_exitcode": 0,
+    "freeze_seconds": 242.1202177107334,
+    "command": [
+      "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/dp",
+      "--pt",
+      "freeze",
+      "-c",
+      "/misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-03/dpa4/model.ckpt-24.pt",
+      "-o",
+      "/misc/home6/u3129/mlip-research/runs/fm-deployment-20261017-03/dpa4/exported"
+    ],
+    "lammps_job": "20950337",
+    "lammps_status": "passed",
+    "exported_sha256": "772b5398c4edaf67859d354ca652868c5a941d3b94973ed70ad47ec684d81988"
+  },
+  "tial": {
+    "cpu_baseline_export": {
+      "export_sha256": "bb2502c72a1b2bdd220950f8535d8ea104806cbe20b24d3ccd5e8b9300aecfa3",
+      "differences": [
+        {
+          "id": "tial-selected-0070",
+          "energy_eV_atom": 1.6832793200457536e-08,
+          "force_max_eV_A": 9.226165466058589e-07,
+          "virial_max_eV": 1.585750416310816e-05
+        },
+        {
+          "id": "tial-selected-0687",
+          "energy_eV_atom": 1.0296702475898201e-07,
+          "force_max_eV_A": 2.5083166974582127e-06,
+          "virial_max_eV": 7.781813603457977e-05
+        },
+        {
+          "id": "tial-selected-0299",
+          "energy_eV_atom": 1.1874363359254403e-07,
+          "force_max_eV_A": 1.7587022153597864e-06,
+          "virial_max_eV": 0.00017798060690310535
+        }
+      ],
+      "status": "PASS"
+    },
+    "md_preflight": {
+      "status": "passed",
+      "device": {
+        "name": "NVIDIA A100-PCIE-40GB",
+        "visible": "0",
+        "job": "20961138"
+      },
+      "checks": [
+        {
+          "input": "initial.data",
+          "E_diff_eV_atom": 8.140447346109502e-08,
+          "F_diff_rms_eV_A": 3.264287806640409e-07,
+          "F_diff_max_eV_A": 1.1582334499549152e-06,
+          "pressure_diff_max_GPa": 1.1295439612922565e-05
+        },
+        {
+          "input": "reference_two_phase.data",
+          "E_diff_eV_atom": 8.986686270311762e-08,
+          "F_diff_rms_eV_A": 1.5179088354306486e-06,
+          "F_diff_max_eV_A": 7.1780884667305145e-06,
+          "pressure_diff_max_GPa": 5.566142345196567e-06
+        }
+      ],
+      "benchmark_100_steps_seconds": 8.917299499735236,
+      "projected_worker_hours": 3.4678386943414807,
+      "checkpoint_sha256": "39506ecf42a49193717af8351521678b8665f662faf8fc374fec121f366feaaf",
+      "pt2_sha256": "1a59af825e47b585d3b49789f65bed0ac1fce0286630f9484f0687cbac3d0f65",
+      "protocol_sha256": "07788907276acdd3658d33110a1090a4c0d497353e80e8a4a9c2647b0f2b63cc",
+      "versions": {
+        "deepmd-kit": "3.2.0",
+        "torch": "2.11.0",
+        "numpy": "2.5.3",
+        "ase": "3.29.0"
+      }
+    },
+    "implementation_finding": "evaluate_pilot.py creates and checks export, executes del export, then train/validation and harmonic evaluation use dp=DeepPot(model), the .pt checkpoint"
+  },
+  "historical_CPU": {
+    "dpa4": {
+      "natoms": 32,
+      "sample_count": 20,
+      "configuration_ids": [
+        "fcc-01",
+        "fcc-02",
+        "fcc-03",
+        "fcc-04",
+        "fcc-05",
+        "fcc-06",
+        "fcc-07",
+        "fcc-08",
+        "md-00-f0",
+        "md-00-f1",
+        "md-00-f2",
+        "md-01-f0",
+        "md-01-f1",
+        "md-01-f2",
+        "md-02-f0",
+        "md-02-f1",
+        "md-02-f2",
+        "md-03-f0",
+        "md-03-f1",
+        "md-03-f2"
+      ],
+      "median_ms": 73.633823543787,
+      "first_call_ms": 287.39848360419273,
+      "raw_seconds": [
+        0.07941891252994537,
+        0.07821688428521156,
+        0.07533148489892483,
+        0.07893211208283901,
+        0.0757095105946064,
+        0.07806582562625408,
+        0.07445046491920948,
+        0.0727444440126419,
+        0.11004219017922878,
+        0.0740184411406517,
+        0.07405359297990799,
+        0.06992442533373833,
+        0.06987535953521729,
+        0.06597119197249413,
+        0.07069101557135582,
+        0.07080629467964172,
+        0.0732492059469223,
+        0.07273936830461025,
+        0.07064438238739967,
+        0.07253211922943592
+      ]
+    },
+    "grace": {
+      "natoms": 32,
+      "sample_count": 20,
+      "configuration_ids": [
+        "fcc-01",
+        "fcc-02",
+        "fcc-03",
+        "fcc-04",
+        "fcc-05",
+        "fcc-06",
+        "fcc-07",
+        "fcc-08",
+        "md-00-f0",
+        "md-00-f1",
+        "md-00-f2",
+        "md-01-f0",
+        "md-01-f1",
+        "md-01-f2",
+        "md-02-f0",
+        "md-02-f1",
+        "md-02-f2",
+        "md-03-f0",
+        "md-03-f1",
+        "md-03-f2"
+      ],
+      "median_ms": 76.03393588215113,
+      "first_call_ms": 4574.701864272356,
+      "raw_seconds": [
+        0.07862555980682373,
+        0.07631140388548374,
+        0.07714953646063805,
+        0.07608046755194664,
+        0.07700544595718384,
+        0.07527797669172287,
+        0.07476916536688805,
+        0.07762094400823116,
+        0.07574491202831268,
+        0.07840516977012157,
+        0.0767500251531601,
+        0.07391231507062912,
+        0.07689546421170235,
+        0.07335625030100346,
+        0.07598740421235561,
+        0.07579003274440765,
+        0.07671012543141842,
+        0.07404368370771408,
+        0.0757443867623806,
+        0.07516408525407314
+      ]
+    },
+    "job_id": "20952054",
+    "device": "CPU apollo30, four allocated CPUs",
+    "protocol": "Post-hoc timing of 20 train frames after excluding first call; no repeats, no dedicated warmup; heterogeneous API paths",
+    "variants": "DPA4-Mini original .pt, compile/triton disabled; GRACE-1L fp64, main JIT disabled",
+    "limitation": "Diagnostic historical comparison only; not an optimized throughput benchmark or A100 prediction"
+  },
+  "historical_GRACE_A100": {
+    "job_id": "20989431",
+    "model": "GRACE-2L-OMAT-medium-base",
+    "timings": {
+      "Ti96": {
+        "fp32": {
+          "median_ms": 14.623323455452919,
+          "p10_ms": 14.383453875780106,
+          "p90_ms": 14.962860569357872,
+          "block_medians_ms": [
+            14.69436101615429,
+            14.522218145430088
+          ],
+          "cold_seconds": [
+            13.715442402288318,
+            13.766777170822024
+          ],
+          "natoms": 96,
+          "median_kernel_sync_ms": 7.551778107881546,
+          "GPU_peak_bytes": 233881088
+        },
+        "fp64": {
+          "median_ms": 15.407733619213104,
+          "p10_ms": 14.917068369686604,
+          "p90_ms": 16.182775422930717,
+          "block_medians_ms": [
+            15.40059968829155,
+            15.423836186528206
+          ],
+          "cold_seconds": [
+            13.447159308940172,
+            13.44483382999897
+          ],
+          "natoms": 96,
+          "median_kernel_sync_ms": 8.412091061472893,
+          "GPU_peak_bytes": 490576640
+        },
+        "fp32_speedup": 1.0536410321600105
+      },
+      "TiAl216": {
+        "fp32": {
+          "median_ms": 19.134802743792534,
+          "p10_ms": 18.560910038650036,
+          "p90_ms": 20.469279028475285,
+          "block_medians_ms": [
+            18.910372629761696,
+            19.30942013859749
+          ],
+          "cold_seconds": [
+            8.00607424043119,
+            8.158394129946828
+          ],
+          "natoms": 216,
+          "median_kernel_sync_ms": 9.76941455155611,
+          "GPU_peak_bytes": 368736768
+        },
+        "fp64": {
+          "median_ms": 20.25915775448084,
+          "p10_ms": 18.859192542731762,
+          "p90_ms": 22.893846966326237,
+          "block_medians_ms": [
+            20.271077752113342,
+            19.390998408198357
+          ],
+          "cold_seconds": [
+            7.970901604741812,
+            7.742704693228006
+          ],
+          "natoms": 216,
+          "median_kernel_sync_ms": 11.119882576167583,
+          "GPU_peak_bytes": 759660288
+        },
+        "fp32_speedup": 1.0587596865116915
+      },
+      "TiAl432": {
+        "fp32": {
+          "median_ms": 28.157515451312065,
+          "p10_ms": 27.81565971672535,
+          "p90_ms": 30.49490563571453,
+          "block_medians_ms": [
+            28.09604536741972,
+            28.364283964037895
+          ],
+          "cold_seconds": [
+            8.202309029176831,
+            8.563805503770709
+          ],
+          "natoms": 432,
+          "median_kernel_sync_ms": 13.49320262670517,
+          "GPU_peak_bytes": 638471424
+        },
+        "fp64": {
+          "median_ms": 31.19245171546936,
+          "p10_ms": 31.077270209789276,
+          "p90_ms": 33.708614110946655,
+          "block_medians_ms": [
+            31.240948475897312,
+            31.164634972810745
+          ],
+          "cold_seconds": [
+            8.071999296545982,
+            8.13395619764924
+          ],
+          "natoms": 432,
+          "median_kernel_sync_ms": 16.570252366364002,
+          "GPU_peak_bytes": 1149835776
+        },
+        "fp32_speedup": 1.1077842350616867
+      },
+      "TiAl864": {
+        "fp32": {
+          "median_ms": 48.47424477338791,
+          "p10_ms": 48.15407134592533,
+          "p90_ms": 50.543646328151226,
+          "block_medians_ms": [
+            48.36724977940321,
+            48.535699024796486
+          ],
+          "cold_seconds": [
+            8.432946233078837,
+            8.463070590049028
+          ],
+          "natoms": 864,
+          "median_kernel_sync_ms": 23.22519291192293,
+          "GPU_peak_bytes": 1177887488
+        },
+        "fp64": {
+          "median_ms": 60.653758235275745,
+          "p10_ms": 60.48212889581919,
+          "p90_ms": 61.38116251677275,
+          "block_medians_ms": [
+            60.69736648350954,
+            60.63184142112732
+          ],
+          "cold_seconds": [
+            8.521333515644073,
+            8.509921949356794
+          ],
+          "natoms": 864,
+          "median_kernel_sync_ms": 35.498121753335,
+          "GPU_peak_bytes": 2433820416
+        },
+        "fp32_speedup": 1.2512574155373808
+      }
+    },
+    "protocol": "ASE TPCalculator diverse, main XLA on, TF32/UQ off; 5 warmup +30 calls per size, two fresh processes per precision, synchronized numpy results"
+  },
+  "current_benchmark": {
+    "job_id": "20992566",
+    "status": "submitted; no performance results yet",
+    "manifest": "runs/inference-freeze-audit-20261111-01/manifest.json"
+  },
+  "documentation": [
+    "https://docs.deepmodeling.com/projects/deepmd/en/v3.2.0/model/dpa4.html",
+    "https://huggingface.co/deepmodelingcommunity/DPA4-OMat24"
+  ],
+  "documentation_note": "Freeze variables are captured at export; level2 fuses Triton kernels with full float32 accumulation. Export is target-specific. Performance must be measured and numerical equivalence rechecked."
+}

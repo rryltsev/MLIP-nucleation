@@ -1,0 +1,131 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,booktabs,hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue}
+\title{DPA4 inference-path audit and comparison with GRACE}
+\author{MLIP research workflow}
+\date{11 November 2026}
+\begin{document}
+\maketitle
+\noindent\textbf{Conclusion.} Both MLIP-research and TiAl exported DPA4 checkpoints to
+\texttt{.pt2}, and actual native LAMMPS calculations consumed these exports.
+However, several baseline, fine-tuned prediction and phonon workflows continued
+to use the original \texttt{.pt} checkpoint. Their launchers disabled inference
+compilation and optional Triton kernels. Thus export was implemented, but was not
+consistently used for repeated inference. The performance penalty has not yet
+been isolated experimentally.
+
+\section*{Direct evidence}
+In MLIP-research, job 20950326 ran
+\texttt{dp --pt freeze -c model.ckpt-24.pt -o exported}, exited successfully,
+and created \texttt{exported.pt2}; export took 242.12 seconds. This is
+one-time compilation cost, not inference latency. The export hash is
+\path{772b5398c4edaf67859d354ca652868c5a941d3b94973ed70ad47ec684d81988}.
+Consume-only job 20950337 used this same file in native LAMMPS on A100 and passed
+energy, force and stress equivalence checks. In contrast, the original-model
+Al32 baseline and fine-tuned evaluation workers constructed
+\texttt{DeepPot(checkpoint)} from \texttt{.pt}.
+
+In TiAl, the original DPA4-Neo CPU export passed equivalence checks
+(\texttt{baseline/export\_checks.json}). The later
+\texttt{evaluate\_pilot.py} creates a \texttt{.pt2}, compares it on probes,
+executes \texttt{del export}, and evaluates train/validation structures and
+harmonic forces using the \texttt{.pt} object. Separately, the Ti melting
+workflow did use \texttt{model\_15000.pt2} in LAMMPS. Its A100 preflight,
+job 20961138, records the consumed model hash and successful equivalence checks.
+These findings are scoped to inspected workflows, rather than all historical jobs.
+
+The inspected exports set \texttt{DP\_TRITON\_INFER=0}.
+This still gives AOTInductor compilation; it does not mean that a frozen model
+runs eagerly. The
+\href{https://docs.deepmodeling.com/projects/deepmd/en/v3.2.0/model/dpa4.html}{official DPA4 documentation}
+states that export captures the inference settings in the executable graph.
+The
+\href{https://huggingface.co/deepmodelingcommunity/DPA4-OMat24}{upstream model card}
+recommends testing Triton level 2, with full float32 accumulation. The archive is
+target-specific. Changing environment variables after loading an existing
+export does not rebuild it.
+
+\section*{Existing timing evidence}
+The Al32 baseline job 20952054 evaluated both models on the same CPU allocation
+(apollo30, four allocated CPUs). Reanalysis below uses only 20 train frames after
+excluding the first call, without examining held-out accuracy for selection.
+\begin{center}
+\begin{tabular}{@{}lr@{}}
+\toprule
+Historical CPU path, Al32 & Median E/F/stress call (ms)\\
+\midrule
+DPA4-Mini, original \texttt{.pt}, compile/Triton off & 73.63\\
+GRACE-1L, fp64, main compute JIT off & 76.03\\
+\bottomrule
+\end{tabular}
+\end{center}
+These are post-hoc timings on different train geometries with no repeated
+processes or dedicated warmup protocol; the APIs also differ. They establish
+neither optimized throughput nor an architecture-wide winner.
+
+The separate TiAl GRACE benchmark 20989431 used GRACE-2L-OMAT-medium-base,
+TensorPotential 0.6.1 / TensorFlow 2.20.0, A100, ASE diverse/segment engine,
+main XLA on, and UQ/TF32 off. Every result was synchronized and the ASE cache
+was bypassed. Each precision used two fresh processes, five warmup calls and
+30 timed calls per structure in each process.
+\begin{center}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Structure & fp32 (ms) & fp64 (ms) & fp32 speedup\\
+\midrule
+Ti96 & 14.62 & 15.41 & 1.054\\
+TiAl216 & 19.13 & 20.26 & 1.059\\
+TiAl432 & 28.16 & 31.19 & 1.108\\
+TiAl864 & 48.47 & 60.65 & 1.251\\
+\bottomrule
+\end{tabular}
+\end{center}
+These full-call timings include neighbour preparation. They cannot be compared
+directly with DPA4 measured on another structure or device.
+
+\section*{Matched experiment submitted}
+Run \texttt{inference-freeze-audit-20261111-01}, Slurm job
+\textbf{20992566}, was submitted after explicit user approval.
+Allocation: one A100, four CPUs, 32 GiB, account \texttt{imet-2026-2},
+partition \texttt{v100}, maximum 45 minutes (0.75 GPU-hours and 3 CPU-hours).
+At the recorded observation it is pending for resources; Slurm estimates
+12 November, 02:00 local time (UTC+5). This estimate is not guaranteed.
+
+Nine cases compare DPA4-Mini and DPA4-Neo in eager \texttt{.pt},
+\texttt{.pt2}/Triton0 and \texttt{.pt2}/Triton2 modes, GRACE-1L fp64,
+and GRACE-2L fp32/fp64. All cases use identical Ti96 and TiAl216/432/864
+input bytes and identical small deterministic perturbations. The complete
+case order is reversed for the second fresh-process block. Each size has
+five warmups and 30 synchronized full ASE energy/force/stress calls per block.
+Cold load, first-call and export costs are recorded separately.
+The initial models are fixed; there is no new training or DFT evaluation.
+
+Serialization gates, fixed before submission, are maximum differences of
+$10^{-5}$ eV/atom in energy, $2\,10^{-4}$ eV/\AA\ in force components, and
+$10^{-6}$ eV/\AA$^3$ in tensile ASE stress. Speed claims for an export must be
+accompanied by these checks. The experiment does not establish equal DFT accuracy,
+long-time MD stability, or native LAMMPS/Kokkos throughput.
+No matched A100 performance results are available at the time of this report.
+
+\section*{Reproducibility and continuation}
+All findings, historical source snapshots and SHA-256 values are retained under
+\path{runs/inference-freeze-audit-20261111-01/}.
+\texttt{historical-audit.json} maps each statement to its source;
+\texttt{package/plan.json} pins model files, structures and settings;
+\texttt{manifest.json} records authorization, resources and job identity.
+Implementation commit:
+\path{36182d0}.
+The staged source hashes identify the exact executed code.
+
+Reconcile job 20992566 before taking further action. After a terminal state:
+\begin{quote}\ttfamily\small
+python scripts/inference\_benchmark.py collect inference-freeze-audit-20261111-01\\
+python scripts/assess\_inference\_benchmark.py runs/inference-freeze-audit-20261111-01
+\end{quote}
+Retain failed exports and process logs. Verify remote/local member hashes,
+archive actual exports using the existing private main-home/workstation
+backend, update this report and project state, and commit curated results.
+Do not resubmit automatically or interpret absence of measurements as a speed result.
+\end{document}

@@ -1,0 +1,4 @@
+{
+  "observed_utc": "2026-11-11T05:11:24.809030+00:00",
+  "output": "2026-11-11T10:11:27+05:00\n             JOBID PARTITION     NAME     USER ST          START_TIME  NODES SCHEDNODES           NODELIST(REASON)\n          20992566      v100 inferenc    u3129 PD 2026-11-12T02:00:22      1 tesla-a101           (Resources)\n20992566|PENDING|0:0|0|0|None assigned\n"
+}

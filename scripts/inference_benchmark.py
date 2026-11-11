@@ -143,8 +143,10 @@ def collect(folder):
     save(folder / 'scheduler.json', dict(observed_utc=datetime.now(timezone.utc).isoformat(), output=status))
     parent = next(row for row in status.splitlines() if row.startswith(m['job_id'] + '|'))
     assert parent.split('|')[1] in ['COMPLETED', 'FAILED', 'TIMEOUT', 'OUT_OF_MEMORY', 'CANCELLED'], parent
-    # Retrieve actual exported binaries and evidence, excluding caches (kept in node /tmp).
+    # Hash the complete terminal tree remotely, then verify every retrieved member.
     remote_root = m['remote_run_dir']
+    code = "from pathlib import Path;import hashlib,json;p=Path(" + repr(remote_root) + ");print(json.dumps({f.relative_to(p).as_posix():hashlib.sha256(f.read_bytes()).hexdigest() for f in p.rglob('*') if f.is_file()}))"
+    remote_hashes = json.loads(remote('python3 -c ' + shlex.quote(code), timeout=120))
     arc = folder / 'result.tar.gz'
     with arc.open('wb') as output:
         subprocess.run(ssh_args() + ['-o', 'BatchMode=yes', 'mlip-umt',
@@ -154,7 +156,16 @@ def collect(folder):
     with tarfile.open(arc) as archive:
         archive.extractall(target, filter='data')
     files = {p.relative_to(target).as_posix(): sha(p) for p in target.rglob('*') if p.is_file()}
+    assert files == remote_hashes, 'Remote/local result checksum mismatch'
     save(folder / 'collected-sha256.json', files)
+    # Use the already established private main-home + workstation backup backend.
+    backup = '/home/u3129/.local/share/mlip-research/test-artifacts/' + m['run_id'] + '.tar.gz'
+    remote('set -eu; test ! -e ' + shlex.quote(backup) + '; tar -C ' + shlex.quote(remote_root) +
+           ' -czf ' + shlex.quote(backup) + ' .', timeout=120)
+    backup_hash = remote('sha256sum ' + shlex.quote(backup)).split()[0]
+    save(folder / 'artifact-backup.json', dict(remote_archive=backup, remote_archive_sha256=backup_hash,
+         local_archive=str(arc), local_archive_sha256=sha(arc), all_members_verified=True,
+         note='Archives may differ in gzip metadata; remote/local member equality verified before archive creation'))
     m.update(stage='collected', scheduler_parent=parent, result_archive_sha256=sha(arc))
     save(folder / 'manifest.json', m)
     print(m['stage'])

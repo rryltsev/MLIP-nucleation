@@ -1,0 +1,14 @@
+units metal
+boundary p p p
+atom_style atomic
+atom_modify map yes
+read_data /misc/home6/u3129/tial-testsets/pbe15k-melting-1775-20261026-01/T1775K/cool/final.data nocoeff
+pair_style deepmd /misc/home6/u3129/tial-testsets/pbe15k-melting-1775-20261026-01/model_15000.pt2
+pair_coeff * * Ti
+neighbor 2.0 bin
+neigh_modify delay 10 check yes
+timestep 0.001
+compute 2 all pe/atom
+thermo 100
+thermo_style custom step time atoms temp pe ke etotal press pxx pyy pzz vol lx ly lz
+thermo_modify flush yes lost error

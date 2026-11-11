@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "device": {
+    "name": "NVIDIA A100-PCIE-40GB",
+    "visible": "0",
+    "job": "20961138"
+  },
+  "checks": [
+    {
+      "input": "initial.data",
+      "E_diff_eV_atom": 8.140447346109502e-08,
+      "F_diff_rms_eV_A": 3.264287806640409e-07,
+      "F_diff_max_eV_A": 1.1582334499549152e-06,
+      "pressure_diff_max_GPa": 1.1295439612922565e-05
+    },
+    {
+      "input": "reference_two_phase.data",
+      "E_diff_eV_atom": 8.986686270311762e-08,
+      "F_diff_rms_eV_A": 1.5179088354306486e-06,
+      "F_diff_max_eV_A": 7.1780884667305145e-06,
+      "pressure_diff_max_GPa": 5.566142345196567e-06
+    }
+  ],
+  "benchmark_100_steps_seconds": 8.917299499735236,
+  "projected_worker_hours": 3.4678386943414807,
+  "checkpoint_sha256": "39506ecf42a49193717af8351521678b8665f662faf8fc374fec121f366feaaf",
+  "pt2_sha256": "1a59af825e47b585d3b49789f65bed0ac1fce0286630f9484f0687cbac3d0f65",
+  "protocol_sha256": "07788907276acdd3658d33110a1090a4c0d497353e80e8a4a9c2647b0f2b63cc",
+  "versions": {
+    "deepmd-kit": "3.2.0",
+    "torch": "2.11.0",
+    "numpy": "2.5.3",
+    "ase": "3.29.0"
+  }
+}

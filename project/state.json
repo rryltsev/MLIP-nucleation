@@ -1,5 +1,5 @@
 {
-  "updated_local_date": "2026-10-21",
+  "updated_local_date": "2026-11-11",
   "stage": "DPA4_LoRA_completed_and_audited",
   "foundation_DFT_baseline": {
     "status": "Complete: original DPA4-Mini and GRACE-1L evaluated on all40 frozen DFT configurations, no fine-tuning",
@@ -196,6 +196,7 @@
   },
   "blocking_inputs": [],
   "next_actions": [
+    "Collect and assess inference benchmark20992566 when terminal; no automatic resubmission.",
     "Collect A100 job20952229, back up actual selected/candidate checkpoint outputs, audit validation-only selection and locked final test, compare with same-A100 original predictions; no blind resubmission",
     "Respect narrow force convergence margin on the two calibration parents; extend numerical convergence/domain coverage before production MD or interfaces",
     "Validate physical observables and MD stability before distillation and final alloy/nucleant selection; confirm institutional archive retention"
@@ -804,5 +805,58 @@
       "With NumPy/ASE: python scripts/assess_lora.py runs/fm-al32-lora-20261020-01"
     ],
     "latex_preview": "Existing source updated; built-in compiler startup failed on2026-10-21 with Windows CreateProcessAsUserW Access denied5; PDF not verified"
+  },
+  "inference_performance_audit": {
+    "status": "historical_audit_complete; matched_A100_benchmark_pending",
+    "historical_audit": "runs/inference-freeze-audit-20261111-01/historical-audit.json",
+    "finding": "Both projects froze DPA4 and used .pt2 in LAMMPS; several baseline, fine-tuning evaluation and phonon paths still used .pt with compile/Triton disabled. Historical exports used Triton0, which still includes AOTInductor.",
+    "run": "runs/inference-freeze-audit-20261111-01/manifest.json",
+    "job_id": "20992566",
+    "resources": {
+      "partition": "v100",
+      "account": "imet-2026-2",
+      "qos": "normal",
+      "nodes": 1,
+      "tasks": 1,
+      "cpus": 4,
+      "gpus": 1,
+      "memory_GiB": 32,
+      "walltime": "00:45:00"
+    },
+    "maximum_GPU_hours": 0.75,
+    "maximum_CPU_hours": 3,
+    "authorization": "User confirmed: Да, до 45 минут на одной A100. Maximum 0.75 GPU-hours and 3 CPU-hours; one A100, four CPUs, one attempt.",
+    "queue_observed_local_date": "2026-11-11",
+    "estimated_start_local": "2026-11-12T02:00:22+05:00; scheduler estimate, not guaranteed",
+    "benchmarks": [
+      "DPA4-Mini pt/pt2-Triton0/pt2-Triton2",
+      "DPA4-Neo pt/pt2-Triton0/pt2-Triton2",
+      "GRACE-1L fp64 XLA",
+      "GRACE-2L fp32/fp64 XLA"
+    ],
+    "geometry_sizes": [
+      96,
+      216,
+      432,
+      864
+    ],
+    "metric": "Two fresh processes per case; five warmups and thirty cache-bypassed synchronized ASE E/F/stress calls per size/process",
+    "new_results": null,
+    "continuation": [
+      "Reconcile job20992566 with squeue/sacct; do not submit a duplicate.",
+      "After terminal state: python scripts/inference_benchmark.py collect inference-freeze-audit-20261111-01",
+      "python scripts/assess_inference_benchmark.py runs/inference-freeze-audit-20261111-01",
+      "Review raw failures, .pt2 numerical equivalence and actual allocated cost; update LaTeX report and state; commit/push curated results."
+    ],
+    "backup": "Existing private cluster main-home archive plus verified workstation archive; exports excluded from Git",
+    "automatic_followup_scheduled": false,
+    "report": "reports/inference-freeze-audit-2026-11-11/main.tex",
+    "latex_preview": "Compiler could not start: Tectonic WinError5 access denied; no PDF created. Source retained.",
+    "scheduler_observation": "runs/inference-freeze-audit-20261111-01/scheduler-observation-20261111.json",
+    "allocated_cost_at_observation": {
+      "CPU_seconds": 0,
+      "GPU_seconds": 0,
+      "state": "PENDING"
+    }
   }
 }

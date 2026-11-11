@@ -1,0 +1,1032 @@
+{
+  "status": "PASS",
+  "device": "gpu",
+  "checkpoint_equivalence": {
+    "status": "PASS",
+    "source_kind": "controlled_cast",
+    "same_model_tensors_after_dtype_cast": true,
+    "model_tensor_count": 44,
+    "tensors": [
+      {
+        "name": "model/instructions/A/lin_transform/w/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          128,
+          42
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/A1/w_left/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          42,
+          42,
+          5
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/A1/w_right/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          42,
+          42,
+          5
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/AA1/w_left/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          42,
+          42,
+          27
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/AA1/w_right/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          42,
+          42,
+          27
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/AA2/w_left/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          42,
+          42,
+          27
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/AA2/w_right/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          42,
+          42,
+          27
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/B/reducing_B0/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          64,
+          32,
+          4
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/B/reducing_YI/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          64,
+          32,
+          14
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/B0/lin_transform/w/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          128,
+          32
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/B1/w_left/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          64,
+          64,
+          7
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/B1/w_right/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          64,
+          64,
+          7
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/BB1/w_left/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          64,
+          64,
+          18
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/BB1/w_right/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          64,
+          64,
+          18
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/BB2/w_left/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          64,
+          64,
+          18
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/BB2/w_right/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          64,
+          64,
+          18
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/I/reducing_I1/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          32,
+          12,
+          2
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/I1/reducing_A/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          89,
+          12,
+          42,
+          2
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/I1/reducing_AA/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          89,
+          12,
+          42,
+          9
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/I1/reducing_AAA/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          89,
+          12,
+          42,
+          45
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/I1/reducing_AAAA/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          89,
+          12,
+          42,
+          172
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/I2/reducing_B/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          89,
+          17,
+          64,
+          1
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/I2/reducing_BB/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          89,
+          17,
+          64,
+          4
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/I2/reducing_BBB/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          89,
+          17,
+          64,
+          11
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/I2/reducing_BBBB/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          89,
+          17,
+          64,
+          38
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/I_0_LN/scale/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          1,
+          17,
+          1
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/I_nl_LN/scale/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          1,
+          16,
+          1
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/LinMLPOut2ScalarTarget/mlp/layer0/w/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          16,
+          64
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/LinMLPOut2ScalarTarget/mlp/layer1/w/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          64,
+          1
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/R/layers/0/w/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          10,
+          64
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/R/layers/1/w/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          64,
+          64
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/R/layers/2/w/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          64,
+          210
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/R1/layers/0/w/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          10,
+          64
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/R1/layers/1/w/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          64,
+          64
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/R1/layers/2/w/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          64,
+          160
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/RadialBasis/rc/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/TrainableShiftTarget/at_shifts/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          89,
+          1
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/Z/element_map_index/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          89
+        ],
+        "fp64_dtype": "int32",
+        "fp32_dtype": "int32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/Z/element_map_symbols/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          89
+        ],
+        "fp64_dtype": "object",
+        "fp32_dtype": "object",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/Z/w/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          89,
+          128
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/rho/reducing_A/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          89,
+          17,
+          42,
+          1
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/rho/reducing_AA/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          89,
+          17,
+          42,
+          5
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/rho/reducing_AAA/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          89,
+          17,
+          42,
+          14
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      },
+      {
+        "name": "model/instructions/rho/reducing_AAAA/.ATTRIBUTES/VARIABLE_VALUE",
+        "shape": [
+          89,
+          17,
+          42,
+          69
+        ],
+        "fp64_dtype": "float64",
+        "fp32_dtype": "float32",
+        "cast_exact": true
+      }
+    ]
+  },
+  "precision_delta": {
+    "E_meV_atom": {
+      "RMSE": 0.0001433101365574061,
+      "max_abs": 0.00020274451253499137
+    },
+    "F_eV_A": {
+      "RMSE": 2.767503806855799e-07,
+      "max_abs": 1.3200603563578994e-06
+    },
+    "stress_GPa": {
+      "RMSE": 2.3457315438002556e-06,
+      "max_abs": 8.463261893217292e-06
+    }
+  },
+  "subset_DFT_error": {
+    "PBE": {
+      "fp32": {
+        "E_raw_meV_atom": {
+          "RMSE": 6.238034199898293,
+          "max_abs": 16.807930544018745
+        },
+        "F_eV_A": {
+          "RMSE": 0.0654117121420062,
+          "max_abs": 0.3533252906506519
+        },
+        "stress_GPa": {
+          "RMSE": 0.2307190274899402,
+          "max_abs": 0.6358198325860588
+        },
+        "structures": 8
+      },
+      "fp64": {
+        "E_raw_meV_atom": {
+          "RMSE": 6.238066962624708,
+          "max_abs": 16.808073057381634
+        },
+        "F_eV_A": {
+          "RMSE": 0.06541170707195194,
+          "max_abs": 0.3533253369965311
+        },
+        "stress_GPa": {
+          "RMSE": 0.23071984897906364,
+          "max_abs": 0.6358275650264853
+        },
+        "structures": 8
+      }
+    },
+    "r2SCAN": {
+      "fp32": {
+        "E_raw_meV_atom": {
+          "RMSE": 4077.47991796213,
+          "max_abs": 5133.0984433707945
+        },
+        "F_eV_A": {
+          "RMSE": 0.09363734987395651,
+          "max_abs": 0.4810442911674826
+        },
+        "stress_GPa": {
+          "RMSE": 0.9928456165022299,
+          "max_abs": 2.5030709726097227
+        },
+        "structures": 8
+      },
+      "fp64": {
+        "E_raw_meV_atom": {
+          "RMSE": 4077.480067267446,
+          "max_abs": 5133.098629564395
+        },
+        "F_eV_A": {
+          "RMSE": 0.09363733424169743,
+          "max_abs": 0.48104423484364967
+        },
+        "stress_GPa": {
+          "RMSE": 0.9928469313399683,
+          "max_abs": 2.5030719695495725
+        },
+        "structures": 8
+      }
+    }
+  },
+  "timing": {
+    "Ti96": {
+      "fp32": {
+        "median_ms": 14.623323455452919,
+        "p10_ms": 14.383453875780106,
+        "p90_ms": 14.962860569357872,
+        "block_medians_ms": [
+          14.69436101615429,
+          14.522218145430088
+        ],
+        "cold_seconds": [
+          13.715442402288318,
+          13.766777170822024
+        ],
+        "natoms": 96,
+        "median_kernel_sync_ms": 7.551778107881546,
+        "GPU_peak_bytes": 233881088
+      },
+      "fp64": {
+        "median_ms": 15.407733619213104,
+        "p10_ms": 14.917068369686604,
+        "p90_ms": 16.182775422930717,
+        "block_medians_ms": [
+          15.40059968829155,
+          15.423836186528206
+        ],
+        "cold_seconds": [
+          13.447159308940172,
+          13.44483382999897
+        ],
+        "natoms": 96,
+        "median_kernel_sync_ms": 8.412091061472893,
+        "GPU_peak_bytes": 490576640
+      },
+      "fp32_speedup": 1.0536410321600105
+    },
+    "TiAl216": {
+      "fp32": {
+        "median_ms": 19.134802743792534,
+        "p10_ms": 18.560910038650036,
+        "p90_ms": 20.469279028475285,
+        "block_medians_ms": [
+          18.910372629761696,
+          19.30942013859749
+        ],
+        "cold_seconds": [
+          8.00607424043119,
+          8.158394129946828
+        ],
+        "natoms": 216,
+        "median_kernel_sync_ms": 9.76941455155611,
+        "GPU_peak_bytes": 368736768
+      },
+      "fp64": {
+        "median_ms": 20.25915775448084,
+        "p10_ms": 18.859192542731762,
+        "p90_ms": 22.893846966326237,
+        "block_medians_ms": [
+          20.271077752113342,
+          19.390998408198357
+        ],
+        "cold_seconds": [
+          7.970901604741812,
+          7.742704693228006
+        ],
+        "natoms": 216,
+        "median_kernel_sync_ms": 11.119882576167583,
+        "GPU_peak_bytes": 759660288
+      },
+      "fp32_speedup": 1.0587596865116915
+    },
+    "TiAl432": {
+      "fp32": {
+        "median_ms": 28.157515451312065,
+        "p10_ms": 27.81565971672535,
+        "p90_ms": 30.49490563571453,
+        "block_medians_ms": [
+          28.09604536741972,
+          28.364283964037895
+        ],
+        "cold_seconds": [
+          8.202309029176831,
+          8.563805503770709
+        ],
+        "natoms": 432,
+        "median_kernel_sync_ms": 13.49320262670517,
+        "GPU_peak_bytes": 638471424
+      },
+      "fp64": {
+        "median_ms": 31.19245171546936,
+        "p10_ms": 31.077270209789276,
+        "p90_ms": 33.708614110946655,
+        "block_medians_ms": [
+          31.240948475897312,
+          31.164634972810745
+        ],
+        "cold_seconds": [
+          8.071999296545982,
+          8.13395619764924
+        ],
+        "natoms": 432,
+        "median_kernel_sync_ms": 16.570252366364002,
+        "GPU_peak_bytes": 1149835776
+      },
+      "fp32_speedup": 1.1077842350616867
+    },
+    "TiAl864": {
+      "fp32": {
+        "median_ms": 48.47424477338791,
+        "p10_ms": 48.15407134592533,
+        "p90_ms": 50.543646328151226,
+        "block_medians_ms": [
+          48.36724977940321,
+          48.535699024796486
+        ],
+        "cold_seconds": [
+          8.432946233078837,
+          8.463070590049028
+        ],
+        "natoms": 864,
+        "median_kernel_sync_ms": 23.22519291192293,
+        "GPU_peak_bytes": 1177887488
+      },
+      "fp64": {
+        "median_ms": 60.653758235275745,
+        "p10_ms": 60.48212889581919,
+        "p90_ms": 61.38116251677275,
+        "block_medians_ms": [
+          60.69736648350954,
+          60.63184142112732
+        ],
+        "cold_seconds": [
+          8.521333515644073,
+          8.509921949356794
+        ],
+        "natoms": 864,
+        "median_kernel_sync_ms": 35.498121753335,
+        "GPU_peak_bytes": 2433820416
+      },
+      "fp32_speedup": 1.2512574155373808
+    }
+  },
+  "memory": {
+    "fp32": {
+      "parameter_bytes": 87060184,
+      "peak_process_RSS_MiB": [
+        1674.62890625,
+        1672.890625
+      ]
+    },
+    "fp64": {
+      "parameter_bytes": 174120012,
+      "peak_process_RSS_MiB": [
+        1848.7265625,
+        1854.99609375
+      ]
+    }
+  },
+  "finite_differences": {
+    "fp32": {
+      "force_finite_difference": [
+        {
+          "h_A": 0.01,
+          "analytic": 0.8092034427791832,
+          "finite_difference": 0.8089900016784668,
+          "absolute_error_eV_A": 0.0002134411007164161
+        },
+        {
+          "h_A": 0.001,
+          "analytic": 0.8092034427791832,
+          "finite_difference": 0.8100271224975586,
+          "absolute_error_eV_A": 0.0008236797183753808
+        },
+        {
+          "h_A": 0.0001,
+          "analytic": 0.8092034427791832,
+          "finite_difference": 0.8594989776611328,
+          "absolute_error_eV_A": 0.0502955348819496
+        },
+        {
+          "h_A": 1e-05,
+          "analytic": 0.8092034427791832,
+          "finite_difference": 0.34570693969726557,
+          "absolute_error_eV_A": 0.46349650308191764
+        }
+      ],
+      "hydrostatic_stress_finite_difference": [
+        {
+          "h": 0.001,
+          "analytic_trace_eV_A3": 0.12028060973225238,
+          "finite_difference_trace_eV_A3": 0.12027539482274947,
+          "absolute_error_GPa": 0.0008355206085145229
+        },
+        {
+          "h": 0.0001,
+          "analytic_trace_eV_A3": 0.12028060973225238,
+          "finite_difference_trace_eV_A3": 0.120289752147293,
+          "absolute_error_GPa": 0.0014647763635726257
+        },
+        {
+          "h": 1e-05,
+          "analytic_trace_eV_A3": 0.12028060973225238,
+          "finite_difference_trace_eV_A3": 0.12023997310234279,
+          "absolute_error_GPa": 0.006510705838925253
+        }
+      ],
+      "component": {
+        "geometry_id": "PBE-tial-selected-0004",
+        "component": [
+          96,
+          2
+        ],
+        "selection": "Largest absolute DFT force component; fixed before model predictions"
+      }
+    },
+    "fp64": {
+      "force_finite_difference": [
+        {
+          "h_A": 0.01,
+          "analytic": 0.8092035899357486,
+          "finite_difference": 0.8092641178109261,
+          "absolute_error_eV_A": 6.052787517751845e-05
+        },
+        {
+          "h_A": 0.001,
+          "analytic": 0.8092035899357486,
+          "finite_difference": 0.8092041950931161,
+          "absolute_error_eV_A": 6.051573675502908e-07
+        },
+        {
+          "h_A": 0.0001,
+          "analytic": 0.8092035899357486,
+          "finite_difference": 0.8092035960771682,
+          "absolute_error_eV_A": 6.141419595095954e-09
+        },
+        {
+          "h_A": 1e-05,
+          "analytic": 0.8092035899357486,
+          "finite_difference": 0.809203589824392,
+          "absolute_error_eV_A": 1.1135659061523029e-10
+        }
+      ],
+      "hydrostatic_stress_finite_difference": [
+        {
+          "h": 0.001,
+          "analytic_trace_eV_A3": 0.1202805964027093,
+          "finite_difference_trace_eV_A3": 0.12027563669322,
+          "absolute_error_GPa": 0.0007946330589715516
+        },
+        {
+          "h": 0.0001,
+          "analytic_trace_eV_A3": 0.1202805964027093,
+          "finite_difference_trace_eV_A3": 0.12028054695421664,
+          "absolute_error_GPa": 7.922521887628189e-06
+        },
+        {
+          "h": 1e-05,
+          "analytic_trace_eV_A3": 0.1202805964027093,
+          "finite_difference_trace_eV_A3": 0.12028059590924528,
+          "absolute_error_GPa": 7.906165154833565e-08
+        }
+      ],
+      "component": {
+        "geometry_id": "PBE-tial-selected-0004",
+        "component": [
+          96,
+          2
+        ],
+        "selection": "Largest absolute DFT force component; fixed before model predictions"
+      }
+    }
+  },
+  "harmonics": {
+    "PBE": {
+      "fp32": {
+        "model": {
+          "gamma_THz": [
+            -1.5820229834685115e-07,
+            -9.158138870197901e-08,
+            1.501494230502969e-07,
+            3.025196201541504,
+            3.025196203533646,
+            5.628378130156968
+          ],
+          "gamma_c_axis_polarization": [
+            0.9996481008652742,
+            0.00034974195036279837,
+            2.1571843633075843e-06,
+            3.6510965429648385e-20,
+            1.1191905841495317e-20,
+            1.0000000000000002
+          ],
+          "mesh_min_THz": -1.5820229834685115e-07,
+          "imaginary_modes_weighted": 0,
+          "DOS_integral_modes_per_atom": 2.9999999999999996,
+          "ASR_residual": {
+            "translation_max_eV_A2": 9.46465128492946e-15,
+            "translation_other_index_max_eV_A2": 9.46465128492946e-15,
+            "permutation_max_eV_A2": 0.0
+          },
+          "ASR_max_change_eV_A2": 7.154644927342968e-05,
+          "force_drift_eV_A": [
+            [
+              1.3371826793987889e-18,
+              -4.625929269271485e-18,
+              1.5720931501039814e-18
+            ],
+            [
+              8.312216655722201e-19,
+              2.0057740190981832e-18,
+              1.8250736570172657e-18
+            ]
+          ],
+          "reference_max_force_eV_A": 7.274605741427293e-07
+        },
+        "sorted_band_RMSE_to_DFT_THz": 0.46702124831019814
+      },
+      "fp64": {
+        "model": {
+          "gamma_THz": [
+            -9.54881284650868e-08,
+            6.904434712817347e-08,
+            1.610835448637681e-07,
+            3.0250133816171982,
+            3.025013383609396,
+            5.628429818944869
+          ],
+          "gamma_c_axis_polarization": [
+            2.717692286334536e-05,
+            0.0003937754796395577,
+            0.9995790475974973,
+            3.650534476054189e-20,
+            1.1189660455717043e-20,
+            1.0000000000000004
+          ],
+          "mesh_min_THz": -9.54881284650868e-08,
+          "imaginary_modes_weighted": 0,
+          "DOS_integral_modes_per_atom": 2.9999999999999987,
+          "ASR_residual": {
+            "translation_max_eV_A2": 1.1747547379314938e-14,
+            "translation_other_index_max_eV_A2": 1.1747547379314938e-14,
+            "permutation_max_eV_A2": 0.0
+          },
+          "ASR_max_change_eV_A2": 5.306963647810914e-05,
+          "force_drift_eV_A": [
+            [
+              3.975407965780183e-19,
+              -2.5298050691328436e-18,
+              -3.650147314034531e-18
+            ],
+            [
+              -3.397166807121247e-18,
+              -9.161508357502512e-18,
+              8.276076583306017e-18
+            ]
+          ],
+          "reference_max_force_eV_A": 1.4398215630995703e-08
+        },
+        "sorted_band_RMSE_to_DFT_THz": 0.4670310711045558
+      },
+      "fp32_minus_fp64": {
+        "band_RMSE_THz": 8.175223992595921e-05,
+        "band_max_abs_THz": 0.00018281992430591032,
+        "gamma_max_abs_THz": 0.00018281992430591032,
+        "FC_relative_Frobenius": 2.5535937894500018e-05
+      }
+    },
+    "r2SCAN": {
+      "fp32": {
+        "model": {
+          "gamma_THz": [
+            -1.5348485596742227e-07,
+            8.066738971191286e-08,
+            1.2887167142032624e-07,
+            3.021301551764915,
+            3.021301554052456,
+            5.720014058370792
+          ],
+          "gamma_c_axis_polarization": [
+            0.9998850937360915,
+            2.1456769059679447e-05,
+            9.344949484928124e-05,
+            1.2116932417329901e-20,
+            3.322904266214484e-20,
+            0.9999999999999998
+          ],
+          "mesh_min_THz": -1.5348485596742227e-07,
+          "imaginary_modes_weighted": 0,
+          "DOS_integral_modes_per_atom": 2.999999999999999,
+          "ASR_residual": {
+            "translation_max_eV_A2": 7.549516567451064e-15,
+            "translation_other_index_max_eV_A2": 7.549516567451064e-15,
+            "permutation_max_eV_A2": 0.0
+          },
+          "ASR_max_change_eV_A2": 4.123102426956127e-05,
+          "force_drift_eV_A": [
+            [
+              7.408714845317613e-19,
+              4.246458508901559e-18,
+              4.228388472693467e-18
+            ],
+            [
+              -1.6985834035606235e-18,
+              -4.4090888347743844e-18,
+              -6.505213034913027e-19
+            ]
+          ],
+          "reference_max_force_eV_A": 5.647432098870825e-07
+        },
+        "sorted_band_RMSE_to_DFT_THz": 0.7814163041956931
+      },
+      "fp64": {
+        "model": {
+          "gamma_THz": [
+            -7.976766419096778e-08,
+            -7.53334821485486e-08,
+            3.3571068093294735e-08,
+            3.0213217835878323,
+            3.021321785875331,
+            5.719951020563648
+          ],
+          "gamma_c_axis_polarization": [
+            0.055694622345278014,
+            0.9433874008506306,
+            0.0009179768040908381,
+            1.211808612259635e-20,
+            3.323087283046389e-20,
+            0.9999999999999992
+          ],
+          "mesh_min_THz": -7.976766419096778e-08,
+          "imaginary_modes_weighted": 0,
+          "DOS_integral_modes_per_atom": 2.999999999999999,
+          "ASR_residual": {
+            "translation_max_eV_A2": 1.3364309658925322e-14,
+            "translation_other_index_max_eV_A2": 1.3364309658925322e-14,
+            "permutation_max_eV_A2": 0.0
+          },
+          "ASR_max_change_eV_A2": 5.3961873527463844e-05,
+          "force_drift_eV_A": [
+            [
+              1.9154238380577246e-18,
+              2.3852447794681098e-18,
+              -5.240310500346604e-19
+            ],
+            [
+              2.240684489803376e-18,
+              -9.03501810404587e-19,
+              -7.228014483236696e-20
+            ]
+          ],
+          "reference_max_force_eV_A": 1.85156772435941e-08
+        },
+        "sorted_band_RMSE_to_DFT_THz": 0.7814053390323733
+      },
+      "fp32_minus_fp64": {
+        "band_RMSE_THz": 8.094132178719366e-05,
+        "band_max_abs_THz": 0.0002112277346624225,
+        "gamma_max_abs_THz": 6.303780714400631e-05,
+        "FC_relative_Frobenius": 2.949089032333885e-05
+      }
+    }
+  },
+  "qualification": "PASS means complete finite results, not final model selection. Eight fixed train structures per XC only, no validation/test ranking. CPU main graph JIT off; GPU main graph JIT on. ABBA fresh processes, all-calls cache-bypassed, warmup excluded; model+sync and full ASE timings retained. Not LAMMPS/Kokkos or long-MD validation.",
+  "pending": "Full GRACE B0/H0/training qualification"
+}
