@@ -114,6 +114,57 @@ def stage(folder):
     print(m['stage'])
 
 
+def prepare_neo_retry(run_id, prior_id):
+    """New immutable run: one longer freeze, and all Neo/GRACE controls remeasured."""
+    prior = ROOT / 'runs' / prior_id
+    old_manifest = load(prior / 'manifest.json')
+    assert old_manifest['stage'] == 'collected'
+    old_plan = load(prior / 'collected/plan.json')
+    folder = ROOT / 'runs' / run_id
+    folder.mkdir(parents=True, exist_ok=False)
+    package = folder / 'package'
+    (package / 'inputs').mkdir(parents=True)
+    (folder / '.gitignore').write_text('result.tar.gz\ncollected/exports/*.pt2\n', newline='\n')
+    for name in old_plan['structures']:
+        rel = 'inputs/' + name + '.extxyz'
+        source = prior / 'collected' / rel
+        assert sha(source) == old_manifest['input_sha256'][rel]
+        (package / rel).write_bytes(source.read_bytes())
+    for target, source in {'worker.py': 'inference-benchmark-worker.py',
+                           'runner.py': 'inference-benchmark-runner.py',
+                           'job.sbatch': 'inference-benchmark.sbatch'}.items():
+        data = (ROOT / 'scripts/hpc' / source).read_bytes().replace(b'\r\n', b'\n')
+        if target.endswith('.py'):
+            ast.parse(data)
+        (package / target).write_bytes(data)
+    keep = ['dpa4-neo-pt', 'dpa4-neo-pt2-triton0', 'dpa4-neo-pt2-triton2', 'grace-2l-fp32', 'grace-2l-fp64']
+    plan = dict(old_plan, run_id=run_id, freeze_timeout_seconds=1200,
+                cases=[c for c in old_plan['cases'] if c['id'] in keep],
+                predecessor=dict(run_id=prior_id, job_id=old_manifest['job_id'],
+                                 outcome='Neo Triton2 freeze timed out at 420 seconds; other cases retained'),
+                extension_scope='One new Neo Triton2 freeze with 1200-second limit; reuse verified Neo Triton0 export; repeat all five timing cases in the new allocation')
+    case = next(c for c in plan['cases'] if c['id'] == 'dpa4-neo-pt2-triton0')
+    record = load(prior / 'collected/exports/dpa4-neo-pt2-triton0.json')
+    measurement = load(prior / 'collected/results/dpa4-neo-pt2-triton0-block0/summary.json')
+    assert record['returncode'] == 0
+    path = old_manifest['remote_run_dir'] + '/exports/dpa4-neo-pt2-triton0.pt2'
+    case['reuse_export'] = dict(path=path, sha256=record['sha256'], source_job=old_manifest['job_id'],
+                               device=measurement['device'], versions=measurement['versions'])
+    case['source_files'][path] = record['sha256']
+    plan['input_sha256'] = {p.relative_to(package).as_posix(): sha(p) for p in package.rglob('*') if p.is_file()}
+    save(package / 'plan.json', plan)
+    manifest = dict(run_id=run_id, stage='prepared', job_id=None, predecessor=plan['predecessor'],
+                    created_utc=datetime.now(timezone.utc).isoformat(),
+                    remote_run_dir='/home6/u3129/mlip-research/runs/' + run_id,
+                    code_commit=subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
+                    resources=old_manifest['resources'], maximum_GPU_hours=.75, maximum_CPU_hours=3.,
+                    user_authorized_budget=False, freeze_timeout_seconds=1200,
+                    input_sha256={p.relative_to(package).as_posix(): sha(p) for p in package.rglob('*') if p.is_file()})
+    manifest['input_hash'] = hashlib.sha256(json.dumps(manifest['input_sha256'], sort_keys=True).encode()).hexdigest()
+    save(folder / 'manifest.json', manifest)
+    print(json.dumps(dict(run_id=run_id, cases=keep, freeze_timeout_seconds=1200, resources=manifest['resources'])))
+
+
 def submit(folder, authorized):
     m = load(folder / 'manifest.json')
     assert m['stage'] == 'staged_awaiting_budget' and authorized
@@ -173,14 +224,18 @@ def collect(folder):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('command', choices=['prepare', 'stage', 'submit', 'collect'])
+    parser.add_argument('command', choices=['prepare', 'prepare-neo-retry', 'stage', 'submit', 'collect'])
     parser.add_argument('run_id')
     parser.add_argument('--authorization')
+    parser.add_argument('--prior-run')
     a = parser.parse_args()
     assert Path(a.run_id).name == a.run_id
     folder = ROOT / 'runs' / a.run_id
     if a.command == 'prepare':
         prepare(a.run_id)
+    elif a.command == 'prepare-neo-retry':
+        assert a.prior_run and Path(a.prior_run).name == a.prior_run
+        prepare_neo_retry(a.run_id, a.prior_run)
     elif a.command == 'stage':
         stage(folder)
     elif a.command == 'submit':

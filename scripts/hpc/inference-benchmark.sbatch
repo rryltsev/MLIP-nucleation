@@ -11,6 +11,7 @@ export DP_TF32_INFER=0 DP_AMP_INFER=0 DP_TRITON_INFER=0 DP_COMPILE_INFER=0
 export TMPDIR="/tmp/u3129-inference-benchmark-$SLURM_JOB_ID"
 mkdir -m 700 "$TMPDIR"
 export XDG_CACHE_HOME="$TMPDIR/cache" TORCHINDUCTOR_CACHE_DIR="$TMPDIR/inductor" TRITON_CACHE_DIR="$TMPDIR/triton"
+mkdir -p "$XDG_CACHE_HOME/torch/kernels" "$TORCHINDUCTOR_CACHE_DIR" "$TRITON_CACHE_DIR"
 export TORCHINDUCTOR_COMPILE_THREADS=4 MAX_JOBS=4
 source /home/u3129/miniconda3/etc/profile.d/conda.sh
 conda activate lammps_deepmd_dpa4

@@ -43,6 +43,10 @@ def main():
             import torch
             from deepmd.calculator import DP
             assert torch.cuda.is_available() and torch.cuda.device_count() == 1
+            if 'reuse_export' in case:
+                assert torch.cuda.get_device_name(0) == case['reuse_export']['device']
+                for package, version in case['reuse_export']['versions'].items():
+                    assert metadata.version(package) == version, package
             torch.set_num_threads(4)
             torch.backends.cuda.matmul.allow_tf32 = False
             torch.backends.cudnn.allow_tf32 = False

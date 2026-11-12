@@ -1,0 +1,39 @@
+{
+  "run_id": "inference-neo-triton2-20261112-01",
+  "stage": "prepared",
+  "job_id": null,
+  "predecessor": {
+    "run_id": "inference-freeze-audit-20261111-01",
+    "job_id": "20992566",
+    "outcome": "Neo Triton2 freeze timed out at 420 seconds; other cases retained"
+  },
+  "created_utc": "2026-11-12T00:33:49.025471+00:00",
+  "remote_run_dir": "/home6/u3129/mlip-research/runs/inference-neo-triton2-20261112-01",
+  "code_commit": "6b1b9e9cf2b08804fe6f99216715cb7b713081df",
+  "resources": {
+    "partition": "v100",
+    "account": "imet-2026-2",
+    "qos": "normal",
+    "nodes": 1,
+    "tasks": 1,
+    "cpus": 4,
+    "gpus": 1,
+    "memory_GiB": 32,
+    "walltime": "00:45:00"
+  },
+  "maximum_GPU_hours": 0.75,
+  "maximum_CPU_hours": 3.0,
+  "user_authorized_budget": false,
+  "freeze_timeout_seconds": 1200,
+  "input_sha256": {
+    "job.sbatch": "e92f5af80d0416343ad566c341a3212b743dcd305428b2ffbf143c3646316ce0",
+    "plan.json": "dc889172cf41a94c92ca073472711e581dc38ab03723ef7c8307bbf48cfe1c53",
+    "runner.py": "57680dd98dc9a0ab71f101d999b3c3ebf2035cfeee7b1f8b32008520f6d5a895",
+    "worker.py": "4d3f8fc44351d52f3ba8994c9c979f107907491ebed10e1e79845b8b4c936e89",
+    "inputs/Ti96.extxyz": "c951111593e30d4cc0618bdb434a6cfd2a9780daf7afd887b10aa918fc13a793",
+    "inputs/TiAl216.extxyz": "362e955909c696f386d8dc3a53e5bdab5696eb40d130b406a2c7177ff7e452a3",
+    "inputs/TiAl432.extxyz": "8fec1eb8318689748d61027b4e2e7d6e24228e4ffb4864e2d670f32df76891cf",
+    "inputs/TiAl864.extxyz": "1561768d168637900dd51a22f1991eb44460aeed8a33b9e37fb8a4d35fbed0c2"
+  },
+  "input_hash": "8b73d62822e98cb87afc392caccc3087e240b88c0496ac6cfed8d13ed89e92ee"
+}
