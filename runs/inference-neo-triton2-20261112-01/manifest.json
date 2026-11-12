@@ -1,6 +1,6 @@
 {
   "run_id": "inference-neo-triton2-20261112-01",
-  "stage": "submitted",
+  "stage": "collected",
   "job_id": "20994744",
   "predecessor": {
     "run_id": "inference-freeze-audit-20261111-01",
@@ -37,5 +37,7 @@
   },
   "input_hash": "8b73d62822e98cb87afc392caccc3087e240b88c0496ac6cfed8d13ed89e92ee",
   "authorization": "User on 2026-11-12 explicitly requested increasing the DPA4-Neo Triton2 freeze timeout and completing its comparison with GRACE. One bounded retry retains the previously approved per-job ceiling: one A100, four CPUs, 45 minutes, at most 0.75 GPU-hours and 3 CPU-hours. The freeze subprocess limit is increased from 420 to 1200 seconds; no training or DFT.",
-  "authorization_recorded_utc": "2026-11-12T00:39:15.087624+00:00"
+  "authorization_recorded_utc": "2026-11-12T00:39:15.087624+00:00",
+  "scheduler_parent": "20994744|COMPLETED|0:0|846|3384|tesla-a101",
+  "result_archive_sha256": "e26248a79619caea2dc82058ee158c486b6519dfbd305c0a56d64bb00dd7d0db"
 }

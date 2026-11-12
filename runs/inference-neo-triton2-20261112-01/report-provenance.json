@@ -1,0 +1,18 @@
+{
+  "assessment": {
+    "path": "runs/inference-neo-triton2-20261112-01/assessment.json",
+    "sha256": "c7cda2bbfdd2ada0e109023a6e8b7cdd427a5ab97f8f5f414a5886b8d5d0d78d"
+  },
+  "comparison_summary": {
+    "path": "runs/inference-neo-triton2-20261112-01/comparison-summary.json",
+    "sha256": "c2893d7378ef89b000921de5bbfe710f29a0d979d597fe170bcdd39075ec4313"
+  },
+  "generator": {
+    "path": "scripts/report_neo_inference.py",
+    "sha256": "4a02a34f1bd4054d64751976c9d3c407f26252a497fc531d8946a14c0ae76730"
+  },
+  "output": {
+    "path": "reports/inference-freeze-audit-2026-11-11/neo-results.tex",
+    "sha256": "e6333debd340106a1ad260e79d30b5efa9b63eec48dcbac0a29d0b9f08256fd9"
+  }
+}

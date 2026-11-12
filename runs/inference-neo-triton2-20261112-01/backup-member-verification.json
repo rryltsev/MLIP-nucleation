@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "remote_archive": "/home/u3129/.local/share/mlip-research/test-artifacts/inference-neo-triton2-20261112-01.tar.gz",
+  "remote_archive_sha256": "f2d1778be5fad81729a31b045781c8b1f7476a82a65f5c239f4960bb32ab6fbd",
+  "members": 61,
+  "matches_collected_sha256": true,
+  "local_archive_sha256_verified": true
+}

@@ -15,8 +15,12 @@ to use the original \texttt{.pt} checkpoint. Their launchers disabled inference
 compilation and optional Triton kernels. Thus export was implemented, but was not
 consistently used for repeated inference. The matched A100 benchmark now confirms
 2.04--4.60-fold speedup for DPA4-Mini with standard freeze, 2.83--5.19-fold with
-Triton2 freeze, and 1.55--3.19-fold for DPA4-Neo with standard freeze. Every
-completed export passed the predefined energy, force and stress tolerances.
+Triton2 freeze, and 1.55--3.19-fold for DPA4-Neo with standard freeze in the
+initial job. The completed Neo retry gives 2.78--4.56-fold speedup with Triton2;
+on TiAl216/432/864 it is 1.59--1.61 times faster than GRACE-2L fp32 and
+1.68--2.06 times faster than GRACE-2L fp64. Every completed export passed the
+predefined energy, force and stress tolerances. These are matched ASE timings,
+not a comparison at equal DFT accuracy.
 
 \section*{Direct evidence}
 In MLIP-research, job 20950326 ran
@@ -113,6 +117,7 @@ $10^{-6}$ eV/\AA$^3$ in tensile ASE stress. Speed claims for an export must be
 accompanied by these checks. The experiment does not establish equal DFT accuracy,
 long-time MD stability, or native LAMMPS/Kokkos throughput.
 \input{results.tex}
+\input{neo-results.tex}
 
 \section*{Reproducibility and storage}
 All findings, historical source snapshots and SHA-256 values are retained under
@@ -143,8 +148,16 @@ on 12 November at 05:39 local time (UTC+5). The freeze subprocess limit was
 increased from 420 to 1200 seconds while retaining the 45-minute allocation
 ceiling on one A100 and four CPUs. The verified Neo/Triton0 export is reused,
 and all five Neo/GRACE-2L timing cases are repeated on the new allocation.
-At 05:41 the retry was pending for resources, with a provisional 12:03 start
-estimate; it has no new measured results yet. The original failed attempt
+The retry actually ran from 07:32:41 to 07:46:47, earlier than the queue estimate.
+All five cases and ten measurement processes completed. All 61 collected files
+and all 61 members of the separate main-home backup match their recorded hashes;
+the full workstation archive is also verified. The original failed attempt
 remains preserved. The present export checks cover ASE; native LAMMPS deployment
 of these newly frozen artifacts is a separate validation.
+
+Reproduce the retry tables from the collected raw results:
+\begin{quote}\ttfamily\small
+python scripts/assess\_inference\_benchmark.py runs/inference-neo-triton2-20261112-01\\
+python scripts/report\_neo\_inference.py runs/inference-neo-triton2-20261112-01
+\end{quote}
 \end{document}

@@ -1,0 +1,122 @@
+[
+  {
+    "command": [
+      "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/inference-neo-triton2-20261112-01/worker.py",
+      "dpa4-neo-pt",
+      "0"
+    ],
+    "returncode": 0,
+    "seconds": 29.18104505725205,
+    "case": "dpa4-neo-pt",
+    "block": 0
+  },
+  {
+    "command": [
+      "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/inference-neo-triton2-20261112-01/worker.py",
+      "dpa4-neo-pt2-triton0",
+      "0"
+    ],
+    "returncode": 0,
+    "seconds": 15.104966970160604,
+    "case": "dpa4-neo-pt2-triton0",
+    "block": 0
+  },
+  {
+    "command": [
+      "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/inference-neo-triton2-20261112-01/worker.py",
+      "dpa4-neo-pt2-triton2",
+      "0"
+    ],
+    "returncode": 0,
+    "seconds": 13.498919684439898,
+    "case": "dpa4-neo-pt2-triton2",
+    "block": 0
+  },
+  {
+    "command": [
+      "/home6/u3129/mlip-research/envs/grace_ft_a100/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/inference-neo-triton2-20261112-01/worker.py",
+      "grace-2l-fp32",
+      "0"
+    ],
+    "returncode": 0,
+    "seconds": 53.592295952141285,
+    "case": "grace-2l-fp32",
+    "block": 0
+  },
+  {
+    "command": [
+      "/home6/u3129/mlip-research/envs/grace_ft_a100/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/inference-neo-triton2-20261112-01/worker.py",
+      "grace-2l-fp64",
+      "0"
+    ],
+    "returncode": 0,
+    "seconds": 53.744716400280595,
+    "case": "grace-2l-fp64",
+    "block": 0
+  },
+  {
+    "command": [
+      "/home6/u3129/mlip-research/envs/grace_ft_a100/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/inference-neo-triton2-20261112-01/worker.py",
+      "grace-2l-fp64",
+      "1"
+    ],
+    "returncode": 0,
+    "seconds": 54.66987434215844,
+    "case": "grace-2l-fp64",
+    "block": 1
+  },
+  {
+    "command": [
+      "/home6/u3129/mlip-research/envs/grace_ft_a100/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/inference-neo-triton2-20261112-01/worker.py",
+      "grace-2l-fp32",
+      "1"
+    ],
+    "returncode": 0,
+    "seconds": 52.57469367235899,
+    "case": "grace-2l-fp32",
+    "block": 1
+  },
+  {
+    "command": [
+      "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/inference-neo-triton2-20261112-01/worker.py",
+      "dpa4-neo-pt2-triton2",
+      "1"
+    ],
+    "returncode": 0,
+    "seconds": 14.550395028665662,
+    "case": "dpa4-neo-pt2-triton2",
+    "block": 1
+  },
+  {
+    "command": [
+      "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/inference-neo-triton2-20261112-01/worker.py",
+      "dpa4-neo-pt2-triton0",
+      "1"
+    ],
+    "returncode": 0,
+    "seconds": 15.25132909603417,
+    "case": "dpa4-neo-pt2-triton0",
+    "block": 1
+  },
+  {
+    "command": [
+      "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/python",
+      "/misc/home6/u3129/mlip-research/runs/inference-neo-triton2-20261112-01/worker.py",
+      "dpa4-neo-pt",
+      "1"
+    ],
+    "returncode": 0,
+    "seconds": 22.03486654162407,
+    "case": "dpa4-neo-pt",
+    "block": 1
+  }
+]

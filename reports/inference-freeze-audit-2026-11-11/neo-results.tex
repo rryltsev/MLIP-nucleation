@@ -1,0 +1,87 @@
+\section*{DPA4-Neo Triton2 completion}
+The failed 420-second export in job 20992566 remains part of the evidence.
+A separate run, \texttt{inference-neo-triton2-20261112-01}, job 20994744,
+increased the export limit to 1200 seconds.
+The new Triton2 export completed successfully in 514.01 seconds (8.57 minutes).
+The verified Triton0 artifact from job 20992566 was reused after checking its hash,
+GPU type and software versions. All five timing cases were measured again on the
+new allocation, with the same input bytes, perturbations and timing protocol.
+Each table cell is the median of 60 synchronized full ASE E/F/stress calls;
+export, loading, first calls and warmup are excluded. Units are milliseconds.
+\begin{center}\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Model and runtime & Ti96 & TiAl216 & TiAl432 & TiAl864 \\
+\midrule
+DPA4-Neo, \texttt{.pt} & 53.97 & 54.24 & 59.84 & 84.80 \\
+DPA4-Neo, \texttt{.pt2}, Triton0 & 12.48 & 17.51 & 29.29 & 53.44 \\
+DPA4-Neo, \texttt{.pt2}, Triton2 & 11.83 & 12.29 & 18.21 & 30.49 \\
+GRACE-2L, fp32 / XLA & 14.81 & 19.53 & 29.11 & 49.20 \\
+GRACE-2L, fp64 / XLA & 15.89 & 20.62 & 31.86 & 62.76 \\
+\bottomrule
+\end{tabular}\end{center}
+\begin{center}\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Triton2 speedup relative to & Ti96 & TiAl216 & TiAl432 & TiAl864 \\
+\midrule
+DPA4-Neo, \texttt{.pt} & 4.56 & 4.41 & 3.29 & 2.78 \\
+DPA4-Neo, \texttt{.pt2}, Triton0 & 1.06 & 1.42 & 1.61 & 1.75 \\
+GRACE-2L, fp32 / XLA & 1.25 & 1.59 & 1.60 & 1.61 \\
+GRACE-2L, fp64 / XLA & 1.34 & 1.68 & 1.75 & 2.06 \\
+\bottomrule
+\end{tabular}\end{center}
+Ratios greater than one mean Neo/Triton2 is faster. GRACE precisions use
+the same GRACE-2L checkpoint weights (fp32 is the controlled cast). The
+comparison does not establish equal DFT accuracy between architectures.
+For TiAl216/432/864, the Triton2 speedups over GRACE-2L fp32 are 1.589, 1.599, 1.614.
+The corresponding speedups over the existing Triton0 export are 1.425, 1.609, 1.753.
+Using the measured steady-state saving relative to eager inference, the one-time
+freeze cost is recovered after approximately 9465--12345 calls.
+This estimate is freeze time divided by the per-call time saving and excludes
+differences in model loading and first-call overhead.
+\subsection*{Serialization checks and variability}
+Both exports pass the predefined E/F/stress tolerances against the eager
+checkpoint on the first perturbed frame of all four structures in both processes.
+\begin{center}\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Export & $\Delta E$/atom (eV) & $\Delta F$ (eV/\AA) & $\Delta\sigma$ (eV/\AA$^3$) \\
+\midrule
+DPA4-Neo, \texttt{.pt2}, Triton0 & 1.503e-07 & 4.400e-06 & 8.974e-08 \\
+DPA4-Neo, \texttt{.pt2}, Triton2 & 1.614e-07 & 4.440e-06 & 9.425e-08 \\
+\bottomrule
+\end{tabular}\end{center}
+The following entries show the two separate process medians (ms). They
+expose process variation; two processes are insufficient for a general uncertainty estimate.
+\begin{center}\footnotesize
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Model and runtime & Ti96 & TiAl216 & TiAl432 & TiAl864 \\
+\midrule
+DPA4-Neo, \texttt{.pt} & 54.00 / 53.96 & 54.19 / 54.26 & 59.87 / 59.76 & 84.78 / 84.87 \\
+DPA4-Neo, \texttt{.pt2}, Triton0 & 12.49 / 12.47 & 17.50 / 17.51 & 29.30 / 29.29 & 53.49 / 53.35 \\
+DPA4-Neo, \texttt{.pt2}, Triton2 & 11.93 / 9.89 & 12.27 / 12.30 & 18.17 / 18.21 & 30.46 / 30.52 \\
+GRACE-2L, fp32 / XLA & 14.81 / 14.82 & 19.38 / 19.53 & 29.23 / 28.83 & 48.66 / 49.46 \\
+GRACE-2L, fp64 / XLA & 16.15 / 15.78 & 20.88 / 20.57 & 31.90 / 31.73 & 62.91 / 62.39 \\
+\bottomrule
+\end{tabular}\end{center}
+This remains a single-A100 ASE benchmark including neighbours and synchronization.
+Ti96 Triton2 process medians differ visibly; use the larger Ti--Al cells for
+the more consistent speed comparison. Common eager Neo controls are slower
+in this retry than in the initial job: the new/old median ratios are 1.326, 1.306, 1.157, 1.027.
+The cause of this between-allocation variation was not isolated. All retry
+speedups above use controls measured in the same retry, without pooling jobs.
+Ti96 and Ti--Al cells differ in composition. Native LAMMPS equivalence,
+long MD stability and equal-accuracy throughput are separate validations.
+\subsection*{Retry provenance and cost}
+Scheduler state: COMPLETED; exit code 0:0.
+Actual allocation: 846 GPU-seconds (0.2350 GPU-hours)
+and 3384 CPU-seconds (0.9400 CPU-hours).
+Executed source commit: \path{43d40eb676b82dca0f7ace42f891af6d17489245}.
+Input manifest hash: \path{8b73d62822e98cb87afc392caccc3087e240b88c0496ac6cfed8d13ed89e92ee}.
+Accepted Triton2 model SHA-256: \path{8ce4b9a8d4bb9e406965b8fdcaed915f8ec963e0716f8319bdcda628335e3ce1}.
+Raw results, input/model hashes, scheduler records, backup locations and numerical
+checks are under \path{runs/inference-neo-triton2-20261112-01/}.
+Tables were generated directly from \texttt{assessment.json}; source and output
+hashes are recorded in \texttt{report-provenance.json}.

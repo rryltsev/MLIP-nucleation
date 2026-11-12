@@ -1,7 +1,7 @@
 {
   "source": "runs\\inference-freeze-audit-20261111-01\\assessment.json",
   "source_sha256": "e812563e40ad071de51b7f2ae4b481408e56b9e8fee8ee0970d2d396eaa58197",
-  "generator_sha256": "e72c6903c7d3eb7f43c6b33ac8a5381055c383c7e019c6b683e315f503e5a6f6",
+  "generator_sha256": "0c04ce43a8b3e3b4b22fc6784c924b4d0e81e4da944798fd31f16c1b56efe2ee",
   "output": "reports\\inference-freeze-audit-2026-11-11\\results.tex",
-  "output_sha256": "ad9f05c4150be5ac711743d8abc72064bf06c24ab0108bf55f0cffbc4ca82d61"
+  "output_sha256": "37a9db7adab2ff709476cf553225b2eb8e2388c46b17b037b4d74d255a5fbb44"
 }

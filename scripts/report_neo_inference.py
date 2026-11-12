@@ -33,6 +33,27 @@ def generate(run):
     times = result['timings']
     seconds = result['export_attempts'][neo2]['seconds']
     scheduler = manifest['scheduler_parent'].split('|')
+    speedups = {key: {s: times[key][s]['median_ms']/times[neo2][s]['median_ms'] for s in sizes}
+                for key in labels if key != neo2}
+    breakeven = {s: seconds / ((times['dpa4-neo-pt'][s]['median_ms'] -
+                              times[neo2][s]['median_ms']) / 1000) for s in sizes}
+    prior = run.parent / plan['predecessor']['run_id']
+    old = load(prior / 'assessment.json')
+    drift = {}
+    for key in labels:
+        if key not in old['timings']:
+            continue
+        old_block = load(prior / 'collected/results' / (key+'-block0') / 'summary.json')
+        new_block = load(run / 'collected/results' / (key+'-block0') / 'summary.json')
+        assert old_block['model_sha256'] == new_block['model_sha256']
+        drift[key] = {s: times[key][s]['median_ms']/old['timings'][key][s]['median_ms'] for s in sizes}
+    derived = dict(triton2_speedup_relative_to=speedups, freeze_seconds=seconds,
+                   freeze_only_breakeven_calls_versus_pt=breakeven,
+                   breakeven_scope='Estimate using measured steady-state latencies; excludes model-load and first-call differences',
+                   common_case_latency_ratio_retry_over_prior=drift,
+                   prior_assessment_sha256=hashlib.sha256((prior/'assessment.json').read_bytes()).hexdigest(),
+                   current_assessment_sha256=hashlib.sha256((run/'assessment.json').read_bytes()).hexdigest())
+    (run / 'comparison-summary.json').write_text(json.dumps(derived, indent=2) + '\n', newline='\n')
     lines = [r'\section*{DPA4-Neo Triton2 completion}',
         r'The failed 420-second export in job 20992566 remains part of the evidence.',
         'A separate run, ' + r'\texttt{' + manifest['run_id'] + '}, job ' + manifest['job_id'] + ',',
@@ -58,6 +79,14 @@ def generate(run):
         r'Ratios greater than one mean Neo/Triton2 is faster. GRACE precisions use',
         r'the same GRACE-2L checkpoint weights (fp32 is the controlled cast). The',
         r'comparison does not establish equal DFT accuracy between architectures.',
+        r'For TiAl216/432/864, the Triton2 speedups over GRACE-2L fp32 are ' +
+        ', '.join(f"{speedups['grace-2l-fp32'][s]:.3f}" for s in sizes[1:]) + '.',
+        r'The corresponding speedups over the existing Triton0 export are ' +
+        ', '.join(f"{speedups[neo0][s]:.3f}" for s in sizes[1:]) + '.',
+        r'Using the measured steady-state saving relative to eager inference, the one-time',
+        f'freeze cost is recovered after approximately {min(breakeven.values()):.0f}--{max(breakeven.values()):.0f} calls.',
+        r'This estimate is freeze time divided by the per-call time saving and excludes',
+        r'differences in model loading and first-call overhead.',
         r'\subsection*{Serialization checks and variability}',
         r'Both exports pass the predefined E/F/stress tolerances against the eager',
         r'checkpoint on the first perturbed frame of all four structures in both processes.',
@@ -70,13 +99,19 @@ def generate(run):
     lines += [r'\bottomrule', r'\end{tabular}\end{center}',
         r'The following entries show the two separate process medians (ms). They',
         r'expose process variation; two processes are insufficient for a general uncertainty estimate.',
-        r'\begin{center}\small', r'\begin{tabular}{@{}lrrrr@{}}', r'\toprule',
+        r'\begin{center}\footnotesize', r'\begin{tabular}{@{}lrrrr@{}}', r'\toprule',
         r'Model and runtime & Ti96 & TiAl216 & TiAl432 & TiAl864 \\', r'\midrule']
     for key, label in labels.items():
         values = [' / '.join(f'{x:.2f}' for x in times[key][s]['block_medians_ms']) for s in sizes]
         lines.append(label + ' & ' + ' & '.join(values) + r' \\')
     lines += [r'\bottomrule', r'\end{tabular}\end{center}',
         r'This remains a single-A100 ASE benchmark including neighbours and synchronization.',
+        r'Ti96 Triton2 process medians differ visibly; use the larger Ti--Al cells for',
+        r'the more consistent speed comparison. Common eager Neo controls are slower',
+        r'in this retry than in the initial job: the new/old median ratios are ' +
+        ', '.join(f"{drift['dpa4-neo-pt'][s]:.3f}" for s in sizes) + '.',
+        r'The cause of this between-allocation variation was not isolated. All retry',
+        r'speedups above use controls measured in the same retry, without pooling jobs.',
         r'Ti96 and Ti--Al cells differ in composition. Native LAMMPS equivalence,',
         r'long MD stability and equal-accuracy throughput are separate validations.',
         r'\subsection*{Retry provenance and cost}',
@@ -95,7 +130,8 @@ def generate(run):
     output.write_text('\n'.join(lines) + '\n', encoding='utf-8', newline='\n')
     provenance = {key: dict(path=path.relative_to(ROOT).as_posix(),
                            sha256=hashlib.sha256(path.read_bytes()).hexdigest())
-                  for key, path in {'assessment': run / 'assessment.json', 'generator': Path(__file__),
+                  for key, path in {'assessment': run / 'assessment.json',
+                                    'comparison_summary': run / 'comparison-summary.json', 'generator': Path(__file__),
                                     'output': output}.items()}
     (run / 'report-provenance.json').write_text(json.dumps(provenance, indent=2) + '\n', newline='\n')
     print(output)

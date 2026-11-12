@@ -1,0 +1,787 @@
+{
+  "status": "complete",
+  "timings": {
+    "dpa4-neo-pt": {
+      "Ti96": {
+        "median_ms": 53.97235043346882,
+        "calls_per_second": 18.528005394775054,
+        "atom_calls_per_second": 1778.6885178984053,
+        "block_medians_ms": [
+          53.9954099804163,
+          53.96496690809727
+        ],
+        "cold_seconds": [
+          6.076940992847085,
+          1.8927090652287006
+        ],
+        "p10_ms": 53.862153738737106,
+        "p90_ms": 54.270233400166035,
+        "model_load_seconds": [
+          10.354966951534152,
+          7.623320968821645
+        ],
+        "calls": 60
+      },
+      "TiAl216": {
+        "median_ms": 54.243422113358974,
+        "calls_per_second": 18.43541504277109,
+        "atom_calls_per_second": 3982.0496492385555,
+        "block_medians_ms": [
+          54.18586265295744,
+          54.26238849759102
+        ],
+        "cold_seconds": [
+          0.13801304809749126,
+          0.13467281498014927
+        ],
+        "p10_ms": 54.09497208893299,
+        "p90_ms": 55.31152691692114,
+        "model_load_seconds": [
+          10.354966951534152,
+          7.623320968821645
+        ],
+        "calls": 60
+      },
+      "TiAl432": {
+        "median_ms": 59.842437505722046,
+        "calls_per_second": 16.71054926371242,
+        "atom_calls_per_second": 7218.957281923766,
+        "block_medians_ms": [
+          59.873802587389946,
+          59.763032011687756
+        ],
+        "cold_seconds": [
+          0.09700361266732216,
+          0.07172556780278683
+        ],
+        "p10_ms": 59.69509072601795,
+        "p90_ms": 60.39522886276245,
+        "model_load_seconds": [
+          10.354966951534152,
+          7.623320968821645
+        ],
+        "calls": 60
+      },
+      "TiAl864": {
+        "median_ms": 84.79736000299454,
+        "calls_per_second": 11.792819964733406,
+        "atom_calls_per_second": 10188.996449529663,
+        "block_medians_ms": [
+          84.78441089391708,
+          84.87104251980782
+        ],
+        "cold_seconds": [
+          0.0887655895203352,
+          0.08859660103917122
+        ],
+        "p10_ms": 84.59591455757618,
+        "p90_ms": 85.25288160890341,
+        "model_load_seconds": [
+          10.354966951534152,
+          7.623320968821645
+        ],
+        "calls": 60
+      }
+    },
+    "dpa4-neo-pt2-triton0": {
+      "Ti96": {
+        "median_ms": 12.481036596000195,
+        "calls_per_second": 80.12155018602145,
+        "atom_calls_per_second": 7691.66881785806,
+        "block_medians_ms": [
+          12.490999884903431,
+          12.46551051735878
+        ],
+        "cold_seconds": [
+          3.3245238605886698,
+          3.332931112498045
+        ],
+        "p10_ms": 12.432937324047089,
+        "p90_ms": 19.373594224452972,
+        "model_load_seconds": [
+          5.184891214594245,
+          5.215101482346654
+        ],
+        "calls": 60
+      },
+      "TiAl216": {
+        "median_ms": 17.506432719528675,
+        "calls_per_second": 57.12186006258635,
+        "atom_calls_per_second": 12338.321773518652,
+        "block_medians_ms": [
+          17.504449002444744,
+          17.508363351225853
+        ],
+        "cold_seconds": [
+          0.22091099992394447,
+          0.22528180480003357
+        ],
+        "p10_ms": 17.484581097960472,
+        "p90_ms": 17.606784775853157,
+        "model_load_seconds": [
+          5.184891214594245,
+          5.215101482346654
+        ],
+        "calls": 60
+      },
+      "TiAl432": {
+        "median_ms": 29.294979758560658,
+        "calls_per_second": 34.13554159250707,
+        "atom_calls_per_second": 14746.553967963053,
+        "block_medians_ms": [
+          29.30058352649212,
+          29.288440942764282
+        ],
+        "cold_seconds": [
+          0.02966875210404396,
+          0.029630791395902634
+        ],
+        "p10_ms": 29.271043837070465,
+        "p90_ms": 29.38309721648693,
+        "model_load_seconds": [
+          5.184891214594245,
+          5.215101482346654
+        ],
+        "calls": 60
+      },
+      "TiAl864": {
+        "median_ms": 53.43819689005613,
+        "calls_per_second": 18.713206249406248,
+        "atom_calls_per_second": 16168.210199486999,
+        "block_medians_ms": [
+          53.49314119666815,
+          53.349715657532215
+        ],
+        "cold_seconds": [
+          0.053039535880088806,
+          0.053279997780919075
+        ],
+        "p10_ms": 53.215616568923,
+        "p90_ms": 53.67563217878342,
+        "model_load_seconds": [
+          5.184891214594245,
+          5.215101482346654
+        ],
+        "calls": 60
+      }
+    },
+    "dpa4-neo-pt2-triton2": {
+      "Ti96": {
+        "median_ms": 11.828742921352386,
+        "calls_per_second": 84.5398371279904,
+        "atom_calls_per_second": 8115.8243642870775,
+        "block_medians_ms": [
+          11.9263781234622,
+          9.893031790852547
+        ],
+        "cold_seconds": [
+          3.316534636542201,
+          3.3319282419979572
+        ],
+        "p10_ms": 9.846454858779907,
+        "p90_ms": 14.882769621908665,
+        "model_load_seconds": [
+          5.091969536617398,
+          5.793302642181516
+        ],
+        "calls": 60
+      },
+      "TiAl216": {
+        "median_ms": 12.287303805351257,
+        "calls_per_second": 81.38481930954526,
+        "atom_calls_per_second": 17579.120970861775,
+        "block_medians_ms": [
+          12.272213585674763,
+          12.295267544686794
+        ],
+        "cold_seconds": [
+          0.2158233430236578,
+          0.2159926723688841
+        ],
+        "p10_ms": 12.256915494799614,
+        "p90_ms": 12.36385703086853,
+        "model_load_seconds": [
+          5.091969536617398,
+          5.793302642181516
+        ],
+        "calls": 60
+      },
+      "TiAl432": {
+        "median_ms": 18.205098807811737,
+        "calls_per_second": 54.929666164234376,
+        "atom_calls_per_second": 23729.61578294925,
+        "block_medians_ms": [
+          18.16792692989111,
+          18.214560113847256
+        ],
+        "cold_seconds": [
+          0.018345007672905922,
+          0.018383173272013664
+        ],
+        "p10_ms": 18.148251995444298,
+        "p90_ms": 18.269214779138565,
+        "model_load_seconds": [
+          5.091969536617398,
+          5.793302642181516
+        ],
+        "calls": 60
+      },
+      "TiAl864": {
+        "median_ms": 30.490747652947903,
+        "calls_per_second": 32.79683435061056,
+        "atom_calls_per_second": 28336.46487892752,
+        "block_medians_ms": [
+          30.455083586275578,
+          30.5209057405591
+        ],
+        "cold_seconds": [
+          0.030269388109445572,
+          0.03035958670079708
+        ],
+        "p10_ms": 30.364825204014778,
+        "p90_ms": 30.739810317754745,
+        "model_load_seconds": [
+          5.091969536617398,
+          5.793302642181516
+        ],
+        "calls": 60
+      }
+    },
+    "grace-2l-fp32": {
+      "Ti96": {
+        "median_ms": 14.81342688202858,
+        "calls_per_second": 67.506324361258,
+        "atom_calls_per_second": 6480.607138680768,
+        "block_medians_ms": [
+          14.806952327489853,
+          14.817613177001476
+        ],
+        "cold_seconds": [
+          13.99902625568211,
+          13.955325722694397
+        ],
+        "p10_ms": 14.763660356402397,
+        "p90_ms": 15.090694092214108,
+        "model_load_seconds": [
+          7.210326325148344,
+          6.382871296256781
+        ],
+        "calls": 60
+      },
+      "TiAl216": {
+        "median_ms": 19.525809213519096,
+        "calls_per_second": 51.21426666955392,
+        "atom_calls_per_second": 11062.281600623648,
+        "block_medians_ms": [
+          19.381855614483356,
+          19.52637266367674
+        ],
+        "cold_seconds": [
+          8.200549334287643,
+          8.22913383692503
+        ],
+        "p10_ms": 18.848415091633797,
+        "p90_ms": 20.487032644450665,
+        "model_load_seconds": [
+          7.210326325148344,
+          6.382871296256781
+        ],
+        "calls": 60
+      },
+      "TiAl432": {
+        "median_ms": 29.113687574863434,
+        "calls_per_second": 34.348105076987686,
+        "atom_calls_per_second": 14838.38139325868,
+        "block_medians_ms": [
+          29.22576479613781,
+          28.834340162575245
+        ],
+        "cold_seconds": [
+          8.688230874016881,
+          8.637148642912507
+        ],
+        "p10_ms": 28.162280842661858,
+        "p90_ms": 33.01004394888878,
+        "model_load_seconds": [
+          7.210326325148344,
+          6.382871296256781
+        ],
+        "calls": 60
+      },
+      "TiAl864": {
+        "median_ms": 49.19975809752941,
+        "calls_per_second": 20.325303185793825,
+        "atom_calls_per_second": 17561.061952525863,
+        "block_medians_ms": [
+          48.66465087980032,
+          49.457402899861336
+        ],
+        "cold_seconds": [
+          8.418096162378788,
+          8.65433836914599
+        ],
+        "p10_ms": 48.506746627390385,
+        "p90_ms": 50.79025570303202,
+        "model_load_seconds": [
+          7.210326325148344,
+          6.382871296256781
+        ],
+        "calls": 60
+      }
+    },
+    "grace-2l-fp64": {
+      "Ti96": {
+        "median_ms": 15.886583365499973,
+        "calls_per_second": 62.94619661088648,
+        "atom_calls_per_second": 6042.834874645102,
+        "block_medians_ms": [
+          16.147596761584282,
+          15.776161104440689
+        ],
+        "cold_seconds": [
+          13.848266089335084,
+          13.809077197685838
+        ],
+        "p10_ms": 15.373983792960644,
+        "p90_ms": 16.595427691936493,
+        "model_load_seconds": [
+          6.457027554512024,
+          7.034133931621909
+        ],
+        "calls": 60
+      },
+      "TiAl216": {
+        "median_ms": 20.62012068927288,
+        "calls_per_second": 48.49632138769323,
+        "atom_calls_per_second": 10475.205419741736,
+        "block_medians_ms": [
+          20.880556665360928,
+          20.57209424674511
+        ],
+        "cold_seconds": [
+          8.338257113471627,
+          8.512218905612826
+        ],
+        "p10_ms": 19.452838599681854,
+        "p90_ms": 23.45599178224802,
+        "model_load_seconds": [
+          6.457027554512024,
+          7.034133931621909
+        ],
+        "calls": 60
+      },
+      "TiAl432": {
+        "median_ms": 31.86233900487423,
+        "calls_per_second": 31.385015389078067,
+        "atom_calls_per_second": 13558.326648081724,
+        "block_medians_ms": [
+          31.8965595215559,
+          31.727109104394913
+        ],
+        "cold_seconds": [
+          8.684567146003246,
+          8.677308408543468
+        ],
+        "p10_ms": 31.64374474436045,
+        "p90_ms": 34.96044781059027,
+        "model_load_seconds": [
+          6.457027554512024,
+          7.034133931621909
+        ],
+        "calls": 60
+      },
+      "TiAl864": {
+        "median_ms": 62.75569926947355,
+        "calls_per_second": 15.9348077009865,
+        "atom_calls_per_second": 13767.673853652335,
+        "block_medians_ms": [
+          62.90817353874445,
+          62.39192467182875
+        ],
+        "cold_seconds": [
+          8.614953178912401,
+          8.664534401148558
+        ],
+        "p10_ms": 61.903221905231476,
+        "p90_ms": 63.30367606133222,
+        "model_load_seconds": [
+          6.457027554512024,
+          7.034133931621909
+        ],
+        "calls": 60
+      }
+    }
+  },
+  "failures": {},
+  "export_attempts": {
+    "dpa4-neo-pt2-triton0": {
+      "returncode": 0,
+      "seconds": 0,
+      "operation": "reuse_verified_export",
+      "reused_from": {
+        "path": "/home6/u3129/mlip-research/runs/inference-freeze-audit-20261111-01/exports/dpa4-neo-pt2-triton0.pt2",
+        "sha256": "18344da4b34cef87b46634f352d28e5023ba8f83da7fd47e499b9ca8e0fafbc2",
+        "source_job": "20992566",
+        "device": "NVIDIA A100-PCIE-40GB",
+        "versions": {
+          "torch": "2.11.0",
+          "deepmd-kit": "3.2.0",
+          "numpy": "2.5.3",
+          "ase": "3.29.0"
+        }
+      },
+      "freeze_environment": {
+        "DP_TRITON_INFER": "0",
+        "DP_COMPILE_INFER": "0",
+        "DP_TF32_INFER": "0",
+        "DP_AMP_INFER": "0"
+      },
+      "source_files": {
+        "/home6/u3129/tial-testsets/pretrained-neo-20261022-01/DPA4-Neo-OMat24-v20260805.pt": "fd7f34ae28f921201e4a0328ddf56179892752084f8363e7796038201471c989",
+        "/home6/u3129/mlip-research/runs/inference-freeze-audit-20261111-01/exports/dpa4-neo-pt2-triton0.pt2": "18344da4b34cef87b46634f352d28e5023ba8f83da7fd47e499b9ca8e0fafbc2"
+      },
+      "sha256": "18344da4b34cef87b46634f352d28e5023ba8f83da7fd47e499b9ca8e0fafbc2",
+      "status": "passed"
+    },
+    "dpa4-neo-pt2-triton2": {
+      "command": [
+        "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/dp",
+        "--pt",
+        "freeze",
+        "-c",
+        "/home6/u3129/tial-testsets/pretrained-neo-20261022-01/DPA4-Neo-OMat24-v20260805.pt",
+        "-o",
+        "/misc/home6/u3129/mlip-research/runs/inference-neo-triton2-20261112-01/exports/dpa4-neo-pt2-triton2.pt2"
+      ],
+      "returncode": 0,
+      "seconds": 514.0118472799659,
+      "freeze_environment": {
+        "DP_TRITON_INFER": "2",
+        "DP_COMPILE_INFER": "0",
+        "DP_TF32_INFER": "0",
+        "DP_AMP_INFER": "0"
+      },
+      "source_files": {
+        "/home6/u3129/tial-testsets/pretrained-neo-20261022-01/DPA4-Neo-OMat24-v20260805.pt": "fd7f34ae28f921201e4a0328ddf56179892752084f8363e7796038201471c989"
+      },
+      "sha256": "8ce4b9a8d4bb9e406965b8fdcaed915f8ec963e0716f8319bdcda628335e3ce1",
+      "status": "passed"
+    }
+  },
+  "export_checks": {
+    "dpa4-neo-pt2-triton0": [
+      {
+        "structure": "Ti96",
+        "block": 0,
+        "differences": {
+          "energy_eV_per_atom": 1.502533753712972e-07,
+          "force_max_eV_per_A": 3.877342821635016e-06,
+          "stress_max_eV_per_A3": 8.974051802146041e-08
+        },
+        "passed": true
+      },
+      {
+        "structure": "TiAl216",
+        "block": 0,
+        "differences": {
+          "energy_eV_per_atom": 7.2160251239371e-08,
+          "force_max_eV_per_A": 3.247348006940598e-06,
+          "stress_max_eV_per_A3": 1.4403367214199658e-08
+        },
+        "passed": true
+      },
+      {
+        "structure": "TiAl432",
+        "block": 0,
+        "differences": {
+          "energy_eV_per_atom": 6.457170219096884e-08,
+          "force_max_eV_per_A": 3.562552961966503e-06,
+          "stress_max_eV_per_A3": 2.025017594581291e-08
+        },
+        "passed": true
+      },
+      {
+        "structure": "TiAl864",
+        "block": 0,
+        "differences": {
+          "energy_eV_per_atom": 8.130101668434185e-08,
+          "force_max_eV_per_A": 4.290194999256869e-06,
+          "stress_max_eV_per_A3": 1.8840926575836026e-08
+        },
+        "passed": true
+      },
+      {
+        "structure": "Ti96",
+        "block": 1,
+        "differences": {
+          "energy_eV_per_atom": 1.3286868731180826e-07,
+          "force_max_eV_per_A": 3.927494859876091e-06,
+          "stress_max_eV_per_A3": 8.823086367808555e-08
+        },
+        "passed": true
+      },
+      {
+        "structure": "TiAl216",
+        "block": 1,
+        "differences": {
+          "energy_eV_per_atom": 7.588554153783291e-08,
+          "force_max_eV_per_A": 4.264139430443237e-06,
+          "stress_max_eV_per_A3": 1.1571538720278607e-08
+        },
+        "passed": true
+      },
+      {
+        "structure": "TiAl432",
+        "block": 1,
+        "differences": {
+          "energy_eV_per_atom": 4.7876882705269154e-08,
+          "force_max_eV_per_A": 3.870373068204369e-06,
+          "stress_max_eV_per_A3": 1.69002287858655e-08
+        },
+        "passed": true
+      },
+      {
+        "structure": "TiAl864",
+        "block": 1,
+        "differences": {
+          "energy_eV_per_atom": 6.66758029200099e-08,
+          "force_max_eV_per_A": 4.400105270752075e-06,
+          "stress_max_eV_per_A3": 1.7858455735042522e-08
+        },
+        "passed": true
+      }
+    ],
+    "dpa4-neo-pt2-triton2": [
+      {
+        "structure": "Ti96",
+        "block": 0,
+        "differences": {
+          "energy_eV_per_atom": 1.44044558207194e-07,
+          "force_max_eV_per_A": 3.915827634454194e-06,
+          "stress_max_eV_per_A3": 9.424913704992807e-08
+        },
+        "passed": true
+      },
+      {
+        "structure": "TiAl216",
+        "block": 0,
+        "differences": {
+          "energy_eV_per_atom": 5.8914774622617526e-08,
+          "force_max_eV_per_A": 4.022967459604843e-06,
+          "stress_max_eV_per_A3": 1.311540691328883e-08
+        },
+        "passed": true
+      },
+      {
+        "structure": "TiAl432",
+        "block": 0,
+        "differences": {
+          "energy_eV_per_atom": 6.67102947697155e-08,
+          "force_max_eV_per_A": 3.735124693093894e-06,
+          "stress_max_eV_per_A3": 1.9925193842085243e-08
+        },
+        "passed": true
+      },
+      {
+        "structure": "TiAl864",
+        "block": 0,
+        "differences": {
+          "energy_eV_per_atom": 7.795515410146403e-08,
+          "force_max_eV_per_A": 4.0087247065168086e-06,
+          "stress_max_eV_per_A3": 1.9110368662533794e-08
+        },
+        "passed": true
+      },
+      {
+        "structure": "Ti96",
+        "block": 1,
+        "differences": {
+          "energy_eV_per_atom": 1.6142924626668295e-07,
+          "force_max_eV_per_A": 3.7105119333191716e-06,
+          "stress_max_eV_per_A3": 8.887028727071894e-08
+        },
+        "passed": true
+      },
+      {
+        "structure": "TiAl216",
+        "block": 1,
+        "differences": {
+          "energy_eV_per_atom": 5.836287976358613e-08,
+          "force_max_eV_per_A": 4.279487654912373e-06,
+          "stress_max_eV_per_A3": 1.2883759281656637e-08
+        },
+        "passed": true
+      },
+      {
+        "structure": "TiAl432",
+        "block": 1,
+        "differences": {
+          "energy_eV_per_atom": 4.4220579264186166e-08,
+          "force_max_eV_per_A": 3.452799135716944e-06,
+          "stress_max_eV_per_A3": 1.609765006016506e-08
+        },
+        "passed": true
+      },
+      {
+        "structure": "TiAl864",
+        "block": 1,
+        "differences": {
+          "energy_eV_per_atom": 6.536505262981034e-08,
+          "force_max_eV_per_A": 4.439711840831251e-06,
+          "stress_max_eV_per_A3": 1.913459521385441e-08
+        },
+        "passed": true
+      }
+    ]
+  },
+  "comparisons": {
+    "dpa4-neo-pt2-triton0_versus_pt": {
+      "numerical_gate_passed": true,
+      "speedup": {
+        "Ti96": 4.324348383912709,
+        "TiAl216": 3.0984851672750935,
+        "TiAl432": 2.0427540144735796,
+        "TiAl864": 1.586830487141189
+      }
+    },
+    "dpa4-neo-pt2-triton2_versus_pt": {
+      "numerical_gate_passed": true,
+      "speedup": {
+        "Ti96": 4.562813715060275,
+        "TiAl216": 4.414591107427112,
+        "TiAl432": 3.2871251146433704,
+        "TiAl864": 2.781084969387301
+      }
+    },
+    "dpa4-neo-pt_versus_grace-2l-fp32": {
+      "meaning": "DPA4 latency divided by GRACE latency; >1 means GRACE faster",
+      "dpa4_export_gate": null,
+      "ratio": {
+        "Ti96": 3.6434749949012297,
+        "TiAl216": 2.7780370851827447,
+        "TiAl432": 2.05547433150961,
+        "TiAl864": 1.7235320514157706
+      }
+    },
+    "dpa4-neo-pt2-triton0_versus_grace-2l-fp32": {
+      "meaning": "DPA4 latency divided by GRACE latency; >1 means GRACE faster",
+      "dpa4_export_gate": true,
+      "ratio": {
+        "Ti96": 0.8425489048143205,
+        "TiAl216": 0.8965791137305457,
+        "TiAl432": 1.0062270429752689,
+        "TiAl864": 1.0861475534925356
+      }
+    },
+    "dpa4-neo-pt2-triton2_versus_grace-2l-fp32": {
+      "meaning": "DPA4 latency divided by GRACE latency; >1 means GRACE faster",
+      "dpa4_export_gate": true,
+      "ratio": {
+        "Ti96": 0.7985149564347487,
+        "TiAl216": 0.629285253737084,
+        "TiAl432": 0.6253106467876608,
+        "TiAl864": 0.6197336904076975
+      }
+    },
+    "dpa4-neo-pt_versus_grace-2l-fp64": {
+      "meaning": "DPA4 latency divided by GRACE latency; >1 means GRACE faster",
+      "dpa4_export_gate": null,
+      "ratio": {
+        "Ti96": 3.3973541819367927,
+        "TiAl216": 2.6306064319777627,
+        "TiAl432": 1.878155822037029,
+        "TiAl864": 1.3512296251990419
+      }
+    },
+    "dpa4-neo-pt2-triton0_versus_grace-2l-fp64": {
+      "meaning": "DPA4 latency divided by GRACE latency; >1 means GRACE faster",
+      "dpa4_export_gate": true,
+      "ratio": {
+        "Ti96": 0.7856337834794976,
+        "TiAl216": 0.848997587518291,
+        "TiAl432": 0.9194233905451566,
+        "TiAl864": 0.8515273913304993
+      }
+    },
+    "dpa4-neo-pt2-triton2_versus_grace-2l-fp64": {
+      "meaning": "DPA4 latency divided by GRACE latency; >1 means GRACE faster",
+      "dpa4_export_gate": true,
+      "ratio": {
+        "Ti96": 0.7445743775870791,
+        "TiAl216": 0.5958890343325406,
+        "TiAl432": 0.5713673062428581,
+        "TiAl864": 0.4858642005090303
+      }
+    }
+  },
+  "tolerances": {
+    "energy_eV_per_atom": 1e-05,
+    "force_max_eV_per_A": 0.0002,
+    "stress_max_eV_per_A3": 1e-06
+  },
+  "input_hashes": {
+    "completion.json": "e829591f51679c6de80e385d8cd196b487fff3dad600eb7e492cf36aaf1c2a53",
+    "hardware.json": "38af2e0a451f47b3dd2cf250262cd328299691b0247dd4ee5243224e95f5897a",
+    "job.id": "17c8a31207042f32f3944c78bb4e103e0a74d12bf96a644d22d436f8cad92137",
+    "job.sbatch": "e92f5af80d0416343ad566c341a3212b743dcd305428b2ffbf143c3646316ce0",
+    "manifest.json": "ec5234e85e6fdaafac0c268bb3cc5bbafde41f26770d5a9be25ca4039f866cea",
+    "phase.json": "a84aff01356896536795e48226f971ae87740fc8b564ada19f501f8132a56cdb",
+    "plan.json": "dc889172cf41a94c92ca073472711e581dc38ab03723ef7c8307bbf48cfe1c53",
+    "processes.json": "33d1d4fa45087a18ec5f7d15a1f8f55825981fde146b055f84d5c83ea7c86c34",
+    "runner.py": "57680dd98dc9a0ab71f101d999b3c3ebf2035cfeee7b1f8b32008520f6d5a895",
+    "slurm-20994744.out": "b8b01cdc742f0f5c17b916c1af5fb038b22ba8aaec11f22ff372f20fe996ff6f",
+    "storage.txt": "2868608f7985a24f8b7d6fae96cc1956a0f96ad6d08b53a7498940cbcc608f7d",
+    "worker.py": "4d3f8fc44351d52f3ba8994c9c979f107907491ebed10e1e79845b8b4c936e89",
+    "exports/dpa4-neo-pt2-triton0.json": "aa3d6efc5a54b432ad1f9999cedb095c4cde72b9b34f643efc985803422e1d34",
+    "exports/dpa4-neo-pt2-triton0.pt2": "18344da4b34cef87b46634f352d28e5023ba8f83da7fd47e499b9ca8e0fafbc2",
+    "exports/dpa4-neo-pt2-triton2.json": "2ed63e153251413dfcafee453b8768997b4797926947d92e08b62fc532c5da15",
+    "exports/dpa4-neo-pt2-triton2.log": "38ebaf54628a5df31804a4ddc282a20f08e9c9fd74556033145264bf98023430",
+    "exports/dpa4-neo-pt2-triton2.pt2": "8ce4b9a8d4bb9e406965b8fdcaed915f8ec963e0716f8319bdcda628335e3ce1",
+    "inputs/Ti96.extxyz": "c951111593e30d4cc0618bdb434a6cfd2a9780daf7afd887b10aa918fc13a793",
+    "inputs/TiAl216.extxyz": "362e955909c696f386d8dc3a53e5bdab5696eb40d130b406a2c7177ff7e452a3",
+    "inputs/TiAl432.extxyz": "8fec1eb8318689748d61027b4e2e7d6e24228e4ffb4864e2d670f32df76891cf",
+    "inputs/TiAl864.extxyz": "1561768d168637900dd51a22f1991eb44460aeed8a33b9e37fb8a4d35fbed0c2",
+    "results/dpa4-neo-pt-block0.log": "a016e206acb73dbaf94ce011944079007730d11ac1989985b59ed8c486e15ddb",
+    "results/dpa4-neo-pt-block1.log": "8a5fa72c76e26cd742dfae44db25e59366624f7b0fcffc54caa76d50e4e337e1",
+    "results/dpa4-neo-pt2-triton0-block0.log": "e23b9800626b6381d8129bf337c123a6394bdaa36fce83eeb0c901a371e2cb9f",
+    "results/dpa4-neo-pt2-triton0-block1.log": "a83324dd99d00c037675177de83dc4dadbea84d2cfb86c20897e883c106457d1",
+    "results/dpa4-neo-pt2-triton2-block0.log": "45c90c189663182cd530f8b3177851918b9ae28a262b66d241dca791e92426a6",
+    "results/dpa4-neo-pt2-triton2-block1.log": "5dfa05cd4cb7943bf6b7bf770da1874b2bc1924dc7ea5611abfa90e42efe93f3",
+    "results/grace-2l-fp32-block0.log": "7bef3259baac070a34baa24a0c6424497b72c574492f719de9d86befecc5f9ae",
+    "results/grace-2l-fp32-block1.log": "43724430bbf8ee0cf092c12096e57e01e4e3168c3b690c45c5e09e2f1eefb49d",
+    "results/grace-2l-fp64-block0.log": "d78e68289a36585fdef6eaea7e6bccb444ee168349b965bd62161af03a9fb7e8",
+    "results/grace-2l-fp64-block1.log": "d68048f12f626a737e9323d133f1eae350327126587403a772d6b82bbdfaf4a4",
+    "results/dpa4-neo-pt-block0/predictions.json": "16ac7680f51f35ec2eead3fd431727166d6d7380c382ffdbfbbaad11b77f5c28",
+    "results/dpa4-neo-pt-block0/progress.json": "dc482a50dbb6ddec7705761a2fc1de314eaa53c18cd8744a6b3a239705f77285",
+    "results/dpa4-neo-pt-block0/summary.json": "b3ca16d792a78cb52926608522c522a6339710fe6fe6d78f7bfaaf9783bad92b",
+    "results/dpa4-neo-pt-block1/predictions.json": "61045da2ce7ba0c36b5a3fa0f27a34dca782d5713c48f381a9e5d86a8ff2f0a0",
+    "results/dpa4-neo-pt-block1/progress.json": "2aaf321d4bf4f0e3af44e568660d0ddc077a099217a10243a22da56c42bf46fd",
+    "results/dpa4-neo-pt-block1/summary.json": "b8b4875cc6e13f951b88d80f4296d69aad548a97f2abae4e84cbcea3d8c00b81",
+    "results/dpa4-neo-pt2-triton0-block0/predictions.json": "5765bbf3554ff874e62575796255d7e66868bb5a792b9415e86e84bcec2bf0d4",
+    "results/dpa4-neo-pt2-triton0-block0/progress.json": "04ed46366369db2993f1206c20304d57bdc804b4fd45dac5d344c458d8c34ef6",
+    "results/dpa4-neo-pt2-triton0-block0/summary.json": "42f13a94d736227893e92c6721077126ec2e54e84adf220e165f143f6918d4fd",
+    "results/dpa4-neo-pt2-triton0-block1/predictions.json": "7652ba3a45d5f0e0cb3cc7b925f08f88a113d50646e6088a2796f813398d8346",
+    "results/dpa4-neo-pt2-triton0-block1/progress.json": "7644ffe527e8578dbc75b7a795885d5ec03c0bb24828e79bd31f40af7cd7baee",
+    "results/dpa4-neo-pt2-triton0-block1/summary.json": "26af52354c453e9b67071359b82b8a7cd8197cf0062d2cdc9837d1020fd5c621",
+    "results/dpa4-neo-pt2-triton2-block0/predictions.json": "29b8d5f12b23ee13faae1aeb0c7a087bbfd1ac7e5d9e9ff18b89306057f7c0f2",
+    "results/dpa4-neo-pt2-triton2-block0/progress.json": "519b784e7e64012f2d775a8c5d91305793105b916bb675b9bb34017d90c4a3da",
+    "results/dpa4-neo-pt2-triton2-block0/summary.json": "d3cc47ae189ce0ffca6b489ecf1b54206f2d98f89f010dbe3065e8561f04254b",
+    "results/dpa4-neo-pt2-triton2-block1/predictions.json": "baf179a54d8bf311aae538f8f3179da8620cb680bcf26d490aca23f74ab1d06c",
+    "results/dpa4-neo-pt2-triton2-block1/progress.json": "4c16a740d90574492e92cc8f8fe025cc0e03fb248caa71e0b74143f5d662f1ee",
+    "results/dpa4-neo-pt2-triton2-block1/summary.json": "2b5c583b44289b5e21292c8c084b42d0b97194520e8b2db5538dc3e1991fbb36",
+    "results/grace-2l-fp32-block0/predictions.json": "65532ec77c0cb7f3ab52a4267d9888059591843dc33dec2fc3f5f7067c3f3cce",
+    "results/grace-2l-fp32-block0/progress.json": "e9371bc27f973cb8f5b0b011ad9afc809a4eee5f83c97c48ddc91536654f5db1",
+    "results/grace-2l-fp32-block0/summary.json": "48f0513bc5a4ed2a6255d1efb8283ffdd5fe3a69543b5853b555c431ec997a63",
+    "results/grace-2l-fp32-block1/predictions.json": "028ff3155c107a27b56c08a83efcb6028424aaaa49b1201e6a664c0a5c73cd89",
+    "results/grace-2l-fp32-block1/progress.json": "3bf59f090e56cec7d60b816840093ac42ceda89c26c4e537198f7f2513b678f9",
+    "results/grace-2l-fp32-block1/summary.json": "752ee773eca5d5b271c7f82c011df74066ff955e6d488ad2f9534fd6c7411625",
+    "results/grace-2l-fp64-block0/predictions.json": "762c3444d6bc2a6db0c18d00e7fea8315942d798f32011d8db1cda5117ce21ab",
+    "results/grace-2l-fp64-block0/progress.json": "622d978368ab938dcb3642264ddd0d29e237a4d548422ad7c13b67dddaf644fd",
+    "results/grace-2l-fp64-block0/summary.json": "3cf99cc50258c7fc62c6880b5f6063221b3524ae32cec3b3b32ce9e1ee65c2c4",
+    "results/grace-2l-fp64-block1/predictions.json": "470eff4baf5075fa7763e1572829b492889c967d4320ff8e0ebe1dd232c95024",
+    "results/grace-2l-fp64-block1/progress.json": "122b62c1dd1a5eeeb1ad737f879f8c3a08cf790d4a264cb701004f972bbc52c1",
+    "results/grace-2l-fp64-block1/summary.json": "da551598cf8ff874c279741d8ab5f3b25b11c7506d9928a4bf2fec3d1862af1e"
+  },
+  "scope": "Median full ASE E/F/stress latency, cache bypassed and GPU synchronized; cold load/export separate",
+  "limitations": "Two process blocks, four fixed structures, single GPU; no equal-accuracy, MD or LAMMPS throughput claim"
+}

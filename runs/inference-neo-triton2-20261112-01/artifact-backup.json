@@ -1,0 +1,8 @@
+{
+  "remote_archive": "/home/u3129/.local/share/mlip-research/test-artifacts/inference-neo-triton2-20261112-01.tar.gz",
+  "remote_archive_sha256": "f2d1778be5fad81729a31b045781c8b1f7476a82a65f5c239f4960bb32ab6fbd",
+  "local_archive": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\MLIP-research\\runs\\inference-neo-triton2-20261112-01\\result.tar.gz",
+  "local_archive_sha256": "e26248a79619caea2dc82058ee158c486b6519dfbd305c0a56d64bb00dd7d0db",
+  "all_members_verified": true,
+  "note": "Archives may differ in gzip metadata; remote/local member equality verified before archive creation"
+}

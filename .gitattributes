@@ -27,4 +27,5 @@ environments/*.lock.json text eol=lf
 models/foundation/licenses/* -text
 scripts/assess_inference_benchmark.py text eol=lf
 scripts/report_inference_benchmark.py text eol=lf
+scripts/report_neo_inference.py text eol=lf
 reports/inference-freeze-audit-2026-11-11/*.tex text eol=lf

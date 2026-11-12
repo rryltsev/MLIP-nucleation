@@ -1,0 +1,127 @@
+{
+  "run_id": "inference-neo-triton2-20261112-01",
+  "scope": "Inference throughput of fixed original foundation checkpoints; no training, DFT or held-out test access",
+  "structures": [
+    "Ti96",
+    "TiAl216",
+    "TiAl432",
+    "TiAl864"
+  ],
+  "geometry_source": "C:\\Users\\Roman Ryltsev\\Documents\\ChatGPT\\TiAl\\research\\tial_fm\\runs\\grace-precision-20261107-02\\package\\inputs\\timing",
+  "structures_scope": "Existing GRACE timing geometries; TiAl cells from train, Ti96 diagnostic cell; same bytes for every model",
+  "warmup_calls": 5,
+  "measured_calls": 30,
+  "process_blocks": 2,
+  "freeze_timeout_seconds": 1200,
+  "worker_timeout_seconds": 120,
+  "cases": [
+    {
+      "id": "dpa4-neo-pt",
+      "backend": "dpa4",
+      "format": "pt",
+      "triton_level": 0,
+      "path": "/home6/u3129/tial-testsets/pretrained-neo-20261022-01/DPA4-Neo-OMat24-v20260805.pt",
+      "source_files": {
+        "/home6/u3129/tial-testsets/pretrained-neo-20261022-01/DPA4-Neo-OMat24-v20260805.pt": "fd7f34ae28f921201e4a0328ddf56179892752084f8363e7796038201471c989"
+      },
+      "precision": "checkpoint native float32"
+    },
+    {
+      "id": "dpa4-neo-pt2-triton0",
+      "backend": "dpa4",
+      "format": "pt2",
+      "triton_level": 0,
+      "path": "/home6/u3129/tial-testsets/pretrained-neo-20261022-01/DPA4-Neo-OMat24-v20260805.pt",
+      "source_files": {
+        "/home6/u3129/tial-testsets/pretrained-neo-20261022-01/DPA4-Neo-OMat24-v20260805.pt": "fd7f34ae28f921201e4a0328ddf56179892752084f8363e7796038201471c989",
+        "/home6/u3129/mlip-research/runs/inference-freeze-audit-20261111-01/exports/dpa4-neo-pt2-triton0.pt2": "18344da4b34cef87b46634f352d28e5023ba8f83da7fd47e499b9ca8e0fafbc2"
+      },
+      "precision": "checkpoint native float32",
+      "reuse_export": {
+        "path": "/home6/u3129/mlip-research/runs/inference-freeze-audit-20261111-01/exports/dpa4-neo-pt2-triton0.pt2",
+        "sha256": "18344da4b34cef87b46634f352d28e5023ba8f83da7fd47e499b9ca8e0fafbc2",
+        "source_job": "20992566",
+        "device": "NVIDIA A100-PCIE-40GB",
+        "versions": {
+          "torch": "2.11.0",
+          "deepmd-kit": "3.2.0",
+          "numpy": "2.5.3",
+          "ase": "3.29.0"
+        }
+      }
+    },
+    {
+      "id": "dpa4-neo-pt2-triton2",
+      "backend": "dpa4",
+      "format": "pt2",
+      "triton_level": 2,
+      "path": "/home6/u3129/tial-testsets/pretrained-neo-20261022-01/DPA4-Neo-OMat24-v20260805.pt",
+      "source_files": {
+        "/home6/u3129/tial-testsets/pretrained-neo-20261022-01/DPA4-Neo-OMat24-v20260805.pt": "fd7f34ae28f921201e4a0328ddf56179892752084f8363e7796038201471c989"
+      },
+      "precision": "checkpoint native float32"
+    },
+    {
+      "id": "grace-2l-fp32",
+      "backend": "grace",
+      "precision": "fp32",
+      "path": "/home6/u3129/tial-fm-research/grace-precision-20261107-02/checkpoint-fp32",
+      "source_files": {
+        "/home6/u3129/tial-fm-research/grace-precision-20261107-02/checkpoint-fp32/checkpoint.index": "4ca5b700af4a30d10e4ec8c8cab6b7b86478f58adc69b6517ebbf61f1b57ff68",
+        "/home6/u3129/tial-fm-research/grace-precision-20261107-02/checkpoint-fp32/checkpoint.data-00000-of-00001": "a1d005b87b9318fc99853d3c7acdddfe633a531e5171e5ab17717c31a4a6ff6a",
+        "/home6/u3129/tial-fm-research/grace-precision-20261107-02/checkpoint-fp32/model.yaml": "9d2c48d499253916fc02189f3dbee87c079dfdf87d86770a986315e073c0c15c"
+      },
+      "provenance": {
+        "path": "/home6/u3129/tial-fm-research/grace-precision-20261107-02/checkpoint-fp32",
+        "source_kind": "controlled_cast",
+        "source_archive_sha256": "763b7e5679c81ea82d39e595e701d0c9f6565064393f705cbe76663c9583d0aa"
+      }
+    },
+    {
+      "id": "grace-2l-fp64",
+      "backend": "grace",
+      "precision": "fp64",
+      "path": "/home6/u3129/tial-fm-research/grace-2l-preparation-20261107-01/checkpoint",
+      "source_files": {
+        "/home6/u3129/tial-fm-research/grace-2l-preparation-20261107-01/checkpoint/model.yaml": "9d2c48d499253916fc02189f3dbee87c079dfdf87d86770a986315e073c0c15c",
+        "/home6/u3129/tial-fm-research/grace-2l-preparation-20261107-01/checkpoint/checkpoint.index": "e6b88f7815fb91bc8687079fc177e4d88ba4640528101855e7c6eff61a4939d1",
+        "/home6/u3129/tial-fm-research/grace-2l-preparation-20261107-01/checkpoint/checkpoint.data-00000-of-00001": "b0edbae73335e32b55e8bb64c7f4fe3cac4d5b01ea277dc5db1ac61a0d1231e5"
+      },
+      "provenance": {
+        "path": "/home6/u3129/tial-fm-research/grace-2l-preparation-20261107-01/checkpoint",
+        "archive_sha256": "763b7e5679c81ea82d39e595e701d0c9f6565064393f705cbe76663c9583d0aa",
+        "file_hashes": {
+          "model.yaml": "9d2c48d499253916fc02189f3dbee87c079dfdf87d86770a986315e073c0c15c",
+          "checkpoint.index": "e6b88f7815fb91bc8687079fc177e4d88ba4640528101855e7c6eff61a4939d1",
+          "checkpoint.data-00000-of-00001": "b0edbae73335e32b55e8bb64c7f4fe3cac4d5b01ea277dc5db1ac61a0d1231e5"
+        }
+      }
+    }
+  ],
+  "environments": {
+    "dpa4": "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4",
+    "grace": "/home6/u3129/mlip-research/envs/grace_ft_a100"
+  },
+  "metric": "Median full ASE E/F/stress latency, cache bypassed and GPU synchronized; cold load/export separate",
+  "export_tolerances": {
+    "energy_eV_per_atom": 1e-05,
+    "force_max_eV_per_A": 0.0002,
+    "stress_max_eV_per_A3": 1e-06
+  },
+  "tolerances_scope": "Serialization consistency only, not DFT accuracy or physical MD validation",
+  "input_sha256": {
+    "job.sbatch": "e92f5af80d0416343ad566c341a3212b743dcd305428b2ffbf143c3646316ce0",
+    "runner.py": "57680dd98dc9a0ab71f101d999b3c3ebf2035cfeee7b1f8b32008520f6d5a895",
+    "worker.py": "4d3f8fc44351d52f3ba8994c9c979f107907491ebed10e1e79845b8b4c936e89",
+    "inputs/Ti96.extxyz": "c951111593e30d4cc0618bdb434a6cfd2a9780daf7afd887b10aa918fc13a793",
+    "inputs/TiAl216.extxyz": "362e955909c696f386d8dc3a53e5bdab5696eb40d130b406a2c7177ff7e452a3",
+    "inputs/TiAl432.extxyz": "8fec1eb8318689748d61027b4e2e7d6e24228e4ffb4864e2d670f32df76891cf",
+    "inputs/TiAl864.extxyz": "1561768d168637900dd51a22f1991eb44460aeed8a33b9e37fb8a4d35fbed0c2"
+  },
+  "predecessor": {
+    "run_id": "inference-freeze-audit-20261111-01",
+    "job_id": "20992566",
+    "outcome": "Neo Triton2 freeze timed out at 420 seconds; other cases retained"
+  },
+  "extension_scope": "One new Neo Triton2 freeze with 1200-second limit; reuse verified Neo Triton0 export; repeat all five timing cases in the new allocation"
+}

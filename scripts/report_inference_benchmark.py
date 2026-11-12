@@ -35,7 +35,8 @@ def main():
         r'DPA4-Neo/Triton2 is omitted because export exceeded its 420-second subprocess limit.',
         r'The last logged stage was compilation of the parallel with-communication artifact,',
         r'after the first AOTInductor compilation. The retained partial file is not an accepted export;',
-        r'no inference time or numerical-equivalence result exists for this case.',
+        r'no inference time or numerical-equivalence result exists for this case in the initial job.',
+        r'The separately recorded retry is reported below.',
         r'\begin{center}\small', r'\begin{tabular}{@{}lrrrr@{}}', r'\toprule',
         r'Export / eager speedup & Ti96 & TiAl216 & TiAl432 & TiAl864 \\',
         r'\midrule']

@@ -20,7 +20,8 @@ GRACE-2L, fp64 / XLA & 17.05 & 23.72 & 31.79 & 61.24 \\
 DPA4-Neo/Triton2 is omitted because export exceeded its 420-second subprocess limit.
 The last logged stage was compilation of the parallel with-communication artifact,
 after the first AOTInductor compilation. The retained partial file is not an accepted export;
-no inference time or numerical-equivalence result exists for this case.
+no inference time or numerical-equivalence result exists for this case in the initial job.
+The separately recorded retry is reported below.
 \begin{center}\small
 \begin{tabular}{@{}lrrrr@{}}
 \toprule

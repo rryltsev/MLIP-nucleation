@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/home/u3129/miniconda3/envs/lammps_deepmd_dpa4/bin/dp",
+    "--pt",
+    "freeze",
+    "-c",
+    "/home6/u3129/tial-testsets/pretrained-neo-20261022-01/DPA4-Neo-OMat24-v20260805.pt",
+    "-o",
+    "/misc/home6/u3129/mlip-research/runs/inference-neo-triton2-20261112-01/exports/dpa4-neo-pt2-triton2.pt2"
+  ],
+  "returncode": 0,
+  "seconds": 514.0118472799659,
+  "freeze_environment": {
+    "DP_TRITON_INFER": "2",
+    "DP_COMPILE_INFER": "0",
+    "DP_TF32_INFER": "0",
+    "DP_AMP_INFER": "0"
+  },
+  "source_files": {
+    "/home6/u3129/tial-testsets/pretrained-neo-20261022-01/DPA4-Neo-OMat24-v20260805.pt": "fd7f34ae28f921201e4a0328ddf56179892752084f8363e7796038201471c989"
+  },
+  "sha256": "8ce4b9a8d4bb9e406965b8fdcaed915f8ec963e0716f8319bdcda628335e3ce1"
+}

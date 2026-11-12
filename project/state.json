@@ -806,7 +806,7 @@
     "latex_preview": "Existing source updated; built-in compiler startup failed on2026-10-21 with Windows CreateProcessAsUserW Access denied5; PDF not verified"
   },
   "inference_performance_audit": {
-    "status": "collected_and_audited; eight_cases_complete; Neo_Triton2_export_timeout",
+    "status": "all_nine_cases_completed_across_initial_job_and_Neo_retry; exports_audited",
     "historical_audit": "runs/inference-freeze-audit-20261111-01/historical-audit.json",
     "finding": "Both projects froze DPA4 and used .pt2 in LAMMPS; several baseline, fine-tuning evaluation and phonon paths still used .pt with compile/Triton disabled. Historical exports used Triton0, which still includes AOTInductor.",
     "run": "runs/inference-freeze-audit-20261111-01/manifest.json",
@@ -890,15 +890,14 @@
       }
     },
     "continuation": [
-      "Collect and assess job 20994744 when terminal; do not resubmit either recorded job.",
-      "Keep initial 420-second Neo Triton2 timeout and rejected partial artifact as historical evidence.",
-      "After successful checks, generate neo-results.tex using scripts/report_neo_inference.py and integrate into existing LaTeX report.",
-      "Validate new exported artifacts in native LAMMPS separately before production MD."
+      "Comparison complete; do not resubmit recorded jobs.",
+      "Preserve initial failed 420-second export as historical evidence; use only the accepted Neo Triton2 export from job 20994744.",
+      "Native LAMMPS validation of new exported artifacts remains separate before production MD."
     ],
     "backup": "runs/inference-freeze-audit-20261111-01/artifact-backup.json",
     "automatic_followup_scheduled": false,
     "report": "reports/inference-freeze-audit-2026-11-11/main.tex",
-    "latex_preview": "2026-11-12: updated source and generated tables preserved; built-in Tectonic still fails before compilation with WinError5. No PDF created.",
+    "latex_preview": "2026-11-12: completed Neo retry tables integrated into existing LaTeX source. Built-in compiler failed before compilation with WinError5; PDF not created.",
     "scheduler_observation": "runs/inference-freeze-audit-20261111-01/scheduler.json",
     "assessment": "runs/inference-freeze-audit-20261111-01/assessment.json",
     "completed_local": "2026-11-11T21:52:26+05:00",
@@ -909,7 +908,7 @@
     "actual_GPU_hours": 0.4938888888888889,
     "actual_CPU_seconds": 7112,
     "actual_CPU_hours": 1.9755555555555555,
-    "active_jobs": 1,
+    "active_jobs": 0,
     "successful_cases": 8,
     "measurement_processes": 16,
     "failures": {
@@ -921,13 +920,13 @@
       "dpa4-neo-pt2-triton0": true
     },
     "new_results_units": "milliseconds per full ASE E/F/stress call; median of 60 measurements per case/structure",
-    "conclusion": "Freeze yields 2.04-4.60x Mini speedup (Triton0), 2.83-5.19x Mini (Triton2), and 1.55-3.19x Neo (Triton0). On TiAl216/432/864 Mini Triton2 is 2.09/2.19/2.71x faster than GRACE-1L fp64; Neo Triton0 is similar to GRACE-2L fp32, with size-dependent ranking. No Neo Triton2 timing is available.",
+    "conclusion": "Both projects used freeze in some workflows, while other repeated inference paths retained eager pt. Initial Mini Triton2 speedup was 2.83-5.19x. Completed Neo retry gives 2.78-4.56x versus matched eager controls; on TiAl216/432/864 Neo Triton2 is 1.59-1.61x faster than GRACE-2L fp32 and 1.68-2.06x faster than fp64. Both Neo exports pass E/F/stress serialization gates. This is not equal-DFT-accuracy or native LAMMPS throughput.",
     "scope": "One A100, four fixed structures, ASE E/F/stress including neighbours and synchronization; not equal DFT accuracy, long MD or native LAMMPS throughput.",
     "backup_verification": "runs/inference-freeze-audit-20261111-01/backup-member-verification.json",
     "collected_files_verified": 91,
     "no_resubmission": true,
     "neo_triton2_retry": {
-      "status": "submitted_pending_resources",
+      "status": "completed_collected_and_audited",
       "run": "runs/inference-neo-triton2-20261112-01/manifest.json",
       "job_id": "20994744",
       "freeze_timeout_seconds": 1200,
@@ -946,12 +945,82 @@
       "maximum_CPU_hours": 3.0,
       "code_commit": "43d40eb676b82dca0f7ace42f891af6d17489245",
       "input_hash": "8b73d62822e98cb87afc392caccc3087e240b88c0496ac6cfed8d13ed89e92ee",
-      "observed_utc": "2026-11-12T00:40:58.910475+00:00",
-      "estimated_start_local": "2026-11-12T12:02:51+05:00",
+      "observed_utc": "2026-11-12T06:34:31.411766+00:00",
       "queue_observation": "runs/inference-neo-triton2-20261112-01/queue-observation.json",
       "scope": "New Neo Triton2 export; verified Neo Triton0 export reused; Neo pt and GRACE-2L fp32/fp64 remeasured on identical structures",
       "automatic_followup_scheduled": false,
-      "results_available": false
-    }
+      "results_available": true,
+      "scheduler_status": "COMPLETED",
+      "scheduler_exit_code": "0:0",
+      "started_local": "2026-11-12T07:32:41+05:00",
+      "completed_local": "2026-11-12T07:46:47+05:00",
+      "successful_cases": 5,
+      "measurement_processes": 10,
+      "actual_GPU_seconds": 846,
+      "actual_GPU_hours": 0.235,
+      "actual_CPU_seconds": 3384,
+      "actual_CPU_hours": 0.94,
+      "freeze_seconds": 514.0118472799659,
+      "export_equivalence": {
+        "dpa4-neo-pt2-triton0": true,
+        "dpa4-neo-pt2-triton2": true
+      },
+      "export_difference_maxima": {
+        "dpa4-neo-pt2-triton0": {
+          "energy_eV_per_atom": 1.502533753712972e-07,
+          "force_max_eV_per_A": 4.400105270752075e-06,
+          "stress_max_eV_per_A3": 8.974051802146041e-08
+        },
+        "dpa4-neo-pt2-triton2": {
+          "energy_eV_per_atom": 1.6142924626668295e-07,
+          "force_max_eV_per_A": 4.439711840831251e-06,
+          "stress_max_eV_per_A3": 9.424913704992807e-08
+        }
+      },
+      "new_results": {
+        "dpa4-neo-pt": {
+          "Ti96": 53.97235,
+          "TiAl216": 54.243422,
+          "TiAl432": 59.842438,
+          "TiAl864": 84.79736
+        },
+        "dpa4-neo-pt2-triton0": {
+          "Ti96": 12.481037,
+          "TiAl216": 17.506433,
+          "TiAl432": 29.29498,
+          "TiAl864": 53.438197
+        },
+        "dpa4-neo-pt2-triton2": {
+          "Ti96": 11.828743,
+          "TiAl216": 12.287304,
+          "TiAl432": 18.205099,
+          "TiAl864": 30.490748
+        },
+        "grace-2l-fp32": {
+          "Ti96": 14.813427,
+          "TiAl216": 19.525809,
+          "TiAl432": 29.113688,
+          "TiAl864": 49.199758
+        },
+        "grace-2l-fp64": {
+          "Ti96": 15.886583,
+          "TiAl216": 20.620121,
+          "TiAl432": 31.862339,
+          "TiAl864": 62.755699
+        }
+      },
+      "new_results_units": "milliseconds per full synchronized ASE E/F/stress call; pooled median of 60 measurements",
+      "assessment": "runs/inference-neo-triton2-20261112-01/assessment.json",
+      "comparison_summary": "runs/inference-neo-triton2-20261112-01/comparison-summary.json",
+      "backup": "runs/inference-neo-triton2-20261112-01/artifact-backup.json",
+      "backup_verification": "runs/inference-neo-triton2-20261112-01/backup-member-verification.json",
+      "collected_files_verified": 61,
+      "former_queue_estimate_local": "2026-11-12T12:02:51+05:00"
+    },
+    "initial_job_status": "eight_cases_complete; Neo_Triton2_export_timeout_at_420s",
+    "overall_unique_cases_complete": 9,
+    "total_measurement_processes": 26,
+    "total_GPU_hours": 0.7288888888888889,
+    "total_CPU_hours": 2.9155555555555557
   }
 }

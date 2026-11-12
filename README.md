@@ -144,7 +144,7 @@ TiAl216/432/864 inputs. Standard `.pt2` freeze accelerated DPA4-Mini by 2.04--4.
 and DPA4-Neo by 1.55--3.19x relative to their eager `.pt` paths; Mini with Triton2
 gave 2.83--5.19x. All three completed exports passed predefined E/F/stress
 equivalence checks. Neo/Triton2 exceeded its 420-second export limit during the
-second, with-communication AOT compilation and has no accepted inference result.
+second, with-communication AOT compilation and had no accepted result in that job.
 Compared with the project GRACE variants, frozen Mini/Triton2 was faster than
 GRACE-1L fp64 on these cases; frozen Neo/Triton0 and GRACE-2L fp32 were close,
 with a size-dependent ranking. This measures full ASE E/F/stress latency,
@@ -158,15 +158,23 @@ remain outside Git. Reproduce tables using `scripts/assess_inference_benchmark.p
 and `scripts/report_inference_benchmark.py`; no automatic resubmission is configured.
 
 The user requested completion of the missing Neo/Triton2 case on 2026-11-12.
-Retry `inference-neo-triton2-20261112-01`, job `20994744`, increases the freeze
-subprocess limit from 420 to 1200 seconds while retaining one A100, four CPUs,
-32 GiB and a 45-minute allocation ceiling. It reuses the hash-verified Neo/Triton0
-export and repeats Neo `.pt`, both `.pt2` cases and GRACE-2L fp32/fp64 on the same
-structures. At 05:41 UTC+5 the job was pending for resources, with a provisional
-12:03 start estimate. No new timing result is available yet. The manifest and
-queue observation are under `runs/inference-neo-triton2-20261112-01/`.
-After terminal collection, run `scripts/assess_inference_benchmark.py` on that
-directory and generate the focused LaTeX section with `scripts/report_neo_inference.py`.
+Retry `inference-neo-triton2-20261112-01`, job `20994744`, completed0:0 on one A100
+with four CPUs in846s (07:32:41--07:46:47 UTC+5), consuming0.235GPUh/0.94CPUh.
+The freeze limit was increased from420 to1200s; Neo/Triton2 export succeeded in
+514.01s. All five cases and ten measurement processes completed. Both Neo exports
+passed the same E/F/stress gates; the largest Triton2 force difference is
+4.44e-6eV/A. The hash-verified Neo/Triton0 artifact was reused; all inference
+controls were remeasured in the new allocation.
+
+Neo/Triton2 is2.78--4.56x faster than eager Neo in the retry. On TiAl216/432/864,
+it is1.59--1.61x faster than GRACE-2L fp32 and1.68--2.06x faster than fp64;
+the latency is12.29/18.21/30.49ms. Ti96 has greater process variation. Eager
+latencies also varied between the two allocations; reported retry ratios use
+only controls from the retry. All61 result files and members of the private
+main-home backup were checksum verified; a complete workstation archive exists.
+Use `scripts/assess_inference_benchmark.py` and `scripts/report_neo_inference.py`
+with `runs/inference-neo-triton2-20261112-01` to reproduce the analysis and LaTeX
+section. No scheduler jobs or automatic follow-ups remain for this comparison.
 
 ## Storage
 

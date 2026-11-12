@@ -1,0 +1,28 @@
+{
+  "returncode": 0,
+  "seconds": 0,
+  "operation": "reuse_verified_export",
+  "reused_from": {
+    "path": "/home6/u3129/mlip-research/runs/inference-freeze-audit-20261111-01/exports/dpa4-neo-pt2-triton0.pt2",
+    "sha256": "18344da4b34cef87b46634f352d28e5023ba8f83da7fd47e499b9ca8e0fafbc2",
+    "source_job": "20992566",
+    "device": "NVIDIA A100-PCIE-40GB",
+    "versions": {
+      "torch": "2.11.0",
+      "deepmd-kit": "3.2.0",
+      "numpy": "2.5.3",
+      "ase": "3.29.0"
+    }
+  },
+  "freeze_environment": {
+    "DP_TRITON_INFER": "0",
+    "DP_COMPILE_INFER": "0",
+    "DP_TF32_INFER": "0",
+    "DP_AMP_INFER": "0"
+  },
+  "source_files": {
+    "/home6/u3129/tial-testsets/pretrained-neo-20261022-01/DPA4-Neo-OMat24-v20260805.pt": "fd7f34ae28f921201e4a0328ddf56179892752084f8363e7796038201471c989",
+    "/home6/u3129/mlip-research/runs/inference-freeze-audit-20261111-01/exports/dpa4-neo-pt2-triton0.pt2": "18344da4b34cef87b46634f352d28e5023ba8f83da7fd47e499b9ca8e0fafbc2"
+  },
+  "sha256": "18344da4b34cef87b46634f352d28e5023ba8f83da7fd47e499b9ca8e0fafbc2"
+}
