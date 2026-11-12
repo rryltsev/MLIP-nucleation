@@ -1,7 +1,7 @@
 {
   "run_id": "inference-neo-triton2-20261112-01",
-  "stage": "prepared",
-  "job_id": null,
+  "stage": "submitted",
+  "job_id": "20994744",
   "predecessor": {
     "run_id": "inference-freeze-audit-20261111-01",
     "job_id": "20992566",
@@ -9,7 +9,7 @@
   },
   "created_utc": "2026-11-12T00:33:49.025471+00:00",
   "remote_run_dir": "/home6/u3129/mlip-research/runs/inference-neo-triton2-20261112-01",
-  "code_commit": "6b1b9e9cf2b08804fe6f99216715cb7b713081df",
+  "code_commit": "43d40eb676b82dca0f7ace42f891af6d17489245",
   "resources": {
     "partition": "v100",
     "account": "imet-2026-2",
@@ -23,7 +23,7 @@
   },
   "maximum_GPU_hours": 0.75,
   "maximum_CPU_hours": 3.0,
-  "user_authorized_budget": false,
+  "user_authorized_budget": true,
   "freeze_timeout_seconds": 1200,
   "input_sha256": {
     "job.sbatch": "e92f5af80d0416343ad566c341a3212b743dcd305428b2ffbf143c3646316ce0",
@@ -35,5 +35,7 @@
     "inputs/TiAl432.extxyz": "8fec1eb8318689748d61027b4e2e7d6e24228e4ffb4864e2d670f32df76891cf",
     "inputs/TiAl864.extxyz": "1561768d168637900dd51a22f1991eb44460aeed8a33b9e37fb8a4d35fbed0c2"
   },
-  "input_hash": "8b73d62822e98cb87afc392caccc3087e240b88c0496ac6cfed8d13ed89e92ee"
+  "input_hash": "8b73d62822e98cb87afc392caccc3087e240b88c0496ac6cfed8d13ed89e92ee",
+  "authorization": "User on 2026-11-12 explicitly requested increasing the DPA4-Neo Triton2 freeze timeout and completing its comparison with GRACE. One bounded retry retains the previously approved per-job ceiling: one A100, four CPUs, 45 minutes, at most 0.75 GPU-hours and 3 CPU-hours. The freeze subprocess limit is increased from 420 to 1200 seconds; no training or DFT.",
+  "authorization_recorded_utc": "2026-11-12T00:39:15.087624+00:00"
 }

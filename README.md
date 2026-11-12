@@ -157,6 +157,17 @@ the actual private main-home/workstation backups were verified. Export binaries
 remain outside Git. Reproduce tables using `scripts/assess_inference_benchmark.py`
 and `scripts/report_inference_benchmark.py`; no automatic resubmission is configured.
 
+The user requested completion of the missing Neo/Triton2 case on 2026-11-12.
+Retry `inference-neo-triton2-20261112-01`, job `20994744`, increases the freeze
+subprocess limit from 420 to 1200 seconds while retaining one A100, four CPUs,
+32 GiB and a 45-minute allocation ceiling. It reuses the hash-verified Neo/Triton0
+export and repeats Neo `.pt`, both `.pt2` cases and GRACE-2L fp32/fp64 on the same
+structures. At 05:41 UTC+5 the job was pending for resources, with a provisional
+12:03 start estimate. No new timing result is available yet. The manifest and
+queue observation are under `runs/inference-neo-triton2-20261112-01/`.
+After terminal collection, run `scripts/assess_inference_benchmark.py` on that
+directory and generate the focused LaTeX section with `scripts/report_neo_inference.py`.
+
 ## Storage
 
 Commit source, configuration, skills, manifests, small curated results, LaTeX and bibliography. Choose LFS or durable external storage before producing large datasets, checkpoints and trajectories. Keep immutable SHA-256 manifests and verify retrieval; cluster scratch is not an archive. VASP POTCAR files and credentials must not be uploaded.
