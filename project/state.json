@@ -1022,5 +1022,16 @@
     "total_measurement_processes": 26,
     "total_GPU_hours": 0.7288888888888889,
     "total_CPU_hours": 2.9155555555555557
+  },
+  "user_wide_dpa4_inference_policy": {
+    "adopted_date": "2026-11-12",
+    "scope": "All projects for this user; global Codex instructions and shared skills",
+    "default": "Validated pt2 frozen with DP_TRITON_INFER=2; actually consumed for repeated inference",
+    "training": "Retain pt checkpoints and optimizer state",
+    "files": {
+      "C:\\Users\\Roman Ryltsev\\.codex\\AGENTS.md": "12099b2e1cab5c463cf64de75909b19c2b52b3c1cd7ef13cda04bfc046ef89e8",
+      "C:\\Users\\Roman Ryltsev\\.agents\\skills\\mlip-deployment\\SKILL.md": "326e95a8fc8e318556044ac498af3a2b7b774382273ab83146ed4f2739ccedce",
+      "C:\\Users\\Roman Ryltsev\\.agents\\skills\\mlip-training\\SKILL.md": "299acae5da66481ca66d3769d0e0921bf7ed4b81d046bb04f08d489356332ab2"
+    }
   }
 }
